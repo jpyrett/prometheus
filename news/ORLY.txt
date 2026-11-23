@@ -1,0 +1,334 @@
+<<<ARTICLE>>>
+id: finnhub:143806913
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:00:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8621f192e39ed6f42dfcd8cc41a47343dcfaf089d6d380b4ddc333a674cad483
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/valuestock_4.jpg?width=2048&height=1536
+category: company
+tickers: ORLY
+keywords: 
+headline: $1000 Invested In O'Reilly Automotive 15 Years Ago Would Be Worth This Much Today
+<<<SUMMARY>>>
+O&#39;Reilly Automotive (NASDAQ:ORLY) has outperformed the market over the past 15 years by 8.25% on an annualized basis producing an average annual return of 21.33%. Currently, O&#39;Reilly Automotive has a market
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143793325
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T06:10:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a88432728144470fbe63248c4a93d0f41e25385dbf7f564580a7aaa6b893395
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: ORLY
+keywords: 
+headline: O'Reilly Automotive (ORLY) Stock May Be Above Fair Value On Cash Flow
+<<<SUMMARY>>>
+O'Reilly Automotive has delivered a 112.6% total return over the past 5 years, which puts a lot of weight on the question of whether the current US$91.56 share price lines up with the cash the business can generate. With that kind of track record behind it and a recent 1 year pullback, the key issue now is what the underlying cash flows say about today's valuation. The 112.6% gain over 5 years means long term holders are sitting on sizeable profits. Any fresh investment case now rests...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143786547
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T04:35:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9e2be4e4b2bee226123aa20d36d1cdf2db5747920890a37a28c023b2068c5f49
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: ORLY
+keywords: 
+headline: O'Reilly Automotive (ORLY) Looks Undervalued On Paper, Is The Premium P E Multiple Too Rich?
+<<<SUMMARY>>>
+O'Reilly Automotive (ORLY) is back in focus after recent trading left the stock around $91.56. Investors are weighing fresh performance data against longer runway questions for this large auto parts retailer. Recent action has been relatively steady for O'Reilly Automotive, with a 1.13% 1 day share price return and a 6.43% 30 day share price return helping to offset a 6.90% decline in 1 year total shareholder return, while the 3 and 5 year total shareholder returns of 41.30% and 112.62%...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143780163
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:28:12Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7bd28dfd11723edb2efe993243c92ae5417a254590e3c5c6ddd8db9f9e734390
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/186805810/image_186805810.jpg?io=getty-c-og
+category: company
+tickers: ORLY
+keywords: 
+headline: Tracking Mario Gabelli's Gabelli Funds 13F Portfolio - Q3 2026 Update
+<<<SUMMARY>>>
+Gabelli Fundsâ Q3 2026 13F portfolio fell to $15.10 billion across 1,200+ positions, trimming Nvidia and Alphabet while adding Microsoft. See more here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770840
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:31:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78c226bf4f687f663a46b135eeb0730d7d43ea984e241b1d28d63cd70d83dadc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: ORLY
+keywords: 
+headline: TD Cowen Names Top Hardlines Specialty Retail Stocks Amid Inflation
+<<<SUMMARY>>>
+Investing.com -- TD Cowen has identified its top picks in the hardlines specialty retail sector as October Consumer Price Index data shows renewed inflation pressures across multiple categories. The firm maintains buy ratings on three retailers positioned to navigate the current pricing environment in auto aftermarket, home improvement, and furniture segments.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769707
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f402f50c64e57f9eeab1f91913196991b90db330b5f4b6d95346d042baa2957e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: ORLY
+keywords: 
+headline: The Dates That Matter Most For AutoZone Stock
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692838
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:30:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=63d31f3a911db4ea98a3971072e217f6e087cb736fcb1c26966418a8b1f9ea37
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: ORLY
+keywords: 
+headline: Snap-on Just Raised Its Dividend 12.7%, Which Is Actually A Problem
+<<<SUMMARY>>>
+Key TakeawaysSnap-on raised its quarterly dividend 12. 7% to $2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687382
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:26:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9b03a498425f0d2644a6ebe56322a5094919b704a20460fabc3c50851e6d2c0c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: ORLY
+keywords: 
+headline: Nasdaq-100 Correction: 2 Proven Winners That Can Buck Historic Volatility
+<<<SUMMARY>>>
+Two non-tech stocks are the perfect buys amid a 15% correction in the Nasdaq-100.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143952503
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T20:30:44Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=ba7a84dc271a2961b352054be1ad24217b107d47fb9621a75a0fd1c1e60b5ede
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1275708831/image_1275708831.jpg?io=getty-c-og
+category: company
+tickers: ORLY
+keywords: 
+headline: Tracking Akre Capital Management Portfolio - Q3 2026 Update
+<<<SUMMARY>>>
+Akre Capital Managementâs 13F portfolio fell to $4.42 billion from $5.12 billion; Mastercard remained its largest holding at 22% after a 12% trim.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143885553
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T19:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4126edf6f70266c2f0a15fa50e7e9d8a889896f378b51b60b8b409d86a1286d6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: ORLY
+keywords: 
+headline: O’Reilly Automotive, Dollar Tree, and 7 More Retail Stocks to Buy Right Now—and 15 to Avoid
+<<<SUMMARY>>>
+Stifel initiated coverage of two dozen retailers. Here are the winners and losers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880086
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T08:36:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ab8937ec9d2d01d51fb9df4b41b19d5b048320f20c7e6b6300cef2445de86306
+image_url: 
+category: company
+tickers: ORLY
+keywords: 
+headline: Stifel Initiates Coverage On O'Reilly Automotive with Buy Rating, Announces Price Target of $105
+<<<SUMMARY>>>
+Stifel  analyst Michael Montani   initiates coverage on O&#39;Reilly Automotive (NASDAQ:ORLY) with a Buy rating and announces Price Target of $105.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849238
+symbol: ORLY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T14:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d13aa24df5a8ca320966571084ffec6f52be96f7953f071ce1fd0fcfb143b21a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: ORLY
+keywords: 
+headline: Is O'Reilly Stock Worth Buying as Growth Faces a Premium Valuation?
+<<<SUMMARY>>>
+O'Reilly's strong sales growth, rising profits and store expansion support its outlook, but a premium valuation and high costs limit near-term upside.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:52665c4af9c3ffb910b0c9b7a2f2f287d0143eff37ba2aeea71739b159a9e878
+symbol: ORLY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T01:05:00Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/11/10/meet-the-1-stock-id-buy-with-500-even-if-the-marke/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893362%2Fgettyimages-1742670769-1200x800-5b2df79.jpg&w=1200&op=resize
+category: 
+tickers: ORLY
+keywords: market timing, O'Reilly Automotive, stock market correction, comparable sales growth, long-term investing, auto parts retail, share buybacks
+headline: Meet the 1 Stock I'd Buy With $500, Even If the Market Fell 5% Tomorrow
+<<<SUMMARY>>>
+Following the S&P 500's worst day since April 2025 with a 4.4% decline, the author argues against market timing and recommends buying O'Reilly Automotive. The company demonstrated strong Q3 performance with 7.2% comparable sales growth, raised its full-year outlook, and has maintained 33 consecutive years of comparable sales growth. At $90 per share, $500 buys approximately five shares of a defensive business that benefits from aging vehicles and economic downturns.
+<<<INSIGHTS>>>
+ORLY | positive | Strong Q3 results with 7.2% comparable sales growth, raised full-year guidance to 5.5-6.5%, 33 consecutive years of comparable sales growth, aggressive $1.03 billion stock buyback program, and defensive business model that performs well during economic downturns. The company operates in a resilient sector with aging vehicles on roads supporting demand.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ee6aee0bd57b5883c4eb7335340b62703d9e509d001e491d83b4c16040a2066c
+symbol: ORLY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T21:00:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/11/advance-auto-parts-vs-shopify-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F70b11cb94ad8bfc44b3a7e6abf950dac9a507f43-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: AAP, SHOP, AZO, ORLY, GOOG, GOOGL, GOOGM, GOOGN
+keywords: stock comparison, consumer stocks, turnaround strategy, e-commerce growth, financial metrics, valuation analysis, 2027 investment outlook
+headline: Advance Auto Parts vs. Shopify: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Advance Auto Parts and Shopify as investment options for 2027. Advance Auto Parts is undergoing a multi-year restructuring with declining revenue and negative free cash flow, while Shopify demonstrates strong growth with 30% revenue increase, no debt, and positive cash flow. The analyst recommends Shopify despite its higher valuation, citing its growth momentum and positioning in AI-driven commerce over Advance Auto Parts' uncertain turnaround prospects.
+<<<INSIGHTS>>>
+AAP | negative | Company faces significant headwinds including 5.4% revenue decline, negative free cash flow of $298M, high debt-to-equity ratio of 2.4x, and mixed results from restructuring efforts. While turnaround efforts are underway, execution has been inconsistent with disappointing Q2 and Q3 results.
+SHOP | positive | Strong financial performance with 30% revenue growth, $1.2B net income, 10.7% net margin, zero debt, and $2B free cash flow. Company is well-positioned for future growth through AI-driven commerce initiatives and European expansion, with management projecting low-30% annual revenue growth.
+AZO | neutral | Mentioned as a competitive threat to Advance Auto Parts in the aftermarket auto parts retail space, but no specific performance data or analysis provided.
+ORLY | neutral | Mentioned as a competitive threat to Advance Auto Parts in the aftermarket auto parts retail space, but no specific performance data or analysis provided.
+GOOG | neutral | Mentioned only in context of its Google division supporting Shopify's UCP for agentic AI commerce; no direct investment recommendation or analysis provided.
+GOOGL | neutral | Mentioned only in context of its Google division supporting Shopify's UCP for agentic AI commerce; no direct investment recommendation or analysis provided.
+GOOGM | neutral | Mentioned only in context of its Google division supporting Shopify's UCP for agentic AI commerce; no direct investment recommendation or analysis provided.
+GOOGN | neutral | Mentioned only in context of its Google division supporting Shopify's UCP for agentic AI commerce; no direct investment recommendation or analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5702c9e62dcd047e190940abc2a8c6073fd0ae1ba82a5222ce5d5d64ce8156ab
+symbol: ORLY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T23:12:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/13/advance-auto-parts-vs-airbnb-is-a-retail-rebound-or-travel-giant-stock-the-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F1eb766e40e579fb15ff801afe1a16c64b70a8df3-8192x5464.jpg&w=1200&op=resize
+category: 
+tickers: AAP, ABNB, AZO, ORLY, AMZN
+keywords: automotive aftermarket, travel marketplace, valuation comparison, debt-to-equity ratio, free cash flow, turnaround strategy, asset-light business model, consumer economy
+headline: Advance Auto Parts vs. Airbnb: Is a Retail Rebound or Travel Giant Stock the Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Advance Auto Parts and Airbnb as investment options for 2027. Advance Auto Parts, a brick-and-mortar automotive retailer, faces challenges with declining sales, high debt (2.4x debt-to-equity), and negative free cash flow, though it's attempting a turnaround. Airbnb, an asset-light travel marketplace, demonstrates strong growth (16.9% revenue increase), healthy financials (0.3x debt-to-equity, $4.6B free cash flow), and expanding international markets. The analyst recommends Airbnb for 2027, viewing Advance Auto Parts as a 'prove it' year turnaround story.
+<<<INSIGHTS>>>
+AAP | negative | Company faces significant headwinds including declining revenue, high debt load (2.4x debt-to-equity), negative free cash flow (-$298M), mixed turnaround results, and intense competition. While attempting restructuring, 2027 is positioned as a critical 'prove it' year with uncertain outcomes.
+ABNB | positive | Strong financial performance with 16.9% revenue growth, robust net income ($3.2B), healthy balance sheet (0.3x debt-to-equity), substantial free cash flow ($4.6B), expanding international markets (India, Latin America), and competitive moat from network effects and data advantages. Analyst explicitly recommends this stock for 2027.
+AZO | neutral | Mentioned as a competitor to Advance Auto Parts in the automotive aftermarket space, but no specific analysis or sentiment provided in the article.
+ORLY | neutral | Mentioned as a competitor to Advance Auto Parts in the automotive aftermarket space, but no specific analysis or sentiment provided in the article.
+AMZN | neutral | Mentioned only as a third-party cloud infrastructure provider for Airbnb, representing an operational dependency risk rather than an investment recommendation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6fccdf9e9497cb9a21f3c3a4c37be5ef7a1547d4aa9725f8e0ace7366c04c00f
+symbol: ORLY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T14:51:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030419/is-o-reilly-stock-worth-buying-as-growth-faces-a-premium-valuation?cid=CS-ZC-FT-analyst_blog|rank_focused-3030419
+image_url: https://staticx-tuner.zacks.com/images/articles/main/af/1432.jpg
+category: 
+tickers: ORLY, KMX, HMC, AEVA
+keywords: Q3 earnings, automotive retail, valuation concerns, comparable sales growth, debt increase, inflation tailwinds, margin pressure
+headline: Is O'Reilly Stock Worth Buying as Growth Faces a Premium Valuation?
+<<<SUMMARY>>>
+O'Reilly Automotive reported solid Q3 2026 results with 9% revenue growth to $5.12B and 7.2% comparable sales growth, prompting management to raise full-year guidance. However, the stock's 25.5x forward P/E multiple significantly exceeds peer averages, and fading inflation tailwinds, rising debt, and cost pressures limit near-term upside potential. Analysts recommend existing shareholders hold while new investors await better entry points.
+<<<INSIGHTS>>>
+ORLY | neutral | Strong operational fundamentals with 9% revenue growth, 13% operating income increase, and solid cash flow generation support the business quality. However, elevated 25.5x forward P/E valuation, rising debt to $7.71B, fading inflation benefits, and margin pressures from tariff refunds and product mix create near-term headwinds. Rating is Hold with limited upside at current prices.
+KMX | positive | Highlighted as a better-ranked alternative with Zacks Rank #1 (Strong Buy). Positioned for growth with 10% projected sales growth and 26% EPS growth for fiscal 2027, supported by store network, logistics efficiencies, and consistent earnings beat track record.
+HMC | positive | Carries Zacks Rank #2 (Buy) with attractive investment outlook. Supported by sustained hybrid demand and recovering automobile profitability, with consensus estimates implying 210% EPS growth for fiscal 2027.
+AEVA | positive | Rated Zacks Rank #2 with strong growth prospects from broader LiDAR adoption. Consensus estimates project 68% sales growth in 2026 and 170% in 2027, with consistent earnings beat history.
+<<<END>>>

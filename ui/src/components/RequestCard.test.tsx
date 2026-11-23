@@ -19,7 +19,7 @@ function setup(over: Partial<RequestCardProps> = {}) {
 
 const strict = () => screen.getByLabelText("Strict recommendations") as HTMLInputElement;
 const neutral = () => screen.getByLabelText("Neutral recommendations as passes") as HTMLInputElement;
-const refresh = () => screen.getByLabelText("Refresh market data first (paid)") as HTMLInputElement;
+const refresh = () => screen.getByLabelText("Refresh market data first") as HTMLInputElement;
 const raiseFunds = () => screen.getByLabelText("Always raise funds") as HTMLInputElement;
 const ignoreCritic = () => screen.getByLabelText("Ignore Critic") as HTMLInputElement;
 const modeSwitch = () => screen.getByRole("switch") as HTMLButtonElement;
@@ -33,12 +33,12 @@ describe("RequestCard", () => {
     expect(screen.getByText(`${DEFAULT_PROMPT.length} / 600`)).toBeTruthy();
   });
 
-  it("has Strict off, Neutral on and Refresh (paid) on by default, all three in view, with the tooltip that says it writes the data files", () => {
+  it("has Strict off, Neutral on and Refresh on by default (its label has no (paid): Jacob, 2026-11-23), all three in view, with the tooltip that says it writes the data files", () => {
     setup();
     expect([strict().checked, neutral().checked, refresh().checked]).toEqual([false, true, true]);
     expect(document.querySelector("details")).toBeNull();                                       // no "More" fold any more
     expect(refresh().closest("label")?.getAttribute("title")).toBe("Fetches fresh bars, news and filings with the paid APIs and writes the data files. Untick to use the stored data.");
-    expect(refresh().closest("label")?.querySelector(".paid")?.textContent).toBe("(paid)");
+    expect(refresh().closest("label")?.querySelector(".paid")).toBeNull();
   });
 
   it("has the box Always raise funds OFF by default (entry 142, R12); ticking it sends raise_funds true, and it is locked while a run is active", () => {

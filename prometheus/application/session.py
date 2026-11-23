@@ -31,6 +31,10 @@ recommended, decided or traded, and the session prints the stocks, the window, t
 (the news only); `--refuse-news-fetch` is the TEST-ONLY switch that takes that right away for the run (a fetch writes `news/SYMBOL.txt`; the news is then searched as it is stored and the report says so). `--save` writes the work order WITH its `data` (the news is the result). A
 news run is not saved for the Track Record: it has no recommendation to score.
 
+A REQUEST THAT ONLY ASKS FOR THE CURRENT PRICE ("What's the current price of TSLA?", "Price of Tesla", "Quote for TSLA and NVDA"; design choices entry 150, `design/quote_request_spec.md`) is answered the same way, by the Data Clerk alone (Account Manager -> Data Clerk): nothing is asked,
+recommended, decided or traded, and the session prints one line for each stock (symbol, company, price, the change and its percent, the time or the simulated clock's market close) and the problems, and nothing about decisions, trades or money. The quote is the live one
+(Finnhub's `/quote`) or, with USE_LIVE_TRADING=false, the stored close of the simulated day; nothing else is fetched and no file is written. `--save` writes the work order WITH its `data`; the capture goes in `tests/fixtures/quote_real/`. A price run is not saved for the Track Record.
+
 MONEY IS `decimal.Decimal` (design choices entry 112): the cash a user starts with is `parse_money`'s Decimal, the report's amounts are exact (`spent / cash` is a Decimal ratio, printed as a percentage), and the saved session (`--save`) is written by the one encoder
 (`money.dumps`): a Decimal is a JSON number, a whole value an integer, never a string; a capture made before this change loads as it is.
 
@@ -391,6 +395,15 @@ def news_lines(view: dict, intent=None) -> list[str]:
     return lines
 
 
+def quote_lines(view: dict, intent=None) -> list[str]:
+    """What the session prints for a request that only asked for the current price (entry 150, Q8): what was understood, then one line for each stock (symbol, company, price, change, percent, when), what was not found and what went wrong. The ONE shape is
+    `views.quote_view` and its words are `views.quote_lines`; nothing here is about decisions, trades or money."""
+    lines = [RULE, "QUOTE  " + (views.quote_headline(view) or "no price"), RULE]
+    if intent is not None:
+        lines.append(f"  understood: {intent.describe()}")
+    return lines + [f"  {line}" for line in views.quote_lines(view)] + [f"  note: {n}" for n in view["notes"]]
+
+
 NODE_WORDS = {"account_manager": "the Account Manager read the request and made the work order", "data_clerk": "the Data Clerk found the companies and answered the work order",
               "advisor": "the Advisor ranked the companies", "critic": "the Critic reviewed each recommendation against the profile", "account_manager_decision": "the Account Manager decided what may trade",
               "account_manager_direct": "the Account Manager priced the trades you named and decided them (no recommendation, no Critic review)",
@@ -552,6 +565,18 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
         ok = order.status == "data_ready"
         if not ok:
             say("", f"  {CLARIFY}" if final.get("clarify") else "  the Data Clerk's answer did not pass its checks (the problems are above)")
+        clean_up(args, parts, account_id, created, say)
+        return 0 if ok else 1
+    if plan.get("action") == "quote":      # a request that only asked for the current price (entry 150, Q8): printed, saved with its data if asked, never kept for the Track Record, nothing about decisions, trades or money
+        view = views.quote_view(order, plan, parts.guard, account_id)
+        if args.save:
+            Path(args.save).parent.mkdir(parents=True, exist_ok=True)
+            Path(args.save).write_text(dumps({"request": " ".join(args.prompt.split()), "intent": plan["intent"].model_dump(), "path": final["path"], "order": json.loads(order.model_dump_json())}, indent=1), encoding="utf-8")      # the quote IS the result: the order is saved WITH its data
+            say(f"  (what the desk made is saved in {args.save})")
+        say("", *quote_lines(view, plan["intent"]))
+        ok = order.status == "data_ready"
+        if not ok:
+            say("", f"  {CLARIFY}" if final.get("clarify") else "  the Data Clerk could not give the price (the problems are above)")
         clean_up(args, parts, account_id, created, say)
         return 0 if ok else 1
     intent, direct = plan["intent"], bool(plan.get("direct"))

@@ -70,6 +70,10 @@ price. Without these they are referring to quantity"*). A PROGRAM decides what a
     filter decides it; a request that also asks to buy, sell, recommend or research is not news). It holds `symbols` and/or `companies` (at most `news.max_stocks`) or a `topic` searched as a term, and the window `news_days`, and NOTHING that moves money
     or asks for a trade: the validator refuses orders, a budget, `each`, a count, an even split, `raise_funds`, a price limit or floor and typed shares, each with its reason. A PROGRAM reads an explicit window from the words and wins over the model
     (`news_window`: "last 3 days", "past 2 weeks", "last week", "this month", "today", "yesterday"); with none written the model's value, and with none either `news.default_days`; a window over `news.max_days` (90) is cut and said (`corrected`).
+  * THE QUOTE (entry 150; design/quote_request_spec.md; Jacob, 2026-11-23: *"Whats the current price of: TSLA?"* was answered with the news): a request that ONLY asks for the current PRICE of one or more named stocks is `action: "quote"`.
+    THE MODEL reads it (no cue-word filter decides it; a request that also asks to buy, sell, recommend, research or see the news is not a quote). It holds `symbols` and/or `companies` (1 to `quote.max_stocks`) and NOTHING else: no theme (a
+    theme has no price: it is a request to clarify), no order, budget, each, count, split, `raise_funds`, price limit or floor, typed shares or window, each refused with its reason. NO number of the words is read for it (`_read_numbers` is not run:
+    the `$` in "is TSLA over $400 right now?" is not money and the limit is not read).
   * "Skip recommendations" is not a request for them: a recommend cue inside a NEGATED span ("skip recommendations", "no research needed", "without the advisor") is no cue (`NO_RECOMMEND`, `asks_for_recommendation`), so "Buy $2500 worth of
     symbol KO and skip recommendations." is a direct order of $2,500 of KO. A request that skips them and names no stock to buy is `NeedsClarification` ("name the stocks to buy, or let me recommend some").
 """
@@ -198,7 +202,7 @@ class TradeIntent(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     request: str
-    action: Literal["buy", "research", "order", "news"]      # "order": the user named the trades themselves (`orders`): a direct order, entry 87. "news": the user only wants to SEE the news of the stocks they named (entry 149): nothing is bought, decided or traded
+    action: Literal["buy", "research", "order", "news", "quote"]      # "order": the user named the trades themselves (`orders`): a direct order, entry 87. "news": the user only wants to SEE the news of the stocks they named (entry 149): nothing is bought, decided or traded. "quote": the user only wants to SEE the current price of the stocks they named (entry 150): the same
     topic: str | None = None
     symbols: list[str] = Field(default_factory=list)
     companies: list[str] = Field(default_factory=list)
@@ -237,6 +241,8 @@ class TradeIntent(BaseModel):
             raise ValueError("news_days: the window of the news goes with a request for the news (action news)")
         if self.action == "news":
             self._a_news_request_holds_no_trade()
+        if self.action == "quote":
+            self._a_quote_request_holds_only_the_stocks()
         if (self.shares_of or self.shares_each is not None) and self.action != "buy":
             raise ValueError("shares_of and shares_each: a number of shares typed with a recommendation goes with buying (a direct order has its shares on the order, and nothing is bought when the person only wants to look)")
         if self.raise_funds and self.action == "research":
@@ -297,6 +303,20 @@ class TradeIntent(BaseModel):
         if len(named) > most:
             raise ValueError(f"a news request names at most {most} stocks ({len(named)} were named): ask for fewer at a time")
 
+    def _a_quote_request_holds_only_the_stocks(self) -> None:
+        """Entry 150, Q2: a request that only asks for the current price holds the stocks (1 to `quote.max_stocks`) and nothing else: no theme (a theme has no price), no money, no trade, no window. Raises ValueError, with the reason, for each thing it may not hold."""
+        for name, held in (("topic", bool(self.topic)), ("orders", bool(self.orders)), ("budget", self.budget is not None), ("each", self.each), ("count", self.count is not None), ("allocation", self.allocation != "default"),
+                           ("raise_funds", self.raise_funds), ("max_price", self.max_price is not None), ("min_price", self.min_price is not None), ("shares_of", bool(self.shares_of)), ("shares_each", self.shares_each is not None),
+                           ("unclear_number", self.unclear_number is not None)):
+            if held:
+                raise ValueError(f"{name}: a request for the current price holds no {name.replace('_', ' ')} (nothing is bought, sold or sized): leave it empty, or, if the person also wants to buy, sell, be recommended something or see the news, this is not a price request")
+        named = [*self.symbols, *self.companies]
+        most = load_config().quote.max_stocks
+        if not named:
+            raise ValueError("a price request names the stocks: no ticker or company was named")
+        if len(named) > most:
+            raise ValueError(f"a price request names at most {most} stocks ({len(named)} were named): ask for fewer at a time")
+
     def said_how_much(self) -> bool:
         """Whether the user's own words already say how much to buy: a dollar amount (the budget), a percentage, a number of shares, or "as much as I can" and its kin. When they do not, the Account Manager asks in Ask
         mode (`clarify.py`). A check of the typed words by a program, with no model."""
@@ -349,6 +369,8 @@ class TradeIntent(BaseModel):
 
     def _describe(self) -> str:
         limit = self.limit_words()
+        if self.action == "quote":      # entry 150: only the price is shown
+            return f"show the current price of {self.what()} (nothing will be bought)"
         if self.action == "news":      # entry 149: only the news is shown
             days = self.news_days if self.news_days is not None else load_config().news.default_days
             return f"show the news {'about' if self.topic else 'of'} {self.what()} for the last {'day' if days == 1 else f'{days} days'} (nothing will be bought)"
@@ -358,7 +380,8 @@ class TradeIntent(BaseModel):
                 one = self.orders[0]
                 spend = f", spending at most ${one.dollars:,.2f} on each stock" if one.dollars is not None else f", {sh.text(one.shares)} share{'s' if sh.quantity(one.shares) != 1 else ''} of each stock"
             return ", ".join(o.describe() for o in self.orders) + spend + (f", {limit}" if limit else "") + " (your own order: no recommendation is made and the Critic is not asked)"
-        verb = "buy" if self.action == "buy" else "look at (nothing will be bought)"
+        said = any("nothing will be bought" in note for note in self.corrected)      # the note of a request read as a look already says it: never twice in one acknowledgement
+        verb = "buy" if self.action == "buy" else "look at" if said else "look at (nothing will be bought)"
         count = f"the {self.count} most recommended " if self.count and self.count != 1 else "the most recommended "      # count 1: "the most recommended 'shoe' company" (entry 146)
         spread = "; the money spread evenly over the companies that are approved" if self.allocation == "even" and not self.each else ""
         spend = (f"; spending at most ${self.budget:,.2f} on each stock" if self.each else f"; spending at most ${self.budget:,.2f}") if self.budget else "; spending as much as the account allows" if self.action == "buy" else ""
@@ -797,6 +820,32 @@ def _news_intent(raw: dict, typed: str) -> TradeIntent:
     return intent
 
 
+def _quote_intent(raw: dict, typed: str) -> TradeIntent:
+    """The form of a request that only asks for the current price (entry 150), accepted only when the user's words support it. Nothing of the words is read as a number (no price limit, no number of shares, no permission to raise funds:
+    `_read_numbers` is not run, so the `$` of "is TSLA over $400 right now?" is not money and the limit is not read), and whatever the model put in such a field is refused by the intent's own validator with its reason. A theme and a request
+    that names no stock are `NeedsClarification` (the user has to name the stocks: a second try of the model cannot), and so are more stocks than `quote.max_stocks`."""
+    raw, cap = dict(raw), load_config().quote
+    raw.pop("unclear_number", None)
+    if raw.get("topic"):
+        raise NeedsClarification(f"a theme has no price: name the stocks you want the price of (tickers or company names), up to {cap.max_stocks}")
+    named = [*(raw.get("symbols") or []), *(raw.get("companies") or [])]
+    if not named:
+        raise NeedsClarification(f"name the stocks you want the price of (tickers or company names), up to {cap.max_stocks}")
+    if len(named) > cap.max_stocks:
+        raise NeedsClarification(f"a price request names at most {cap.max_stocks} stocks and {len(named)} were named: ask for the price of {cap.max_stocks} or fewer at a time")
+    if raw.pop("raise_funds", None):
+        raw["raise_funds"] = True      # the intent refuses it: nothing is sold for a price
+    try:
+        intent = TradeIntent(request=typed, **raw)
+    except ValidationError as error:
+        first = error.errors()[0]
+        raise ValueError(f"{'.'.join(str(x) for x in first['loc']) or 'the form'}: {first['msg']}") from None
+    except ValueError as error:   # check_symbol
+        raise ValueError(str(error)) from None
+    check_named(intent, typed)
+    return intent
+
+
 def check_typed(typed) -> str:
     """The user's words with the spaces tidied. Raises ValueError for nothing at all or for more than the form can read: a request refused here costs no model call."""
     typed = " ".join(typed.split()) if isinstance(typed, str) else ""
@@ -1049,6 +1098,8 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
         raise ValueError("each must be true or false")
     if raw.get("action") == "news":      # entry 149: the user only wants to see the news: no number of shares, no price and no permission to sell is read from the words
         return _news_intent(raw, typed)
+    if raw.get("action") == "quote":      # entry 150: the user only wants to see the current price: no number of the words is read, nothing is bought
+        return _quote_intent(raw, typed)
     raw.pop("news_days", None)      # a window means nothing to a request that is not for the news
     said = raw.pop("raise_funds", None)      # the permission to sell holdings (entry 142, R2): the words decide, the model only has to agree
     if said is not None and not isinstance(said, bool):

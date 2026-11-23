@@ -124,7 +124,7 @@ export function RequestCard({ prompt, onPrompt, maxChars, accountId, running, st
             <Check
               label={
                 <>
-                  Refresh market data first <span className="paid">(paid)</span>
+                  Refresh market data first
                 </>
               }
               checked={refresh}

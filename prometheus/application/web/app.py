@@ -108,7 +108,7 @@ def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None
     @app.get("/api/health")
     def health():
         return {"ok": True, "mode": "replay" if replay else "live", "book": "ok" if replay else accounts.book_status(), "clock_note": clock_note() or "", "clock_pill": clock_pill(),
-                "defaults": {"prompt": DEFAULT_PROMPT, "strict": False, "neutral": True, "fetch": False, "raise_funds": False, "ignore_critic": False}, "limits": {"prompt_chars": MAX_TEXT},
+                "defaults": {"prompt": DEFAULT_PROMPT, "strict": False, "neutral": True, "fetch": True, "raise_funds": False, "ignore_critic": False}, "limits": {"prompt_chars": MAX_TEXT},
                 "active_run": runs.active_id(), "active_kind": active_kind(runs), "tracing": tracing.status(), "replay_file": replay.capture.get("_file") if replay else None}
 
     # ---------------------------------------------------------------- accounts

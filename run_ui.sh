@@ -33,7 +33,7 @@ done
 if [[ -z "$PY" || ! -x "$PY" ]]; then echo "ERROR: no Python found: run 'conda activate cmu' first, or set PYTHON=/path/to/python" >&2; exit 2; fi
 if [[ " ${SERVER_ARGS[*]:-} " != *" --replay"* ]]; then
   echo "LIVE MODE: pressing Go! is a PAID run (OpenRouter, Finnhub) that writes the UI's own account in Postgres."
-  echo "           'Refresh market data first (paid)' is TICKED by default: Go! also calls the paid data APIs and writes the data files. Untick it to use the stored data. --replay is the free recorded session."
+  echo "           'Refresh market data first' is TICKED by default: Go! also calls the paid data APIs and writes the data files. Untick it to use the stored data. --replay is the free recorded session."
 fi
 if [[ ! -d ui/node_modules ]]; then
   echo "installing the page's packages (corepack npm@10.9.2 ci) ..."

@@ -50,6 +50,11 @@ def _is_news(plan: dict | None) -> bool:
     return bool(plan) and plan.get("action") == "news"
 
 
+def _is_quote(plan: dict | None) -> bool:
+    """Whether the run is a request that only asked for the current price (entry 150): the desk made a quote plan."""
+    return bool(plan) and plan.get("action") == "quote"
+
+
 def _top(plan: dict | None) -> int | None:
     """The number of companies a request for recommendations asked for (the desk's `find`: the request's count, else the default), so the work order lists that many (entry 144). None for a direct order."""
     return plan.get("find") if plan and not plan.get("direct") else None
@@ -244,7 +249,7 @@ def _stream(run, params, accounts, question_timeout, out, live, chosen, mode, pa
                 _after_node(out, node, chunk, mode)
             shown = len(chunk["path"])
             live.running = None
-            if live.order is not None and not _is_news(live.plan):      # a request that only asks for the news has no work order table to show (entry 149): its News pane is the view
+            if live.order is not None and not _is_news(live.plan) and not _is_quote(live.plan):      # a request that only asks for the news has no work order table to show (entry 149): its News pane is the view; the price (entry 150) is said in the output
                 out.work_order(live.order, understood=_understood(live.plan), found=views.companies_found(live.order, live.plan), top=_top(live.plan))
             live.refresh()
         if run.stop_flag.is_set():
@@ -261,8 +266,10 @@ def _after_node(out: Emitter, node: str, state: dict, mode: str) -> None:
     """The line of a node that finished, and what the session prints under it: the decisions, the Data Clerk's finds of a direct order, the direct order's section."""
     order, plan = state.get("order"), state.get("plan") or {}
     out.log(AGENT_OF_NODE.get(node, "system"), node_line(node, state["seconds"].get(node, 0)))
-    if node == "account_manager" and plan.get("action") == "news":      # the news run asks nothing (entry 149, N4): what was understood is said, not asked
+    if node == "account_manager" and plan.get("action") in ("news", "quote"):      # the news run (entry 149, N4) and the price run (entry 150) ask nothing: what was understood is said, not asked
         out.log("account_manager", f"understood: {plan['intent'].describe()}")
+    if node == "data_clerk" and plan.get("action") == "quote" and order is not None:      # the Data Clerk's quote is the run's result (entry 150, Q7): the page's output says it, a line for each stock
+        out.quote(views.quote_view(order, plan, out.guard, out.account_id))
     if node == "data_clerk" and plan.get("action") == "news" and order is not None:      # the Data Clerk's answer is the run's result (entry 149, N9): the page selects its News pane
         out.news(views.news_view(order, plan, out.guard, out.account_id))
     if node == "account_manager_decision" and order is not None and order.trade_decisions:
@@ -294,6 +301,17 @@ def _finish(run: Run, params: dict, accounts, out: Emitter, live: Live, final: d
             out.finished("failed", "The news could not be shown: " + (order.errors[0] if order.errors else "the Data Clerk's answer failed its checks"), reasons, live.path, live.seconds, total())
         else:
             verdict = views.run_verdict(None, None, action="news", order=order)
+            out.finished(verdict["status"], verdict["headline"], verdict["reasons"], live.path, live.seconds, total())
+        return
+    if _is_quote(plan):      # a request that only asked for the current price (entry 150): the Data Clerk's quote is the result; no decision, no trade and no use of money to report, and the portfolio is as it was
+        out.quote(views.quote_view(order, plan, out.guard, out.account_id))
+        if stopped:
+            out.finished("stopped", "Stopped.", [], live.path, live.seconds, total())
+        elif order.status != "data_ready":
+            reasons = [*order.errors, *([NOT_PLACED_HINT] if (final or {}).get("clarify") else [])]
+            out.finished("failed", "The price could not be shown: " + (order.errors[0] if order.errors else "the Data Clerk's quote failed its checks"), reasons, live.path, live.seconds, total())
+        else:
+            verdict = views.run_verdict(None, None, action="quote", order=order)
             out.finished(verdict["status"], verdict["headline"], verdict["reasons"], live.path, live.seconds, total())
         return
     if errors:                                  # a work order was made and the desk still stopped at its first node: a direct order with a stock the Data Clerk could not find (`AccountManager.name_the_stocks`). The

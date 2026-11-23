@@ -1,0 +1,108 @@
+<<<PRESS_RELEASE>>>
+id: 792d1186425127f8
+symbol: GM
+published_utc: 2026-01-22T15:23:00Z
+url: https://www.nasdaq.com/press-release/tenneco-joins-cadillac-formula-1r-team-official-technical-partner-ahead-2026-debut
+headline: Tenneco Joins Cadillac Formula 1® Team as Official Technical Partner Ahead of 2026 Debut
+<<<TEXT>>>
+--Tenneco LLC, a leading global supplier of automotive products and technology solutions, today announced a multi-year technical partnership with the Cadillac Formula 1 ® Team as the team prepares for its debut in the 2026 FIA Formula 1 World Championship™. That capability has been forged through decades of partnership with General Motors, supporting...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6ee6f02611f09628
+symbol: GM
+published_utc: 2026-01-26T09:30:00Z
+url: https://www.nasdaq.com/press-release/gm-streamlines-public-charging-electrify-america-2026-01-26
+headline: GM Streamlines Public Charging with Electrify America
+<<<TEXT>>>
+Owners can navigate to the Public Charging page in their myBrand app and look for supported networks, enabling fast and convenient charging while traveling throughout the U.S.. The integration supports GM's broader goal of connecting drivers to an expanding ecosystem of public charging infrastructure. Across the U.S. and Canada, GM drivers can access more...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3dea7c7037cf3490
+symbol: GM
+published_utc: 2026-01-27T06:30:00Z
+url: https://www.nasdaq.com/press-release/gm-releases-2025-financial-results-and-2026-guidance-board-declares-dividend-20
+headline: GM releases 2025 financial results and 2026 guidance; Board declares dividend at 20% higher quarterly rate, and approves new $6.0 billion share repurchase authorization
+<<<TEXT>>>
+The chart below summarizes GM's 2025 financial guidance and 2025 results, as well as the company's 2026 guidance, which is for a year of strong financial performance. GM's 2026 financial guidance also includes anticipated capital spending of $10.0 billion- $12.0 billion, inclusive of the company's battery cell manufacturing joint ventures.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ced71cf9466f277c
+symbol: GM
+published_utc: 2026-02-08T22:30:00Z
+url: https://www.nasdaq.com/press-release/cadillac-formula-1r-team-reveals-historic-first-livery-2026-02-08
+headline: CADILLAC FORMULA 1® TEAM REVEALS HISTORIC FIRST LIVERY
+<<<TEXT>>>
+That makes it a perfect opportunity for the team– which represents a striking new chapter in American participation in Formula 1 ®– to launch onto the world stage ahead of its Grand Prix debut in Melbourne, Australia. Shortly after the ad appeared on TV, a replica of the first Cadillac Formula 1 ® Team car was unveiled in dynamic fashion in Times Square, the busiest...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3bac8d63130d73dc
+symbol: GM
+published_utc: 2026-02-27T09:50:00Z
+url: https://www.nasdaq.com/press-release/why-rare-earth-magnets-are-real-battlefield-between-us-and-china-2026-02-27
+headline: Why Rare Earth Magnets Are the Real Battlefield Between the U.S. and China
+<<<TEXT>>>
+Companies mentioned in this release include: REalloys Inc., Microsoft, NVIDIA, Alphabet, Tesla, Inc., General Motors Company. Based in Euclid, Ohio, REalloys operates North America's only facility that has converted heavy rare earths into the high-performance metals and alloys required for defense systems. The company has non-binding agreements in place for...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a77a4f6c422c5246
+symbol: GM
+published_utc: 2026-03-10T07:30:00Z
+url: https://www.nasdaq.com/press-release/v2x-extends-strategic-partnership-general-motors-deliver-advanced-technical-training
+headline: V2X Extends Strategic Partnership with General Motors to Deliver Advanced Technical Training Nationwide
+<<<TEXT>>>
+--V2X, Inc. today announces the extension of its longstanding partnership with General Motors, underscoring a continued commitment to technical excellence and workforce development across GM's nearly 4,000 U.S. dealerships. The partnership includes operation of the flagship GM Technical Training Center in Troy, MI, supporting GM's renowned World Class...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8d0c5a87424abc69
+symbol: GM
+published_utc: 2026-04-28T06:30:00Z
+url: https://www.nasdaq.com/press-release/gm-releases-2026-first-quarter-results-declares-quarterly-dividend-2026-04-28
+headline: GM releases 2026 first-quarter results, declares quarterly dividend
+<<<TEXT>>>
+--General Motors today reported first-quarter 2026 revenue of $43.6 billion, net income attributable to stockholders of $2.6 billion, and EBIT-adjusted of $4.3 billion. GM announced today that its Board of Directors has declared a quarterly cash dividend on the company's outstanding common stock of $0.18 per share, payable June 18, 2026, to holders of the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1a80486eda3cda1c
+symbol: GM
+published_utc: 2026-05-20T09:00:00Z
+url: https://www.nasdaq.com/press-release/harman-named-2025-supplier-year-general-motors-2026-05-20
+headline: HARMAN Named 2025 Supplier of the Year by General Motors
+<<<TEXT>>>
+HARMAN, the automotive technology leader and a subsidiary of Samsung Electronics Co., Ltd., has been named a 2025 Supplier of the Year by General Motors at GM’ s 34th annual Supplier of the Year event in Austin, Texas. "We’ re proud to be recognized once again by General Motors as a Supplier of the Year," said Christian Sobottka, President and Chief Executive Officer at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c818696f2812df22
+symbol: GM
+published_utc: 2026-05-26T08:00:00Z
+url: https://www.nasdaq.com/press-release/gentherm-named-2025-supplier-year-general-motors-2026-05-26
+headline: Gentherm Named a 2025 Supplier of the Year by General Motors
+<<<TEXT>>>
+--Gentherm a global market leader of innovative thermal management and pneumatic comfort technologies, has been presented with a 2025 Supplier of the Year Award at General Motors’ 34 th annual Supplier of the Year event in Austin, Texas. We value the trust GM places in Gentherm and look forward to continuing to build on this momentum together.".
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: facd99de53f32cb0
+symbol: GM
+published_utc: 2026-06-18T08:30:00Z
+url: https://www.nasdaq.com/press-release/canadian-vehicle-manufacturers-association-celebrates-100-years-2026-06-18
+headline: The Canadian Vehicle Manufacturers' Association Celebrates 100 Years
+<<<TEXT>>>
+The report documents the history of the CVMA and the contributions its members Ford, General Motors, and Stellantis make to Canada. It outlines the investments by Ford, General Motors, and Stellantis that helped transform Canada into one of the world's leading automotive manufacturing nations, supporting hundreds of thousands of jobs across assembly plants,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 664f97789a7965d7
+symbol: GM
+published_utc: 2026-06-30T09:02:00Z
+url: https://www.nasdaq.com/press-release/3m-joins-cadillac-formula-1r-team-official-material-science-partner-accelerate-racing
+headline: 3M joins Cadillac Formula 1® Team as Official Material Science Partner to accelerate racing performance
+<<<TEXT>>>
+ST. PAUL, Minn. and INDIANAPOLIS, June 30, 2026/ PRNewswire/-- The Cadillac Formula 1 ® Team and 3 M today announced a multi-year global partnership to push the limits of innovation in the world's toughest laboratory, Formula 1 ®.  "At 3 M, we apply science and manufacturing expertise to help solve complex challenges," said William Brown, 3 M chairman and CEO.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: eb29d3591e7caa5e
+symbol: GM
+published_utc: 2026-07-21T06:30:00Z
+url: https://www.nasdaq.com/press-release/gm-releases-2026-second-quarter-results-raises-full-year-2026-guidance-and-declares
+headline: GM releases 2026 second-quarter results, raises full-year 2026 guidance and declares quarterly dividend
+<<<TEXT>>>
+The company expects net income attributable to stockholders to be $8.4 billion to $9.8 billion; Automotive operating cash flow to be $15.4 billion to $19.4 billion; and EPS-diluted to be $8.98 to $10.98 based on its updated guidance and the impact of adjustments recorded year to date. GM announced today that its Board of Directors has declared a quarterly cash...
+<<<END>>>

@@ -1,0 +1,1394 @@
+<<<ARTICLE>>>
+id: finnhub:143806053
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T13:01:16Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=df1d0faafef26e3a1c1c7266d63cfd159ba40c87e57034a9ab5e83a22ff62529
+image_url: https://www.chartmill.com/images/uploads/Undervalued_500_264px_webp_74997b3ff2.webp
+category: company
+tickers: MPC
+keywords: 
+headline: Marathon Petroleum (NYSE:MPC): An Undervalued Value Stock With Decent Fundamentals
+<<<SUMMARY>>>
+Marathon Petroleum screens as a decent value stock, combining deep valuation discounts with solid cash flow, balance-sheet health, and moderate growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805216
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bafaa8aff5484348ed06807c69cc4b12d17bf7f3b7189d0c9e24a2f68f622087
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Beat Value Traps: 4 Stocks With Attractive PEG Ratios to Buy Now
+<<<SUMMARY>>>
+Discover four stocks with attractive PEG ratios, strong earnings growth prospects and favorable value scores that could help investors avoid value traps.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803926
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:20:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9673e588ae87151994ab86f51299bcb0210e5e1dd01aa6d529d8590c8b1bc366
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: What Would Cheaper Fuel Mean For Exxon Mobil Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882528
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:48:30Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=8df1bba160b9a7e781e719e8f8cd8b773f14378d9b62a36950358a5b60546ee1
+image_url: https://image.cnbcfm.com/api/v1/image/108551343-17945989041794598901-49618324650-1080pnbcnews.jpg?v=1794598903&w=1920&h=1080
+category: company
+tickers: MPC
+keywords: 
+headline: KKM Financial's Jeff Kilburg: I get excited about owning energy
+<<<SUMMARY>>>
+KKM Financial's Jeff Kilburg joins 'Power Lunch' to discuss his energy picks, why he says now may be the time to buy gold and silver, and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806914
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:27:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7d5a5417360991bc0e1d2fa9b54f63fd5b69a4f64bc44d28584ac17ca2012e34
+image_url: 
+category: company
+tickers: MPC
+keywords: 
+headline: Mizuho Maintains Neutral on Marathon Petroleum, Lowers Price Target to $440
+<<<SUMMARY>>>
+Mizuho  analyst Nitin Kumar   maintains Marathon Petroleum (NYSE:MPC) with a Neutral and lowers the price target from $457 to $440.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806312
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bbb3193fceb9d2bb5a32c0417c7c892a36a91d0997c4e1971da57eeb3135afaf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: These 3 Stocks Have Bought Back Billions, But Which Offers the Best Value?
+<<<SUMMARY>>>
+AutoZone, Marathon Petroleum, and Corpay have each retired 20% or more of their shares in five years, raising questions about valuation, debt use, and whether buybacks are truly driving earnings growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802257
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:12:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=926f5ff26c6fe17c765fc1ac208697ab7b914486e7c780ad6f28958d4c303943
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: How Has Chevron's Story Changed For Shareholders?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802461
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T09:59:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3e19b01d439bff726dfbb545f3e037b28422fdddd06e8cc9d78d19100ce4b5ab
+image_url: 
+category: company
+tickers: MPC
+keywords: 
+headline: Fed's Goolsbee Says Even If The Price Of Oil Drops Rapidly, Refining Capacity Remains 'Problematic' And Will Keep Diesel And Jet Fuel Prices Elevated
+<<<SUMMARY>>>
+– CNBC interview
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773289
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f15b49e50b1c9418f83c6189cdaa7d909ff86bdb1dd20062668050ec452b24b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Top Research Reports for Home Depot, Gilead & TotalEnergies
+<<<SUMMARY>>>
+Today's Research Daily features new research reports on 16 major stocks, including The Home Depot, Inc. (HD), Gilead Sciences, Inc. (GILD), TotalEnergies SE (TTE) as well as two micro-cap stocks, Key Tronic Corporation (KTCC) and iPower Inc. (IPW).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773961
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T20:06:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=6df1ed164784a9c1004bf9ddc8ddd88b274e7ab7b23b279e74cc42528d0f86ff
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MPC
+keywords: 
+headline: S&P 500 Top Movers for Nov. 12, 2026: AMD and AVGO Gain, GPN and NVDA Fall
+<<<SUMMARY>>>
+S&P 500 top movers on Nov. 12, 2026 included AMD, AVGO, ANET, VLO and MPC among gainers, while GPN, SMCI, KDP, MRNA and NVDA led declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773956
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:36:17Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=8d72580f24855ff04af7f0752cd818ab15909885e271639988acb5b9006eddb8
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MPC
+keywords: 
+headline: S&P 500 Top Movers: Gainers and Losers on Nov. 12, 2026
+<<<SUMMARY>>>
+S&P 500 top movers for Nov. 12, 2026: AVGO, AMD, SWKS and energy names gained, while SMCI, GPN, NVDA and other technology shares declined.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767101
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5592b9981cc219c8d051ddc4a49d551c866be858f69ab04af0f574962f6e1e8c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Patterson-UTI Expects Higher Rig Demand as 2027 Outlook Improves
+<<<SUMMARY>>>
+PTEN expects higher U.S. rig activity, rising dayrates and stronger demand for advanced drilling equipment to fuel growth into 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767102
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:22:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0847c5e3c1bbf9e0a0359a446dee5b4b83bcd60b6c4b07f2c67857a8b91134e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Halliburton Expands Geothermal Footprint With Sage Geosystems Deal
+<<<SUMMARY>>>
+HAL expands its geothermal footprint through Sage Geosystems' Project Vector, bringing its well construction and stimulation expertise to advanced energy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767100
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:10:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=288e49bdca483412c51f4e0a641cdf51ae683fcdb34694ad701f8c0607a92254
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Learn Why The Bull Case For Marathon Petroleum Stock Could Change Following Earnings Beat
+<<<SUMMARY>>>
+Marathon Petroleum reported third quarter 2026 revenue of US$56.5b and net income of US$7.4b, with basic EPS from continuing operations of US$26.66. For the first nine months of 2026, revenue reached US$143.4b and net income was US$13.1b. The board decision to add former Fluor and Sasol leader David E. Constable from March 2027 aligns operational depth in engineering and energy with recent refinery upgrades that are aimed at higher value fuel output and system optimization. We will look at...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765095
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:05:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c86c6d048ffbe4a0a31ed77bfea590501644b0296adf622657241cd5d1225003
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: What iShares Global Energy ETF (IXC) Sold: Exxon Mobil Leads on Nov. 10
+<<<SUMMARY>>>
+The fund sold $130.9 million of stock, cutting 26 positions and adding none, with Exxon Mobil and Chevron the largest reductions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765220
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T10:08:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d9dea2c202f5c37fff1000543e2ef6884a3c26fc37c71109ab720afc2d59592f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Marathon Petroleum (MPC) Posts Stronger Q3 Results, Is It Still 12% Undervalued?
+<<<SUMMARY>>>
+Marathon Petroleum earnings spark investor focus Marathon Petroleum (MPC) has drawn fresh attention after reporting third quarter 2026 results that showed higher sales, revenue and net income, alongside benefits from refinery upgrades and some pressure from weaker jet fuel margins. The share price reaction has been sharp. Marathon Petroleum trades at US$402.84 after a 3.41% 1 day share price gain and a 13.04% 90 day share price return, even though the 30 day share price return is down 12.20%...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143757451
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T07:14:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e6515d5681b081f3747aa80bed644a2c8e60823618d0ec323edd0e4faee2c755
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Is Marathon Petroleum (MPC) Too Pricey For Its Future Cash Flow?
+<<<SUMMARY>>>
+Marathon Petroleum has turned into one of the strongest performers in the US energy sector in recent years, which raises a straightforward question for you as an investor. Is the current share price really in line with the cash flows the business is expected to generate, or has sentiment moved faster than its fundamentals. Over the past 5 years, Marathon Petroleum has delivered a very large share price gain of about 7x, which puts a lot of weight on whether that move is matched by the cash...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740370
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T20:21:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fa6cff1107bb4c6f546766d2de47e742ef15078628e171edd73418249370045d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Here is What to Know Beyond Why Marathon Petroleum Corporation (MPC) is a Trending Stock
+<<<SUMMARY>>>
+Zacks.com users have recently been watching Marathon Petroleum (MPC) quite a bit. Thus, it is worth knowing the facts that could determine the stock's prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738105
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e954384fa04455b4c472dd22d96a9768de9ba5d95a46b2d839468e18bcf04e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: APA Raises 2026 Free Cash Flow Forecast to $2.9B After Q3 Results
+<<<SUMMARY>>>
+APA raises its 2026 free cash flow outlook to $2.9 billion as stronger U.S. oil production, higher prices and cost controls boost shareholder returns and debt reduction.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738106
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a872f1873035dd643632a816a014296fb06deff0668645a7f4f9374a3865111e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Diamondback and KKR to Acquire Five Point's 70% Stake in Deep Blue
+<<<SUMMARY>>>
+FANG's proposed deal with KKR would secure water infrastructure capacity through joint ownership of Deep Blue, serving Midland Basin operators.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143725853
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T09:29:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba16a383125e2280bc2cf8f6b05f35100f4d463a24c9f5bb52634141b64eab5b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: BoE rate peak of 4.25% ‘will not be enough’, NIESR says in Autumn 2026 outlook
+<<<SUMMARY>>>
+Investing.com -- The Bank of England needs to raise interest rates beyond the 4.25% peak forecast for next year because inflation is expected to peak at 4.4% in February 2027, up from 3.8% in July, British think tank National Institute of Economic and Social Research (NIESR) said in its Autumn 2026 Economic Outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143714652
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T05:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=216acfe81172fad4f955410df398cf4e446c4b32aa614155de3601a73828090c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Zacks Investment Ideas feature highlights: CVR Energy, Delek US, Northern Oil and Gas and Marathon Petroleum
+<<<SUMMARY>>>
+CVI, DK and NOG crushed Q3 earnings expectations, with strong cash flows, improving profitability and shareholder returns making their stock pullbacks worth watching.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693955
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=264f6769537ad1306504d6b1ce99ef19fb01e51f82a569026105bed0cf971cc2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: 3 Oil Stocks to Buy on the Dip After Crushing Q3 Expectations: CVI, DK, NOG
+<<<SUMMARY>>>
+Here are three highly ranked oil stocks worth buying on the dip after crushing Q3 earnings expectations amid continued volatility in crude prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692707
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=37f2286dd9b0131f4351b3daa0e5783802e786fbba59acd0e53e59e79375767d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Chevron Expands Namibia Ties With QatarEnergy Offshore Stake Deal
+<<<SUMMARY>>>
+CVX is selling a 25% stake in Namibia's PEL82 offshore license to QatarEnergy, sharing exploration costs while retaining control and growth potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692692
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:05:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0aaebe2619886165b49294cf68b8d2c2a7f8b11571a445703be7217fe08817d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Is Chevron Stock A Real Bargain?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687276
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:05:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=89e6a1f494e6b88797f67589ba44571ce7fdae91c50359cac46db0296e5f53d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Should You Buy Exxon Mobil Stock For Its Cash?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687428
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a52933202e68a18932985ec74d523ebffca788c4a0afed5ea94813aa3933670c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Can PBF's Chalmette Jet Fuel Expansion Drive Margin Growth?
+<<<SUMMARY>>>
+PBF plans to double Chalmette jet fuel output by 2027 through a sub-$20 million upgrade, targeting higher-value products and stronger refining margins.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143683929
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:05:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a35d2e2b7c0a42bcdb27f9cc7671c1a4ed2e2772e9307c953953d8265c6232a6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: iShares Russell Mid-Cap (IWR) Adds Fox and Marathon Petroleum on Nov. 6
+<<<SUMMARY>>>
+The fund bought $273.2 million of stock and sold nothing, lifting 796 positions, with Fox Class A the largest addition at $36.3 million.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144027205
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T23:16:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3e9f7c8ecdad115255f3e2d961855490a8ac525a2722dddd8befb6765dd3ee0d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: 4 High-Yield Dividend Stocks for Retirees Who Want Income They Can Count On
+<<<SUMMARY>>>
+Yields above 8% tempt retirees, but the real question is whether the cash behind each check is strong enough to cover it. Four companies tied to tolls, rent, and phone bills face that test, and one carries a tax wrinkle many IRA owners miss.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144022683
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T10:27:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4782793b005246868160cdafb3705bbd2bed1b160be182f455fa78168e4d2c2f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: This Pipeline Partnership Raised Its Payout by 12.5% for the Third Straight Year. Here’s How Much Longer It Can Keep That Up.
+<<<SUMMARY>>>
+MPLX can still afford to fund its massive distributions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144023427
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T08:20:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=78a501d4609e761375d64d79a3a3f21f3673dd3bf35bfd726fcf5575d12c491b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1177165160/image_1177165160.jpg?io=getty-c-og
+category: company
+tickers: MPC
+keywords: 
+headline: Our Top 10 High Growth Dividend Stocks - November 2026
+<<<SUMMARY>>>
+The article provides a methodology for selecting high-growth dividend-paying stocks, focusing on dividend growth and sustainability rather than high current yield.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143992281
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T21:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=adeabb6c8b97b96d0df2addb357f2861345a8b271d72029788dc8dd28c27c1fd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Six ENERGY STAR(R) Certifications Add to Marathon Petroleum's Legacy of Energy Efficiency
+<<<SUMMARY>>>
+Key Points * For the second consecutive year, six refineries are among the most energy-efficient facilities of their kind in the nation. * The sites earned 2026 ENERGY STAR® certifications, representing efficiency in the top 25% of their peer group during the 2025 operating year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988584
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:31:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f297354ef3601ff5f26932c87c46788d84cf7c77c0689893bda556489dea7f18
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: U.S. Refiners Benefit From Strong Margins: What's Ahead in 2027?
+<<<SUMMARY>>>
+Valero Energy, Marathon Petroleum and Phillips 66 benefit from strong refining conditions in the third quarter, but rising global capacity could test margins in 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143985639
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T08:20:54Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=f55660ea13895514a579c308aaf8a456ff23246c1a40646bca3aa2aba509faa8
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2225751700/image_2225751700.jpg?io=getty-c-og
+category: company
+tickers: MPC
+keywords: 
+headline: Undercovered Dozen: Annaly, Vertiv, Intuitive Machines And More
+<<<SUMMARY>>>
+The Undercovered Dozen spotlights 12 lesser-followed Seeking Alpha stocks from Nov. 7 to Nov.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143945949
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T19:17:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=33d6571fe5d69dde3cd1c91e17113a97da8fa94c35676fec1da9721d816260a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: 2 Dividend Stocks Could Generate $30,000 a Year, but the Allocation Matters
+<<<SUMMARY>>>
+One stock pays nearly twice the yield of the other, so the way you split the money changes the bill by hundreds of thousands of dollars. Before you copy this pair, check which side hides a tax form and a growth catch.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942839
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:13:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=35662103c5bd8be0ade90f27ab35e284609037112cae49683d396f368b046eb4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Your Chevron Hedge Works Only While Oil Spikes
+<<<SUMMARY>>>
+Our Nov 18 look at Chevron found the stock moving on its own. Chevron gained 2.3% from November 10 to November 17, while the S&P 500 lost 2.4%. For the full record, see Is Chevron Stock Increasing Your Market Risk? The next question is whether Chevron protects a portfolio when oil prices jump.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143942840
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ce91428cc1fedf104da8fd2574174749c3d5428944d0223dfdbb8b738604856
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Crude Gives Back Ground Midweek as Inventories Build and Surplus Talk Grows
+<<<SUMMARY>>>
+Oil Market Daily News Commentary - Crude oil heads into Thursday down for the week so far. Brent futures settled at $91.95 a barrel on Wednesday, down $1.19, or 1.28%, while U.S. West Texas Intermediate fell $2.75, or 3.2%, to $83.26, its lowest since August 26, according to Reuters. Measured from Friday's settlements of $95.84 for Brent and $88.56 for WTI, Brent is down $3.89, or 4.06%, and WTI is down $5.30, or 5.98%, for the week to date, by our arithmetic. Energy companies with developments
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938590
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:45:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1a409fd9dc5067ae499fda8ccad857700df1169ba8811da503ee48946c1e238b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: What Moved Marathon Petroleum Stock?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938332
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:41:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d00d0f5e5420cfa48a2be02989ef1a7a3385f4077b68e990ee24f28a35be2298
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: What Sent Valero Energy Stock Lower?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921848
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T20:06:30Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2e6841d668bd7987172d96ddce82144520110dcd11ddea7545baf024178ca6af
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MPC
+keywords: 
+headline: S&P 500 Top Movers: Today's US Session Gainers and Losers
+<<<SUMMARY>>>
+S&P 500 top movers in today's US session, with OKTA, TJX and GNRC among the strongest gainers and HUM, UNH and ELV among the top losers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143920071
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T18:03:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=76e61233e5546301f549dcd9169950bf28eade9b79c7cbc04f127072a371d631
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Is Chevron Stock Increasing Your Market Risk?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921841
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:36:05Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=2762468e9a959e70569b7eb87ad5a5aa10a627cb914859538027f8766c74e2ec
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MPC
+keywords: 
+headline: S&P 500 Top Movers: Gainers and Losers in the Nov. 18, 2026 US Session
+<<<SUMMARY>>>
+S&P 500 top movers for Nov. 18, 2026: TJX led gainers at 10.74%, while UNH led losers at -8.55%, based on US session data.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921348
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:51:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d96a83a1609747581d4c71754433a040a74648d7c37081a2acc716c60e3e5653
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Nigeria's central bank could cut rates by 600bp by end-2027 as inflation heads below 10% - Capital Economics
+<<<SUMMARY>>>
+Nigeria's inflation should fall below 10% by mid-2027, making room for 600 basis points of rate cuts by end-2027, Capital Economics said in a note on November 17. The London-based consultancy expects the Central Bank of Nigeria (CBN) to cut its monetary policy rate by 150bp to 21.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921839
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:36:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=a2e0cd95505647eac675ffbdca34ed314294a1e55f55d4175a9457e5e90dd8a9
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: MPC
+keywords: 
+headline: S&P 500 Gap-Down Movers for Nov. 18 Session
+<<<SUMMARY>>>
+S&P 500 gap-down stocks on Nov. 18 included FCX, NEM, UNH, VLO and HUM, with the article tracking each stock's opening gap and move in today's session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917322
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:31:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50b39114701afe001f56d42265f6f3595aa0a26ec28fdb7bfaa7c856d816ca38
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Is Exxon Mobil Stock a Good Fit For Your Portfolio Risk?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140740145
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:40:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1330c2e97b76b4393550146450fe1b00805a15b4ea6dbe7b18d48fe7a418be5f
+image_url: 
+category: company
+tickers: MPC
+keywords: 
+headline: PowerBank shares are trading higher after the U.S. Department of Defense and the Department of the Army for the Armed Forces Reserve Center Farmingdale awarded the company's subsidiary, Abundant Solar Power, a $2,950,000 contract to construct a photovoltaic array, electric vehicle chargers and associated infrastructure for the U.S. Federal Government.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880796
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=05f5eede190a0299d33dfdf7b7ad69de30681c9aa2109df9437059910c00eff1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Why Pay More For Exxon Mobil Stock Than Chevron?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884444
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:23:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5ca9663eb3050d9acaccb3e063c365658a205cc56e792d47d14691e8f93f4917
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Marathon Petroleum Stock: Analyst Estimates & Ratings
+<<<SUMMARY>>>
+Marathon Petroleum outpaced the broader market over the past year, and analysts are fairly bullish on its future outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143876091
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:29:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5a885d6234bb0e6d60bd14e1ef47aa4d38f949bc4e7e9f2786c4c52edb4cf46c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Is Chevron Stock Overpriced Versus Its Oil Rivals?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849719
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T16:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7fe8c7e14047e57a58b3deefbe6fda9883386576c9452187c8da6d4d3d1beb7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Marathon Petroleum vs. Par Pacific: Picking the Better Refining Play
+<<<SUMMARY>>>
+MPC leads in scale and shareholder returns, but PARR's valuation discount and renewable diesel progress change the investment equation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849190
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T14:17:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f467d0d98df681d7a25795eeaee4594f072292f93c51f6371608ffab32d36d0f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: 4 High-Yield Energy Stocks That Get Paid to Move Oil and Gas
+<<<SUMMARY>>>
+Four pipeline partnerships collect fees on every barrel and cubic foot that flows through, and one pays out far more than the rest. But the biggest check comes with the most homework, and the tax paperwork can surprise unprepared investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139985215
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:32:37Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cd66faf67f9da52f168f213f339f4c6af1262070fd76db7954a7e501be6b74c1
+image_url: 
+category: company
+tickers: MPC
+keywords: 
+headline: Abundia Global Impact Group shares are trading lower after the company announced the pricing of its $20 million registered direct offering of 5,934,718 shares.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051618
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T17:54:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d0012632f6db85ecabfd3c75c5d7145fa39d542b68b02bcb40c86e04afdb6a8c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: Billionaire Carl Icahn Has 86% of His $9.4 Billion Stock Portfolio in Just Two Companies
+<<<SUMMARY>>>
+Carl Icahn's latest filing reads less like a stock portfolio and more like a map of his own empire. Retirement investors tempted to copy it should first ask who really controls the risk, and who pays when the payouts shrink.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048694
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d110a84f04d5cc73b6041d3d90dc4036aa4afc39c5de6fc22b1405bfbac4f732
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MPC
+keywords: 
+headline: The Zacks Analyst Blog Highlights Valero Energy, Marathon Petroleum and Phillips 66
+<<<SUMMARY>>>
+Valero Energy, Marathon Petroleum and Phillips 66 capitalize on strong refining margins and high utilization, but can momentum last into 2027?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144049984
+symbol: MPC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T10:33:51Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7de1b4eec776c3b1822f32395fdd38f83cbecfd7731795f049a1da314289c9ff
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1399380391/image_1399380391.jpg?io=getty-c-og
+category: company
+tickers: MPC
+keywords: 
+headline: Crack Spreads Made Marathon Petroleum A Cash Machine
+<<<SUMMARY>>>
+Analyst rates Marathon Petroleum a cautionary Hold as peace talks could depress cracks; shares fell from $493.98 to $367.19, with $221.11 support.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e60ccac4fc846c73d8a3e3037622dc71d6b85bccbdf04350db97e1729052b182
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T12:45:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027044/can-pbf-s-chalmette-jet-fuel-expansion-drive-margin-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3027044
+image_url: https://staticx-tuner.zacks.com/images/articles/main/10/190692.webp
+category: 
+tickers: PBF, MPC, PSX
+keywords: refinery optimization, jet fuel production, product yield improvement, refining margins, capital-efficient projects, distillate production
+headline: Can PBF's Chalmette Jet Fuel Expansion Drive Margin Growth?
+<<<SUMMARY>>>
+PBF Energy plans to double jet fuel capacity at its Chalmette refinery to 20,000 BPD by 2027 with less than $20 million investment, capitalizing on an $8-$9 per barrel premium of jet fuel over diesel. Marathon Petroleum and Phillips 66 are also pursuing refinery optimization projects to increase higher-value fuel production and improve profitability.
+<<<INSIGHTS>>>
+PBF | positive | Company is executing a capital-efficient project requiring <$20M to double jet fuel capacity, capturing attractive $8-$9/barrel margins. Trades at lower valuation (1.95X EV/EBITDA vs 4.50X industry average) with upward earnings revisions and Zacks Rank #1 rating.
+MPC | positive | Completed strategic refinery upgrades including Garyville jet fuel flexibility and Robinson product flexibility projects that enhance distillate optimization and higher-value fuel production capabilities.
+PSX | positive | Pursuing refinery optimization initiatives to maximize distillate production and jet fuel output, with favorable jet fuel pricing relative to diesel providing additional margin opportunities.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:93c66d05bbf2d3b40df95c480d81021d1c992b9233b7176d410edfb763f59138
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T18:16:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027409/chevron-expands-namibia-ties-with-qatarenergy-offshore-stake-deal?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3027409
+image_url: https://staticx-tuner.zacks.com/images/articles/main/73/488.jpg
+category: 
+tickers: CVX, MPC, DK, CNQ
+keywords: offshore exploration, Namibia, energy partnership, stake sale, exploration license, deepwater operations, cost sharing
+headline: Chevron Expands Namibia Ties With QatarEnergy Offshore Stake Deal
+<<<SUMMARY>>>
+Chevron has agreed to sell a 25% stake in Namibia's offshore exploration license PEL82 to QatarEnergy while retaining 55% ownership and operational control. The deal allows Chevron to share exploration costs and risks with QatarEnergy in the African energy market. However, any financial benefit remains uncertain pending successful exploration results and commercial viability assessments.
+<<<INSIGHTS>>>
+CVX | neutral | The deal allows Chevron to reduce financial exposure while maintaining operational control, but provides no immediate revenue impact. The long-term value depends entirely on uncertain future exploration results and commercial viability of potential discoveries in deepwater operations.
+MPC | neutral | Mentioned as a comparable investment option with Zacks Rank #1, but not directly related to the article's main news content.
+DK | neutral | Mentioned as a comparable investment option with Zacks Rank #1, but not directly related to the article's main news content.
+CNQ | neutral | Mentioned as a comparable investment option with Zacks Rank #1, but not directly related to the article's main news content.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:92579872e2ae416a24f6db4c045828fed1707137dbaa151c08cf4a6cdf34bf3a
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T18:55:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/commentary/3027404/3-oil-stocks-to-buy-on-the-dip-after-crushing-q3-expectations-cvi-dk-nog?cid=CS-ZC-FT-investment_ideas-3027404
+image_url: https://staticx-tuner.zacks.com/images/articles/main/69/190505.webp
+category: 
+tickers: CVI, DK, NOG, MPC
+keywords: oil stocks, Q3 earnings, refining margins, crude prices, cash flow, dividend yield, geopolitical tensions
+headline: 3 Oil Stocks to Buy on the Dip After Crushing Q3 Expectations: CVI, DK, NOG
+<<<SUMMARY>>>
+Three oil and refining stocks—CVR Energy, Delek US Holdings, and Northern Oil and Gas—are recommended as buying opportunities following strong Q3 earnings beats despite recent price pullbacks. All three companies significantly exceeded earnings and revenue expectations, with improving cash flow profiles and shareholder-friendly initiatives. While declining crude prices pose a potential headwind, geopolitical uncertainty and favorable refining economics could support continued profitability.
+<<<INSIGHTS>>>
+CVI | positive | Delivered exceptional Q3 results with adjusted EPS of $4.00 vs. consensus of $3.09 (30% beat), revenue jumped 69% YoY, petroleum segment EBITDA soared to $565M, and announced acquisition of Marathon Petroleum refineries to expand earnings potential.
+DK | positive | Posted Q3 adjusted EPS of $10.53 vs. expectations of $7.59 (39% beat), revenue climbed 52% to $4.39B, raised annualized cash flow improvement target to $250M, and announced $100M in Q4 share repurchases with significant debt reduction plans.
+NOG | positive | Delivered Q3 adjusted EPS of $1.32 vs. estimates of $0.92 (43% beat), revenue increased 45% to $697.69M, generated record $148.6M in free cash flow (up 25% YoY), raised full-year production guidance, and declared $0.45 quarterly dividend with ~8% annualized yield.
+MPC | neutral | Mentioned only in context of CVR Energy's acquisition of two of its refineries; no direct performance data or sentiment indicators provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:34e249c1517306e41ffca3d7953b7588f8e1ce8008c97e3f8e19d793046a4f51
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T08:30:00Z
+publisher: Zacks Investment Research
+author: Zacks
+url: https://www.zacks.com/stock/news/3027644/zacks-investment-ideas-feature-highlights-cvr-energy-delek-us-northern-oil-and-gas-and-marathon-petroleum?cid=CS-ZC-FT-press_releases-3027644
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: CVI, DK, NOG, MPC
+keywords: oil stocks, refining margins, Q3 earnings, crude prices, cash flow, dividend yield, geopolitical tensions
+headline: Zacks Investment Ideas feature highlights: CVR Energy, Delek US, Northern Oil and Gas and Marathon Petroleum
+<<<SUMMARY>>>
+Three oil and refining stocks—CVR Energy, Delek US Holdings, and Northern Oil and Gas—are highlighted as buy-the-dip opportunities following strong Q3 earnings that significantly exceeded expectations. Despite crude price pullbacks amid easing geopolitical tensions, these companies demonstrated robust profitability and cash flow generation, with all three earning Zacks Rank #1 (Strong Buy) ratings.
+<<<INSIGHTS>>>
+CVI | positive | Delivered exceptional Q3 results with adjusted EPS of $4.00 crushing consensus estimate of $3.09 by 30%, revenue jumped 69% YoY, and announced acquisition of Marathon Petroleum refineries to expand earnings potential. Rated Zacks Rank #1 (Strong Buy).
+DK | positive | Posted Q3 adjusted EPS of $10.53, crushing expectations of $7.59 by 39%, with revenue up 52% to $4.39 billion. Raised cash flow improvement guidance and announced $100 million in share repurchases. Rated Zacks Rank #1 (Strong Buy).
+NOG | positive | Delivered Q3 adjusted EPS of $1.32, surpassing estimates of $0.92 by 43%, with revenue up 45% and record free cash flow of $148.6 million. Raised full-year production guidance and declared $0.45 quarterly dividend with ~8% yield. Rated Zacks Rank #1 (Strong Buy).
+MPC | neutral | Mentioned only in context of CVR Energy's planned acquisition of two of its refineries; no independent analysis or performance metrics provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0e1d7ade22650a0f6cff95e0416fb74294cc142dc1fff7a56da48e6822ca2493
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T15:38:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027731/apa-raises-2026-free-cash-flow-forecast-to-2-9b-after-q3-results?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3027731
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: APA, MPC, DK, CNQ
+keywords: free cash flow, oil production, shareholder returns, debt reduction, Permian Basin, GranMorgu project, cost savings, commodity prices
+headline: APA Raises 2026 Free Cash Flow Forecast to $2.9B After Q3 Results
+<<<SUMMARY>>>
+APA Corporation raised its 2026 free cash flow forecast by $600 million to $2.9 billion, driven by stronger U.S. oil production (128,000 barrels per day), higher commodity prices, and cost controls. The company returned $537 million to shareholders in Q3 and reduced debt by $451 million. APA's stock has outperformed the broader oil-energy sector by 56.6% year-to-date. The company plans a $2.5 billion upstream capital budget for 2027, with significant investment in the GranMorgu project offshore Suriname.
+<<<INSIGHTS>>>
+APA | positive | APA significantly raised its 2026 free cash flow guidance by $600 million, beat Q3 earnings expectations, exceeded U.S. oil production guidance, increased shareholder returns, reduced debt substantially, and achieved strong year-to-date stock performance. The company also established a lower long-term net debt target and plans growth investments in the GranMorgu project.
+MPC | neutral | Mentioned as a comparable investment option with a Zacks Rank #1 (Strong Buy) rating, but no specific company performance data or news is provided in the article.
+DK | neutral | Mentioned as a comparable investment option with a Zacks Rank #1 (Strong Buy) rating, but no specific company performance data or news is provided in the article.
+CNQ | neutral | Mentioned as a comparable investment option with a Zacks Rank #1 (Strong Buy) rating, but no specific company performance data or news is provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6872865ad060f68bf5e3b9b053089a96eb74fea11365a3dc506f9e383f3153ea
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T20:21:20Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3028189/here-is-what-to-know-beyond-why-marathon-petroleum-corporation-mpc-is-a-trending-stock?cid=CS-ZC-FT-fundamental_analysis|most_searched_stocks-3028189
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default264.jpg
+category: 
+tickers: MPC
+keywords: Marathon Petroleum, MPC, earnings growth, Zacks Rank #1, refining, valuation discount, stock trending
+headline: Here is What to Know Beyond Why Marathon Petroleum Corporation (MPC) is a Trending Stock
+<<<SUMMARY>>>
+Marathon Petroleum (MPC) has been trending on Zacks.com despite a -18.3% decline over the past month. The company shows strong earnings growth expectations with current year EPS projected at $66.31 (up 519.7% YoY) and has consistently beaten consensus estimates. MPC received a Zacks Rank #1 (Strong Buy) rating based on positive earnings estimate revisions and is trading at a valuation discount to peers with an A grade on the Value Style Score.
+<<<INSIGHTS>>>
+MPC | positive | Despite recent stock price decline of -18.3%, MPC shows strong fundamental indicators including exceptional earnings growth projections (+519.7% for current fiscal year), consistent beats on both EPS and revenue estimates over trailing four quarters, positive earnings estimate revisions (+8.4% over last 30 days), Zacks Rank #1 Strong Buy rating, and attractive valuation with an A grade indicating trading at a discount to peers.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a0a63a8813ca7dcaed3dbc8a8606143dd083569fb846b122d38f77f5be88d743
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T12:24:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028404/patterson-uti-expects-higher-rig-demand-as-2027-outlook-improves?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3028404
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ea/574.jpg
+category: 
+tickers: PTEN, MPC, DK, CNQ
+keywords: drilling rigs, oilfield services, rig dayrates, completion services, U.S. drilling activity, Permian Basin, natural gas equipment, free cash flow
+headline: Patterson-UTI Expects Higher Rig Demand as 2027 Outlook Improves
+<<<SUMMARY>>>
+Patterson-UTI Energy (PTEN) expects to bring more drilling rigs into service in early 2027 as U.S. oilfield activity strengthens. The company reported 104 operating rigs in Q3 2026, up 18% from April lows, with rig dayrates climbing to the mid-$30,000 range. Strong demand for advanced equipment, improved completion services prospects, and solid financial performance position PTEN for continued growth in 2027.
+<<<INSIGHTS>>>
+PTEN | positive | Company expects significant growth in 2027 with increasing rig deployments, higher dayrates in the mid-$30,000 range, strong Q3 financial results (9% revenue growth, $264M adjusted EBITDA), improved cash position ($339M cash, no debt), and disciplined capital allocation strategy. Stock has surged 70.5% year-to-date.
+MPC | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector, but no specific company performance or outlook details provided in the article.
+DK | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector, but no specific company performance or outlook details provided in the article.
+CNQ | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector, but no specific company performance or outlook details provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6a1378428e4a75229419274aa1590481a593f9a04f4f7beca735ef9daacb0165
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T20:07:00Z
+publisher: Zacks Investment Research
+author: Mark Vickery
+url: https://www.zacks.com/commentary/3028724/top-research-reports-for-home-depot-gilead-totalenergies?cid=CS-ZC-FT-research_daily-3028724
+image_url: https://staticx-tuner.zacks.com/images/articles/main/e9/1048.jpg
+category: 
+tickers: HD, GILD, TTE, KTCC, IPW, MPC, BNY, BNYpK, SU
+keywords: stock analysis, research reports, retail, biotech, energy, earnings
+headline: Top Research Reports for Home Depot, Gilead & TotalEnergies
+<<<SUMMARY>>>
+Zacks Research Daily features analysis of 16 major stocks on November 12, 2026. Home Depot benefits from digital investments and Pro initiatives but faces subdued discretionary projects. Gilead outperforms with strong HIV franchise but faces intensifying competition. TotalEnergies underperforms due to geopolitical risks despite diversified portfolio. Key Tronic and iPower face significant challenges with declining performance. Additional coverage includes Marathon Petroleum, Bank of New York Mellon, and Suncor Energy.
+<<<INSIGHTS>>>
+HD | positive | Outperformed industry by 2.6% over six months; benefits from integrated retail model, digital investments, and Pro-focused initiatives with SRS expansion strengthening professional customer ecosystem
+GILD | positive | Significantly outperformed industry (+35.5% vs +10.9% over past year); strong HIV franchise with robust demand for key drugs and potential for further diversification through acquisitions
+TTE | negative | Underperformed industry by 9.8% over six months; faces geopolitical risks, integration challenges, and commodity price volatility despite diversified portfolio and LNG expansion
+KTCC | negative | Significantly underperformed industry (-52.9% vs +10.3% over past year); faces liquidity constraints, elevated debt, and profitability vulnerabilities despite some growth prospects
+IPW | negative | Severely underperformed industry (-100.0% vs +24.0% over past year); declining revenues, margin pressure, limited liquidity, and unproven return to profitability despite asset-light restructuring
+MPC | positive | Third quarter R&M margin significantly improved to $45.70 per barrel versus $17.60 year-over-year, substantially boosting refining profitability
+BNY | neutral | Diversified platforms and fee growth support performance, but rising expenses, market-sensitive fees, and premium valuation may limit near-term upside
+BNYpK | neutral | Diversified platforms and fee growth support performance, but rising expenses, market-sensitive fees, and premium valuation may limit near-term upside
+SU | positive | Strong integrated business model with robust upstream and downstream operations and improving operational reliability position it well for sustained growth
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:176f24b2cb81e347bf2a40a8ef03109fc015e5dd4f2fe73309665cac36e33a7d
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T19:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029812/beat-value-traps-4-stocks-with-attractive-peg-ratios-to-buy-now?cid=CS-ZC-FT-analyst_blog|rw-3029812
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f5/189070.webp
+category: 
+tickers: OMCL, SNDK, AVT, MPC
+keywords: PEG ratio, value investing, earnings growth, stock screening, discounted valuations, Zacks Rank
+headline: Beat Value Traps: 4 Stocks With Attractive PEG Ratios to Buy Now
+<<<SUMMARY>>>
+The article identifies four stocks that qualify as attractive PEG-driven value investment picks based on discounted valuations combined with strong earnings growth prospects. Using screening criteria including PEG ratio, P/E ratio, Zacks Rank, and Value Score, the selected stocks are positioned to offer upside potential for value investors seeking to avoid value traps.
+<<<INSIGHTS>>>
+OMCL | positive | Zacks Rank #1 (Strong Buy), Value Score of B, impressive five-year expected growth rate of 24.4%, and discounted PEG and P/E valuations make it an attractive value pick.
+SNDK | positive | Zacks Rank #2 (Buy), Value Score of A, and the highest five-year expected growth rate of 57% among the four picks, combined with discounted valuations, make it a strong candidate.
+AVT | positive | Zacks Rank #1 (Strong Buy), Value Score of B, long-term expected growth rate of 31.3%, and discounted PEG and P/E ratios support its selection as a value investment.
+MPC | positive | Zacks Rank #2 (Buy), Value Score of A, and impressive five-year expected growth rate of 59.5% combined with discounted valuations make it an attractive PEG-driven value pick.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1ad415b95aa3b52bba70a5db4097347db66e831d2b3d4c4a6aa989525804a29a
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T16:07:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030544/marathon-petroleum-vs-par-pacific-picking-the-better-refining-play?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3030544
+image_url: https://staticx-tuner.zacks.com/images/articles/main/4e/301.jpg
+category: 
+tickers: MPC, PARR
+keywords: refining industry, valuation comparison, refinery operations, renewable diesel, capital allocation, shareholder returns, balance sheet strength
+headline: Marathon Petroleum vs. Par Pacific: Picking the Better Refining Play
+<<<SUMMARY>>>
+In a comparison of two major U.S. refining companies, Par Pacific Holdings emerges as the better investment choice despite Marathon Petroleum's larger scale and stronger shareholder returns. Par Pacific trades at a significant valuation discount (0.38X forward sales vs 0.82X), benefits from improving refinery efficiency, expanding renewable diesel operations, and a strengthening balance sheet. Both companies are capitalizing on favorable refining margins, but Par Pacific's operational improvements and financial flexibility position it more favorably for future growth.
+<<<INSIGHTS>>>
+MPC | neutral | MPC demonstrates strong fundamentals with extensive refining network, robust cash generation ($9.9B Q3 EBITDA), strategic Gulf Coast investments, and significant shareholder returns ($3.3B in Q3). However, it faces margin volatility risks and execution risks on refinery upgrades. Rated Zacks Rank #3 (Hold), indicating solid but not exceptional investment potential.
+PARR | positive | PARR is rated as the superior investment choice with compelling advantages: trading at 0.38X forward sales (significant discount to MPC), achieved net cash position, Hawaii Renewables turned profitable in Q3 2026, improving operational efficiency (Billings refinery at <$10/barrel costs), and strong liquidity ($2.4B). Rated Zacks Rank #1 (Strong Buy), reflecting confidence in future profitability and earnings growth potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3d73dabe65a0c63eee2951ed348c2f9b1fde8a889a62d44724f753fb885cfca9
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T14:31:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033223/u-s-refiners-benefit-from-strong-margins-what-s-ahead-in-2027?cid=CS-ZC-FT-analyst_blog|industry_focus-3033223
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a2/2139.jpg
+category: 
+tickers: VLO, MPC, PSX
+keywords: refining margins, refinery utilization, crack spreads, gasoline and diesel, Q3 2026 earnings, 2027 outlook, fuel demand
+headline: U.S. Refiners Benefit From Strong Margins: What's Ahead in 2027?
+<<<SUMMARY>>>
+Major U.S. refiners Valero Energy, Marathon Petroleum, and Phillips 66 delivered strong third-quarter 2026 earnings driven by high refinery utilization rates (98-100%), wider crack spreads, and favorable fuel margins. However, the outlook for 2027 remains uncertain as rising global refining capacity, crude oil costs, and shifting fuel demand could pressure margins and profitability.
+<<<INSIGHTS>>>
+VLO | positive | Strong Q3 2026 performance with refining operating income of $8.8B (vs $1.6B YoY), refining margins increased to $37.55/barrel from $12.21, completed St. Charles optimization project on schedule. Zacks Rank #2 (Buy). However, future profitability depends on maintaining high utilization and product price stability.
+MPC | positive | Achieved record 100% crude capacity utilization in Q3 2026, segment adjusted EBITDA increased to $9.9B from $1.8B YoY, refining margins rose to $45.70/barrel from $17.60. Returned $3.3B to shareholders and increased dividend 10%. Zacks Rank #3 (Hold). Concerns about sustaining 100% utilization long-term due to maintenance requirements.
+PSX | positive | Strong Q3 2026 with 98% utilization, record 41% distillate yield and 86% clean product yield, quarterly earnings of $5.6B. Returned $2.8B to shareholders and reduced debt by $2B. Zacks Rank #3 (Hold). Product yield focus may provide some resilience, but earnings remain sensitive to fuel demand and margin changes.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1adda623d5be317076c0b77aee14a3d55a6f18151c7b9b7c9754486d0ed3888b
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T10:07:02Z
+publisher: The Motley Fool
+author: Leo Sun
+url: https://www.fool.com/investing/2026/11/22/this-pipeline-partnership-raised-its-payout-by-125-for-the-third-straight-year-heres-how-much-longer-it-can-keep-that-up/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F6db826f628d8bd70d0fd9d6cd8b0535ecf67f344-7680x4320.jpg&w=1200&op=resize
+category: 
+tickers: MPLX, MPC
+keywords: pipeline partnership, distributions, master limited partnership, distributable cash flow, midstream, dividend yield, income investment
+headline: This Pipeline Partnership Raised Its Payout by 12.5% for the Third Straight Year. Here’s How Much Longer It Can Keep That Up.
+<<<SUMMARY>>>
+MPLX, a midstream pipeline company, has raised its annual distributions by 12.5% for three consecutive years with an 8.9% forward yield. The company's distributable cash flow coverage ratios (64%, 65.3%, and 71.5% in 2023-2025) suggest it can sustain these increases for at least several more years, while remaining insulated from oil price volatility through its toll-based business model.
+<<<INSIGHTS>>>
+MPLX | positive | MPLX demonstrates consistent distribution growth for three years, maintains manageable payout ratios with room for future increases, generated 179% total return over five years, and operates a stable toll-based business model insulated from oil price volatility. The company offers reliable income with growth potential.
+MPC | neutral | Marathon Petroleum is mentioned only as the parent company that spun off MPLX in 2012. No specific analysis or commentary about MPC's performance or outlook is provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:da5c28612bec9af4d8be1d7333e4b4a5cba08b15c68e953e6fa9140ebe9988a5
+symbol: MPC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T11:45:00Z
+publisher: Zacks Investment Research
+author: Zacks Equity Research
+url: https://www.zacks.com/stock/news/3033590/the-zacks-analyst-blog-highlights-valero-energy-marathon-petroleum-and-phillips-66?cid=CS-ZC-FT-press_releases-3033590
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6c/1976.jpg
+category: 
+tickers: VLO, MPC, PSX
+keywords: refining margins, refinery utilization, crack spreads, gasoline and diesel margins, Q3 2026 earnings, 2027 outlook, refining capacity, fuel demand
+headline: The Zacks Analyst Blog Highlights Valero Energy, Marathon Petroleum and Phillips 66
+<<<SUMMARY>>>
+U.S. refiners Valero Energy, Marathon Petroleum, and Phillips 66 posted strong Q3 2026 results driven by high refinery utilization rates, wider crack spreads, and healthy fuel margins. However, analysts question whether these favorable conditions can sustain into 2027, as increased global refining capacity, fuel supply-demand balance, and crude oil costs will be critical factors determining future profitability.
+<<<INSIGHTS>>>
+VLO | positive | Strong Q3 2026 refining earnings of $8.8B (vs $1.6B YoY), maintained 3M barrels/day throughput, Gulf Coast margins increased to $37.55/barrel from $12.21, completed St. Charles optimization project on schedule. Zacks Rank #2 (Buy). However, sustainability concerns noted if margins decline.
+MPC | positive | Achieved record 100% crude capacity utilization in Q3 2026, refining margins rose to $45.70/barrel from $17.60 YoY, segment adjusted EBITDA increased to $9.9B from $1.8B, returned $3.3B to shareholders with 10% dividend increase. Zacks Rank #3 (Hold). Risk noted regarding difficulty sustaining 100% utilization long-term.
+PSX | positive | Operated at 98% utilization with record Q3 distillate yield of 41% and clean product yield of 86%, reported $5.6B quarterly earnings, returned $2.8B to shareholders, reduced debt by $2B. Zacks Rank #3 (Hold). Strong operational performance but earnings remain sensitive to market conditions.
+<<<END>>>

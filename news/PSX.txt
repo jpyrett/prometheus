@@ -15303,3 +15303,207 @@ PSX | positive | Diversified business model with significant midstream operation
 VLO | positive | Strategic Gulf Coast location provides access to diverse crude grades and competitively priced feedstocks; ability to switch between crude types and process Venezuelan crude creates competitive advantage in high-price environment.
 DINO | positive | Complex refining systems capable of processing heavy crude oil provide competitive advantage, allowing the company to benefit from opportunities that other refiners cannot exploit.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144018088
+symbol: PSX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T22:17:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a1b82e5dfa2bd9b0c42215de19ce77d7d49c3b653ba7d175d2fe700e5210b56
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PSX
+keywords: 
+headline: Phillips 66 vs. Valero: Which Dividend Can Better Survive Falling Refining Margins?
+<<<SUMMARY>>>
+Two refiners with nearly identical market caps just posted margins roughly triple last year's, yet their shares are sliding fast. One balance sheet looks bulletproof, the other offers faster raises. Which payout would you trust when the windfall fades?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143991100
+symbol: PSX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T19:10:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=462558b3ea6bb7db8807433216e31b0faa6eb8b53e04c1bd992304642b0dcb18
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PSX
+keywords: 
+headline: Phillips 66 (PSX) Stock May Still Be A Bargain As Strong Q3 Earnings Land
+<<<SUMMARY>>>
+Phillips 66 has delivered a powerful run over the past few years, yet the recent pullback puts a spotlight back on a basic question for you as a shareholder: Are you now paying a price that is still grounded in what the refiner is actually earning? Over 5 years the stock has returned 291.4%, which places significant emphasis on whether the current earnings base can support that kind of re-rating. Recent reports of strong profitability, high refinery utilization and expanding midstream...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143991067
+symbol: PSX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T17:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7711f8294d36ea591c29e77d479be35317d5197ee1babf1e1596213a055c02b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PSX
+keywords: 
+headline: BP Steps Up Deleveraging With Strong Cash Flows and Divestments
+<<<SUMMARY>>>
+BP's strong cash flows, debt reduction and planned divestments are advancing its deleveraging push and supporting a stronger balance sheet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144013874
+symbol: PSX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T10:45:42Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=88b38eba031a8a3e66c8c4492e87fdedf3349e7fd9cde890bccd7c8a9ebbaa1e
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/valuestock_1.jpg?width=2048&height=1536
+category: company
+tickers: PSX
+keywords: 
+headline: Here's How Much $1000 Invested In Phillips 66 5 Years Ago Would Be Worth Today
+<<<SUMMARY>>>
+Phillips 66 (NYSE:PSX) has outperformed the market over the past 5 years by 17.93% on an annualized basis producing an average annual return of 26.69%. Currently, Phillips 66 has a market capitalization of $94.67
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050208
+symbol: PSX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b119808693ff0d520c9480b86afc1e666b4ac4e4824f9c2f39e1f34ac63290c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PSX
+keywords: 
+headline: Should You Buy Chevron Stock For Its Cash?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048694
+symbol: PSX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d110a84f04d5cc73b6041d3d90dc4036aa4afc39c5de6fc22b1405bfbac4f732
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PSX
+keywords: 
+headline: The Zacks Analyst Blog Highlights Valero Energy, Marathon Petroleum and Phillips 66
+<<<SUMMARY>>>
+Valero Energy, Marathon Petroleum and Phillips 66 capitalize on strong refining margins and high utilization, but can momentum last into 2027?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048925
+symbol: PSX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T09:00:27Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=475b00343736180c295b18c922ddfcc8a6846f3381661a04e071bb30a62af2d0
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1460973676/image_1460973676.jpg?io=getty-c-og
+category: company
+tickers: PSX
+keywords: 
+headline: Centene: Top Stock To Watch For 2027 From My 'Dean's List'
+<<<SUMMARY>>>
+Analyst rates Centene Corporation a Buy at ~11.5x 2027 consensus EPS, citing 2026 guidance above $5.20 and rate resets on just over 40% of Medicaid revenue in 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051198
+symbol: PSX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T07:00:20Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=b61dd20a9f8daef59185646a940479d593544cf4d30a0010c5664ce87398aac5
+image_url: https://image.cnbcfm.com/api/v1/image/108253682-1768587130467-gettyimages-2255969652-US_VENEZUELA_OIL.jpeg?v=1768587205&w=1920&h=1080
+category: company
+tickers: PSX
+keywords: 
+headline: The biggest money-making energy trade looks over. What to buy instead
+<<<SUMMARY>>>
+The epic boom in refinery-related stocks is unwinding.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:92391651c361959de868d45560582cbd7142dc6730cfa6d58e1659d508d361a1
+symbol: PSX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T17:06:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033442/bp-steps-up-deleveraging-with-strong-cash-flows-and-divestments?cid=CS-ZC-FT-analyst_blog|quick_take-3033442
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ee/431.jpg
+category: 
+tickers: BP, COP, PSX
+keywords: portfolio optimization, deleveraging, asset sales, divestment, cash flow, capital allocation, energy sector
+headline: BP Steps Up Deleveraging With Strong Cash Flows and Divestments
+<<<SUMMARY>>>
+BP reduced net debt to $13.9 billion in Q3 with $14.8 billion operating cash flow and expects $8 billion in 2026 divestment proceeds including $6 billion from Castrol's sale. ConocoPhillips completed $5 billion in asset sales ahead of schedule, while Phillips 66 continues portfolio reshaping through strategic acquisitions and divestitures. All three energy firms prioritize portfolio optimization, capital efficiency, and balance sheet strengthening.
+<<<INSIGHTS>>>
+BP | positive | Strong Q3 performance with significant debt reduction ($22.3B to $13.9B), robust operating cash flow of $14.8B, and clear deleveraging strategy with $8B expected divestment proceeds in 2026. Gearing improved to 14.8%, demonstrating meaningful financial progress.
+COP | positive | Completed $5 billion in asset sales ahead of schedule with $1.6 billion in Q3 proceeds. Active portfolio high-grading strategy focused on improving capital efficiency and strengthening free cash flow through core asset focus.
+PSX | positive | Successfully executing portfolio optimization through strategic acquisitions (WRB Refining LP) and divestitures, generating over $50 million in near-term synergies. Concentrating capital on integrated assets that support long-term strategy.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:da5c28612bec9af4d8be1d7333e4b4a5cba08b15c68e953e6fa9140ebe9988a5
+symbol: PSX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T11:45:00Z
+publisher: Zacks Investment Research
+author: Zacks Equity Research
+url: https://www.zacks.com/stock/news/3033590/the-zacks-analyst-blog-highlights-valero-energy-marathon-petroleum-and-phillips-66?cid=CS-ZC-FT-press_releases-3033590
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6c/1976.jpg
+category: 
+tickers: VLO, MPC, PSX
+keywords: refining margins, refinery utilization, crack spreads, gasoline and diesel margins, Q3 2026 earnings, 2027 outlook, refining capacity, fuel demand
+headline: The Zacks Analyst Blog Highlights Valero Energy, Marathon Petroleum and Phillips 66
+<<<SUMMARY>>>
+U.S. refiners Valero Energy, Marathon Petroleum, and Phillips 66 posted strong Q3 2026 results driven by high refinery utilization rates, wider crack spreads, and healthy fuel margins. However, analysts question whether these favorable conditions can sustain into 2027, as increased global refining capacity, fuel supply-demand balance, and crude oil costs will be critical factors determining future profitability.
+<<<INSIGHTS>>>
+VLO | positive | Strong Q3 2026 refining earnings of $8.8B (vs $1.6B YoY), maintained 3M barrels/day throughput, Gulf Coast margins increased to $37.55/barrel from $12.21, completed St. Charles optimization project on schedule. Zacks Rank #2 (Buy). However, sustainability concerns noted if margins decline.
+MPC | positive | Achieved record 100% crude capacity utilization in Q3 2026, refining margins rose to $45.70/barrel from $17.60 YoY, segment adjusted EBITDA increased to $9.9B from $1.8B, returned $3.3B to shareholders with 10% dividend increase. Zacks Rank #3 (Hold). Risk noted regarding difficulty sustaining 100% utilization long-term.
+PSX | positive | Operated at 98% utilization with record Q3 distillate yield of 41% and clean product yield of 86%, reported $5.6B quarterly earnings, returned $2.8B to shareholders, reduced debt by $2B. Zacks Rank #3 (Hold). Strong operational performance but earnings remain sensitive to market conditions.
+<<<END>>>

@@ -1,0 +1,275 @@
+<<<FILING>>>
+accession: 0001605484-26-000002
+symbol: STLA
+form: SCHEDULE 13D/A
+filed: 2026-01-06
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001605484-26-000002.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000198
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000198.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000200
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000200.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000202
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000202.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000204
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000204.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000206
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000206.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000213
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000213.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000215
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000215.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000216
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000216.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000217
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000217.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000218
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000218.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000219
+symbol: STLA
+form: 144
+filed: 2026-06-01
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000219.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001605484-26-000052
+symbol: STLA
+form: SCHEDULE 13D
+filed: 2026-06-17
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001605484-26-000052.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000279
+symbol: STLA
+form: 144
+filed: 2026-09-04
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000279.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000280
+symbol: STLA
+form: 144
+filed: 2026-09-04
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000280.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000281
+symbol: STLA
+form: 144
+filed: 2026-09-04
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000281.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000282
+symbol: STLA
+form: 144
+filed: 2026-09-04
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000282.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000283
+symbol: STLA
+form: 144
+filed: 2026-09-04
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000283.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000284
+symbol: STLA
+form: 144
+filed: 2026-09-04
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000284.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000285
+symbol: STLA
+form: 144
+filed: 2026-09-04
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000285.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000287
+symbol: STLA
+form: 144
+filed: 2026-09-04
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000287.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000288
+symbol: STLA
+form: 144
+filed: 2026-09-04
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000288.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0000895421-26-000337
+symbol: STLA
+form: SCHEDULE 13G
+filed: 2026-11-13
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0000895421-26-000337.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000339
+symbol: STLA
+form: 144
+filed: 2026-11-18
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000339.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>
+<<<FILING>>>
+accession: 0001974494-26-000340
+symbol: STLA
+form: 144
+filed: 2026-11-18
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/1605484/0001974494-26-000340.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>

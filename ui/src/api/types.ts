@@ -8,7 +8,7 @@ export type StageKey = "work_order" | "gather" | "recommend" | "critique" | "pre
 export type StageState = "pending" | "busy" | "waiting" | "done" | "skipped" | "failed";
 export type TradeMode = "ask" | "auto";
 export type RiskLevel = "conservative" | "moderate" | "aggressive";
-export type RunStatus = "traded" | "waiting" | "no_trade" | "looked" | "news" | "stopped" | "failed";
+export type RunStatus = "traded" | "waiting" | "no_trade" | "looked" | "news" | "quote" | "stopped" | "failed";
 
 export interface StageInfo {
   key: StageKey;
@@ -303,6 +303,35 @@ export interface NewsView {
   no_supporting_text: boolean;
 }
 
+// ---------------------------------------------------------------- the current price (design choices entry 150)
+
+/** One stock of a quote run: the Data Clerk's quote, copied (the change is Finnhub's, nothing is computed here), and `when` says in words when the price is from ("live quote, last trade 2026-11-20 15:59 ET", "market close of 2026-11-20 (simulated clock)"). */
+export interface QuoteStock {
+  symbol: string;
+  company: string | null;
+  price: number | null;
+  change: number | null;
+  change_percent: number | null;
+  open: number | null;
+  high: number | null;
+  low: number | null;
+  previous_close: number | null;
+  as_of_utc: string | null;
+  source: string | null;
+  simulated: boolean;
+  when: string;
+}
+
+/** The `quote` event: the current price of a request that only asked for the price (`views.quote_view`). The price is said in the run's output (one line for each stock, written by the server): no pane and no switch of the right column. */
+export interface QuoteView {
+  request_id: string | null;
+  status: string | null;
+  stocks: QuoteStock[];
+  not_found: { typed: string; reason: string }[];
+  problems: string[];
+  notes: string[];
+}
+
 // ---------------------------------------------------------------- the events (4.2)
 
 export interface RunStartedData {
@@ -437,6 +466,7 @@ export type ServerEvent =
   | { seq: number; type: "work_order"; data: WorkOrderView & { ts: number } }
   | { seq: number; type: "portfolio"; data: PortfolioData }
   | { seq: number; type: "news"; data: NewsView & { ts: number } }
+  | { seq: number; type: "quote"; data: QuoteView & { ts: number } }
   | { seq: number; type: "activity"; data: ActivityData }
   | { seq: number; type: "run_finished"; data: RunFinishedData }
   // the Proving Ground's run (design/proving_ground_spec.md section 9): the Desk's reducer ignores them, the Proving Ground's folds them
@@ -457,6 +487,7 @@ export const EVENT_TYPES: ServerEventType[] = [
   "work_order",
   "portfolio",
   "news",
+  "quote",
   "activity",
   "run_finished",
   "pv_research",

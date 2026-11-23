@@ -4,6 +4,7 @@
     work_order_view(order, understood="buy the 3 most recommended ...")        # the stocks on the work order, one row each, with the detail behind each
     account_view(holder, portfolio)                                           # the account, the holdings and the totals
     records_of(order, key)                                                    # the raw records of one row
+    news_view(order, plan) / quote_view(order, plan)                          # the news (entry 149) and the current price (entry 150) of a request that only asked for one of them; `quote_lines` writes the price as text
 
 THE ONLY PLACE THAT KNOWS THE SHAPE of a recommendation, a review, a decision and a trade, as the live run and the replay both feed it (so a capture and a live order read the same way). It adds no rule about what may
 trade and scores nothing: every number and every word is one an agent wrote. `order` is a `WorkOrder` or its dict (a capture).
@@ -12,8 +13,10 @@ DECIMAL MONEY (design choices entry 112): the account's money, prices and share 
 read (an int or a float) and pass through as they are. The page receives NUMBERS: the one encoder (`money.jsonable`, `money.dumps`) writes a Decimal as an integer when it is whole and by its own digits otherwise, at the edge of the bridge (`app.py`).
 """
 import re
-from datetime import date
+from datetime import date, datetime
 from decimal import Decimal
+from numbers import Real
+from zoneinfo import ZoneInfo
 
 from prometheus.agents.critic.report import DECISION_WORDS, LABELS, analysts_line
 from prometheus.common import shares as sh
@@ -454,6 +457,72 @@ def news_headline(view: dict) -> str:
     return f"The news {what} for the last {'day' if days == 1 else f'{days} days'}"
 
 
+# ---------------------------------------------------------------- the current price (entry 150)
+
+QUOTE_FIELDS = ("price", "change", "change_percent", "open", "high", "low", "previous_close", "as_of_utc", "source")      # what the Data Clerk's quote holds, copied and never computed (the change is Finnhub's)
+EASTERN = ZoneInfo("America/New_York")
+
+
+def quote_when(quote: dict) -> str:
+    """When a quote is from, in words: "live quote, last trade 2026-11-20 15:59 ET", or, for the stored close of the simulated clock (`simulated: true`, USE_LIVE_TRADING=false), "market close of 2026-11-20 (simulated clock)". The moment is the quote's own
+    `as_of_utc`, read in Eastern time (the simulated close is stored a minute before the close, so its day is the day of the close); nothing is looked up and no clock is read."""
+    try:
+        moment = datetime.fromisoformat(str(quote.get("as_of_utc")).replace("Z", "+00:00")).astimezone(EASTERN)
+    except ValueError:
+        return "the time of this quote is not known"
+    if quote.get("simulated"):
+        return f"market close of {moment:%Y-%m-%d} (simulated clock)"
+    return f"live quote, last trade {moment:%Y-%m-%d %H:%M} ET"
+
+
+def _quote_row(symbol: str, quote: dict, company: str | None) -> dict:
+    return {"symbol": symbol, "company": company, **{k: quote.get(k) for k in QUOTE_FIELDS}, "simulated": bool(quote.get("simulated")), "when": quote_when(quote)}
+
+
+def quote_view(order, plan=None, guard=None, account_id=None) -> dict:
+    """The current price of a run that only asked for the price, in the ONE shape the page and the session read (entry 150, Q6): {stocks: [{symbol, company, price, change, change_percent, open, high, low, previous_close, as_of_utc, source, simulated, when}],
+    not_found: [{typed, reason}], problems, notes, status}. Every number is the Data Clerk's quote, copied (never computed: the change is Finnhub's); `company` is what the Data Clerk found for the stock (None for a ticker typed as it is), `when` says in words
+    when the price is from (`quote_when`). `order` is a work order or its dict (a capture). The problems and notes go through the redaction door of the run's last message (`screened`). Pure: nothing is called, nothing is invented."""
+    data = _get(order, "data")
+    found, missing = _news_stocks(order, plan)      # the stocks the Data Clerk named (a ticker, or a company's name and its symbol), and the names it could not find
+    names = {row["symbol"]: row["company"] for row in found}
+    quotes = (_get(data, "quotes") or {}) if data is not None else {}
+    single = _get(order, "company") if len(quotes) == 1 else None
+    return {"request_id": _get(order, "request_id"), "status": _get(order, "status"), "stocks": [_quote_row(symbol, quote, names.get(symbol) or single) for symbol, quote in quotes.items()], "not_found": missing,
+            "problems": [screened(p, guard, account_id) for p in dict.fromkeys([*((_get(data, "problems") or []) if data is not None else []), *(e for e in (_get(order, "errors") or []) if isinstance(e, str))])],      # a quote that failed is named here, the others are still shown
+            "notes": [screened(n, guard, account_id) for n in (_get(data, "notes") or [])] if data is not None else []}
+
+
+def _is_a_number(value) -> bool:
+    return isinstance(value, Real) and not isinstance(value, bool)      # a quote's numbers are what `json` read (an int or a float): a measurement of the market, shown as it came
+
+
+def _signed(value) -> str:
+    return f"{value:+,.2f}" if _is_a_number(value) else "n/a"
+
+
+def _dollars(value) -> str:
+    return "n/a" if not _is_a_number(value) else f"${value:,.2f}" if abs(value) >= 1 else f"${value:,.4f}"      # a stock under a dollar shows its four places
+
+
+def quote_lines(view: dict, problems: bool = True) -> list[str]:
+    """The price as text, one line for each stock (symbol, company, price, the change and its percent, when), then a line for each name that was not found and (unless `problems` is false: the page says them as the reason of the run's last line) for each problem: what the session prints and what the page's output shows (entry 150, Q7 and Q8).
+    The ONE writer of these words; nothing in it is about decisions, trades or money."""
+    lines = []
+    for stock in view["stocks"]:
+        change = f"{_signed(stock['change'])} ({_signed(stock['change_percent'])}%)" if stock.get("change") is not None else "change n/a"
+        lines.append(f"{stock['symbol']}" + (f"  {stock['company']}" if stock.get("company") else "") + f"  {_dollars(stock['price'])}  {change}  {stock['when']}")
+    lines += [f"not found: {m['typed']}: {m['reason']}" for m in view["not_found"]]
+    if problems:
+        lines += [f"problem: {p}" for p in view["problems"]]
+    return lines
+
+
+def quote_headline(view: dict) -> str:
+    """The last line of a price run: "TSLA $412.30 (+1.24%)" (several stocks: each, joined by " · ")."""
+    return " · ".join(f"{s['symbol']} {_dollars(s['price'])}" + (f" ({_signed(s['change_percent'])}%)" if s.get("change_percent") is not None else "") for s in view["stocks"])
+
+
 # ---------------------------------------------------------------- how a run ended
 
 def waiting_lines(order) -> list[str]:
@@ -470,6 +539,9 @@ def run_verdict(before: dict, after: dict, *, action: str | None, order=None, re
     if action == "news":      # a request that only asked for the news (entry 149): no trade, the portfolio unchanged; the headline says what was shown, and why the latest news could not be fetched when it could not
         view = news_view(order)
         return {"status": "news", "headline": news_headline(view), "reasons": [view["fetch_note"]] if view.get("fetch_note") else []}
+    if action == "quote":      # a request that only asked for the current price (entry 150): no trade, the portfolio unchanged; the headline is the price, and a quote that failed is a reason beside it
+        view = quote_view(order)
+        return {"status": "quote", "headline": quote_headline(view), "reasons": view["problems"]}
     moved = portfolio_changes(before, after)
     waiting = waiting_lines(order)      # direct orders that now WAIT for their limit price (entry 140): the run's last message says so, with what is set aside and until when
     if moved["changes"] or moved["cash_change"] != 0:

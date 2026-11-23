@@ -6,6 +6,7 @@ import dollars from "../fixtures/dollars.json";
 import frac from "../fixtures/frac.json";
 import gates from "../fixtures/gates_ask.json";
 import news from "../fixtures/news.json";
+import quote from "../fixtures/quote.json";
 import questions from "../fixtures/questions.json";
 
 export const bobEvents = bob.events as unknown as ServerEvent[];
@@ -16,6 +17,8 @@ export const gatesEvents = gates.events as unknown as ServerEvent[];
 export const dollarsEvents = dollars.events as unknown as ServerEvent[];
 // fixtures/news.json: the replay of the real live session of 2026-11-23 that asked for the news only ("What's Tesla doing the last week?", Ask mode, the fetch refused by the test-only switch): 12 articles of the stored news, 9 cited (design choices entry 149)
 export const newsEvents = news.events as unknown as ServerEvent[];
+// fixtures/quote.json: the replay of the real live session of 2026-11-23 that asked for the current price only ("Whats the current price of: TSLA?", Ask mode, one live Finnhub quote): the price is a line of the run's output (design choices entry 150)
+export const quoteEvents = quote.events as unknown as ServerEvent[];
 export const health = api.health as unknown as Health;
 export const replayAccount = api.account as unknown as AccountView;
 export const confirmQuestion = questions.confirm.data as unknown as QuestionData;

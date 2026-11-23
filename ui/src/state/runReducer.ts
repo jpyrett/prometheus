@@ -168,6 +168,9 @@ export function runReducer(state: RunState, event: ServerEvent): RunState {
       const stages = state.stages.map((s) => (s.state === "busy" || s.state === "waiting" ? { ...s, state: open ? ("failed" as const) : ("done" as const), since: null } : s));
       return { ...next, phase: "finished", question: null, stages, result: event.data, finishedTs: event.data.ts };
     }
+    case "quote":
+      // The price of a request that only asked for it (entry 150) is said in the run's OUTPUT: the server writes one log line for each stock (`views.quote_lines`), so the log above already has it and no pane or state is kept for it.
+      return next;
     default:
       // the Proving Ground's own events (pv_*) are not the Desk's: its reducer folds them
       return state;

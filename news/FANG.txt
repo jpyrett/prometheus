@@ -1,0 +1,1419 @@
+<<<ARTICLE>>>
+id: finnhub:143840612
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T22:50:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09278bb3135d44b6a056c8c6b85f14d71050f9be4db97f67c957a38eb4a5ff9f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Energy nears $5 bln Double Eagle deal - report
+<<<SUMMARY>>>
+Investing.com -- Diamondback Energy is close to finalizing a deal worth approximately $5 billion to purchase a drilling portfolio from Double Eagle, a Texas-based energy producer, according to a Financial Times report citing sources familiar with the matter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806326
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T13:07:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=04836318b32417ec9f092e1cb41cd03e767321141a015c3de5729ae2d97e26b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: How Investors May Respond To Diamondback Energy (FANG) Earnings Beat
+<<<SUMMARY>>>
+Diamondback Energy reported third quarter 2026 revenue of US$5.431b and net income of US$1.603b, updated production guidance for 2026, and increased its base dividend to US$1.18 per share. The combination of higher reported earnings, raised oil production targets and a larger base dividend signals management confidence in Diamondback Energy's operating and capital return framework. We will now look at how Diamondback Energy's third quarter earnings profile could reshape its existing...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805313
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:48:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d21a198555d1de88e64c2dc5049a243c0c4b9a287cb7294bbda2c2f85ab935a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Why You Need To Pay Attention To Occidental Petroleum Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804141
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:28:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c254bd4c4f9f22009f13cbeb05cb628af46f107053427a0471a95f929265d455
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Can CHRD's Four-Mile Laterals Unlock Cost Savings & Earnings Growth?
+<<<SUMMARY>>>
+Chord expands four-mile drilling in the Williston Basin, targeting lower breakeven costs, stronger well economics and improved free cash flow generation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806383
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:27:40Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ca52e92945a856a9c75de308df8a39118bbb0746a8abd8bbb5f6e1601eff767d
+image_url: 
+category: company
+tickers: FANG
+keywords: 
+headline: Barclays Maintains Overweight on Diamondback Energy, Raises Price Target to $223
+<<<SUMMARY>>>
+Barclays  analyst Betty Jiang   maintains Diamondback Energy (NASDAQ:FANG) with a Overweight and raises the price target from $221 to $223.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773483
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T17:00:48Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=4428d87e2689063e59dd40e84d7e84e23ed2b84f60632e3fce537388991ddeab
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2192243260/image_2192243260.jpg?io=getty-c-og
+category: company
+tickers: FANG
+keywords: 
+headline: Discerning The AI Industrial Buildout Through An Energy Lens
+<<<SUMMARY>>>
+Real GDP grew 3.4% annualized in Q3, driven by high-income consumption and robust AI-related CapEx.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140284468
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:44:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b54ab9e2524d3ab07e65488e36a4d660947f471af488ed94cd704d5f76f32c24
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: AMD, Under Armour downgraded: Wall Street's top analyst calls
+<<<SUMMARY>>>
+AMD, Under Armour downgraded: Wall Street's top analyst calls
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769772
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:55:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4b1b88522a87f229a71e3d0a1c750c3dbc08390a9a1394c9ecfcc8565b0eec2e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Here's Why Diamondback (FANG) Is a Great 'Buy the Bottom' Stock Now
+<<<SUMMARY>>>
+Diamondback (FANG) witnesses a hammer chart pattern, indicating support found by the stock after losing some value lately. This coupled with an upward trend in earnings estimate revisions could mean a trend reversal for the stock in the near term.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766836
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:41:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=49ab416c0dc269043e0d8392e07612d18ab0e84f7d9190d042c1cec342309604
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Can Occidental Petroleum Stock Fall 30%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766956
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:29:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f5c2d185c9c6196aeef1e65116f5fc2f73562dcd8c21b37b5cd33dada7759af6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Bernstein cuts ConocoPhillips and Diamondback ratings as Iran de-escalation looms
+<<<SUMMARY>>>
+Investing.com -- Bernstein downgraded ConocoPhillips (NYSE: COP), Diamondback Energy (NASDAQ: FANG) and Devon Energy (NYSE: DVN) to Market-Perform, saying oil stocks may struggle as tensions between the U.S. and Iran ease after the midterm elections.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766810
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:07:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cd404529de068b17d7d91e440410e77efe0d9dc9e150f28db3cf2dbb5b8903e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Buy, Sell, or Hold? Thursday’s Top Upgrades and Downgrades: Advanced Micro Devices, Alibaba Group, Cleveland-Cliffs, Conoco Phillips, Diamondback Energy, General Mills, NVIDIA, Toyota, Wendy’s and More
+<<<SUMMARY>>>
+Bernstein and Oppenheimer both just soured on NVIDIA, with one analyst saying "we've had enough," while a CEO shake-up rumor rattles futures and a blockbuster AI IPO draws a frenzy of orders. Which stocks did analysts upgrade instead?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143768690
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T08:33:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=800560771d6481f9ba410112cf3150425dc9278806b8a9e488674ef9f8089aad
+image_url: 
+category: company
+tickers: FANG
+keywords: 
+headline: Bernstein Downgrades Diamondback Energy to Market Perform, Lowers Price Target to $192
+<<<SUMMARY>>>
+Bernstein  analyst Bob Brackett   downgrades Diamondback Energy (NASDAQ:FANG) from Outperform to Market Perform and lowers the price target from $221 to $192.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748047
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T01:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2c79933322b131570dedb8fcf5a735893c64261868369b2eb9e643fa2e42e2f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Should You Pick Occidental Stock Over Its Competitors?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739446
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:06:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=26008f35fd1f8258eb64a832c91227bc37b8178939975d2dfd0ee9f650a9f4c8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback's Deep Blue Deal Fits Infrastructure Strategy, UBS Says
+<<<SUMMARY>>>
+Diamondback Energy's (FANG) move to raise its stake in Deep Blue Midland Basin, a produced-water inf
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143768691
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T17:25:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=83db18a07f65b3eec02180a9656e98329066e1c4061404976d1787696c83ea12
+image_url: 
+category: company
+tickers: FANG
+keywords: 
+headline: UBS Maintains Buy on Diamondback Energy, Raises Price Target to $263
+<<<SUMMARY>>>
+UBS  analyst Josh Silverstein   maintains Diamondback Energy (NASDAQ:FANG) with a Buy and raises the price target from $260 to $263.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738106
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a872f1873035dd643632a816a014296fb06deff0668645a7f4f9374a3865111e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback and KKR to Acquire Five Point's 70% Stake in Deep Blue
+<<<SUMMARY>>>
+FANG's proposed deal with KKR would secure water infrastructure capacity through joint ownership of Deep Blue, serving Midland Basin operators.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143718899
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T07:52:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e585c5505b047bd34ccefbda626cba8b12b7f87fbb471982047053d06acec48
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback, KKR to buy Five Point’s 70% stake in Deep Blue
+<<<SUMMARY>>>
+KKR’s share of the transaction will be financed primarily through its KKR Global Infrastructure Investors V fund.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143718897
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T07:13:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e5f0418a81b6a53d7e8b180bb212197f1f261088335da1016b08a8e2b1ef3f94
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Energy (FANG) Stock May Look Rich Following Raised Dividend And Guidance
+<<<SUMMARY>>>
+Diamondback Energy has delivered a powerful run over the past few years, yet the recent pullback and busy deal activity leave a clear question for you as an investor. Is the current share price properly aligned with what the business is earning today and what those earnings could support over time? Over the past 5 years, the stock has gained 98.9%, which puts real pressure on the earnings story to justify how far the price has already come. Recent decisions to raise the regular dividend,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143718898
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T06:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1d565b68aa4a6ccd56175cc6e39bb551fa5c37d807a162efe574bd23f0edb358
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Zacks.com featured highlights include Cinemark, Diamondback Energy and Omnicell
+<<<SUMMARY>>>
+CNK, FANG and OMCL gain momentum from upward broker rating revisions, backed by strong projected 2026 earnings growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143708348
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T02:16:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c412e3b25cb1c85dbfe9799dbcf97be91cec98a82e78d8717e9f9f45e548796c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Energy (FANG) Following Deep Blue Deal Has The Undervalued Case Changed
+<<<SUMMARY>>>
+Diamondback Energy (FANG) has moved to take full control of Deep Blue Midland Basin by agreeing with KKR to acquire Five Point Infrastructure’s 70% stake in the produced water platform. Recent trading tells a mixed story for Diamondback Energy. The share price has retreated about 7% over the past month and around 11% over the past quarter, yet the year to date share price return of 16.9% and 1 year total shareholder return of 23.1% suggest longer term momentum remains constructive as...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692906
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5a5f2eb612755ae5a1177e9c735e09a3289e718d052081471942abdb45fd9249
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Buy These 3 Stocks with Broker Rating Upgrades for Big Gains
+<<<SUMMARY>>>
+Cinemark Holdings, Diamondback Energy and Omnicell stand out with recent broker rating upgrades and strong projected earnings growth for 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690347
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:19:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f7d44a5465d623af9cb0c960e26f55a371748ebdaf037f07fed9580baf028b3b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Sector Update: Energy Stocks Fall Pre-Bell Tuesday
+<<<SUMMARY>>>
+Energy stocks were falling pre-bell Tuesday, with the State Street Energy Select Sector SPDR ETF (XL
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687380
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:41:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b70d95ca6513f274db70c20a9b2f8dcc56536e27d8ab69151eda7f0a2d843b3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Can ConocoPhillips Sustain Future Production Growth With Lower CapEx?
+<<<SUMMARY>>>
+COP plans modestly lower 2027 capital spending while growing production through low-cost resources and efficiency gains to strengthen long-term cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143685693
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1e2e22e0fbdd2daaa6ca25b46e9d6150b2da7e57a61ae92d332ffb58ee401043
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Five Point Infrastructure Announces Sale of Deep Blue Midland Basin to Diamondback Energy and KKR
+<<<SUMMARY>>>
+HOUSTON, November 10, 2026--Five Point Infrastructure LLC ("Five Point") today announced that it has entered into a definitive agreement to sell its majority interest in Deep Blue Midland Basin LLC ("Deep Blue"), a produced-water infrastructure platform serving the Midland Basin, to Deep Blue’s current minority owner, Diamondback Energy, Inc. (NASDAQ: FANG) ("Diamondback"), and KKR, for cash consideration.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143685694
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b20dff85ac5895461857c86c3eb769665b45b1cca6b5406411ec59c732ee4412
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Energy and KKR to Acquire Deep Blue Midland Basin from Five Point Infrastructure
+<<<SUMMARY>>>
+Strategic partnership to support Deep Blue's continued investment in full-cycle water infrastructure across West TexasMIDLAND and HOUSTON, Texas, Nov. 10, 2026 (GLOBE NEWSWIRE) -- Diamondback Energy, Inc. (NASDAQ: FANG) (“Diamondback”) and KKR, a leading global investment firm, today announced an agreement to jointly acquire Five Point Infrastructure’s (“Five Point”) 70% stake in Deep Blue Midland Basin LLC (“Deep Blue” or the “Company”), the leading full-cycle water infrastructure platform in t
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686793
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T07:50:11Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4262e0ad35b5c8c5042f8c2b1a8ad596ca8097eac405046012186c6e9efb97f4
+image_url: 
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Energy And KKR To Acquire Five Point Infrastructure's 70% Stake In Produced-Water Infrastructure Platform Deep Blue Midland Basin For An Undisclosed Cash Sum
+<<<SUMMARY>>>
+Agreement to jointly acquire Five Point Infrastructure’s (&#34;Five Point&#34;) 70% stake in Deep Blue Midland Basin LLC (&#34;Deep Blue&#34; or the &#34;Company&#34;), the leading full-cycle water infrastructure
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143669135
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T00:30:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8023c596284af0c81934a1d1bb8426d09ae38209fe68da493568feebd4afcd32
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Just Hiked Its Dividend by Over 7%. If You Buy the Stock Here, Keep a Close Eye on Oil Prices.
+<<<SUMMARY>>>
+Diamondback raised its quarterly base dividend by 7.3% to $1.18 per share after third-quarter revenue rose 38% to $5.43 billion and free cash flow stayed strong.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024510
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T14:23:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=15226d17130d8f2b3560440a2fe9c3e9924bb97814ec70fc6f76df1bee46f835
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Why Is Diamondback Energy (FANG) Becoming a Top Oil Investment for 2027?
+<<<SUMMARY>>>
+Diamondback Energy, Inc. (NASDAQ:FANG) is sixth among the 10 Best American Stocks to Buy for 2027. Diamondback Energy, Inc. (NASDAQ:FANG) is an independent oil and natural gas producer focused on unconventional onshore reserves in West Texas’s Permian Basin. In its third-quarter 2026 results, the company produced 525,000 barrels of oil per day (1,034 MBOE/d), generating […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144018031
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T22:39:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=80c6acd009b53c88be0176289e1eab62288fddbb664da3b9574d3d6475ef6b81
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Oklo vs. NuScale Power: Which Nuclear Stock Is a Better Buy?
+<<<SUMMARY>>>
+Two nuclear upstarts with very different paths to market.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990114
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T17:43:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c754d22ce1bd32f8a83f7c311cfd5c26db3428553f0c13a1c7632baa3c3a558e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Is Viper Spending Too Much?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990041
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T15:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c209b62e8e9e53875b1c4f2f3c73279d4f47c45e6ed00ca4eb15976d11c23964
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: CRGY vs. FANG: Which E&P Player Has the Upper Hand?
+<<<SUMMARY>>>
+Crescent Energy's stock gains and valuation discount stand out against Diamondback Energy's scale and earnings growth. Which E&P stock has the edge?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144013879
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:58:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=68f9d121c0636b3cd5b4e81fcaa011253d59995f0b16ea890553146a4c790a5f
+image_url: 
+category: company
+tickers: FANG
+keywords: 
+headline: Raymond James Maintains Strong Buy on Diamondback Energy, Lowers Price Target to $246
+<<<SUMMARY>>>
+Raymond James  analyst John Freeman   maintains Diamondback Energy (NASDAQ:FANG) with a Strong Buy and lowers the price target from $256 to $246.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144013880
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T11:39:12Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b26a61d727fb959811b8967c3db2c14d207f2e2415c0de6c49cdcfb4a1d623b6
+image_url: 
+category: company
+tickers: FANG
+keywords: 
+headline: Wells Fargo Maintains Overweight on Diamondback Energy, Raises Price Target to $250
+<<<SUMMARY>>>
+Wells Fargo  analyst Sam Margolin   maintains Diamondback Energy (NASDAQ:FANG) with a Overweight and raises the price target from $244 to $250.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143953736
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T01:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=306797434f701b6b2209b7bcb2272343d89d8ea4f9dc8851c18031c4ce52c567
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: US Oil and Gas Deal Boom Lures BMO Back Into the Market
+<<<SUMMARY>>>
+Bank of Montreal is rebuilding its U.S. oil and gas investment banking business six years after exiting, encouraged by billions of dollars in energy mergers and acquisitions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143946032
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T18:21:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bc6ee111cad877a18cc32448ef2d2694c060f29da783ed62422ddb44ec6b26ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback to buy certain Double Eagle subsidiaries in $5bn Permian deal
+<<<SUMMARY>>>
+Diamondback Energy (NASDAQ: FANG) announced this week that it had struck a deal to acquire certain subsidiaries of Double Eagle IV Midco and Double Eagle V Midco. Diamondback will take over the units in exchange for around 15.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944725
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0700dfa326db5043fd96cc52ba1a74117bdcd25086a7bb7ccfdad564b5bc615b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: PR Q3 Earnings Beat on Higher Output and Stronger Pricing
+<<<SUMMARY>>>
+Permian Resources tops Q3 earnings and revenue estimates as higher production and oil prices lift results, prompting an increase in its 2026 oil output outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936617
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T11:39:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a65650947140da9aac4235313d383ba008cbf4598af4c0852d774fd287792dca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Should You Buy Occidental Stock For Its Cash Flow?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143920286
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T18:59:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a1f723d6d112e493310fc2c0a3e07084c3f0cf0220ce48108ce149f75a9875d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Bernstein sees gas supercycle intact after Diamondback deal
+<<<SUMMARY>>>
+Investing.com -- Bernstein analyst Bob Brackett reaffirmed his bullish stance on natural gas stocks following Diamondback Energy Inc's (NASDAQ:FANG) recent acquisition of Double Eagle IV & V Permian properties, despite concerns the deal could challenge his gas supercycle thesis.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918728
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:21:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7cd85366d9ce2509042a4085b28e2e7783fb16de66944a81eec99688e29fcfc0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Why You Should Think About Occidental Petroleum Differently Now
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143919006
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:32:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=041bee17b1f9bcef3cee785593ac14ba4b3e60e04d2f86766d201487c6fb289e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: TRP Q3 Earnings Beat Estimates on Strong Pipeline Performance
+<<<SUMMARY>>>
+TC Energy beat Q3 earnings and revenue estimates as stronger pipelines lifted EBITDA 13.2%, with raised 2026 guidance and new growth projects in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143913025
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:48:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d5cb415558c408e0f74de0c224c45336eda319e22186f9d2871448b36758806f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Is Permian Resources Spending Too Much?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143885699
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:57:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ffd8d1de230c4bf406ec651359cbdf7a16884265ed2e9b08513c1f11925831a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Do Wall Street Analysts Like Diamondback Energy Stock?
+<<<SUMMARY>>>
+Diamondback Energy has outperformed the broader market over the past year, and analysts are highly optimistic about the stock’s prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880797
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=83628f093c60560652226a83616714d9d0c84516281037c1ca34c533ff238cef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: What Occidental's Debt Cut Means For Its Stock
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915519
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T10:40:45Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9c807ba974ff197f18c014284a91308c89d031fa4cadffd60d88ca687d53b17c
+image_url: 
+category: company
+tickers: FANG
+keywords: 
+headline: Truist Securities Maintains Buy on Diamondback Energy, Raises Price Target to $242
+<<<SUMMARY>>>
+Truist Securities  analyst Gabe Daoud   maintains Diamondback Energy (NASDAQ:FANG) with a Buy and raises the price target from $232 to $242.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143876977
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T10:23:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fd3f525f64efef122459e9cba0f4a76d24488a77ad0a375d3685c284f4ec7f83
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback to acquire Double Eagle Midland Basin assets
+<<<SUMMARY>>>
+Following completion of the transaction, Double Eagle plans to continue development across its remaining assets in Reagan County.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143871488
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T08:12:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=75d9391b638fb210b961f5d374abf1bc559ce0784985c2c66f4e4b4f41993277
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Energy (FANG) Makes A $5 Billion Midland Basin Bet
+<<<SUMMARY>>>
+Diamondback Energy (NasdaqGS:FANG) agreed to acquire Double Eagle’s Midland Basin assets for US$5b, expanding its Permian position. The deal brings a larger drilling inventory and additional Midland Basin acreage into Diamondback Energy’s portfolio. Management describes the acquisition as immediately accretive and a key step in reshaping Diamondback’s production and asset mix. This US$5b purchase of Double Eagle’s Midland Basin assets is a major move that investors may want to weigh against...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850601
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T22:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=611df760485cdfefedaa72a6ad122bce7af3bfcd3dfa2aa01eba0dbc25584339
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: On Monday in Oil and Gas, Federal Hormuz Data Lands as Two Acquisitions Are Announced
+<<<SUMMARY>>>
+Oil Market Daily News Commentary - Oil prices fell on Monday, Reuters reported, citing signs that oil flows through the Strait of Hormuz are recovering, which it said reinforced expectations of surplus supply. The same day, the U.S. Energy Information Administration published new quarterly figures on oil moving through the strait, a tanker transiting it outbound reported being struck, and two North American producers announced acquisitions. The December NYMEX West Texas Intermediate contract set
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850422
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:58:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c2b35c0c83c5c84139a08c1e661cb37bd4a53b5d6cb0977e8f9ae71f9433fc98
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Sector Update: Energy Stocks Retreat Late Afternoon
+<<<SUMMARY>>>
+Energy stocks were lower late Monday afternoon, with the NYSE Energy Sector Index falling 2.1% and t
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850423
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:55:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78fac812341e0daefdca8ac09d6d5a32edde32d72fde482ada83bb1a3bec8eb0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Could Occidental Petroleum Be The Value Stock For Your Portfolio?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850076
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T18:40:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a2d695e3f9baa291080b3f04e6e31ebbda2ed48fc35415ba7b469a29f71c573a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Sector Update: Energy Stocks Decline Monday Afternoon
+<<<SUMMARY>>>
+Energy stocks were lower Monday afternoon, with the NYSE Energy Sector Index and the State Street En
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850257
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T18:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f0be7aea69b48670dd2d49813889a42567bddb10545a07a9c3cc4ff12bb10d75
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback to Buy Double Eagle’s Midland Stake for $5 Billion
+<<<SUMMARY>>>
+Diamondback Energy will buy Double Eagle’s 40% Midland Basin stake for about $5 billion in cash and stock, citing strong early Barnett well results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849804
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T16:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba693fb9ecf7776efcf212f784028de712a83ada9c27a17d262b79c6f8441e2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Eyes $5B Double Eagle Deal to Deepen Permian Dominance
+<<<SUMMARY>>>
+FANG nears a roughly $5 billion deal to buy Double Eagle V, potentially expanding its Midland Basin drilling inventory and Permian footprint.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849312
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T14:25:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c347cf1ee0b8e0dafe692fdf6f3ff2b04fbe595450f278ae6d39dfb0b45a97c8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Sector Update: Energy Stocks Decline Premarket Monday
+<<<SUMMARY>>>
+Energy stocks were declining premarket Monday, with the State Street Energy Select Sector SPDR ETF (
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849313
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eddccb91a7d351430dde9096f75ec05a06c003c3d5585e47147c5cd191b729cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Double Eagle Entities Enter Into Definitive Purchase Agreement with Diamondback Energy, Inc.
+<<<SUMMARY>>>
+FORT WORTH, Texas, November 16, 2026--Double Eagle IV Midco, LLC in combination with Double Eagle V Midco, LLC ("Double Eagle") today announced that it has entered into a definitive purchase agreement to divest its equity interest in certain subsidiaries to Diamondback Energy, Inc. (NASDAQ: FANG) ("Diamondback") in exchange for $2.15 billion of cash and approximately 15.56 million shares of Diamondback common stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139985215
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:32:37Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cd66faf67f9da52f168f213f339f4c6af1262070fd76db7954a7e501be6b74c1
+image_url: 
+category: company
+tickers: FANG
+keywords: 
+headline: Abundia Global Impact Group shares are trading lower after the company announced the pricing of its $20 million registered direct offering of 5,934,718 shares.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849314
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ee4defefa8f5f607fb3f2161a46dafbdc20942ed89aea8ae0ab06ebc76365418
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Why Diamondback Is Betting Billions for a Bigger Cut of Future West Texas Wells
+<<<SUMMARY>>>
+Buying out Double Eagle’s 40% stake lets Diamondback capture more revenue from wells it was already planning to drill.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143848073
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T12:13:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=be4f6ed07411261edb0bff1d5e2af88535fc31059768afb208272067aa61e04c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Energy to Acquire Double Eagle Assets for Cash and Stock
+<<<SUMMARY>>>
+Diamondback Energy (FANG) said Monday it agreed to acquire certain subsidiaries of Double Eagle IV M
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877615
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T11:47:33Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f296fae53064863b76a09491bbbd24b58adeee321231f324bafa1f2aaaa1484c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/16/Oil-Industry-Growth-Price-Market-conflic.jpg?width=2048&height=1536
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Energy Acquires Double Eagle Assets In $2.15 Billion Deal
+<<<SUMMARY>>>
+Diamondback Energy agreed to acquire Double Eagle subsidiaries for 15.56 million shares and $2.15 billion in cash, adding 176,000 Midland Basin acres.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143847239
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T11:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7e1167b1406a1a6efe983894adde4f721b0ff59c0b59055545320e9238dfb816
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Energy, Inc. Announces Core Midland Basin Acquisition
+<<<SUMMARY>>>
+MIDLAND, Texas, Nov. 16, 2026 (GLOBE NEWSWIRE) -- Diamondback Energy, Inc. (NASDAQ: FANG) (“Diamondback” or “the Company”) today announced that it has entered into a definitive purchase agreement to acquire certain subsidiaries of Double Eagle IV Midco, LLC and Double Eagle V Midco, LLC (together “Double Eagle”) in exchange for approximately 15.56 million shares of Diamondback common stock and $2.15 billion of cash, subject to customary adjustments (the “Double Eagle Acquisition”). The cash port
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143848471
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T07:48:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f3172305148a9cfd89a4c47f6c06779b4c4c8016283f66984fca9d736c074317
+image_url: 
+category: company
+tickers: FANG
+keywords: 
+headline: Diamondback Energy To Acquire Certain Subsidiaries Of Double Eagle For ~15.56M FANG Shares Worth ~$2.84B And $2.15B In Cash
+<<<SUMMARY>>>
+The cash portion of this transaction is expected to be funded through a combination of cash on hand, borrowings under the Company’s credit facility and/or proceeds from term loans.Asset HighlightsApproximately 176,000
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143841893
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T03:04:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c3dad41236b402ed6f9ab799460e99a7e72b8096852b951853eb28dcafd30f9c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: FANG
+keywords: 
+headline: Sell Alert: 5 Stocks Analysts Downgraded on Thursday
+<<<SUMMARY>>>
+Chip stocks took the hardest hit on November 5, when the Philadelphia Semiconductor Index slumped 12.2%, its biggest one-day drop since April 2025. The S&P 500 slid 4.4% and the Nasdaq Composite dropped 5.5%, which put the tech-heavy index in correction territory. Weak results from a smartphone-chip supplier and fears that a Democratic-controlled Congress could […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143848472
+symbol: FANG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T02:44:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=86ff8af79668b53c5cca734bb2adde024a2026b8d2f9769b2171d6e068fe3c8c
+image_url: 
+category: company
+tickers: FANG
+keywords: 
+headline: Reported Sunday, 'Diamondback Nears $5bn Deal to Expand Drilling in Oil-Rich Permian Basin' - FT
+<<<SUMMARY>>>
+http://ft.com/content/a56fc76f-af32-45b2-8ae1-d5e211cb9643?syn-25a6b1a6=1
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8b9d4f54ef7eb49d903fa9e6d574d937d34d2665e87bfd10561a687b1e796b3b
+symbol: FANG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T12:41:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3027035/can-conocophillips-sustain-future-production-growth-with-lower-capex?cid=CS-ZC-FT-analyst_blog|quick_take-3027035
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b5/163437.webp
+category: 
+tickers: COP, EOG, FANG
+keywords: capital expenditure reduction, production growth, Permian Basin, operational efficiency, free cash flow, cost optimization, drilling techniques, capital discipline
+headline: Can ConocoPhillips Sustain Future Production Growth With Lower CapEx?
+<<<SUMMARY>>>
+ConocoPhillips plans to achieve low-single-digit production growth in 2027 while reducing capital spending, leveraging operational efficiencies in its Permian Basin assets and recently commissioned Canadian operations. The company targets a $7 billion free cash flow improvement by 2029 through cost reductions and efficiency gains, despite inflationary pressures on fuel, logistics, and chemicals.
+<<<INSIGHTS>>>
+COP | positive | Company demonstrates strong capital discipline with plans for modest CapEx reduction while maintaining low-single-digit production growth. Operational improvements, extensive resource portfolio, and a targeted $7 billion free cash flow improvement by 2029 support positive outlook. Stock has outperformed industry peers with 52.4% gain over the past year and holds a Zacks Rank #1 (Strong Buy) rating.
+EOG | positive | Company achieved record oil, natural gas liquids, and natural gas production in Q3 2026 while maintaining per-unit cash operating costs below guidance midpoint. Focus on disciplined investments and high-return assets demonstrates effective capital efficiency and operational excellence.
+FANG | positive | Company is improving drilling and completion efficiency through five electric simul-frac fleets planned for consistent 2027 operation. Disciplined spending approach and focus on development cost optimization position the company well for capital-efficient production growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:41cea2f551e4c5a71cea788558bb015a9cebd0b496d874925d064239339f2a18
+symbol: FANG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T17:41:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027378/buy-these-3-stocks-with-broker-rating-upgrades-for-big-gains?cid=CS-ZC-FT-analyst_blog|rw-3027378
+image_url: https://staticx-tuner.zacks.com/images/articles/main/7e/125463.webp
+category: 
+tickers: CNK, FANG, OMCL
+keywords: broker rating upgrades, stock recommendations, earnings growth projections, Zacks Rank #1, theatrical exhibition, oil and gas exploration, healthcare technology
+headline: Buy These 3 Stocks with Broker Rating Upgrades for Big Gains
+<<<SUMMARY>>>
+Despite market headwinds from AI spending concerns, elevated Treasury yields, and tariff uncertainty, three stocks have received significant broker rating upgrades: Cinemark Holdings (CNK) with 7.1% upgrade and 164.4% projected 2026 earnings growth, Diamondback Energy (FANG) with 3% upgrade and 68.8% projected earnings growth, and Omnicell (OMCL) with 11.1% upgrade and 47.5% projected earnings growth. All three carry Zacks Rank #1 ratings.
+<<<INSIGHTS>>>
+CNK | positive | 7.1% broker rating upgrade over four weeks combined with exceptional 164.4% projected year-over-year earnings growth in 2026 and Zacks Rank #1 rating indicate strong analyst confidence and significant growth potential.
+FANG | positive | 3% broker rating upgrade with 68.8% projected 2026 earnings growth and Zacks Rank #1 rating suggest positive analyst sentiment, though the upgrade magnitude is more modest compared to peers.
+OMCL | positive | Leads with 11.1% broker rating upgrade over four weeks and 47.5% projected 2026 earnings growth with Zacks Rank #1 rating, indicating strong analyst optimism about the company's healthcare technology solutions.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1a83c558736c6706fb5bbd74ad270c6234deea56d2aa27dfd0f620cd677353b8
+symbol: FANG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T08:26:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3027648/zacks-com-featured-highlights-include-cinemark-diamondback-energy-and-omnicell?cid=CS-ZC-FT-press_releases-3027648
+image_url: https://staticx-tuner.zacks.com/images/articles/main/4c/416.jpg
+category: 
+tickers: CNK, FANG, OMCL
+keywords: broker rating upgrades, stock recommendations, earnings growth, Zacks Rank #1, theatrical exhibition, oil and gas, healthcare technology
+headline: Zacks.com featured highlights include Cinemark, Diamondback Energy and Omnicell
+<<<SUMMARY>>>
+Zacks highlights three stocks with recent broker rating upgrades as attractive investment opportunities. Cinemark Holdings expects 164.4% earnings growth in 2026, Diamondback Energy projects 68.8% earnings growth, and Omnicell anticipates 47.5% earnings growth. All three stocks hold Zacks Rank #1 ratings and have received upward broker revisions over the past four weeks.
+<<<INSIGHTS>>>
+CNK | positive | Strong 164.4% projected earnings growth for 2026, Zacks Rank #1 rating, and 7.1% upward broker rating revision over four weeks indicate significant optimism about the company's outlook.
+FANG | positive | Projected 68.8% earnings growth for 2026, Zacks Rank #1 rating, and 3% increase in broker ratings over four weeks suggest positive sentiment, though the earnings growth rate is lower than the other two stocks.
+OMCL | positive | Expected 47.5% earnings growth in 2026, Zacks Rank #1 rating, and 11.1% upward broker rating revision over four weeks demonstrate strong confidence in the company's medication management solutions business.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:795857c7023515f74ed28be8418800b600f34edcc5d4e942ae89128a20e37a69
+symbol: FANG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T15:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027724/diamondback-and-kkr-to-acquire-five-point-s-70-stake-in-deep-blue?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3027724
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: FANG, KKR, KKRS, KKRT, KKRpD
+keywords: water infrastructure, Midland Basin, joint acquisition, oil and gas operations, water management, energy infrastructure
+headline: Diamondback and KKR to Acquire Five Point's 70% Stake in Deep Blue
+<<<SUMMARY>>>
+Diamondback Energy (FANG) and KKR have agreed to jointly acquire Five Point Infrastructure's 70% stake in Deep Blue Midland Basin LLC, a water infrastructure platform serving oil and gas operators in the Midland Basin. Diamondback currently owns 30% and will gain joint ownership upon completion expected in Q4 2026. The deal addresses Diamondback's need to transport nearly 2 million barrels of water daily and provides strategic infrastructure for regional E&P customers.
+<<<INSIGHTS>>>
+FANG | positive | The acquisition secures long-term water infrastructure capacity critical to Diamondback's operations (2 million barrels/day requirement), reduces operational uncertainty, and positions the company for potential infrastructure development opportunities beyond traditional E&P activities. The company maintains a Zacks Rank #2 (Buy).
+KKR | positive | KKR's participation as an infrastructure investor leverages its experience scaling energy businesses and provides exposure to a strategically important regional water infrastructure platform with multiple E&P customers, funded through KKR Global Infrastructure Investors V.
+KKRS | positive | KKR's participation as an infrastructure investor leverages its experience scaling energy businesses and provides exposure to a strategically important regional water infrastructure platform with multiple E&P customers, funded through KKR Global Infrastructure Investors V.
+KKRT | positive | KKR's participation as an infrastructure investor leverages its experience scaling energy businesses and provides exposure to a strategically important regional water infrastructure platform with multiple E&P customers, funded through KKR Global Infrastructure Investors V.
+KKRpD | positive | KKR's participation as an infrastructure investor leverages its experience scaling energy businesses and provides exposure to a strategically important regional water infrastructure platform with multiple E&P customers, funded through KKR Global Infrastructure Investors V.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ef8a8efa0a9a825ada08c50e1ced49a521e90ba29c0dce2bc17d3fe8a5117680
+symbol: FANG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T13:55:01Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028719/here-s-why-diamondback-fang-is-a-great-buy-the-bottom-stock-now?cid=CS-ZC-FT-fundamental_analysis|hammer_chart_pattern_(ta)-3028719
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default101.jpg
+category: 
+tickers: FANG
+keywords: hammer chart pattern, trend reversal, earnings estimate revisions, Zacks Rank, technical analysis, energy sector
+headline: Here's Why Diamondback (FANG) Is a Great 'Buy the Bottom' Stock Now
+<<<SUMMARY>>>
+Diamondback Energy (FANG) has declined 12.2% over two weeks but formed a hammer chart pattern in its last trading session, suggesting potential trend reversal. The stock has a Zacks Rank #1 (Strong Buy) rating, supported by a 9.8% upward revision in consensus EPS estimates over the last 30 days, indicating analyst optimism about future earnings.
+<<<INSIGHTS>>>
+FANG | positive | The stock exhibits a bullish hammer chart pattern indicating potential support and trend reversal. Fundamentally, it has received a Zacks Rank #1 (Strong Buy) rating with a 9.8% upward revision in consensus EPS estimates over 30 days, demonstrating strong analyst confidence in improving earnings prospects.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:863835846dad28111f8dc2d39610885e8710d8a90d7df35948413da7def1c229
+symbol: FANG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T16:10:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030549/diamondback-eyes-5b-double-eagle-deal-to-deepen-permian-dominance?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3030549
+image_url: https://staticx-tuner.zacks.com/images/articles/main/74/780.jpg
+category: 
+tickers: FANG, DINO, LNG, DK
+keywords: Diamondback Energy, Double Eagle V acquisition, Permian Basin, Midland Basin, oil and gas, M&A, upstream expansion, infrastructure investment
+headline: Diamondback Eyes $5B Double Eagle Deal to Deepen Permian Dominance
+<<<SUMMARY>>>
+Diamondback Energy (FANG) is nearing a roughly $5 billion cash-and-stock acquisition of Double Eagle V, an EnCap Investments-backed oil and gas producer in the Midland Basin. This follows FANG's $4.1 billion acquisition of Double Eagle IV in February 2025 and its $26 billion merger with Endeavor Energy Resources in 2024, reflecting the company's strategy of consolidating high-quality assets within the Permian Basin rather than pursuing geographic diversification.
+<<<INSIGHTS>>>
+FANG | positive | The company is executing a strategic consolidation strategy in the Permian Basin with multiple significant acquisitions (Double Eagle V ~$5B, Double Eagle IV $4.1B, Endeavor Energy $26B), expanding its drilling inventory and operational platform. The company maintains a Zacks Rank #1 (Strong Buy) rating, and the targeted acquisition approach aligns with management's stated preference for focused growth.
+DINO | positive | Holds Zacks Rank #1 (Strong Buy) with consensus estimates indicating 341.1% year-over-year earnings growth in 2026, demonstrating strong fundamental momentum in the energy sector.
+LNG | positive | Holds Zacks Rank #1 (Strong Buy) with consensus estimates indicating 34.4% year-over-year earnings growth in 2026, showing solid growth prospects in the LNG sector.
+DK | positive | Holds Zacks Rank #1 (Strong Buy) with consensus estimates indicating 205.3% year-over-year earnings growth in 2026, reflecting strong expected performance in the refining and petroleum products sector.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2b9482e15d4c0eab97e2d3c5213cc37a9721ddedde0129a4de6f187db0ed3941
+symbol: FANG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T16:32:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032017/trp-q3-earnings-beat-estimates-on-strong-pipeline-performance?cid=CS-ZC-FT-analyst_blog|earnings_article-3032017
+image_url: https://staticx-tuner.zacks.com/images/articles/main/0c/364.jpg
+category: 
+tickers: TRP, LNG, CRGY, FANG
+keywords: Q3 earnings, pipeline operations, EBITDA growth, natural gas, capital expenditure, dividend, guidance raise
+headline: TRP Q3 Earnings Beat Estimates on Strong Pipeline Performance
+<<<SUMMARY>>>
+TC Energy (TRP) beat Q3 earnings estimates by 4.69% with adjusted EPS of 67 cents and revenues of $2.88B. Comparable EBITDA rose 13.2% to C$3B, driven by stronger pipeline performance, favorable settlements, and Bruce Power contributions. The company raised 2026 EBITDA guidance to C$11.8-C$12B and sanctioned approximately C$6B in projects year-to-date, with expectations for 5-7% annual EBITDA growth through 2031.
+<<<INSIGHTS>>>
+TRP | positive | Company beat earnings and revenue estimates, achieved 13.2% EBITDA growth, raised 2026 guidance, sanctioned C$6B in new projects, and projects 5-7% annual EBITDA growth through 2031. Strong operational execution across all business segments including Canadian pipelines, U.S. pipelines, Mexico operations, and Bruce Power.
+LNG | neutral | Mixed results with earnings miss (13.81% below estimate) but strong revenue beat (14.85% above estimate). Record LNG cargo exports and improved cash position, but earnings disappointment suggests operational challenges despite strong market conditions.
+CRGY | positive | Significant earnings beat of 30.5% above estimates with 113.9% year-over-year earnings growth. Revenue beat estimates by 17.1% with 55.9% year-over-year growth. Strong production increases and improved liquidity position support positive outlook.
+FANG | positive | Strong earnings beat of 19.1% above estimates with 62.1% year-over-year GAAP earnings growth. Revenue surged 38.4% year-over-year and beat estimates by 26.5%. Robust free cash flow generation of $2.15B demonstrates strong operational and financial performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6d853b20be51808a4523e78383116eee4953285de1e1181f79b0c6d2ace8150d
+symbol: FANG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T15:51:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032674/pr-q3-earnings-beat-on-higher-output-and-stronger-pricing?cid=CS-ZC-FT-analyst_blog|earnings_article-3032674
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a0/644.jpg
+category: 
+tickers: PR, LNG, CRGY, FANG
+keywords: Q3 earnings, oil production, cash flow, guidance raise, commodity prices, Permian Basin, energy sector, free cash flow, acquisitions
+headline: PR Q3 Earnings Beat on Higher Output and Stronger Pricing
+<<<SUMMARY>>>
+Permian Resources (PR) reported Q3 adjusted EPS of 69 cents, beating estimates by 15%, driven by 11.5% production growth to 457.5 MBoe/d and 32.4% higher realized oil prices at $85.73/barrel. The company raised 2026 oil production guidance and generated $845.6 million in adjusted free cash flow. Three peer companies also reported strong Q3 results with revenue beats, though Cheniere Energy missed on earnings.
+<<<INSIGHTS>>>
+PR | positive | Strong Q3 results with 86.5% EPS growth, 15% beat on earnings estimates, 11.5% production growth, raised 2026 guidance, record-low controllable cash costs of $7.05/Boe, and robust free cash flow generation of $845.6 million.
+LNG | neutral | Mixed results with 13.81% miss on adjusted EPS ($3.62 vs $4.20 estimate) despite strong revenue beat of 14.85% and record LNG cargo exports. Strong liquidity position of $8.08 billion partially offsets earnings miss.
+CRGY | positive | Strong Q3 performance with 30.5% EPS beat, 113.9% year-over-year earnings growth, 55.9% revenue increase, and production growth to 328 MBoe/d. Solid liquidity of $2 billion supports positive outlook.
+FANG | positive | Excellent Q3 results with 19.1% EPS beat, 62.1% GAAP earnings growth, 38.4% revenue surge, strong free cash flow of $2.15 billion, and record production of 1,033,967 BOE/d.
+<<<END>>>

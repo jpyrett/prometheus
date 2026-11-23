@@ -1,0 +1,99 @@
+<<<PRESS_RELEASE>>>
+id: 66a306fb0d1fd987
+symbol: DK
+published_utc: 2026-01-26T16:10:00Z
+url: https://www.nasdaq.com/press-release/delek-logistics-partners-lp-increases-quarterly-cash-distribution-1125-common-limited
+headline: Delek Logistics Partners, LP Increases Quarterly Cash Distribution to $1.125 per Common Limited Partner Unit
+<<<TEXT>>>
+Delek Logistics Partners, LP today declared its quarterly cash distribution for the fourth quarter 2025 of $1.125 per common limited partner unit, or $4.50 per common limited partner unit on an annualized basis. Delek Logistics is a midstream energy master limited partnership headquartered in Brentwood, Tennessee. Through its owned assets and joint...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0c5a89a49863e82a
+symbol: DK
+published_utc: 2026-02-18T20:00:00Z
+url: https://www.nasdaq.com/press-release/delek-us-holdings-inc-announces-quarterly-dividend-2026-02-19
+headline: Delek US Holdings, Inc. Announces Quarterly Dividend
+<<<TEXT>>>
+Delek US Holdings, Inc. today announced that its Board of Directors has approved a quarterly dividend of $0.255 per share, to be paid on March 9, 2026, to shareholders of record on March 2, 2026. About Delek US Holdings, Inc.. Delek US Holdings, Inc. and its subsidiaries owned approximately 63.3% of Delek Logistics Partners, LP as of September 30, 2025.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 36b34abbe5c74826
+symbol: DK
+published_utc: 2026-02-27T06:30:00Z
+url: https://www.nasdaq.com/press-release/delek-us-holdings-reports-fourth-quarter-2025-results-2026-02-27
+headline: Delek US Holdings Reports Fourth Quarter 2025 Results
+<<<TEXT>>>
+Delek US Holdings, Inc. today announced financial results for its fourth quarter ended December 31, 2025. "2025 has been a transformational year for DK in improving its cash flow profile through successful implementation of the Enterprise Optimization Plan, reducing the costs of Inventory Intermediation Agreements, and progressing its economic...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9dba828ae2d96e93
+symbol: DK
+published_utc: 2026-03-06T16:30:00Z
+url: https://www.nasdaq.com/press-release/delek-logistics-partners-lp-2025-k-1-tax-packages-available-website-2026-03-06
+headline: Delek Logistics Partners, LP 2025 K-1 Tax Packages Available on Website
+<<<TEXT>>>
+Delek Logistics Partners, LP today announced that 2025 K-1 tax packages are now available on our third-party provider’ s website, https://www.taxpackagesupport.com/DelekLogistics. Delek Logistics Partners, LP is a midstream energy master limited partnership headquartered in Brentwood, Tennessee. Through its owned assets and joint ventures located...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 21f692ddc970c6c7
+symbol: DK
+published_utc: 2026-04-10T16:15:00Z
+url: https://www.nasdaq.com/press-release/delek-us-holdings-host-first-quarter-2026-conference-call-april-29th-2026-04-10
+headline: Delek US Holdings to Host First Quarter 2026 Conference Call on April 29th
+<<<TEXT>>>
+Delek US Holdings, Inc. today announced that the Company intends to issue a press release summarizing first quarter 2026 results before the U.S. stock market opens on Wednesday, April 29, 2026. About Delek US Holdings, Inc.. Delek US Holdings, Inc. is a diversified downstream energy company with assets in petroleum refining, logistics, pipelines, and renewable...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 29d26fc24d6dd7c1
+symbol: DK
+published_utc: 2026-04-10T16:15:00Z
+url: https://www.nasdaq.com/press-release/delek-logistics-partners-lp-host-first-quarter-2026-conference-call-april-29th-2026
+headline: Delek Logistics Partners, LP to Host First Quarter 2026 Conference Call on April 29th
+<<<TEXT>>>
+Delek Logistics Partners, LP today announced that the Partnership intends to issue a press release summarizing first quarter 2026 results before the U.S. stock market opens on Wednesday, April 29, 2026. Delek Logistics is a midstream energy master limited partnership headquartered in Brentwood, Tennessee. Through its owned assets and joint ventures...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 986637576e25cc76
+symbol: DK
+published_utc: 2026-04-20T18:00:00Z
+url: https://www.nasdaq.com/press-release/delek-us-holdings-announces-refining-leadership-transition-2026-04-20
+headline: Delek US Holdings Announces Refining Leadership Transition
+<<<TEXT>>>
+Delek US Holdings, Inc. today announced the appointment of Amber Russell as Executive Vice President, Refining, effective April 20, 2026. In this role, Ms. Russell will lead the company’ s refining operations, with a focus on advancing operational excellence, safety performance, and strategic growth across Delek’ s refining system. Prior to that, Ms. Russell served...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a6b0412a05b3e0dd
+symbol: DK
+published_utc: 2026-05-12T08:40:00Z
+url: https://www.nasdaq.com/press-release/delek-logistics-partners-lp-and-delek-logistics-finance-corp-announce-results-tender
+headline: Delek Logistics Partners, LP and Delek Logistics Finance Corp. Announce Results of Tender Offer for Any and All of their Outstanding 7.125% Senior Notes due 2028
+<<<TEXT>>>
+Delek Logistics Partners, LP and Delek Logistics Finance Corp., a subsidiary of Delek Logistics, announced today that they have received, as of 5:00 p.m., New York City time, on May 11, 2026, tenders from holders of $270,721,000 in aggregate principal amount, representing approximately 67.7%, of the Offerors’ 7.125% Senior Notes due 2028, in connection with the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4ff1c80da0109df4
+symbol: DK
+published_utc: 2026-07-17T16:30:00Z
+url: https://www.nasdaq.com/press-release/delek-us-holdings-host-second-quarter-2026-conference-call-august-5th-2026-07-17
+headline: Delek US Holdings to Host Second Quarter 2026 Conference Call on August 5th
+<<<TEXT>>>
+Delek US Holdings, Inc. today announced that the Company intends to issue a press release summarizing second quarter 2026 results before the U.S. stock market opens on Wednesday, August 5, 2026. A conference call to discuss these results is scheduled to begin at 10:00 a.m. CT on Wednesday, August 5, 2026. The live broadcast of this conference call will be...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d647aa85d9e4d9b9
+symbol: DK
+published_utc: 2026-07-21T09:05:00Z
+url: https://www.nasdaq.com/press-release/west-losing-refineries-faster-it-can-replace-them-and-one-nasdaq-company-has-only-one
+headline: The West Is Losing Refineries Faster Than It Can Replace Them, and One Nasdaq Company Has the Only One in Nevada
+<<<TEXT>>>
+Against that backdrop, Sky Quarry Inc., an energy infrastructure company focused on domestic refining and resource development, has moved its Foreland Refinery from its preparation phase into its production phase, positioning what it describes as Nevada's only refinery inside a market that imports the overwhelming majority of the fuel it burns.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d36773dfd1e45e95
+symbol: DK
+published_utc: 2026-07-23T16:30:00Z
+url: https://www.nasdaq.com/press-release/delek-us-holdings-inc-announces-quarterly-dividend-2026-07-23
+headline: Delek US Holdings, Inc. Announces Quarterly Dividend
+<<<TEXT>>>
+Delek US Holdings, Inc. today announced that its Board of Directors has approved a quarterly dividend of $0.255 per share, to be paid on August 10, 2026, to shareholders of record on August 3, 2026. About Delek US Holdings, Inc.. Delek US Holdings, Inc. is a diversified downstream energy company with assets in petroleum refining, logistics, and pipelines.
+<<<END>>>

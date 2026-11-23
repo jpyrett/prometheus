@@ -1,0 +1,1194 @@
+<<<ARTICLE>>>
+id: finnhub:143806021
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T11:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fa109fca2449f4dded2ace59b7e059027e9fc5d3e92eab9006db1a96c550b3e6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Ford, GM, Stellantis stocks had this in common for week ending Nov. 13
+<<<SUMMARY>>>
+Ford Motor Co., General Motors and Jeep-parent Stellantis saw their stock prices fall for the week ending Nov. 13.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143810028
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T18:46:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb454f329f2a6141a152e5500ce6f0b680edfd756b61b93470c7a9e3f8520808
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Canada Declares Stellantis in Default on Up to C$529 Million of Aid
+<<<SUMMARY>>>
+Ottawa has given Stellantis 30 days to cure its breaches, and a Brampton plant sale, a restless union, and a thin North American margin all sit in the way. Which deadline matters more for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143810029
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T17:36:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=715010aad6d14a66ba4428f2c3dca685692f2f50e01fe0967a2d62eb32297acb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Jeep maker faces major lawsuit threat over US factory move
+<<<SUMMARY>>>
+Prime Minister Mark Carney's government has given the automaker 30 days to address concerns about its federal funding agreement.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143810033
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T16:10:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1e810df5dd0d4ac5391970a6262d9c0880ba5ff3369f0b2a7d1edc4110e2c719
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: 3 Auto Stocks for Investors Tracking North American Onshoring and Reshoring
+<<<SUMMARY>>>
+Trade friction between Canada and Stellantis has turned an idled Ontario auto plant into a high stakes lesson in where future vehicle production might actually land. As capital and assembly lines edge closer to U.S. soil, investors watching onshoring and reshoring themes risk missing the move if they only focus on headlines. This article unpacks the news shock and walks through 3 stocks exposed to it that could help frame your next decision. The three stocks below are just a starting sample,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143810030
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:44:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fabdab7ff7024d73fad44120109b53f7b1a37f1250be05d0d5c97a1f5fc92d47
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Stellantis may face federal lawsuit over sale of Canadian auto plant
+<<<SUMMARY>>>
+Stellantis announced the sale of its Brampton Assembly Plant to a defense company. After the sale, the Canadian government said it may sue the automaker.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143810031
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:00:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7bc4d4833175744c1b09626b8b44ed900e05ab705940347cb8988773cacb35e7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Stellantis flags cost inflation and confirms Leapmotor Italy EV plan – report
+<<<SUMMARY>>>
+Filosa urged Italian and EU authorities to support measures addressing energy costs and introduce more favourable industry regulation, including on carbon emissions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143810032
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:56:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1c509ce409719f8199d87a93e84906104d1eb52b92b3fb2f24e45a5837a40a08
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Stellantis replaces sales chief, former Jeep CEO returns
+<<<SUMMARY>>>
+Stellantis hired sales director Michael Orange from Hyundai in April. Orange left the company on Nov. 12.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804148
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3e7825eb133e8eab39006e8b137b33dce854e5c3d8d73b88affba4e291ad821f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Can GM's Solar Projects Strengthen Manufacturing Cost Efficiency?
+<<<SUMMARY>>>
+General Motors is investing $550 million in two Michigan solar projects to secure predictable energy costs and advance its emissions reduction goals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143809199
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:02:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=16ce6e07f88fa54b263d19bd188bca2bec144ca8332518ca71b7bfb867abeafb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: The Snag In Toyota's Little Plan To Bring Tiny Trucks To America
+<<<SUMMARY>>>
+Passionate American fans of tiny trucks from Japan seemed poised for vindication on Tuesday in a market dominated by ever-larger pickups and SUVs. But as the dust settled on Toyota Motor's (TM) plans to assemble and sell a pint-size pickup on U.S. soil, the announcement's fundamentally anticlimactic nature set in. Toyota's upcoming Scion KEI-01 is effectively a rebadged Daihatsu Hijet...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143778519
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T23:21:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2acbc73d767e5f43e06486a594b8daa2726f3ab7cc96d4bba25cba267d939866
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Canada threatens to sue Stellantis over auto plant sale as Trump’s trade war shifts production south
+<<<SUMMARY>>>
+TORONTO (AP) — Canada threatened Thursday to sue automaker Stellantis and recover hundreds of millions of dollars in government funding after the company shifted planned vehicle production to the United States during President Donald Trump’s trade war and agreed to sell its idled assembly plant in Brampton, Ontario.Industry Minister Mélanie Joly said Ottawa had issued Stellantis a formal notice alleging breaches of its funding agreement, giving the automaker 30 days to address the violations or
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143778523
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:11:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=076600bc16456d0e25858b8c780278b710aba9730e20f89a72432503edcbefd3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Jeep® Brand, FOX Factory Vehicles and USO Partner to Auction Customized Jeep Wrangler Commando 392
+<<<SUMMARY>>>
+Jeep® Brand, FOX Factory Vehicles and USO Partner to Auction Customized Jeep Wrangler Commando 392
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143778520
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T16:02:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2e7d8331ac3158d1aeaff766f91861864779ea47ac6607fba2130fa8f766aa59
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Stellantis Global Supplier Conference Honors 61 Suppliers Worldwide for Excellence in Performance, Quality, Innovation and Value Creation
+<<<SUMMARY>>>
+21 companies named 2026 Suppliers of the Year; in addition, 40 other companies recognized for standout performanceMore than 1,000 supplier representatives convened at the Stellantis Global Supplier Conference & AwardsConference highlighted product strategy, technology, design, quality and value creation, building on stronger supplier relationships to support FaSTLAne 2030 DETROIT, November 12, 2026 – Stellantis recognized 61 of its top-performing suppliers from around the world on Nov. 10 at its
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143775116
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3a4f4360e4e59642e0bcdb475b51a843df4a8802cf897adfc3790dba5ea99b91
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Ideal Power Reports Third Quarter 2026 Financial Results
+<<<SUMMARY>>>
+Ideal Power Inc. (Nasdaq: IPWR) ("Ideal Power," the "Company," "we," "us" or "our"), developer and provider of its innovative and widely patented B-TRAN® bidirectional semiconductor power switch, reports results for its third quarter ended September 30, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770933
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:06:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fff51fa8f8141de30def65a555b18a1a1907a2b219602331328792d2fb277a89
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: As CoreWeave Lands a Wayve Deal, Here Is How You Should Play CRWV Stock
+<<<SUMMARY>>>
+CoreWeave's Wayve deal offers a fresh growth catalyst, but how should investors approach CRWV stock amid mounting concerns?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143778521
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T09:16:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ea90a39c51a9867924a90f309957b44fa3b75447eb0b56fd861f8fc1bdfb31c7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Where Does Stellantis (BIT:STLAM) Value Sit After Its Plant Sale?
+<<<SUMMARY>>>
+Stellantis has seen its share price slide sharply in recent years, and that kind of reset pushes investors to ask whether the current market value still lines up with the sales the automaker is generating. The stock has fallen 77.1% over the past 3 years, which puts the focus squarely on whether today’s valuation can still be explained by the business it does at the top line. The sale of the Brampton assembly plant in Canada and ongoing restructuring efforts may reshape Stellantis'...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143760249
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T03:18:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f93f911ffbb70776e793b22b0d466554585709343733758c25707e986990494b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: What Does Stellantis (BIT:STLAM) Brampton Plant Sale Mean For Canada Jobs?
+<<<SUMMARY>>>
+Stellantis (BIT:STLAM) agreed to sell its Brampton Assembly Plant in Ontario to Canadian armored vehicle maker Roshel, drawing political heat. Unifor, the union representing Brampton workers, accuses Stellantis of violating its collective agreement and prior commitments tied to public funding. Canadian federal and provincial officials warn of possible legal and regulatory action, citing risks to thousands of auto jobs and local suppliers. The Brampton Assembly Plant sale to Roshel is only...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143742245
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:52:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3afa623665c91d08c0b506eb1fee1abc3e159d255168a2e141d123d9617899a0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: European Stocks Close Mostly Higher in Wednesday Trading; Energy Prices Keep German Inflation 'Persistently High'
+<<<SUMMARY>>>
+The European stock markets closed mostly higher in Wednesday trading as inflation in Europe's larges
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143747287
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T11:13:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e96211961cd58d344a0e3a5349b2ee9142d298604d32fdad2a63cb4b9587d5dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Stellantis’ Maserati Reportedly in Talks with Huawei and JAC Motors Over Electric Vehicle Partnership
+<<<SUMMARY>>>
+Stellantis (NYSE:STLA) could announce a partnership between its Maserati luxury car division, Huawei and Chinese automaker JAC Motors on December 10, according to Chinese media reports cited by Italian investment firm Equita. The proposed collaboration would focus on developing electric vehicles, with the first model potentially entering production in 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143727704
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T10:13:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=62bc15f127bdfb62173e2063684667a42ed008f8edba5cc091de94244563d76f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Market Chatter: Carney Calls Stellantis' Sale of Canadian Factory 'Unacceptable'
+<<<SUMMARY>>>
+Stellantis (STLA) faces potential legal and policy action from the Canadian government after Prime M
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143717109
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T07:07:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5245019b214b5437a7b73b9315751466f03c9728cb70fd6bb992b0f545fdf09a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Factorial Energy Inc (FAC) Q3 2026 Earnings Call Highlights: First Commercial Revenue Arrives ...
+<<<SUMMARY>>>
+Factorial Energy Inc (FAC) books its first commercial revenue and hits a 450 Wh/kg aerospace milestone while trimming 2026 spending guidance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143698841
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fa2aefb66e4ef45702c03645cdf26c3836bd59ee931e81697cfe61359fde5d9f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Stellantis confirms sale of Brampton plant, amid union anger
+<<<SUMMARY>>>
+Unifor national president Lana Payne accused the federal and provincial governments in Canada of failing to protect the country’s auto sector.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143697348
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:49:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7c169711382108a9535f9c06c4217fb06639b1575639004e7286897743672f8b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: NIO vs. Stellantis: Is a Cutting Edge EV or Automaker Titan Stock a Better Buy for 2027?
+<<<SUMMARY>>>
+NIO burns cash despite 33% revenue growth, while Stellantis posted a $25 billion loss amid its electric shift, both face profitability cliffs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143698843
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fd20b1dccded03154cdfee8e034e1fd7fe159cbf8104e69440750482436d90a0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Ottawa must keep its promise to defend Canadian jobs and industries
+<<<SUMMARY>>>
+"The federal government promised Canadians it would defend their jobs and industries through this trade war. Stellantis's planned sale of its Brampton plant would deal a massive blow to Canada's industrial capacity built over decades. Workers, their families and their communities would live with that loss long after the tariffs are lifted.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734371
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:21:37Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7e8ac1006cc4ef14f29105fc561574713da4a98f9736c26622a660722e087022
+image_url: 
+category: company
+tickers: STLA
+keywords: 
+headline: Canadian Prime Minister Carney Says Canada Will Do All It Can To Force Stellantis To Respect Its Obligations
+<<<SUMMARY>>>
+- Reuters
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734372
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:21:12Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=353acd12f040d58fa9e786f81854d5d1b3fad8ed25e2a6bcff87018e58df4ebe
+image_url: 
+category: company
+tickers: STLA
+keywords: 
+headline: Canadian Prime Minister Carney Says Stellantis Is Not Respecting Its Obligations To Canada
+<<<SUMMARY>>>
+- Reuters
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143698844
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T11:25:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d830f256ebeca65ef151193bf493c88a90bd7a97ddce0ca7963b1b0e5f856ae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Stellantis agrees sale of Brampton plant in Canada to Roshel
+<<<SUMMARY>>>
+The companies have also agreed a cooperation framework to examine potential global collaboration in vehicle technologies and defence industry services.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143669197
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T22:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a530cfe2ed9393101374771a6339cfbccce479d7ceee34cca39cb90109d43b44
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Sale of Brampton Assembly Plant a betrayal by Stellantis
+<<<SUMMARY>>>
+Today, Stellantis officially informed Unifor and publicly announced that it has sold Brampton Assembly Plant to defence contractor Roshel.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686741
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T18:22:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=c1db0a8eb7139968d797d73a81a077c06c4a1d231868864a61c56f366cbaaef9
+image_url: 
+category: company
+tickers: STLA
+keywords: 
+headline: 'Roshel To Buy Stellantis Assembly Plant In Brampton For Undisclosed Amount, Automaker Says' - CBC News
+<<<SUMMARY>>>
+https://www.cbc.ca/news/canada/toronto/stellantis-brampton-plant-9.7415345
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686742
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T18:14:19Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6687937e819951b715c10b8e92633f3fe0b6b66327d7e0056699421b840df283
+image_url: 
+category: company
+tickers: STLA
+keywords: 
+headline: Canada Industry Minister Says Stellantis Decision To Sell Brampton Plant To Roshel Does Not Erase Its Commitments To Workers; Says She Plans To Convene A Meeting This Week With Unifor, Stellantis, Ontario Gov’t And The Brampton Plant
+<<<SUMMARY>>>
+-Reuters.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143659018
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T16:14:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=58fbb381f3bb1df5db268da210f4addf7437a244b57537d68dd329f027ffc366
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: CoreWeave lands major AI deal ahead of critical earnings test
+<<<SUMMARY>>>
+The multi-year agreement will give Wayve access to Nvidia Blackwell GPUs for developing self-driving technology.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024084
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T03:02:57Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9e5eb7aa41f7c3c5069ae036be6292aab36966795c28537b24e358af8e662a32
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/22/Mark-Carney-Donald-Trump.jpg?width=2048&height=1536
+category: company
+tickers: STLA
+keywords: 
+headline: Pentagon Memo Restricts Casual US-Canada Military Contact, Sen. Mike Rounds Says
+<<<SUMMARY>>>
+Sen. Rounds says a DoD memo limits informal U.S.-Canada military contact amid trade tensions, but leaves NORAD, NATO and Five Eyes unchanged.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140274931
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:51:01Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d0094082289d097e21ee095db7866d8d84af012f70079a7fa87a7f6980024cb5
+image_url: 
+category: company
+tickers: STLA
+keywords: 
+headline: Fabric.AI Shares Halted On Circuit Breaker To The Upside, Stock Now Up 21.76%
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012747
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:50:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5977eb31888c6ba20035131ba1c0adaa731db410c141964c13f4132e0742f609
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/20/A-Smartphone-Displays-The-Nvidia-Logo-In.jpg?width=2048&height=1536
+category: company
+tickers: STLA
+keywords: 
+headline: Semiconductor Stocks Heading for Worst 2-Month Slump Since 2001 as Nvidia, Anthropic and the AI Trade Crack: This Week on Wall Street
+<<<SUMMARY>>>
+SOXX is down 34.5% in two months, a slump only September 2001 beat, as Nvidia loses $1 trillion in a week and the S&amp;P 500 enters a correction.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143989995
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:26:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=daab0baa34d772d7f646eab5daf6eea2bd4a203f6657303a2704396dc0290a72
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Ford vs GM vs Stellantis: how the three Detroit automakers compare
+<<<SUMMARY>>>
+Investing.com -- The ranking is clear: General Motors (GM) leads on profitability, Ford Motor (F) leads on income, while Stellantis (STLA) offers the largest valuation gap—but with the weakest operating evidence.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144014141
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:13:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ecce24f694b984136ddbeab4dfb7066663c59e21c0c4b08d024e215a5efb5211
+image_url: 
+category: company
+tickers: STLA
+keywords: 
+headline: Chrysler Recalls 82,843 US Vehicles Model Year 2022-2024 Ram 1500 Classic Trucks Over ABS Software Defect That May Cause Brake Light Malfunctions, Unintended Vehicle Movement, and Loss of ESC, AutoPark, and Forward Collision Warning Functions
+<<<SUMMARY>>>
+https://www.nhtsa.gov/search-safety-issues
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143986028
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:07:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6bb755bce62f43e4a09b2f36e333554d1475404d547b63f65b28112870596b1b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Does the Nestle AI Deal Matter for Microsoft Shareholders?
+<<<SUMMARY>>>
+Nestle just tapped Microsoft and Boston Dynamics to put AI on the factory floor, yet no dollar figure, product, or timeline came with it. One missing detail will decide whether this partnership ever reaches shareholders.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143983364
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T11:12:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=177f5b14f935b13c208b1ac4d21b79130c05be44fc8461f4b3a655cd7f63864b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Ally Financial Bets on Loan Growth to Boost Returns as Lease Losses Mount
+<<<SUMMARY>>>
+Ally Financial (NYSE:ALLY) is counting on growth in higher-margin auto and corporate loans to lift profitability, even as recalled vehicles weigh on its leasing business and deposit competition intensifies, Chief Financial Officer Russ Hutchinson said at a conference. Hutchinson said Ally’s return
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143949906
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a860f9b397187153b85032b35f5ecabee1eda40f66655e4d6a762646b4b24143
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: After Stage 4 Cancer, Bob Broderdorf Returns to Dodge With a Message: No One Should Face Cancer Alone
+<<<SUMMARY>>>
+After Stage 4 Cancer, Bob Broderdorf Returns to Dodge With a Message: No One Should Face Cancer Alone
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943163
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c382dd9f47691d0d774201aa09d65a20832806047955c6de0ce1b4b3726f91e6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Ford Begins Shipping LFP Batteries: Is F Stock a Buy Now?
+<<<SUMMARY>>>
+Ford begins shipping LFP battery cells for its affordable electric pickup, but rising costs and profit pressures raise questions about buying the stock now.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944653
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8724cd662067ae099565d855fb02eb8afd455b8658b81b535165aa69f85ab0ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: General Motors Faces a Cost Squeeze as Factory Automation Takes Center Stage
+<<<SUMMARY>>>
+General Motors reportedly plans more factory automation by 2028 to protect its 8.7% North American margin, as it funds buybacks and navigates labor talks and rising manufacturing costs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922302
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:13:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=88d818c3eb0d13314fb590edb3ddc920375ea539963e2a1a2565677680dfa23f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Hongqi considers European vehicle assembly partnerships – report
+<<<SUMMARY>>>
+Xiao Xiao, head of international business at Hongqi’s state-owned parent company, FAW Group, said the Chinese carmaker is prioritising manufacturing localisation.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917739
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b26d25152871a17412f4c94a5b1a74469a324bf9e0e41f9456290138a293ce56
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: '1776 Off-Road' Launches New American Vehicle Enhancement Brand
+<<<SUMMARY>>>
+New Texas-based vehicle customization company launches nationwide as part of the Hennessey GroupFirst product range introduces distinctive enhancement packages for RAM 1500 and RAM 2500 trucksEvery vehicle sold supports military families through a donation to the Folds of Honor charityFuture expansion to come across Ford, GM, and other Stellantis truck and SUV platforms A Media Snippet accompanying this announcement is available by clicking on this link. HOUSTON, Nov. 18, 2026 (GLOBE NEWSWIRE) -
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917285
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ca9179d121e03f1abdb2795cafe32f9eec948c5a648ee8c89daabb428a8ed035
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: IONNA and Automaker Partners Prove Network Scale with Multiple Cross-Country Road Trips
+<<<SUMMARY>>>
+IONNA, the EV charging network founded by eight of the world's leading automakers finished a cross-country road trip series in which 20+ EVs drove a combined 40,000+ miles, charging on the IONNA network. Less than two years after opening its first site, IONNA has developed a national network with meaningful density in key markets and continues to be one of the fastest-growing high-powered networks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143911831
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d987e03f2bdebcafaeb17a26621e0f124cf3739052928642b6781634160baf06
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: General Motors' Automation Push: Buy, Hold or Sell the Stock Now?
+<<<SUMMARY>>>
+GM's automation push aims to boost efficiency, but rising costs and labor risks pose challenges. Can strong fundamentals support its hold appeal?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143911250
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T10:28:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=11ebd6c09b89754c0540c64b439369faa673c468b002638f0d65d0647230f8c1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: GM reportedly targets 20% increase in factory automation
+<<<SUMMARY>>>
+The company’s plans include autonomous mobile robots for transporting parts around manufacturing locations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143905219
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T06:20:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d39a1829a5bb62c8ce5c04db3d81eb02b790b53ab985560f28f30744df4a891a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Stellantis (BIT:STLAM) Ends 10 Year Wait With 2026 NHRA Manufacturer's Cup
+<<<SUMMARY>>>
+Stellantis (BIT:STLAM) brand Dodge secured the 2026 NHRA Manufacturer's Cup, its first such win since 2016. The cup recognizes the top performing manufacturer across NHRA categories, underscoring Dodge's current motorsports results. The victory gives Stellantis a fresh marketing hook around Dodge performance models for motorsport focused buyers and fans. Dodge's 2026 NHRA Manufacturer's Cup win deserves to be weighed against Stellantis's broader fundamentals and risk profile. Check out 2...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143905789
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T05:27:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a9e6ae456603f011b50b9f0bcd50d53b02523ef1a93d3e3f739727637a4ae22
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Stellantis (BIT:STLAM) Could Be 64% Undervalued Following Its North America Reset
+<<<SUMMARY>>>
+Stellantis (BIT:STLAM) has been under pressure, with the stock falling about 66% year to date and roughly 60% over the past year, leaving shares near their 52 week low. Recent trading has been rough for Stellantis, with the share price down 13.2% over the past week and 16.6% over the last month, extending a broader year to date slide of 65.8% and a 3 year total shareholder return decline of 79.1%. Short term momentum looks weak, as investors react to issues such as the Brampton plant dispute...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886794
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T23:21:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7dffef643275bbe41119104e4538ddadb4b47a2a7bb64a48118552f309ef5e48
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Ford Motor vs. Stellantis: Which Automaker Titan Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Ford generates far more cash, while Stellantis trades at a steep discount, and the trade-off between the two is sharper than the headline suggests.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886672
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T21:30:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e93f10236ee05495d5137f2e58c8c3e08ca44f461695d9e8b0506f9435230a57
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Mark Carney Warns Canada Could Turn to China for Autos if Trade Talks With Trump Administration Fail: ‘Not Leverage. But Action, Reaction’
+<<<SUMMARY>>>
+Canadian Prime Minister Mark Carney warned that Canada could turn to Chinese automakers if trade negotiations with President Donald Trump fail to protect North America’s integrated automotive industry, arguing that U.S. trade policies have already weakened cross-border manufacturing. Carney Warns...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884273
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T19:44:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1af041ea6a1498551ea545ba6c6fb1f358c52734d7a0c66dd62769d9e541dda0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: GM CEO Mary Barra Might Be Leaving. Who Could Replace Her.
+<<<SUMMARY>>>
+Mary Barra has led General Motors for about 11 years. Her biggest success might be her track record of controlling costs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143888507
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T19:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=92f020f2f9f43078461256ecc810bb6f88f83b25651d82ce4f132418c91fb9a2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Chrysler Unveils 2027 Pacifica Copperline and New Ski Grey Interior at Los Angeles Auto Show
+<<<SUMMARY>>>
+Chrysler Unveils 2027 Pacifica Copperline and New Ski Grey Interior at Los Angeles Auto Show
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143888508
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T16:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=45283f1bb182b48919232ab27a1f49babaa93ff9898b8c224af6bd3e7b236048
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Dodge Captures Coveted NHRA Manufacturer's Cup, TSR Driver Matt Hagan's Four NHRA Funny Car Wins and Runner-up Championship Finish Pace Brand
+<<<SUMMARY>>>
+Dodge Captures Coveted NHRA Manufacturer's Cup, TSR Driver Matt Hagan's Four NHRA Funny Car Wins and Runner-up Championship Finish Pace Brand
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143888504
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:08:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=559f9c4170fb93d6a48b77fdb2b17243be73cc0dac9ad8528986505b5ffd77fb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Buy the Stellantis stock amid fresh record lows?
+<<<SUMMARY>>>
+Investing.com -- Stellantis NV (STLA) breaking below the $3.65 52-week low is the immediate technical event. But "all-time low" is not confirmed by the available data.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849749
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T17:50:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=918a06f6545aa3ef74464964a66cb8121a767ec18ca8dc3d38e658f0aade4d96
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Ford Paid Retirees a Bonus Dividend 2 Years Running. In 2026 It Didn’t. Will It Come Back?
+<<<SUMMARY>>>
+Ford's March checks grew fatter two years in a row, then the extra money vanished without a word of explanation. Cash flow, a rival's buyback, and a bleak 2027 outlook offer clues about whether income investors should keep waiting.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143852546
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T15:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=15fe0e9318d45a938c959645ab684bc5f736c4ad995b612776261052b72876f6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Numa Triples ARR, Raises $45M Series C to Run the Entire Dealership
+<<<SUMMARY>>>
+Numa, the AI Operating System for dealerships, today announced a $45 million Series C led by Blue Cloud Ventures, with participation from Threshold Ventures, Costanoa, Touring Capital, Gradient Ventures and Tokio Marine Future Fund. The round brings Numa's total funding to $96 million. It caps a year in which Numa tripled in size, tripled its annual recurring revenue and became the AI system GM, FordDirect, BMW and Stellantis each put in front of their dealerships.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143841291
+symbol: STLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T01:13:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ad1076430e5efa8d9006005add6f8a3e9082960c33f3fefeea48bd4df2d7afb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: STLA
+keywords: 
+headline: Consumer Defensive Stocks Extend Winning Streak To 6 Weeks As SPY, QQQ Rebound: TTD, CHTR, TSLA Lead Gains
+<<<SUMMARY>>>
+Consumer ETFs continued to rise as the broader market recovered. Strong earnings, cost-cutting plans and merger talks helped some stocks post gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:074c517d700f4c63ff33bd5a8fe8faf0ccd229e89d5176bc4313e6ca9fd7050f
+symbol: STLA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T00:30:00Z
+publisher: The Motley Fool
+author: Daniel Miller
+url: https://www.fool.com/investing/2026/11/10/byds-profits-rebounded-these-2-questions-will-deci/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893560%2Fbyd_sealion_45s_excellence__0084-copy.jpg&w=1200&op=resize
+category: 
+tickers: TSLA, ZGJLY, STLA, BYDDY, GELHY
+keywords: BYD Q3 earnings, revenue recovery, overseas expansion, Chinese auto market, price war, international sales, profitability, competitive pressure
+headline: BYD's Profits Rebounded. These 2 Questions Will Decide What Comes Next.
+<<<SUMMARY>>>
+BYD reported Q3 revenue growth of 13.6% and net profit increase of 28%, ending four consecutive quarters of decline. However, profits fell short of analyst estimates. The company's recovery is driven by overseas expansion, which more than doubled, offsetting weak domestic Chinese sales amid intense price competition. Key questions remain about whether domestic sales will recover and if international expansion can sustain profitable growth amid intensifying competition from rivals like Geely and Leapmotor.
+<<<INSIGHTS>>>
+TSLA | neutral | Mentioned as a competitor with a resilient product lineup despite lack of major refreshes or launches. No specific performance data provided, maintaining a neutral stance in the context of BYD's competitive landscape.
+ZGJLY | positive | Backed by Stellantis, Leapmotor is offering competitively priced vehicles that give consumers more options, indicating strong competitive positioning in the Chinese auto market.
+STLA | neutral | Mentioned as the backer of Leapmotor, which is gaining market share with competitive pricing. No direct performance data provided, so sentiment remains neutral.
+BYDDY | neutral | While Q3 showed revenue growth of 13.6% and net profit increase of 28%, profits missed analyst estimates. The recovery is heavily dependent on overseas sales growth rather than domestic market strength, raising sustainability concerns. The company faces intensifying competition both domestically and internationally, and the article emphasizes that expansion alone doesn't guarantee profitability.
+GELHY | positive | Geely achieved similar Q3 net profit growth of 28% with faster-charging technology expanding its network. The company demonstrates the same successful international expansion strategy as BYD, showing competitive strength in both domestic and overseas markets.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2caf205526cde833d12e468a15b2d5a94e5be27132a6e77581bcb6110ac05ff8
+symbol: STLA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T11:10:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031531/general-motors-automation-push-buy-hold-or-sell-the-stock-now?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3031531
+image_url: https://staticx-tuner.zacks.com/images/articles/main/4f/1131.jpg
+category: 
+tickers: GM, F, FpB, FpC, FpD, STLA
+keywords: automation, manufacturing efficiency, commodity inflation, tariffs, labor relations, pickup sales, cash flow, software revenues
+headline: General Motors' Automation Push: Buy, Hold or Sell the Stock Now?
+<<<SUMMARY>>>
+General Motors is targeting a 20% increase in robotics and automation by 2028 to improve manufacturing efficiency. However, the company faces significant near-term challenges including a $2 billion cost headwind in 2026 from commodity inflation and tariffs, potential labor tensions with the UAW, and reshoring expenses. Despite these pressures, GM's strong pickup sales leadership, improving margins, robust cash flow, and growing software revenues provide support for its long-term outlook.
+<<<INSIGHTS>>>
+GM | neutral | GM has strong operational fundamentals including 19 consecutive quarters of pickup sales leadership, improving margins, and robust cash generation ($11.5B-$12.5B 2026 guidance). However, significant near-term headwinds including $2 billion in 2026 cost pressures, tariff exposure, and potential 2028 labor tensions create uncertainty that offsets positive long-term automation benefits. The Zacks Rank #3 (Hold) rating reflects this balanced risk-reward profile.
+F | neutral | Ford is mentioned as a peer also integrating automation and AI into manufacturing, but no specific performance data or outlook is provided. The article notes Ford faces similar industry pressures and has labor agreements expiring in spring 2028.
+FpB | neutral | Ford is mentioned as a peer also integrating automation and AI into manufacturing, but no specific performance data or outlook is provided. The article notes Ford faces similar industry pressures and has labor agreements expiring in spring 2028.
+FpC | neutral | Ford is mentioned as a peer also integrating automation and AI into manufacturing, but no specific performance data or outlook is provided. The article notes Ford faces similar industry pressures and has labor agreements expiring in spring 2028.
+FpD | neutral | Ford is mentioned as a peer also integrating automation and AI into manufacturing, but no specific performance data or outlook is provided. The article notes Ford faces similar industry pressures and has labor agreements expiring in spring 2028.
+STLA | neutral | Stellantis is mentioned as a competitor deploying similar automation technologies (collaborative robots, autonomous mobile robots), but no specific performance metrics or outlook are discussed. Faces the same labor agreement expiration timeline as GM and Ford in spring 2028.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:becc68d8e51b33b7e62eedf74047c7dff6d5f9d0567c795d43ff4366d45892cf
+symbol: STLA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T14:16:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032527/ford-begins-shipping-lfp-batteries-is-f-stock-a-buy-now?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3032527
+image_url: https://staticx-tuner.zacks.com/images/articles/main/37/503.jpg
+category: 
+tickers: F, FpB, FpC, FpD, GM, STLA
+keywords: Ford battery production, LFP batteries, electric vehicles, Fathom pickup, commodity headwinds, Ford Pro, EV profitability
+headline: Ford Begins Shipping LFP Batteries: Is F Stock a Buy Now?
+<<<SUMMARY>>>
+Ford has begun shipping LFP battery cells from its $3 billion Michigan plant for its upcoming affordable Fathom electric pickup, marking progress toward lower EV costs. However, the company faces $2.5 billion in 2026 commodity headwinds and reduced Ford Pro profit expectations, which cloud near-term profitability. While strong truck sales, hybrid demand, and record services revenues provide support, analysts recommend waiting for clearer evidence of improving EV economics before increasing exposure.
+<<<INSIGHTS>>>
+F | neutral | Ford shows mixed signals with encouraging battery production progress and strong core business (trucks, hybrids, services), but faces significant near-term headwinds including $2.5B commodity costs and reduced Ford Pro margins. Long-term EV potential is offset by near-term profitability concerns, warranting a Hold rating.
+FpB | neutral | Ford shows mixed signals with encouraging battery production progress and strong core business (trucks, hybrids, services), but faces significant near-term headwinds including $2.5B commodity costs and reduced Ford Pro margins. Long-term EV potential is offset by near-term profitability concerns, warranting a Hold rating.
+FpC | neutral | Ford shows mixed signals with encouraging battery production progress and strong core business (trucks, hybrids, services), but faces significant near-term headwinds including $2.5B commodity costs and reduced Ford Pro margins. Long-term EV potential is offset by near-term profitability concerns, warranting a Hold rating.
+FpD | neutral | Ford shows mixed signals with encouraging battery production progress and strong core business (trucks, hybrids, services), but faces significant near-term headwinds including $2.5B commodity costs and reduced Ford Pro margins. Long-term EV potential is offset by near-term profitability concerns, warranting a Hold rating.
+GM | neutral | Mentioned as a peer comparison showing better stock performance (+8% vs Ford's -15% over six months), but no specific operational details provided. Neutral sentiment reflects lack of substantive information in the article.
+STLA | negative | Mentioned as underperforming peer with 53% stock decline over six months, significantly worse than Ford's performance, suggesting operational or market challenges.
+<<<END>>>

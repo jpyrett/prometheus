@@ -8546,3 +8546,334 @@ Both EOG Resources and ConocoPhillips have delivered strong year-to-date gains (
 EOG | positive | Strong YTD gains of 48.1%, diversified 12 billion barrel resource base, low debt-to-capitalization (19.31%), and cheaper valuation (5.27x EV/EBITDA) provide attractive entry point for value-conscious investors.
 COP | positive | Highest YTD gains at 50.2%, strong long-term cash-flow visibility with $7 billion annual increase target by 2029, large upstream footprint with 20+ years of drilling locations, and Zacks Rank #1 (Strong Buy) rating justify premium valuation despite higher leverage.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144022777
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T10:50:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7c7ab7d5cb5d5edda663a81eb55a6bc4456c3bef6a04ca44fb0ac0260ec803b0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: How Many Shares of Devon Energy or EOG Resources Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, about 9,375 shares of Devon Energy (about $389,400) or about 2,728 shares of EOG Resources (about $405,400) pay $1,000 a month in dividends. Devon’s 3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012484
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4605497b15fe0521bed14b35d729a6ba0bb70d9b806a949d13f1fe5b391a38bd
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/20/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: EOG
+keywords: 
+headline: Defensives Lead Sectors Friday As Growth Trails
+<<<SUMMARY>>>
+Six sectors are higher and five are lower in Friday&#39;s regular session, with defensive sectors holding two of the top three positions alongside Energy. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050361
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4212ca2db802cf503b2854dedf79630c17f5eac162059c6bdb6abadd50623c82
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Here's How EOG is Lowering Well Costs to Boost Margins & Cash Flow
+<<<SUMMARY>>>
+EOG enhances drilling efficiency, lowers well costs in the Utica and Eagle Ford, and leverages infrastructure gains to strengthen margins and cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050478
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c6d5fb377496f08cafcc69b187db1d3cda51cfd96a7c34d57568ea4b89c5715
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Are Oils-Energy Stocks Lagging Canadian Natural Resources Limited (CNQ) This Year?
+<<<SUMMARY>>>
+Here is how Canadian Natural Resources (CNQ) and EOG Resources (EOG) have performed compared to their sector so far this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144049026
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b9b3a5a70ba8b6d8cedc4389459437690f41b93974be9baabcd220d52313ed7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Will Chord's Marketing Savings Support Higher Margins & Cash Flow?
+<<<SUMMARY>>>
+CHRD targets significant cash flow savings through new Williston Basin marketing deals, lower transport costs and improved market access.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048528
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b339b3ea53c43b5b7fb2055136689c728be61add9647382b6cec88e0188141e7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Dividend Hikes of Up to 16% Roll In, From Payments and Payroll to Oil
+<<<SUMMARY>>>
+Shareholders in five big-board companies have a raise on the way. Between October 27 and November 17, 2026, the boards of a global payments network, an industrial automation company, an oil and gas producer, a payroll and HR technology provider and a public safety technology company each approved a higher dividend, with increases ranging from 7% to 16%. Active Companies from around the markets with current developments include: Visa Inc. (NYSE: V), Emerson Electric Co. (NYSE: EMR), EOG Resources
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144047768
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T09:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=205976dc98f019a776007900f521cabd5171d2eaa0b42cc0db31e127d5f3abb1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: New Strong Buy Stocks for November 23rd
+<<<SUMMARY>>>
+SHG, EOG, POWL, FET and SMC have been added to the Zacks Rank #1 (Strong Buy) List on November 23, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144042284
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T08:44:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c9e87bb52e86cdd65d3582813f27be6b192566fd777b8abae3a9fe39e84d67f1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Best Value Stocks to Buy for November 23rd
+<<<SUMMARY>>>
+SHG, EOG, and LRN made it to the Zacks Rank #1 (Strong Buy) value stocks list on November 23, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144042299
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T08:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ae3f69b1e7503cedf9e07e80ce75a9df26469abc1013f1941def3d5607c7551
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Best Momentum Stocks to Buy for November 23rd
+<<<SUMMARY>>>
+EOG, FET and POWL made it to the Zacks Rank #1 (Strong Buy) momentum stocks list on November 23, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144041907
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T08:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=14292cb9d1a22bf094c3e9e624b3cd110782d50f5a158e14d7e992824b610a3f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: Best Income Stocks to Buy for November 23rd
+<<<SUMMARY>>>
+SHG, EOG and AGO made it to the Zacks Rank #1 (Strong Buy) income stocks list on November 23, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144036690
+symbol: EOG
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T07:14:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6fdf927a19cacd7be5c146f448d85f72bedc1acb2b43023e390e00f217b4a3a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: EOG
+keywords: 
+headline: United States: TotalEnergies Strengthens its Partnership with Continental Resources to Develop its Gas Production
+<<<SUMMARY>>>
+PARIS, November 23, 2026--TotalEnergies (Paris:TTE) (LSE:TTE) (NYSE:TTE) has signed a new agreement with Continental Resources, under which TotalEnergies acquires interests in natural gas upstream assets. The transaction is expected to add approximately 150 MMscf/d1 (equivalent to around 26 kboe/d) to TotalEnergies’ net gas production in the United States by 2032.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6cc6df50c6ad22d4b0fd358fdca28dd1bc5325dd045c000153a1a588def58525
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T08:34:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3033532/best-income-stocks-to-buy-for-november-23rd?cid=CS-ZC-FT-zacks_1_rank_additions|income_additions-3033532
+image_url: https://staticx-tuner.zacks.com/images/articles/main/8e/1155.jpg
+category: 
+tickers: SHG, EOG, AGO
+keywords: dividend stocks, income investing, Zacks Rank #1, earnings growth, financial services, oil and gas
+headline: Best Income Stocks to Buy for November 23rd
+<<<SUMMARY>>>
+Zacks highlights three Rank #1 stocks with strong income potential: Shinhan Financial Group (dividend yield 2.7%, earnings estimate up 10%), EOG Resources (dividend yield 2.8%, earnings estimate up 12.1%), and Assured Guaranty Ltd (dividend yield 2.1%, earnings estimate up 8%). All three companies show positive earnings momentum and above-average dividend yields.
+<<<INSIGHTS>>>
+SHG | positive | Zacks Rank #1 rating with 10% earnings estimate increase over 60 days and dividend yield of 2.7% exceeding industry average of 2.5%
+EOG | positive | Zacks Rank #1 rating with 12.1% earnings estimate increase over 60 days and dividend yield of 2.8%, significantly above industry average of 0.0%
+AGO | positive | Zacks Rank #1 rating with 8% earnings estimate increase over 60 days and dividend yield of 2.1% exceeding industry average of 1.6%
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:dc9d0b8ce0d65126a515646fd413c492b6a7caffa17a86baf1f555bc1ecbec68
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T08:39:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3033535/best-momentum-stocks-to-buy-for-november-23rd?cid=CS-ZC-FT-zacks_1_rank_additions|momentum_additions-3033535
+image_url: https://staticx-tuner.zacks.com/images/articles/main/fa/675.jpg
+category: 
+tickers: EOG, FET, POWL
+keywords: Zacks Rank #1, buy rating, momentum, earnings estimates, oil and gas, energy equipment, industrial equipment
+headline: Best Momentum Stocks to Buy for November 23rd
+<<<SUMMARY>>>
+Zacks highlights three stocks with Rank #1 buy ratings and strong momentum characteristics: EOG Resources (oil and gas exploration), Forum Energy Technologies (energy equipment), and Powell Industries (industrial equipment manufacturing). All three companies have shown positive earnings estimate revisions over the last 60 days and outperformed the S&P 500 in recent periods.
+<<<INSIGHTS>>>
+EOG | positive | Zacks Rank #1, 12.1% earnings estimate increase over 60 days, Momentum Score A, shares gained 6.7% over 6 months vs S&P 500 decline of 8.1%
+FET | positive | Zacks Rank #1, 38.1% earnings estimate increase over 60 days (highest among the three), shares gained 9.2% over 3 months vs S&P 500 decline of 10.6%
+POWL | positive | Zacks Rank #1, 8% earnings estimate increase over 60 days, Momentum Score A, shares gained 8.2% over 6 months vs S&P 500 decline of 46.9%
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:764232aeabe170401269d2a0e6c49e54c0f96bbe02c237baa83bf136df3704b7
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T08:44:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3033537/best-value-stocks-to-buy-for-november-23rd?cid=CS-ZC-FT-zacks_1_rank_additions|value_additions-3033537
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ea/574.jpg
+category: 
+tickers: SHG, EOG, LRN
+keywords: buy rank, value stocks, Zacks Rank #1, price-to-earnings ratio, financial services, oil and gas, technology
+headline: Best Value Stocks to Buy for November 23rd
+<<<SUMMARY>>>
+Zacks highlights three stocks with Rank #1 buy ratings and strong value characteristics: Shinhan Financial Group (SHG) with a P/E of 6.66 and Value Score A, EOG Resources (EOG) with a P/E of 7.87 and Value Score B, and Stride Inc. (LRN) with a P/E of 8.25 and Value Score A. All three have seen recent earnings estimate increases.
+<<<INSIGHTS>>>
+SHG | positive | Carries Zacks Rank #1, 10% earnings estimate increase over 60 days, P/E of 6.66 below industry average of 10.90, and Value Score of A indicating strong value characteristics
+EOG | positive | Carries Zacks Rank #1, 12.1% earnings estimate increase over 60 days, P/E of 7.87 below industry average of 10.40, and Value Score of B indicating solid value characteristics
+LRN | positive | Carries Zacks Rank #1, 4.9% earnings estimate increase over 60 days, P/E of 8.25 significantly below industry average of 29.30, and Value Score of A indicating strong value characteristics
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1cdd8ecee8a98badff3db0cf394705f42a62ae76a72d6067f72dd63596ce0b08
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T09:39:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3032990/new-strong-buy-stocks-for-november-23rd?cid=CS-ZC-FT-zacks_1_rank_additions-3032990
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6e/1693.jpg
+category: 
+tickers: SHG, EOG, POWL, FET, SMC
+keywords: Strong Buy, earnings estimates, Zacks Rank, stock recommendations
+headline: New Strong Buy Stocks for November 23rd
+<<<SUMMARY>>>
+Zacks has added five stocks to its Strong Buy list based on positive earnings estimate revisions over the last 60 days. The stocks include Shinhan Financial Group (10% earnings estimate increase), EOG Resources (12.1% increase), Powell Industries (8% increase), Forum Energy Technologies (15% increase), and Summit Midstream Corporation (57.5% increase).
+<<<INSIGHTS>>>
+SHG | positive | Added to Zacks Rank #1 Strong Buy list with 10% increase in consensus earnings estimates over 60 days
+EOG | positive | Added to Zacks Rank #1 Strong Buy list with 12.1% increase in consensus earnings estimates over 60 days
+POWL | positive | Added to Zacks Rank #1 Strong Buy list with 8% increase in consensus earnings estimates over 60 days
+FET | positive | Added to Zacks Rank #1 Strong Buy list with 15% increase in consensus earnings estimates over 60 days
+SMC | positive | Added to Zacks Rank #1 Strong Buy list with significant 57.5% increase in consensus earnings estimates over 60 days
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7185b9bed2363dbfa84b440c5065fc8a1edbee80fc31e3467bc0b857b4646857
+symbol: EOG
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T13:40:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3033767/are-oils-energy-stocks-lagging-canadian-natural-resources-limited-cnq-this-year?cid=CS-ZC-FT-fundamental_analysis|yseop_template_1-3033767
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default19.jpg
+category: 
+tickers: CNQ, EOG
+keywords: Oils-Energy stocks, Canadian Natural Resources, EOG Resources, year-to-date performance, Zacks Rank, earnings estimates, oil and gas exploration
+headline: Are Oils-Energy Stocks Lagging Canadian Natural Resources Limited (CNQ) This Year?
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) has outperformed the Oils-Energy sector year-to-date, gaining 31.1% compared to the sector average of 20.8%. Both CNQ and EOG Resources hold Zacks Rank #1 (Strong Buy) ratings with improving analyst sentiment. However, CNQ is slightly underperforming its Oil and Gas - Exploration and Production - Canadian industry peers, which have gained 37.1% on average.
+<<<INSIGHTS>>>
+CNQ | positive | CNQ has gained 31.1% year-to-date, outperforming the Oils-Energy sector average of 20.8%. It holds a Zacks Rank #1 (Strong Buy) rating with consensus EPS estimates up 11% over the past quarter, indicating improving analyst sentiment.
+EOG | positive | EOG has outperformed both CNQ and the broader sector with a 41.5% year-to-date return. It also holds a Zacks Rank #1 (Strong Buy) rating with consensus EPS estimates increased 11.9% over the past three months.
+<<<END>>>

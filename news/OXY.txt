@@ -1,0 +1,1453 @@
+<<<ARTICLE>>>
+id: finnhub:143805322
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T20:33:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e125bba1b848c590a7977562c8644dd679d4dbc198b1e29afe5a92de8bf230a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Earnings week scorecard: beats rewarded selectively as AI-infrastructure names pull back
+<<<SUMMARY>>>
+Investing.com -- Beats were widespread this week, but the market rewarded only some of them. Cisco and Applied Materials both beat and both sold off. CoreWeave, Rocket Lab and Constellation Energy were rewarded. The week reads as a test of "beat versus priced-in" for the AI-infrastructure trade.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805313
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T19:48:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d21a198555d1de88e64c2dc5049a243c0c4b9a287cb7294bbda2c2f85ab935a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Why You Need To Pay Attention To Occidental Petroleum Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803829
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:42:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6f34f7046b877328cf8f8b673b1d40083633cd6adc843d710bb997fd557c0eb9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Amazon Joins Goldman Sachs’ Conviction List Alongside 4 Other Stock Picks
+<<<SUMMARY>>>
+Goldman Sachs just overhauled its Conviction List with five new additions, and the upside targets on some of these picks will raise eyebrows. One hyperscaler alone carries a 51% potential gain, but it is far from the biggest number on the list.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143803926
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:20:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9673e588ae87151994ab86f51299bcb0210e5e1dd01aa6d529d8590c8b1bc366
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: What Would Cheaper Fuel Mean For Exxon Mobil Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805136
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T14:00:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e53ee27c6f29f24fa8884cb3f0b5a7d57f389803bbd1ee8d72e9d0f42fa4edbe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Generates Strong FCF - Is OXY Stock Too Cheap?
+<<<SUMMARY>>>
+Occidental Petroleum reported very strong Q3 operating cash flow and free cash flow. But even if revenue drops next year, assuming oil and gas prices fall, OXY could still be undervalued.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143807024
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T11:51:35Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=060472567ea211d67df1cba4eedcbfc087b470a36f01416cfc188f3a8e9d9c15
+image_url: 
+category: company
+tickers: OXY
+keywords: 
+headline: Barclays Maintains Overweight on Occidental Petroleum, Raises Price Target to $73
+<<<SUMMARY>>>
+Barclays  analyst Betty Jiang   maintains Occidental Petroleum (NYSE:OXY) with a Overweight and raises the price target from $71 to $73.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769759
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T14:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f4a7c0d1f24e2392346176b8ce49ddb66736dc478a4cc3d75ce731c844687ac0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Is TALO Worth Buying as Low Valuation Meets Offshore Execution Risk?
+<<<SUMMARY>>>
+TALO's discounted valuation, rising earnings estimates and strong liquidity bolster its appeal, but offshore costs and heavy spending keep risks in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766836
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T13:41:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=49ab416c0dc269043e0d8392e07612d18ab0e84f7d9190d042c1cec342309604
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Can Occidental Petroleum Stock Fall 30%?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767177
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e948fd9ab42385c6c7755564d4ae59b4448c3ede111ee609956cc24919b7e82c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Q3 Earnings Beat Estimates on Strong Oil Prices
+<<<SUMMARY>>>
+OXY's third-quarter 2026 earnings beat estimates on higher oil prices and strong midstream results, while robust cash flow fuel debt reduction.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748047
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T01:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2c79933322b131570dedb8fcf5a735893c64261868369b2eb9e643fa2e42e2f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Should You Pick Occidental Stock Over Its Competitors?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738197
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:43:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9e4ee5c2d867c31e58911aa09c689e1ffefe4a6221de1399f573bfc35a1326dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Unveils Bold $6 Billion Debt Plan
+<<<SUMMARY>>>
+A major financial transformation could unlock stronger shareholder returns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738198
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9b8480c3e846ce701396a9f9a5f4b725f14be71db6f8437f08123363ad7188e7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Q3 Earnings Call Centers on Debt Cuts and Cash Flow
+<<<SUMMARY>>>
+OXY sets a $6 billion debt target after $10.4 billion in 2026 reductions, with 2027 cash flow gains, capital spending and buybacks in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143717645
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T07:06:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ed4cc3b89356e329865b290db7d52e19472a023ebba60f9b1e92f0552cb6ce0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Corp (OXY) Q3 2026 Earnings Call Highlights: $2. ...
+<<<SUMMARY>>>
+Occidental Petroleum Corp (OXY) beat production guidance, repaid $1.8 billion of debt in the quarter, and outlined $700-800 million of sustainable cash flow improvement for 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143712057
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T04:51:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d8eb9d2a318efa610642c208b27308b7d4c4c915c8af59c74e21fb6aeec2e134
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum (OXY) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Debt milestone reached, with free cash flow hitting $2.8 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143695485
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T22:14:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c5ba65d752b3f5deca1f374e59a130eae9ebb8132ab0236917b8828966720d65
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: What Occidental Petroleum (OXY) Said on Its Q3 Earnings Call
+<<<SUMMARY>>>
+Occidental Petroleum (NYSE:OXY) generated approximately $2.8 billion in free cash flow during the third quarter of 2026 and reached its $10 billion principal debt milestone, prompting the oil producer to set a new target of $6 billion. The company reported adjusted earnings of $1.91 per diluted sha
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694038
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T21:32:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fd3b066bfc5bec721a1a0d1df3036e761a6d2dd985350ccad2d89164db13fb6e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Enbridge vs. Occidental Petroleum: Does a Midstream or Upstream Energy Focus Make for a Better Stock Buy for 2027?
+<<<SUMMARY>>>
+Enbridge's revenue surged 22% while Occidental's fell, yet one trades at a fraction of the other's valuation multiple, a gap that may not last.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694039
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T20:32:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=17c833987e5356f1f216da626d87085b4111447b72f03fcb4f2d63368f789959
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental's Debt Reduction, Carbon Strategy Support Outlook, UBS Says
+<<<SUMMARY>>>
+Occidental Petroleum (OXY) should benefit from debt reduction and new carbon dioxide supply deals, w
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691818
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:57:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ceeedea7ea7dcba0cc865a6c328ec2159ee8ac43dc6953f3a1b6b6be4a16c56a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum earnings: what to look for from OXY
+<<<SUMMARY>>>
+Oil and gas producer Occidental Petroleum (NYSE:OXY) will be announcing earnings results this Monday after market hours. Here’s what to look for.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694415
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:31:05Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=6fd39e6b72ae3ea980cd3e7decf42f18a3a21dcd2b8156c35dd14e8a9f06fd96
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Corporation (OXY) Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Occidental Petroleum Corporation (OXY) Q3 2026 Earnings Call November 10, 2026 1:00 PM ESTCompany ParticipantsBabatunde Cole - Vice President of Investor...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734284
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:07:35Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cf9263d0c49c4467a755e24573d6bdb408d1ec9254cbca08896768e1b2a67778
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/10/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Q3 2026 Earnings Call Transcript
+<<<SUMMARY>>>
+Occidental Petroleum (NYSE:OXY) reported third-quarter financial results on Tuesday. The transcript from the company’s third-quarter earnings call has been provided below.Benzinga APIs provide real-time access to
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734285
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:52:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=62fdbc242c9b4331c608cb503a613d85c6a117e98cb0289fb6a985da4fde20b4
+image_url: 
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Expects Domestic Lease Operating Expense To Increase In Q4 Due To Higher CO2 Costs; Expects Lower Q4 Gas Marketing Income As Additional Permian Gas Takeaway Capacity Comes Online; Co Is Dropping 3 Rigs At The End Of 2026, Adding 15 More Wells Online
+<<<SUMMARY>>>
+-Conference Call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734286
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:36:48Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3414e8c9032ef5367e20a96323f4952d138e908ca53cd3fc2d3dd83bb2fbf2d4
+image_url: 
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Continues To Expect Relatively Flat Production In 2027 Compared To 2026; Expects About $700M To $800M Of Sustainable Cash Flow Improvement In 2027 Relative To 2026
+<<<SUMMARY>>>
+-Conference Call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692064
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:31:57Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=6e353a8f1a5cee134846d3a755272c00d901b429b2e6bdcf98b3b383455f0829
+image_url: https://static2.seekingalpha.com/uploads/sa_presentations/64/139064/slides/1.jpg?ts=1794335517
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Corporation 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-11-10. The following slide deck was published by Occidental Petroleum Corporation in conjunction with their 2026 Q3 earnings call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143733468
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=23b292b427f78e8c9686fe946a38edb9f701f0cab280b9adb9d3bb2862e300e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Corporation Q3 2026 Earnings Call Summary
+<<<SUMMARY>>>
+Moby summary of Occidental Petroleum Corporation's Q3 2026 earnings call
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687276
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:05:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=89e6a1f494e6b88797f67589ba44571ce7fdae91c50359cac46db0296e5f53d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Should You Buy Exxon Mobil Stock For Its Cash?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143663115
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T02:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d57d3856ce17096d750eee6f41a2833d1bd976dfb0f35ceb2a177cc780b7d3eb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Cuts Debt to $10 Billion as Q3 Cash Flow Hits $4.1 Billion
+<<<SUMMARY>>>
+Occidental reports strong third-quarter cash flow and significant debt reduction, supported by resilient oil and gas production despite weaker crude prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662963
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T02:40:26Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=b420e25ee155e3c1a735f527d96ad0a931b505d307e6677b5dbd07403d3ff4d6
+image_url: 
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Corporation Reports Third Quarter 2026 Results and Achieves $10.0 billion Principal Debt Milestone
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662645
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T23:30:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f4331ff0cc6f04468df7b330f51d6e44b1e81a6570486050a03426ec084fda81
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental (OXY) Reports Q3 Earnings: What Key Metrics Have to Say
+<<<SUMMARY>>>
+The headline numbers for Occidental (OXY) give insight into how the company performed in the quarter ended September 2026, but it may be worthwhile to compare some of its key metrics to Wall Street estimates and the year-ago actuals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661849
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T23:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d2812e27adcfde2a66b4303816dad8cacbaffcbaf4ea051663063ac89dc1e645
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Dow Jones Soars 1,132 Points As Amazon, Tesla Rally, But Nvidia Dives; CPI Inflation Report Next
+<<<SUMMARY>>>
+Dow Jones futures were in focus after soaring 1,132 points ahead of the CPI inflation report. Amazon and Tesla rallied, but Nvidia dived.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661939
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T22:18:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1018fabfaadb2ce317c6e1f6e16a27d1446f38285160c1fb5581f30236d266eb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental beats Q3 forecasts as production offsets lower crude prices
+<<<SUMMARY>>>
+Investing.com -- Occidental Petroleum Corporation (NYSE:OXY) delivered a decisive third-quarter earnings beat on Monday, lifted by operational outperformance in its core shale basins and substantial debt-reduction progress. The Houston-based producer posted adjusted earnings of $1.91 per share, topping analyst expectations of $1.34 by $0.57, while revenue reached $6.77 billion against a projected $6.61 billion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661963
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T21:51:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=86cc8bfd1a03405cdd265a63233d585a86eb5a66b37e73775fa599e5d6901490
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum (NYSE:OXY) reports sales below analyst estimates in Q3 2026 earnings
+<<<SUMMARY>>>
+Oil and gas producer Occidental Petroleum (NYSE:OXY) missed Wall Street’s revenue expectations in Q3 2026, but revenue rose 20.6% year on year to $6.77 billion. Its non-GAAP profit of $1.91 per share was 29.8% above analysts’ consensus estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661964
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T21:35:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=035fe3bad664cd2d792902962f6eb50d859ff706e20339925ab0f4710958ba0b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum (OXY) Q3 Earnings and Revenues Top Estimates
+<<<SUMMARY>>>
+Occidental (OXY) delivered earnings and revenue surprises of +33.57% and +0.56%, respectively, for the quarter ended September 2026. Do the numbers hold clues to what lies ahead for the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661243
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T21:34:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4aa704c949e1a4492fa0cea20457270370d01913846528fd37d336399e9d553c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental: Q3 Earnings Snapshot
+<<<SUMMARY>>>
+HOUSTON (AP) — HOUSTON (AP) — Occidental Petroleum Corp. (OXY) on Monday reported third-quarter net income of $1.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661965
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T21:31:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30fbbf11e714110359a8be8e663ab7df231a94003b66b380c75a32b02f9390e8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: How to Earn $500 A Month From Occidental Petroleum Stock Ahead of Q3 Earnings
+<<<SUMMARY>>>
+Occidental Petroleum Corp investors may soon be eyeing potential dividend gains once the company releases its third-quarter earnings report before the opening bell on Monday, Nov. 9. Currently, Occidental Petroleum has an annual dividend yield of 1.99%, or a quarterly...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661245
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T21:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=67718ccbd78640f783467326ae8e911822434f182b690561dbd47244cfdae6c7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Signs Long-Term CO₂ Offtake Agreements to Support Enhanced Oil Recovery Operations
+<<<SUMMARY>>>
+HOUSTON, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Occidental (NYSE: OXY) today announced it signed long-term agreements with two companies to secure CO₂ captured from third-party natural gas processing facilities in the Delaware Basin for use in Occidental’s enhanced oil recovery (EOR) operations in the Permian Basin. The two project developers will fund and build the infrastructure to capture, transport and deliver the CO₂ to Occidental. The separate agreements cover two projects in the Delaware Basin
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661244
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T21:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4a5e0368ed44e4d6b1f2ab10b6c151aa33de75442eeae3248e1ecd0139e76a83
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Announces Third Quarter 2026 Results
+<<<SUMMARY>>>
+HOUSTON, Nov. 09, 2026 (GLOBE NEWSWIRE) -- Occidental (NYSE: OXY) today announced its third quarter 2026 financial results. The earnings release and accompanying financial schedules can be accessed via the Investor Relations section of the company’s website at oxy.com. The earnings release is also available on the U.S. Securities and Exchange Commission’s website at sec.gov. The company will hold a conference call to discuss the results on Tuesday, November 10, 2026, at 1 p.m. Eastern/12 p.m. Ce
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144027268
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T16:30:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ecb34bbe53d9f6aec71259faa868c1a8fefc510ee6d4ac0e998f57b83b5f72ef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: 2 Energy Stocks Bridgewater Associates Is Buying Right Now
+<<<SUMMARY>>>
+Bridgewater Associates is betting on companies that could benefit from growing electricity demand and strong oil and gas cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015531
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:13:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4666584633d48b1878cc36c04dd784cdfda6e87d171a09e967e22dfce1fffc82
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Warren Buffett’s Top 10 Stock Picks: Latest 13F
+<<<SUMMARY>>>
+Warren Buffett no longer runs the conglomerate he built over six decades, but his fingerprints are still on nearly everything it owns. He handed the chief executive role to Greg Abel at the end of 2025, and Abel took over at the start of 2026. On September 18, Buffett, 96, stepped down as chairman, a […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144010767
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T09:50:53Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=e5b75eae253e9f082df2b3bcbf5a09fd0028f438ca021b1be22509d80d803bab
+image_url: https://www.chartmill.com/images/uploads/Undervalued_500_264px_webp_74997b3ff2.webp
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum (NYSE:OXY): A Decent Value Stock With a Margin of Safety
+<<<SUMMARY>>>
+Occidental Petroleum (OXY) screens as a Decent Value pick on low valuation and strong free cash flow, but uneven growth and weak returns keep risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943148
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:05:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8e1a2f5a50bccc2234afc93ae57aec5900beb008974f4ce69412f2e8192f3ed7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: E&P stocks outlook: valuations, cash flow, and the OPEC+ wildcard
+<<<SUMMARY>>>
+Investing.com -- The E&P group has had a strong year, but the commodity backdrop is softening. Crude Oil WTI trades at $83.54 (Nov 19, 9:24 AM EST). That is down 15.2% over 1M and up 40.6% over 1Y. Brent Oil is at $93.09, 12.2% below its level a month ago. The 52-week WTI range is $54.98–$117.63. Equities are pricing something close to today’s strip rather than a spike.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936617
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T11:39:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a65650947140da9aac4235313d383ba008cbf4598af4c0852d774fd287792dca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Should You Buy Occidental Stock For Its Cash Flow?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143928470
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T02:00:16Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=eb6eb9bd100d8c31ba4d686a6e35f371f8c7cfc97866a8b13ffc06de3fd92a76
+image_url: 
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Corporation Commences Cash Tender Offers for Up to $500.0 Million in Two Separate Pools
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918728
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:21:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7cd85366d9ce2509042a4085b28e2e7783fb16de66944a81eec99688e29fcfc0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Why You Should Think About Occidental Petroleum Differently Now
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918986
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:40:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=af0af3b8c81cb791842b494c169b7953c23aedb64ecc80d409d86fc5ac7d8a90
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: OXY vs. DTM: Which Stock Is the Better Value Option?
+<<<SUMMARY>>>
+OXY vs. DTM: Which Stock Is the Better Value Option?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921839
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:36:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=a2e0cd95505647eac675ffbdca34ed314294a1e55f55d4175a9457e5e90dd8a9
+image_url: https://www.chartmill.com/images/uploads/CM_Gap_Stocks_Small_free_ad767b11cf.webp
+category: company
+tickers: OXY
+keywords: 
+headline: S&P 500 Gap-Down Movers for Nov. 18 Session
+<<<SUMMARY>>>
+S&P 500 gap-down stocks on Nov. 18 included FCX, NEM, UNH, VLO and HUM, with the article tracking each stock's opening gap and move in today's session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917220
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:34:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9baf9a9fcc30df09d631317fd0c00bb8578ca1c25f9f9b6bc9830581e703301e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: The 5 Best Stocks in Berkshire Hathaway’s Portfolio
+<<<SUMMARY>>>
+Key TakeawaysBerkshire Hathaway’s latest 13F shows that, among its positions of 2% or more, analysts see the most upside in Alphabet, Bank of America, Occidental Petroleum and American Express. Analysts’ average targets sit 43% to 44% above Alphabet’s two share classes, 26% above Bank of America and Occidental, and 16% above American Express.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917322
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:31:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50b39114701afe001f56d42265f6f3595aa0a26ec28fdb7bfaa7c856d816ca38
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Is Exxon Mobil Stock a Good Fit For Your Portfolio Risk?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917745
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T13:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c7d6a1961489e43c729de61c67e1867fdd4fe8407bb7b759d3f6a5ce150b8d7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Is Occidental Petroleum (OXY) Stock Undervalued Right Now?
+<<<SUMMARY>>>
+Here at Zacks, our focus is on the proven Zacks Rank system, which emphasizes earnings estimates and estimate revisions to find great stocks. Nevertheless, we are always paying attention to the latest value, growth, and momentum trends to underscore strong picks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143913025
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:48:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d5cb415558c408e0f74de0c224c45336eda319e22186f9d2871448b36758806f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Is Permian Resources Spending Too Much?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143914042
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c353f864c29ff2a048068175fb41ab699816982359b44b311324e15949a99110
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Announces Cash Tender Offers and Consent Solicitations for Certain of its Senior Notes and Debentures
+<<<SUMMARY>>>
+HOUSTON, Nov. 18, 2026 (GLOBE NEWSWIRE) -- Occidental (NYSE: OXY) today announced that it has commenced offers to purchase for cash (collectively, the “Tender Offers” and each a “Tender Offer”) its outstanding senior notes and debentures listed in the tables below and Consent Solicitations (as defined below) with respect to each series of senior notes and debentures, upon the terms and conditions described in Occidental’s Offer to Purchase and Consent Solicitation Statement, dated November 18, 2
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140740145
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:40:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1330c2e97b76b4393550146450fe1b00805a15b4ea6dbe7b18d48fe7a418be5f
+image_url: 
+category: company
+tickers: OXY
+keywords: 
+headline: PowerBank shares are trading higher after the U.S. Department of Defense and the Department of the Army for the Armed Forces Reserve Center Farmingdale awarded the company's subsidiary, Abundant Solar Power, a $2,950,000 contract to construct a photovoltaic array, electric vehicle chargers and associated infrastructure for the U.S. Federal Government.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143896634
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T03:13:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=82a448226b9f6c1ce8ac452726b4579d7ab0652b5ffdf8a02b9f361e708b6b8f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Here Are the Current Berkshire Hathaway Stock Holdings
+<<<SUMMARY>>>
+Berkshire Hathaway's holdings are a diverse set of blue chips and lesser-known growth bets. Here, we look at the stocks included in the equity portfolio.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143893543
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T01:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=604b7c9d6b242c35b345a41ab4c1a82a30f7349579f33ed3ee1c59affb968031
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: 5 Oil and Gas Stocks That Crushed Third-Quarter Earnings Estimates
+<<<SUMMARY>>>
+Energy earnings jumped 151% in Q3 as ONEOK, Occidental, APA, Phillips 66 and Valero beat Wall Street estimates, with refiners posting the biggest gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880797
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=83628f093c60560652226a83616714d9d0c84516281037c1ca34c533ff238cef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: What Occidental's Debt Cut Means For Its Stock
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880796
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=05f5eede190a0299d33dfdf7b7ad69de30681c9aa2109df9437059910c00eff1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Why Pay More For Exxon Mobil Stock Than Chevron?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143857588
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T02:01:08Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=4155d563500b5d4f4d730582188e7f45a499fe37b89a96b13fdeee3fb681eaa3
+image_url: 
+category: company
+tickers: OXY
+keywords: 
+headline: Seaport Global Downgrades Occidental Petroleum to Neutral from Buy
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850422
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:58:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c2b35c0c83c5c84139a08c1e661cb37bd4a53b5d6cb0977e8f9ae71f9433fc98
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Sector Update: Energy Stocks Retreat Late Afternoon
+<<<SUMMARY>>>
+Energy stocks were lower late Monday afternoon, with the NYSE Energy Sector Index falling 2.1% and t
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850423
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:55:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78fac812341e0daefdca8ac09d6d5a32edde32d72fde482ada83bb1a3bec8eb0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Could Occidental Petroleum Be The Value Stock For Your Portfolio?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143857614
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:01:28Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=95d9a6ac6eef0f7eb7484508feaadcd29cb4d205079b1a1a02c56667cf00aca7
+image_url: 
+category: company
+tickers: OXY
+keywords: 
+headline: Tracking Berkshire Hathaway Portfolio - Q3 2026 Update
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877607
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T17:41:45Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=8052cc8acae2ad7716e8573fcb53e3c2299a3233667b760697d18003f670edf5
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/16/Berkshire-Hathaway-Investment-And-Financ.jpg?width=2048&height=1536
+category: company
+tickers: OXY
+keywords: 
+headline: Berkshire Hathaway Takes Stake In AOL Owner Bending Spoons, Nearly Doubles Lennar Holding
+<<<SUMMARY>>>
+Berkshire Hathaway, now led by Greg Abel, disclosed its Q3 portfolio changes. Here are the changes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849303
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cc39fcdc801875e65c61922facf61f4dcb08a1d4502f8e0c301b361de86f32dd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Corporation (OXY) Is a Trending Stock: Facts to Know Before Betting on It
+<<<SUMMARY>>>
+Recently, Zacks.com users have been paying close attention to Occidental (OXY). This makes it worthwhile to examine what the stock has in store.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143879313
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T12:31:51Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ccc0138ff934b9d055e27689b71ea3e8b2b339b622fe577dfe0bcb6f0f8bd45a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/16/Milan--Italy---November-1--2017-Occident.jpg?width=2048&height=1536
+category: company
+tickers: OXY
+keywords: 
+headline: Occidental Petroleum Analyst Turns Bearish Due To Limited Volume Upside
+<<<SUMMARY>>>
+Seaport downgraded OXY to Neutral, citing limited near-term production upside as EOR drilling diverts resources and shale momentum lags.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143848155
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T09:25:15Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9ffcde632790dbe207ac4d4f83af811f0c2239baf59fdf482529ca72b4d80685
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/16/Lowes.jpg?width=2048&height=1536
+category: company
+tickers: OXY
+keywords: 
+headline: This Lowe's Analyst Turns Bearish; Here Are Top 5 Downgrades For Monday
+<<<SUMMARY>>>
+Analysts downgraded YETI, FMC, Cogent, Lowe’s and Occidental; YETI and Cogent also received price-target cuts.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143848156
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T09:06:40Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=74eaf668a4057f5b192a359f9dc0ab0079d299ed38aab546a3028ceea68d6529
+image_url: 
+category: company
+tickers: OXY
+keywords: 
+headline: Seaport Global Downgrades Occidental Petroleum to Neutral
+<<<SUMMARY>>>
+Seaport Global  analyst Vin Lovaglio   downgrades Occidental Petroleum (NYSE:OXY) from Buy to Neutral.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050549
+symbol: OXY
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2449c8bc1e097587c9701e97cca4f5c6c8dfd235c1a9fe1a50cfd7215e40c414
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: OXY
+keywords: 
+headline: 5 Value Stocks With Enticing EV-to-EBITDA Ratios to Snap Up
+<<<SUMMARY>>>
+ZIM, YPF, CHRD, OXY and CLDT stand out with attractive EV-to-EBITDA ratios and strong earnings outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4f7a6b90ca6a75a2fb5982c2fd233f374966ae2fe695555c537ed06cebf42786
+symbol: OXY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T21:35:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026757/occidental-petroleum-oxy-q3-earnings-and-revenues-top-estimates?cid=CS-ZC-FT-fundamental_analysis|yseop_template_4-3026757
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default229.jpg
+category: 
+tickers: OXY, OXY.WS, TE
+keywords: earnings surprise, Occidental Petroleum, oil and gas, earnings beat, Zacks Rank, industry outlook
+headline: Occidental Petroleum (OXY) Q3 Earnings and Revenues Top Estimates
+<<<SUMMARY>>>
+Occidental Petroleum reported Q3 2026 earnings of $1.91 per share, beating consensus estimates of $1.43 by 33.57%, with revenues of $6.77 billion slightly exceeding expectations. The company has outperformed the market by 37.1% year-to-date. Despite the strong earnings beat, the stock carries a Zacks Rank #2 (Buy) rating, though the broader Oil and Gas - Integrated - United States industry ranks in the bottom 32% of sectors.
+<<<INSIGHTS>>>
+OXY | positive | Company delivered a significant 33.57% earnings surprise, beating consensus EPS estimates ($1.91 vs $1.43) and revenue expectations. Stock has outperformed the S&P 500 by 29.3% year-to-date (37.1% vs 7.8%), and received a Zacks Rank #2 (Buy) rating with favorable estimate revision trends.
+OXY.WS | positive | Company delivered a significant 33.57% earnings surprise, beating consensus EPS estimates ($1.91 vs $1.43) and revenue expectations. Stock has outperformed the S&P 500 by 29.3% year-to-date (37.1% vs 7.8%), and received a Zacks Rank #2 (Buy) rating with favorable estimate revision trends.
+TE | negative | Company is expected to post a quarterly loss of $0.12 per share with consensus EPS estimates revised 9.5% lower over the last 30 days. While revenues are expected to grow 30.6% year-over-year, the negative earnings outlook and downward estimate revisions indicate weakness.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:79c50f70bb8af4cefc46ddf2efc70421a8a5e267a02f5db9965a69122b819f10
+symbol: OXY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T23:30:01Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026855/occidental-oxy-reports-q3-earnings-what-key-metrics-have-to-say?cid=CS-ZC-FT-fundamental_analysis|nfm-3026855
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default322.jpg
+category: 
+tickers: OXY, OXY.WS
+keywords: Occidental Petroleum, Q3 2026 earnings, revenue growth, EPS surprise, oil production, natural gas production, earnings beat
+headline: Occidental (OXY) Reports Q3 Earnings: What Key Metrics Have to Say
+<<<SUMMARY>>>
+Occidental Petroleum reported Q3 2026 revenue of $6.77 billion, up 0.8% year-over-year, with EPS of $1.91 versus $0.64 in the prior year quarter. The company beat consensus revenue estimates by 0.56% and delivered a 33.57% EPS surprise. Key production metrics showed worldwide oil production at 697 million barrels per day and natural gas at 2,373 million cubic feet per day. U.S. oil and gas revenues increased 24% year-over-year, while midstream and marketing revenues surged 91.8%.
+<<<INSIGHTS>>>
+OXY | positive | Strong earnings beat with EPS surprise of 33.57% above consensus, revenue exceeding estimates, significant year-over-year growth in U.S. oil and gas revenues (+24%), and exceptional midstream and marketing revenue growth (+91.8%). The company also maintains a Zacks Rank #2 (Buy) rating.
+OXY.WS | positive | Strong earnings beat with EPS surprise of 33.57% above consensus, revenue exceeding estimates, significant year-over-year growth in U.S. oil and gas revenues (+24%), and exceptional midstream and marketing revenue growth (+91.8%). The company also maintains a Zacks Rank #2 (Buy) rating.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b9a248ff189d65e60819c211986da2c73f978993efaba474a9b273625bc93614
+symbol: OXY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T15:47:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027765/occidental-q3-earnings-call-centers-on-debt-cuts-and-cash-flow?cid=CS-ZC-FT-analyst_blog_plus|earnings_call_takeaways-3027765
+image_url: https://staticx-tuner.zacks.com/images/articles/main/52/300.jpg
+category: 
+tickers: OXY, OXY.WS
+keywords: debt reduction, balance sheet, cash flow, capital spending, enhanced oil recovery, dividend, artificial lift wells, AI monitoring
+headline: Occidental Q3 Earnings Call Centers on Debt Cuts and Cash Flow
+<<<SUMMARY>>>
+Occidental Petroleum (OXY) reported strong Q3 2026 earnings, beating consensus estimates with adjusted EPS of $1.91. The company reduced principal debt by $10.4 billion in 2026 and established a new $6 billion debt milestone. Management projects $700M-$800M in sustainable annual cash flow gains for 2027, with plans to reduce base decline rates from 25% to 20% and sustaining capital to $4.5B by 2030. The company maintains disciplined capital spending of approximately $5.9 billion for 2027 while keeping shareholder returns measured.
+<<<INSIGHTS>>>
+OXY | positive | OXY exceeded earnings expectations with strong EPS and revenue beats. The company achieved significant debt reduction ($10.4B in 2026), established a clear path to a $6B debt target, and projects substantial cash flow improvements ($700M-$800M annually in 2027). Operational efficiencies including AI-driven well monitoring (22% reduction in failure frequency) and enhanced recovery initiatives demonstrate improving operational performance. The balanced approach to capital allocation and shareholder returns reflects disciplined management.
+OXY.WS | positive | OXY exceeded earnings expectations with strong EPS and revenue beats. The company achieved significant debt reduction ($10.4B in 2026), established a clear path to a $6B debt target, and projects substantial cash flow improvements ($700M-$800M annually in 2027). Operational efficiencies including AI-driven well monitoring (22% reduction in failure frequency) and enhanced recovery initiatives demonstrate improving operational performance. The balanced approach to capital allocation and shareholder returns reflects disciplined management.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8191da405cd65969a75eeeb36853b4fbedb756f3ce7d88c48e684670c7984d37
+symbol: OXY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T14:03:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027683/stock-market-news-for-nov-11-2026?cid=CS-ZC-FT-market_news-3027683
+image_url: https://staticx-tuner.zacks.com/images/articles/main/de/144350.webp
+category: 
+tickers: TTD, OXY, OXY.WS, AMRC
+keywords: inflation, Federal Reserve, interest rate hikes, stock market decline, Q3 earnings, CPI, market volatility
+headline: Stock Market News for Nov 11, 2026
+<<<SUMMARY>>>
+U.S. stock markets declined on Tuesday as persistent inflation and hawkish Federal Reserve comments raised concerns about further interest rate hikes. The Dow fell 0.3%, Nasdaq dropped 0.7%, and S&P 500 lost 0.4%. October CPI remained elevated at 0.4% month-over-month, while Dallas Fed President Lorie Logan suggested at least two more rate hikes may be warranted. Several companies reported Q3 earnings results, with The Trade Desk, Occidental Petroleum, and Ameresco all beating consensus estimates.
+<<<INSIGHTS>>>
+TTD | positive | Reported Q3 adjusted EPS of $0.33, beating consensus estimate of $0.26 by 27%. Revenue of $735.97M exceeded consensus by 13.10%. Stock rose 3.3% on the results.
+OXY | positive | Reported Q2 adjusted EPS of $1.91, significantly beating consensus estimate of $1.43 by 34%. Revenue of $6.77B outpaced consensus by 0.56%. Stock rose 2% on the results.
+OXY.WS | positive | Reported Q2 adjusted EPS of $1.91, significantly beating consensus estimate of $1.43 by 34%. Revenue of $6.77B outpaced consensus by 0.56%. Stock rose 2% on the results.
+AMRC | positive | Reported Q3 adjusted EPS of $0.88, substantially beating consensus estimate of $0.59 by 49%. Revenue of $580.32M exceeded consensus by 3.21%. Stock surged 23% on the strong results.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:55f3c4b94ace9348202161ce944eee376e58fed0f7a789ee28478dde9ccc7e01
+symbol: OXY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T14:50:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028787/is-talo-worth-buying-as-low-valuation-meets-offshore-execution-risk?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3028787
+image_url: https://staticx-tuner.zacks.com/images/articles/main/41/1886.jpg
+category: 
+tickers: TALO, KOS, OXY, OXY.WS
+keywords: Talos Energy, valuation discount, earnings estimates, capital expenditures, offshore operations, free cash flow, energy sector
+headline: Is TALO Worth Buying as Low Valuation Meets Offshore Execution Risk?
+<<<SUMMARY>>>
+Talos Energy (TALO) presents a balanced investment opportunity with a valuation discount versus peers, rising earnings estimates (2027 up 26%), and strong Q3 execution. However, significant 2026 capital expenditures ($640M combined capex and abandonment costs) and offshore operational risks limit free cash flow available for buybacks, keeping the risk-reward profile from becoming one-sided.
+<<<INSIGHTS>>>
+TALO | positive | TALO trades at a forward P/S ratio of 1.09 below industry average (3.26), has 2027 earnings estimates up 26%, beat Q3 earnings by 20.8%, maintains strong liquidity ($410.2M cash, $1.08B total liquidity), and carries a Zacks Rank #2 (Buy) with A-rated Value and Growth scores. However, sentiment is moderated by high capital requirements and offshore operational risks.
+KOS | neutral | Mentioned as a comparable company managing capital-intensive deepwater operations in the Gulf of America, with Q3 production affected by host-facility downtime, illustrating operational risks common to offshore energy companies.
+OXY | neutral | Referenced as another offshore operator experiencing Q3 production curtailments due to third-party gas pipeline constraints and maintenance, highlighting industry-wide operational dependencies and risks.
+OXY.WS | neutral | Referenced as another offshore operator experiencing Q3 production curtailments due to third-party gas pipeline constraints and maintenance, highlighting industry-wide operational dependencies and risks.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:32a8e60c8d0fa72b3c5a921ed3844215bae12a0f4136aa4a332c6324be400be6
+symbol: OXY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T13:00:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3030128/occidental-petroleum-corporation-oxy-is-a-trending-stock-facts-to-know-before-betting-on-it?cid=CS-ZC-FT-fundamental_analysis|most_searched_stocks_v1-3030128
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default15.jpg
+category: 
+tickers: OXY, OXY.WS
+keywords: oil and gas exploration, earnings estimates, stock valuation, earnings growth, revenue growth, Zacks Rank
+headline: Occidental Petroleum Corporation (OXY) Is a Trending Stock: Facts to Know Before Betting on It
+<<<SUMMARY>>>
+Occidental Petroleum (OXY) has been a trending stock with a Zacks Rank #2 (Buy) rating. The company shows strong earnings growth expectations of +471% for the current quarter and +217.2% for the fiscal year, though next year estimates decline -21.5%. Recent earnings beat consensus estimates with a +33.57% EPS surprise. The stock trades at a discount to peers with a Value Style Score of A, though it has underperformed the S&P 500 by -2.7% over the past month.
+<<<INSIGHTS>>>
+OXY | positive | Strong Zacks Rank #2 (Buy) rating driven by significant earnings estimate revisions (+6-14.3% over past month), exceptional current quarter earnings growth (+471% YoY), consistent EPS beat history (4 consecutive quarters), and attractive valuation with A-grade Value Style Score indicating trading at a discount to peers. However, sentiment is tempered by near-term underperformance versus S&P 500 and expected earnings decline next fiscal year (-21.5%).
+OXY.WS | positive | Strong Zacks Rank #2 (Buy) rating driven by significant earnings estimate revisions (+6-14.3% over past month), exceptional current quarter earnings growth (+471% YoY), consistent EPS beat history (4 consecutive quarters), and attractive valuation with A-grade Value Style Score indicating trading at a discount to peers. However, sentiment is tempered by near-term underperformance versus S&P 500 and expected earnings decline next fiscal year (-21.5%).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2fa50c19c09a9ed59af08de10f3268e5780472b85310311960f24bc8d875f9eb
+symbol: OXY
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T15:40:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031951/oxy-vs-dtm-which-stock-is-the-better-value-option?cid=CS-ZC-FT-fundamental_analysis|yseop_template_3-3031951
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default290.jpg
+category: 
+tickers: OXY, OXY.WS, DTM
+keywords: value investing, P/E ratio, PEG ratio, Zacks Rank, oil and gas stocks, stock valuation, earnings estimates
+headline: OXY vs. DTM: Which Stock Is the Better Value Option?
+<<<SUMMARY>>>
+In a comparison of two Oil and Gas - Integrated stocks, Occidental Petroleum (OXY) emerges as the better value opportunity for investors compared to DT Midstream (DTM). OXY holds a Zacks Rank of #2 (Buy) with a Value grade of A, featuring a forward P/E of 8.02 and PEG ratio of 0.63, while DTM has a Zacks Rank of #3 (Hold) with a Value grade of D, sporting a forward P/E of 25.09 and PEG ratio of 1.63.
+<<<INSIGHTS>>>
+OXY | positive | OXY demonstrates superior value metrics with a Zacks Rank #2 (Buy), Value grade A, lower forward P/E of 8.02, and lower PEG ratio of 0.63, indicating stronger earnings estimate revisions and better valuation relative to growth prospects.
+OXY.WS | positive | OXY demonstrates superior value metrics with a Zacks Rank #2 (Buy), Value grade A, lower forward P/E of 8.02, and lower PEG ratio of 0.63, indicating stronger earnings estimate revisions and better valuation relative to growth prospects.
+DTM | negative | DTM shows weaker fundamentals with a Zacks Rank #3 (Hold), Value grade D, higher forward P/E of 25.09, and higher PEG ratio of 1.63, suggesting less attractive valuation and less impressive analyst outlook compared to OXY.
+<<<END>>>

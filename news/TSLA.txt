@@ -148736,3 +148736,544 @@ GOOGM | neutral | Waymo is identified as the market leader in autonomous vehicle
 GOOGN | neutral | Waymo is identified as the market leader in autonomous vehicles, operating in 15 U.S. cities with 500,000 fully autonomous trips per week. However, it's presented as a potential competitive threat to Uber rather than an investment opportunity in this article's context.
 TSLA | neutral | Tesla is developing robotaxi services in eight U.S. cities with its Cybercab, but faces a slow rollout. Like Waymo, it's presented as a competitive threat to Uber's mobility dominance rather than as a favorable investment thesis in this article.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048503
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:20:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f3eaab24fd5f35fa555e661a42a7c1fe1fed6dda2c5a416c572aa5d78486f2f8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Tesla Bulls Banking on SpaceX “Don’t Get the Dilution Math,” Says Gary Black. Tesla Trades at 3.4x SpaceX’s 2027 Multiple
+<<<SUMMARY>>>
+Key TakeawaysGary Black puts Tesla’s 2027 P/E at 168x and SpaceX’s at 30. 6x, and he expects a binding merger agreement before year end.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048502
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:00:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=67468dc4df3e647874a26031a58860d861213e9cfbafcce13c5bf6c6a74cb187
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Tesla's autonomy ambitions just got a Wall Street vote of confidence
+<<<SUMMARY>>>
+Tesla just dropped a major update that is right up the alley of the bulls.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048414
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:41:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1b90e2d7126f9ddd171e7d3c7c33b481414870ff7e98257e0ea070a428a00da1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Chuck Shehadi named Unspun CEO as OneWeave enters global rollout
+<<<SUMMARY>>>
+Unspun has appointed Chuck Shehadi as chief executive officer (CEO) amid the company’s efforts to move its OneWeave 3D weaving technology from the pilot stage to global deployment.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048505
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:39:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8d65bc746bf02bae97b2f749d87721938f4962f10e862515cf8ce5208980e03f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Could Tesla Stock Really Fall To $140?
+<<<SUMMARY>>>
+Tesla stock closed at $345.82 on Friday, Nov 20, down 7.6% in one day. US stocks fell that day in a sell-off in artificial intelligence stocks. Nvidia dropped 14.0%, and the S&P 500 lost 3.7.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048506
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:36:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0f64b786f1beeaa1d8db1d4cce12ccdf41e60a112a8c6d1e6fd48362020af0b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Musk Says Teslas Will Tap “Grok’s Real-Time X Feed.” Another Tie Between Tesla and SpaceX
+<<<SUMMARY>>>
+Key TakeawaysElon Musk says Tesla’s cars will combine shared traffic data with Grok’s real-time X feed, a product SpaceX owns. Uber and Lyft would have a hard time matching it, since their robotaxis come from partners like Avride and Waymo.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144047856
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ce667d118c2c71e082a7336b606e28f5e59571d09ae13abaa455549246a958c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: YieldMax® ETFs Announces Distributions on MSST, NVIT, and TEST
+<<<SUMMARY>>>
+CHICAGO and MILWAUKEE and NEW YORK, Nov. 23, 2026 (GLOBE NEWSWIRE) -- YieldMax® today announced distributions for the YieldMax® Performance & Distribution Target 25™ ETFs listed in the table below. The Fund seeks to generate income with a 25% target annual income level. Group 3 Distribution Announcement: Ex. & Record Date: November 24, 2026Payment Date: November 25, 2026 ETF Ticker1ETF NameDistribution FrequencyDistribution per ShareDistribution Rate230-DaySEC Yield3MSSTYieldMax® MSTR Performanc
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144047797
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:44:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6932c7dd4dc213cc7e2a896feb3bf935c7409a61031158a3c77a7e0b326c11bc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Rivian Stock Fell 39%. What Has Really Changed?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048507
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:30:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7647cf156cb094d7545ee7b7e0c7fb6502597ef11b2e8d39c1415ef6d2f41223
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Tesla Makes an Unsafe Pitch to Senior Drivers Clinging to Car Keys
+<<<SUMMARY>>>
+The company is increasingly promoting its driver-assistance features to aging consumers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048508
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:20:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=26f303179a087a7d04f579c1ed7d0c2921d6943a4f91273a145c294289b79ac3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Musk Admits Robot Demos Fail if You “Move the Table.” Tesla’s Optimus Bet Rides on Fixing That
+<<<SUMMARY>>>
+Key TakeawaysElon Musk said robot demos fail once someone moves the table, and promised an authentic Optimus demo in “a month or two. ”Tesla’s valuation is betting Optimus can close that gap, and the robot has no outside customers yet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144046614
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:04:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=01e719acd2d779df5e85be57765da2be46b60a5e73680f435b063bcb747a79f6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: What ARK Autonomous Technology & Robotics ETF (ARKQ) Bought: Tesla Leads on Thursday
+<<<SUMMARY>>>
+ARKQ added to all 33 of its increased positions on Thursday, with $410.8 million in gross purchases and no sales.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144046087
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:04:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=61537290a78db3de16affcfa53417852045149d35ea7e5d2a2b7635a16118c7b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: What Capital Group Growth ETF (CGGR) Bought: Anthropic Leads on Nov. 19
+<<<SUMMARY>>>
+Capital Group Growth ETF (CGGR) bought $741.5 million of Anthropic as gross trading reached $1.02 billion against $24.49 billion in assets.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144046616
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T10:39:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7a0505bf5c39d698c041cb8308c81892a95f56ef621ad052b95c406d2d8fe319
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: This Week In Electric Vehicles - XPENG's ARIDGE Achieves Milestone in Flying Car Technology
+<<<SUMMARY>>>
+ARIDGE, a leading company in the Asian flying car sector and part of the XPENG Group, has accomplished a significant milestone in the development of electric vertical takeoff and landing (eVTOL) vehicles. The company's full-scale A868 electric flying car successfully completed a full tiltrotor transition flight. This advancement demonstrates the ability of the aircraft to shift between vertical takeoff and high-speed forward cruise, a technically challenging feat that enhances its potential...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144049985
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T10:27:12Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=524f67ec615e75208511f0f72f0b6a12fbc340305d8a36afcb471a68fc357e1a
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1329503585/image_1329503585.jpg?io=getty-c-og
+category: company
+tickers: TSLA
+keywords: 
+headline: WeRide Q3 Review: Math Doesn't Add Up, But I'll Give It The Benefit Of The Doubt
+<<<SUMMARY>>>
+Analyst sees WeRide Inc. as a wait: Q3 revenue rose nearly 90%, but its goal of tens of thousands of European robotaxis before 2030 lacks a convincing plan.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144046617
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T10:20:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c4a9eb05efb0daab179fc507f7667c4ba03fd4d43e01715ececf2c842dc95f2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Musk Agrees Automakers Must License FSD to “Survive Past the Next Decade.” GM Is Hunting for a Self-Driving CEO
+<<<SUMMARY>>>
+Key TakeawaysElon Musk agreed with ARK Invest’s Sam Korus that automakers should license Tesla’s Full Self-Driving software to survive. GM is searching for Mary Barra’s successor, and one internal contender was hired to bring self-driving to its cars.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048373
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T08:45:10Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d797308ffb548f7dcc0b45cb3ee3b051d9dcdd86256936a58f6aa65e443f37bc
+image_url: 
+category: company
+tickers: TSLA
+keywords: 
+headline: Reported November 22, Tesla Says FSD V15 Is Now Beginning Its Rollout
+<<<SUMMARY>>>
+https://www.youtube.com/watch?v=eNBqkc7V1nU
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144041302
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T08:35:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=329afa3711140e5564099373478ca89471cf52f0485f29dc97d8630ecd520107
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Musk Says Cybercab “Would Win Even at Price Parity.” That’s a Problem for Uber and Lyft
+<<<SUMMARY>>>
+Key TakeawaysElon Musk said Tesla’s Cybercab would win riders even at the same price as rivals, replying to a post about Dallas riders turning down discounts. If that holds, Uber and Lyft can’t win those riders back by matching fares, and their robotaxi partners Lucid and Mobileye face a car riders already prefer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048374
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T08:01:32Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=c19cb81db3dbf6975f83dfa0393d8634836d5172087945692747d61898eb3d4c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/Mortgage-And-Treasury-Yields-Could-Surge.jpg?width=2048&height=1536
+category: company
+tickers: TSLA
+keywords: 
+headline: Scott Bessent Softens Stance on Jensen Huang's Potential Nvidia Return, Says Former CEO Now Qualifies as 'Outside' Candidate
+<<<SUMMARY>>>
+Scott Bessent says Jensen Huang could qualify as an outside candidate for Nvidia CEO, softening his stance on a potential return.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048072
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T07:47:40Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1c812330bde0b60905cda9c79fe99ec6578ea1d234e7ad9f09d0b6bd4de2fdaf
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2230080278/image_2230080278.jpg?io=getty-c-og
+category: company
+tickers: TSLA
+keywords: 
+headline: Tesla: Stagnation Priced For Growth
+<<<SUMMARY>>>
+Analyst rates Tesla a short: its infrastructure vision does not justify its valuation, and recent results do not support reversing the call.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144036270
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T07:14:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9f984d6d717f2f513b28a25fd46bd43f94178b147db54695af243326f2256da2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Cathie Wood Says TSLA Holders ‘Will Get’ A Premium If SpaceX Buys Tesla — HSBC Puts It At Over 30%
+<<<SUMMARY>>>
+HSBC sees control as Elon Musk’s main incentive for a merger because SpaceX’s share structure gives him greater voting power than he has at Tesla.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144034941
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T06:37:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=69f0d8b6b0d078f5e2f08e17b2338ae5f90ff57db3ed9ed8f9df89211b8582d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: TSLA
+keywords: 
+headline: Nio Sees Revenue Topping $15B This Year— But Analyst Warns Onvo Could Derail Tesla Roadster-Inspired Luxury Bet
+<<<SUMMARY>>>
+Higher-margin models lifted Nio’s Q2 vehicle margin to 18.5% from 10.3% a year earlier. Now, Morningstar warns discounts could erode those gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048375
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T05:36:38Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5c5dddb7c03530d2908caf5254174a0eec027fb9dbbe3b8ed0dfd039af955d23
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/Starlink.jpg?width=2048&height=1536
+category: company
+tickers: TSLA
+keywords: 
+headline: Elon Musk Hopes All Teslas Will Get SpaceX’s Starlink Connectivity—Except in China, Where It’s ‘Illegal’: Says It Will Be Key for Unsupervised FSD
+<<<SUMMARY>>>
+Elon Musk says Tesla aims to add Starlink connectivity to all vehicles by late 2027, except for this Asian country.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048376
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T04:28:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f52341ba9d893ba0ed06fbd7a10f470d4dbff845592c8e7c554a86190fe94eeb
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/Waymo.jpg?width=2048&height=1536
+category: company
+tickers: TSLA
+keywords: 
+headline: ‘How Can TSLA Compete With Waymo?’ Gary Black Questions Tesla’s Robotaxi Strategy, Predicts Waymo Will Lead in Miles and Trips
+<<<SUMMARY>>>
+Investor Gary Black backs Alphabet’s Waymo over Tesla in robotaxis, citing Waymo’s lead, safety and customer experience.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048377
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T02:56:30Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=30fc1ae5ba6ef46b5a74c11d3ef41a6a1306947b44c70add7294b28cac13fba6
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/Magnified-View-Of-Tech-Mogul-Elon-Musk-I.jpg?width=2048&height=1536
+category: company
+tickers: TSLA
+keywords: 
+headline: Elon Musk Reacts as Stealing a Tesla in GTA VI Goes Horribly Wrong After Car Calls the Cops and Drives Player to Them
+<<<SUMMARY>>>
+Elon Musk joked about GTA VI’s self-protecting Tesla counterpart Coil and compared Tesla’s FSD v15 third-person view and driving to GTA.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048378
+symbol: TSLA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T01:59:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a99d249ed252126f5a47ee60dfd784d6e14b0b7c2d5f598e4850384dfb296be1
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/President-Donald-Trump-and-Crown-Prince-.jpg?width=2048&height=1536
+category: company
+tickers: TSLA
+keywords: 
+headline: Grant Cardone Says Elon Musk Could Buy 50% of Nvidia and Bring Jensen Huang Back, Days After SpaceX CEO’s Hiring Remark
+<<<SUMMARY>>>
+Grant Cardone predicts Elon Musk could buy 50% of chipmaker Nvidia and bring back ousted CEO Jensen Huang.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0f0f85b0b9220250ad57b277ae9cfc922d8c715f9c3cfdf4810c17ea8042ba4b
+symbol: TSLA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T13:15:02Z
+publisher: The Motley Fool
+author: The Rule Breakers Team
+url: https://www.fool.com/investing/2026/11/23/don-t-let-drops-derail-your-portfolio-s-purpose/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F7eb5c9f5450fa7e4fc087ce9f9a231655c582c9f-2400x1640.png&w=1200&op=resize
+category: 
+tickers: ANT, NVDA, AAPL, AMZN, GOOG, GOOGL, GOOGM, GOOGN, META, METAM, MSFT, TSLA
+keywords: market correction, portfolio purpose, S&P 500, Nasdaq, AI stocks, investment strategy, market volatility
+headline: Don't Let Drops Derail Your Portfolio's Purpose
+<<<SUMMARY>>>
+The S&P 500 fell 3.7% on Friday, entering correction territory after seven consecutive losses. The Nasdaq Composite dropped 5.3%, wiping out 2026 gains. The article advises investors to focus on their portfolio's purpose rather than short-term price movements, distinguishing between growth-focused 'Odyssey' portfolios and income-focused 'Phoenix' portfolios nearing retirement. It emphasizes that corrections are normal and historically many market best days follow worst days.
+<<<INSIGHTS>>>
+ANT | negative | Stock fell 8.5% after its IPO debut, reversing from initial gains above $115 to close at $88.91, indicating post-IPO weakness and investor disappointment
+NVDA | negative | Fell 14% after Reuters reported SEC accounting probe focus; however, article notes no investigation confirmed and describes it as 'a great company going through a tough moment'
+AAPL | negative | Declined 1.9% as part of broader market correction affecting major tech stocks
+AMZN | negative | Fell 4.1% during market-wide sell-off affecting large-cap tech stocks
+GOOG | negative | Declined 2.6% as part of broader market correction
+GOOGL | negative | Declined 2.6% as part of broader market correction
+GOOGM | negative | Declined 2.6% as part of broader market correction
+GOOGN | negative | Declined 2.6% as part of broader market correction
+META | negative | Fell 5.9%, among the hardest-hit major tech stocks during the correction
+METAM | negative | Fell 5.9%, among the hardest-hit major tech stocks during the correction
+MSFT | negative | Declined 2.8% during market-wide sell-off
+TSLA | negative | Fell 7.6% during the market correction
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d26ea435278ae6901581aee64e084849cce5c28847b6c7c2c9190d3395710ec2
+symbol: TSLA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T15:00:00Z
+publisher: GlobeNewswire Inc.
+author: Not Specified
+url: https://www.globenewswire.com/news-release/2026/11/23/3408557/0/en/wattev-s-port-of-oakland-charging-depot-and-new-electric-trucks-bring-cost-parity-with-diesel-to-fleets.html
+image_url: https://ml.globenewswire.com/Resource/Download/77bf97f4-68f9-4d68-88a2-00e7ff4d8e2c
+category: 
+tickers: TSLA, PCG, PCGpA, PCGpB, PCGpC, PCGpD, PCGpE, PCGpG, PCGpH, PCGpI, PCGpX
+keywords: electric trucks, charging infrastructure, zero-emission freight, Port of Oakland, cost parity, Tesla Semi, heavy-duty electrification
+headline: WattEV’s Port of Oakland charging depot and new electric trucks bring cost parity with diesel to fleets
+<<<SUMMARY>>>
+WattEV opened its eighth heavy-duty electric truck charging depot at the Port of Oakland, introducing over 300 Tesla Semi electric trucks to establish a zero-emission freight corridor across Northern California. The new charging infrastructure offers cost parity with diesel trucks while reducing charging times to 30 minutes, supported by PG&E's Flex Connect program.
+<<<INSIGHTS>>>
+TSLA | positive | Tesla Semi trucks are central to the project's success, with over 300 units being deployed for commercial freight operations, demonstrating real-world adoption and validation of the electric semi-truck platform.
+PCG | positive | PG&E is actively supporting the project through its Flex Connect program, enabling faster grid connection and positioning itself as a key enabler of electric vehicle infrastructure in the Bay Area.
+PCGpA | positive | PG&E is actively supporting the project through its Flex Connect program, enabling faster grid connection and positioning itself as a key enabler of electric vehicle infrastructure in the Bay Area.
+PCGpB | positive | PG&E is actively supporting the project through its Flex Connect program, enabling faster grid connection and positioning itself as a key enabler of electric vehicle infrastructure in the Bay Area.
+PCGpC | positive | PG&E is actively supporting the project through its Flex Connect program, enabling faster grid connection and positioning itself as a key enabler of electric vehicle infrastructure in the Bay Area.
+PCGpD | positive | PG&E is actively supporting the project through its Flex Connect program, enabling faster grid connection and positioning itself as a key enabler of electric vehicle infrastructure in the Bay Area.
+PCGpE | positive | PG&E is actively supporting the project through its Flex Connect program, enabling faster grid connection and positioning itself as a key enabler of electric vehicle infrastructure in the Bay Area.
+PCGpG | positive | PG&E is actively supporting the project through its Flex Connect program, enabling faster grid connection and positioning itself as a key enabler of electric vehicle infrastructure in the Bay Area.
+PCGpH | positive | PG&E is actively supporting the project through its Flex Connect program, enabling faster grid connection and positioning itself as a key enabler of electric vehicle infrastructure in the Bay Area.
+PCGpI | positive | PG&E is actively supporting the project through its Flex Connect program, enabling faster grid connection and positioning itself as a key enabler of electric vehicle infrastructure in the Bay Area.
+PCGpX | positive | PG&E is actively supporting the project through its Flex Connect program, enabling faster grid connection and positioning itself as a key enabler of electric vehicle infrastructure in the Bay Area.
+<<<END>>>

@@ -1,0 +1,1280 @@
+<<<ARTICLE>>>
+id: finnhub:143805382
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T21:12:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e368bdea0fe8fb8c4865a6632a59ea84068d810653ad666d7fd810d0f7f98915
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Buy Alert: 5 Stocks Analysts Upgraded on Wednesday
+<<<SUMMARY>>>
+October consumer prices rose 0.4%, the third straight monthly gain of at least 0.4%, according to data reported by Reuters. Economists polled by the outlet had expected 0.3%. Core inflation, which excludes food and energy, rose 0.3% for the third month in a row against a forecast of 0.2%. Shelter accounted for more than 30% […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143812391
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T16:09:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=db749f24cf49d7425fb6e35719953e6efda50b6958bd3bd76c08fc439b3b6640
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Is Earnings Beat Altering The Investment Case For Delek US Holdings (DK)?
+<<<SUMMARY>>>
+Delek US Holdings reported third quarter 2026 sales of US$4,392.1 million and net income of US$1,133.8 million, with materially higher earnings per share versus the prior year, and also disclosed stronger nine month results that moved from a loss to a profit. The refiner paired this earnings update with an 18% dividend increase, a new share repurchase plan of up to US$100 million and upcoming technology leadership remarks at the Tennessee C Level Technology Summit, which together highlight a...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143806542
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:28:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=9684104a2f068a5247a0af0c79fec1fc12a50d2ba337e281f95d0ec85d1191ad
+image_url: 
+category: company
+tickers: DK
+keywords: 
+headline: Mizuho Maintains Neutral on Delek US Holdings, Lowers Price Target to $80
+<<<SUMMARY>>>
+Mizuho  analyst Nitin Kumar   maintains Delek US Holdings (NYSE:DK) with a Neutral and lowers the price target from $83 to $80.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802461
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T09:59:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3e19b01d439bff726dfbb545f3e037b28422fdddd06e8cc9d78d19100ce4b5ab
+image_url: 
+category: company
+tickers: DK
+keywords: 
+headline: Fed's Goolsbee Says Even If The Price Of Oil Drops Rapidly, Refining Capacity Remains 'Problematic' And Will Keep Diesel And Jet Fuel Prices Elevated
+<<<SUMMARY>>>
+– CNBC interview
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767101
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5592b9981cc219c8d051ddc4a49d551c866be858f69ab04af0f574962f6e1e8c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Patterson-UTI Expects Higher Rig Demand as 2027 Outlook Improves
+<<<SUMMARY>>>
+PTEN expects higher U.S. rig activity, rising dayrates and stronger demand for advanced drilling equipment to fuel growth into 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767102
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T12:22:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0847c5e3c1bbf9e0a0359a446dee5b4b83bcd60b6c4b07f2c67857a8b91134e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Halliburton Expands Geothermal Footprint With Sage Geosystems Deal
+<<<SUMMARY>>>
+HAL expands its geothermal footprint through Sage Geosystems' Project Vector, bringing its well construction and stimulation expertise to advanced energy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737439
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:34:11Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=051efbbfb885b9c5b0ce74bd86e371b5fcfcc54be09b5c421873d29fde7662da
+image_url: 
+category: company
+tickers: DK
+keywords: 
+headline: Freedom Broker Upgrades Delek US Holdings to Buy from Hold
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738105
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e954384fa04455b4c472dd22d96a9768de9ba5d95a46b2d839468e18bcf04e9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: APA Raises 2026 Free Cash Flow Forecast to $2.9B After Q3 Results
+<<<SUMMARY>>>
+APA raises its 2026 free cash flow outlook to $2.9 billion as stronger U.S. oil production, higher prices and cost controls boost shareholder returns and debt reduction.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738106
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:34:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a872f1873035dd643632a816a014296fb06deff0668645a7f4f9374a3865111e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Diamondback and KKR to Acquire Five Point's 70% Stake in Deep Blue
+<<<SUMMARY>>>
+FANG's proposed deal with KKR would secure water infrastructure capacity through joint ownership of Deep Blue, serving Midland Basin operators.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143748398
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T15:14:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3d874117fc93636568fb7350dbbd5025c05812ec1e946de684c29f244bdede4e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Delek US rises as Freedom Broker upgrades to Buy on refining strength
+<<<SUMMARY>>>
+Investing.com -- Shares of Delek US Holdings Inc (NYSE:DK) gained 4% in early trading Wednesday after Freedom Broker upgraded the independent refiner to Buy from Hold, citing an exceptionally strong operational backdrop and an attractive entry point following a recent pullback. Analyst Sergey Pigarev lifted his price target to $88 from $86, arguing that a roughly 20% decline from September highs leaves substantial room for upside against an improving balance sheet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734450
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:57:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7cdf40837326d672aab7d0eada0eb35580bdf7937b88127cfefe5e202c35ae1b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Buy, Sell, or Hold? Wednesday’s Top Upgrades and Downgrades: Akamai Technologies, Apple, BILL Holdings, Corning, Form Factor, Guidewire Software, NVIDIA, Riot Platforms, Toast, and More
+<<<SUMMARY>>>
+Hot inflation data rattled Tuesday's close, and now one chip giant faces a Baird downgrade tied to concerns about its CEO. Which analyst calls, from Apple's upgrade to a steep Akamai cut, deserve your attention before the bell?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143767219
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:09:29Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4598c500df39ff60a493fc1ca47e352365377f4e811ed5156716c77a1a3c0d90
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/Cupertino--California--September-25--202.jpg?width=2048&height=1536
+category: company
+tickers: DK
+keywords: 
+headline: This Apple Analyst Turns Bullish; Here Are Top 5 Upgrades For Wednesday
+<<<SUMMARY>>>
+Analysts upgraded RSG, AAPL, MRCY, DK and DRTS, revising price targets, including AAPL to $425 and DRTS to $22.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143735608
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T09:08:37Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=92150cff05265377e2d4787e1185b7e0468b4f7360f9cafceecf129d02785705
+image_url: 
+category: company
+tickers: DK
+keywords: 
+headline: Freedom Broker Upgrades Delek US Holdings to Buy, Raises Price Target to $88
+<<<SUMMARY>>>
+Freedom Broker  analyst Sergey Pigarev   upgrades Delek US Holdings (NYSE:DK) from Hold to Buy and raises the price target from $86 to $88.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143714652
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T05:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=216acfe81172fad4f955410df398cf4e446c4b32aa614155de3601a73828090c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Zacks Investment Ideas feature highlights: CVR Energy, Delek US, Northern Oil and Gas and Marathon Petroleum
+<<<SUMMARY>>>
+CVI, DK and NOG crushed Q3 earnings expectations, with strong cash flows, improving profitability and shareholder returns making their stock pullbacks worth watching.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693955
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=264f6769537ad1306504d6b1ce99ef19fb01e51f82a569026105bed0cf971cc2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: 3 Oil Stocks to Buy on the Dip After Crushing Q3 Expectations: CVI, DK, NOG
+<<<SUMMARY>>>
+Here are three highly ranked oil stocks worth buying on the dip after crushing Q3 earnings expectations amid continued volatility in crude prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694634
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:25:53Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=0cb773dc722678d18f938d3ec362fd9599d56ee1bfbae35f7394ad479d8d5403
+image_url: https://static3.seekingalpha.com/uploads/sa_presentations/183/139183/slides/1.jpg?ts=1794353153
+category: company
+tickers: DK
+keywords: 
+headline: Delek US Holdings, Inc. 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-11-10. The following slide deck was published by Delek US Holdings, Inc.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692707
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=37f2286dd9b0131f4351b3daa0e5783802e786fbba59acd0e53e59e79375767d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Chevron Expands Namibia Ties With QatarEnergy Offshore Stake Deal
+<<<SUMMARY>>>
+CVX is selling a 25% stake in Namibia's PEL82 offshore license to QatarEnergy, sharing exploration costs while retaining control and growth potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686545
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=073345baf05684600795589991a526c0a8a271441fb80142e793419eaf605fbb
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2268232663/image_2268232663.jpg?io=getty-c-og
+category: company
+tickers: DK
+keywords: 
+headline: Delek US Holdings Is Intriguing, But Not Compelling
+<<<SUMMARY>>>
+Delek US Holdings, Inc. looks cheap on EV/EBITDA, with SOTP upside and refinery margin catalystsâbut risks remain. Click for this earnings update of DK stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144020009
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T00:12:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a010dac37b0a9fb08ce26e7579a681d60d934d4d2cfb940f90ab923209742da3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Is Delek US Holdings (DK) Undervalued After Its Tech Summit Appearance?
+<<<SUMMARY>>>
+Delek US Holdings (DK) is in focus after its Executive VP and Chief Information & Data Officer, Ido Biger, joined the 1st Annual Tennessee C-Level Technology Leadership Summit in Nashville on November 13, 2026. Recent trading has been choppy for Delek US Holdings, with the share price down 12.70% over the past week and 23.55% over 30 days. However, the year-to-date share price return of 100.81% and 5-year total shareholder return of 361.52% point to momentum that has built over a longer...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143989773
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T15:02:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4546352327397349dce4e37fce346c7a3dd69ac6e01d14e54680342013df7f65
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: TechnipFMC Deepens ExxonMobil Ties With Guyana Longtail Awards
+<<<SUMMARY>>>
+FTI deepens its XOM partnership with two Guyana Longtail awards, expanding subsea work as the $12.5B offshore project targets 2030 production.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988921
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=96933d3fab18f60a5f42696371ddc30979cfcdfd6a95acb9ad9d4f70d607effb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Northern Oil and Gas Raises Output Outlook After Record Q3 EBITDA
+<<<SUMMARY>>>
+NOG raises its 2026 production outlook after record third-quarter output and adjusted EBITDA, backed by strong drilling results and an unchanged capital budget.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943389
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:56:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d9a85897ac0e3046f50458057fd196527b192370b118655f6738c3578b436beb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Pembina Pipeline Eyes Growth as Canadian Energy Demand Expands
+<<<SUMMARY>>>
+PBA's nearly C$3 billion in sanctioned investments, Cedar LNG progress and rising energy demand set the stage for long-term earnings growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943390
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bfca55d0fe79221f910023a827fcb3dfcc0ab102af5ed73fc5068915aea73f33
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Expand Energy Expects U.S. Natural Gas Demand to Jump Over 10% by 2028
+<<<SUMMARY>>>
+EXE sees U.S. natural gas demand rising over 10% by 2028, fueled by LNG exports, power generation and industrial growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938590
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:45:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1a409fd9dc5067ae499fda8ccad857700df1169ba8811da503ee48946c1e238b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: What Moved Marathon Petroleum Stock?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143919164
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8cbd5cdd87ecf84aec7371428cc12af58738ec7c33f084162aa3829c881a401d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: TC Energy Plans NGTL Expansion Amid Rising Alberta Gas Demand
+<<<SUMMARY>>>
+TRP eyes NGTL growth as Alberta gas transport demand is projected to jump 25% by 2031. A proposed 370-km pipeline could add 1 Bcf/d in capacity.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143919165
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a887cef318cb53a6a1d4672c88370cb3f90c53dd36be3e428cf9a9ab08248181
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Shell's Rosmari-Marjoram Startup Boosts Malaysia's Gas Supply
+<<<SUMMARY>>>
+SHEL's Rosmari-Marjoram project starts gas production offshore Malaysia, with a capacity of up to 800 million cubic feet daily for the PETRONAS LNG Complex.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143924650
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7c20b1d3751919c0091e5d9a39cab18080fe07545f550385d0463a2551a1b028
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Bull of the Day: Delek US Holdings (DK)
+<<<SUMMARY>>>
+Crude oil prices and crack spreads have retreated as geopolitical tensions have cooled. But if they rise again Delek US Holdings shares would likely attract more buyers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917023
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d6a3858e8a2e9e6343bdb18d80655a1dd98b1bd4b29cff5b4d685fa726d97f51
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: California Resources Builds Integrated Energy Growth Platform
+<<<SUMMARY>>>
+CRC is expanding into pipelines, power generation and carbon storage while targeting stronger cash flow, cost savings and growth in 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917024
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:21:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b406441c0f5d3eee1a610d60c9ad8c4a6a7b011d57e96fcb63585082998c689d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Petrobras Awards $410M Subsea Contract to Expand Brazil Operations
+<<<SUMMARY>>>
+PBR's $410 million subsea contract strengthens its Brazil deepwater operations, while potential exploration in India's Andaman Basin opens new growth avenues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140740145
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:40:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1330c2e97b76b4393550146450fe1b00805a15b4ea6dbe7b18d48fe7a418be5f
+image_url: 
+category: company
+tickers: DK
+keywords: 
+headline: PowerBank shares are trading higher after the U.S. Department of Defense and the Department of the Army for the Armed Forces Reserve Center Farmingdale awarded the company's subsidiary, Abundant Solar Power, a $2,950,000 contract to construct a photovoltaic array, electric vehicle chargers and associated infrastructure for the U.S. Federal Government.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143911003
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T09:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0fa2c8a7204763a5d92df671d225c87d1906cfcad3fc2722d1ed65efd0c296c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Zacks.com featured highlights include NVIDIA, Avnet, Delek US Holdings, CVR Energy, Arrow Electronics and DMC Global
+<<<SUMMARY>>>
+NVIDIA, Avnet, Delek US Holdings, CVR Energy, Arrow Electronics and DMC Global have been highlighted in this Screen of The Week article.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143905971
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T07:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ed250974985aa8115b20a28bc4b2745a11c11783853021a926fd4a1abee8644b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Delek US Holdings and Winnebago have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+Delek US Holdings and Winnebago have been highlighted as Zacks Bull and Bear of the Day
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143903865
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T07:23:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b1c674c2630409fe257ae314ea46f4a922c32b8c29a0d39f2469a9c20a508cee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Oil prices slipped, yet this refiner surged 81% since selection
+<<<SUMMARY>>>
+Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883342
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9deefc0949c48077add49f40fac51dfc8efd01c1550c0223ada1a32dcca0ff68
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Canadian Natural to Expand Gas Footprint With Advantage Buyout
+<<<SUMMARY>>>
+CNQ's C$2.53B Advantage Energy deal is expected to add 79,000 BOE/d, make it Canada's largest gas producer and maintain its buyback strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883230
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:18:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=929a41a539066ef8631165e650fb58c01362bdf3a141a378f2ed68c308d01caf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Halliburton Targets Egypt Growth With Proposed 50-Well Program
+<<<SUMMARY>>>
+HAL's proposed 50-well drilling program in Egypt could tap hard-to-recover resources with advanced technologies, but the deal remains at the study stage.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881742
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=38fbebe31834b6c5866441fe5774398dd38603e9d6d227bfe4d3cb4cc5f88c29
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: 5 Stocks Adored by Brokers to Buy Amid the Current Turbulence
+<<<SUMMARY>>>
+Avnet, Delek US Holdings, CVR Energy, Arrow Electronics and DMC Global emerge as broker-favored stocks amid market volatility. Here's why they stand out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143870321
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T08:58:38Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=1d6baca1727f0d83787e42ca6fa894794b26b2e6e537d045742d4e157e8d232f
+image_url: 
+category: company
+tickers: DK
+keywords: 
+headline: Delek US Holdings, Inc. Repays and Terminates Term Loan Credit Agreement on November 16, 2026
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849914
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T16:18:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4cc27c56a14cf720a986c954901890548359b6d441aff4de95d3949a330bacf8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Petrobras Moves to Strengthen Ethanol Logistics With Logum Deal
+<<<SUMMARY>>>
+PBR's R$620 million Logum deal would give it full ownership of an ethanol pipeline network, strengthening logistics as Brazil's biofuel industry expands.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849804
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T16:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba693fb9ecf7776efcf212f784028de712a83ada9c27a17d262b79c6f8441e2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Diamondback Eyes $5B Double Eagle Deal to Deepen Permian Dominance
+<<<SUMMARY>>>
+FANG nears a roughly $5 billion deal to buy Double Eagle V, potentially expanding its Midland Basin drilling inventory and Permian footprint.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849441
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T12:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c2adb04074b5fa97f41d71407dc26c3f3d5c882932d3ab8774d80a74973dc91e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: DK vs. DINO: Which Refining Stock Has the Edge After Q3 Earnings?
+<<<SUMMARY>>>
+Delek and HF Sinclair post strong Q3 results and triple-digit stock gains, but differences in valuation, cash flow and diversification could favor one refiner.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143848046
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T12:53:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f55b02a3d745bcec0b0297678cc1d321af40fb10cc9772b5e2393373d7776eea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Can ProPetro's PROPWR Growth and Frac Recovery Drive 2027 Gains?
+<<<SUMMARY>>>
+PUMP's expanding PROPWR business and improving fracturing market conditions could fuel stronger earnings in 2027, but high spending poses cash flow risks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143847944
+symbol: DK
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T12:48:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=56b2e9ec5bb44f0f80a58b06fe64261d63cc0fd682fc5afd85120d0fc5d389b8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: DK
+keywords: 
+headline: Shell Starts Mina West Gas Production to Boost Egypt's Supply
+<<<SUMMARY>>>
+SHEL starts gas production at Egypt's Mina West field, targeting up to 160 million cubic feet daily as the country struggles with falling domestic output.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:93c66d05bbf2d3b40df95c480d81021d1c992b9233b7176d410edfb763f59138
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T18:16:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027409/chevron-expands-namibia-ties-with-qatarenergy-offshore-stake-deal?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3027409
+image_url: https://staticx-tuner.zacks.com/images/articles/main/73/488.jpg
+category: 
+tickers: CVX, MPC, DK, CNQ
+keywords: offshore exploration, Namibia, energy partnership, stake sale, exploration license, deepwater operations, cost sharing
+headline: Chevron Expands Namibia Ties With QatarEnergy Offshore Stake Deal
+<<<SUMMARY>>>
+Chevron has agreed to sell a 25% stake in Namibia's offshore exploration license PEL82 to QatarEnergy while retaining 55% ownership and operational control. The deal allows Chevron to share exploration costs and risks with QatarEnergy in the African energy market. However, any financial benefit remains uncertain pending successful exploration results and commercial viability assessments.
+<<<INSIGHTS>>>
+CVX | neutral | The deal allows Chevron to reduce financial exposure while maintaining operational control, but provides no immediate revenue impact. The long-term value depends entirely on uncertain future exploration results and commercial viability of potential discoveries in deepwater operations.
+MPC | neutral | Mentioned as a comparable investment option with Zacks Rank #1, but not directly related to the article's main news content.
+DK | neutral | Mentioned as a comparable investment option with Zacks Rank #1, but not directly related to the article's main news content.
+CNQ | neutral | Mentioned as a comparable investment option with Zacks Rank #1, but not directly related to the article's main news content.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:92579872e2ae416a24f6db4c045828fed1707137dbaa151c08cf4a6cdf34bf3a
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T18:55:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/commentary/3027404/3-oil-stocks-to-buy-on-the-dip-after-crushing-q3-expectations-cvi-dk-nog?cid=CS-ZC-FT-investment_ideas-3027404
+image_url: https://staticx-tuner.zacks.com/images/articles/main/69/190505.webp
+category: 
+tickers: CVI, DK, NOG, MPC
+keywords: oil stocks, Q3 earnings, refining margins, crude prices, cash flow, dividend yield, geopolitical tensions
+headline: 3 Oil Stocks to Buy on the Dip After Crushing Q3 Expectations: CVI, DK, NOG
+<<<SUMMARY>>>
+Three oil and refining stocks—CVR Energy, Delek US Holdings, and Northern Oil and Gas—are recommended as buying opportunities following strong Q3 earnings beats despite recent price pullbacks. All three companies significantly exceeded earnings and revenue expectations, with improving cash flow profiles and shareholder-friendly initiatives. While declining crude prices pose a potential headwind, geopolitical uncertainty and favorable refining economics could support continued profitability.
+<<<INSIGHTS>>>
+CVI | positive | Delivered exceptional Q3 results with adjusted EPS of $4.00 vs. consensus of $3.09 (30% beat), revenue jumped 69% YoY, petroleum segment EBITDA soared to $565M, and announced acquisition of Marathon Petroleum refineries to expand earnings potential.
+DK | positive | Posted Q3 adjusted EPS of $10.53 vs. expectations of $7.59 (39% beat), revenue climbed 52% to $4.39B, raised annualized cash flow improvement target to $250M, and announced $100M in Q4 share repurchases with significant debt reduction plans.
+NOG | positive | Delivered Q3 adjusted EPS of $1.32 vs. estimates of $0.92 (43% beat), revenue increased 45% to $697.69M, generated record $148.6M in free cash flow (up 25% YoY), raised full-year production guidance, and declared $0.45 quarterly dividend with ~8% annualized yield.
+MPC | neutral | Mentioned only in context of CVR Energy's acquisition of two of its refineries; no direct performance data or sentiment indicators provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:34e249c1517306e41ffca3d7953b7588f8e1ce8008c97e3f8e19d793046a4f51
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T08:30:00Z
+publisher: Zacks Investment Research
+author: Zacks
+url: https://www.zacks.com/stock/news/3027644/zacks-investment-ideas-feature-highlights-cvr-energy-delek-us-northern-oil-and-gas-and-marathon-petroleum?cid=CS-ZC-FT-press_releases-3027644
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/930.jpg
+category: 
+tickers: CVI, DK, NOG, MPC
+keywords: oil stocks, refining margins, Q3 earnings, crude prices, cash flow, dividend yield, geopolitical tensions
+headline: Zacks Investment Ideas feature highlights: CVR Energy, Delek US, Northern Oil and Gas and Marathon Petroleum
+<<<SUMMARY>>>
+Three oil and refining stocks—CVR Energy, Delek US Holdings, and Northern Oil and Gas—are highlighted as buy-the-dip opportunities following strong Q3 earnings that significantly exceeded expectations. Despite crude price pullbacks amid easing geopolitical tensions, these companies demonstrated robust profitability and cash flow generation, with all three earning Zacks Rank #1 (Strong Buy) ratings.
+<<<INSIGHTS>>>
+CVI | positive | Delivered exceptional Q3 results with adjusted EPS of $4.00 crushing consensus estimate of $3.09 by 30%, revenue jumped 69% YoY, and announced acquisition of Marathon Petroleum refineries to expand earnings potential. Rated Zacks Rank #1 (Strong Buy).
+DK | positive | Posted Q3 adjusted EPS of $10.53, crushing expectations of $7.59 by 39%, with revenue up 52% to $4.39 billion. Raised cash flow improvement guidance and announced $100 million in share repurchases. Rated Zacks Rank #1 (Strong Buy).
+NOG | positive | Delivered Q3 adjusted EPS of $1.32, surpassing estimates of $0.92 by 43%, with revenue up 45% and record free cash flow of $148.6 million. Raised full-year production guidance and declared $0.45 quarterly dividend with ~8% yield. Rated Zacks Rank #1 (Strong Buy).
+MPC | neutral | Mentioned only in context of CVR Energy's planned acquisition of two of its refineries; no independent analysis or performance metrics provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0e1d7ade22650a0f6cff95e0416fb74294cc142dc1fff7a56da48e6822ca2493
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T15:38:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027731/apa-raises-2026-free-cash-flow-forecast-to-2-9b-after-q3-results?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3027731
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: APA, MPC, DK, CNQ
+keywords: free cash flow, oil production, shareholder returns, debt reduction, Permian Basin, GranMorgu project, cost savings, commodity prices
+headline: APA Raises 2026 Free Cash Flow Forecast to $2.9B After Q3 Results
+<<<SUMMARY>>>
+APA Corporation raised its 2026 free cash flow forecast by $600 million to $2.9 billion, driven by stronger U.S. oil production (128,000 barrels per day), higher commodity prices, and cost controls. The company returned $537 million to shareholders in Q3 and reduced debt by $451 million. APA's stock has outperformed the broader oil-energy sector by 56.6% year-to-date. The company plans a $2.5 billion upstream capital budget for 2027, with significant investment in the GranMorgu project offshore Suriname.
+<<<INSIGHTS>>>
+APA | positive | APA significantly raised its 2026 free cash flow guidance by $600 million, beat Q3 earnings expectations, exceeded U.S. oil production guidance, increased shareholder returns, reduced debt substantially, and achieved strong year-to-date stock performance. The company also established a lower long-term net debt target and plans growth investments in the GranMorgu project.
+MPC | neutral | Mentioned as a comparable investment option with a Zacks Rank #1 (Strong Buy) rating, but no specific company performance data or news is provided in the article.
+DK | neutral | Mentioned as a comparable investment option with a Zacks Rank #1 (Strong Buy) rating, but no specific company performance data or news is provided in the article.
+CNQ | neutral | Mentioned as a comparable investment option with a Zacks Rank #1 (Strong Buy) rating, but no specific company performance data or news is provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a0a63a8813ca7dcaed3dbc8a8606143dd083569fb846b122d38f77f5be88d743
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T12:24:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028404/patterson-uti-expects-higher-rig-demand-as-2027-outlook-improves?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3028404
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ea/574.jpg
+category: 
+tickers: PTEN, MPC, DK, CNQ
+keywords: drilling rigs, oilfield services, rig dayrates, completion services, U.S. drilling activity, Permian Basin, natural gas equipment, free cash flow
+headline: Patterson-UTI Expects Higher Rig Demand as 2027 Outlook Improves
+<<<SUMMARY>>>
+Patterson-UTI Energy (PTEN) expects to bring more drilling rigs into service in early 2027 as U.S. oilfield activity strengthens. The company reported 104 operating rigs in Q3 2026, up 18% from April lows, with rig dayrates climbing to the mid-$30,000 range. Strong demand for advanced equipment, improved completion services prospects, and solid financial performance position PTEN for continued growth in 2027.
+<<<INSIGHTS>>>
+PTEN | positive | Company expects significant growth in 2027 with increasing rig deployments, higher dayrates in the mid-$30,000 range, strong Q3 financial results (9% revenue growth, $264M adjusted EBITDA), improved cash position ($339M cash, no debt), and disciplined capital allocation strategy. Stock has surged 70.5% year-to-date.
+MPC | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector, but no specific company performance or outlook details provided in the article.
+DK | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector, but no specific company performance or outlook details provided in the article.
+CNQ | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector, but no specific company performance or outlook details provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d7b580decec63901a140ef891b63e01fe2a58a1b3af19e86b5b000d18ef6169b
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T12:53:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030084/can-propetro-s-propwr-growth-and-frac-recovery-drive-2027-gains?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3030084
+image_url: https://staticx-tuner.zacks.com/images/articles/main/9d/53642.jpg
+category: 
+tickers: PUMP, TRGP, DK, CNQ
+keywords: ProPetro Holding, PROPWR, power generation, hydraulic fracturing, data centers, capital expenditure, cash flow, Permian Basin, 2027 outlook
+headline: Can ProPetro's PROPWR Growth and Frac Recovery Drive 2027 Gains?
+<<<SUMMARY>>>
+ProPetro Holding Corp. (PUMP) is expected to benefit from growing power generation operations through its PROPWR business and improving hydraulic fracturing market conditions in 2027. The company reported Q3 2026 revenues of $355.4M (up 16%) and returned to profitability with $13M net income. PROPWR has 510 MW of contracted capacity with deployments expected to exceed 500 MW by early 2028. However, heavy capital spending ($525-575M planned for 2026) and negative free cash flow of $75.7M remain concerns.
+<<<INSIGHTS>>>
+PUMP | positive | Company shows improving fundamentals with 16% revenue growth, return to profitability, and strong PROPWR segment growth with 510 MW contracted capacity. However, sentiment is moderated by negative free cash flow and heavy capital spending requirements that could pressure near-term financial performance.
+TRGP | neutral | Mentioned as a customer with a 230 MW power agreement with ProPetro's PROPWR business, indicating business activity but no direct operational or financial information provided about the company itself.
+DK | positive | Highlighted as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector with diversified downstream operations in refining and renewable fuels.
+CNQ | positive | Highlighted as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector as an independent upstream energy company with exploration and production operations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5798ee10fd183916630d7cbaf102023161c410b9455ee30fe2aef15387883519
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T12:55:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030093/dk-vs-dino-which-refining-stock-has-the-edge-after-q3-earnings?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3030093
+image_url: https://staticx-tuner.zacks.com/images/articles/main/4e/301.jpg
+category: 
+tickers: DK, DINO
+keywords: refining margins, Q3 2026 earnings, free cash flow, valuation comparison, shareholder returns, operational optimization
+headline: DK vs. DINO: Which Refining Stock Has the Edge After Q3 Earnings?
+<<<SUMMARY>>>
+Both U.S. refiners Delek US Holdings (DK) and HF Sinclair (DINO) delivered strong Q3 2026 results with robust refining margins and operational improvements. While HF Sinclair benefits from diversified operations and financial strength, Delek emerges as the more compelling investment due to its lower forward P/E valuation (4.69 vs 5.18), stronger stock performance (+131% vs +121.8%), and ongoing Enterprise Optimization Plan driving free cash flow improvements. Both stocks hold Zacks Rank #1 (Strong Buy) ratings.
+<<<INSIGHTS>>>
+DK | positive | Strong Q3 results with 52% revenue growth, adjusted EBITDA of $1.28B, successful Enterprise Optimization Plan delivering $60M in quarterly improvements, raised free cash flow targets to $250M annually, strengthened balance sheet with $1.34B cash, increased dividend 18%, and trades at attractive 9.5% discount to peer with Zacks Rank #1 rating.
+DINO | positive | Outstanding Q3 results with 50% revenue growth, adjusted EBITDA surged to $2.98B, adjusted earnings jumped to $11.75 per share, diversified portfolio including lubricants and renewable fuels segments, strong net cash position of $559M, returned $572M to shareholders, and holds Zacks Rank #1 rating, though valued slightly higher than peer.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:863835846dad28111f8dc2d39610885e8710d8a90d7df35948413da7def1c229
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T16:10:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030549/diamondback-eyes-5b-double-eagle-deal-to-deepen-permian-dominance?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3030549
+image_url: https://staticx-tuner.zacks.com/images/articles/main/74/780.jpg
+category: 
+tickers: FANG, DINO, LNG, DK
+keywords: Diamondback Energy, Double Eagle V acquisition, Permian Basin, Midland Basin, oil and gas, M&A, upstream expansion, infrastructure investment
+headline: Diamondback Eyes $5B Double Eagle Deal to Deepen Permian Dominance
+<<<SUMMARY>>>
+Diamondback Energy (FANG) is nearing a roughly $5 billion cash-and-stock acquisition of Double Eagle V, an EnCap Investments-backed oil and gas producer in the Midland Basin. This follows FANG's $4.1 billion acquisition of Double Eagle IV in February 2025 and its $26 billion merger with Endeavor Energy Resources in 2024, reflecting the company's strategy of consolidating high-quality assets within the Permian Basin rather than pursuing geographic diversification.
+<<<INSIGHTS>>>
+FANG | positive | The company is executing a strategic consolidation strategy in the Permian Basin with multiple significant acquisitions (Double Eagle V ~$5B, Double Eagle IV $4.1B, Endeavor Energy $26B), expanding its drilling inventory and operational platform. The company maintains a Zacks Rank #1 (Strong Buy) rating, and the targeted acquisition approach aligns with management's stated preference for focused growth.
+DINO | positive | Holds Zacks Rank #1 (Strong Buy) with consensus estimates indicating 341.1% year-over-year earnings growth in 2026, demonstrating strong fundamental momentum in the energy sector.
+LNG | positive | Holds Zacks Rank #1 (Strong Buy) with consensus estimates indicating 34.4% year-over-year earnings growth in 2026, showing solid growth prospects in the LNG sector.
+DK | positive | Holds Zacks Rank #1 (Strong Buy) with consensus estimates indicating 205.3% year-over-year earnings growth in 2026, reflecting strong expected performance in the refining and petroleum products sector.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b45183cd7d57b51fdb098fa569b8b3b69aa9dec6ec8bfdd60acb714f4ec73fb5
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T16:18:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030556/petrobras-moves-to-strengthen-ethanol-logistics-with-logum-deal?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3030556
+image_url: https://staticx-tuner.zacks.com/images/articles/main/9d/53642.jpg
+category: 
+tickers: PBR, PBR.A, DINO, LNG, DK
+keywords: ethanol logistics, pipeline infrastructure, renewable energy, low-carbon energy, Brazil, acquisition, operational synergies, biofuel supply chain
+headline: Petrobras Moves to Strengthen Ethanol Logistics With Logum Deal
+<<<SUMMARY>>>
+Petrobras has agreed to acquire the remaining 70% stake in Logum Logística for R$620 million, gaining full ownership of the ethanol logistics company. The acquisition supports Petrobras' strategy to expand in renewable energy and low-carbon businesses while leveraging Logum's 1,000+ km pipeline network that transported nearly 5 million cubic meters of products in the 2025-2026 harvest. The deal is subject to regulatory approval from Brazil's Administrative Council for Economic Defense.
+<<<INSIGHTS>>>
+PBR | positive | The acquisition strengthens Petrobras' position in Brazil's growing ethanol logistics market, provides operational synergies through infrastructure integration, supports its low-carbon energy diversification strategy, and aligns with long-term portfolio expansion goals. The company currently holds a Zacks Rank #2 (Buy).
+PBR.A | positive | The acquisition strengthens Petrobras' position in Brazil's growing ethanol logistics market, provides operational synergies through infrastructure integration, supports its low-carbon energy diversification strategy, and aligns with long-term portfolio expansion goals. The company currently holds a Zacks Rank #2 (Buy).
+DINO | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1 (Strong Buy) and projected 341.1% year-over-year earnings growth in 2026, but not directly related to the main article content.
+LNG | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1 (Strong Buy) and projected 34.4% year-over-year earnings growth in 2026, but not directly related to the main article content.
+DK | neutral | Mentioned as a comparable energy sector investment with Zacks Rank #1 (Strong Buy) and projected 205.3% year-over-year earnings growth in 2026, but not directly related to the main article content.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5ee6bcb62215f36dc5f9f019f3dcb23618043dba42634c11528bae58c463aef1
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T14:25:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031187/5-stocks-adored-by-brokers-to-buy-amid-the-current-turbulence?cid=CS-ZC-FT-analyst_blog|rw-3031187
+image_url: https://staticx-tuner.zacks.com/images/articles/main/74/190.jpg
+category: 
+tickers: AVT, DK, ARW, CVI, BOOM, NVDA
+keywords: broker recommendations, earnings beats, market volatility, estimate revisions, electronic components distribution, energy sector, manufacturing
+headline: 5 Stocks Adored by Brokers to Buy Amid the Current Turbulence
+<<<SUMMARY>>>
+Despite market turbulence from geopolitical tensions, crude oil price surges, and leadership uncertainty at NVIDIA, five stocks recommended by brokers show strong fundamentals. Avnet, Delek US Holdings, Arrow Electronics, CVR Energy, and DMC Global have all demonstrated consistent earnings beats and positive estimate revisions, making them attractive investment options during market uncertainty.
+<<<INSIGHTS>>>
+AVT | positive | Zacks Rank #1 (Strong Buy), surpassed earnings estimates in last 4 quarters with average beat of 19.6%, operates as major electronic components distributor with strong customer base
+DK | positive | Zacks Rank #1, surpassed earnings estimates in last 4 quarters with average beat of 142%, benefits from Permian gathering expansion and logistics growth with healthy cash conversion
+ARW | positive | Zacks Rank #1, surpassed earnings estimates in last 4 quarters with average beat of 39.2%, operates as major distributor of electronic components and enterprise computing products
+CVI | positive | Zacks Rank #1, 2026 earnings estimates revised upward 205.7% over 60 days, involved in renewable energy and petroleum refining with commitment to energy transition
+BOOM | positive | Zacks Rank #1, 2026 earnings estimates revised upward 266.7% over 60 days, expected year-over-year earnings growth of 200% for 2026, operates asset-light manufacturing businesses
+NVDA | negative | Leadership uncertainty following CEO Jensen Huang's resignation, interim CFO Colette Kress appointed as interim CEO, raises concerns over leadership continuity and strategic direction
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:518c14ce3af55f27fe696229c13b51175fd21f74ad19c3b46ae04f47590a93ca
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T07:27:00Z
+publisher: Zacks Investment Research
+author: Zacks Equity Research
+url: https://www.zacks.com/stock/news/3031476/delek-us-holdings-and-winnebago-have-been-highlighted-as-zacks-bull-and-bear-of-the-day?cid=CS-ZC-FT-press_releases-3031476
+image_url: https://staticx-tuner.zacks.com/images/articles/main/fa/675.jpg
+category: 
+tickers: DK, WGO, SBUX, MCD, WEN
+keywords: refining margins, crack spreads, geopolitical tensions, RV industry downturn, AI drive-thru technology, diesel supply, consumer discretionary spending
+headline: Delek US Holdings and Winnebago have been highlighted as Zacks Bull and Bear of the Day
+<<<SUMMARY>>>
+Delek US Holdings (DK) is highlighted as the Bull of the Day due to strong refining margins driven by Middle East geopolitical tensions and tight diesel supply, with record Q3 earnings. Winnebago Industries (WGO) is the Bear of the Day as it faces declining earnings estimates, weak consumer demand for RVs, and margin compression amid high interest rates and inflation. The article also covers AI initiatives by Starbucks, McDonald's, and Wendy's in drive-thru operations.
+<<<INSIGHTS>>>
+DK | positive | Strong Zacks Rank #1 (Strong Buy) with record Q3 net income of $1.13 billion. Positioned to benefit from elevated refining margins driven by Middle East disruptions and tight diesel supply. Analysts have revised earnings estimates sharply higher, and the company's product mix (40% distillate output) aligns well with current market dynamics.
+WGO | negative | Zacks Rank #5 (Strong Sell) with significant negative earnings momentum. Q4 adjusted EPS fell 31% year-over-year, revenue declined 17%, and operating margins compressed. Current year estimates lowered 18.3% in 30 days and next year EPS forecasts down 60.58% in 60 days. Weak consumer demand for discretionary RV purchases persists due to high interest rates and fragile consumer confidence.
+SBUX | neutral | Zacks Rank #3 (Hold). Stock has outperformed the industry (up 30.5% vs. 1.6%), but trades at premium valuation (P/E 33.06 vs. industry 22.47). AI drive-thru initiatives are in early testing stages with uncertain financial benefits. Fiscal 2027 EPS estimates show 18% growth with recent positive estimate revisions, but execution risk remains.
+MCD | neutral | Advancing AI-powered drive-thru ordering through ArchIQ platform with Archy voice assistant showing 90%+ accuracy in early tests. Potential to free up 50+ labor hours per week, but technology is still in expansion phase with uncertain scalability and financial impact.
+WEN | neutral | Investing in AI through FreshAI platform developed with Google Cloud to improve drive-thru accuracy and speed. Technology shows promise for operational efficiency, but remains in development stage with uncertain financial benefits and competitive positioning.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3ab7580178d66bf9a92ac5785ed76d93cf30e8c6b14238be08449712fe0af0b9
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T09:54:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3031500/zacks-com-featured-highlights-include-nvidia-avnet-delek-us-holdings-cvr-energy-arrow-electronics-and-dmc-global?cid=CS-ZC-FT-press_releases-3031500
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a6/97.jpg
+category: 
+tickers: AVT, DK, CVI, ARW, BOOM, NVDA
+keywords: market volatility, broker recommendations, earnings beats, estimate revisions, Zacks Rank #1, geopolitical tensions, leadership change
+headline: Zacks.com featured highlights include NVIDIA, Avnet, Delek US Holdings, CVR Energy, Arrow Electronics and DMC Global
+<<<SUMMARY>>>
+Despite market volatility driven by geopolitical tensions, crude oil price surges, FAA ground stops, and leadership uncertainty at NVIDIA following CEO Jensen Huang's resignation, Zacks recommends five broker-favored stocks with strong earnings beats and positive estimate revisions: Avnet, Delek US Holdings, CVR Energy, Arrow Electronics, and DMC Global—all rated Zacks Rank #1.
+<<<INSIGHTS>>>
+AVT | positive | Zacks Rank #1 (Strong Buy), surpassed consensus estimates in last 4 quarters with average beat of 19.6%, recommended as broker-favored stock
+DK | positive | Zacks Rank #1, surpassed consensus estimates in last 4 quarters with average beat of 142%, benefits from Permian gathering expansion and logistics growth
+CVI | positive | Zacks Rank #1, consensus estimate for 2026 earnings revised 205.7% upward in past 60 days, beat estimates in 3 of last 4 quarters
+ARW | positive | Zacks Rank #1, surpassed consensus estimates in last 4 quarters with average beat of 39.2%, recommended as broker-favored stock
+BOOM | positive | Zacks Rank #1, expected 200% year-over-year earnings growth for 2026, consensus estimate revised 266.7% upward in past 60 days
+NVDA | negative | CEO Jensen Huang resigned amid controversy, leadership uncertainty raised concerns over strategic direction and continuity despite strong earnings results
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:29b84a0a0a9161d2219339702cd425286172b63938528be0f5512a68485733cc
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T14:21:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031865/petrobras-awards-410m-subsea-contract-to-expand-brazil-operations?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3031865
+image_url: https://staticx-tuner.zacks.com/images/articles/main/9d/53642.jpg
+category: 
+tickers: PBR, PBR.A, FTI, DK, CNQ
+keywords: Petrobras, subsea contract, deepwater operations, Brazil, India exploration, Andaman Basin, offshore infrastructure, pipelay vessel
+headline: Petrobras Awards $410M Subsea Contract to Expand Brazil Operations
+<<<SUMMARY>>>
+Petrobras awarded a $410 million four-year subsea engineering contract to Seagems Offshore to support deepwater oil and gas operations in Brazil using the advanced Seagems Safira vessel. The company is also evaluating exploration opportunities in India's Andaman Basin as it strengthens its offshore infrastructure and considers international expansion.
+<<<INSIGHTS>>>
+PBR | positive | Petrobras is actively investing in offshore infrastructure with a substantial $410M contract, demonstrating commitment to deepwater development and improved financial position enabling international exploration. The company holds a Zacks Rank #2 (Buy), indicating positive outlook for continued offshore spending and production support.
+PBR.A | positive | Petrobras is actively investing in offshore infrastructure with a substantial $410M contract, demonstrating commitment to deepwater development and improved financial position enabling international exploration. The company holds a Zacks Rank #2 (Buy), indicating positive outlook for continued offshore spending and production support.
+FTI | positive | Mentioned as a comparable energy sector investment with Zacks Rank #1 (Strong Buy), specializing in subsea and surface solutions for oil and gas, benefiting from industry trends similar to those driving Petrobras' investments.
+DK | positive | Recommended as a top-ranked energy sector stock with Zacks Rank #1 (Strong Buy), representing diversified downstream energy operations.
+CNQ | positive | Recommended as a top-ranked energy sector stock with Zacks Rank #1 (Strong Buy), engaged in exploration and production of crude oil and natural gas.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4e6dad93d1dfd0d5051fde2830820eb62e551176b56b5f05981726e4c48d7fbd
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T14:27:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031871/california-resources-builds-integrated-energy-growth-platform?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3031871
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: CRC, BE, FTI, DK, CNQ
+keywords: pipeline acquisition, fuel cell power generation, carbon storage, data center development, California energy market, crude oil pricing, free cash flow, cost reduction
+headline: California Resources Builds Integrated Energy Growth Platform
+<<<SUMMARY>>>
+California Resources Corporation (CRC) is diversifying its energy portfolio by acquiring Crimson Midstream's 2,000-mile pipeline network, exploring 1 GW of fuel cell power generation with Bloom Energy, and developing a 275-MW data center. The company generated $147M in Q3 free cash flow and is pursuing carbon storage expansion while implementing cost reduction measures for 2027.
+<<<INSIGHTS>>>
+CRC | positive | CRC is executing a multi-pronged growth strategy with the $63M Crimson Midstream acquisition adding pipeline capacity for better crude pricing, exploring 1 GW of fuel cell projects, developing a data center, and generating strong Q3 free cash flow of $147M. The company is also returning capital to shareholders through dividends and buybacks while maintaining financial flexibility with $1.32B in liquidity.
+BE | positive | Bloom Energy signed a memorandum of understanding with CRC to develop at least 1 gigawatt of fuel cell power generation across California, combining Bloom's fuel cell technology with CRC's natural gas supply and infrastructure, representing a significant commercial opportunity in California's growing electricity demand.
+FTI | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector, but no specific company developments or news are discussed in the article.
+DK | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector, but no specific company developments or news are discussed in the article.
+CNQ | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative investment in the energy sector, but no specific company developments or news are discussed in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:78155eb6c90f71bf8f53fe2b514f8c00a87fa5478c7c3d77ad5ade2374f18ebb
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T16:13:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3031424/bull-of-the-day-delek-us-holdings-dk?cid=CS-ZC-FT-bull_of_the_day-3031424
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default341.jpg
+category: 
+tickers: DK
+keywords: refining margins, crack spreads, diesel, geopolitical tensions, Middle East conflict, distillate inventories, petroleum products
+headline: Bull of the Day: Delek US Holdings (DK)
+<<<SUMMARY>>>
+Delek US Holdings (DK), an independent refiner, has gained significantly as crack spreads (the difference between crude oil and refined product prices) have widened to record levels. The company reported record Q3 earnings with $1.13 billion net income, driven by strong diesel and jet fuel margins. While the market may be pricing in a reversion to historical margins, analysts argue that tight distillate inventories and geopolitical tensions could sustain elevated refining margins longer than expected, presenting upside potential for DK investors.
+<<<INSIGHTS>>>
+DK | positive | DK holds a Zacks Rank #1 (Strong Buy) with record Q3 earnings of $1.13 billion and refining EBITDA of $1.24 billion. The company's product mix (40% diesel and jet fuel output) positions it to benefit from tight distillate markets. While near-term skepticism exists, the article argues elevated refining margins could persist longer than expected due to supply constraints and geopolitical tensions, offering potential for further earnings upside into 2027.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8d7b913040da9eeda6bfdb7e2c8f609446ea158220eab68e72a3fe7690fbedc7
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T16:42:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032033/tc-energy-plans-ngtl-expansion-amid-rising-alberta-gas-demand?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3032033
+image_url: https://staticx-tuner.zacks.com/images/articles/main/04/1137.jpg
+category: 
+tickers: TRP, DINO, NOG, DK
+keywords: natural gas infrastructure, pipeline expansion, Alberta Growth Connector, NGTL System, energy demand, data centers, oil sands
+headline: TC Energy Plans NGTL Expansion Amid Rising Alberta Gas Demand
+<<<SUMMARY>>>
+TC Energy (TRP) expects natural gas transportation demand through its NGTL System to grow 25% to 18 Bcf/d by 2031, driven by oil sands, power generation, and data center sectors. The company is proposing the Alberta Growth Connector pipeline project to add ~1 Bcf/d of capacity and plans additional service offerings starting January 2027, contingent on customer commitments and regulatory approvals.
+<<<INSIGHTS>>>
+TRP | positive | Strong demand growth projections (25% increase over 5 years), substantial existing infrastructure base ($15B invested over past decade), $1.2B in already-sanctioned expansion projects, and strategic positioning to capitalize on rising energy consumption from industrial operations and data centers provide solid growth opportunities.
+DINO | positive | Zacks Rank #1 (Strong Buy) rating with consensus estimate showing 341.1% year-over-year earnings growth in 2026, indicating strong financial performance expectations.
+NOG | positive | Zacks Rank #1 (Strong Buy) rating with consensus estimate indicating 13.9% year-over-year revenue growth in 2026, demonstrating positive growth trajectory.
+DK | positive | Zacks Rank #1 (Strong Buy) rating with consensus estimate showing 205.3% year-over-year earnings growth in 2026, indicating strong profitability expectations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:182d74697ded381854cfb689481e0b753f7711be714d99a3579667e1dd7bc2c1
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T14:55:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3032574/expand-energy-expects-u-s-natural-gas-demand-to-jump-over-10-by-2028?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3032574
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: EXE, FTI, DK, CNQ
+keywords: natural gas demand, LNG exports, power generation, industrial activity, Haynesville operations, Twin Eagle acquisition, marketing EBITDA, commodity prices, production discipline
+headline: Expand Energy Expects U.S. Natural Gas Demand to Jump Over 10% by 2028
+<<<SUMMARY>>>
+Expand Energy (EXE) projects U.S. natural gas consumption will rise over 10% by 2028, driven by LNG exports, power generation, and industrial activity. The company expects approximately 13 Bcf/d of additional demand and targets $500M annual marketing EBITDA by 2028 following its Twin Eagle acquisition. However, EXE carries a Zacks Rank #3 (Hold) rating, with investors advised to monitor LNG project schedules, production discipline, and commercial execution amid near-term challenges.
+<<<INSIGHTS>>>
+EXE | neutral | While the company has a favorable long-term demand outlook with projected 10%+ consumption growth and strong operational metrics (7.54 Bcfe/d production, $1.18B operating cash flow), it carries a Zacks Rank #3 (Hold) rating. Near-term challenges including supply pressures, pipeline constraints, and cost inflation temper the positive outlook, requiring successful execution on LNG timing and commercial integration.
+FTI | positive | Mentioned as a Zacks Rank #1 (Strong Buy) alternative in the energy sector. As a leading global energy technology company specializing in subsea and surface solutions, it stands to benefit from increased oil and gas industry activity driven by rising natural gas demand.
+DK | positive | Rated Zacks Rank #1 (Strong Buy). As a diversified downstream energy company with refining and renewable fuels operations, it could benefit from increased energy demand and industrial activity projected in the article.
+CNQ | positive | Rated Zacks Rank #1 (Strong Buy). As an independent energy company engaged in crude oil and natural gas production and marketing, it is well-positioned to capitalize on the projected increase in natural gas consumption and industrial demand.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f7057d394b63e5f02bb8b746d9c2430ed62f29199f4b626ad6d5ac428f7376f5
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T14:56:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032575/pembina-pipeline-eyes-growth-as-canadian-energy-demand-expands?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3032575
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: PBA, FTI, DK, CNQ
+keywords: pipeline infrastructure, natural gas, energy production, LNG export, data center power, EBITDA growth, Canadian energy sector, capital investment
+headline: Pembina Pipeline Eyes Growth as Canadian Energy Demand Expands
+<<<SUMMARY>>>
+Pembina Pipeline Corporation (PBA) is targeting 5-7% annual fee-based adjusted EBITDA per-share growth through 2030, supported by major projects including Cedar LNG (80% complete), the Greenlight 932-MW power facility, and the proposed Pacific Link export route. Q3 2026 earnings surged 99% to C$570 million, prompting an upward revision to 2026 EBITDA guidance. The company's diversified infrastructure network positions it to benefit from rising Canadian energy production and expanding export capacity.
+<<<INSIGHTS>>>
+PBA | positive | Strong Q3 earnings growth (99% increase), upward revision of 2026 EBITDA guidance, multiple major projects advancing (Cedar LNG 80% complete, Greenlight operational), clear 5-7% growth targets through 2030, and 29.6% YTD share price appreciation demonstrate solid financial performance and positive growth trajectory.
+FTI | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative in the energy sector but no specific company performance data or analysis provided in the article.
+DK | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative in the energy sector but no specific company performance data or analysis provided in the article.
+CNQ | neutral | Mentioned as a Zacks Rank #1 (Strong Buy) alternative in the energy sector but no specific company performance data or analysis provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e160d6fda4296e10421aa9a6a77d80b96a161aedf3ba2ca3b15d23f9e7e38151
+symbol: DK
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T14:24:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033202/northern-oil-and-gas-raises-output-outlook-after-record-q3-ebitda?cid=CS-ZC-FT-analyst_blog|company_news_energy_sector-3033202
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: NOG, FTI, DK, CNQ
+keywords: oil and gas production, production guidance, free cash flow, debt reduction, capital expenditure, EBITDA, energy sector
+headline: Northern Oil and Gas Raises Output Outlook After Record Q3 EBITDA
+<<<SUMMARY>>>
+Northern Oil and Gas (NOG) raised its 2026 production guidance to 147,000-150,000 Boe/d while maintaining its capital spending budget at $850-$900 million. The company reported record Q3 output of 156,239 Boe/d and adjusted EBITDA of $444.5 million, with free cash flow reaching $148.6 million. Despite reducing debt by over $100 million, NOG faces rising production expenses and maintains an elevated debt-to-capital ratio of 58.93%.
+<<<INSIGHTS>>>
+NOG | positive | Company raised production guidance, achieved record Q3 output and EBITDA, generated strong free cash flow of $148.6 million, reduced debt by over $100 million, and improved drilling efficiency with normalized well costs declining 3% sequentially. Analyst consensus estimates for 2026 earnings increased 12.67% with all five analysts revising projections higher.
+FTI | neutral | Mentioned as a Zacks Rank #1 stock recommendation in the energy sector but no specific company performance data or analysis provided in the article.
+DK | neutral | Mentioned as a Zacks Rank #1 stock recommendation in the energy sector but no specific company performance data or analysis provided in the article.
+CNQ | neutral | Mentioned as a Zacks Rank #1 stock recommendation in the energy sector but no specific company performance data or analysis provided in the article.
+<<<END>>>

@@ -1,0 +1,171 @@
+<<<PRESS_RELEASE>>>
+id: e833b0f6d5744939
+symbol: FANG
+published_utc: 2025-12-17T13:12:00Z
+url: https://www.nasdaq.com/press-release/conduit-power-develop-200-mw-distributed-generation-ercot-secures-diamondback-energy
+headline: Conduit Power to Develop 200 MW of Distributed Generation in ERCOT; Secures Diamondback Energy and Granite Ridge Resources as Financial Partners
+<<<TEXT>>>
+Conduit Power, LLC has entered into financial agreements with Diamondback Energy, Inc. and Granite Ridge Resources related to Conduit’ s development of 200 megawatts of new natural gas power generation assets for the sale of energy and ancillary services to the Electric Reliability Council of Texas, Texas’ s largest power grid operator.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 09c5592a8c9232c0
+symbol: FANG
+published_utc: 2026-01-07T16:01:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-inc-schedules-fourth-quarter-2025-conference-call-february-24-2026
+headline: Diamondback Energy, Inc. Schedules Fourth Quarter 2025 Conference Call for February 24, 2026
+<<<TEXT>>>
+--Diamondback Energy, Inc., today announced that it plans to release fourth quarter 2025 financial results on February 23, 2026 after the market closes. In connection with the earnings release, Diamondback will host a conference call and webcast for investors and analysts to discuss its results for the fourth quarter of 2025 on Tuesday, February 24, 2026 at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 388001a46e4c0483
+symbol: FANG
+published_utc: 2026-02-23T16:01:00Z
+url: https://www.nasdaq.com/press-release/letter-stockholders-issued-diamondback-energy-inc-2026-02-23
+headline: Letter to Stockholders Issued by Diamondback Energy, Inc.
+<<<TEXT>>>
+This letter is meant to be a supplement to our earnings release and is being furnished to the Securities and Exchange Commission and released to our stockholders simultaneously with our earnings release. Please see the information regarding forward-looking statements and non-GAAP financial information included at the end of this letter.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: de07f308fabf8454
+symbol: FANG
+published_utc: 2026-02-23T16:01:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-inc-announces-fourth-quarter-and-full-year-2025-financial-and
+headline: Diamondback Energy, Inc. Announces Fourth Quarter and Full Year 2025 Financial and Operating Results; Increases Base Dividend
+<<<TEXT>>>
+--Diamondback Energy, Inc. today announced financial and operating results for the fourth quarter and full year ended December 31, 2025. Average oil production of 512.8 MBO/d Net cash provided by operating activities of $2.3 billion; Operating Cash Flow Before Working Capital Changes 1 of $1.9 billion Cash capital expenditures of $943 million Free Cash Flow...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e1c6ddf136bede6f
+symbol: FANG
+published_utc: 2026-03-02T17:11:00Z
+url: https://www.nasdaq.com/press-release/viper-energy-launches-secondary-common-stock-offering-diamondback-energy-inc-and
+headline: Viper Energy Launches Secondary Common Stock Offering By Diamondback Energy, Inc. and Certain Affiliates of EnCap Investments, L.P. and Oaktree Capital Management, L.P.
+<<<TEXT>>>
+--Viper Energy, Inc. announced today the launch of an underwritten public offering of 17,391,304 shares of its Class A common stock by Diamondback Energy, Inc. and certain affiliates of EnCap Investments, L.P. and Oaktree Capital Management, L.P., subject to market and other conditions. Viper has filed a registration statement with the SEC for the offering to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 368b3df3a8599657
+symbol: FANG
+published_utc: 2026-03-10T16:10:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-announces-launch-secondary-common-stock-offering-2026-03-10
+headline: Diamondback Energy Announces Launch of Secondary Common Stock Offering
+<<<TEXT>>>
+--Diamondback Energy, Inc. announced today the launch of an underwritten public offering of 11,000,000 shares of its common stock by SGF FANG Holdings, LP, subject to market and other conditions. Diamondback has filed a registration statement with the SEC for the offering to which this communication relates. Copies of the base prospectus and prospectus...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 96d2556fa41f68fd
+symbol: FANG
+published_utc: 2026-03-10T22:04:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-announces-pricing-secondary-common-stock-offering-2026-03-11
+headline: Diamondback Energy Announces Pricing of Secondary Common Stock Offering
+<<<TEXT>>>
+--Diamondback Energy, Inc. announced today the pricing of an underwritten public offering of 11,000,000 shares of its common stock by SGF FANG Holdings, LP. Diamondback has filed a registration statement with the SEC for the offering to which this communication relates. Copies of the base prospectus and prospectus supplement for the Secondary Offering, when...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e4d80b89e849fa4d
+symbol: FANG
+published_utc: 2026-04-01T16:01:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-inc-schedules-first-quarter-2026-conference-call-may-5-2026-2026
+headline: Diamondback Energy, Inc. Schedules First Quarter 2026 Conference Call for May 5, 2026
+<<<TEXT>>>
+--Diamondback Energy, Inc., today announced that it plans to release first quarter 2026 financial results on May 4, 2026 after the market closes. In connection with the earnings release, Diamondback will host a conference call and webcast for investors and analysts to discuss its results for the first quarter of 2026 on Tuesday, May 5, 2026 at 8:00 a.m. CT.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9f97bd529d34174d
+symbol: FANG
+published_utc: 2026-04-06T08:35:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-inc-announces-launch-tender-offers-any-and-all-its-outstanding
+headline: Diamondback Energy, Inc. Announces Launch of Tender Offers for Any and All of its Outstanding 4.400% Senior Notes due 2051 and 4.250% Senior Notes due 2052
+<<<TEXT>>>
+--Diamondback Energy, Inc. today announced the commencement of tender offers to purchase for cash any and all of the Senior Notes issued by the Company listed in the table below. Offers to Purchase for Cash Any and All of Diamondback Energy, Inc.’ s Senior Notes Described in the Table Below. The Offers will expire at 5:00 p.m., New York City time, on April 10, 2026,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e879d19f29335ae0
+symbol: FANG
+published_utc: 2026-04-10T15:51:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-inc-announces-pricing-tender-offers-any-and-all-its-outstanding
+headline: Diamondback Energy, Inc. Announces Pricing of Tender Offers for Any and All of its Outstanding 4.400% Senior Notes due 2051 and 4.250% Senior Notes due 2052
+<<<TEXT>>>
+--Diamondback Energy, Inc. today announced the pricing of its tender offers to purchase for cash any and all of its outstanding 4.400% Senior Notes due 2051 and 4.250% Senior Notes due 2052. The table below shows the applicable Reference Yield and Consideration for the Notes, calculated as of 2:00 p.m., New York City time, today, April 10, 2026, in accordance with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fa036f5d19580ad4
+symbol: FANG
+published_utc: 2026-04-13T09:04:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-inc-announces-results-tender-offers-any-and-all-its-outstanding
+headline: Diamondback Energy, Inc. Announces Results of Tender Offers for Any and All of its Outstanding 4.400% Senior Notes due 2051 and 4.250% Senior Notes due 2052
+<<<TEXT>>>
+--Diamondback Energy, Inc. today announced the expiration and results of its tender offers to purchase for cash any and all of its outstanding 4.400% Senior Notes due 2051 and 4.250% Senior Notes due 2052. The Offers expired at 5:00 p.m., New York City time, on April 10, 2026. According to information provided by D.F. King& Co., Inc., the Tender and Information Agent...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 40585b0e166ebf4a
+symbol: FANG
+published_utc: 2026-05-04T16:01:00Z
+url: https://www.nasdaq.com/press-release/letter-stockholders-issued-diamondback-energy-inc-2026-05-04
+headline: Letter to Stockholders Issued by Diamondback Energy, Inc.
+<<<TEXT>>>
+This letter is meant to be a supplement to our earnings release and is being furnished to the Securities and Exchange Commission and released to our stockholders simultaneously with our earnings release. Please see the information regarding forward-looking statements and non-GAAP financial information included at the end of this letter.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 22aabb59529a2503
+symbol: FANG
+published_utc: 2026-05-04T16:01:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-inc-announces-first-quarter-2026-financial-and-operating-results
+headline: Diamondback Energy, Inc. Announces First Quarter 2026 Financial and Operating Results; Increases Base Dividend and Production Guidance
+<<<TEXT>>>
+--Diamondback Energy, Inc. today announced financial and operating results for the first quarter ended March 31, 2026. Average oil production of 521.0 MBO/d Net cash provided by operating activities of $1.8 billion; Operating Cash Flow Before Working Capital Changes 1 of $2.6 billion Cash capital expenditures of $933 million Free Cash Flow 1 of $1.7 billion;...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 924b234e90f8e666
+symbol: FANG
+published_utc: 2026-05-04T16:01:00Z
+url: https://www.nasdaq.com/press-release/viper-energy-inc-subsidiary-diamondback-energy-inc-reports-first-quarter-2026
+headline: Viper Energy, Inc., a Subsidiary of Diamondback Energy, Inc., Reports First Quarter 2026 Financial and Operating Results
+<<<TEXT>>>
+--Viper Energy, Inc., a subsidiary of Diamondback Energy, Inc., today announced financial and operating results for the first quarter ended March 31, 2026. Q1 2026 average production of 65,000 bo/d Q1 2026 lease bonus income of $15 million Q1 2026 consolidated net income of $215 million; net income attributable to Viper of $97 million, or $0.53 per Class A common...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a9ea31ed1d836430
+symbol: FANG
+published_utc: 2026-06-30T18:01:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-inc-schedules-second-quarter-2026-conference-call-august-4-2026
+headline: Diamondback Energy, Inc. Schedules Second Quarter 2026 Conference Call for August 4, 2026
+<<<TEXT>>>
+--Diamondback Energy, Inc., today announced that it plans to release second quarter 2026 financial results on August 3, 2026 after the market closes. In connection with the earnings release, Diamondback will host a conference call and webcast for investors and analysts to discuss its results for the second quarter of 2026 on Tuesday, August 4, 2026 at 8:00 a.m....
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 53f6ee8e6afbc4de
+symbol: FANG
+published_utc: 2026-06-30T18:01:00Z
+url: https://www.nasdaq.com/press-release/viper-energy-inc-subsidiary-diamondback-energy-inc-schedules-second-quarter-2026
+headline: Viper Energy, Inc., a Subsidiary of Diamondback Energy, Inc., Schedules Second Quarter 2026 Conference Call for August 4, 2026
+<<<TEXT>>>
+--Viper Energy, Inc., a subsidiary of Diamondback Energy, Inc., today announced that it plans to release second quarter 2026 financial results on August 3, 2026 after the market closes. In connection with the earnings release, Viper will host a conference call and webcast for investors and analysts to discuss its results for the second quarter of 2026 on Tuesday,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 67c5ad89c5893bce
+symbol: FANG
+published_utc: 2026-08-03T16:01:00Z
+url: https://www.nasdaq.com/press-release/letter-stockholders-issued-diamondback-energy-inc-2026-08-03
+headline: Letter to Stockholders Issued by Diamondback Energy, Inc.
+<<<TEXT>>>
+This letter is meant to be a supplement to our earnings release and is being furnished to the Securities and Exchange Commission and released to our stockholders simultaneously with our earnings release. Please see the information regarding forward-looking statements and non-GAAP financial information included at the end of this letter.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 979a4b7224f7f109
+symbol: FANG
+published_utc: 2026-08-03T16:01:00Z
+url: https://www.nasdaq.com/press-release/diamondback-energy-inc-announces-second-quarter-2026-financial-and-operating-results
+headline: Diamondback Energy, Inc. Announces Second Quarter 2026 Financial and Operating Results
+<<<TEXT>>>
+--Diamondback Energy, Inc. today announced financial and operating results for the second quarter ended June 30, 2026. Average oil production of 525 MBO/d Production of 1,018 MBOE/d, surpassing the 1.0 million barrels of oil equivalent per day milestone Net cash provided by operating activities of $3.6 billion; Operating Cash Flow Before Working Capital...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 306bcd8b875d1c77
+symbol: FANG
+published_utc: 2026-08-03T16:01:00Z
+url: https://www.nasdaq.com/press-release/viper-energy-inc-subsidiary-diamondback-energy-inc-reports-second-quarter-2026
+headline: Viper Energy, Inc., A Subsidiary Of Diamondback Energy, Inc., Reports Second Quarter 2026 Financial And Operating Results; Increases Base Dividend
+<<<TEXT>>>
+--Viper Energy, Inc., a subsidiary of Diamondback Energy, Inc., today announced financial and operating results for the second quarter ended June 30, 2026. Q2 2026 average production of 65,077 bo/d Q2 2026 lease bonus income of $15 million Q2 2026 consolidated net income of $331 million; net income attributable to Viper of $142 million, or $0.73 per Class A common...
+<<<END>>>

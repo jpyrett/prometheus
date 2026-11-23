@@ -1,0 +1,81 @@
+<<<PRESS_RELEASE>>>
+id: a0f60195687910c2
+symbol: AZO
+published_utc: 2025-12-09T06:55:00Z
+url: https://www.nasdaq.com/press-release/autozone-1st-quarter-total-company-same-store-sales-increase-47-domestic-same-store
+headline: AutoZone 1st Quarter Total Company Same Store Sales Increase 4.7%; Domestic Same Store Sales Increase 4.8%; 1st Quarter EPS of $31.04
+<<<TEXT>>>
+--AutoZone, Inc. today reported net sales of $4.6 billion for its first quarter ended November 22, 2025, an increase of 8.2% from the first quarter of fiscal 2025. Net income for the quarter was $530.8 million compared to $564.9 million in the same period last year, while diluted earnings per share were $31.04 compared to last year at $32.52. Under its share...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7973e85c7aa69644
+symbol: AZO
+published_utc: 2026-02-10T17:00:00Z
+url: https://www.nasdaq.com/press-release/autozone-release-second-quarter-fiscal-2026-earnings-march-3-2026-2026-02-10
+headline: AutoZone to Release Second Quarter Fiscal 2026 Earnings March 3, 2026
+<<<TEXT>>>
+--AutoZone, Inc., the leading retailer and distributor of automotive replacement parts and accessories in the Americas, will release results for its second quarter ended Saturday, February 14, 2026, before market open on Tuesday, March 3, 2026. Additionally, the Company will host a one-hour conference call on Tuesday, March 3, 2026, beginning at 10:00 a.m., to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b2a9f825116639ce
+symbol: AZO
+published_utc: 2026-03-03T06:55:00Z
+url: https://www.nasdaq.com/press-release/autozone-2nd-quarter-total-company-same-store-sales-increase-33-domestic-same-store
+headline: AutoZone 2nd Quarter Total Company Same Store Sales Increase 3.3%; Domestic Same Store Sales Increase 3.4%; EPS of $27.63
+<<<TEXT>>>
+--AutoZone, Inc. today reported net sales of $4.3 billion for its second quarter ended February 14, 2026, an increase of 8.1% from the second quarter of fiscal 2025. Net income for the quarter was $468.9 million compared to $487.9 million in the same period last year, while diluted earnings per share were $27.63 compared to last year at $28.29.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 69ae9f75187cea51
+symbol: AZO
+published_utc: 2026-04-14T17:00:00Z
+url: https://www.nasdaq.com/press-release/autozone-release-third-quarter-fiscal-2026-earnings-may-26-2026-2026-04-14
+headline: AutoZone to Release Third Quarter Fiscal 2026 Earnings May 26, 2026
+<<<TEXT>>>
+--AutoZone, Inc., a leading retailer and distributor of automotive replacement parts and accessories in the Americas, will release results for its third quarter ended Saturday, May 9, 2026, before market open on Tuesday, May 26, 2026. Additionally, the Company will host a one-hour conference call on Tuesday, May 26, 2026, beginning at 10:00 a.m., to discuss the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 18b3ffd41a342663
+symbol: AZO
+published_utc: 2026-04-22T07:58:00Z
+url: https://www.nasdaq.com/press-release/autozone-completes-three-year-cloud-migration-google-cloud-2026-04-22
+headline: AutoZone Completes Three-Year Cloud Migration with Google Cloud
+<<<TEXT>>>
+--Cloud Next' 26-- AutoZone, Inc., a leading retailer and distributor of automotive aftermarket parts and accessories in the Americas, and Google Cloud today announced a strategic expansion of their partnership. AutoZone transitioned most of its applications to Google Cloud and looks to enhance performance, observability, and long-term flexibility.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: da8faad2744732e2
+symbol: AZO
+published_utc: 2026-05-26T06:55:00Z
+url: https://www.nasdaq.com/press-release/autozone-3rd-quarter-total-company-same-store-sales-increase-39-domestic-same-store
+headline: AutoZone 3rd Quarter Total Company Same Store Sales Increase 3.9%; Domestic Same Store Sales Increase 4.1%; EPS of $38.07
+<<<TEXT>>>
+--AutoZone, Inc. today reported net sales of $4.8 billion for its third quarter ended May 9, 2026, an increase of 8.4% from the third quarter of fiscal 2025. Net income for the quarter was $641.5 million compared to $608.4 million in the same period last year, while diluted earnings per share were $38.07 compared to last year at $35.36. Under its share repurchase...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e5c5a6d19d9f3b54
+symbol: AZO
+published_utc: 2026-06-03T09:00:00Z
+url: https://www.nasdaq.com/press-release/autozone-vendor-summit-recognizes-contributions-top-suppliers-2026-06-03
+headline: AutoZone Vendor Summit Recognizes Contributions of Top Suppliers
+<<<TEXT>>>
+--AutoZone recognized 15 of its top suppliers at its annual Vendor Summit. In addition, eight vendors were selected for the AutoZone Extra Miler award: Bearing Technologies, Robert Bosch, LLC, Gates Corporation, GSP North America, Highline Warren, Premium Guard, PLZ Corp and Value Cycle Corporation. Six vendors received AutoZone WITTDTJR ® awards: Blue Streak, CJ...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5fbd6631cbd64456
+symbol: AZO
+published_utc: 2026-06-16T17:00:00Z
+url: https://www.nasdaq.com/press-release/autozone-authorizes-additional-stock-repurchase-2026-06-16
+headline: AutoZone Authorizes Additional Stock Repurchase
+<<<TEXT>>>
+--AutoZone, Inc., today, announced its Board of Directors authorized the repurchase of an additional $1.5 billion of the Company’ s common stock in connection with its ongoing share repurchase program. Since the inception of the repurchase program in 1998, and including the above amount, AutoZone’ s Board of Directors has authorized $42.2 billion in share...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3924aba099a56cff
+symbol: AZO
+published_utc: 2026-07-10T17:00:00Z
+url: https://www.nasdaq.com/press-release/autozone-announces-organizational-changes-2026-07-10
+headline: AutoZone Announces Organizational Changes
+<<<TEXT>>>
+--AutoZone today announced that Grace Sharpley, Vice President, Merchandising Pricing and Analysis, has been promoted to Senior Vice President, Finance, effective July 10, 2026. Grace will join the Company’ s Executive Committee and report to Jamere Jackson, Chief Financial Officer. Her leadership, expertise, and consistent delivery of strong results position...
+<<<END>>>

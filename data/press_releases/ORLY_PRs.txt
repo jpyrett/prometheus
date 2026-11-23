@@ -1,0 +1,54 @@
+<<<PRESS_RELEASE>>>
+id: 3c563d2d8d3f41c9
+symbol: ORLY
+published_utc: 2026-01-02T16:30:00Z
+url: https://www.nasdaq.com/press-release/oreilly-automotive-inc-announces-dates-its-fourth-quarter-and-full-year-2025-earnings
+headline: O’Reilly Automotive, Inc. Announces Dates for Its Fourth Quarter and Full-Year 2025 Earnings Release and Conference Call
+<<<TEXT>>>
+--O’ Reilly Automotive, Inc., a leading retailer in the automotive aftermarket industry, announces the release date for its fourth quarter and full-year 2025 results as Wednesday, February 4, 2026, with a conference call to follow on Thursday, February 5, 2026. The Company’ s fourth quarter and full-year 2025 results will be released after 3:30 p.m. Central Time on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 147b0d10c9e6f7df
+symbol: ORLY
+published_utc: 2026-02-04T16:30:00Z
+url: https://www.nasdaq.com/press-release/oreilly-automotive-inc-reports-fourth-quarter-and-full-year-2025-results-2026-02-04
+headline: O’Reilly Automotive, Inc. Reports Fourth Quarter and Full-Year 2025 Results
+<<<TEXT>>>
+--O’ Reilly Automotive, Inc., a leading retailer in the automotive aftermarket industry, today announced record revenue and earnings for its fourth quarter and full-year ended December 31, 2025. Sales for the fourth quarter ended December 31, 2025, increased $319 million, or 8%, to $4.41 billion from $4.10 billion for the same period one year ago.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4f61f60b3e094f31
+symbol: ORLY
+published_utc: 2026-04-01T16:30:00Z
+url: https://www.nasdaq.com/press-release/oreilly-automotive-inc-announces-dates-its-first-quarter-2026-earnings-release-and
+headline: O’Reilly Automotive, Inc. Announces Dates for Its First Quarter 2026 Earnings Release and Conference Call
+<<<TEXT>>>
+--O’ Reilly Automotive, Inc., a leading retailer in the automotive aftermarket industry, announces the release date for its first quarter 2026 results as Wednesday, April 29, 2026, with a conference call to follow on Thursday, April 30, 2026. The Company’ s first quarter 2026 results will be released after 3:30 p.m. Central Time on Wednesday, April 29, 2026, and can be...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d7311a3c839e4b95
+symbol: ORLY
+published_utc: 2026-04-29T16:30:00Z
+url: https://www.nasdaq.com/press-release/oreilly-automotive-inc-reports-first-quarter-2026-results-2026-04-29
+headline: O’Reilly Automotive, Inc. Reports First Quarter 2026 Results
+<<<TEXT>>>
+--O’ Reilly Automotive, Inc., a leading retailer in the automotive aftermarket industry, today announced record revenue and earnings for its first quarter ended March 31, 2026. Sales for the first quarter of 2026 increased $424 million, or 10%, to $4.56 billion from $4.14 billion for the same period one year ago. Gross profit for the first quarter of 2026 increased...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2a2b7e60d2497931
+symbol: ORLY
+published_utc: 2026-07-01T16:30:00Z
+url: https://www.nasdaq.com/press-release/oreilly-automotive-inc-announces-dates-its-second-quarter-2026-earnings-release-and
+headline: O’Reilly Automotive, Inc. Announces Dates for Its Second Quarter 2026 Earnings Release and Conference Call
+<<<TEXT>>>
+--O’ Reilly Automotive, Inc., a leading retailer in the automotive aftermarket industry, announces the release date for its second quarter 2026 results as Wednesday, July 29, 2026, with a conference call to follow on Thursday, July 30, 2026. The Company’ s second quarter 2026 results will be released after 3:30 p.m. Central Time on Wednesday, July 29, 2026, and can be...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1e122b156626febd
+symbol: ORLY
+published_utc: 2026-07-29T16:30:00Z
+url: https://www.nasdaq.com/press-release/oreilly-automotive-inc-reports-second-quarter-2026-results-2026-07-29
+headline: O’Reilly Automotive, Inc. Reports Second Quarter 2026 Results
+<<<TEXT>>>
+--O’ Reilly Automotive, Inc., a leading retailer in the automotive aftermarket industry, today announced record revenue and earnings for its second quarter ended June 30, 2026. Sales for the second quarter ended June 30, 2026, increased $367 million, or 8%, to $4.89 billion from $4.53 billion for the same period one year ago. Gross profit for the second quarter...
+<<<END>>>

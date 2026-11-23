@@ -20185,3 +20185,489 @@ FTI | positive | Benefits from growing LNG infrastructure demand with strong sub
 COP | positive | Expanded commercial LNG offtake portfolio to 13 MTPA in Q3 2026, providing direct exposure to growing international LNG markets. Rated Zacks Rank #1 (Strong Buy).
 YPF | positive | Strong upstream performance with 84% YoY EBITDA growth to $2.50B and 32% shale oil production increase. Vaca Muerta development supports Argentina's LNG export expansion. Rated Zacks Rank #1 (Strong Buy).
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024958
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T07:13:56Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=253e21036fe6ec6e5676a19ffd7dea381dc9e331c9cc926fc36eda7be1f283e1
+image_url: https://image.cnbcfm.com/api/v1/image/108366800-1790168714093-gettyimages-2278538311-P1011086JPG.jpeg?v=1795178273&w=1920&h=1080
+category: company
+tickers: COP
+keywords: 
+headline: Top Wall Street analysts favor these 3 dividend stocks for strong returns
+<<<SUMMARY>>>
+Wall Street analysts can help shortlist attractive dividend-paying stocks, as their recommendations are backed by thorough analysis of a company's financials.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144000324
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T02:13:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c0385d6d0458d0787af95ea303f08640126b18387662022ff5e06e4d815143a7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips (COP) Just Drew Fresh Attention, So What Is The Market Weighing?
+<<<SUMMARY>>>
+Why a crude inventory surprise matters for ConocoPhillips A sharp build in US crude inventories from the Energy Information Administration rattled the energy sector, pulling ConocoPhillips (COP) lower as traders recalibrated expectations tied directly to benchmark oil prices. The reaction highlighted how tightly ConocoPhillips is linked to spot crude moves. Sentiment around the stock closely tracks shifts in supply data rather than company specific headlines. Over the past month, the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143991067
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T17:06:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7711f8294d36ea591c29e77d479be35317d5197ee1babf1e1596213a055c02b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: BP Steps Up Deleveraging With Strong Cash Flows and Divestments
+<<<SUMMARY>>>
+BP's strong cash flows, debt reduction and planned divestments are advancing its deleveraging push and supporting a stronger balance sheet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012484
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4605497b15fe0521bed14b35d729a6ba0bb70d9b806a949d13f1fe5b391a38bd
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/20/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Defensives Lead Sectors Friday As Growth Trails
+<<<SUMMARY>>>
+Six sectors are higher and five are lower in Friday&#39;s regular session, with defensive sectors holding two of the top three positions alongside Energy. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051441
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2f382455bd7d5ffd6ee7520e15e64f264d7057992747d29ca913b959bae4ce0d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ExxonMobil's $4B Kizomba Redevelopment: Can It Drive Earnings Growth?
+<<<SUMMARY>>>
+XOM advances a $4B redevelopment of Angola's Kizomba fields, while a new Block 15 discovery boosts production and earnings growth potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051566
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:19:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a4aad9de5d04e4696bc5611849812e3567223182451cadf3a0c9c5e19229ff3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Strikes $4.4 Billion North Sea Deal. US Oil Giant Set To Exit Norway After 50 Years.
+<<<SUMMARY>>>
+The deal includes the company's Norwegian assets, a 40.25% interest in the U.K. terminal and operatorship, with closing expected by the first quarter of 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050361
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4212ca2db802cf503b2854dedf79630c17f5eac162059c6bdb6abadd50623c82
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Here's How EOG is Lowering Well Costs to Boost Margins & Cash Flow
+<<<SUMMARY>>>
+EOG enhances drilling efficiency, lowers well costs in the Utica and Eagle Ford, and leverages infrastructure gains to strengthen margins and cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050208
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b119808693ff0d520c9480b86afc1e666b4ac4e4824f9c2f39e1f34ac63290c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Should You Buy Chevron Stock For Its Cash?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050363
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:25:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5c53fb615d167b405bae82922ba58e263bf75eb052dc0d57919668f9e1f1241d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Sector Update: Energy Stocks Decline Pre-Bell Monday
+<<<SUMMARY>>>
+Energy stocks were declining pre-bell Monday, with the State Street Energy Select Sector SPDR ETF (X
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050206
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:17:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4d3273e83d7fa536a530271d0fcf7b1049e4de21cbc1e9dd6839b6e16d9ca701
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Exxon, Chevron and ConocoPhillips Are Down. Here’s What Their Dividends Tell Investors
+<<<SUMMARY>>>
+Oil at $97 a barrel filled the vaults of three energy giants, yet their stocks slid. For retirees counting on the checks, one question matters more than the yield: which payout survives when crude stops cooperating?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048539
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:38:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0fde316ec2b83d439fb73962cdc63195bd08f6279e93f23c49863c252b2259b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Can Exxon Mobil Stock Outlast The Fuel Shortage?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050360
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:30:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3ce06f41ca925e75393069b683bbf4ccbba344e216574c6bb796b6d2f248d79c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Brokers Suggest Investing in ConocoPhillips (COP): Read This Before Placing a Bet
+<<<SUMMARY>>>
+According to the average brokerage recommendation (ABR), one should invest in ConocoPhillips (COP). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048625
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:13:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e7efd86658fd6399cf09c73d8fd0269dffe8bd6842badabcfb4557c0eabdf85f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips agrees $4.4bn sale of Norway assets to Vår Energi
+<<<SUMMARY>>>
+The sale includes decommissioning liabilities and interests in eight partner-operated fields across the Norwegian Sea and northern North Sea.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144049026
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b9b3a5a70ba8b6d8cedc4389459437690f41b93974be9baabcd220d52313ed7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Will Chord's Marketing Savings Support Higher Margins & Cash Flow?
+<<<SUMMARY>>>
+CHRD targets significant cash flow savings through new Williston Basin marketing deals, lower transport costs and improved market access.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048626
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=966684cd9996293d8b8e0a70868a7e8994aa24bf96cc5e2d1bacad4167fb888e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: Zacks.com featured highlights include Progyny, Wolverine World Wide, Teradata, Nucor and ConocoPhillips
+<<<SUMMARY>>>
+Five stocks with strong relative price strength stand out amid S&P 500 volatility, backed by earnings growth, positive estimate revisions and solid share gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144047730
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f66ef17a618798ff02ce0513f23be4c9e6dabb413ba211b5d012e1ba4ecd7255
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips to Exit Norway in $4.4 Billion Deal With Vår Energi
+<<<SUMMARY>>>
+ConocoPhillips has agreed to sell its Norwegian oil and gas business and a UK terminal stake to Vår Energi in a $4.425 billion deal, accelerating consolidation in Norway's offshore energy industry.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048334
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T09:21:05Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d88e91713586ced6db6c60153acc305b54e47bd95c4b408d5494861e75756293
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/Close-Up-Of-Wall-Street-Sign-With-Iconic.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Stock Market Today: Dow Jones, S&P 500, Nasdaq 100 Futures Rise After ANT IPO and Friday’s AI Rout— ORCL, ZS, ZM in Focus (UPDATED)
+<<<SUMMARY>>>
+U.S. stock futures rose on Monday, as the Dow Jones, S&amp;P 500, and Nasdaq 100 index futures advanced, following Friday&#39;s lower close.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048361
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T09:12:21Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=73c86e3356c657c3361058de7159f6ae44085d0c5d7e2bc45e1757d48b1fd401
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/ConocoPhillips.jpg?width=2048&height=1536
+category: company
+tickers: COP
+keywords: 
+headline: Conocophillips $4.425 Billion Norway Deal Paves Way for Stock Buybacks
+<<<SUMMARY>>>
+ConocoPhillips rises Monday following a $4.425 billion asset sale, with $2.5 billion in expected net cash proceeds and potential buybacks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144042255
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T08:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=456f1cc24d849940d07e60b6c1c750a8e241934ecc6fb3d98c92530ab9870a32
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips Agrees $4.4 Billion Norway Sale to Vår Energi
+<<<SUMMARY>>>
+ConocoPhillips is selling its Norwegian oil and gas operations and UK infrastructure assets to Vår Energi in a major North Sea deal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048627
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T07:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=667de86bef9f60b2391d4719a6f80673273e22675a741bd9a8a7fc4d6c633d8e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips to Sell Norwegian Business to Var Energi in $3.9 Billion Deal
+<<<SUMMARY>>>
+The U.S. oil company said the deal includes selling a 40.25% interest in, and operatorship of, the U.K. Teesside oil terminal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144037318
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T06:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6ccf7570d8b4609406533894c7a2d413f0c0ce14709a4129a78a93e8d7bff43c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips announces agreement to sell Norway business and Teesside asset to Vår Energi
+<<<SUMMARY>>>
+HOUSTON, November 23, 2026--ConocoPhillips announces agreement to sell Norway business and Teesside asset to Vår Energi
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048362
+symbol: COP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T02:41:45Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7dd71952bdfc590c0d3b1b0b4997db85f3a9f096991b63c484d16d23e31248a6
+image_url: 
+category: company
+tickers: COP
+keywords: 
+headline: ConocoPhillips To Sell Norway Business And 40.25% Teesside Terminal Interest To Vår Energi For $4.425B
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:92391651c361959de868d45560582cbd7142dc6730cfa6d58e1659d508d361a1
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T17:06:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033442/bp-steps-up-deleveraging-with-strong-cash-flows-and-divestments?cid=CS-ZC-FT-analyst_blog|quick_take-3033442
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ee/431.jpg
+category: 
+tickers: BP, COP, PSX
+keywords: portfolio optimization, deleveraging, asset sales, divestment, cash flow, capital allocation, energy sector
+headline: BP Steps Up Deleveraging With Strong Cash Flows and Divestments
+<<<SUMMARY>>>
+BP reduced net debt to $13.9 billion in Q3 with $14.8 billion operating cash flow and expects $8 billion in 2026 divestment proceeds including $6 billion from Castrol's sale. ConocoPhillips completed $5 billion in asset sales ahead of schedule, while Phillips 66 continues portfolio reshaping through strategic acquisitions and divestitures. All three energy firms prioritize portfolio optimization, capital efficiency, and balance sheet strengthening.
+<<<INSIGHTS>>>
+BP | positive | Strong Q3 performance with significant debt reduction ($22.3B to $13.9B), robust operating cash flow of $14.8B, and clear deleveraging strategy with $8B expected divestment proceeds in 2026. Gearing improved to 14.8%, demonstrating meaningful financial progress.
+COP | positive | Completed $5 billion in asset sales ahead of schedule with $1.6 billion in Q3 proceeds. Active portfolio high-grading strategy focused on improving capital efficiency and strengthening free cash flow through core asset focus.
+PSX | positive | Successfully executing portfolio optimization through strategic acquisitions (WRB Refining LP) and divestitures, generating over $50 million in near-term synergies. Concentrating capital on integrated assets that support long-term strategy.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b5ac3678d919b01ab37964944b0abb64d3ff431ac9cb9f75386131b4c5f24aa8
+symbol: COP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T12:20:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3033618/zacks-com-featured-highlights-include-progyny-wolverine-world-wide-teradata-nucor-and-conocophillips?cid=CS-ZC-FT-press_releases-3033618
+image_url: https://staticx-tuner.zacks.com/images/articles/main/4c/2710.jpg
+category: 
+tickers: PGNY, WWW, TDC, NUE, COP
+keywords: relative price strength, S&P 500 weakness, earnings growth, stock screening, technology valuations, earnings estimate revisions
+headline: Zacks.com featured highlights include Progyny, Wolverine World Wide, Teradata, Nucor and ConocoPhillips
+<<<SUMMARY>>>
+Amid S&P 500 volatility and concerns over technology valuations, Zacks highlights five stocks displaying relative price strength with solid fundamentals and positive earnings estimate revisions. The featured companies—Progyny, Wolverine World Wide, Teradata, Nucor, and ConocoPhillips—have outperformed the broader market over the past year and show strong earnings growth expectations.
+<<<INSIGHTS>>>
+PGNY | positive | Expected EPS growth of 15.3% matches industry average, VGM Score of A, upward earnings estimate revisions over 60 days, and 42.7% year-over-year share gains indicate strong performance and analyst optimism.
+WWW | positive | Projected 49.3% earnings growth for 2026, VGM Score of A, consistent earnings beats in last four quarters with 23.2% average surprise, and 70.5% year-over-year share gains demonstrate strong momentum.
+TDC | positive | 10.1% projected earnings growth, VGM Score of B, upward estimate revisions over 60 days, 23.8% average trailing four-quarter earnings surprise, and 33.8% year-over-year gains show positive trajectory.
+NUE | positive | Exceptional 154.7% projected earnings growth for 2026, VGM Score of B, $56.3 billion market cap, and 68.1% year-over-year share gains indicate strong earnings recovery and market confidence.
+COP | positive | 96.6% projected earnings growth for 2026, VGM Score of A, 14.9% upward estimate revision over 60 days, $158.9 billion market cap, and 54.3% year-over-year gains reflect strong energy sector performance.
+<<<END>>>

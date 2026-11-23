@@ -902,6 +902,11 @@ PART 14. A USER SESSION END TO END (design choices entry 78)
          The Data Clerk ALWAYS fetches the latest news of each stock first (the news only: a paid call that writes news/SYMBOL.txt, whatever --fetch says), then summarizes it, citing each article; a fetch that fails is said and the stored news is shown. The page shows it in the News pane (toggle: News / Work order).
          python -m prometheus.application.session --name "Ada Lovelace" --age 45 --risk moderate --cash 10000 --mode ask --cleanup --yes --prompt "What's Tesla doing the last week?"          (PAID: the models, Finnhub and the news fetch, which writes news/TSLA.txt)
          add --refuse-news-fetch (TEST ONLY) to search the stored news without the fetch.   A real session: tests/fixtures/news_real/news_tsla_week.json (12 articles, 9 cited, the fetch refused). With the real fetch: tests/fixtures/news_real/news_tsla_week_fetched.json (271 fetched, 0 new, 12 articles, 10 cited).   pytest tests/test_news_view.py -q   (the tests never fetch)
+  THE PRICE OF A STOCK (entry 150, spec design/quote_request_spec.md): a request that ONLY asks for a stock's current price ("What's the current price of TSLA?", "Whats the current price of: TSLA?", "Price of Tesla", "How much is MSFT trading at?", "Quote for AAPL and NVDA")
+         is answered by the Data Clerk alone with its quote: nothing is recommended, decided, traded or asked, in either mode, and nothing is fetched but the one Finnhub quote for each stock (no news, no bars, no file written; the stored close of the simulated day with USE_LIVE_TRADING=false). A theme has no price ("price of oil stocks" asks you to name the stocks), a request that also asks for the news or a trade is not a price request.
+         The page says it in the main output, one line for each stock: "TSLA  $388.42  +42.60 (+12.32%)  live quote, last trade 2026-11-23 15:26 ET" (the right column is not switched).
+         python -m prometheus.application.session --name "Ada Lovelace" --age 45 --risk moderate --cash 10000 --mode ask --cleanup --yes --prompt "What's the current price of TSLA?"          (PAID but small: the Account Manager's model and ONE Finnhub quote; writes no data file)
+         A real session: tests/fixtures/quote_real/quote_tsla.json.   ./run_ui.sh --replay tests/fixtures/quote_real/quote_tsla.json   (free)   pytest tests/test_quote_request.py -q   (the tests never fetch)
   COSTS: OpenRouter (the Account Manager's, the Advisor's, the Critic's GLM 5.3 and the Trader's models), Finnhub, and with a fetch the paid Massive and Finnhub APIs, which write files. It creates an account in the
   local Postgres (kept unless --cleanup; python -m prometheus.agents.account_manager.account_manager --account N shows it). Nothing is sent to a broker.
   EXIT CODE  0 the portfolio changed (or it was only a look)  1 it could not trade, with the reasons  2 a bad flag, or the account book, a key or the request could not be used.
@@ -932,7 +937,7 @@ THE WEB UI (design choices entry 99; design/ui_v1_spec.md; the look: design/ui_v
   ./run_ui.sh --replay-speed 0          no pause between the stages (2 is twice as slow); also --port N
   ./run_ui.sh                           LIVE. Builds the page if ui/dist is missing or older than ui/src, then starts the server. Starting costs nothing.
                                         PRESSING Go! IS A PAID RUN (OpenRouter and Finnhub: the Account Manager's, the Advisor's, the Critic's and the Trader's models and the quotes) that writes the page's OWN account in the local
-                                        Postgres (create it in the Profile card; the three sample accounts can be looked at and never written). "Refresh market data first (paid)" is TICKED BY DEFAULT (Jacob, 2026-11-15): Go! then also calls the
+                                        Postgres (create it in the Profile card; the three sample accounts can be looked at and never written). "Refresh market data first" is TICKED BY DEFAULT (Jacob, 2026-11-15): Go! then also calls the
                                         paid data APIs and WRITES THE DATA FILES; untick it to use the stored data. POST /api/runs fetches only when it is sent fetch:true (a script that says nothing never pays for a fetch).
                                         The Trader is simulated: nothing is sent to a broker (the header says PAPER TRADING). Needs the local Postgres (scripts/setup_postgres.sh).
   ./run_ui.sh --dev                     the API on 8000 and Vite on 5173 with hot reload (add --replay to replay)
@@ -947,7 +952,7 @@ THE WEB UI (design choices entry 99; design/ui_v1_spec.md; the look: design/ui_v
     Strict recommendations      ON: only what the Critic APPROVES may trade and a neutral recommendation never passes (the Neutral box is switched off and disabled).
                                 OFF: the Neutral box says whether a neutral recommendation counts as approved. (Auto mode trades everything the Critic approves without a question, Strict or not: there is no automatic-trading mark, entry 104.)
     Neutral recommendations as passes  the box IS ALLOW_NEUTRAL_RECOMMENDATIONS for the run: true when ticked, false when not, whatever .env says (set in the server's own environment, put back afterwards).
-    Refresh market data first (paid)   ON BY DEFAULT: the run refreshes the market data (bars, news, press releases, filings) with the PAID data APIs and writes the data files; unticked, the stored data is used. In a replay it is
+    Refresh market data first   ON BY DEFAULT: the run refreshes the market data (bars, news, press releases, filings) with the PAID data APIs and writes the data files; unticked, the stored data is used. In a replay it is
                                 unticked and disabled. The API default stays off: POST /api/runs without `fetch` does not fetch.
   ONE RUN AT A TIME, one user, bound to 127.0.0.1. A question that nobody answers for 10 minutes (--question-timeout) counts as NO. Stop: the desk stops before its next stage; a trade already placed stays.
   TRACING (optional, off by default): LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY (and LANGFUSE_HOST for a server of your own) in .env, and pip install langfuse (SDK v3 or later): the header then shows "Traced".
@@ -1056,7 +1061,7 @@ PART 16. CRITIC v3 AND READING THE NUMBERS OF A REQUEST (design choices entries 
     python scripts/capture_request_numbers_forms.py                       says what it would do (no calls)
     python scripts/capture_request_numbers_forms.py --yes                 PAID, cents: the Account Manager's model only; re-records tests/fixtures/session_real/request_numbers_forms.json
     pytest tests/test_request_numbers.py tests/test_request_numbers_walk.py   free
-  The page's "Refresh market data first (paid)" box is now OFF by default (2026-11-20).
+  The page's "Refresh market data first" box was OFF by default from 2026-11-20 and is ON by default again (Jacob, 2026-11-23; its label no longer says "(paid)", the tooltip still does).
   A floor, waiting orders, typed shares with a recommendation (entry 140, spec design/limit_orders_spec.md):
         "over $20 a share" is a floor; "Sell 10 shares of MSFT at $600 or more" and "Buy 10 of MU at $90 or less" WAIT as day orders when the price is not there yet, with the cash or shares set aside;
         "Buy 10 of MU if the recommendation passes" buys 10 if the Critic approves.

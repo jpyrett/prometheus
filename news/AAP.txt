@@ -1,0 +1,236 @@
+<<<ARTICLE>>>
+id: finnhub:143805606
+symbol: AAP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T23:32:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6933d6275aa9f6b717d6aa1b9c2c1d9cb2a58a830e7cf1ef4aca73b8bfcc4779
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAP
+keywords: 
+headline: Advance Auto Parts vs. Airbnb: Is a Retail Rebound or Travel Giant Stock the Better Buy for 2027?
+<<<SUMMARY>>>
+One runs thousands of stores with a sizable debt load, the other rents out millions of listings without owning a single room. Their valuation gap is wide, and the risks differ sharply.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769707
+symbol: AAP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f402f50c64e57f9eeab1f91913196991b90db330b5f4b6d95346d042baa2957e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAP
+keywords: 
+headline: The Dates That Matter Most For AutoZone Stock
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143765329
+symbol: AAP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T10:09:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1817e3c819bc71a6466d2e15f03903239875852bededddafee1a5b710095c925
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAP
+keywords: 
+headline: Advance Auto Parts (AAP) Stock May Be Fully Priced As Cash Flow Guidance Rises
+<<<SUMMARY>>>
+Advance Auto Parts has had a rough long stretch on the market, yet the stock has shown some shorter term strength. This puts fresh attention on a simple question for you as an investor: Is the current share price around its recent US$45 level adequately backed by the earnings power the business is generating today? Over the past 5 years the share price has fallen 77.8%, which makes the link between what you pay now and what the company earns a central concern. Recent efforts to simplify...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740574
+symbol: AAP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T21:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2a0b4a1d1901299d0ef03f82de685bc01e047f01c6985c59c26f49b624b40a72
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAP
+keywords: 
+headline: Advance Auto Parts vs. Shopify: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Shopify's revenue jumped 30% in 2025 with no debt, while Advance Auto Parts is mid-restructuring with a shrinking top line and negative free cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661684
+symbol: AAP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T18:19:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=a034821b8c5cd2cad8d4d46144fcb265b4762c0f9bf4c507a4450264913423f9
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: AAP
+keywords: 
+headline: Advance Auto Parts, Inc. 2026 Q3 - Results - Earnings Call Presentation
+<<<SUMMARY>>>
+2026-11-09. The following slide deck was published by Advance Auto Parts, Inc.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144027439
+symbol: AAP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T19:03:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b48d0c52880cd766c9c1c72a27b201f2ad43b952132a246ea78c31369e7b69d3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAP
+keywords: 
+headline: Advance Auto Parts vs. Etsy: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Advance Auto Parts and Etsy take opposite paths to growth, one anchored in brick-and-mortar repair demand and the other in a global creator marketplace earning fees without holding inventory.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143892199
+symbol: AAP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T00:45:08Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=b168e82c34ac1c9504e97ddc1a0a62655402ccb5a3c430b14bd022d3ba27a381
+image_url: 
+category: company
+tickers: AAP
+keywords: 
+headline: Stifel Initiates Coverage of Advance Auto Parts with Hold Rating
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143879314
+symbol: AAP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T08:27:19Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e7253e67639fd87ef067d2661c3737015394944ac2fdf4af48a3c07d5afb9062
+image_url: 
+category: company
+tickers: AAP
+keywords: 
+headline: Stifel Initiates Coverage On Advance Auto Parts with Hold Rating, Announces Price Target of $47
+<<<SUMMARY>>>
+Stifel  analyst Michael Montani   initiates coverage on Advance Auto Parts (NYSE:AAP) with a Hold rating and announces Price Target of $47.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ee6aee0bd57b5883c4eb7335340b62703d9e509d001e491d83b4c16040a2066c
+symbol: AAP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T21:00:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/11/advance-auto-parts-vs-shopify-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F70b11cb94ad8bfc44b3a7e6abf950dac9a507f43-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: AAP, SHOP, AZO, ORLY, GOOG, GOOGL, GOOGM, GOOGN
+keywords: stock comparison, consumer stocks, turnaround strategy, e-commerce growth, financial metrics, valuation analysis, 2027 investment outlook
+headline: Advance Auto Parts vs. Shopify: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Advance Auto Parts and Shopify as investment options for 2027. Advance Auto Parts is undergoing a multi-year restructuring with declining revenue and negative free cash flow, while Shopify demonstrates strong growth with 30% revenue increase, no debt, and positive cash flow. The analyst recommends Shopify despite its higher valuation, citing its growth momentum and positioning in AI-driven commerce over Advance Auto Parts' uncertain turnaround prospects.
+<<<INSIGHTS>>>
+AAP | negative | Company faces significant headwinds including 5.4% revenue decline, negative free cash flow of $298M, high debt-to-equity ratio of 2.4x, and mixed results from restructuring efforts. While turnaround efforts are underway, execution has been inconsistent with disappointing Q2 and Q3 results.
+SHOP | positive | Strong financial performance with 30% revenue growth, $1.2B net income, 10.7% net margin, zero debt, and $2B free cash flow. Company is well-positioned for future growth through AI-driven commerce initiatives and European expansion, with management projecting low-30% annual revenue growth.
+AZO | neutral | Mentioned as a competitive threat to Advance Auto Parts in the aftermarket auto parts retail space, but no specific performance data or analysis provided.
+ORLY | neutral | Mentioned as a competitive threat to Advance Auto Parts in the aftermarket auto parts retail space, but no specific performance data or analysis provided.
+GOOG | neutral | Mentioned only in context of its Google division supporting Shopify's UCP for agentic AI commerce; no direct investment recommendation or analysis provided.
+GOOGL | neutral | Mentioned only in context of its Google division supporting Shopify's UCP for agentic AI commerce; no direct investment recommendation or analysis provided.
+GOOGM | neutral | Mentioned only in context of its Google division supporting Shopify's UCP for agentic AI commerce; no direct investment recommendation or analysis provided.
+GOOGN | neutral | Mentioned only in context of its Google division supporting Shopify's UCP for agentic AI commerce; no direct investment recommendation or analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5702c9e62dcd047e190940abc2a8c6073fd0ae1ba82a5222ce5d5d64ce8156ab
+symbol: AAP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T23:12:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/13/advance-auto-parts-vs-airbnb-is-a-retail-rebound-or-travel-giant-stock-the-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F1eb766e40e579fb15ff801afe1a16c64b70a8df3-8192x5464.jpg&w=1200&op=resize
+category: 
+tickers: AAP, ABNB, AZO, ORLY, AMZN
+keywords: automotive aftermarket, travel marketplace, valuation comparison, debt-to-equity ratio, free cash flow, turnaround strategy, asset-light business model, consumer economy
+headline: Advance Auto Parts vs. Airbnb: Is a Retail Rebound or Travel Giant Stock the Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Advance Auto Parts and Airbnb as investment options for 2027. Advance Auto Parts, a brick-and-mortar automotive retailer, faces challenges with declining sales, high debt (2.4x debt-to-equity), and negative free cash flow, though it's attempting a turnaround. Airbnb, an asset-light travel marketplace, demonstrates strong growth (16.9% revenue increase), healthy financials (0.3x debt-to-equity, $4.6B free cash flow), and expanding international markets. The analyst recommends Airbnb for 2027, viewing Advance Auto Parts as a 'prove it' year turnaround story.
+<<<INSIGHTS>>>
+AAP | negative | Company faces significant headwinds including declining revenue, high debt load (2.4x debt-to-equity), negative free cash flow (-$298M), mixed turnaround results, and intense competition. While attempting restructuring, 2027 is positioned as a critical 'prove it' year with uncertain outcomes.
+ABNB | positive | Strong financial performance with 16.9% revenue growth, robust net income ($3.2B), healthy balance sheet (0.3x debt-to-equity), substantial free cash flow ($4.6B), expanding international markets (India, Latin America), and competitive moat from network effects and data advantages. Analyst explicitly recommends this stock for 2027.
+AZO | neutral | Mentioned as a competitor to Advance Auto Parts in the automotive aftermarket space, but no specific analysis or sentiment provided in the article.
+ORLY | neutral | Mentioned as a competitor to Advance Auto Parts in the automotive aftermarket space, but no specific analysis or sentiment provided in the article.
+AMZN | neutral | Mentioned only as a third-party cloud infrastructure provider for Airbnb, representing an operational dependency risk rather than an investment recommendation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b2ab284834c4a79f239bb8de5f69351f921d39d33a6a3dd3fbd7a1ebf1095947
+symbol: AAP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T18:43:01Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/22/advance-auto-parts-vs-etsy-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fc06fe302e3cf53f217035c11a4198728676a2190-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: AAP, ETSY, AZO, AMZN, EBAY, PINS
+keywords: automotive aftermarket, e-commerce marketplace, retail turnaround, consumer discretionary, profitability vs growth, valuation comparison
+headline: Advance Auto Parts vs. Etsy: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Advance Auto Parts and Etsy as investment options for 2027. Advance Auto Parts, a brick-and-mortar automotive parts retailer, is undergoing a turnaround with mixed results and faces headwinds from weak DIY demand and competition. Etsy, a capital-light digital marketplace for handmade and vintage goods, demonstrates strong profitability with a 34.4% net margin despite modest 2.1% revenue growth. The analyst recommends Etsy for 2027 despite its higher valuation, citing its superior business model, passionate user base, and sustainable profitability over Advance Auto Parts' uncertain turnaround prospects.
+<<<INSIGHTS>>>
+AAP | negative | Company faces significant headwinds including weak DIY demand, vehicle electrification, intense competition, and negative free cash flow of -$298M. Turnaround efforts show mixed results with inconsistent quarterly performance. High debt-to-equity ratio (2.4x) limits flexibility. Analyst acknowledges temptation due to low valuation but does not recommend for 2027.
+ETSY | positive | Demonstrates strong profitability with 34.4% net margin and $987.5M net income on $2.9B revenue. Capital-light marketplace model avoids inventory risks. Improving metrics in active buyers and gross merchandise sales per buyer driven by AI and personalization. Analyst's recommended pick for 2027 despite higher valuation, citing sustainable business model and passionate user base.
+AZO | neutral | Mentioned as a competitive threat to Advance Auto Parts in the automotive aftermarket space, but no specific analysis or sentiment provided.
+AMZN | neutral | Mentioned as an internet retailer competing with Advance Auto Parts, but no specific analysis or sentiment provided.
+EBAY | neutral | Mentioned as a competitive online marketplace to Etsy, but no specific analysis or sentiment provided.
+PINS | neutral | Mentioned as a specialized platform competing with Etsy, but no specific analysis or sentiment provided.
+<<<END>>>

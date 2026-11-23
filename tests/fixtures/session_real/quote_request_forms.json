@@ -1,0 +1,311 @@
+{
+ "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to requests that only ask for the current price of a stock (Jacob's own request of 2026-11-23 first) and to requests that look like them and are not (the news, a price and the news, a trade that depends on the price, a trade), recorded on 2026-11-23 by AccountManager.understand_request with the Account Manager's own prompt (prompts/account_manager_request.py after design choices entry 150: the action `quote`). 'replies' are the raw texts the model answered, in order (a second reply is the answer to code's refusal of the first); 'outcome' what parse_intent made of the last one. Nothing here is edited. The tests give these replies back to the real Account Manager, whose code checks every field against the words.",
+ "model": "openai/gpt-oss-120b",
+ "tokens_in": 40168,
+ "tokens_out": 1839,
+ "requests": {
+  "Whats the current price of: TSLA?": {
+   "replies": [
+    "{\"action\": \"quote\", \"topic\": null, \"symbols\": [\"TSLA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "quote",
+    "describe": "show the current price of TSLA (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "TSLA"
+    ],
+    "companies": [],
+    "news_days": null,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2868,
+   "tokens_out": 95
+  },
+  "What's the current price of TSLA?": {
+   "replies": [
+    "{\"action\": \"quote\", \"topic\": null, \"symbols\": [\"TSLA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "quote",
+    "describe": "show the current price of TSLA (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "TSLA"
+    ],
+    "companies": [],
+    "news_days": null,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2867,
+   "tokens_out": 95
+  },
+  "Price of Tesla": {
+   "replies": [
+    "{\"action\": \"quote\", \"topic\": null, \"symbols\": [], \"companies\": [\"Tesla\"], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "quote",
+    "describe": "show the current price of Tesla (nothing will be bought)",
+    "topic": null,
+    "symbols": [],
+    "companies": [
+     "Tesla"
+    ],
+    "news_days": null,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2863,
+   "tokens_out": 116
+  },
+  "How much is MSFT trading at?": {
+   "replies": [
+    "{\"action\": \"quote\", \"topic\": null, \"symbols\": [\"MSFT\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "quote",
+    "describe": "show the current price of MSFT (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "MSFT"
+    ],
+    "companies": [],
+    "news_days": null,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2867,
+   "tokens_out": 95
+  },
+  "Quote for AAPL and NVDA": {
+   "replies": [
+    "{\"action\": \"quote\", \"topic\": null, \"symbols\": [\"AAPL\", \"NVDA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "quote",
+    "describe": "show the current price of AAPL, NVDA (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "AAPL",
+     "NVDA"
+    ],
+    "companies": [],
+    "news_days": null,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2867,
+   "tokens_out": 104
+  },
+  "What's a share of Microsoft worth right now?": {
+   "replies": [
+    "{\"action\": \"quote\", \"topic\": null, \"symbols\": [], \"companies\": [\"Microsoft\"], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "quote",
+    "describe": "show the current price of Microsoft (nothing will be bought)",
+    "topic": null,
+    "symbols": [],
+    "companies": [
+     "Microsoft"
+    ],
+    "news_days": null,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2868,
+   "tokens_out": 116
+  },
+  "is TSLA over $400 right now?": {
+   "replies": [
+    "{\"action\": \"quote\", \"topic\": null, \"symbols\": [\"TSLA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "quote",
+    "describe": "show the current price of TSLA (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "TSLA"
+    ],
+    "companies": [],
+    "news_days": null,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2868,
+   "tokens_out": 101
+  },
+  "price of oil stocks": {
+   "replies": [
+    "{\"action\": \"quote\", \"topic\": \"oil\", \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "refused": "a theme has no price: name the stocks you want the price of (tickers or company names), up to 10"
+   },
+   "tokens_in": 2864,
+   "tokens_out": 143
+  },
+  "How much are TSLA, AAPL, MSFT, NVDA, AMD, META, GOOGL, AMZN, NFLX, INTC and ORCL trading at?": {
+   "replies": [
+    "{\"action\": \"quote\", \"topic\": null, \"symbols\": [\"TSLA\",\"AAPL\",\"MSFT\",\"NVDA\",\"AMD\",\"META\",\"GOOGL\",\"AMZN\",\"NFLX\",\"INTC\",\"ORCL\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "refused": "a price request names at most 10 stocks and 11 were named: ask for the price of 10 or fewer at a time"
+   },
+   "tokens_in": 2896,
+   "tokens_out": 126
+  },
+  "What's TSLA doing the last week?": {
+   "replies": [
+    "{\"action\": \"news\", \"topic\": null, \"symbols\": [\"TSLA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": 7}"
+   ],
+   "outcome": {
+    "action": "news",
+    "describe": "show the news of TSLA for the last 7 days (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "TSLA"
+    ],
+    "companies": [],
+    "news_days": 7,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2867,
+   "tokens_out": 116
+  },
+  "Show the news for Tesla": {
+   "replies": [
+    "{\"action\": \"news\", \"topic\": null, \"symbols\": [], \"companies\": [\"Tesla\"], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "news",
+    "describe": "show the news of Tesla for the last 7 days (nothing will be bought)",
+    "topic": null,
+    "symbols": [],
+    "companies": [
+     "Tesla"
+    ],
+    "news_days": 7,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2865,
+   "tokens_out": 129
+  },
+  "price and news of TSLA": {
+   "replies": [
+    "{\"action\": \"news\", \"topic\": null, \"symbols\": [\"TSLA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "news",
+    "describe": "show the news of TSLA for the last 7 days (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "TSLA"
+    ],
+    "companies": [],
+    "news_days": 7,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2866,
+   "tokens_out": 263
+  },
+  "what's TSLA's price, buy 5 if it's under $400": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": null, \"symbols\": [\"TSLA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": 400, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the most recommended TSLA; spending as much as the account allows; only while a share costs $400.00 or less",
+    "topic": null,
+    "symbols": [
+     "TSLA"
+    ],
+    "companies": [],
+    "news_days": null,
+    "count": null,
+    "budget": null,
+    "max_price": 400,
+    "min_price": null,
+    "corrected": [],
+    "orders": []
+   },
+   "tokens_in": 2875,
+   "tokens_out": 207
+  },
+  "buy 5 shares of TSLA": {
+   "replies": [
+    "{\"action\": \"order\", \"topic\": null, \"symbols\": [\"TSLA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [{\"side\": \"buy\", \"symbol\": \"TSLA\", \"shares\": 5, \"dollars\": null}], \"news_days\": null}"
+   ],
+   "outcome": {
+    "action": "order",
+    "describe": "buy 5 shares of TSLA (your own order: no recommendation is made and the Critic is not asked)",
+    "topic": null,
+    "symbols": [],
+    "companies": [],
+    "news_days": null,
+    "count": null,
+    "budget": null,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [],
+    "orders": [
+     {
+      "side": "buy",
+      "symbol": "TSLA",
+      "company": null,
+      "shares": 5,
+      "dollars": null
+     }
+    ]
+   },
+   "tokens_in": 2867,
+   "tokens_out": 133
+  }
+ }
+}

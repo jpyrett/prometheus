@@ -60,14 +60,14 @@ export function StepList({ stages, now, ended }: { stages: StageView[]; now: num
   );
 }
 
-/** A request that only asked for the news (entry 149, N9) is the Account Manager and the Data Clerk: once it has finished the pipeline shows those two stages and not the four it never reached. */
+/** A request that only asked for the news (entry 149, N9) or for the current price (entry 150) is the Account Manager and the Data Clerk: once it has finished the pipeline shows those two stages and not the four it never reached. */
 export function Pipeline({ state }: { state: RunState }) {
   const now = useNow(state.phase === "running");
   return (
     <section className="card pipeline" aria-label="Desk pipeline">
       <div className="lane">
         <h2>Desk pipeline</h2>
-        <StepList stages={state.result?.status === "news" ? state.stages.slice(0, 2) : state.stages} now={now} ended={state.phase === "finished"} />
+        <StepList stages={state.result?.status === "news" || state.result?.status === "quote" ? state.stages.slice(0, 2) : state.stages} now={now} ended={state.phase === "finished"} />
       </div>
       <RunBox state={state} />
     </section>

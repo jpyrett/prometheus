@@ -1,0 +1,135 @@
+<<<PRESS_RELEASE>>>
+id: cedd77ffa75cee33
+symbol: OXY
+published_utc: 2025-12-17T08:30:00Z
+url: https://www.nasdaq.com/press-release/syntholene-energy-corp-appoints-former-ceo-carbon-engineering-and-ceo-captura-corp
+headline: Syntholene Energy Corp Appoints Former CEO of Carbon Engineering and CEO of Captura Corp, Steve Oldham, to Board of Directors
+<<<TEXT>>>
+SYNTHOLENE ENERGY CORP, a leader in low-cost synthetic fuel technology, announces the appointment of Steve Oldham, a globally recognized pioneer of carbon management and climate-tech commercialization, to its Board of Directors. Mr. Oldham brings more than 30 years of executive leadership across aerospace, carbon removal, and advanced cleantech project...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fdd4b8f1f222fc4a
+symbol: OXY
+published_utc: 2026-01-02T09:45:00Z
+url: https://www.nasdaq.com/press-release/occidental-completes-sale-oxychem-2026-01-02
+headline: Occidental Completes Sale of OxyChem
+<<<TEXT>>>
+As previously disclosed, an Occidental subsidiary, Environmental Resource Holdings, LLC, has retained OxyChem’ s legacy tort claims and environmental liabilities primarily associated with historical operations outside of the footprint of the operating facilities that were sold. Glenn Springs Holdings, Inc. will continue to manage the remedial...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6505b25cbd2d9eff
+symbol: OXY
+published_utc: 2026-01-05T16:15:00Z
+url: https://www.nasdaq.com/press-release/occidental-announce-fourth-quarter-results-wednesday-february-18-2026-hold-conference
+headline: Occidental to Announce Fourth Quarter Results Wednesday, February 18, 2026; Hold Conference Call Thursday, February 19, 2026
+<<<TEXT>>>
+--Occidental will announce its fourth quarter 2025 financial results after close of market on Wednesday, February 18, 2026, and will hold a conference call to discuss the results on Thursday, February 19, 2026, at 1 p.m. Eastern/ 12 p.m. Central. The conference call may be accessed by calling 1-866-871-6512 or via webcast at oxy.com/investors.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1bade4ea270fbfe4
+symbol: OXY
+published_utc: 2026-02-18T16:15:00Z
+url: https://www.nasdaq.com/press-release/occidental-announces-fourth-quarter-2025-results-2026-02-18
+headline: Occidental Announces Fourth Quarter 2025 Results
+<<<TEXT>>>
+The earnings release is also available on the U.S. Securities and Exchange Commission’ s website at sec.gov. The company will hold a conference call to discuss the results on Thursday, February 19, 2026, at 1 p.m. Headquartered in Houston, Occidental primarily operates in the United States, the Middle East and North Africa.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 214e414b76c8e25e
+symbol: OXY
+published_utc: 2026-02-19T06:45:00Z
+url: https://www.nasdaq.com/press-release/occidental-announces-cash-tender-offers-and-consent-solicitations-certain-its-senior
+headline: Occidental Announces Cash Tender Offers and Consent Solicitations for Certain of its Senior Notes and Debentures
+<<<TEXT>>>
+Each Tender Offer and Consent Solicitation will expire at 5:00 p.m., New York City time, on March 19, 2026, unless extended or earlier terminated by Occidental. Subject to the terms and conditions of the Tender Offers and Consent Solicitations, the consideration for each $1,000 principal amount of Notes validly tendered at or prior to the Early Tender Time and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 505f45b3ea739a53
+symbol: OXY
+published_utc: 2026-03-05T06:45:00Z
+url: https://www.nasdaq.com/press-release/occidental-announces-early-tender-results-and-upsize-cash-tender-offers-and-consent
+headline: Occidental Announces Early Tender Results and Upsize in Cash Tender Offers and Consent Solicitations for Certain of its Senior Notes and Debentures
+<<<TEXT>>>
+In connection therewith, Occidental further announced that it is increasing the maximum aggregate principal amount of Notes it will accept for purchase, from the previously announced amount of $700,000,000 to $1,200,000,000. The $58,000,000 maximum aggregate principal amount of the 0.000% 2036 Notes it will accept for purchase has not been increased.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 639571aa45340d5a
+symbol: OXY
+published_utc: 2026-03-05T16:15:00Z
+url: https://www.nasdaq.com/press-release/occidental-announces-total-consideration-its-cash-tender-offers-and-consent
+headline: Occidental Announces Total Consideration for its Cash Tender Offers and Consent Solicitations for Certain of its Senior Notes and Debentures
+<<<TEXT>>>
+The consideration for each $1,000 principal amount of Notes validly tendered at or prior to the Early Tender Time and accepted for purchase pursuant to the Tender Offers was determined in the manner described in the Offer to Purchase by reference to the applicable fixed spread specified in the table below plus the yield of the applicable U.S. Treasury...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 56242a668025bc8b
+symbol: OXY
+published_utc: 2026-04-01T16:15:00Z
+url: https://www.nasdaq.com/press-release/occidental-announce-first-quarter-results-tuesday-may-5-2026-hold-conference-call
+headline: Occidental to Announce First Quarter Results Tuesday, May 5, 2026; Hold Conference Call Wednesday, May 6, 2026
+<<<TEXT>>>
+--Occidental will announce its first quarter 2026 financial results after close of market on Tuesday, May 5, 2026, and will hold a conference call to discuss the results on Wednesday, May 6, 2026, at 1 p.m. Eastern/ 12 p.m. Central. The conference call may be accessed by calling 1-866-871-6512 or via webcast at oxy.com/investors. Participants may pre-register for the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ec819ec610fd9f78
+symbol: OXY
+published_utc: 2026-04-09T07:00:00Z
+url: https://www.nasdaq.com/press-release/occidental-announces-gulf-america-oil-discovery-bandit-2026-04-09
+headline: Occidental Announces Gulf of America Oil Discovery at Bandit
+<<<TEXT>>>
+--Occidental today announced an oil discovery at the Bandit prospect in the Gulf of America, about 125 miles south of the Louisiana coast. Bandit is operated by Occidental, which holds a 45.375% working interest, and includes co-owners Chevron U.S.A. Inc. and Woodside Energy. Headquartered in Houston, Occidental primarily operates in the United States, the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ba5e8dd9f2ee358c
+symbol: OXY
+published_utc: 2026-04-30T11:30:00Z
+url: https://www.nasdaq.com/press-release/occidental-announces-dividend-2026-04-30
+headline: Occidental Announces Dividend
+<<<TEXT>>>
+--Occidental announced today that its Board of Directors declared a regular quarterly dividend of $0.26 per share on common stock, payable on July 15, 2026, to stockholders of record as of the close of business on June 10, 2026. Occidental is an international energy company that produces, markets and transports oil and natural gas to maximize value and provide...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4f009b57b787906b
+symbol: OXY
+published_utc: 2026-05-01T08:30:00Z
+url: https://www.nasdaq.com/press-release/occidental-announces-ceo-succession-2026-05-01
+headline: Occidental Announces CEO Succession
+<<<TEXT>>>
+--Occidental today announced that its Board of Directors, as part of its management succession planning, has named Senior Vice President and Chief Operating Officer Richard Jackson to succeed Vicki Hollub as President and Chief Executive Officer upon her retirement. Jackson joined Occidental in 2003 in its Middle East operations. During his time at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b04f57a415373525
+symbol: OXY
+published_utc: 2026-05-05T16:15:00Z
+url: https://www.nasdaq.com/press-release/occidental-announces-first-quarter-2026-results-2026-05-05
+headline: Occidental Announces First Quarter 2026 Results
+<<<TEXT>>>
+The earnings release is also available on the U.S. Securities and Exchange Commission’ s website at sec.gov. The company will hold a conference call to discuss the results on Wednesday, May 6, 2026, at 1 p.m. Headquartered in Houston, Occidental primarily operates in the United States, the Middle East and North Africa.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 076946cebc83700c
+symbol: OXY
+published_utc: 2026-07-01T16:15:00Z
+url: https://www.nasdaq.com/press-release/occidental-announce-second-quarter-results-wednesday-august-5-2026-hold-conference
+headline: Occidental to Announce Second Quarter Results Wednesday, August 5, 2026; Hold Conference Call Thursday, August 6, 2026
+<<<TEXT>>>
+--Occidental will announce its second quarter 2026 financial results after close of market on Wednesday, August 5, 2026, and will hold a conference call to discuss the results on Thursday, August 6, 2026, at 1 p.m. Eastern/ 12 p.m. Central. The conference call may be accessed by calling 1-866-871-6512 or via webcast at oxy.com/investors. Participants may...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e084ba8c9c869de8
+symbol: OXY
+published_utc: 2026-07-31T12:15:00Z
+url: https://www.nasdaq.com/press-release/occidental-names-brad-pollack-senior-vice-president-and-general-counsel-2026-07-31
+headline: Occidental Names Brad Pollack Senior Vice President and General Counsel
+<<<TEXT>>>
+--Occidental announced today that Brad Pollack has been appointed Senior Vice President and General Counsel, effective August 1, 2026, overseeing the company’ s global legal department. Pollack also serves on the Board of Directors of Net Power Inc., an energy technology and project development company focused on low-carbon gas power solutions.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 071d799d4438c8da
+symbol: OXY
+published_utc: 2026-08-05T16:15:00Z
+url: https://www.nasdaq.com/press-release/occidental-announces-second-quarter-2026-results-2026-08-05
+headline: Occidental Announces Second Quarter 2026 Results
+<<<TEXT>>>
+--Occidental today announced its second quarter 2026 financial results. The earnings release is also available on the U.S. Securities and Exchange Commission’ s website at sec.gov. The company will hold a conference call to discuss the results on Thursday, August 6, 2026, at 1 p.m.
+<<<END>>>

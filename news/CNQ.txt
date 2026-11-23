@@ -5868,3 +5868,104 @@ FTI | neutral | Mentioned as a Zacks Rank #1 stock recommendation in the energy 
 DK | neutral | Mentioned as a Zacks Rank #1 stock recommendation in the energy sector but no specific company performance data or analysis provided in the article.
 CNQ | neutral | Mentioned as a Zacks Rank #1 stock recommendation in the energy sector but no specific company performance data or analysis provided in the article.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144022773
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T11:14:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=11e42691868e47c55bfe61d95b54885691146cf2668f8e2156debc512a09639e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: An $8.3 Billion Fund Dumps These 3 Stocks
+<<<SUMMARY>>>
+Key TakeawaysA fund whose 13F holds $8. 31 billion of US stocks sold all of its Canadian Natural Resources, Booking Holdings and Restaurant Brands International shares in the third quarter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988921
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=96933d3fab18f60a5f42696371ddc30979cfcdfd6a95acb9ad9d4f70d607effb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Northern Oil and Gas Raises Output Outlook After Record Q3 EBITDA
+<<<SUMMARY>>>
+NOG raises its 2026 production outlook after record third-quarter output and adjusted EBITDA, backed by strong drilling results and an unchanged capital budget.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143994527
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:35:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a59cf5f43642a66adcf43a2c85d50f03ae31183c0c0c3ddcc801802c86f9bdf9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Canadian Natural Resources (CNQ) Loses 17.1% in 4 Weeks, Here's Why a Trend Reversal May be Around the Corner
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) is technically in oversold territory now, so the heavy selling pressure might have exhausted. This along with strong agreement among Wall Street analysts in raising earnings estimates could lead to a trend reversal for the stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143983861
+symbol: CNQ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T10:10:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2533bde875e1685d2cd00606ea57199498f462a2183c943c3568e2e29a835279
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CNQ
+keywords: 
+headline: Peyto Exploration Development And 2 Canadian Energy Stocks To Watch
+<<<SUMMARY>>>
+Canada is pushing hard to sell more oil and gas beyond the United States, with new pipelines and export routes aimed at reaching Asian buyers by the mid 2030s. That shift puts Canadian oil and gas stocks in the spotlight, as global energy trade patterns evolve and capital follows new supply corridors. This article highlights three leading companies from this sector-focused screener. The three stocks below are just a starting sample, with the full screen surfacing 46 more oil and gas companies...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7185b9bed2363dbfa84b440c5065fc8a1edbee80fc31e3467bc0b857b4646857
+symbol: CNQ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T13:40:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3033767/are-oils-energy-stocks-lagging-canadian-natural-resources-limited-cnq-this-year?cid=CS-ZC-FT-fundamental_analysis|yseop_template_1-3033767
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default19.jpg
+category: 
+tickers: CNQ, EOG
+keywords: Oils-Energy stocks, Canadian Natural Resources, EOG Resources, year-to-date performance, Zacks Rank, earnings estimates, oil and gas exploration
+headline: Are Oils-Energy Stocks Lagging Canadian Natural Resources Limited (CNQ) This Year?
+<<<SUMMARY>>>
+Canadian Natural Resources (CNQ) has outperformed the Oils-Energy sector year-to-date, gaining 31.1% compared to the sector average of 20.8%. Both CNQ and EOG Resources hold Zacks Rank #1 (Strong Buy) ratings with improving analyst sentiment. However, CNQ is slightly underperforming its Oil and Gas - Exploration and Production - Canadian industry peers, which have gained 37.1% on average.
+<<<INSIGHTS>>>
+CNQ | positive | CNQ has gained 31.1% year-to-date, outperforming the Oils-Energy sector average of 20.8%. It holds a Zacks Rank #1 (Strong Buy) rating with consensus EPS estimates up 11% over the past quarter, indicating improving analyst sentiment.
+EOG | positive | EOG has outperformed both CNQ and the broader sector with a 41.5% year-to-date return. It also holds a Zacks Rank #1 (Strong Buy) rating with consensus EPS estimates increased 11.9% over the past three months.
+<<<END>>>

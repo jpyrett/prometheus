@@ -41154,3 +41154,451 @@ Key TakeawaysExxonMobil shares are down 11% in the past month as oil prices fell
 <<<INSIGHTS>>>
 
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015558
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T17:22:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=200c4dca2b7e8c31bd087481df1ac7d365a39e9285efed65e9fa27943b1f88d2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Gas Prices Are Dropping at a 2008 Pace Right Before Thanksgiving
+<<<SUMMARY>>>
+Pump prices are tumbling toward a possible Thanksgiving record, yet the 2008 comparison breaks down on closer inspection. Behind the cheaper fill-ups sits a shipping lane that could squeeze the biggest energy fund even harder.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144011302
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T10:50:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a7837123469be1a8022fbc0450a0b581be41d755740d447dfec7cecf4cde45b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: How Many Shares of Chevron, Shell or Exxon Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, $1,000 a month in dividends takes about $360,000 of Shell stock, $351,300 of Chevron or $448,600 of ExxonMobil. All three cover their dividends comfortably, paying out between 27% and 41% of free cash flow over their latest twelve months.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143992211
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T20:15:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=563c37836977a7551901ec0e440ddb8a9488fac56cb765029afef8b393a9d213
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: TechnipFMC (FTI) Stock May Be 43% Undervalued Following Guyana Contract Win
+<<<SUMMARY>>>
+TechnipFMC has delivered very strong multi year gains, yet the real question for you today is whether the current share price lines up with the cash flows the business can produce. After a run like this and with fresh contract wins in the subsea business, it is fair to ask if the market price still reflects what those cash flows are worth. Over the past 5 years the stock has returned roughly 9x. That puts a lot of weight on whether the underlying cash generation can keep justifying that kind...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990990
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T17:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=829b50068812695ab4edf75b08c76b5f2bb3924d546f9967993a48f2d865fdf1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: ExxonMobil Secures Government Approval for Revised Rovuma LNG Plan
+<<<SUMMARY>>>
+XOM secures Mozambique's approval for a revised Rovuma LNG plan, lifting capacity to 18.6 MTPA while targeting lower costs and emissions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015553
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a2a1ddebbfef350e4eae9fa1756c1b2c6fe4ffb1adba21382fb184f6f8cf439
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: 3 Dividend ETFs Offering Steadier Footing in a Shaky Market
+<<<SUMMARY>>>
+SCHD, LVHI, and VYM have held up better than the S&P 500 amid the recent tech sell-off, offering lower-volatility dividend ETF options for investors seeking stability without exiting stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990991
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:57:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3da4104aa5dc45815855afb427dc26f25702732fb7b9cca09b6e7a504c46600a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Ken Fisher and 15 Other Big Funds Bought Dell Last Quarter, While 12 Sold. Who’s Right?
+<<<SUMMARY>>>
+Key TakeawaysKen Fisher’s Fisher Investments and GQG Partners were among 16 big funds that bought Dell in the quarter ended Sept. 30, while 12 sold.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051442
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=06d648e7fa7bd2d839eb0e2331ac2988180dec6e61337ee1d3cc2163d7f0075d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Wall Street Opens Sharply Higher After the S&P 500's Seven-Day Slide
+<<<SUMMARY>>>
+Oil Market Daily News Commentary - Wall Street started the Thanksgiving week on a much brighter note. All three major U.S. stock indexes moved sharply higher at Monday's open as investors returned to stocks after a seven-session losing streak for the S&P 500, and crude oil prices eased further after three straight weekly declines. For the energy companies that produce, refine, ship and move that oil and gas, the latest quarterly reports have been full of records, raised guidance and bigger payou
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051441
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2f382455bd7d5ffd6ee7520e15e64f264d7057992747d29ca913b959bae4ce0d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: ExxonMobil's $4B Kizomba Redevelopment: Can It Drive Earnings Growth?
+<<<SUMMARY>>>
+XOM advances a $4B redevelopment of Angola's Kizomba fields, while a new Block 15 discovery boosts production and earnings growth potential.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050208
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b119808693ff0d520c9480b86afc1e666b4ac4e4824f9c2f39e1f34ac63290c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Should You Buy Chevron Stock For Its Cash?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050205
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:39:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d8d3dd6378eed48eca9cbd9f141f6e7519f41a2b9077623d3a29b70dfc9d1e4a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: ExxonMobil vs. Equinor: Which is the Stronger Integrated Player?
+<<<SUMMARY>>>
+EQNR beats XOM in stock gains, dividend yield and valuation. Can strong European gas prices make EQNR the better investment?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050206
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:17:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4d3273e83d7fa536a530271d0fcf7b1049e4de21cbc1e9dd6839b6e16d9ca701
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Exxon, Chevron and ConocoPhillips Are Down. Here’s What Their Dividends Tell Investors
+<<<SUMMARY>>>
+Oil at $97 a barrel filled the vaults of three energy giants, yet their stocks slid. For retirees counting on the checks, one question matters more than the yield: which payout survives when crude stops cooperating?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050207
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae21f973315ee33146188015b3bdb19b6a8dbdabb6d52b989d4c33c561448b7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: ExxonMobil: Announces Pricing Terms, Expiration and Results of Cash Tender Offers for Outstanding 2030 1.900% Senior Notes, 2031 2.150% Senior Notes, 2030 3.482% Notes and 2040 4.227% Notes
+<<<SUMMARY>>>
+SPRING, Texas, November 23, 2026--ExxonMobil Holdings Corporation ("ExxonMobil") (NYSE: XOM) today announces the pricing terms, expiration and results of previously announced cash tender offers (each, a "Tender Offer" and collectively, the "Tender Offers") by its wholly owned subsidiaries, Pioneer Natural Resources Company ("Pioneer") and Exxon Mobil Corporation ("Exxon" and, together with Pioneer, the "Offerors" and each, an "Offeror"), to purchase up to $3,000,000,000 aggregate principal amoun
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048986
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:47:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=94c4111a9e9941943a78f0c24f677e62f2b999ae7e60f64240ba54815dc90763
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Is The Fed Fighting The Wrong Inflation?
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048539
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:38:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0fde316ec2b83d439fb73962cdc63195bd08f6279e93f23c49863c252b2259b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Can Exxon Mobil Stock Outlast The Fuel Shortage?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048540
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:11:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=28d9d26934ebde709525219d138e9599212c1ad7a7962d331f67135938edc732
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Which 3 ETFs Best Fit ExxonMobil After Its Angola Move?
+<<<SUMMARY>>>
+If you like ExxonMobil Holdings for its global oil and gas reach, owning only the single stock means your money rises and falls entirely with its own issues. Simply Wall St points out that earnings are forecast to decline by an average of 2.2% a year over the next few years, and the business is still closely tied to long term demand for fossil fuels. Holding it inside an exchange traded fund spreads those ExxonMobil specific swings across many companies. However, this also limits how much its...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048541
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:11:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fa0799e9bc4f542118392e4d729a5ef42a200d643d6fe3a61e56b67ec8f1d077
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: What Does ExxonMobil (XOM) Gain From Its $4 Billion Angola Block 15 Bet?
+<<<SUMMARY>>>
+ExxonMobil Holdings (NYSE:XOM) and partners approved a US$4b final investment decision to redevelop Angola’s offshore Block 15. The plan covers further development of existing infrastructure and progresses new hydrocarbon discoveries within the long producing deepwater block. The decision includes funding to support ongoing production commitments in Angola alongside development of recently identified resources in Block 15. The new US$4b redevelopment of Angola’s Block 15 feeds into a wider...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144047514
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:05:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a5c12fa8a7affc88039ab61dc856d18f9717243ec601ef0b18df6ad4e7bb06d2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: What iShares S&P 500 Value ETF (IVE) Bought: Apple Leads on Nov. 19
+<<<SUMMARY>>>
+The fund added $241.6 million in new buying across 429 positions, led by a $21.0 million purchase of Apple.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144047649
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:05:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d017b6d34d018f4714c26bd984105aaa53ec098932d48139e7e4c4005e48d26e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Reported SEC Probe: Could Nvidia Stock Fall To $92?
+<<<SUMMARY>>>
+What happens to a stock when SEC scrutiny of its accounting becomes public? Nvidia's holders are asking after a report on Friday. Trefis looked at six well-known cases since 2012 to find out. They are a selection, not every case.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144046082
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:03:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d8e46b7d85a4f5926415885d382b55886ff149bb419ce2adc047b2486254b879
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: First Trust L/S Equity (FTLS) Buys $73.5 Million More Berkshire on Thursday
+<<<SUMMARY>>>
+The fund bought $73.5 million of Berkshire Hathaway and $52.7 million of ExxonMobil while selling $110.3 million of Microsoft.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144047648
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:01:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3fec4829531ecd50bd6ee9f9612ce0c69ba90fc92617e80674e47f8cdd331731
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: 46 ETFs Add to ExxonMobil (XOM) Holdings on Thursday
+<<<SUMMARY>>>
+ETFs bought $80.4 million of ExxonMobil stock on Thursday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144040609
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T08:05:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c14782f19bb9e1119d74d87fa8e182b97067ea6922177f86a3aebb799feccbcd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: ExxonMobil and partners approve $4bn investment in Angola’s Block 15
+<<<SUMMARY>>>
+The final investment decision follows Kizomba C’s redevelopment approval in 2025.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:068e6aa5d5ccce34cfad8ab882d3a1f4490e32ac9b40b426888c38c6317972c1
+symbol: XOM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T10:20:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3033553/should-alps-equal-sector-weight-etf-eql-be-on-your-investing-radar?cid=CS-ZC-FT-style_box_etf-3033553
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default134.jpg
+category: 
+tickers: EQL, VOO, IVV, GOOG, GOOGL, GOOGM, GOOGN, AMZN, XOM
+keywords: ETF, large-cap blend, equal weight, sector allocation, expense ratio, dividend yield
+headline: Should ALPS Equal Sector Weight ETF (EQL) Be on Your Investing Radar?
+<<<SUMMARY>>>
+ALPS Equal Sector Weight ETF (EQL) offers broad exposure to large-cap blend stocks with a low 0.19% expense ratio and 498 holdings. The ETF has returned 6.43% year-to-date and 10.79% over the past year, with a Zacks ETF Rank of 3 (Hold). However, larger competitors like Vanguard 500 Index Fund and iShares Core S&P 500 ETF offer similar exposure at equally low costs.
+<<<INSIGHTS>>>
+EQL | neutral | The ETF is presented as a solid option with low costs (0.19% expense ratio) and good diversification (498 holdings), but receives a Hold rating. It underperforms in assets compared to competitors and offers no distinct advantage over larger alternatives.
+VOO | positive | Positioned as a superior alternative with $955.52 billion in assets, matching 0.03% expense ratio, and tracking a similar index with greater scale and efficiency.
+IVV | positive | Presented as a competitive alternative with $804.60 billion in assets and an equally low 0.03% expense ratio, offering better value than EQL.
+GOOG | neutral | Mentioned as a top holding (4.19% of EQL portfolio) but no specific sentiment is expressed; included for informational purposes only.
+GOOGL | neutral | Mentioned as a top holding (4.19% of EQL portfolio) but no specific sentiment is expressed; included for informational purposes only.
+GOOGM | neutral | Mentioned as a top holding (4.19% of EQL portfolio) but no specific sentiment is expressed; included for informational purposes only.
+GOOGN | neutral | Mentioned as a top holding (4.19% of EQL portfolio) but no specific sentiment is expressed; included for informational purposes only.
+AMZN | neutral | Listed as a top holding in EQL but no specific sentiment is expressed; included for informational purposes only.
+XOM | neutral | Listed as a top holding in EQL but no specific sentiment is expressed; included for informational purposes only.
+<<<END>>>

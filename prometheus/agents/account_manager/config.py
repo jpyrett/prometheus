@@ -6,6 +6,7 @@
     config.direct.valid_minutes             # 30: how long the price of a trade the user named stays good (entry 87)
     config.ignore_critic.valid_minutes      # 30: the same for an Advisor recommendation the Critic did not review because the user ticked "Ignore Critic" (entry 148)
     config.news.default_days                # 7: the window of a request that only asks for a stock's news when neither the words nor the model give one; max_days 90, max_stocks 5, top_k 12 (entry 149)
+    config.quote.max_stocks                 # 10: the most stocks one request that only asks for the current price may name (entry 150)
     config.missing.max_prompts              # 5: the most Ask-mode questions about stocks the Data Clerk did not find (entry 102)
     config.orders.watch_seconds             # 60: how often the web server's watcher checks the waiting limit orders while the market is open (entry 140)
 
@@ -67,6 +68,10 @@ class News(_Section):
     top_k: int = Field(ge=1, le=20)                  # the most articles the Data Clerk's summary may use (the work order's `top_k`, at most `work_order.MAX_TOP_K`)
 
 
+class Quote(_Section):
+    max_stocks: int = Field(ge=1, le=20)             # the most stocks (symbols and companies) one request that only asks for the current price may name (entry 150, "What's the current price of TSLA?"): one Finnhub quote call for each
+
+
 class Orders(_Section):
     watch_seconds: int = Field(ge=5, le=3600)        # how often the watcher in the web server quotes the symbols of the waiting limit orders, DURING the regular session only (entry 140, W5): one Finnhub quote call for all of them, a convention of 60 seconds
 
@@ -80,6 +85,7 @@ class AccountManagerConfig(_Section):
     neutral: Neutral
     ignore_critic: IgnoreCritic
     news: News
+    quote: Quote
     orders: Orders
 
 

@@ -457,7 +457,7 @@ def test_the_real_replies_to_recommend_3_oil_stocks_below_40_are_a_look_with_a_l
     """The model read "Recommend 3 oil stocks" as a purchase, twice, and code refused it ("buying was not asked for"). A recommend cue and no buying word is a request to LOOK: a program decides it from the words."""
     typed = "Recommend 3 oil stocks below $40"
     intent = it.parse_intent(real(typed, 0), typed)
-    assert (intent.action, intent.topic, intent.count, intent.max_price) == ("research", "oil", 3, Decimal(40)) and "nothing will be bought" in intent.corrected[0] and intent.describe().startswith("look at (nothing will be bought)")
+    assert (intent.action, intent.topic, intent.count, intent.max_price) == ("research", "oil", 3, Decimal(40)) and "nothing will be bought" in intent.corrected[0] and intent.describe().startswith("look at the 3 most recommended") and "(nothing will be bought)" not in intent.describe()      # the note already says it: never twice (Jacob, 2026-11-23)
     assert read("Recommend 3 oil stocks below $40").action == "research"
 
 

@@ -57575,3 +57575,495 @@ CHRD | positive | Company raised production guidance twice, demonstrating operat
 CVX | positive | Benefits from high oil prices with growing production volumes from Permian operations, positioning the company well to capitalize on elevated crude prices.
 COP | positive | Generates significant revenues from crude oil and has low-cost drilling opportunities across Permian, Eagle Ford, and Bakken regions with bright long-term outlook for upstream operations.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015558
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T17:22:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=200c4dca2b7e8c31bd087481df1ac7d365a39e9285efed65e9fa27943b1f88d2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Gas Prices Are Dropping at a 2008 Pace Right Before Thanksgiving
+<<<SUMMARY>>>
+Pump prices are tumbling toward a possible Thanksgiving record, yet the 2008 comparison breaks down on closer inspection. Behind the cheaper fill-ups sits a shipping lane that could squeeze the biggest energy fund even harder.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015531
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:13:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4666584633d48b1878cc36c04dd784cdfda6e87d171a09e967e22dfce1fffc82
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Warren Buffett’s Top 10 Stock Picks: Latest 13F
+<<<SUMMARY>>>
+Warren Buffett no longer runs the conglomerate he built over six decades, but his fingerprints are still on nearly everything it owns. He handed the chief executive role to Greg Abel at the end of 2025, and Abel took over at the start of 2026. On September 18, Buffett, 96, stepped down as chairman, a […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012060
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T12:30:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d96cc822f5db7dda2d25fb8416f73688e1f0f2e3a7f67c6aca93259bf6f4fb27
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: How Retirees Can Turn $450,000 Into Passive Income With These 5 Dividend Stocks
+<<<SUMMARY>>>
+Selling shares in a downturn can turn a temporary loss into a permanent one for retirees. Five dividend payers from five sectors might offer a way out, but each hides a risk worth knowing before you commit a dollar.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144022872
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50e33ae9719d65640de0fb678fc6de108c1385f1c59c0bd86359799444980885
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: MarketBeat Week in Review – 11/16 - 11/20
+<<<SUMMARY>>>
+Despite the Dow's drop below 50,000 and a rough week for stocks, strong earnings and falling oil offer context. MarketBeat analysts round up this week's top stock picks and analysis.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144011302
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T10:50:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a7837123469be1a8022fbc0450a0b581be41d755740d447dfec7cecf4cde45b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: How Many Shares of Chevron, Shell or Exxon Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, $1,000 a month in dividends takes about $360,000 of Shell stock, $351,300 of Chevron or $448,600 of ExxonMobil. All three cover their dividends comfortably, paying out between 27% and 41% of free cash flow over their latest twelve months.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143997832
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T01:12:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=17d9a43edc4e0bbf7660ddb89bb64ff7cd0f83be77c80cfdbab6db2f6c8a1801
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: What Does Chevron (CVX) Greece Offshore Exploration Mean For Investors?
+<<<SUMMARY>>>
+Chevron (NYSE:CVX) and HELLENiQ ENERGY plan to start offshore oil and gas exploration in the southern Ionian Sea in Greece. The initiative focuses on potential hydrocarbon resources in deepwater blocks that form part of Greece's push to increase domestic energy output. Greek authorities have framed the project as part of a broader effort to balance energy security goals with environmental safeguards in the region. Chevron's move into offshore exploration in the southern Ionian Sea is worth...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990992
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T19:02:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ebfeaec4c120e1b2bae21f7c56165e0e468982a6509d816893517a97358cfa8d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: These 4 Conservative Dow Jones Industrials Dividend Stocks Are Built for Sell-Offs
+<<<SUMMARY>>>
+The Dow just shed 1,100 points in a single session, and retirees leaning on dividend income are asking whether their payouts can survive the next drop. Four blue chips kept raising through 2008 and 2020, and none of them needs AI to win.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015553
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a2a1ddebbfef350e4eae9fa1756c1b2c6fe4ffb1adba21382fb184f6f8cf439
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: 3 Dividend ETFs Offering Steadier Footing in a Shaky Market
+<<<SUMMARY>>>
+SCHD, LVHI, and VYM have held up better than the S&P 500 amid the recent tech sell-off, offering lower-volatility dividend ETF options for investors seeking stability without exiting stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144023594
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:59:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=16104d4746ccd19535319f039b31551f9510f0946ead2f3bc4db32b8861d2fa5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Chevron or Southern Company: The One Dividend Stock I’d Hold for the Next 20 Years
+<<<SUMMARY>>>
+Key TakeawaysChevron and Southern Company yield 3. 4% and 3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015572
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:58:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f3320a83e1606e1191f52faea61d128c606cee4786277473c96e35345a255937
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Chevron or CVS: Only One Gets My Dividend Dollars for the Next 10 Years
+<<<SUMMARY>>>
+Key TakeawaysCVS Health plans to split into two public companies by the first half of 2028, and its shares fell by double digits the day it announced the plan. Chevron’s free cash flow more than doubled in the third quarter of 2026, to $12.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012484
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4605497b15fe0521bed14b35d729a6ba0bb70d9b806a949d13f1fe5b391a38bd
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/20/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: CVX
+keywords: 
+headline: Defensives Lead Sectors Friday As Growth Trails
+<<<SUMMARY>>>
+Six sectors are higher and five are lower in Friday&#39;s regular session, with defensive sectors holding two of the top three positions alongside Energy. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051453
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T17:39:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=186802f494677968a469c5c563f81f6c712f439135a421166223bb98b3b29e1b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Chevron Corp. (CVX): Q3 Earnings Triple on Refining Margin Surge
+<<<SUMMARY>>>
+Meridian Funds, managed by ArrowMark Partners, released its third-quarter 2026 investor letter for “Meridian Hedged Equity Fund”. The letter can be downloaded here. In the quarter, a modest gain in U.S. equities masked a significant sector rotation and sharply narrowing leadership. The S&P 500 rose 2.30% in the quarter, bringing the year-to-date gain to 12.75%. […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051442
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=06d648e7fa7bd2d839eb0e2331ac2988180dec6e61337ee1d3cc2163d7f0075d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Wall Street Opens Sharply Higher After the S&P 500's Seven-Day Slide
+<<<SUMMARY>>>
+Oil Market Daily News Commentary - Wall Street started the Thanksgiving week on a much brighter note. All three major U.S. stock indexes moved sharply higher at Monday's open as investors returned to stocks after a seven-session losing streak for the S&P 500, and crude oil prices eased further after three straight weekly declines. For the energy companies that produce, refine, ship and move that oil and gas, the latest quarterly reports have been full of records, raised guidance and bigger payou
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051454
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T15:18:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b371d05d9356e81da5312a4fbb0256d0e06b7d87f6287e11d2df05f51cdcd4fc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Chevron Expands Greek Offshore Exploration With Seismic Surveys
+<<<SUMMARY>>>
+CVX's Greek offshore exploration spans four blocks across about 47,000 square kilometers, as seismic surveys assess prospects for long-term upstream growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050063
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T15:13:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=631ad293b1e1dfcba75b8db557ddfccf422fc0cca19b35418729c622adc6e3cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Texas Pacific Land to Buy EagleRock, Expanding Permian Land and Water Footprint
+<<<SUMMARY>>>
+Texas Pacific Land (NYSE:TPL) said it will acquire EagleRock Land in an all-stock transaction that would expand its land and water business in the Permian Basin, particularly in New Mexico and the Midland Basin. Executives said the combined company would own about 1 million surface acres and have a
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050208
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:40:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b119808693ff0d520c9480b86afc1e666b4ac4e4824f9c2f39e1f34ac63290c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Should You Buy Chevron Stock For Its Cash?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050206
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:17:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4d3273e83d7fa536a530271d0fcf7b1049e4de21cbc1e9dd6839b6e16d9ca701
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Exxon, Chevron and ConocoPhillips Are Down. Here’s What Their Dividends Tell Investors
+<<<SUMMARY>>>
+Oil at $97 a barrel filled the vaults of three energy giants, yet their stocks slid. For retirees counting on the checks, one question matters more than the yield: which payout survives when crude stops cooperating?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048539
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:38:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0fde316ec2b83d439fb73962cdc63195bd08f6279e93f23c49863c252b2259b6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: Can Exxon Mobil Stock Outlast The Fuel Shortage?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048549
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:27:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dba3631d92d95d969789db18d11ab2c791ebf16e71b37f15c1992131fa145398
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CVX
+keywords: 
+headline: CVX vs. SHEL: Which Energy Giant Offers Better Shareholder Returns?
+<<<SUMMARY>>>
+Chevron's 39.1% stock rally outshines Shell's 27.8% gain, but stronger cash generation and aggressive buybacks keep the shareholder returns battle interesting.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144042102
+symbol: CVX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T09:50:55Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=dd2f5b9dd7d33afb5c62593ab3f2c4d51c3ac8410ef8b53a3fdec35a840101a5
+image_url: https://www.chartmill.com/images/uploads/Best_Dividend_500_264px_webp_9524a3945f.webp
+category: company
+tickers: CVX
+keywords: 
+headline: Chevron (NYSE:CVX): A Quality Dividend Stock for Income Investors
+<<<SUMMARY>>>
+Chevron clears ChartMill’s Best Dividend Stocks screen with a 4.17% yield, solid health and profitability, and a decade-long payout record.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0a10f23c5f3b9aae3ac92bfaadbadc3c11ce23d0018e4b1001c7d2a153be82b6
+symbol: CVX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T18:08:01Z
+publisher: The Motley Fool
+author: Todd Shriber
+url: https://www.fool.com/investing/2026/11/21/if-the-fed-hikes-rates-this-year-im-loading-up-on-this-1-etf/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F047b90d8453cf66b65f3804ee2a2974c47a52a25-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: VDE, CVX
+keywords: Federal Reserve rate hikes, energy sector, ETF investment, oil prices, portfolio hedging, interest rates
+headline: If the Fed Hikes Rates This Year, I'm Loading Up on This 1 ETF
+<<<SUMMARY>>>
+The Vanguard Energy ETF (VDE) is positioned as an attractive investment ahead of expected Federal Reserve rate hikes. With a year-to-date gain of 43%, the $11.9 billion fund benefits from rising oil prices and historically strong energy sector performance during rate increases. However, risks include oil price volatility and concentration in ExxonMobil and Chevron, which together represent nearly 40% of the fund's holdings.
+<<<INSIGHTS>>>
+VDE | positive | The ETF has delivered strong year-to-date returns of 43% and is positioned to benefit from expected Fed rate hikes. Energy stocks historically perform well during rising rate environments, and the fund holds strong dividend-paying companies with solid balance sheets.
+CVX | positive | Described as one of the energy sector's most dependable dividend growers with a strong balance sheet. Represents 14.67% of VDE's holdings, though concentration risk is noted.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:95f8efb68d60ff080d02c7b109a5a25a4a791a5e01d8af506872d14a3c7f1e29
+symbol: CVX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T00:15:02Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/22/berkshire-hathaways-next-big-ai-bet-could-be-hiding-in-plain-sight/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F3fa6d30276fc5eb6b7d794f515c9e58b00f2c501-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: BRK.A, BRK.B, NEE, NEEpN, NEEpS, NEEpT, NEEpU, NEEpV, NEEpW, EPD, CVX
+keywords: Berkshire Hathaway, artificial intelligence, utilities, energy, data centers, capital investment, infrastructure
+headline: Berkshire Hathaway's Next Big AI Bet Could Be Hiding in Plain Sight
+<<<SUMMARY>>>
+Berkshire Hathaway's utility and energy operations position it to benefit significantly from AI growth, as data centers require massive amounts of electricity and natural gas. Rather than acquiring new AI technology businesses, the company is likely to increase capital investments within its existing infrastructure operations to serve hyperscalers and data centers, leveraging its $370+ billion cash hoard.
+<<<INSIGHTS>>>
+BRK.A | positive | The article highlights Berkshire's hidden AI exposure through its utility and energy operations, which are positioned to benefit from growing data center demand. The company has substantial capital to invest in infrastructure serving AI companies, and management has already signaled willingness to fund such projects.
+BRK.B | positive | The article highlights Berkshire's hidden AI exposure through its utility and energy operations, which are positioned to benefit from growing data center demand. The company has substantial capital to invest in infrastructure serving AI companies, and management has already signaled willingness to fund such projects.
+NEE | neutral | Mentioned as a potential acquisition target for Berkshire, but the article suggests such large acquisitions are unlikely. Serves as a reference point for the type of utility business that could benefit from AI infrastructure demand.
+NEEpN | neutral | Mentioned as a potential acquisition target for Berkshire, but the article suggests such large acquisitions are unlikely. Serves as a reference point for the type of utility business that could benefit from AI infrastructure demand.
+NEEpS | neutral | Mentioned as a potential acquisition target for Berkshire, but the article suggests such large acquisitions are unlikely. Serves as a reference point for the type of utility business that could benefit from AI infrastructure demand.
+NEEpT | neutral | Mentioned as a potential acquisition target for Berkshire, but the article suggests such large acquisitions are unlikely. Serves as a reference point for the type of utility business that could benefit from AI infrastructure demand.
+NEEpU | neutral | Mentioned as a potential acquisition target for Berkshire, but the article suggests such large acquisitions are unlikely. Serves as a reference point for the type of utility business that could benefit from AI infrastructure demand.
+NEEpV | neutral | Mentioned as a potential acquisition target for Berkshire, but the article suggests such large acquisitions are unlikely. Serves as a reference point for the type of utility business that could benefit from AI infrastructure demand.
+NEEpW | neutral | Mentioned as a potential acquisition target for Berkshire, but the article suggests such large acquisitions are unlikely. Serves as a reference point for the type of utility business that could benefit from AI infrastructure demand.
+EPD | neutral | Referenced as a large midstream company that could theoretically be acquired by Berkshire, but the article indicates such acquisitions are improbable. Represents the midstream sector's capital-intensive nature.
+CVX | positive | Cited as a positive example of a Berkshire holding that is already capitalizing on AI infrastructure needs by building dedicated power plants for data centers using natural gas, demonstrating the real opportunity in this sector.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:dec85c2e25f7686ebcb98cf6c535d452d3c065b13add1865d47b1d9d30860127
+symbol: CVX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T12:27:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033622/cvx-vs-shel-which-energy-giant-offers-better-shareholder-returns?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3033622
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: CVX, SHEL
+keywords: energy majors, shareholder returns, dividends, share buybacks, cash flow, earnings estimates, capital allocation
+headline: CVX vs. SHEL: Which Energy Giant Offers Better Shareholder Returns?
+<<<SUMMARY>>>
+Chevron and Shell both prioritize shareholder returns through dividends and buybacks, but with different strategies. Chevron outperformed with a 39.1% share-price gain versus Shell's 27.8%, backed by a 39-year dividend growth streak and stronger 2027 earnings revisions. Shell leads in absolute cash generation and aggressive buybacks ($5 billion program), but Chevron emerges as the better pick for long-term investors seeking consistent dividend growth and earnings momentum.
+<<<INSIGHTS>>>
+CVX | positive | Superior 39.1% share-price performance, 39-year consecutive dividend growth streak, stronger 2027 earnings estimate revisions (+22.49%), robust balance sheet (0.4x net debt-to-operating-cash-flow), and consistent shareholder-friendly capital allocation strategy position it as the better long-term investment choice.
+SHEL | neutral | While Shell demonstrates stronger absolute cash generation ($21B operating cash flow vs. CVX's $16B), more aggressive buyback strategy ($5B new program), and stronger 2026 earnings revisions (+15.52%), it trails Chevron in share-price performance, dividend consistency, and longer-term earnings momentum, making it a secondary choice despite its merits.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:59637e163bee35e194dcf7cf17085173853600ff009b63cc6d864b65d00778bf
+symbol: CVX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T13:40:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033800/here-s-why-chevron-cvx-is-a-strong-value-stock?cid=CS-ZC-FT-fundamental_analysis|zacks_education_value_score-3033800
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default356.jpg
+category: 
+tickers: CVX
+keywords: Chevron, oil and gas, Zacks Rank, earnings estimates, value investing, hold rating
+headline: Here's Why Chevron (CVX) is a Strong Value Stock
+<<<SUMMARY>>>
+Chevron (CVX) receives a #3 (Hold) rating from Zacks with a VGM Score of A and Value Style Score of B. The company, one of the world's largest integrated oil and gas producers, has seen eight analysts revise earnings estimates upward in the last 60 days, with the consensus estimate increasing to $18.71 per share for fiscal 2026. Despite the hold rating, strong valuation metrics and positive earnings revisions make it worthy of investor consideration.
+<<<INSIGHTS>>>
+CVX | positive | Despite a Hold (#3) rating, Chevron demonstrates positive fundamentals including upward earnings estimate revisions from eight analysts (+$2.19 to $18.71 per share), attractive valuation metrics (forward P/E of 11.14), strong VGM and Value Style Scores (both A/B), and an 18.4% average earnings surprise. These factors suggest solid investment potential despite the conservative hold rating.
+<<<END>>>

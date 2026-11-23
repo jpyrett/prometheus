@@ -131,7 +131,7 @@ export default function StatesPage() {
               <Check
                 label={
                   <>
-                    Refresh market data first <span className="paid">(paid)</span>
+                    Refresh market data first
                   </>
                 }
                 defaultChecked

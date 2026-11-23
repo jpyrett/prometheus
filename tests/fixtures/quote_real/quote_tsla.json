@@ -1,0 +1,116 @@
+{
+ "request": "Whats the current price of: TSLA?",
+ "intent": {
+  "request": "Whats the current price of: TSLA?",
+  "action": "quote",
+  "topic": null,
+  "symbols": [
+   "TSLA"
+  ],
+  "companies": [],
+  "count": null,
+  "allocation": "default",
+  "budget": null,
+  "each": false,
+  "orders": []
+ },
+ "path": [
+  "account_manager",
+  "data_clerk"
+ ],
+ "order": {
+  "schema_version": 1,
+  "request_id": "08b709b9c249",
+  "requester": "desk",
+  "created_utc": "2026-11-23T20:26:50Z",
+  "query": "What is the current price of TSLA?",
+  "action_type": "fetch_quote",
+  "subject": [
+   "TSLA"
+  ],
+  "company": null,
+  "source": "news",
+  "time_period": null,
+  "since_days": null,
+  "live": false,
+  "top_k": 5,
+  "criteria": null,
+  "status": "data_ready",
+  "resolved": null,
+  "data": {
+   "answer": "TSLA 388.42",
+   "references": [],
+   "sources": [],
+   "sweep": {},
+   "results": {},
+   "filing_evidence": {},
+   "metrics": {},
+   "companies": [
+    {
+     "brand": "TSLA",
+     "parent": null,
+     "symbol": "TSLA",
+     "company": null,
+     "public": true,
+     "how": "symbol as typed",
+     "note": null
+    }
+   ],
+   "market_brief": {},
+   "verification": {},
+   "quotes": {
+    "TSLA": {
+     "symbol": "TSLA",
+     "price": 388.42,
+     "change": 42.6,
+     "change_percent": 12.3185,
+     "high": 393.83,
+     "low": 368.2875,
+     "open": 368.2875,
+     "previous_close": 345.82,
+     "as_of_utc": "2026-11-23T20:26:31Z",
+     "source": "Finnhub /quote"
+    }
+   },
+   "analysts": {},
+   "bars": {},
+   "refresh": [],
+   "security_dropped": [],
+   "problems": [],
+   "notes": [],
+   "no_supporting_text": false,
+   "tool_calls": [
+    {
+     "name": "get_quote",
+     "args": {
+      "symbol": "TSLA"
+     },
+     "outcome": "ok"
+    }
+   ],
+   "turns": 0,
+   "tokens_in": 0,
+   "tokens_out": 0,
+   "completed_utc": "2026-11-23T20:26:50Z"
+  },
+  "recommendations": [],
+  "advisor_runs": [],
+  "errors": [],
+  "metrics": null,
+  "case": null,
+  "sector": null,
+  "candidates": [],
+  "verify": null,
+  "reviews": [],
+  "critic_runs": [],
+  "trade_decisions": [],
+  "bars": null,
+  "ratings": null,
+  "trades": [],
+  "trader_runs": [],
+  "direct_orders": [],
+  "max_price": null,
+  "min_price": null,
+  "ignore_critic": false
+ }
+}

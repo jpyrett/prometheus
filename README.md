@@ -66,6 +66,7 @@ Other recorded sessions can be replayed the same way:
 
 ```bash
 ./run_ui.sh --replay tests/fixtures/news_real/news_tsla_week_fetched.json        # "What's Tesla doing the last week?": the News pane
+./run_ui.sh --replay tests/fixtures/quote_real/quote_tsla.json                    # "Whats the current price of: TSLA?": the price in the output
 ./run_ui.sh --replay tests/fixtures/session_real/bill_gates_direct_order.json     # a direct order: "Buy ... shares of ..."
 ./run_ui.sh --replay tests/fixtures/session_real/ant_raise_funds_ask.json         # selling holdings to pay for a purchase (RaiseFunds)
 ./run_ui.sh --replay tests/fixtures/session_real/auto_ignore_critic.json          # Auto mode with "Ignore Critic"
@@ -120,6 +121,7 @@ Open **http://127.0.0.1:8000**:
 3. **Keep "Refresh market data first" ticked** (it is on by default). The 26 GB of historical price data is not in the repository, so the Data Clerk must fetch the bars and news for the companies you ask about. This needs `POLYGON_API_KEY` and costs API calls.
 4. Type a request and press **Go!**. Try these:
    - `Show the news for AAPL`
+   - `What's the current price of AAPL?`
    - `Buy 5 shares of MSFT`
    - `Buy the 3 most recommended oil stocks with $3,000`
    - `What are the best AI stocks? Spend $2,000 split evenly`

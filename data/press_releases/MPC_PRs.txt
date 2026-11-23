@@ -1,0 +1,108 @@
+<<<PRESS_RELEASE>>>
+id: 575ec0679663594e
+symbol: MPC
+published_utc: 2025-12-18T06:45:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-names-maria-khoury-chief-financial-officer-2025-12-18
+headline: Marathon Petroleum Corp. Names Maria A. Khoury as Chief Financial Officer
+<<<TEXT>>>
+--Marathon Petroleum Corp. today announced that Maria A. Khoury will join the company as Executive Vice President and Chief Financial Officer, effective January 19, 2026. Prior to her focus on life sciences, Khoury served in financial leadership positions for GE Oil& Gas in the United States and Italy from 2010 to 2017, including as CFO of GE's Drilling and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 770d84af3dfd61f0
+symbol: MPC
+published_utc: 2026-01-30T16:30:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-announces-quarterly-dividend-2026-01-30
+headline: Marathon Petroleum Corp. Announces Quarterly Dividend
+<<<TEXT>>>
+--The board of directors of Marathon Petroleum Corp. has declared a dividend of $1.00 per share on common stock. Marathon Petroleum Corporation is a leading, integrated, downstream and midstream energy company headquartered in Findlay, Ohio. Investor Relations Contacts: 421-2071 Kristina Kazarian, Vice President Finance and Investor Relations Brian...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: aeb4754148f38428
+symbol: MPC
+published_utc: 2026-01-30T18:10:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-host-2026-annual-meeting-shareholders-2026-01-30
+headline: Marathon Petroleum Corp. to host 2026 annual meeting of shareholders
+<<<TEXT>>>
+--Marathon Petroleum Corp. announced today that its annual meeting of shareholders will take place April 29, 2026, at 10 a.m. ET in a virtual-only format via live webcast. Marathon Petroleum Corporation is a leading, integrated, downstream and midstream energy company headquartered in Findlay, Ohio. Investor Relations Contacts: 421-2071 Kristina Kazarian,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 88cfc50a3af3c87e
+symbol: MPC
+published_utc: 2026-02-03T06:30:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-reports-fourth-quarter-and-full-year-2025-results-2026-02-03
+headline: Marathon Petroleum Corp. Reports Fourth-Quarter and Full-Year 2025 Results
+<<<TEXT>>>
+Fourth- quarter net income attributable to MPC of $1.5 billion, or $5.12 per diluted share, adjusted net income of $1.2 billion, or $4.07 per diluted share Full-year refining utilization of 94 percent and margin capture of 105 percent, demonstrating strong operational and commercial performance Cash from operations of $8.3 billion enabled peer-leading...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5a3578a346fafd12
+symbol: MPC
+published_utc: 2026-02-03T06:30:00Z
+url: https://www.nasdaq.com/press-release/mplx-lp-reports-fourth-quarter-and-full-year-2025-results-2026-02-03
+headline: MPLX LP Reports Fourth-Quarter and Full-Year 2025 Results
+<<<TEXT>>>
+Full-year 2025 net income attributable to MPLX of $4.9 billion and adjusted EBITDA of $7.0 billion Full-year 2025 growth investments of $5.5 billion and capital returned to unitholders of $4.4 billion, delivering on capital return commitment Progressing natural gas and NGL value chains through construction of Gulf Coast fractionation and export...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f2c8ceb769a190fa
+symbol: MPC
+published_utc: 2026-03-23T16:15:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-report-first-quarter-financial-results-may-5-2026-2026-03-23
+headline: Marathon Petroleum Corp. to Report First-Quarter Financial Results on May 5, 2026
+<<<TEXT>>>
+--Marathon Petroleum Corp. will host a conference call on Tuesday, May 5, 2026, at 11 a.m. EDT to discuss 2026 first-quarter financial results. MPC is a leading, integrated, downstream and midstream energy company headquartered in Findlay, Ohio. Investor Relations Contacts: 421-2071 Kristina Kazarian, Vice President Finance and Investor Relations Brian...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6e5df45b673ca970
+symbol: MPC
+published_utc: 2026-04-29T15:10:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-announces-quarterly-dividend-2026-04-29
+headline: Marathon Petroleum Corp. Announces Quarterly Dividend
+<<<TEXT>>>
+--The board of directors of Marathon Petroleum Corp. has declared a dividend of $1.00 per share on common stock. Marathon Petroleum Corporation is a leading, integrated, downstream and midstream energy company headquartered in Findlay, Ohio. Investor Relations Contacts: 421-2071 Kristina Kazarian, Vice President Finance and Investor Relations Brian...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 22a495263c3b88da
+symbol: MPC
+published_utc: 2026-05-05T06:45:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-reports-first-quarter-2026-results-2026-05-05
+headline: Marathon Petroleum Corp. Reports First-Quarter 2026 Results
+<<<TEXT>>>
+First-quarter net income attributable to MPC of $511 million, or $1.73 per diluted share, adjusted net income of $487 million, or $1.65 per diluted share Cash from operations of $1.1 billion, reflecting safe and reliable performance while completing approximately 40% of 2026 planned turnaround activity Executing value-enhancing capital strategy;...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3f60f583bd411efc
+symbol: MPC
+published_utc: 2026-05-11T16:05:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-names-brian-worthington-vice-president-investor-relations
+headline: Marathon Petroleum Corp. names Brian Worthington vice president, Investor Relations; Kristina Kazarian to become vice president, Finance and Treasurer
+<<<TEXT>>>
+--Marathon Petroleum Corp. announced today that Brian Worthington has been named vice president, Investor Relations. Worthington succeeds Kristina Kazarian, who will become vice president, Finance and Treasurer.  "Over the past six years, Brian has closely engaged with our investment community and developed a deep understanding of our business, positioning...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d684e4bd2fc2d320
+symbol: MPC
+published_utc: 2026-06-16T06:50:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-report-second-quarter-financial-results-august-4-2026-2026-06
+headline: Marathon Petroleum Corp. to Report Second-Quarter Financial Results on August 4, 2026
+<<<TEXT>>>
+--Marathon Petroleum Corp. will host a conference call on Tuesday, August 4, 2026, at 11 a.m. EDT to discuss 2026 second-quarter financial results. Interested parties may listen to the conference call by visiting MPC's website at www.marathonpetroleum.com. A replay of the webcast will be available on MPC's website for two weeks.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5faf82a72c87dd71
+symbol: MPC
+published_utc: 2026-07-29T17:05:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-announces-quarterly-dividend-2026-07-29
+headline: Marathon Petroleum Corp. Announces Quarterly Dividend
+<<<TEXT>>>
+--The board of directors of Marathon Petroleum Corp. has declared a dividend of $1.00 per share on common stock. The dividend is payable Sept. 10, 2026, to shareholders of record as of the close of business Aug. 19, 2026. Marathon Petroleum Corporation is a leading, integrated, downstream and midstream energy company headquartered in Findlay, Ohio.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 04b86bcb37fc08c0
+symbol: MPC
+published_utc: 2026-08-04T06:45:00Z
+url: https://www.nasdaq.com/press-release/marathon-petroleum-corp-reports-second-quarter-2026-results-2026-08-04
+headline: Marathon Petroleum Corp. Reports Second-Quarter 2026 Results
+<<<TEXT>>>
+Second-quarter net income attributable to MPC of $5.1 billion, or $17.73 per diluted share $8.5 billion of adjusted EBITDA, with strong commercial and operational performance across the system Executing value-enhancing capital strategy; El Paso and Robinson yield-enhancing investments online in 2 Q26, extending the competitive position of these...
+<<<END>>>

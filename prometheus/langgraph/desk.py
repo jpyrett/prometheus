@@ -43,6 +43,11 @@ The graph:
     The Data Clerk node names the stocks as for any request (a theme is searched as a term and no company is looked for), always FETCHES the latest news of each stock first (`DataClerk.refresh_news`: the news only; refused while a past day is bound
     and when the test-only `request["refuse_news_fetch"]` is set; a fetch that fails does not stop the run: the stored news is searched and the order says so) and answers with `DataClerk.request_news`: a cited summary, the news search only.
 
+    A REQUEST THAT ONLY ASKS FOR THE CURRENT PRICE (entry 150, `design/quote_request_spec.md`: "What's the current price of TSLA?", "Price of Tesla", "Quote for AAPL and NVDA"; `intent.action == "quote"`) is the same shape, on every desk:
+    START -> account_manager -> data_clerk -> END                                 (the Advisor, the Critic, the decision, the funds node and the Trader are never run; nothing reads or writes the account and nothing is asked, in either mode)
+    The Data Clerk node names the stocks as for any request (`find_companies_of`), then calls `DataClerk.request_quotes` ONCE: the live quote of each symbol (Finnhub's `/quote`, or the stored close of the simulated day with USE_LIVE_TRADING=false).
+    No model call, no news, no search, no bars refresh and no file written; the run's fetch box means nothing to it.
+
 Each node is one agent of the week 2 design, reduced to what exists today, and each one reads and updates the SAME work order, which is the
 state of the graph (the design: "the saved WORK_ORDER is the same object every agent reads"):
 
@@ -163,6 +168,7 @@ class DeskState(TypedDict, total=False):
     security: dict | None                                      # the security layer's verdict on the user's request when it was refused or flagged (entry 116): the action, the risk, the rules; an ALLOW leaves it out
 
 
+ANSWERED_BY_THE_CLERK = ("news", "quote")   # the requests the Data Clerk alone answers (entry 149: the news; entry 150: the current price): the desk ends after its node, nothing is recommended, decided or traded
 CRITIC_ENDS = ("reviewed", "decided")   # where a run with the Critic and without the Trader ends: `decided`, or `reviewed` while a decision waits for the user's answer
 
 
@@ -178,7 +184,7 @@ def reached_its_end(state: DeskState) -> bool:
         return False
     if order.status == "traded" or "trader" in path:
         return True
-    if (state.get("plan") or {}).get("action") == "news":      # a request that only asks for the news ends at the Data Clerk, with its answer (entry 149)
+    if (state.get("plan") or {}).get("action") in ANSWERED_BY_THE_CLERK:      # a request that only asks for the news or the price ends at the Data Clerk, with its answer (entries 149 and 150)
         return order.status == "data_ready"
     trader_built = bool(state.get("with_trader")) or (state.get("request") or {}).get("trade") is not None   # `trade` is in the request when `--trade` was typed
     if "account_manager_direct" in path:   # a direct order (entry 87) ends at the Account Manager's decision, as the Critic's path does; a decided order the Trader had nothing to do with did not reach it
@@ -373,6 +379,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             return {"order": None, "errors": ["a direct order needs the desk that decides and trades (with the Critic's desk, build_desk(with_critic=True))"], "plan": None}
         if intent.action == "news":      # the user only wants to see the news (entry 149): nothing is bought, decided or traded, so nothing is confirmed or asked, in either mode
             return news_plan(state, intent, asked)
+        if intent.action == "quote":      # the user only wants to see the current price (entry 150): the same
+            return quote_plan(state, intent, asked)
         if confirm is not None and confirm(intent) is not True:
             return {"order": None, "errors": ["stopped: what was understood was not confirmed, so nothing was done"], "plan": None}
         if intent.action == "order":      # the user named the trade (entries 87 and 88): the work order holds the user's own orders, and there is nothing to search, recommend or review
@@ -448,6 +456,42 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             answered.data.notes = [*answered.data.notes, *result.notes]
         return {"order": answered}
 
+    def quote_plan(state: DeskState, intent, asked) -> dict:
+        """The work order and the plan of a request that only asks for the current price (entry 150). The order is a `fetch_quote` order (the Data Clerk's `request_quotes`) with the stocks as the user named them, until the Data Clerk has found them (`quote_data`).
+        It is not live (nothing is fetched: a quote is one lookup of the price, never a news, bars or filings refresh) and has no case and no price limit: nothing is recommended. It is not checked by `verify_request`, the check of a search: `request_quotes` has its own."""
+        order = new_work_order(f"What is the current price of {intent.what()}?", requester=state["request"].get("requester", REQUESTER), action_type="fetch_quote", source=DEFAULT_SOURCE, subject=[*intent.symbols, *intent.companies],
+                               company=asked.company if asked.kind == "company" else None, live=False)
+        named = [*intent.symbols, *intent.companies]
+        plan = {"intent": intent, "request": asked, "action": "quote", "find": max(1, len(named)), "request_text": intent.request, "result": Result(asked, "funds", eastern_date(clock()), max(1, len(named)))}
+        return {"order": order, "errors": [], "plan": plan}
+
+    def quote_data(state: DeskState, clerk: DataClerk) -> dict:
+        """The Data Clerk's part of a price run (entry 150): name the stocks (as for any request: `find_companies_of`), set them as the order's subject and call `request_quotes` ONCE: no model, no news fetch, no search, no file. A symbol whose quote
+        failed is named in `order.data.problems` and the others are still on the order: with at least one quote the order is `data_ready` (the problems stay on it, said to the user); with none it is `data_failed`. With no stock found the order is
+        `data_failed` and the run's last message asks the user to clarify."""
+        order, plan = state["order"], state["plan"]
+        result, today, cap = plan["result"], eastern_date(clock()), load_account_manager_config().quote
+        try:
+            result.companies = find_companies_of(plan["request"], clerk, today, plan["find"], result)
+        except (RuntimeError, ValueError, OSError) as error:
+            order.status, order.errors = "data_failed", [*order.errors, f"the Data Clerk could not find the companies: {error}"]
+            return {"order": order, "clarify": True}
+        listed = [c["symbol"] for c in result.companies if c.get("symbol")][:cap.max_stocks]
+        if not listed:
+            order.status, order.errors = "data_failed", [*order.errors, "no listed company was found for the price you asked for"]
+            order.data = DataResult(companies=result.companies, notes=list(result.notes))
+            return {"order": order, "clarify": True}
+        order.subject = listed
+        order.company = next((c.get("company") for c in result.companies if c.get("symbol") == listed[0]), None) if len(listed) == 1 else None
+        order.query = f"What is the current price of {', '.join(listed)}?"
+        answered = clerk.request_quotes(order)
+        if answered.data is not None:
+            answered.data.companies = result.companies
+            answered.data.notes = [*answered.data.notes, *result.notes]
+            if answered.data.quotes and answered.status == "data_failed":
+                answered.status = "data_ready"      # some quotes came and some did not: the ones that did are shown, the ones that did not are named in `data.problems` and on `errors`
+        return {"order": answered}
+
     def account_manager(state: DeskState) -> dict:
         request, resolution = state["request"], None
         if request.get("ask") is not None:
@@ -481,6 +525,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             return {"order": clerk.request_data(order)}
         if plan.get("action") == "news":      # a request that only asks for the news (entry 149): the Data Clerk alone answers it
             return news_data(state, clerk)
+        if plan.get("action") == "quote":      # a request that only asks for the current price (entry 150): the Data Clerk alone answers it
+            return quote_data(state, clerk)
         # a request in the user's own words: the companies first (a theme or a list of names is not a symbol yet), then their data, then the work order is answered
         result, today = plan["result"], eastern_date(clock())
         try:
@@ -646,7 +692,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         return "account_manager_funds" if funds_node and funding_module.needs_funding(order) else "trader"
 
     def after_data_clerk(state: DeskState) -> str:
-        if (state.get("plan") or {}).get("action") == "news":      # entry 149: a request that only asks for the news ends with the Data Clerk's answer
+        if (state.get("plan") or {}).get("action") in ANSWERED_BY_THE_CLERK:      # entries 149 and 150: a request that only asks for the news or the price ends with the Data Clerk's answer
             return END
         return "advisor" if with_advisor and state["order"].status == "data_ready" else END
 

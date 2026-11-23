@@ -1,0 +1,144 @@
+<<<PRESS_RELEASE>>>
+id: 277e69e09f05db94
+symbol: AAP
+published_utc: 2025-12-08T16:30:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-announces-leadership-transition-appoints-ronald-gilbert-senior
+headline: Advance Auto Parts Announces Leadership Transition; Appoints Ronald Gilbert as Senior Vice President of Supply Chain
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America that serves both professional installers and do-it-yourself customers, announced today that it has appointed Ronald Gilbert as senior vice president of supply chain, effective December 22, 2025. Mr. Gilbert will report directly to president and chief executive...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b736105963b0c15e
+symbol: AAP
+published_utc: 2026-01-06T14:45:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-launches-argos-new-owned-oil-and-fluids-brand-designed-meet
+headline: Advance Auto Parts Launches ‘ARGOS’: New Owned Oil and Fluids Brand Designed to Meet Customer Demand for Quality and Affordability
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America that serves both professional installers and do-it-yourself customers, today announced the launch of ARGOS, its new owned oil and fluids brand designed to meet growing consumer demand for high-quality, affordable auto care products. "Affordability, reliability and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a37a4a25dbfde24d
+symbol: AAP
+published_utc: 2026-01-09T11:59:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-names-osram-sylvania-inc-global-2025-vendor-partner-year-2026-01
+headline: Advance Auto Parts Names OSRAM Sylvania Inc. Global 2025 Vendor Partner of the Year
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America serving professional installers and do-it-yourself customers, presented its 2025 Vendor of the Year Award to OSRAM Sylvania Inc. at" Accelerate"– Advance’ s vendor appreciation and field leader kickoff event in Orlando, Fla. The annual event brings together valued...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cb5eb836d566761b
+symbol: AAP
+published_utc: 2026-01-13T16:30:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-appoints-richard-johnson-board-directors-2026-01-13
+headline: Advance Auto Parts Appoints Richard A. Johnson to Board of Directors
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America announced today, that it has appointed Richard" Dick" A. Johnson as an independent director to the Board of Directors. Richard" Dick" A. Johnson has been appointed as an independent director to Advance Auto Parts' Board of Directors. Mr. Johnson is the retired Chief Executive...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 725ae1c868bcf6a8
+symbol: AAP
+published_utc: 2026-01-23T08:00:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-announces-date-fourth-quarter-and-full-year-2025-earnings-release
+headline: Advance Auto Parts Announces Date for Fourth Quarter and Full Year 2025 Earnings Release and Conference Call
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America that serves both professional installers and do-it-yourself customers, will report its fourth quarter and full year 2025 financial results before the market opens on Friday, February 13, 2026. Advance Auto Parts, Inc. is a leading automotive aftermarket parts...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 43be9f31c6107d93
+symbol: AAP
+published_utc: 2026-02-02T08:00:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-launches-advance-rewards-loyalty-program-delivers-better-value
+headline: Advance Auto Parts Launches Advance Rewards Loyalty Program that Delivers Better Value for Customers
+<<<TEXT>>>
+Advance Auto Parts, a leading automotive aftermarket parts provider in North America that serves both professional installers and do-it-yourself customers, today launched Advance Rewards– a new, modernized loyalty program designed to deliver greater value and features that matter to its heavy and light DIY customers. The loyalty program’ s revised...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d9ff71c5c0d25178
+symbol: AAP
+published_utc: 2026-02-13T06:30:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-reports-fourth-quarter-and-full-year-2025-results-releases-full
+headline: Advance Auto Parts Reports Fourth Quarter and Full Year 2025 Results; Releases Full Year 2026 Guidance Highlighting Continued Progress on Strategic Plan
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America, that serves both professional installer and do-it-yourself customers, announced its financial results for the fourth quarter and full year ended January 3, 2026. The Company's results for the fourth quarter ended January 3, 2026 included one additional week as...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ee7b80b012776752
+symbol: AAP
+published_utc: 2026-03-06T08:00:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-present-2026-ubs-global-consumer-and-retail-conference-2026-03-06
+headline: Advance Auto Parts to Present at the 2026 UBS Global Consumer and Retail Conference
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America that serves both professional installers and do-it-yourself customers, announced today that Shane O'Kelly, President and Chief Executive Officer, and Ryan Grimsland, Executive Vice President and Chief Financial Officer, will present at the 2026 UBS Global Consumer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8097c231c361ba09
+symbol: AAP
+published_utc: 2026-03-10T16:15:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-appoints-cynthia-jamison-board-directors-2026-03-10
+headline: Advance Auto Parts Appoints Cynthia Jamison to Board of Directors
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America announced today, that it has appointed Cynthia Jamison as an independent director to the Board of Directors. Cynthia Jamison has been appointed as an independent director to Advance Auto Parts' Board of Directors. Ms. Jamison most recently served as Chief Financial...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8218f660a618234e
+symbol: AAP
+published_utc: 2026-03-25T16:30:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-feature-full-paint-scheme-ryan-blaney-piloted-no-12-team-penske
+headline: Advance Auto Parts to Feature Full Paint Scheme on Ryan Blaney-piloted No. 12 Team Penske Ford Mustang Dark Horse in Four NASCAR Cup Series Races
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America that serves both professional installers and do-it-yourself customers, today announced that Team Penske’ s No. 12 Ford Mustang piloted by Ryan Blaney will feature the full Advance paint scheme at four NASCAR Cup Series races this season. Advance Auto Parts, Inc., today...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b0d527fce5d9de67
+symbol: AAP
+published_utc: 2026-04-30T08:00:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-announces-date-first-quarter-2026-earnings-release-and-conference
+headline: Advance Auto Parts Announces Date for First Quarter 2026 Earnings Release and Conference Call
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America that serves both professional installers and do-it-yourself customers, will report its first quarter 2026 financial results before the market opens on Thursday, May 21, 2026. Advance Auto Parts, Inc. is a leading automotive aftermarket parts provider that serves...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8616f05ffdbbfade
+symbol: AAP
+published_utc: 2026-05-21T06:30:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-reports-first-quarter-2026-results-reaffirms-full-year-2026
+headline: Advance Auto Parts Reports First Quarter 2026 Results; Reaffirms Full Year 2026 Guidance
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America, that serves both professional installer and do-it-yourself customers, announced its financial results for the first quarter ended April 25, 2026. The Company's first quarter 2026 gross profit was $1.2 billion, or 45.1% of net sales compared with $1.1 billion, or 42.9%...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9571debd9ecc0764
+symbol: AAP
+published_utc: 2026-05-26T08:45:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-introduces-new-good-parts-brand-campaign-celebrating-customers
+headline: Advance Auto Parts Introduces New ‘Good Parts’ Brand Campaign, Celebrating Customers’ Life Moments, Miles and Milestones
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America that serves both professional installers and do-it-yourself customers, today introduced" Good Parts," a new brand campaign that heroes and humanizes the qualities of American motorists and Advance’ s commitment to get them where they want to be– the good parts of their...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d7cbee111420ee42
+symbol: AAP
+published_utc: 2026-06-17T09:00:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-and-onerail-announce-expanded-partnership-2026-06-17
+headline: Advance Auto Parts and OneRail Announce Expanded Partnership
+<<<TEXT>>>
+RALEIGH, N.C.& ORLANDO, Fla.---- Advance Auto Parts, a leading automotive aftermarket parts provider in North America serving both professional installers and do-it-yourself customers, and OneRail, the AI-native technology platform orchestrating unified commerce for enterprise retailers, wholesalers and distributors, today announced an expanded...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dcba58c0447ec46f
+symbol: AAP
+published_utc: 2026-07-17T16:19:00Z
+url: https://www.nasdaq.com/press-release/wildfire-smoke-and-your-car-most-drivers-dont-know-about-their-best-defense-2026-07
+headline: Wildfire Smoke and Your Car: Most Drivers Don't Know About Their Best Defense
+<<<TEXT>>>
+--Wildfire smoke is choking the Northeast and Midwest. Residents are sealing windows, running air purifiers, and checking home air filters. According to national data 1 released earlier this year by Advance Auto Parts, Inc., half of American drivers don't realize their vehicle has a cabin air filter at all.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 92bda46344968f0c
+symbol: AAP
+published_utc: 2026-07-30T08:00:00Z
+url: https://www.nasdaq.com/press-release/advance-auto-parts-announces-date-second-quarter-2026-earnings-release-and-conference
+headline: Advance Auto Parts Announces Date for Second Quarter 2026 Earnings Release and Conference Call
+<<<TEXT>>>
+Advance Auto Parts, Inc., a leading automotive aftermarket parts provider in North America that serves both professional installers and do-it-yourself customers, will report its second quarter 2026 financial results before the market opens on Thursday, August 20, 2026. The company has scheduled a conference call and webcast to begin at 8:00 a.m. ET on...
+<<<END>>>
