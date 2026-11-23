@@ -26,11 +26,11 @@ The problem: Develop a virtual financial stock trading desk providing high-level
 
 # 2. System Goal and Scope
 
-**Goal.** Mimic a stock trading desk with five agents in human roles (Data Clerk, Advisor, Critic, Account Manager, Trader) that research, recommend, review and trade in simulation, as a forecaster and research agent. The proposal set three use cases, and a fourth was added late in the program:
+**Goal.** Mimic a stock trading desk with five agents in human roles (Data Clerk, Advisor, Critic, Account Manager, Trader) that research, recommend, review and trade in simulation, as a forecaster and research agent. The proposal set these use cases:
 
 - **Case 1: trade with these funds.** "Here is $1,000, take it and buy some stocks." 
 - **Case 2: search by a phrase or trend.** "AI memory shortage", "energy companies", "EV cars". etc.
-- **Case 3: "What's happening?"** Recommendations from current market activity for a group such as the S&P 500. *Partly built:* a request such as "Tell me the top 5 recommended stocks in the S&P 500" runs today as a search of the stored news for that group, as in Case 2. A scan of live market activity across the whole index is future work (section 8).
+- **Case 3: "What's happening?"** Recommendations from current market activity for a group such as the S&P 500. *Partly built:* a request such as "Tell me the top 5 recommended stocks in the S&P 500" runs today as a search of the stored news for that group, as in Case 2. A scan of live market activity across the whole index is future work.
 - **Case 4: "Show the news for [company]"** (or "What's Tesla doing the last week?"), added late in the program. The Account Manager reads it as a request for the news alone, the Data Clerk fetches the stock's latest news, then summarizes it with a citation for every point.
 
 **Success** means the application can find & recommend quality stocks from simple high level User questions (prompts) and then place simulated (later: real) orders to a User portfolio. The app must translate intent of what the User wants into an actionable request. Then, generate recommendations which cite stored evidence and an independent Critic approves or denies it with reasons, the account's money always adds up, and the results are measured against what the stocks did afterwards. The desk records every recommendation and scores its outcome, so that experience can change what it does next (section 8 says how far that got). The User can guide the app for most steps (Ask mode) or just let it run without prompting after the initial request.
@@ -43,7 +43,7 @@ The problem: Develop a virtual financial stock trading desk providing high-level
 - **No risk management by the desk.** The only size check is that the funds cover the order. No margin or options trading.
 - **US stocks, daily bars, registered data sources only** Real paid data providers APIs and historical files (Massive, Finnhub, SEC EDGAR) generate the live data and news.
 
-**Design rationale.** The main design decisions, and why:
+**Design rationale & design decisions:**
 
 - **Agents in human desk roles.** A trading desk already separates research, review, account management and execution so that no one person both proposes and approves a trade. Copying those roles gives each agent a narrow job, its own tools and its own model, and gives every recommendation a second, independent check.
 - **One shared WorkOrder.** Every agent writes only its own part of one record. The whole run can then be traced, replayed and checked afterwards, and no agent can quietly change another's work.
@@ -140,7 +140,8 @@ Each criterion has a pass bar. Rules about money and security are hard rules: an
 | C11 | **The rules hold in code** | The automated test suite | All tests pass | 2,749 passed (35 skipped), and 198 UI tests | Yes |
 
 ## 6.3 Main results
-
+### The system works end-to-end as intended for simulated stock research and trading with a simulated cash flow (User account) and portfolio with real market & news data.
+ 
 - **Security.** The guard blocked 85 of 85 attacks with 1 false positive in 27 benign requests. The Opus judge agreed with the human labels on 95% of the requests it scored (78 of 82); its provider's content filter refused to score 22 attack texts.
 - **Account integrity.** Over 13 recorded real sessions: a denied recommendation was never traded (13 of 13), sales came only from the user's order or a funding sale (13 of 13), the cash arithmetic added up (12 of 12 runs that traded), and spending stayed within the run's money in 12 of 13. The one exception was a session recorded with 5 basis points of simulated slippage ($15 over a $30,000 budget); the Opus judge flagged it on its own. That led to the rule that a run never spends more than its money (no slippage, exact decimals), and with the session re-recorded the check passes 14 of 14.
 - **Retrieval and reasoning.** With retrieval the model covered 2 of 5 known facts on "AI memory shortage" with every claim cited, against 0 of 5 without. Tree-of-Thought raised the RaiseFunds plan from 86.6% (depth first) to 99.4% (beam 3) of the brute-force best plan on the hardest test.
@@ -201,15 +202,12 @@ A trading desk handles real money on behalf of a person, so the design principle
 
 # 8. Current Limitations and Future Improvements
 
-- **Self-learning is only half answered.** Every recommendation is recorded in a ledger and scored by the Proving Ground, and those outcomes changed the Critic twice, but the developer made the changes. The agents do not yet adjust themselves from their own results.
-- **Case 3 ("What's happening?") is only partly built.** A group such as the S&P 500 is searched as a phrase in the stored news, as in Case 2. A scan of current market activity (movers, volume, sector moves) across the whole index is not built yet.
+- **Self-learning is only half answered.** The agents do not yet adjust themselves from their own results.
 - **No live broker.** The venue seam is built; a real broker is the third venue.
 - **Stops are not placed.** A plan's stop and target are only watched, so stop-loss orders and a monitoring mode come next.
-- **Request reading relies on word rules** in places; the next build lets the Account Manager's model read the request in full.
-- **The Critic is not yet repeatable**, and its newest rules need outcomes on data they were not designed on.
 - **Backtests are not fully point-in-time:** fundamentals and the symbol directory are today's, and the evidence so far is four themes over six months.
 - **It runs for one local user.** Work orders are not persisted, there is no cache in front of the data providers, and no cloud hosting.
-- **Measurements are still floating point** outside the account's own code.
+- **Finish data integrity math float to decimal conversions.**
 
 # 9. Public GitHub Repository
 Here is the main GitHub link: 
