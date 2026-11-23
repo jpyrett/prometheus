@@ -26,12 +26,12 @@ The problem: Develop a virtual financial stock trading desk providing high-level
 
 # 2. System Goal and Scope
 
-**Goal.** Mimic a stock trading desk with five agents in human roles (Data Clerk, Advisor, Critic, Account Manager, Trader) that research, recommend, review and trade in simulation, as a forecaster and research agent. The proposal set four use cases:
+**Goal.** Mimic a stock trading desk with five agents in human roles (Data Clerk, Advisor, Critic, Account Manager, Trader) that research, recommend, review and trade in simulation, as a forecaster and research agent. The proposal set three use cases, and a fourth was added late in the program:
 
 - **Case 1: trade with these funds.** "Here is $1,000, take it and buy some stocks." 
 - **Case 2: search by a phrase or trend.** "AI memory shortage", "energy companies", "EV cars". etc.
 - **Case 3: "What's happening?"** Recommendations from current market activity for a group such as the S&P 500. *Partly built:* a request such as "Tell me the top 5 recommended stocks in the S&P 500" runs today as a search of the stored news for that group, as in Case 2. A scan of live market activity across the whole index is future work (section 8).
-- **"Case 4: Show the news for < company >"** (or "What's Tesla doing the last week?"). The Account Manager reads it as a request for the news alone, the Data Clerk fetches the stock's latest news, then summarizes it with a citation for every point.
+- **Case 4: "Show the news for [company]"** (or "What's Tesla doing the last week?"), added late in the program. The Account Manager reads it as a request for the news alone, the Data Clerk fetches the stock's latest news, then summarizes it with a citation for every point.
 
 **Success** means the application can find & recommend quality stocks from simple high level User questions (prompts) and then place simulated (later: real) orders to a User portfolio. The app must translate intent of what the User wants into an actionable request. Then, generate recommendations which cite stored evidence and an independent Critic approves or denies it with reasons, the account's money always adds up, and the results are measured against what the stocks did afterwards. The desk records every recommendation and scores its outcome, so that experience can change what it does next (section 8 says how far that got). The User can guide the app for most steps (Ask mode) or just let it run without prompting after the initial request.
 
@@ -82,7 +82,7 @@ Around the desk sit three supporting layers: a **Security Guard** at the request
 # 4. Design Evolution Across the Program
 The system was developed in these phases:
 
-1. **Phase 1: Define the overall goal and create the Data Clerk to gather data.** A "self-learning trading bot" modelled on a trading desk, with five roles and three use cases. The roles survived to the end; what each one decides changed (the Account Manager became the supervisor and the only owner of the money).
+1. **Phase 1: Define the overall goal and create the Data Clerk to gather data.** A "self-learning trading bot" modelled on a trading desk, with five roles and three use cases (the fourth, the news request, came at the end). The roles survived to the end; what each one decides changed (the Account Manager became the supervisor and the only owner of the money).
     - **Data Clerk tools.** The Data Clerk's toolbox, an MCP server (FastMCP) and the first pytest suite. The lasting lesson was to keep an LLM out of anything a program can check, so scores, citations and budgets are calculated in code.
     - **Data Clerk retrieval.** RAG over news, press releases and filings. On "AI memory shortage" the model without retrieval covered 0 of 5 known facts in five runs and named outlets it could not back up; with retrieval it covered 2 of 5 with every claim cited. A planted article ("ignore all previous instructions") was obeyed in 6 of 8 runs until a guard brought it to 0 of 24, which is where the security work started.
 2. **Phase 2: Define the Account Manager to start simulating User profiles and accounts.** The Postgres account book and the User profiles were built.
