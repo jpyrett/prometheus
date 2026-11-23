@@ -26,6 +26,11 @@ check (exit 1) with the reasons, because a sanity check that cannot trade has fo
 IGNORE CRITIC (design choices entry 148): `--ignore-critic` skips the Critic's step for the session. The desk goes Advisor -> the Account Manager's decision, and every Advisor recommendation counts as approved (Auto trades it, Ask asks you and says that the Critic did
 not review it); the report says so before the decisions ("IGNORE CRITIC: the Critic did not review these recommendations (the user's setting)"). Without the flag nothing is different.
 
+A REQUEST THAT ONLY ASKS FOR THE NEWS ("Show the news for Tesla", "What's TSLA doing the last week?"; design choices entry 149, `design/news_view_spec.md`) is answered by the Data Clerk alone (Account Manager -> Data Clerk): nothing is asked, in either mode, nothing is
+recommended, decided or traded, and the session prints the stocks, the window, the summary and the numbered list of the articles (headline, publisher, date, link), and nothing about decisions, trades or money. The Data Clerk ALWAYS fetches the latest news of each stock first
+(the news only); `--refuse-news-fetch` is the TEST-ONLY switch that takes that right away for the run (a fetch writes `news/SYMBOL.txt`; the news is then searched as it is stored and the report says so). `--save` writes the work order WITH its `data` (the news is the result). A
+news run is not saved for the Track Record: it has no recommendation to score.
+
 MONEY IS `decimal.Decimal` (design choices entry 112): the cash a user starts with is `parse_money`'s Decimal, the report's amounts are exact (`spent / cash` is a Decimal ratio, printed as a percentage), and the saved session (`--save`) is written by the one encoder
 (`money.dumps`): a Decimal is a JSON number, a whole value an integer, never a string; a capture made before this change loads as it is.
 
@@ -51,6 +56,7 @@ from prometheus.common.portfolio import Portfolio, trade_amount
 from prometheus.common.trading_clock import clock_note
 from prometheus.common.user_account import clean_age, clean_display_name, clean_risk_level, clean_trade_mode, parse_money
 from prometheus.common.user_profile import TOLERANCES
+from prometheus.application.web import views
 from prometheus.langgraph.desk import build_desk
 from prometheus.common import langsmith_tracing
 from prometheus.proving import sessions as proving_sessions
@@ -92,6 +98,8 @@ def build_parser() -> argparse.ArgumentParser:
                       "(Ask mode still shows you the plan and asks; Auto mode sells and buys; \"don't sell anything\" in your words wins). Without the flag the setting is what the environment and .env say (false when unset)")
     desk.add_argument("--ignore-critic", action="store_true", help="skip the Critic's step for THIS session (design choices entry 148): the desk goes Advisor -> the Account Manager's decision, and every Advisor recommendation counts as approved (Auto trades it; Ask asks you, "
                       "and says the Critic did not review it). Without the flag the Critic reviews, and a denial is final")
+    desk.add_argument("--refuse-news-fetch", action="store_true", help="TEST ONLY (entry 149): a request that only asks for the news always fetches the latest news first (a paid call that writes news/SYMBOL.txt); this takes that right away for the session, so the news "
+                      "is searched as it is stored and the report says that the fetch was refused. Never a setting of the page")
     desk.add_argument("--real-ledger", action="store_true", help="use the real ledgers (data/ledger/): a company recommended before is then hidden by its cooldown. The default is throwaway ledgers, so a session can be repeated")
     run = parser.add_argument_group("the session")
     run.add_argument("--yes", "-y", action="store_true", help="do not ask to confirm what was understood (in Ask mode you are STILL asked to approve each trade: --yes never approves a trade)")
@@ -360,6 +368,29 @@ def why_not(result, order) -> list[str]:
 
 # ---------------------------------------------------------------- the session
 
+def news_lines(view: dict, intent=None) -> list[str]:
+    """What the session prints for a request that only asked for the news (entry 149, N10): what was understood, the stocks and the window, how the news was fetched (or why it was not), the summary, the numbered list of the articles (the cited ones
+    first) and what went wrong. The ONE shape is `views.news_view`; nothing here is about decisions, trades or money."""
+    lines = [RULE, "NEWS  " + views.news_headline(view), RULE]
+    if intent is not None:
+        lines.append(f"  understood: {intent.describe()}")
+    if view["stocks"]:
+        lines.append("  stocks: " + "; ".join(f"{s['symbol']}" + (f" ({s['company']})" if s.get("company") else "") for s in view["stocks"]))
+    lines += [f"  not found: {m['typed']}: {m['reason']}" for m in view["not_found"]]
+    lines.append("  news: " + ("the latest news was fetched just now, then searched" if view["fetched"] else view["fetch_note"] if view.get("fetch_note") else "searched in the stored news (a theme is never fetched for)"))
+    lines += ["", "SUMMARY"] + [f"  {line}" for line in (view["summary"] or "(the Data Clerk gave no summary)").splitlines()]
+    if view["items"]:
+        lines += ["", f"ARTICLES  ({len(view['items'])}; the ones the summary cites first)"]
+        for item in view["items"]:
+            lines.append(f"  [{', '.join(str(n) for n in item['numbers'])}] {item['headline'] or '(no headline)'}  ({item['publisher'] or 'unknown publisher'}, {item['date'] or 'no date'}){'  cited' if item['cited'] else ''}")
+            if item.get("url"):
+                lines.append(f"      {item['url']}")
+    elif view["status"] == "data_ready":
+        lines += ["", "ARTICLES  none: the stored news has nothing about this in the window"]
+    lines += [f"  problem: {p}" for p in view["problems"]] + [f"  note: {n}" for n in view["notes"]]
+    return lines
+
+
 NODE_WORDS = {"account_manager": "the Account Manager read the request and made the work order", "data_clerk": "the Data Clerk found the companies and answered the work order",
               "advisor": "the Advisor ranked the companies", "critic": "the Critic reviewed each recommendation against the profile", "account_manager_decision": "the Account Manager decided what may trade",
               "account_manager_direct": "the Account Manager priced the trades you named and decided them (no recommendation, no Critic review)",
@@ -491,7 +522,8 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
                        with_trader=True, trader_factory=lambda order: parts.trader, approver=approver_for(parts.approver, ask, out), store_factory=lambda: parts.store, confirm=confirm, clarify=clarifier_for(ask, out),
                        **({"guard": parts.guard} if parts.guard is not None else {}))
     request = {"ask": {"text": args.prompt, "default_count": args.default_count, "fetch": args.fetch}, "account": {"account": account_id, "profile": profile}, "trade": {"mode": "paper", "book": True, "model": not args.no_trader_model},
-               **({"ignore_critic": True} if getattr(args, "ignore_critic", False) else {})}      # the user's box for this run (entry 148): the desk skips the Critic's node; with it off the request is what it always was
+               **({"ignore_critic": True} if getattr(args, "ignore_critic", False) else {}),      # the user's box for this run (entry 148): the desk skips the Critic's node; with it off the request is what it always was
+               **({"refuse_news_fetch": True} if getattr(args, "refuse_news_fetch", False) else {})}      # TEST ONLY (entry 149): a news request does not fetch
     say("", RULE, "THE DESK  (LangGraph: Account Manager -> Data Clerk -> Advisor -> Critic -> Account Manager's decision -> Trader; a trade you name yourself goes from the Account Manager straight to its decision and the Trader)", RULE)
     final, shown = None, 0
     for state in graph.stream({"request": request, "order": None, "errors": [], "resolution": None, "funds": None, "path": [], "seconds": {}, "with_trader": True, "plan": None}, stream_mode="values"):
@@ -510,6 +542,18 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
         say("", "  " + ("; ".join(final["errors"]) or "the desk did not start"), *([f"  {CLARIFY}"] if final.get("clarify") else []))
         clean_up(args, parts, account_id, created, say)      # a run that stopped at its first node (a request refused by the security policy, or one that could not be read) still honours --cleanup
         return 2
+    if plan.get("action") == "news":      # a request that only asked for the news (entry 149, N10): printed, saved with its data if asked, never kept for the Track Record, nothing about decisions, trades or money
+        view = views.news_view(order, plan, parts.guard, account_id)
+        if args.save:
+            Path(args.save).parent.mkdir(parents=True, exist_ok=True)
+            Path(args.save).write_text(dumps({"request": " ".join(args.prompt.split()), "intent": plan["intent"].model_dump(), "path": final["path"], "order": json.loads(order.model_dump_json())}, indent=1), encoding="utf-8")      # the news IS the result: the order keeps its `data`
+            say(f"  (what the desk made is saved in {args.save})")
+        say("", *news_lines(view, plan["intent"]))
+        ok = order.status == "data_ready"
+        if not ok:
+            say("", f"  {CLARIFY}" if final.get("clarify") else "  the Data Clerk's answer did not pass its checks (the problems are above)")
+        clean_up(args, parts, account_id, created, say)
+        return 0 if ok else 1
     intent, direct = plan["intent"], bool(plan.get("direct"))
     find, result = (None, None) if direct else (plan["find"], plan["result"])
     if result is not None:

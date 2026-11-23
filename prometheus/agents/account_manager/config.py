@@ -5,6 +5,7 @@
     config.clarify.max_questions            # 3: the Ask-mode questions about how much to buy (entry 85)
     config.direct.valid_minutes             # 30: how long the price of a trade the user named stays good (entry 87)
     config.ignore_critic.valid_minutes      # 30: the same for an Advisor recommendation the Critic did not review because the user ticked "Ignore Critic" (entry 148)
+    config.news.default_days                # 7: the window of a request that only asks for a stock's news when neither the words nor the model give one; max_days 90, max_stocks 5, top_k 12 (entry 149)
     config.missing.max_prompts              # 5: the most Ask-mode questions about stocks the Data Clerk did not find (entry 102)
     config.orders.watch_seconds             # 60: how often the web server's watcher checks the waiting limit orders while the market is open (entry 140)
 
@@ -59,6 +60,13 @@ class IgnoreCritic(_Section):
     valid_minutes: int = Field(ge=1, le=240)         # an Advisor recommendation the user chose not to have the Critic review (entry 148, "Ignore Critic") has no review and so no `valid_until_utc` of the Critic's: the price the Account Manager asked of the Data Clerk is good for this long, as a neutral one's
 
 
+class News(_Section):
+    default_days: int = Field(ge=1, le=90)           # a request that only asks for the news of a stock (entry 149, "Show the news for Tesla") looks back this many days when neither the user's words nor the model say how many: a week
+    max_days: int = Field(ge=1, le=90)               # the longest window: the news fetch's own limit (`work_order.MAX_DAYS["news"]`); a longer one is cut to it and the user is told
+    max_stocks: int = Field(ge=1, le=15)             # the most stocks (symbols and companies) one news request may name
+    top_k: int = Field(ge=1, le=20)                  # the most articles the Data Clerk's summary may use (the work order's `top_k`, at most `work_order.MAX_TOP_K`)
+
+
 class Orders(_Section):
     watch_seconds: int = Field(ge=5, le=3600)        # how often the watcher in the web server quotes the symbols of the waiting limit orders, DURING the regular session only (entry 140, W5): one Finnhub quote call for all of them, a convention of 60 seconds
 
@@ -71,6 +79,7 @@ class AccountManagerConfig(_Section):
     direct: Direct
     neutral: Neutral
     ignore_critic: IgnoreCritic
+    news: News
     orders: Orders
 
 

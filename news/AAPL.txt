@@ -162425,3 +162425,1929 @@ AAPL | neutral | Mentioned as the largest S&P 500 holding (~7%) alongside Nvidia
 VOO | negative | Index fell 2.0% for sixth consecutive loss, longest streak in 2.5 years. Concentration in top 10 stocks (37-40% of index) and heavy AI exposure contributed to volatility.
 RSP | positive | Outperformed cap-weighted S&P 500 by 5.7 percentage points in October, widest monthly gap since April 2009, as money rotated from AI names to other 490 stocks. However, article notes it underperformed significantly over 10 years (243% vs 335% for VOO).
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144027203
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T22:55:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9e6d12577dfcbe5363dac2e8f9585179370aaecab4e7863336e8a62b15795dfb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Is Now 25% of Berkshire Hathaway's Stock Portfolio. Here's What Holding Every Share Tells Investors.
+<<<SUMMARY>>>
+The iPhone maker still matters tremendously to the diversified Omaha company's finances.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144026522
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T21:17:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8339cf7d94d109471a793cc2be503ef621a1b3784d5d750468f2bd797bff8bcb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Charlie Bilello Flags the Nasdaq 100’s First Bear Market Since April 2025
+<<<SUMMARY>>>
+The Nasdaq 100 slipped past a line it hasn't touched in over a year, then barely escaped at the closing bell. If you hold no Nasdaq fund, your retirement account may still be more exposed than you think.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144026523
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T20:20:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4d978a0d5ad62f17073e6ab41c50a96b1e8183ab7cc454da77292bafbd226b75
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: A $6.4 Billion Fund Just Bought These 3 Stocks
+<<<SUMMARY>>>
+Key TakeawaysApollo Management Holdings, whose 13F holds $6. 43 billion of US stocks, raised its Churchill Downs stake 512% and its Primo Brands stake 121% in the third quarter, and added put options on Apple.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144026520
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T20:06:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=92eec84f360a1c226652023656846441cca842a912a92ce54f9751b226513914
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: What Is Apple (AAPL) Planning With Its New Autonomous AI Agent?
+<<<SUMMARY>>>
+Apple (NasdaqGS:AAPL) is building an autonomous AI agent designed to handle complex, multistep tasks for everyday users. Job postings point to a large scale buildout of AI engineering and product roles tied directly to this new assistant effort. Internal planning targets a potential consumer launch as soon as late 2027 with a core focus on on device privacy and security. Apple's autonomous AI agent push under CEO John Ternus fits into a broader shift our research is tracking at the company...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144025104
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T18:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5211a721fcfe1cad42345b2b07e4a3747c0bdac9d7f729ed87b1b7d9c7f0c8dd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: AI debt fears mount: why cash and defensive stocks are back in favor
+<<<SUMMARY>>>
+Ron Insana, CEO of Insana Information Partners and author of The Message of the Markets on Substack, says investors should separate long-term investing from money needed soon.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144025825
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T17:50:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c87f3929cdc7860ce17da0d86328d4baf2cc447861b06e4598eeb27ea4f27285
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: An $8.3 Billion Fund Just Bought These 3 Stocks
+<<<SUMMARY>>>
+Key TakeawaysA fund with $8. 3 billion in US stocks added to Apple and Coinbase and opened a new stake in HDFC Bank in the third quarter, its latest 13F shows.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024401
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T14:44:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7cc4d643bd61c6456da2c013c9840a4170ee8e6bae6dee7cff36f54830396681
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple’s CEO Calls Memory Pricing “Unprecedented.” Its Purchase Obligations Jumped $33 Billion in a Quarter
+<<<SUMMARY>>>
+Key TakeawaysApple CEO John Ternus called memory pricing “unprecedented” and said Apple’s manufacturing purchase obligations rose $33 billion from June to September. Memory costs look set to weigh on Apple’s gross margin into fiscal 2027, and its price increases only partly offset them.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144023723
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T14:13:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=29af45e7e1bc998b59c58dc2c8dae7435ee065f49a831cbd9973a937d6a9055e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Dow Jones Futures Due After Market's Worst Week Since Covid; What To Do Now
+<<<SUMMARY>>>
+The Dow Jones and Nasdaq had their worst week since March 2020, fueled by Nvidia and Anthropic. A fear gauge is soaring. Good news?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144023399
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T12:35:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba5005235b6a012b52ebbe1b39e21c199382a1c7a0a4e5ab84d64fe80bc6f299
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: The App Paradigm Will “Slowly, if Not Quickly, Dissipate,” Says Mark Gurman. That’s a Problem for Apple
+<<<SUMMARY>>>
+Key TakeawaysBloomberg’s Mark Gurman said the app paradigm will “slowly, if not quickly, dissipate” as AI calls for a new kind of operating system. Alphabet’s Gemini sits under Apple’s rebuilt AI models, while AppLovin’s install-driven ad business needs apps to last.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144026521
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T12:25:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ac867426de5cf00b1adfae6c653f8331b79dced81f17f5d1d0a4b20f96f71ecc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Why is Apple Stock Holding Strong While the Rest of the Market Falls?
+<<<SUMMARY>>>
+Apple stock sits near its record as the S&P 500 falls, and BTIG says a stock market bottom has needed Apple to drop.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144022671
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T10:07:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2d734ea4161cac028bf51d1df8b0793daf1203b833cfbee5fdeefc298a482677
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: “The Selloff Does Not End When Fundamentals Improve,” Warns Gene Munster. Nvidia Looks Like 2012 Apple
+<<<SUMMARY>>>
+Key TakeawaysNVIDIA stock is 47% below its October high, even after a beat-and-raise quarter and higher earnings estimates. Gene Munster compares NVIDIA to Apple in 2012, and he’s right that better fundamentals alone won’t end the selloff.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024072
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T07:00:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=c65f6654ebaec0c5da5a804d48418e7c73b2a4568dbc728546b09e79ea8c7850
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/22/Cupertino--California--September-25--202.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: Steve Jobs, Apple's AI Push and Palmer Luckey's Sharpest Criticism: This Week in Appleverse
+<<<SUMMARY>>>
+Apple made headlines this week over iPhone criticism, leadership changes, insider stock sales and growing competition in AI.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144022581
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T06:21:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=73075644b4c52a99e1ccd18926f08be8a08baa4ac6ad570d7ec4a1d5c17ffde9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/156630107/image_156630107.jpg?io=getty-c-og
+category: company
+tickers: AAPL
+keywords: 
+headline: Wall Street Week Ahead
+<<<SUMMARY>>>
+U.S. markets enter Thanksgiving week after the Nasdaq fell 10% and S&P 500 8.6%; investors watch Dell AI results and core PCE, expected at 3.2%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144021323
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T04:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ec133266117bcfa1dfd5efc8340c851bd357b0fff0fc59bd70baf803fe6afe07
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: GTA 6's $3.79 billion debut sends Apple stock investors an unmistakable signal
+<<<SUMMARY>>>
+Investors may not like the lesson here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024403
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T00:47:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=df9e483c31098939e0b4b1ef698d3daf14a913d5e2302ea52f0017b803c708fe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: 5 big analyst AI moves: Nvidia downgrade, Anthropic seen as ’generational company’
+<<<SUMMARY>>>
+Investing.com -- Here are the biggest analyst moves in the area of artificial intelligence (AI) for this week.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144018611
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T00:00:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f35c8ba3012fed7c465815a66a79051e3768ea18c0ccf24e6344ab90b977c1a9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Intuit vs. Oracle: Which Technology Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Intuit's sticky tax and small business ecosystem faces off against Oracle's push into AI cloud capacity, and the trade-offs between them look starkly different.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144016349
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T18:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7c28d0daa647ab2f2e511ada83b4a8636c0d805dee6021fe09500dd736dd453e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: T-Mobile leak reveals major phone plan change for core customers
+<<<SUMMARY>>>
+T-Mobile’s latest move comes as it faces mounting pressure to keep a key part of its wireless business competitive.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144016351
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T18:32:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ebf298e9f762544fd967fa47507d66c9de1d93fdb94f8ded2c6ed0bc93cea364
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Dell Up 447% In 5 Years, HPE 220%: What Did Michael Dell Do Differently?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144016350
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T18:32:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2ac76c2db099bd9fb1ab2db3659307ff676ceab77eaa91de7ea6d312461e2621
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Microsoft Was The Only Big AI Buyer Paying Down Debt. How Much More Can It Spend?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015491
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:48:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=694f1d18ea4035f96b195b2a17a89b2d08f39a34f5bf898baba99a213da03a24
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Google Is Paying Elon Musk’s SpaceX $30 Billion. Jim Cramer Just Revealed Why
+<<<SUMMARY>>>
+Google builds its own AI chips and runs one of the world's biggest clouds, yet it is leasing GPUs from a rocket company. Cramer's comparison to Apple hints at a deeper shift in what Google pays for, and shareholders should care.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015492
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:14:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eb2bf144b785eb41539df1e3facdab4cede96c0973ec3797d63d907f55f43f8d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Dow Jones Futures: After Nvidia, Anthropic Fuel Worst Week Since Covid, Look For These 'Absolute Losers'
+<<<SUMMARY>>>
+The Dow Jones and Nasdaq had their worst week since March 2020, fueled by Nvidia and Anthropic. A fear gauge is soaring. Good news?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015489
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:07:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9bcf0e29db0ab51fe66abb2bbc9f4799832169a6fad5d888a7afd240abba0e7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Mark Gurman Says Apple Is “Not Set Up to Move at the Pace of These AI Companies”
+<<<SUMMARY>>>
+Apple just launched its biggest AI push in years, yet a top Apple reporter says the company's whole operating model is wrong for this race. The real risk may be which assistant your habits settle into next, and what that means for AAPL holders.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144014880
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:03:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d86f2885d5a9e1ca4bd6899c6aab86493553196d2a2da689962cd3aade7cecb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Fed’s Lisa Cook Warns of Larger Rate Hikes Ahead
+<<<SUMMARY>>>
+A Fed governor says policy is too loose and bigger hikes may be coming, yet bond traders are betting on a slowdown. For anyone holding an S&P 500 fund, the December 9 decision will reveal which side is right.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015493
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:00:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=40ffb1a825864d86535bd4786456b01f87125616e12c141673336e72b23f5971
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Warren Buffet’s Stock Portfolio: Top 5 Picks
+<<<SUMMARY>>>
+Warren Buffett no longer runs the conglomerate he built over six decades, but his fingerprints are still on nearly everything it owns. He handed the chief executive role to Greg Abel at the end of 2025, and Abel took over at the start of 2026. On September 18, Buffett, 96, stepped down as chairman, a […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144017311
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T15:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7e229d72216742b2e368b06ff6e0690f0755776d9f81cadfc663ee9ee269210c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Is Now Worth Over $5 Trillion Without Betting Big on AI Data Centers. AAPL Stock Now Trades Near Wall Street’s Targets.
+<<<SUMMARY>>>
+Apple is worth more than $5 trillion after skipping the AI data-center spending race.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144014530
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T10:30:43Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7e5f3d0491365e8122c8107a82d1bea53f75d80f949f2caf4dd57af0000d4118
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2234507368/image_2234507368.jpg?io=getty-c-og
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple: The Hidden Risk Behind My Downgrade
+<<<SUMMARY>>>
+Apple is rated a Hold, at 37x forward earnings prices in 4.9% FY27 EPS growth, while memory costs could push Q1 FY27 margins toward 45%-46%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012816
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T09:12:02Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=786572124d2fe295862f360d0bfcb10e6bead0253a0a1fb0254a6ed8a1f5e5cb
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/21/New-York--Ny--Usa---11-05-2024-Wall-Stre.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: ANT, NVDA, PANW and More: 5 Stocks Investors Couldn't Stop Buzzing About This Week
+<<<SUMMARY>>>
+Retail investors talked up 5 hot stocks during the week (Nov. 16 to Nov. 20) on X and Reddit&#39;s r/WallStreetBets: NVDA, AMD, ANT, PANW, GOOGL.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012527
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T09:00:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=908e2dc7ba1e06f80e8c8a480429da8386d57d3638da4020aff4f3e3f74f5373
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/21/Bulls-and-Bears-1.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: Benzinga Bulls and Bears: Nvidia, Credo, Red Cat
+<<<SUMMARY>>>
+Benzinga examined the prospects for many investors’ favorite stocks over the last week — here’s a look at some of our top stories.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144007188
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T06:32:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bfda96237c9c33f19a10c0ff2c2c951a6aa92741c3719234694157a53b06057f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Is Dell Stock Really Cheap?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144006068
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T06:32:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0565ce6fee2186261e9d0fe2463ae39e3d490864dcef362ee35ab4444fa7e9f9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: $1 Million In Cash: Buy Stocks Now Or Wait?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144002815
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T04:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=998b6828ca68dd685d9e8fbcf9301358b4beed3322f19d275a6d581d0829706b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Startup sues Apple in India over tap-to-share contacts feature
+<<<SUMMARY>>>
+A U.S. startup is seeking $162 million in damages and an injunction to impact iPhone and Apple Watch imports to India.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144010535
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T03:45:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=508bc8593feda5af9660edbf4dae9b23acdb8bb2fae86f9249fd4c8e5b7d2238
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1705316992/image_1705316992.jpg?io=getty-c-og
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple: Shows Us How To Win Without Joining The AI Bubble
+<<<SUMMARY>>>
+Apple (AAPL) stock is positioned to win with AI agents without rival-level CapEx, though its nearly 40x forward earnings valuation looks crowded.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143998277
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T01:13:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b65ad0d05706854d0e57396615246e01f252c60f34aca03f0cb02f448324194
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple (AAPL) Grows at 12% and Trades at 37 Times Earnings. Is It Worth It?
+<<<SUMMARY>>>
+We just published a list of the Top 10 Stocks to Buy According to Billionaire George Soros, and Apple Inc. (NASDAQ:AAPL) ranked 6th on this list. George Soros made his name betting against currencies and central banks, and that record is still the reference point for macro investing decades later. Born in Budapest in 1930, […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143996126
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T00:46:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=756f37927d322199d5e8977084eeb5e39a3ad9648b693b5264e2ab73fc0323fc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Has AI's honeymoon ended on Wall Street?
+<<<SUMMARY>>>
+Although the AI industry has been the darling of Wall Street for years, the sector now makes investors wince as it reckons with a wave of concerns over dizzying spending and its promise to make the technology profitable.But as spending has ballooned, so has debt -- and profits have yet to match.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143998276
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T00:35:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5f5d6fadc1f0f512994ddb26942d1ef2aa4f34a6822974304b0ab1793d16e5c6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: George Soros and 20 Other Big Funds Bought Qualcomm Last Quarter. David Tepper and 14 Others Sold. Who’s Right?
+<<<SUMMARY>>>
+Key TakeawaysOf the 460 big funds that have filed 13Fs for the quarter ended Sept. 30, 21 bought Qualcomm and 15 sold, with George Soros among the buyers and David Tepper among the sellers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143993119
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T23:02:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c60368a7d1333fa98351092e14bd67efe97e08e04cba63c5a96dce6ffc1cfd2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: She Moves $250,000 of Her 401(k) Into a Nasdaq-100 Fund at 60 to Own Anthropic From Its Debut Thursday. Nasdaq’s Fast-Entry Rule Keeps Her Fund From Buying Until Dec. 21, After Any First-Month Pop
+<<<SUMMARY>>>
+She put $250,000 of her 401(k) into a Nasdaq-100 fund to own Anthropic from day one, but her fund sits out the debut. The calendar, the math, and a Medicare lookback could turn this AI bet into something she didn't plan.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143993120
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T22:19:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=09625ee9d3c5e2fb68a7a2811777cb0c53cd129b0e96b5e1e104a9c1941ecb39
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Tech sees huge sell-off as Anthropic IPO fails to lift the market
+<<<SUMMARY>>>
+Deirdre Bosa discusses the AI trade falling apart as Wall Street sees widespread losses, Anthropic's (ANT) debut failing to boost markets, and the state of cybersecurity. 'Deirdre Bosa Live' airs every day at 4 p.m. Tune in daily to hear how the latest developments in AI and technology are reshaping companies, industries, and the global economy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143993117
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T22:00:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=86f208791ec5260330118592ce7b5f2fe19295c50369697cc057dacfd1c817de
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Shots Fired: Meta Will Reportedly Sell a $300 Muse Charm With Free Verizon 5G as Apple Builds Its Agent
+<<<SUMMARY>>>
+Key TakeawaysMeta reportedly plans to sell a $300 Muse Charm with up to 12 months of free Verizon 5G, and is targeting 10 million wearable sales in the second half of 2026. A connected device would let Meta reach users without Apple’s phones in between, just as Apple reportedly builds its own AI agent.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143992125
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T21:49:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a461bf9206b72f4ed5bbda580ba12f32748c5dc1fc3ce52df1fae999182f1a09
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Dow Jones Futures: Market Has Worst Week Since Covid Amid Nvidia, Anthropic. Does Fear Gauge Offer Hope?
+<<<SUMMARY>>>
+The Dow Jones and Nasdaq had their worst week since March 2020, fueled by Nvidia and Anthropic. A fear gauge is soaring. Good news?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143993118
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T21:40:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fc0fd101b072c60f9cd334e1cc8280a1c4f54f4821689719105e7931e4f3e530
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Stock Has a New AI Catalyst -- It Could Take on OpenAI, Meta and Anthropic
+<<<SUMMARY>>>
+Apple Is Building An AI Agent To Take On OpenAI, Anthropic And Meta
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143992123
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T21:14:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4aa23d90b2f7216ffcded5e60584dec8a0c5e0f647f611891aa66377dffeba32
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: 3 Edge AI Stocks To Watch As Apple Pushes More AI On Device
+<<<SUMMARY>>>
+Apple’s renewed push into its own AI agent has turned the quiet idea of on-device intelligence into a live contest, with ripple effects running through chip designers, hardware suppliers and software tool makers tied to edge computing. That shift creates both promise and risk for investors who care about where AI actually runs. This article explains how that news relates to three stocks that screen positively on this theme. The stocks highlighted below are only a small sample of the on-device...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143992124
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T20:53:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=935619fe4cc137e8cc74cd82a39ce88ddcdf01e17375cd86c0a01b675f1b35a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Is Apple Stock Increasing Your Market Risk?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144000292
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T20:32:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6e265e0b6d47d2ad4d0c303f8da5aabcda4fa9d57ba82cfd2c849a715db42345
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: AAPL Stock Alert: What to Know as Apple Develops AI Agent to Compete With Muse
+<<<SUMMARY>>>
+Apple is reportedly developing an AI assistant that would challenge Meta’s Muse. Here’s what it might mean for AAPL shares in 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990865
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T18:49:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32c1a2611f12fba5af8caf9ef9edc004609e4fb53b7ca15db19d284eef3a920e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple “Has No Idea What It’s Doing” in AI. Oh, and It’s Building Its Own AI Agent Too
+<<<SUMMARY>>>
+Key TakeawaysApple is building its own AI agent that can run devices, browse the web and write code, which puts it up against Anthropic, OpenAI and Alphabet’s Google. Apple trades at 37x forward earnings, the price of a company that collects fees from AI, yet its agent will start from models rebuilt on Google’s Gemini.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990866
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T18:24:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a3644917317e0aa3a6dfd10a2be7592cb725beeb479e36b6234ccb9f8dffb3d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Micron’s President Says “We Can’t Support Every Customer.” Apple Just Locked In Samsung’s DRAM
+<<<SUMMARY>>>
+Key TakeawaysMicron’s president said the company “can’t support every customer,” as Apple reportedly nears a Samsung DRAM deal with the price left open. In a memory shortage that Micron says runs for years, suppliers hold the leverage, which helps explain Micron’s 80.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990869
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T18:17:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9dc69a9afbf6b1eaa7385ea1d8f7d643fbbefa2fd5795e71110cec536a8a6771
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Is Dell Stock's Steep Fall A Bargain Or A Warning?
+<<<SUMMARY>>>
+Today’s big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990867
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T18:13:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=95393650dc2b424e093834ad8cac95425494210e75ab2c2050a7db696a84374f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Plans an AI Agent to Rival Meta's Muse
+<<<SUMMARY>>>
+Meta's Muse, ChatGPT and Claude already rank among the App Store's top free apps
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990870
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T18:02:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c02d3c456328997614f3a8d78763870b3317341663bb0a8365e90e750fbfd411
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: What Could Stall Microsoft Stock's Run?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990868
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T17:58:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78ee7a3a6c90102aafff88a211388c67346c472b5cc99d5a44920b2977bb31aa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Apple Working on Own AI Agent to Rival OpenAI and Anthropic
+<<<SUMMARY>>>
+Anurag Rana, Senior Tech Analyst for Bloomberg Intelligence, discussed the latest from Apple with Bloomberg's Paul Sweeney. Apple Inc. is developing its own autonomous artificial intelligence agent that can get things done on behalf of users, looking to enter a fast-growing market already being pursued by OpenAI, Anthropic PBC, Meta Platforms Inc. and others. The company outlined the plans in job listings added to its website this week. In one, Apple said it's seeking a senior engineering manager for a proactive, agentic AI assistant. The system will write code, browse the web, control apps and navigate devices on a user's behalf, according to the post.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012726
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:15:57Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e4f34dff5a42063a76d47f358b873d290efc64df8662c65c633daadba78de73c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/20/Michael-Burry-AI-Gen---EK.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: Michael Burry Halves SMH, Nvidia Puts but Keeps Nasdaq 100 Bet
+<<<SUMMARY>>>
+Michael Burry cut his bearish bets on SMH and Nvidia by half but holds his April 2027 Nasdaq 100 puts. What does it mean for chip and tech ETFs?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015215
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:28:37Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=13da06bdccc4a9bf2c89be1d65145a7b2b18f919cb96e02f3f18738b105403cd
+image_url: https://image.cnbcfm.com/api/v1/image/108556696-17951991361795199133-49757533372-1080pnbcnews.jpg?v=1795199135&w=1920&h=1080
+category: company
+tickers: AAPL
+keywords: 
+headline: Would be unprecedented to see final bottom on S&P with Apple where it is: BTIG’s Jonathan Krinsky
+<<<SUMMARY>>>
+Jonathan Krinsky, BTIG chief market technician, joins 'The Exchange' to discuss Apple stock, market volatility and more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012799
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:00:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a40211a2232b5f201680df4ac89229a01486a046b4eb8f8dde163a560ff75158
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/20/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: Everpure Short Interest Falls From October Peak
+<<<SUMMARY>>>
+Everpure Inc. (NYSE:P) short sellers pulled back from their positions.Short interest fell 9.13% to 8.27 million shares as of the Oct. 30 settlement date, from 9.10 million at the Oct. 15 report. That is 3.49% of the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012506
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:57:51Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1363d2f533f34646e1c822e2c1cd32701f98d1175653e6fdd1792bd71bd84214
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/20/Anthropic-Logo.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: Asia's AI Selloff Spilling Into Gold, Silver, US Tech Stocks—Smart Money Is Buying
+<<<SUMMARY>>>
+Forced AI Selling In Asia
+
+
+
+Please click here for an enlarged chart of Invesco QQQ Trust Series 1 (NASDAQ:QQQ).
+
+
+
+Note the following:
+
+
+
+
+The chart shows that yesterday, QQQ closed right at the bottom of zone 2
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012571
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T11:57:26Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=54f4d2220063efdbecf4e7aefa0c28b946833999e9b1b12a8dfcda19954b0126
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/20/Information-Technology--Artificial-Intel.jpg?width=2048&height=1536
+category: company
+tickers: AAPL
+keywords: 
+headline: Anthropic IPO, Huang’s Exit Cause ‘Perfect Storm’ Against Tech: Dan Ives Says Own These Stocks
+<<<SUMMARY>>>
+Dan Ives names seven reasons why technology stocks are selling off. Staying bullish on the sector, Ives is focusing on the best names going forward.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144030672
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T04:13:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aa19996fe966c91503244423b4faf2091a6df7eb288e6935fad5505072b69e82
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: Trump Throws His Weight Behind Jensen Huang’s Return As Nvidia CEO: ‘It Would Be The Best Thing For The Company’
+<<<SUMMARY>>>
+“I hope the Board of Nvidia rehires Jensen Huang,” Trump posted on Truth Social on Sunday.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144032200
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T04:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e3619998d9c87ed7b41c0d257e4ac89cf23a0cc01a687c43090d2d96126baad6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: BTIG's Krinsky Says S&P 500 Bottom Unlikely While Apple Holds Near Highs
+<<<SUMMARY>>>
+BTIG's Jonathan Krinsky says an S&P 500 bottom is unlikely while Apple sits near highs, citing a decade of data.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144029375
+symbol: AAPL
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T02:44:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=93dc79097be8e66adde4abc6dab1af27859677e21bd30e0f1541f04489d01605
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: AAPL
+keywords: 
+headline: How Did Dell Grow From $56 Billion To $151 Billion In 20 Years?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:94b3fbea193ea39baec7c4d999050efb7b364fe3a79597d09ccfa6d98d77e1f0
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T16:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033367/tech-outages-spur-emergency-buying-costco-heavy-etfs-in-focus?cid=CS-ZC-FT-etf_news_and_commentary-3033367
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3b/960.jpg
+category: 
+tickers: COST, AAPL, AMJB, JPM, JPMpC, JPMpD, JPMpJ, JPMpK, JPMpL, JPMpM, VYLD, MSFT, WMT, GXPS, FSTA, VDC, XLP
+keywords: tech outages, emergency supplies, consumer anxiety, comparable sales growth, valuation concerns, consumer staples ETFs
+headline: Tech Outages Spur Emergency Buying: Costco-Heavy ETFs in Focus
+<<<SUMMARY>>>
+Recent tech outages involving Apple, JPMorgan Chase, Microsoft, and U.S. airlines have prompted consumers to stock up on emergency supplies at Costco, driving strong comparable sales growth. However, analysts caution that Costco's rich valuation and limited upside potential make ETF exposure a more prudent investment approach than direct stock ownership.
+<<<INSIGHTS>>>
+COST | neutral | While Costco benefits from increased emergency supply purchases with 11-12% comparable sales growth, the stock trades at a rich valuation (P/E of 48.24X vs. industry 20.40X) with limited analyst-implied upside of only 0.45%, warranting caution despite near-term demand boost.
+AAPL | negative | Apple is mentioned as one of the tech companies whose outages and disruptions rattled consumers and triggered emergency supply purchases, indicating operational issues.
+AMJB | negative | JPMorgan Chase is cited as one of the companies experiencing tech disruptions that alarmed consumers and contributed to market volatility.
+JPM | negative | JPMorgan Chase is cited as one of the companies experiencing tech disruptions that alarmed consumers and contributed to market volatility.
+JPMpC | negative | JPMorgan Chase is cited as one of the companies experiencing tech disruptions that alarmed consumers and contributed to market volatility.
+JPMpD | negative | JPMorgan Chase is cited as one of the companies experiencing tech disruptions that alarmed consumers and contributed to market volatility.
+JPMpJ | negative | JPMorgan Chase is cited as one of the companies experiencing tech disruptions that alarmed consumers and contributed to market volatility.
+JPMpK | negative | JPMorgan Chase is cited as one of the companies experiencing tech disruptions that alarmed consumers and contributed to market volatility.
+JPMpL | negative | JPMorgan Chase is cited as one of the companies experiencing tech disruptions that alarmed consumers and contributed to market volatility.
+JPMpM | negative | JPMorgan Chase is cited as one of the companies experiencing tech disruptions that alarmed consumers and contributed to market volatility.
+VYLD | negative | JPMorgan Chase is cited as one of the companies experiencing tech disruptions that alarmed consumers and contributed to market volatility.
+MSFT | negative | Microsoft's Outlook outage is specifically mentioned as a key driver of consumer anxiety and emergency supply purchases.
+WMT | positive | Walmart is noted as benefiting from increased demand for emergency essentials following tech disruptions.
+GXPS | positive | Recommended as a diversified alternative to direct Costco stock ownership, offering exposure to the defensive consumer staples sector during periods of uncertainty.
+FSTA | positive | Recommended as a diversified alternative to direct Costco stock ownership, offering exposure to the defensive consumer staples sector.
+VDC | positive | Recommended as a diversified alternative to direct Costco stock ownership, providing exposure to the traditionally defensive consumer staples sector.
+XLP | positive | Recommended as a diversified alternative to direct Costco stock ownership, offering stability and exposure to consumer staples during market volatility.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:79305bac3b151f64a5ad449c770589056bb398b47014a4c7d4989a7ec23634ea
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T22:15:13Z
+publisher: The Motley Fool
+author: Emma Newbery
+url: https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-stocks-plunge-as-ai-trade-unwinds/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Ff0ebeb7ca382b1a3d4c057d7efd41c6c3419cde9-7360x4912.jpg&w=1200&op=resize
+category: 
+tickers: NVDA, AVGO, GOOG, GOOGL, GOOGM, GOOGN, AMZN, META, METAM, MSFT, TSLA, AAPL, WMT, UNH
+keywords: AI trade unwind, market correction, tech stock selloff, Nvidia decline, defensive sectors, institutional rotation
+headline: Stock Market Today, Nov. 20: Stocks Plunge as AI Trade Unwinds
+<<<SUMMARY>>>
+Major stock indices plunged on November 20, 2026, as artificial intelligence trades unwound amid broader market concerns. The S&P 500 fell 3.7% into technical correction territory, while the Nasdaq Composite dropped 5.28%, erasing annual gains. Nvidia led declines with a 14% plunge following SEC accounting probe reports. Defensive sectors like utilities and energy gained as investors rotated away from technology stocks.
+<<<INSIGHTS>>>
+NVDA | negative | Stock plummeted 14.01% following reports of a potential SEC accounting probe, accelerating the broader AI trade unwinding and magnifying market fallout.
+AVGO | negative | Tumbled 12.26% on unconfirmed reports that Google would cut next year's chip shipments, reflecting weakness in AI-related semiconductor demand.
+GOOG | negative | Declined 2.59% amid reports of potential chip shipment cuts and broader technology sector selloff.
+GOOGL | negative | Declined 2.59% amid reports of potential chip shipment cuts and broader technology sector selloff.
+GOOGM | negative | Declined 2.59% amid reports of potential chip shipment cuts and broader technology sector selloff.
+GOOGN | negative | Declined 2.59% amid reports of potential chip shipment cuts and broader technology sector selloff.
+AMZN | negative | Fell 4.1% as part of the broader technology and AI-linked stock selloff.
+META | negative | Dropped 5.9% as technology stocks experienced widespread losses during the AI trade unwind.
+METAM | negative | Dropped 5.9% as technology stocks experienced widespread losses during the AI trade unwind.
+MSFT | negative | Declined 2.8% amid the technology sector downturn and AI-related market concerns.
+TSLA | negative | Fell 7.6% as part of the broader technology and growth stock selloff.
+AAPL | negative | Declined 1.9% during the technology sector downturn.
+WMT | positive | Gained 1.51% after raising full-year forecast in earnings, benefiting from institutional rotation into defensive consumer staples.
+UNH | positive | Rose 2.83% following a TD Cowen upgrade, representing a defensive sector beneficiary during the market selloff.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:79a61662d2c08a829b7fdeff7c78621f59631c84e370ed6003cc728a8f2482ce
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T22:30:02Z
+publisher: The Motley Fool
+author: Will Healy
+url: https://www.fool.com/coverage/stock-market-today/2026/11/20/stock-market-today-nov-20-amazon-shares-slide-on-ai-and-mega-cap-tech-sell-off/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F160d43dfd7350cd39035020acd24f5be2e3e1199-1290x860.png&w=1200&op=resize
+category: 
+tickers: AMZN, WMT, EBAY, ANT, NVDA, META, METAM, MSFT, TSLA, AAPL, GOOG, GOOGL, GOOGM, GOOGN
+keywords: Amazon, tech selloff, AI spending, capital expenditures, Magnificent Seven, AWS, e-commerce, cloud computing, margin pressure
+headline: Stock Market Today, Nov. 20: Amazon Shares Slide on AI and Mega-Cap Tech Sell-Off
+<<<SUMMARY>>>
+Amazon shares fell 4.1% on November 20, 2026, amid a broad tech selloff and investor concerns over heavy AI capital spending and margin pressures. The Nasdaq declined 5.28% while the S&P 500 dropped 3.7%. All Magnificent Seven stocks declined, with the Anthropic IPO adding to negative AI sentiment. Despite Amazon's attractive P/E ratio of 20, investors are cautioned to move carefully given current market conditions.
+<<<INSIGHTS>>>
+AMZN | negative | Stock fell 4.1% due to investor concerns over $220 billion capital expenditure plans impacting free cash flow, soft consumer spending requiring promotional discounting, and heavy AI spending pressuring margins. However, P/E ratio of 20 is noted as attractive.
+WMT | positive | Stock rose 1.52% on stronger holiday outlook and steadier consumer demand compared to Amazon, outperforming retail peers.
+EBAY | negative | Stock declined 1.39% amid broader retail and tech sector selloff.
+ANT | negative | IPO stock declined 8.5% since opening at $111.50, contributing to negative AI sentiment across the market.
+NVDA | negative | Stock fell 14.0% as part of the Magnificent Seven decline and broader mega-cap tech selloff.
+META | negative | Stock fell 5.9% as part of the Magnificent Seven decline amid tech sector selloff.
+METAM | negative | Stock fell 5.9% as part of the Magnificent Seven decline amid tech sector selloff.
+MSFT | negative | Stock fell 2.8% as part of the Magnificent Seven decline and broader tech selloff.
+TSLA | negative | Stock fell 7.6% as part of the Magnificent Seven decline and broader mega-cap tech selloff.
+AAPL | negative | Stock fell 1.9% as part of the Magnificent Seven decline and broader tech sector selloff.
+GOOG | negative | Stock fell 2.6% as part of the Magnificent Seven decline and broader tech sector selloff.
+GOOGL | negative | Stock fell 2.6% as part of the Magnificent Seven decline and broader tech sector selloff.
+GOOGM | negative | Stock fell 2.6% as part of the Magnificent Seven decline and broader tech sector selloff.
+GOOGN | negative | Stock fell 2.6% as part of the Magnificent Seven decline and broader tech sector selloff.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:196324e7085f420bb39a058fb7fb8bc40e4e40eff3b3f56b6be0d79b631958dc
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T00:23:33Z
+publisher: The Motley Fool
+author: Neil Patel
+url: https://www.fool.com/investing/2026/11/20/s-and-p-500-tripled-10-years-even-after-latest-pullback-what-usd1-000-in-voo-could-have-become/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb5eb914d696c7a71b19ba7eff68e7d47c5972b21-1280x720.jpg&w=1200&op=resize
+category: 
+tickers: VOO, AAPL, NVDA, MSFT, VGT
+keywords: S&P 500, market pullback, long-term investing, dollar-cost averaging, earnings growth, market volatility, technology sector, index funds
+headline: The S&P 500 Has More Than Tripled in 10 Years, Even After Its Latest Pullback. Here’s What $1,000 in VOO Could Have Become.
+<<<SUMMARY>>>
+Despite a recent 10% pullback from its October peak, the S&P 500 has surged 229% over the past decade, with a $1,000 investment in VOO growing to approximately $3,953. The gains were primarily driven by a 212% increase in corporate earnings rather than valuation expansion. The article emphasizes that market timing is ineffective and advocates for dollar-cost averaging through pullbacks to capture long-term wealth creation.
+<<<INSIGHTS>>>
+VOO | positive | The article highlights VOO's strong 10-year performance with a $1,000 investment growing to ~$3,953 (14.7% annualized return including dividends). It is presented as a simple, low-cost vehicle for wealth building with a 0.03% expense ratio.
+AAPL | positive | Listed as the top holding in VOO at 7.69%, indicating significant exposure to this major tech company that benefited from the sector's strong performance.
+NVDA | positive | Second-largest holding in VOO at 7.58%, representing a key beneficiary of AI and data center spending trends mentioned as drivers of tech sector gains.
+MSFT | positive | Third-largest holding in VOO at 5.93%, representing exposure to the information technology sector which delivered 22.7% annualized returns over the decade.
+VGT | positive | Highlighted as delivering approximately 22.7% annualized total return over the past decade, driven by AI, cloud computing, and internet-based secular trends.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b611348f54702ccc7511aa532223e71b9dc1a7c41c9682c04a3d4b99cff8ae46
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T03:38:35Z
+publisher: The Motley Fool
+author: Jeremy Bowman
+url: https://www.fool.com/investing/2026/11/20/the-sp-500-just-entered-correction-territory-heres-what-it-means-for-investors-right-now/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F7ece26a0a149d5f029c45b39d3d0413b52ca569a-5472x3648.jpg&w=1200&op=resize
+category: 
+tickers: NVDA, GOOG, GOOGL, GOOGM, GOOGN, META, METAM, AMZN, TSLA, MSFT, AAPL
+keywords: S&P 500 correction, AI sector collapse, market volatility, stock valuations, Nvidia crisis, tech stocks, market recovery
+headline: The S&P 500 Just Entered Correction Territory. Here's What It Means for Investors Right Now.
+<<<SUMMARY>>>
+The S&P 500 entered correction territory after plunging 8.6% in one of its worst weeks, driven by an AI sector collapse and concerns about rising interest rates, unprofitable neocloud investments, and a leadership crisis at Nvidia. While corrections are routine market events occurring every 1.5 years on average, historically the S&P 500 recovers within 9.4 months on average. Investors are advised to view this as a buying opportunity for quality stocks now trading at attractive valuations.
+<<<INSIGHTS>>>
+NVDA | negative | Stock fell 14% on the day. Company facing leadership crisis with Jensen Huang's resignation, SEC accounting investigation, and investigations into chip exports to China.
+GOOG | neutral | Down 2.6% on the day as part of broader tech selloff, but article highlights it now has attractive price-to-earnings ratio below 20, presenting a buying opportunity.
+GOOGL | neutral | Down 2.6% on the day as part of broader tech selloff, but article highlights it now has attractive price-to-earnings ratio below 20, presenting a buying opportunity.
+GOOGM | neutral | Down 2.6% on the day as part of broader tech selloff, but article highlights it now has attractive price-to-earnings ratio below 20, presenting a buying opportunity.
+GOOGN | neutral | Down 2.6% on the day as part of broader tech selloff, but article highlights it now has attractive price-to-earnings ratio below 20, presenting a buying opportunity.
+META | neutral | Down 5.9% on the day amid AI sector concerns, but article notes it now has attractive valuation with P/E ratio below 20, making it a potential buying opportunity.
+METAM | neutral | Down 5.9% on the day amid AI sector concerns, but article notes it now has attractive valuation with P/E ratio below 20, making it a potential buying opportunity.
+AMZN | negative | Down 4.1% on the day as part of broader tech sector decline driven by AI trade unwinding.
+TSLA | negative | Down 7.6% on the day amid broader market selloff and tech sector weakness.
+MSFT | negative | Down 2.8% on the day as part of broader tech sector decline.
+AAPL | negative | Down 1.9% on the day amid broader market correction.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4e16973cb37428809ca89d70bcfce56c0fc98c69d4a6d54930e18c49ac4d5029
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T09:02:02Z
+publisher: The Motley Fool
+author: Adria Cimino
+url: https://www.fool.com/investing/2026/11/21/what-will-anthropic-s-price-be-in-3-months-history-offers-an-answer-that-s-strikingly-clear/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F73fbd05091fd99a4bb6d995f0e43a8782bf43b6f-1280x854.jpg&w=1200&op=resize
+category: 
+tickers: ANT, AAPL, MSFT, META, METAM, UBER, SPCX
+keywords: IPO, artificial intelligence, stock price prediction, historical IPO trends, AI investment, market valuation
+headline: What Will Anthropic’s Price Be in 3 Months? History Offers an Answer That’s Strikingly Clear.
+<<<SUMMARY>>>
+Anthropic completed the largest IPO on record, raising $81 billion ($93.5 billion with overallotment), and opened 33% above its $83 IPO price. However, historical analysis of 10 major IPOs from 1999-2023 shows that 8 delivered negative returns in their first three months, with an average decline of 13%. The article suggests Anthropic stock may follow this trend and decline in the coming three months, though the author recommends long-term investors not panic and potential buyers wait for a dip.
+<<<INSIGHTS>>>
+ANT | negative | While Anthropic has impressive revenue growth ($17B+ quarterly) and strong enterprise adoption (50%+ of Fortune 500), the article predicts the stock will likely decline 13% on average over the next three months based on historical IPO patterns. The author also highlights significant risks including high investment requirements, potential demand slowdown, competition, and regulatory concerns.
+AAPL | neutral | Mentioned only as a comparison point for Anthropic's rapid entry into the trillion-dollar valuation club, with no analysis or sentiment expressed about Apple itself.
+MSFT | neutral | Mentioned only as a comparison point for Anthropic's rapid entry into the trillion-dollar valuation club, with no analysis or sentiment expressed about Microsoft itself.
+META | neutral | Referenced as one of the 10 major IPOs analyzed for historical three-month performance trends, but no specific sentiment is expressed about the company.
+METAM | neutral | Referenced as one of the 10 major IPOs analyzed for historical three-month performance trends, but no specific sentiment is expressed about the company.
+UBER | neutral | Referenced as one of the 10 major IPOs analyzed for historical three-month performance trends, but no specific sentiment is expressed about the company.
+SPCX | neutral | Used as a recent IPO example that fell 6% in its first three months, supporting the historical trend analysis, but no independent sentiment is expressed.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a9f67432a2f2083479449a3b519601d9591268050df6734e97be0c11655b0944
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T09:44:02Z
+publisher: The Motley Fool
+author: Keith Speights
+url: https://www.fool.com/investing/2026/11/21/this-dividend-etf-could-supercharge-your-passive-income-heres-how/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb7ff80e1356205d4b309789908c98e599178e9bc-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, MSFT, NVDA, AMZN, GOOG, GOOGL, GOOGM, GOOGN
+keywords: dividend ETF, passive income, options overwrite strategy, S&P 500, covered call, yield, income investing
+headline: This Dividend ETF Could Supercharge Your Passive Income. Here's How.
+<<<SUMMARY>>>
+The Goldman Sachs S&P 500 Core Premium Income ETF (GPIX) uses a dynamic options overwrite strategy to generate high yields of 8.3% while maintaining competitive growth returns of 20.4% annually since its 2023 launch. The fund sells call options on 25-75% of its S&P 500 holdings to generate premium income, making it attractive for income-focused investors seeking some growth potential.
+<<<INSIGHTS>>>
+AAPL | neutral | Apple is mentioned only as a top holding in the GPIX portfolio without specific commentary on the company itself. It serves as an example of the ETF's S&P 500 exposure.
+MSFT | neutral | Microsoft is listed as a top holding in GPIX without independent analysis or commentary. Mentioned only as part of the fund's portfolio composition.
+NVDA | neutral | Nvidia is included as a major S&P 500 component held by GPIX, but no specific sentiment is expressed about the company itself.
+AMZN | neutral | Amazon is mentioned as a top GPIX holding without independent commentary or analysis.
+GOOG | neutral | Alphabet is listed among GPIX's top holdings without specific company-level analysis or sentiment.
+GOOGL | neutral | Alphabet is listed among GPIX's top holdings without specific company-level analysis or sentiment.
+GOOGM | neutral | Alphabet is listed among GPIX's top holdings without specific company-level analysis or sentiment.
+GOOGN | neutral | Alphabet is listed among GPIX's top holdings without specific company-level analysis or sentiment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1c5bf66fbb6cf542b18e2a091f875e34f1097471233db5b26eb215092160a995
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T13:50:02Z
+publisher: The Motley Fool
+author: Neil Patel
+url: https://www.fool.com/investing/2026/11/21/costco-u-s-comparable-sales-jumped-october-the-number-that-shows-its-moat-is-widening/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fcf7ca69f2f24829bef1e9a694d3d48d2f584583b-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: COST, WMT, BJ, AMZN, AAPL
+keywords: comparable sales growth, membership expansion, competitive moat, valuation concerns, retail sector, warehouse club, market share gains
+headline: Costco’s U.S. Comparable Sales Jumped 12.6% in October. Here’s the Number That Shows Its Moat Is Widening.
+<<<SUMMARY>>>
+Costco reported strong U.S. comparable sales growth of 12.6% in October (8.1% excluding gas and FX), driven by an expanding membership base of 84.1 million households, up 3.8% year-over-year. While the company's business fundamentals remain solid and its competitive moat is strengthening, the analyst cautions that the stock's valuation at a P/E ratio of 53.5 is too expensive, making it uninvestable despite strong operational performance.
+<<<INSIGHTS>>>
+COST | neutral | Strong operational metrics (12.6% comp sales growth, expanding membership base) and widening competitive moat are positive, but the analyst explicitly states the stock is 'uninvestable' due to excessive valuation at 53.5x P/E ratio with limited margin of safety, offsetting the positive business fundamentals.
+WMT | neutral | Mentioned as a direct competitor through its Sam's Club division, but no specific performance data or sentiment indicators provided in the article.
+BJ | neutral | Mentioned as a direct competitor to Costco, but no specific performance data or sentiment indicators provided in the article.
+AMZN | neutral | Mentioned as a competitive threat through its Prime membership offering, but no specific performance data or sentiment indicators provided in the article.
+AAPL | neutral | Used only as a valuation comparison point in the article; no direct sentiment or performance analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ed6d22880415ee101aed3efe4a048e8054009714305d4f1177e5e54ee371026b
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T14:21:02Z
+publisher: The Motley Fool
+author: Erin Kennedy
+url: https://www.fool.com/coverage/better-buy/2026/11/21/asml-vs-broadcom-which-tech-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F2a6d1cab1ce003d5537854f068f56a5df19b286e-8416x5060.jpg&w=1200&op=resize
+category: 
+tickers: ASML, AVGO, AAPL, TSM
+keywords: semiconductor equipment, chip manufacturing, lithography systems, networking infrastructure, AI infrastructure, valuation comparison, revenue growth, profit margins
+headline: ASML vs. Broadcom: Which Tech Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares ASML and Broadcom as investment choices for 2027. ASML holds a monopoly on advanced lithography machinery for chip production with strong margins (>30%) and lower valuation (P/E 31.16), while Broadcom dominates networking infrastructure with exceptional revenue growth (48.7%) and higher margins (66.54%) but trades at a premium valuation (P/E 38.86). The author recommends Broadcom for 2027 despite ASML's monopoly position, citing Broadcom's superior revenue growth and strong margins as more compelling for long-term investors.
+<<<INSIGHTS>>>
+ASML | positive | ASML maintains a virtual monopoly on advanced lithography machinery with strong pricing power, consistent net margins exceeding 30%, solid balance sheet (debt-to-equity 0.2), and lower valuation (P/E 31.16). However, it faces geopolitical risks and cyclical industry headwinds.
+AVGO | positive | Broadcom demonstrates exceptional revenue growth (48.7%), high gross margins (66.54%), and strong free cash flow ($26.9B). The author's recommendation for 2027 reflects confidence in its long-term performance, though it carries higher valuation (P/E 38.86), customer concentration risk, and reliance on TSMC for manufacturing.
+AAPL | neutral | Apple is mentioned as a major customer of Broadcom with a $30 billion commitment, representing significant customer concentration risk for Broadcom rather than a direct investment recommendation.
+TSM | neutral | TSMC is mentioned as a critical contract manufacturer producing approximately 95% of Broadcom's wafers, highlighting supply chain dependency rather than being evaluated as an investment option.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:04f4b40719ceb540cf8df2ef61f06fc83992f736eebdbf9fd0cf3ef173f384c5
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T15:30:02Z
+publisher: The Motley Fool
+author: Will Healy
+url: https://www.fool.com/investing/2026/11/21/after-plummeting-62-this-year-could-buying-intel-stock-today-set-you-up-for-life/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F2319fc2de5f5e4ad6cab6ccca60214412812ac9f-1290x860.png&w=1200&op=resize
+category: 
+tickers: INTC, TSM, AAPL, MSFT, AMZN, TSLA
+keywords: Intel stock decline, semiconductor industry, AI chip market, new leadership, market capitalization, investment returns, chip manufacturing
+headline: After Plummeting 62% This Year, Could Buying Intel Stock Today Set You Up for Life?
+<<<SUMMARY>>>
+Intel stock has fallen 62% from its June peak, attracting bargain hunters. While new leadership has improved the company's competitive position in semiconductors and AI chip markets, Intel's massive $290 billion market cap limits its potential to generate life-changing returns for small investors. The company faces challenges including high capital expenditures and projected slower growth rates than the broader AI chip market.
+<<<INSIGHTS>>>
+INTC | neutral | While Intel shows technical improvements under new CEO Lip-Bu Tan and competitive advantages in chip manufacturing, its massive market cap limits growth potential. The company faces near-term challenges with high capex and projected negative free cash flow, making it unlikely to deliver life-changing returns despite being a reasonable valuation at current prices.
+TSM | neutral | TSMC is mentioned as the industry's dominant manufacturer and Intel's main competitor. Intel's 18A process node success positions it as a viable competitor to TSMC, suggesting neither company has a clear advantage going forward.
+AAPL | neutral | Apple is mentioned only as a market cap reference point ($5.2 trillion), with no specific analysis of the company itself.
+MSFT | neutral | Microsoft is mentioned as a customer of Intel's foundry business, indicating a positive business relationship but no specific sentiment analysis provided.
+AMZN | neutral | Amazon's AWS division is mentioned as a customer of Intel's foundry, indicating a positive business relationship but no specific sentiment analysis provided.
+TSLA | neutral | Tesla is mentioned as having a deal with Intel for the 14A process node beginning in H2 2027, indicating a positive business relationship but no specific sentiment analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:23eb4ef568ca7423941c887917f644e7c228ccff680f473e7a148de7e51c9384
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T16:30:02Z
+publisher: The Motley Fool
+author: Stefon Walters
+url: https://www.fool.com/investing/2026/11/21/1-growth-etf-i-m-buying-even-when-the-market-is-expensive/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F01faf8ceeab22141b3dd99b51fe6057d02297d6e-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: QQQM, VOO, AAPL, MSFT, NVDA
+keywords: growth ETF, Nasdaq-100, market valuation, tech stocks, AI boom, portfolio diversification, ETF overlap
+headline: 1 Growth ETF I'm Buying Even When the Market Is Expensive
+<<<SUMMARY>>>
+The author recommends the Invesco Nasdaq 100 ETF (QQQM) as a quality growth investment despite current market valuations being at historically expensive levels similar to the dot-com bubble. While QQQM has outperformed the S&P 500 in 15 of the past 20 years, investors should be mindful of significant overlap with other popular ETFs and avoid making it the bulk of their portfolio due to heavy tech concentration.
+<<<INSIGHTS>>>
+QQQM | positive | Recommended as a quality growth ETF with strong historical outperformance (10.6% 5-year average annual returns vs S&P 500's 9.4%), despite current expensive valuations. Author suggests it's worth considering even at elevated prices due to long-term appeal.
+VOO | neutral | Used as a comparison benchmark showing lower historical returns than Nasdaq-100. Mentioned as having significant overlap with QQQM (80% of holdings shared), which could create redundancy in portfolios holding both.
+AAPL | neutral | Listed as top holding in QQQM (8.86%) and mentioned as part of the tech concentration risk. No specific positive or negative commentary provided.
+MSFT | neutral | Second-largest holding in QQQM (6.43%). Included as part of tech sector exposure without specific sentiment commentary.
+NVDA | neutral | Third-largest holding in QQQM (6.12%). Mentioned in context of AI arms race influencing fund performance, but no specific positive or negative assessment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ef79620d84cf7693862a376bdb0ea1b3c23051eb5d0c0addae131b325ee2510e
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T22:19:47Z
+publisher: The Motley Fool
+author: Tom Gardner And Panelists
+url: https://www.fool.com/investing/2026/11/21/markets-special-report-november-22-2026/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F894108%2Fmarkets_special_report_thumbnail-v-2.jpg&w=1200&op=resize
+category: 
+tickers: NVDA, TSLA, META, METAM, AMZN, MSFT, AAPL, GOOG, GOOGL, GOOGM, GOOGN
+keywords: market decline, tech stocks, investment strategy, market conditions, portfolio guidance
+headline: November 22, 2026: Markets Special Report
+<<<SUMMARY>>>
+The Motley Fool hosted a live market special report on November 22, 2026, to discuss current market conditions and investment strategies. Major indices showed significant declines, with the S&P 500 down 3.7%, NASDAQ down 5.3%, and the Dow down 1.9%. Tech stocks were particularly hard hit, with NVIDIA falling 14%, Tesla down 7.6%, and Meta down 5.9%. The team discussed how investors should approach their portfolios in this challenging market environment.
+<<<INSIGHTS>>>
+NVDA | negative | Stock declined 14% (-$20.45), representing the largest percentage loss among major tech stocks mentioned, indicating significant market pressure on the company.
+TSLA | negative | Stock fell 7.6% (-$28.59), showing substantial weakness in the electric vehicle sector during the broader market downturn.
+META | negative | Stock declined 5.9% (-$35.38), reflecting broader weakness in the technology and social media sector.
+METAM | negative | Stock declined 5.9% (-$35.38), reflecting broader weakness in the technology and social media sector.
+AMZN | negative | Stock fell 4.1% (-$10.55), participating in the broader tech sector decline.
+MSFT | negative | Stock declined 2.8% (-$13.78), showing weakness despite being a major tech leader.
+AAPL | negative | Stock fell 1.9% (-$6.65), experiencing modest losses in the broader market downturn.
+GOOG | negative | Stock declined 2.6% (-$7.02), reflecting weakness in the technology sector.
+GOOGL | negative | Stock declined 2.6% (-$7.02), reflecting weakness in the technology sector.
+GOOGM | negative | Stock declined 2.6% (-$7.02), reflecting weakness in the technology sector.
+GOOGN | negative | Stock declined 2.6% (-$7.02), reflecting weakness in the technology sector.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0a60cebecacc8b36b9dbcf4cda5d4033fc8d5223fc9f7f24e84893089f0fb97f
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T22:20:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/21/shopify-vs-uber-technologies-which-technology-stock-is-a-better-buy/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F077dbcdc9679c94b845aa0234c07d3573b0a7f07-4141x2760.jpg&w=1200&op=resize
+category: 
+tickers: SHOP, UBER, GOOG, GOOGL, GOOGM, GOOGN, PYPL, AAPL
+keywords: e-commerce platform, mobility and delivery, revenue growth, valuation comparison, robotaxi market, forward P/E ratio, user growth
+headline: Shopify vs. Uber Technologies: Which Technology Stock Is a Better Buy?
+<<<SUMMARY>>>
+The article compares Shopify and Uber Technologies as investment options. Shopify shows strong 32.5% revenue growth and $2.1B net income, but trades at a high forward P/E of 56.3x. Uber generates $56.5B in revenue with 13.9% growth and $3.5B net income, trading at a more attractive 15.5x forward P/E. The author recommends Uber due to its lower valuation, growing user base (215M monthly active users), and significant upside potential from the robotaxi market expected to reach $415B by 2035.
+<<<INSIGHTS>>>
+SHOP | neutral | Strong revenue growth of 32.5% and solid profitability ($2.1B net income) are positive, but the stock is viewed as overvalued with a forward P/E of 56.3x and P/S ratio of 12.7x. The author acknowledges it's well-run but not the preferred choice due to valuation concerns.
+UBER | positive | Recommended as the better buy due to attractive valuation (15.5x forward P/E, 2.5x P/S), strong user growth (14% increase to 215M monthly active users), rising trip bookings (16% increase), and significant future opportunity in the robotaxi market projected to reach $415B by 2035.
+GOOG | neutral | Mentioned as a dependency for both Shopify (cloud infrastructure) and Uber (mobile marketplace access), indicating both competitive risk and reliance on the company's platforms.
+GOOGL | neutral | Mentioned as a dependency for both Shopify (cloud infrastructure) and Uber (mobile marketplace access), indicating both competitive risk and reliance on the company's platforms.
+GOOGM | neutral | Mentioned as a dependency for both Shopify (cloud infrastructure) and Uber (mobile marketplace access), indicating both competitive risk and reliance on the company's platforms.
+GOOGN | neutral | Mentioned as a dependency for both Shopify (cloud infrastructure) and Uber (mobile marketplace access), indicating both competitive risk and reliance on the company's platforms.
+PYPL | neutral | Mentioned as a payment processor that Shopify depends on, representing a third-party dependency risk for Shopify's business model.
+AAPL | neutral | Mentioned as a mobile marketplace that Uber relies on to reach users, representing a platform dependency risk.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9242c2e673e0f760653d6259bd9dda42fc6b179a4ecf5bc71d5482bc7446b87a
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T23:19:26Z
+publisher: The Motley Fool
+author: Sara Appino
+url: https://www.fool.com/coverage/better-buy/2026/11/21/applovin-vs-reddit-which-technology-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F497213577468110e4ae04f3160ed91a99378c474-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: APP, RDDT, GOOG, GOOGL, GOOGM, GOOGN, AMZN, AAPL, META, METAM, U
+keywords: ad-tech, digital advertising, profitability, revenue growth, valuation, mobile apps, user engagement, AI search, content licensing
+headline: AppLovin vs. Reddit: Which Technology Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares AppLovin and Reddit as investment options for 2027. AppLovin, an ad-tech platform, shows strong profitability with 66% net margins and 46.5% revenue growth, though it faces volatility and platform dependency risks. Reddit is profitable with 62% revenue growth but faces headwinds from Google's AI search reducing traffic and declining U.S. user engagement. The analyst recommends AppLovin for its superior growth trajectory, profitability, and expansion into online shopping advertising.
+<<<INSIGHTS>>>
+APP | positive | Strong financial performance with 46.5% revenue growth, exceptional 65.9% net margins, robust free cash flow of $3.9B, and expansion into new markets like online shopping. Despite stock volatility and competitive pressures, the company demonstrates operational excellence and growth momentum.
+RDDT | neutral | While Reddit achieved profitability and 62% revenue growth, it faces significant headwinds from Google's AI search reducing traffic, declining U.S. user engagement, and heavy reliance on advertising revenue. The company has strong balance sheet metrics but faces structural challenges to future growth.
+GOOG | neutral | Mentioned as both a customer of AppLovin and a competitive threat to Reddit through its AI search capabilities. Also noted as a cloud infrastructure provider for Reddit. No direct investment recommendation provided.
+GOOGL | neutral | Mentioned as both a customer of AppLovin and a competitive threat to Reddit through its AI search capabilities. Also noted as a cloud infrastructure provider for Reddit. No direct investment recommendation provided.
+GOOGM | neutral | Mentioned as both a customer of AppLovin and a competitive threat to Reddit through its AI search capabilities. Also noted as a cloud infrastructure provider for Reddit. No direct investment recommendation provided.
+GOOGN | neutral | Mentioned as both a customer of AppLovin and a competitive threat to Reddit through its AI search capabilities. Also noted as a cloud infrastructure provider for Reddit. No direct investment recommendation provided.
+AMZN | neutral | Mentioned as a customer of AppLovin and a competitive threat in the mobile app ecosystem. Also serves as a cloud infrastructure provider for Reddit. No direct investment recommendation provided.
+AAPL | neutral | Identified as a third-party platform that AppLovin depends on, with potential risks from privacy changes affecting data access. Represents a dependency risk rather than an investment opportunity in this context.
+META | neutral | Mentioned as a customer of AppLovin's ad-tech platform and a competitive threat in digital advertising. No direct investment recommendation provided.
+METAM | neutral | Mentioned as a customer of AppLovin's ad-tech platform and a competitive threat in digital advertising. No direct investment recommendation provided.
+U | neutral | Identified as both a customer and competitor of AppLovin in the mobile app ecosystem. No direct investment recommendation provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:30d5d27e7ed04356b9d8758cb224770047996c6438ea81ad9fb5a1429adc4940
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T23:40:25Z
+publisher: The Motley Fool
+author: Sara Appino
+url: https://www.fool.com/coverage/better-buy/2026/11/21/intuit-vs-oracle-which-technology-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F497213577468110e4ae04f3160ed91a99378c474-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: INTU, ORCL, ORCLpD, AMZN, AAPL, GOOG, GOOGL, GOOGM, GOOGN, MSFT
+keywords: software comparison, cloud infrastructure, AI integration, financial metrics, valuation, debt-to-equity ratio, free cash flow, enterprise software
+headline: Intuit vs. Oracle: Which Technology Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Intuit and Oracle as investment choices for 2027. Intuit dominates consumer tax and small business accounting with a sticky ecosystem, strong profitability, and healthy cash flow, while Oracle is aggressively expanding cloud infrastructure for AI workloads but carries heavy debt and negative free cash flow. The analyst recommends Intuit for long-term investors due to its profitable growth, lower leverage, and expanding customer base.
+<<<INSIGHTS>>>
+INTU | positive | Strong recurring revenue from 93 million users, healthy 12.8% revenue growth, high net margins, low debt-to-equity ratio (0.4x), positive free cash flow of $8.7B, growing dividend, and successful AI integration into products. Recommended as the better buy for 2027.
+ORCL | neutral | Strong revenue growth of 21.6% and significant scale with $71.8B revenue, but offset by high debt-to-equity ratio (3.7x), negative free cash flow of -$23.7B due to massive data center investments, and heavy reliance on single customer (OpenAI). Shows growth potential but with elevated financial risk.
+ORCLpD | neutral | Strong revenue growth of 21.6% and significant scale with $71.8B revenue, but offset by high debt-to-equity ratio (3.7x), negative free cash flow of -$23.7B due to massive data center investments, and heavy reliance on single customer (OpenAI). Shows growth potential but with elevated financial risk.
+AMZN | neutral | Mentioned as a strategic cloud infrastructure partner for Intuit and as a competitor to Oracle in cloud services. No specific performance analysis provided in the article.
+AAPL | neutral | Mentioned as a major distribution platform for Intuit's software through the App Store. No specific performance analysis provided.
+GOOG | neutral | Mentioned as a strategic cloud infrastructure partner for Intuit and as a competitor to Oracle. No specific performance analysis provided.
+GOOGL | neutral | Mentioned as a strategic cloud infrastructure partner for Intuit and as a competitor to Oracle. No specific performance analysis provided.
+GOOGM | neutral | Mentioned as a strategic cloud infrastructure partner for Intuit and as a competitor to Oracle. No specific performance analysis provided.
+GOOGN | neutral | Mentioned as a strategic cloud infrastructure partner for Intuit and as a competitor to Oracle. No specific performance analysis provided.
+MSFT | neutral | Mentioned as a competitor to Oracle in the cloud and software industry. No specific performance analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1b8aae25bafaacd0493e60a008a3d9facbd713bc2aac1590f42e6088ba4b90fe
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T00:30:02Z
+publisher: The Motley Fool
+author: Katie Brockman
+url: https://www.fool.com/investing/2026/11/21/if-a-stock-market-crash-is-coming-warren-buffett-says-this-is-the-no-1-move-all-investors-should-make/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb0ebca7eebf3fc65eefe9753af9a29b4c1bb1a8b-3000x2000.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, AMZN, GOOG, GOOGL, GOOGM, GOOGN, META, METAM, MSFT, NVDA, TSLA
+keywords: Warren Buffett, stock market crash, competitive advantage, market volatility, dot-com bubble, artificial intelligence, business fundamentals, bear market, long-term investing
+headline: If a Stock Market Crash Is Coming, Warren Buffett Says This Is the No. 1 Move All Investors Should Make
+<<<SUMMARY>>>
+With market volatility increasing and the Nasdaq in correction territory, Warren Buffett advises investors to focus on companies with strong competitive advantages and durable business fundamentals rather than betting on industry hype. Drawing lessons from the dot-com bubble, Buffett emphasizes that revolutionary technologies don't guarantee profitable investments—quality and competitive moats matter most for surviving downturns.
+<<<INSIGHTS>>>
+AAPL | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+AMZN | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+GOOG | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+GOOGL | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+GOOGM | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+GOOGN | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+META | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+METAM | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+MSFT | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+NVDA | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+TSLA | neutral | Mentioned only as a market mover with price data; no specific analysis or recommendation provided
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5498cb74e2c4381e03e230ecebf17db6b1538e76ed585862c5665ccfd032a0c9
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T05:37:02Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/11/22/the-2-etfs-i-d-buy-today-1-for-growth-1-for-dividends/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fed0eb781bac0786e7946090349608d8cd2bb943c-2122x1413.jpg&w=1200&op=resize
+category: 
+tickers: VUG, SCHD, AAPL, NVDA, MSFT, GOOG, GOOGL, GOOGM, GOOGN
+keywords: ETF, growth investing, dividend investing, portfolio diversification, large-cap stocks, market volatility
+headline: The 2 ETFs I'd Buy Today: 1 for Growth, 1 for Dividends
+<<<SUMMARY>>>
+The article recommends owning two complementary ETFs: the Vanguard Morningstar Growth ETF (VUG) for growth potential, currently down 18% from its October record, and the Schwab U.S. Dividend Equity ETF (SCHD) for income and stability, yielding 3.18%. These funds move inversely during market cycles, providing portfolio balance and diversification.
+<<<INSIGHTS>>>
+VUG | positive | Despite being down 18% from its record high, the fund is recommended as a buy opportunity. It holds high-growth companies with 33% average annual earnings growth over five years, a low 0.03% expense ratio, and delivered 18% annual returns over the past decade. The pullback is viewed as a buying opportunity rather than a fundamental concern.
+SCHD | positive | Recommended as a complementary holding for its steady income generation with a 3.18% SEC yield, low 0.06% expense ratio, and defensive characteristics. The fund held up well during market downturns (only 3% loss in 2022) and provides portfolio stability alongside growth holdings.
+AAPL | positive | Listed as a major holding (13.69%) in the growth-focused VUG fund, representing one of the fastest-growing large-cap businesses in the U.S. included in the recommended portfolio.
+NVDA | positive | Second-largest holding (12.78%) in VUG, representing high-growth technology exposure that is central to the growth fund's strategy.
+MSFT | positive | Third-largest holding (10.49%) in VUG, contributing to the fund's growth-oriented technology concentration.
+GOOG | positive | Major holding in VUG representing one of the four largest positions (approximately 45% combined with Apple, Microsoft, and Nvidia) in the growth fund.
+GOOGL | positive | Major holding in VUG representing one of the four largest positions (approximately 45% combined with Apple, Microsoft, and Nvidia) in the growth fund.
+GOOGM | positive | Major holding in VUG representing one of the four largest positions (approximately 45% combined with Apple, Microsoft, and Nvidia) in the growth fund.
+GOOGN | positive | Major holding in VUG representing one of the four largest positions (approximately 45% combined with Apple, Microsoft, and Nvidia) in the growth fund.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:56d41e39ccba836d5d62e36330185fcfc982eb68b2e7cdf9df45790c2acc14d3
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T09:21:02Z
+publisher: The Motley Fool
+author: Trevor Jennewine
+url: https://www.fool.com/investing/2026/11/22/stock-market-sounds-alarm-bad-news-president-trump-economy/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fef31a4d258ecf5cb26b1726a8bd959f244e61d1b-3000x2000.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, AMZN, GOOG, GOOGL, GOOGM, GOOGN, META, METAM, MSFT, NVDA, TSLA
+keywords: stock market correction, inflation acceleration, CAPE ratio, dot-com bubble comparison, interest rate hikes, valuations, tariffs, energy prices
+headline: The Stock Market Sounds an Alarm as Investors Get Bad News About President Donald Trump's Economy
+<<<SUMMARY>>>
+The S&P 500 and Nasdaq Composite have entered correction territory amid persistent inflation and elevated valuations. With the S&P 500's CAPE ratio at 40.1—matching levels last seen during the dot-com bubble—investors face concerning headwinds. Accelerating inflation driven by tariffs and energy sector disruptions, combined with expectations of further Federal Reserve rate hikes, threaten to pressure stock valuations and economic growth.
+<<<INSIGHTS>>>
+AAPL | negative | Down 1.9% amid broader market selloff; tech stocks face headwinds from higher interest rates and valuation compression
+AMZN | negative | Down 4.1% as part of tech sector weakness; vulnerable to higher borrowing costs and valuation pressure
+GOOG | negative | Down 2.6% amid market correction; tech sector facing valuation headwinds from rising rates
+GOOGL | negative | Down 2.6% amid market correction; tech sector facing valuation headwinds from rising rates
+GOOGM | negative | Down 2.6% amid market correction; tech sector facing valuation headwinds from rising rates
+GOOGN | negative | Down 2.6% amid market correction; tech sector facing valuation headwinds from rising rates
+META | negative | Down 5.9%, among the largest decliners; tech stocks particularly vulnerable to interest rate increases and valuation compression
+METAM | negative | Down 5.9%, among the largest decliners; tech stocks particularly vulnerable to interest rate increases and valuation compression
+MSFT | negative | Down 2.8% amid broader market weakness; exposed to rising rate environment despite AI growth prospects
+NVDA | negative | Down 14.0%, one of the largest decliners; despite AI tailwinds mentioned, facing severe valuation pressure from rising rates
+TSLA | negative | Down 7.6% amid market correction; growth stocks particularly vulnerable to higher interest rates
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7f5c181549a798be76c60631241bb3d155baeccd103ab0e05a4b471cbde4af83
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T10:51:02Z
+publisher: The Motley Fool
+author: Anthony Di Pizio
+url: https://www.fool.com/investing/2026/11/22/41-6-berkshire-hathaways-358-billion-portfolio-parked-3-artificial-intelligence-ai-stocks/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd42c7109dcfdf45aeb7faf5f6382ee3c2fc0319e-2048x1365.jpg&w=1200&op=resize
+category: 
+tickers: GOOG, GOOGL, GOOGM, GOOGN, AAPL, KO, MSFT, BRK.A, BRK.B
+keywords: artificial intelligence, Berkshire Hathaway, Greg Abel, AI stocks, portfolio allocation, Google Cloud, Apple Intelligence, Coca-Cola AI transformation
+headline: 41.6% of Berkshire Hathaway's $358 Billion Portfolio Is Parked in 3 Artificial Intelligence (AI) Stocks
+<<<SUMMARY>>>
+Berkshire Hathaway's new CEO Greg Abel has significantly increased the conglomerate's exposure to artificial intelligence through three major holdings: Alphabet (8.2% of portfolio), Coca-Cola (11%), and Apple (22.4%). These three AI-focused stocks represent 41.6% of Berkshire's $358 billion portfolio. Abel has aggressively expanded Alphabet's position sixfold in 2026, while Apple remains the largest single holding despite Buffett reducing the stake by 75% in 2025.
+<<<INSIGHTS>>>
+GOOG | positive | Aggressive sixfold position increase by new CEO Abel in 2026; leading AI integration in Google Search and Google Cloud with 103% revenue surge in Q3 and $561 billion order backlog
+GOOGL | positive | Aggressive sixfold position increase by new CEO Abel in 2026; leading AI integration in Google Search and Google Cloud with 103% revenue surge in Q3 and $561 billion order backlog
+GOOGM | positive | Aggressive sixfold position increase by new CEO Abel in 2026; leading AI integration in Google Search and Google Cloud with 103% revenue surge in Q3 and $561 billion order backlog
+GOOGN | positive | Aggressive sixfold position increase by new CEO Abel in 2026; leading AI integration in Google Search and Google Cloud with 103% revenue surge in Q3 and $561 billion order backlog
+AAPL | positive | Largest Berkshire holding at 22.4% of portfolio; positioned as world's biggest AI distributor to consumers with 2.5 billion active devices; Apple Intelligence suite expanding AI capabilities across ecosystem
+KO | positive | 11% of Berkshire portfolio; investing heavily in AI for marketing, manufacturing, and product development; $1.1 billion Microsoft Azure deal demonstrates commitment to AI transformation
+MSFT | neutral | Mentioned as provider of Azure cloud platform to Coca-Cola; supporting role in broader AI ecosystem but not a primary focus of the article
+BRK.A | positive | 41.6% of $358 billion portfolio concentrated in three AI-focused stocks; new CEO actively increasing AI exposure; demonstrates strategic pivot toward AI despite Buffett's historical tech skepticism
+BRK.B | positive | 41.6% of $358 billion portfolio concentrated in three AI-focused stocks; new CEO actively increasing AI exposure; demonstrates strategic pivot toward AI despite Buffett's historical tech skepticism
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b00db24465ccf75d8d2c0a1ba43c82fba500d86778272e57184a1096afce23ed
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T13:15:02Z
+publisher: The Motley Fool
+author: Daniel Foelber
+url: https://www.fool.com/investing/2026/11/22/soxx-and-dram-are-down-between-35-6-and-51-9-from-their-highs-here-s-an-even-better-growth-stock-etf-to-buy-during-the-nasdaq-correction/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F869430aff29dc8775c5eb3a838beaa995d37de2d-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: MGK, SOXX, DRAM, NVDA, AAPL, MSFT, GOOG, GOOGL, GOOGM, GOOGN, LLY, AMZN
+keywords: Nasdaq correction, semiconductor stocks, AI investment, ETF comparison, portfolio diversification, growth stocks
+headline: SOXX and DRAM Are Down Between 35.6% and 51.9% From Their Highs. Here’s an Even Better Growth Stock ETF to Buy During the Nasdaq Correction.
+<<<SUMMARY>>>
+Semiconductor ETFs SOXX and DRAM have declined significantly amid a Nasdaq correction, accelerated by Jensen Huang's resignation as Nvidia CEO. The article argues that the Vanguard Morningstar Mega Cap Growth ETF (MGK) is a better long-term AI investment due to its diversified exposure across multiple sectors and lower fees, rather than concentrating solely on semiconductor stocks which can be cyclical.
+<<<INSIGHTS>>>
+MGK | positive | Recommended as a superior long-term AI investment alternative with diversified exposure across multiple sectors, lower expense ratio (0.05%), and less cyclical risk compared to semiconductor-focused ETFs.
+SOXX | negative | Down 35.6% from highs with heavy concentration in five semiconductor stocks; criticized for cyclical nature and higher expense ratio (0.33%) compared to MGK.
+DRAM | negative | Down 51.9% from highs with extreme concentration in three memory chip stocks; highest expense ratio (0.65%) among compared ETFs and vulnerable to semiconductor industry cycles.
+NVDA | negative | Down 14% on the day; leadership transition with Jensen Huang's resignation as CEO creates uncertainty about the company's creative direction.
+AAPL | positive | Largest holding in MGK at 13.8%; remains near all-time highs as it serves as a touchpoint for AI applications without requiring heavy capital expenditures.
+MSFT | positive | Second-largest holding in MGK at 10.3%; heavily invested in AI infrastructure through data centers while also having exposure to application layers and enterprise software.
+GOOG | positive | Significant holding in MGK at 7.8%; benefits from AI infrastructure investments, has leading frontier model in Gemini, and diversified revenue streams beyond semiconductors.
+GOOGL | positive | Significant holding in MGK at 7.8%; benefits from AI infrastructure investments, has leading frontier model in Gemini, and diversified revenue streams beyond semiconductors.
+GOOGM | positive | Significant holding in MGK at 7.8%; benefits from AI infrastructure investments, has leading frontier model in Gemini, and diversified revenue streams beyond semiconductors.
+GOOGN | positive | Significant holding in MGK at 7.8%; benefits from AI infrastructure investments, has leading frontier model in Gemini, and diversified revenue streams beyond semiconductors.
+LLY | positive | 4.1% of MGK; positioned to benefit from AI-driven cost reductions and accelerated drug development, representing non-tech exposure to AI benefits.
+AMZN | positive | Included in MGK holdings; benefits from AI infrastructure investments and potential edge AI applications through robotic warehouse automation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c4dca07fb58eb6aaa4a812c4e2080f149c2795352601c770b2727b085a7513f8
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T13:18:02Z
+publisher: The Motley Fool
+author: Matt Frankel, Cfp®
+url: https://www.fool.com/investing/2026/11/22/prediction-anthropic-will-be-the-world-s-most-valuable-company-by-2030/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F169b489b08fae7dae34ebf240abe89c544f132d6-1365x720.jpg&w=1200&op=resize
+category: 
+tickers: ANT, AAPL, NVDA, AMZN, GOOG, GOOGL, GOOGM, GOOGN
+keywords: Anthropic IPO, AI valuation, market cap prediction, revenue growth, enterprise AI, net revenue retention
+headline: Prediction: Anthropic Will Be the World’s Most Valuable Company by 2030
+<<<SUMMARY>>>
+Anthropic reached a $2 trillion valuation on its IPO debut, four years ahead of a major investor's 2030 prediction. The analyst predicts Anthropic could become the world's most valuable company by 2030, requiring growth to $7-10 trillion. This would require 50% annual revenue growth from its current $80 billion run rate, which is a dramatic slowdown from its current 1,127% year-over-year growth. The company's 900% net revenue retention rate and enterprise customer expansion potential support this thesis, though competition from OpenAI and Google, along with massive infrastructure costs, present significant risks.
+<<<INSIGHTS>>>
+ANT | positive | Strong IPO debut at $2 trillion valuation, exceptional revenue growth (1,127% YoY), high net revenue retention (900%), and analyst prediction of becoming world's most valuable company by 2030 based on market share expansion potential.
+AAPL | neutral | Currently the world's most valuable company at $5.2 trillion, but positioned as a competitor that Anthropic could surpass. No negative commentary, but used as a benchmark for comparison.
+NVDA | neutral | Mentioned as a hardware supplier in the AI boom whose value may shift toward software/model companies like Anthropic. Recent decline noted but no specific negative outlook; positioned as a competitor losing relative value share.
+AMZN | positive | Major customer and investor owning nearly 15% of Anthropic post-IPO, indicating strong partnership and confidence in the company's potential.
+GOOG | neutral | Major customer and investor owning 14% of Anthropic, but also mentioned as a competitor through Google's AI efforts. Mixed positioning as both partner and rival.
+GOOGL | neutral | Major customer and investor owning 14% of Anthropic, but also mentioned as a competitor through Google's AI efforts. Mixed positioning as both partner and rival.
+GOOGM | neutral | Major customer and investor owning 14% of Anthropic, but also mentioned as a competitor through Google's AI efforts. Mixed positioning as both partner and rival.
+GOOGN | neutral | Major customer and investor owning 14% of Anthropic, but also mentioned as a competitor through Google's AI efforts. Mixed positioning as both partner and rival.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:69f877db360a1fade070d56ab6609932ff946f5060e37692884a913f7d35b206
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T15:23:02Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/11/22/i-m-raising-my-fair-value-estimate-for-berkshire-hathaway-stock-here-s-what-i-think-it-s-worth/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F944e0431cf34787d4c109a930544ffe9cccff265-2560x1707.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, GOOG, GOOGL, GOOGM, GOOGN, BRK.A, BRK.B
+keywords: fair value estimate, capital allocation, operating businesses, cash position, stock portfolio, earnings growth, insurance float, buyback strategy
+headline: I'm Raising My Fair Value Estimate for Berkshire Hathaway Stock. Here's What I Think It's Worth.
+<<<SUMMARY>>>
+Daniel Sparks raises his fair value estimate for Berkshire Hathaway Class B shares to $700, representing a 22% premium over the current stock price of ~$575. The increase is driven by CEO Greg Abel's disciplined capital management, strong growth in operating businesses (13% year-over-year), and the company's substantial cash position ($352 billion) and stock portfolio ($336 billion). Sparks values the operating businesses at 25x earnings, in line with S&P 500 valuations, compared to the market's current 17x multiple.
+<<<INSIGHTS>>>
+AAPL | neutral | Mentioned as Berkshire's largest stock holding (~228 million shares held steady for three quarters), but no specific positive or negative developments reported regarding Apple itself.
+GOOG | neutral | Noted as one of Berkshire's five biggest stock holdings, but mentioned primarily in context of AI exposure rather than company-specific developments.
+GOOGL | neutral | Noted as one of Berkshire's five biggest stock holdings, but mentioned primarily in context of AI exposure rather than company-specific developments.
+GOOGM | neutral | Noted as one of Berkshire's five biggest stock holdings, but mentioned primarily in context of AI exposure rather than company-specific developments.
+GOOGN | neutral | Noted as one of Berkshire's five biggest stock holdings, but mentioned primarily in context of AI exposure rather than company-specific developments.
+BRK.A | positive | Fair value estimate raised 22% above current price; strong operating business growth (13% YoY), disciplined capital management by CEO Abel, substantial cash and investment portfolio covering over half current stock price, and insurance float generating negative cost basis support the positive outlook.
+BRK.B | positive | Fair value estimate raised 22% above current price; strong operating business growth (13% YoY), disciplined capital management by CEO Abel, substantial cash and investment portfolio covering over half current stock price, and insurance float generating negative cost basis support the positive outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1c2f9c4a7f1fab7b5fc5c09b094f2bde802b44908cbca1026dabb30aa559f513
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T16:56:18Z
+publisher: The Motley Fool
+author: Seena Hassouna
+url: https://www.fool.com/coverage/better-buy/2026/11/22/alphabet-vs-meta-platforms-which-media-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F921b7b3d464cb345a2dd449fef6247475b7013b3-4739x2666.jpg&w=1200&op=resize
+category: 
+tickers: GOOG, GOOGL, GOOGM, GOOGN, META, METAM, AAPL
+keywords: stock comparison, valuation metrics, revenue growth, digital advertising, artificial intelligence, regulatory risks, free cash flow, long-term investment
+headline: Alphabet vs. Meta Platforms: Which Media Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Alphabet and Meta Platforms as investment options for 2027. Alphabet trades at a cheaper forward P/E of 13.9x versus Meta's 20.5x, but Meta shows stronger revenue growth at 27.5% compared to Alphabet's 22.2%. The author recommends Alphabet for long-term investors due to its diversified revenue streams across search, YouTube, Android, and cloud services, while Meta's revenue is heavily dependent on advertising. Both face regulatory risks, but Alphabet's broader business model provides more resilience.
+<<<INSIGHTS>>>
+GOOG | positive | Recommended as the better buy for 2027 due to diversified revenue streams (search, YouTube, Android, Google Cloud), strong financial metrics (0.1x debt-to-equity, $73.3B free cash flow), and resilience against regulatory risks. Lower forward P/E of 13.9x suggests better value, though earnings include non-repeating investment gains.
+GOOGL | positive | Recommended as the better buy for 2027 due to diversified revenue streams (search, YouTube, Android, Google Cloud), strong financial metrics (0.1x debt-to-equity, $73.3B free cash flow), and resilience against regulatory risks. Lower forward P/E of 13.9x suggests better value, though earnings include non-repeating investment gains.
+GOOGM | positive | Recommended as the better buy for 2027 due to diversified revenue streams (search, YouTube, Android, Google Cloud), strong financial metrics (0.1x debt-to-equity, $73.3B free cash flow), and resilience against regulatory risks. Lower forward P/E of 13.9x suggests better value, though earnings include non-repeating investment gains.
+GOOGN | positive | Recommended as the better buy for 2027 due to diversified revenue streams (search, YouTube, Android, Google Cloud), strong financial metrics (0.1x debt-to-equity, $73.3B free cash flow), and resilience against regulatory risks. Lower forward P/E of 13.9x suggests better value, though earnings include non-repeating investment gains.
+META | neutral | Shows impressive 27.5% revenue growth and strong engagement metrics, but faces significant headwinds including heavy advertising revenue concentration, ongoing legal challenges (including $25B New Mexico penalty), and negative free cash flow trends in early 2026 due to AI spending. Suitable only for investors willing to accept legal overhang and faster growth volatility.
+METAM | neutral | Shows impressive 27.5% revenue growth and strong engagement metrics, but faces significant headwinds including heavy advertising revenue concentration, ongoing legal challenges (including $25B New Mexico penalty), and negative free cash flow trends in early 2026 due to AI spending. Suitable only for investors willing to accept legal overhang and faster growth volatility.
+AAPL | neutral | Mentioned as a distribution partner for Meta Platforms and noted in disclosure statements. No direct investment recommendation or analysis provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:cc62d4b464c08b544b72c3d6c00abf96779eac6c35b8d36bae6fd11e82ee54e4
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T17:30:02Z
+publisher: The Motley Fool
+author: Dana George
+url: https://www.fool.com/investing/2026/11/22/etf-investors-are-rethinking-what-diversified-really-means/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Ffcf5c3c0cb45165e6282dafc75975cb184d61493-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, MSFT, NVDA, AMZN, GOOG, GOOGL, GOOGM, GOOGN, IVV, VOO
+keywords: ETF diversification, portfolio overlap, S&P 500 tracking, fund holdings analysis, investment strategy
+headline: ETF Investors Are Rethinking What “Diversified” Really Means
+<<<SUMMARY>>>
+ETF investors are increasingly questioning whether owning multiple funds truly provides diversification. The article warns that adding similar ETFs (like IVV and VOO, both tracking the S&P 500) can result in significant overlap in holdings rather than genuine diversification. true diversification requires examining underlying holdings, sectors, and regions across funds to ensure they respond differently to market events.
+<<<INSIGHTS>>>
+AAPL | neutral | Mentioned as a major holding in both IVV and VOO, exemplifying the overlap problem in diversification rather than being evaluated on company fundamentals.
+MSFT | neutral | Listed as a top holding in both S&P 500 ETFs, used as an example of concentrated exposure across similar funds.
+NVDA | neutral | Cited as a major holding in both IVV and VOO, illustrating the diversification concern rather than company-specific analysis.
+AMZN | neutral | Mentioned as a top holding in both ETFs, used to demonstrate overlap issues in portfolio construction.
+GOOG | neutral | Listed as a significant holding in both S&P 500 ETFs, exemplifying concentrated exposure across similar funds.
+GOOGL | neutral | Listed as a significant holding in both S&P 500 ETFs, exemplifying concentrated exposure across similar funds.
+GOOGM | neutral | Listed as a significant holding in both S&P 500 ETFs, exemplifying concentrated exposure across similar funds.
+GOOGN | neutral | Listed as a significant holding in both S&P 500 ETFs, exemplifying concentrated exposure across similar funds.
+IVV | neutral | Used as a primary example of an S&P 500 tracking fund with low expenses and broad access, but highlighted as having significant overlap with similar funds.
+VOO | neutral | Presented as an example of a fund that appears diversifying but creates substantial overlap when combined with IVV, both tracking the same index.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:83c930a605e15b9dd4d0adf16c2ad5d1cabff973947e59fcd921e7513ac10cc5
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T19:13:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/22/alibaba-vs-booking-holdings-which-e-commerce-retail-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F7dc3904f94b711d9aebfe90dd65659e1c4664b0f-2000x1200.jpg&w=1200&op=resize
+category: 
+tickers: BABA, BKNG, PCLN, ABNB, GOOG, GOOGL, GOOGM, GOOGN, AAPL
+keywords: e-commerce, travel services, valuation comparison, AI cloud services, market competition, regulatory risks, cash flow, share buybacks
+headline: Alibaba vs. Booking Holdings: Which E-Commerce Retail Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Alibaba and Booking Holdings as investment options for 2027. Alibaba trades at a lower valuation with a P/E of 11.19x and focuses on AI cloud services with 45% YoY growth, but faces intense domestic competition and regulatory risks in China. Booking Holdings is recommended as the better buy, trading at 14.1x forward P/E with strong fundamentals including $16 billion in cash, expanding margins, a $20 billion buyback program, and 66% organic traffic. Booking's shift to a merchant model and resilient travel demand position it favorably for 2027.
+<<<INSIGHTS>>>
+BABA | neutral | Alibaba presents a value opportunity with attractive valuation (P/E 11.19x) and impressive 45% YoY growth in AI cloud services. However, it faces significant headwinds including losing market share in core retail businesses to domestic rivals, heavy capital requirements for AI expansion, regulatory uncertainty in China, and geopolitical risks that limit international growth prospects.
+BKNG | positive | Booking is recommended as the superior investment choice for 2027. The company demonstrates strong financial health with $16 billion in cash, expanding margins through its merchant model transition, robust revenue growth (~9%), significant net income growth (~50%), a $20 billion buyback program, and 66% organic traffic reducing Google dependency. Valuation remains attractive relative to peers and the S&P 500.
+PCLN | positive | Booking is recommended as the superior investment choice for 2027. The company demonstrates strong financial health with $16 billion in cash, expanding margins through its merchant model transition, robust revenue growth (~9%), significant net income growth (~50%), a $20 billion buyback program, and 66% organic traffic reducing Google dependency. Valuation remains attractive relative to peers and the S&P 500.
+ABNB | neutral | Mentioned as a competitive threat to Booking in the travel services space, using AI to reach customers directly. Also noted as trading at a higher valuation than Booking, providing context for Booking's relative value proposition.
+GOOG | neutral | Identified as a key risk factor for Booking due to dependency on Google search traffic for customer acquisition. Changes to search algorithms or AI features could increase customer acquisition costs, though Booking is reducing this dependency with organic traffic growth.
+GOOGL | neutral | Identified as a key risk factor for Booking due to dependency on Google search traffic for customer acquisition. Changes to search algorithms or AI features could increase customer acquisition costs, though Booking is reducing this dependency with organic traffic growth.
+GOOGM | neutral | Identified as a key risk factor for Booking due to dependency on Google search traffic for customer acquisition. Changes to search algorithms or AI features could increase customer acquisition costs, though Booking is reducing this dependency with organic traffic growth.
+GOOGN | neutral | Identified as a key risk factor for Booking due to dependency on Google search traffic for customer acquisition. Changes to search algorithms or AI features could increase customer acquisition costs, though Booking is reducing this dependency with organic traffic growth.
+AAPL | neutral | Mentioned only as an example of large digital platforms subject to EU regulatory compliance risks, similar to those faced by Booking. No direct investment thesis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:20c6a9d7da977b711ad6365de9fe0e0a68f4f8033ad875e4c0d055ea536434fa
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T20:27:02Z
+publisher: The Motley Fool
+author: Bram Berkowitz
+url: https://www.fool.com/investing/2026/11/22/warren-buffett-s-successor-greg-abel-has-invested-nearly-47-of-berkshire-hathaway-s-usd360-billion-stock-portfolio-in-just-3-stocks-and-none-are-ai-hyperscalers/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F3fa6d30276fc5eb6b7d794f515c9e58b00f2c501-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, AXP, KO, BRK.A, BRK.B
+keywords: Berkshire Hathaway, Greg Abel, concentrated portfolio, value investing, dividend stocks, consumer staples
+headline: Warren Buffett’s Successor, Greg Abel, Has Invested Nearly 47% of Berkshire Hathaway’s $360 Billion Stock Portfolio in Just 3 Stocks (and None Are AI Hyperscalers)
+<<<SUMMARY>>>
+Greg Abel, Warren Buffett's successor at Berkshire Hathaway, continues the concentrated investment approach with nearly 47% of the company's $360 billion stock portfolio invested in just three stocks: Apple (22.3%), American Express (13.3%), and Coca-Cola (11%). Notably, none of these are AI hyperscalers, reflecting Berkshire's long-term value investing philosophy that has generated strong returns for shareholders.
+<<<INSIGHTS>>>
+AAPL | positive | Largest Berkshire position with 228 million shares unchanged for four quarters. Praised for loyal customer base, high-margin services revenue, massive share buybacks ($24B latest quarter), record fiscal 2026 revenue of $478.8B (+15%), and leadership in consumer tech hardware for AI delivery.
+AXP | positive | Held since early 1990s with 22%+ ownership. Described as having fantastic brand and difficult-to-replicate business model combining credit card issuance and payments network. Q3 showed record revenue of $20.1B (+9%), net card fee growth accelerated to 17% YoY, and company raised full-year earnings guidance.
+KO | positive | Owned since 1988 with 400 million shares generating ~$848M in annual dividends. Valued for global brands, pricing power, and steady cash flow. Q3 showed unit case volume growth of 5%, organic revenue up 7%, and comparable EPS up 11%. 64 consecutive years of dividend increases.
+BRK.A | positive | Generated terrific returns for shareholders through concentrated, disciplined value investing approach without heavy AI exposure. Demonstrates successful long-term investment strategy under both Buffett and successor Abel.
+BRK.B | positive | Generated terrific returns for shareholders through concentrated, disciplined value investing approach without heavy AI exposure. Demonstrates successful long-term investment strategy under both Buffett and successor Abel.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:cc8d37b8f7214d1a60ed6bffbfd068148b396fbb593680dd8d0213395e7f046f
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T22:35:02Z
+publisher: The Motley Fool
+author: Neil Patel
+url: https://www.fool.com/investing/2026/11/22/apple-is-now-25-of-berkshire-hathaway-s-stock-portfolio-here-s-what-holding-every-share-tells-investors/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F90016a70dd183297b48efaf3acb2af7a8191202f-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, BRK.A, BRK.B
+keywords: Berkshire Hathaway, Apple, Warren Buffett, stock portfolio, valuation, investment strategy, long-term holding
+headline: Apple Is Now 25% of Berkshire Hathaway's Stock Portfolio. Here's What Holding Every Share Tells Investors.
+<<<SUMMARY>>>
+Berkshire Hathaway maintained its entire Apple stake in 2026 despite the stock rising 29% and trading at nearly 40x earnings, suggesting valuation concerns are diminishing. The decision reflects confidence in Apple's business quality and Buffett's philosophy of letting winners run, while also indicating limited alternative investment opportunities for Berkshire's substantial cash reserves.
+<<<INSIGHTS>>>
+AAPL | positive | Berkshire Hathaway's decision to hold all Apple shares despite high valuation (P/E ~40) signals strong confidence in the company's business quality, brand strength, pricing power, and exceptional financial performance (28% free cash flow margin). The 11-year holding period demonstrates the company's status as a 'winner' in Buffett's portfolio.
+BRK.A | neutral | The article presents Berkshire's inactivity on Apple as a strategic choice reflecting both confidence in Apple and pragmatism about capital allocation challenges. While this demonstrates disciplined investing, it also suggests limited attractive alternatives for deploying the company's substantial cash reserves.
+BRK.B | neutral | The article presents Berkshire's inactivity on Apple as a strategic choice reflecting both confidence in Apple and pragmatism about capital allocation challenges. While this demonstrates disciplined investing, it also suggests limited attractive alternatives for deploying the company's substantial cash reserves.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:355f4c18b2f3f7b9ee690e68f63445088d75b9b0e59d0efa42bb455b1dcf1e96
+symbol: AAPL
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T01:23:02Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/11/22/with-the-nasdaq-in-a-correction-vanguard-s-tech-etf-is-the-fund-i-d-buy-now/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F10f9558c702bb3bd8fce4d07788fbdec27a5e363-1290x860.png&w=1200&op=resize
+category: 
+tickers: VGT, NVDA, AAPL, MSFT
+keywords: Nasdaq correction, tech ETF, valuation compression, earnings growth, market correction, long-term investing
+headline: With the Nasdaq in a Correction, Vanguard's Tech ETF Is the Fund I'd Buy Now
+<<<SUMMARY>>>
+The Vanguard Information Technology ETF (VGT) has fallen 19% from its October peak amid a Nasdaq correction, but the author argues it's now a buying opportunity. Despite the price decline, the fund's underlying earnings have continued to grow, with valuations falling from 39x to approximately 26-27x earnings. Nvidia's 29% drop since late October drove much of the fund's decline, though the company's business fundamentals remain strong with revenue doubling year-over-year.
+<<<INSIGHTS>>>
+VGT | positive | Despite a 19% decline from peak, the author views it as a buying opportunity due to valuation compression (earnings grew while price fell), reasonable 26-27x P/E ratio compared to historical 39x, and strong underlying business fundamentals. Recommended for long-term investors.
+NVDA | neutral | Stock fell 29% since late October due to CEO resignation and regulatory investigation, but underlying business remains strong with revenue doubling YoY and data center revenue up 110%. Price decline appears disconnected from business fundamentals.
+AAPL | neutral | Stock is near record highs (within 2% of peak) despite broader tech correction, indicating relative stability. Represents 17.68% of VGT holdings.
+MSFT | neutral | Represents 12.19% of VGT holdings. No specific concerns mentioned; part of the fund's diversified tech exposure with continued earnings growth.
+<<<END>>>

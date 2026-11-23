@@ -5,6 +5,7 @@
     out.stages(states)               # the six stages: an event only for a stage whose state (or seconds) changed
     out.work_order(order, understood=..., found=...)
     out.portfolio(account_view)      # plus `changes` and `cash_change` against the portfolio at the start of the run
+    out.news(views.news_view(order, plan))      # a request that only asked for the news (entry 149): the page's News pane
 """
 import threading
 from datetime import datetime, timezone
@@ -16,7 +17,7 @@ from prometheus.application.web.runs import Run
 
 AGENT_OF_NODE = {"account_manager": "account_manager", "data_clerk": "data_clerk", "advisor": "advisor", "critic": "critic", "account_manager_decision": "account_manager", "account_manager_direct": "account_manager", "account_manager_funds": "account_manager", "trader": "trader"}
 AGENT_PREFIXES = ("the Account Manager ", "the Data Clerk ", "the Advisor ", "the Critic ", "the Trader ")      # the page shows the agent in its own column
-LEVEL_OF_STATUS = {"traded": "good", "waiting": "good", "looked": "info", "no_trade": "warn", "stopped": "warn", "failed": "error"}   # the colour of the feed's last line (`Emitter.finished`)
+LEVEL_OF_STATUS = {"news": "good", "traded": "good", "waiting": "good", "looked": "info", "no_trade": "warn", "stopped": "warn", "failed": "error"}   # the colour of the feed's last line (`Emitter.finished`)
 NOT_PLACED = "Nothing was placed: the order could not be made as you typed it."
 NOT_PLACED_HINT = CLARIFY       # entry 102: the run's last message asks the user to clarify the request and send it again, in the words the terminal session uses too (`direct.CLARIFY`)
 
@@ -43,6 +44,7 @@ class Emitter:
         self.before_account: dict | None = None
         self.last_account: dict | None = None
         self.last_rows = None
+        self.last_news = None
         self._lock = threading.Lock()
 
     def log(self, agent: str, text: str, level: str = "info", block: bool = False) -> None:
@@ -73,6 +75,15 @@ class Emitter:
                 return view
             self.last_rows = view
         self.run.emit("work_order", view)
+        return view
+
+    def news(self, view: dict) -> dict:
+        """Emit the news view of a request that only asked for the news (entry 149, N9), once: not again when nothing changed. The page selects its News pane when it arrives."""
+        with self._lock:
+            if view == self.last_news:
+                return view
+            self.last_news = view
+        self.run.emit("news", view)
         return view
 
     def portfolio(self, account: dict, start: bool = False) -> None:

@@ -193,3 +193,38 @@ def waiting_orders_use_a_log_and_a_lock_of_their_own(monkeypatch, tmp_path_facto
     log, and no test takes or looks at the lock a real server holds: the log is a temporary file and the lock key is a number of the tests' own."""
     monkeypatch.setattr("prometheus.agents.account_manager.orders.AUDIT_PATH", tmp_path_factory.mktemp("orders_audit") / "open_orders_audit.jsonl")
     monkeypatch.setattr("prometheus.persistence.accounts.WATCHER_LOCK_KEY", 1_150_920_114)
+
+
+
+
+class _NoNetwork(type(__import__("httpx"))):
+    """The `httpx` module as the toolbox sees it in a test: everything is the real module's, except that a `Client` made without a transport of its own gets one that refuses every request."""
+
+    def __getattr__(self, name):
+        import httpx
+        return getattr(httpx, name)
+
+
+@pytest.fixture(autouse=True)
+def nothing_is_fetched(monkeypatch):
+    """No test reaches the paid data APIs (Finnhub, Massive/Polygon, SEC EDGAR, the S3 sync) or writes a stored file from them: the toolbox's network is cut. A client it makes refuses every request, and the download and the sync
+    command raise. A news run ALWAYS asks its Data Clerk to fetch (entry 149, N7), and the first version of its tests, with no such guard, fetched TSLA's news for real; the guard was moved here from `tests/test_news_view.py` so that no
+    test of any module can. It sits UNDER the fetch code: a test that fakes a door (`_get_json`, `_get_bytes`) or hands a client its own `httpx.MockTransport` still runs the code it tests."""
+    import httpx
+
+    from prometheus.agents.data_clerk import data_toolbox
+    from prometheus.agents.data_clerk.data_toolbox import DataToolbox
+
+    def refuse(*args, **kwargs):
+        raise RuntimeError("no fetch in tests")
+
+    class Client(httpx.Client):
+        def __init__(self, *args, **kwargs):
+            kwargs.setdefault("transport", httpx.MockTransport(refuse))
+            super().__init__(*args, **kwargs)
+
+    cut = _NoNetwork("httpx")
+    cut.Client = Client
+    monkeypatch.setattr(data_toolbox, "httpx", cut)
+    monkeypatch.setattr(DataToolbox, "_run", refuse)
+    monkeypatch.setattr(data_toolbox.urllib.request, "urlretrieve", refuse)

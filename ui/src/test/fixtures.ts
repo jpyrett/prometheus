@@ -5,6 +5,7 @@ import bob from "../fixtures/bob.json";
 import dollars from "../fixtures/dollars.json";
 import frac from "../fixtures/frac.json";
 import gates from "../fixtures/gates_ask.json";
+import news from "../fixtures/news.json";
 import questions from "../fixtures/questions.json";
 
 export const bobEvents = bob.events as unknown as ServerEvent[];
@@ -13,6 +14,8 @@ export const gatesEvents = gates.events as unknown as ServerEvent[];
 // fixtures/dollars.json: the real Auto session of 2026-11-16 that split $30,000 evenly among the 5 most recommended oil companies: three approved (EOG, XOM, CVX), two the Critic denied (APA, COP) and two neutral passes
 // that filled the number (OXY, META), every purchase an order of $6,000.00 (design choices entry 111). It replaces fixtures/pam.json (deleted at Jacob's word: too old), which had the neutral rows.
 export const dollarsEvents = dollars.events as unknown as ServerEvent[];
+// fixtures/news.json: the replay of the real live session of 2026-11-23 that asked for the news only ("What's Tesla doing the last week?", Ask mode, the fetch refused by the test-only switch): 12 articles of the stored news, 9 cited (design choices entry 149)
+export const newsEvents = news.events as unknown as ServerEvent[];
 export const health = api.health as unknown as Health;
 export const replayAccount = api.account as unknown as AccountView;
 export const confirmQuestion = questions.confirm.data as unknown as QuestionData;

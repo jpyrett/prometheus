@@ -1125,6 +1125,147 @@ textarea.in {
   overflow: auto;
 }
 
+/* ------------------------------------------------------------------ the right column's two views: News and the work order (entry 149) */
+.viewtoggle {
+  flex: none;
+  display: inline-flex;
+  align-self: flex-start;
+  gap: 2px;
+  padding: 3px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--surface-1);
+}
+.viewtab {
+  padding: 5px 14px;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  font: inherit;
+  font-weight: 600;
+  font-size: 12.5px;
+  color: var(--text-2);
+  cursor: pointer;
+}
+.viewtab:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+.viewtab.on {
+  color: var(--text);
+  background: var(--surface-3);
+}
+.rightpane {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  min-height: 0;
+  min-width: 0;
+}
+.rightpane[hidden] {
+  display: none;
+}
+
+/* ------------------------------------------------------------------ the news card: the summary the Data Clerk wrote and the articles it came from. Text only: nothing from the news is HTML. */
+.news {
+  min-height: 0;
+}
+.news-b {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: 0 16px 16px;
+}
+.news-head {
+  font-size: 12px;
+  color: var(--text-2);
+  margin-bottom: 8px;
+  overflow-wrap: anywhere;
+}
+.news-warn {
+  margin-bottom: 8px;
+  padding: 6px 10px;
+  border: 1px solid color-mix(in srgb, var(--warn) 45%, transparent);
+  border-radius: var(--radius-sm);
+  background: var(--warn-bg);
+  color: var(--warn-ink);
+  font-size: 12px;
+}
+.news-summary {
+  margin: 0 0 12px;
+  overflow-wrap: anywhere;
+  line-height: 1.5;
+}
+.news-para {
+  margin: 0 0 8px;
+}
+.news-bullets {
+  margin: 0 0 8px;
+  padding-left: 20px;
+}
+.news-bullets li {
+  margin: 0 0 6px;
+}
+.news-mark {
+  color: var(--info-ink);
+  font-weight: 600;
+  text-decoration: none;
+}
+.news-mark:hover {
+  text-decoration: underline;
+}
+.news-sec {
+  margin: 12px 0 6px;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+.news-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.news-item {
+  display: flex;
+  gap: 10px;
+  padding: 8px 6px;
+  border-top: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  outline: none;
+}
+.news-item.lit {
+  background: var(--surface-3);
+}
+.news-item.cited .news-t a,
+.news-item.cited .news-t > span:first-child {
+  font-weight: 600;
+}
+.news-n {
+  flex: none;
+  min-width: 2.2em;
+  color: var(--text-3);
+  font-size: 11.5px;
+}
+.news-t {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.news-t a {
+  color: var(--text);
+  text-decoration: none;
+}
+.news-t a:hover {
+  color: var(--info-ink);
+  text-decoration: underline;
+}
+.news-meta {
+  margin-top: 2px;
+  font-size: 11.5px;
+  color: var(--text-3);
+}
+
 /* ------------------------------------------------------------------ recommendation */
 .recommendation {
   min-height: 0;

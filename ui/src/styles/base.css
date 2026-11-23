@@ -266,9 +266,12 @@ code {
   }
   .grid .col.right {
     grid-column: span 2;
+    flex-direction: column;
+  }
+  .grid .col.right > .rightpane {
     flex-direction: row;
   }
-  .grid .col.right > * {
+  .grid .col.right > .rightpane > * {
     flex: 1;
     min-width: 0;
     max-height: none;
@@ -281,6 +284,9 @@ code {
   }
   .grid .col.right {
     grid-column: auto;
+    flex-direction: column;
+  }
+  .grid .col.right > .rightpane {
     flex-direction: column;
   }
   .grid .col > .card {

@@ -36,10 +36,16 @@ finds after the model's sources in the same SourceBook. The model never sees tho
 the next agent. Code, not the model, because a model that is told to search three places searches one or two, and because it runs AFTER the model: a search before it would
 count as "web text was read" and switch off the fetch tools (the budget's least-privilege rule). `DataClerk(sweep=False)` turns it off.
 
+THE NEWS REQUEST (design choices entry 149; design/news_view_spec.md). `DataClerk().request_news(order, today)` answers a request that ONLY asks for the news of the named stocks: the same loop and citation check as `request_data`, with two differences. The question asks for a SUMMARY of
+the news in the window and the model is offered the news search and nothing else (`ask(..., only=NEWS_ONLY)`), and the sweep searches the NEWS corpus only (no press releases, no filings, no filing evidence). Before it, `refresh_news(symbols, days)` FETCHES the latest news
+of each stock (the news only, never bars, press releases or filings): a news run always does (Jacob: "Always fetch the latest news"), by the same `fetch_news` tool and under the same guards as `refresh_data` (the Proving Ground's bound day and `allow_fetch`); a fetch that
+fails or is refused is a line in its report, never an exception, and the stored news is searched. `fetching(True)` is this Data Clerk with the right to fetch, for the news run only.
+
 The result carries what the next agent needs: the answer, the cited chunks (`references`), every source the model was
 shown, what went wrong, and what was used.
 """
 import argparse
+import copy
 import json
 import re
 import sys
@@ -57,7 +63,7 @@ from langgraph.prebuilt import ToolNode
 
 from prometheus.common.trading_clock import NEVER_FETCHES, bound_day, market_day, use_live_trading
 from prometheus.common.trace import traced
-from prometheus.common.work_order import ANALYSTS_STORE, HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, iso_date, sector_map, verify_bar_request, verify_metric_request, verify_quote_request, verify_ratings_request, verify_request, verify_symbol_request, verify_verification_request
+from prometheus.common.work_order import ANALYSTS_STORE, CORPORA, HAS_DATA, DataResult, WorkOrder, attach_result, corpus_of, iso_date, sector_map, verify_bar_request, verify_metric_request, verify_quote_request, verify_ratings_request, verify_request, verify_symbol_request, verify_verification_request
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.prompts.data_clerk import COMPANIES_RETRY, LAST_TURN, THEME_MEMBERS_RETRY, companies_prompt, repair_message, system_prompt, theme_members_prompt, theme_members_question
 from prometheus.rag.citations import SourceBook
@@ -83,6 +89,7 @@ MAX_REFRESH_SYMBOLS = 15  # `refresh_data` fetches for at most this many symbols
 MAX_EVIDENCE_SYMBOLS = 10  # the sweep reads the stored filing evidence of an order's symbols when it names at most this many
 NEWS_ADDED = "stored market news, confirmed by the Data Clerk's model"   # the `how` of a company the stored market news tied to a theme and the model confirmed belongs to it (entry 120)
 NOT_LISTED = "privately held, or not known to be listed"   # the Data Clerk's words for a name whose listed owner its model could not give (entry 101)
+NEWS_ONLY = ("retrieve_news",)  # the only tool a news request offers the model (entry 149): it searches the stored news and nothing else (the code fetched the news before: `refresh_news`)
 MAX_TURNS = 6  # model turns per question, including a correction; the last one is without tools
 
 
@@ -209,8 +216,8 @@ class DataClerk:
         self.allow_fetch, self.max_turns, self.calls, self.symbol_search, self.sweep = allow_fetch, max_turns, calls, symbol_search, sweep
         self.lookup_interval = 0.3   # seconds between two symbol lookups of `find_companies` (Finnhub answered HTTP 429 to ten searches in two seconds); a test sets 0
 
-    def _graph(self, book: SourceBook, budget: Budget, today: date | None):
-        tools = [budgeted(t, budget) for t in self.tools.langchain_tools(book)]
+    def _graph(self, book: SourceBook, budget: Budget, today: date | None, only: tuple[str, ...] | None = None):
+        tools = [budgeted(t, budget) for t in self.tools.langchain_tools(book) if only is None or t.name in only]
         bound = self.model.bind_tools(tools)
         prompt = system_prompt(today)
         max_turns = self.max_turns
@@ -251,14 +258,14 @@ class DataClerk:
         graph.add_conditional_edges("verify", after_verify, {"agent": "agent", END: END})
         return graph.compile()
 
-    def ask(self, question: str, today: date | None = None, sweep: dict | None = None) -> Result:
+    def ask(self, question: str, today: date | None = None, sweep: dict | None = None, only: tuple[str, ...] | None = None) -> Result:
         """Answer one question. Never raises for a model or API failure: it comes back in `problems`. `sweep` (`_sweep_spec` of an order) makes code search the corpora the model
-        did not search, once the answer is done (entry 40); without it nothing is added."""
+        did not search, once the answer is done (entry 40); without it nothing is added. `only` names the tools the model is offered (None: all of them; a news request offers `NEWS_ONLY`)."""
         book, budget = SourceBook(), Budget(self.calls, self.allow_fetch)
         result = Result(question=question)
         messages: list = []
         try:
-            final = self._graph(book, budget, today).invoke(
+            final = self._graph(book, budget, today, only).invoke(
                 {"messages": [HumanMessage(content=question)], "turns": 0, "repaired": False, "forced": False},
                 config={"recursion_limit": 6 * self.max_turns + 10})
             messages = final["messages"]
@@ -283,12 +290,19 @@ class DataClerk:
         symbols = [s for s in order.subject if isinstance(s, str) and s.strip()] if isinstance(order.subject, list) else []
         return {"query": query, "tickers": symbols or None, "since_days": order.since_days, "k": order.top_k}
 
+    @staticmethod
+    def _news_sweep_spec(order: WorkOrder) -> dict:
+        """The sweep of a news request (entry 149): the order's own spec, for the NEWS corpus only and with no filing evidence, so the order carries nothing but the news."""
+        return {**DataClerk._sweep_spec(order), "corpora": ("news",), "evidence": False}
+
     def _sweep(self, result: Result, book: SourceBook, spec: dict) -> None:
         """Search every corpus the model did not search (a search that came back `ok`, even with nothing found, counts as searched) and read the stored filing evidence of the order's
         symbol if the model did not. What is found is numbered after the model's sources in the same book and flagged `swept`. A failing search is a note in `result.sweep`, never
         an exception and never a problem: the order's answer does not depend on it. Stored text only: nothing is fetched and nothing is paid for."""
         done = {c["name"] for c in result.tool_calls if c["outcome"] == "ok"}
         for corpus, tool in SWEEP_TOOLS:
+            if corpus not in spec.get("corpora", CORPORA):      # a news request sweeps the news only (entry 149); every other order sweeps all three, as always
+                continue
             if tool in done:
                 result.sweep[corpus] = {"by": "model", "sources": sum(corpus_of(s["chunk_id"]) == corpus for s in result.sources), "note": ""}
                 continue
@@ -305,6 +319,8 @@ class DataClerk:
                 for hit in hits:
                     result.sources.append({"number": book.number_of(hit), **hit.as_dict(), "swept": True})
             result.sweep[corpus] = {"by": "code", "sources": len(hits), "note": found.get("message") or ""}
+        if not spec.get("evidence", True):      # no filing evidence for a news request
+            return
         symbols = spec["tickers"] or []
         if result.filing_evidence:
             result.sweep["filing_evidence"] = {"by": "model", "sources": sum(len(e.get("evidence", [])) for e in result.filing_evidence.values()), "note": ""}
@@ -337,6 +353,27 @@ class DataClerk:
         if order.source in LOOKUP_SOURCES and not self._resolve_target(order):
             return order  # the symbol or company name was not found: refused in code, before any model call and before anything is fetched
         return attach_result(order, self.ask(self._question(order), today, sweep=self._sweep_spec(order) if self.sweep else None))
+
+    @traced("data_clerk.request_news")
+    def request_news(self, order: WorkOrder, today: date | None = None) -> WorkOrder:
+        """The Data Clerk's agent call for a request that ONLY asks for the news (design choices entry 149): check the work order, answer its news question with the news search alone, put the result on the order, check that, and
+        return the SAME order. As `request_data` in everything else: an order that already has its data comes back unchanged, a request the Data Clerk should not take comes back `data_failed` with the reasons, the citation check is the same.
+        The question asks for a SUMMARY of the news of the order's subject in its window, citing each item (`_news_question`); the model is offered `retrieve_news` and nothing else; the sweep searches the news only. The news was fetched before
+        (`refresh_news`) when the run may fetch: this call never fetches."""
+        if order.status in HAS_DATA:
+            return order
+        reasons = verify_request(order)
+        if reasons:
+            order.status, order.errors = "data_failed", [*order.errors, *reasons]
+            return order
+        return attach_result(order, self.ask(self._news_question(order), today, sweep=self._news_sweep_spec(order) if self.sweep else None, only=NEWS_ONLY))
+
+    def fetching(self, allowed: bool = True) -> "DataClerk":
+        """This Data Clerk with the right to fetch set to `allowed`: the same toolbox, model and guard, a copy of the object. A news run always fetches the latest news (entry 149, N7), so the desk asks for `fetching(True)` for it whatever the run's own box says;
+        the test-only switch of the session asks for `fetching(False)`. The Data Clerk it was called on is not changed."""
+        other = copy.copy(self)
+        other.allow_fetch = allowed
+        return other
 
     @traced("data_clerk.request_quotes", run_type="tool")
     def request_quotes(self, order: WorkOrder) -> WorkOrder:
@@ -823,6 +860,28 @@ class DataClerk:
             step("filings", symbol, lambda s=symbol: {k: v for k, v in self.tools.fetch_filings(s, from_date=filings_days).items() if k in ("fetched", "written", "edgar_text")})
         return report
 
+    @traced("data_clerk.refresh_news")
+    def refresh_news(self, symbols_: list[str], days: int = 7) -> list[dict]:
+        """Fetch the latest NEWS of these symbols for the last `days` days (design choices entry 149, N7), with the paid news APIs, and say what happened to each: [{step: "news", symbol, outcome, detail}]. NOTHING ELSE is fetched: no bars, no
+        press releases, no filings. The guards are `refresh_data`'s: while the Proving Ground has a past day bound nothing is fetched, and a Data Clerk built without `allow_fetch` fetches nothing; either is ONE entry with `outcome: "refused"` and the
+        reason. A fetch that fails is an entry with `outcome: "error"` and its kind, and the next symbol is still fetched. It never raises for a failed or refused fetch (the news run goes on with the stored news and says so); a symbol that is not a
+        ticker, or more than `MAX_REFRESH_SYMBOLS` of them, is a ValueError."""
+        if bound_day() is not None:
+            return [{"step": "news", "symbol": None, "outcome": "refused", "detail": f"{NEVER_FETCHES}: nothing is fetched while the desk works as of {bound_day()}"}]
+        if not self.allow_fetch:
+            return [{"step": "news", "symbol": None, "outcome": "refused", "detail": "the Data Clerk was built without allow_fetch: nothing is fetched (fetching uses paid APIs and writes files)"}]
+        wanted = list(dict.fromkeys(check_symbol(s.strip().lstrip("$")) for s in symbols_))
+        if not wanted or len(wanted) > MAX_REFRESH_SYMBOLS:
+            raise ValueError(f"refresh 1 to {MAX_REFRESH_SYMBOLS} symbols at a time")
+        report = []
+        for symbol in wanted:
+            try:
+                detail = {k: v for k, v in self.tools.fetch_news(symbol, from_date=days).items() if k in ("fetched", "written", "duplicates")}
+                report.append({"step": "news", "symbol": symbol, "outcome": "ok", "detail": detail})
+            except Exception as error:  # the kind and a short message, never request details or a key
+                report.append({"step": "news", "symbol": symbol, "outcome": "error", "detail": f"{type(error).__name__}: {' '.join(str(error).split())[:160]}"})
+        return report
+
     def _resolve_target(self, order: WorkOrder) -> bool:
         """Press releases and filings (the same rules, entries 34 and 35): turn the order's two arguments (subject = the symbol, company = the company name) into ONE symbol, by the rules of
         `symbols.resolve_target` (the symbol first, else the company name, exact matches only). On success the order says what was decided
@@ -861,6 +920,19 @@ class DataClerk:
         if order.live:
             window = f", with from_date={order.since_days}" if order.since_days else ""
             hints.append(f"fresh news is required: call fetch_news once for each ticker in the subject first{window}, then search")
+        return f"{order.query.strip()}\n\n(Work order: {'; '.join(hints)}.)"
+
+    @staticmethod
+    def _news_question(order: WorkOrder) -> str:
+        """The question of a news request (entry 149): a SUMMARY of the news of the order's subject in its window, citing each item the summary uses, from the stored news (`retrieve_news`, the only tool the model is offered) and nothing else. The subject is
+        a list of symbols (with the company's name when the order has one) or a term; at most `order.top_k` sources. It asks for no fetch: the code fetched the news before (`refresh_news`)."""
+        symbols = isinstance(order.subject, list)
+        hints = [f"subject: {', '.join(order.subject) if symbols else order.subject}" + (f" ({order.company})" if order.company else "")]
+        if order.since_days:
+            hints.append(f"use news from the last {order.since_days} day{'s' if order.since_days != 1 else ''}")
+        hints.append(f"use at most {order.top_k} sources")
+        hints.append("this is a request for the NEWS only: call retrieve_news before you answer" + (" with the symbols in tickers" if symbols else ", searching for the term across every company")
+                     + ", summarize what the news says, cite each source you use as [n], and say nothing the sources do not say")
         return f"{order.query.strip()}\n\n(Work order: {'; '.join(hints)}.)"
 
     @staticmethod

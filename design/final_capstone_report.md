@@ -31,6 +31,8 @@ Automated stock trading (a "trading bot") is something real users of my personal
 - **Case 2: search by a phrase or trend.** "AI memory shortage", "energy companies", "EV cars". Built.
 - **Case 3: "What's happening?"** Recommendations from current market activity for a group such as the S&P 500. Not built.
 
+A smaller request was added late in the program: **"Show the news for AAPL"** (or "What's Tesla doing the last week?"). The Account Manager reads it as a request for the news alone, the Data Clerk fetches the stock's latest news, then summarizes it with a citation for every point, and the desk stops there: nothing is recommended or traded.
+
 **Success** means an answer to the two questions. For the first: every recommendation cites stored evidence, an independent Critic approves or denies it with reasons, the account's money always adds up, and the results are measured against what the stocks did afterwards. For the second: the desk records every recommendation and scores its outcome, so that experience can change what it does next (section 8 says how far that got).
 
 **Boundaries I set:**
@@ -49,7 +51,7 @@ Automated stock trading (a "trading bot") is something real users of my personal
 Prometheus is five agents coordinated by a supervised LangGraph. One **WorkOrder** is the shared state: each agent writes its own part and never edits another's.
 
 - **Account Manager (supervisor).** Reads the request, creates the WorkOrder, owns the Postgres account book, decides how much to buy, and asks the user questions in Ask mode with a bounded ReAct loop. Its **RaiseFunds** step is a Tree-of-Thought search over which holdings to sell when cash is short.
-- **Data Clerk (data analyst).** A tool-using agent with a call budget and a citation check. It gathers bars, news, press releases and filings, serves retrieval (RAG over a Chroma vector store) and calculates about 80 metrics in plain code.
+- **Data Clerk (data analyst).** A tool-using agent with a call budget and a citation check. It gathers bars, news, press releases and filings, serves retrieval (RAG over a Chroma vector store) and calculates about 80 metrics in plain code. A request that asks only for a stock's news ends with it: it fetches the latest news first (the news is never left stale) and writes a cited summary, which the page shows in a News pane.
 - **Advisor (researcher).** Twelve steps produce ranked recommendations with a thesis and a trade plan (entry zone, stop, target, time stop). The score is blended in code (news 40, performance 30, history 20, filings 10); the model writes only the words.
 - **Critic (reviewer).** Runs on a different model, asks the Data Clerk for the numbers again and compares. The verdict is approved or denied, and a denial needs a fault, a profile breach, or two independent signs.
 - **Trader (worker).** Places only the trades the Account Manager permitted. Its model cannot name a symbol, a side or a share count. Every trade is a **handshake**: the Account Manager approves against the funds as they are now, the Trader fills, and the fill is booked in one database transaction before the next trade starts.
@@ -194,6 +196,12 @@ On December 9, 2025, ExxonMobil intends to release details about its Corporate P
 
 ![The desk after a completed run, dark mode](presentation/screenshots_dark/08_finished.png)
 *Dark mode: the same completed run.*
+
+![The News view, light mode](presentation/screenshots/16_news_view.png)
+*Light mode: "Show the news for AAPL". The pipeline runs only the Account Manager and the Data Clerk. The right column's toggle switches between the News view and the work order. The Data Clerk fetched Apple's latest news and summarized the last 7 days, and every `[n]` links to the article it cites.*
+
+![The News view, dark mode](presentation/screenshots_dark/16_news_view.png)
+*Dark mode: the same news request.*
 
 ![The Proving Ground](presentation/screenshots_dark/11_proving_ground.png)
 *Proving Ground: the Time Machine's launch pad, with the stored data it can replay and the cost of the test before it runs.*

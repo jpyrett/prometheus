@@ -11,12 +11,15 @@ trade and scores nothing: every number and every word is one an agent wrote. `or
 DECIMAL MONEY (design choices entry 112): the account's money, prices and share counts in these views are `Decimal` (a holding's value is `trade_amount`, the cash and the totals are exact sums of cents); the records of a capture hold the numbers `json`
 read (an int or a float) and pass through as they are. The page receives NUMBERS: the one encoder (`money.jsonable`, `money.dumps`) writes a Decimal as an integer when it is whole and by its own digits otherwise, at the edge of the bridge (`app.py`).
 """
+import re
 from datetime import date
 from decimal import Decimal
 
 from prometheus.agents.critic.report import DECISION_WORDS, LABELS, analysts_line
 from prometheus.common import shares as sh
 from prometheus.common.portfolio import trade_amount
+from prometheus.common.work_order import corpus_of
+from prometheus.rag.citations import CITATION
 from prometheus.application.recommendations import KEY_NUMBERS, _number
 
 # ---------------------------------------------------------------- the six stages
@@ -384,6 +387,73 @@ def cut_order(order: dict, path: list[str]) -> dict:
     return cut
 
 
+# ---------------------------------------------------------------- the news (entry 149)
+
+def _news_stocks(order, plan) -> tuple[list[dict], list[dict]]:
+    """([{symbol, company}] the Data Clerk found, [{typed, reason}] the names it could not) of a news run: from the Data Clerk's companies on the order (`order.data.companies`), else the order's own symbols."""
+    data = _get(order, "data")
+    rows = (_get(data, "companies") or []) if data is not None else []
+    found = [{"symbol": c["symbol"], "company": c.get("company")} for c in rows if c.get("symbol")]
+    if not found and not rows:
+        subject = _get(order, "subject")
+        found = [{"symbol": s, "company": _get(order, "company") if len(subject) == 1 else None} for s in (subject if isinstance(subject, list) else [])]
+    missing = [{"typed": c.get("brand") or c.get("parent") or "?", "reason": c.get("note") or "no listed company was found for this name"} for c in rows if not c.get("symbol")]
+    return found, missing
+
+
+def _news_items(data) -> list[dict]:
+    """The articles of a news run, ONE item for each (the chunks of an article are joined by their article id; `number` is the first chunk's and `numbers` is every chunk's, so each [n] of the summary finds its article): the cited ones first, then the
+    rest, each group newest first. An item is a source on the order, news only: nothing is invented. text only: a headline, a publisher, a date, a link."""
+    cited = {r.get("chunk_id") for r in (_get(data, "references") or [])}
+    articles: dict[str, dict] = {}
+    for source in _get(data, "sources") or []:
+        if corpus_of(source.get("chunk_id", "")) != "news" or source.get("number") is None:
+            continue
+        key = source.get("article_id") or source.get("chunk_id")
+        item = articles.setdefault(key, {"number": source["number"], "numbers": [], "headline": source.get("headline"), "publisher": source.get("publisher"), "date": (source.get("published_utc") or "")[:10] or None,
+                                         "published_utc": source.get("published_utc"), "url": source.get("url"), "symbols": list(source.get("tickers") or []), "cited": False})
+        item["numbers"].append(source["number"])
+        item["cited"] = item["cited"] or source.get("chunk_id") in cited
+    items = list(articles.values())
+    newest = sorted(items, key=lambda i: i["published_utc"] or "", reverse=True)
+    return [i for i in newest if i["cited"]] + [i for i in newest if not i["cited"]]
+
+
+def _plain_marks(text: str) -> str:
+    """The summary with each citation written as `[n]` or `[n, m]`: the real model writes `【3†L1-L5】` for a citation, and the Data Clerk's own check (`citations.CITATION`, the one reader of the forms) counts it as a citation of source 3. The page links `[n]`."""
+    return CITATION.sub(lambda match: "[" + ", ".join(re.findall(r"[0-9]+", match.group(1))) + "]", text)
+
+
+def news_view(order, plan=None, guard=None, account_id=None) -> dict:
+    """The news of a run that only asked for the news, in the ONE shape the page and the session read (entry 149, N8): {stocks: [{symbol, company}], not_found: [{typed, reason}], topic, days, fetched, fetch_note, summary, items: [{number, numbers,
+    headline, publisher, date, url, symbols, cited}], problems, notes, no_supporting_text, status}. (No item carries a sentiment: a stored article has none.) `order` is a work order or its dict (a capture); `plan` is the desk's plan, or None (a replay: the order says it all). `fetched` is true when the latest news
+    of every stock was fetched before the search; when it was not, `fetch_note` says why in the page's words ("could not fetch the latest news (reason): showing the stored news"). The summary is the Data Clerk's answer through the redaction door of the
+    run's last message (`screened`: a secret and another account's number are replaced). Pure: nothing is called, nothing is invented."""
+    data = _get(order, "data")
+    stocks, missing = _news_stocks(order, plan)
+    subject = _get(order, "subject")
+    intent = (plan or {}).get("intent") if isinstance(plan, dict) else None
+    topic = (intent.topic if intent is not None else None) or (subject if isinstance(subject, str) else None)
+    refresh = (_get(data, "refresh") or []) if data is not None else []
+    unfetched = [r for r in refresh if r.get("outcome") != "ok"]
+    fetched = bool(refresh) and not unfetched
+    fetch_note = None
+    if not topic and not fetched:
+        why = "; ".join(dict.fromkeys(str(r.get("detail") or r.get("outcome")) for r in unfetched)) or "no fetch was made"
+        fetch_note = f"could not fetch the latest news ({why}): showing the stored news"
+    return {"request_id": _get(order, "request_id"), "status": _get(order, "status"), "stocks": stocks, "not_found": missing, "topic": topic, "days": _get(order, "since_days"), "fetched": fetched, "fetch_note": fetch_note,
+            "summary": screened(_plain_marks((_get(data, "answer") or "").strip()), guard, account_id) if data is not None else "", "items": _news_items(data) if data is not None else [],
+            "problems": [screened(p, guard, account_id) for p in dict.fromkeys([*((_get(data, "problems") or []) if data is not None else []), *(e for e in (_get(order, "errors") or []) if isinstance(e, str))])],      # what went wrong: the Data Clerk's own problems, then the order's errors
+            "notes": [screened(n, guard, account_id) for n in (_get(data, "notes") or [])] if data is not None else [], "no_supporting_text": bool(_get(data, "no_supporting_text")) if data is not None else False}
+
+
+def news_headline(view: dict) -> str:
+    """The last line of a news run: "The news of TSLA for the last 7 days" (a theme: "The news about 'quantum computing' for the last 7 days")."""
+    days = view.get("days") or 0
+    what = f"about {view['topic']!r}" if view.get("topic") else "of " + (", ".join(s["symbol"] for s in view.get("stocks") or []) or "no stock")
+    return f"The news {what} for the last {'day' if days == 1 else f'{days} days'}"
+
+
 # ---------------------------------------------------------------- how a run ended
 
 def waiting_lines(order) -> list[str]:
@@ -397,6 +467,9 @@ def run_verdict(before: dict, after: dict, *, action: str | None, order=None, re
     session gives (`session.why_not`). `before` and `after` are account views. `stopped` and `failed` are the caller's."""
     from prometheus.application.session import why_not
 
+    if action == "news":      # a request that only asked for the news (entry 149): no trade, the portfolio unchanged; the headline says what was shown, and why the latest news could not be fetched when it could not
+        view = news_view(order)
+        return {"status": "news", "headline": news_headline(view), "reasons": [view["fetch_note"]] if view.get("fetch_note") else []}
     moved = portfolio_changes(before, after)
     waiting = waiting_lines(order)      # direct orders that now WAIT for their limit price (entry 140): the run's last message says so, with what is set aside and until when
     if moved["changes"] or moved["cash_change"] != 0:

@@ -6,6 +6,7 @@ import type {
   ActivityData,
   LogAgent,
   LogLevel,
+  NewsView,
   PortfolioData,
   QuestionData,
   RunFinishedData,
@@ -53,6 +54,8 @@ export interface RunState {
   /** The one open question, or null. */
   question: QuestionData | null;
   workOrder: WorkOrderView | null;
+  /** The news of the last request that only asked for the news (entry 149). It is kept through the runs that follow (the page's toggle shows it until the next news run replaces it). */
+  news: NewsView | null;
   /** The account as the run last reported it, with what changed against the first one. */
   portfolio: PortfolioData | null;
   /** The first account view of the run: the 'before'. */
@@ -88,15 +91,17 @@ export const initialRunState: RunState = {
   log: [],
   question: null,
   workOrder: null,
+  news: null,
   portfolio: null,
   portfolioBefore: null,
   activity: null,
   result: null,
 };
 
-function started(data: RunStartedData, seq: number): RunState {
+function started(data: RunStartedData, seq: number, news: NewsView | null = null): RunState {
   return {
     ...initialRunState,
+    news,
     phase: "running",
     runId: data.run_id,
     mode: data.mode,
@@ -114,7 +119,7 @@ function patchStage(stages: StageView[], key: StageKey, patch: (s: StageView) =>
 
 export function runReducer(state: RunState, event: ServerEvent): RunState {
   // A new run replaces everything (the same run's own run_started, seen again after a reconnect, changes nothing). Any other event already applied is ignored.
-  if (event.type === "run_started") return event.data.run_id === state.runId && event.seq <= state.lastSeq ? state : started(event.data, event.seq);
+  if (event.type === "run_started") return event.data.run_id === state.runId && event.seq <= state.lastSeq ? state : started(event.data, event.seq, state.news);
   if (event.seq <= state.lastSeq) return state;
   const next: RunState = { ...state, lastSeq: event.seq };
 
@@ -146,6 +151,10 @@ export function runReducer(state: RunState, event: ServerEvent): RunState {
     case "work_order": {
       const { ts: _ts, ...view } = event.data;
       return { ...next, workOrder: view };
+    }
+    case "news": {
+      const { ts: _ts, ...view } = event.data;
+      return { ...next, news: view };
     }
     case "portfolio": {
       const before = state.portfolioBefore ?? event.data;

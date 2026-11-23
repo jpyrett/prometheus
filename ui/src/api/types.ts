@@ -8,7 +8,7 @@ export type StageKey = "work_order" | "gather" | "recommend" | "critique" | "pre
 export type StageState = "pending" | "busy" | "waiting" | "done" | "skipped" | "failed";
 export type TradeMode = "ask" | "auto";
 export type RiskLevel = "conservative" | "moderate" | "aggressive";
-export type RunStatus = "traded" | "waiting" | "no_trade" | "looked" | "stopped" | "failed";
+export type RunStatus = "traded" | "waiting" | "no_trade" | "looked" | "news" | "stopped" | "failed";
 
 export interface StageInfo {
   key: StageKey;
@@ -268,6 +268,41 @@ export interface WorkOrderView {
   ts?: number;
 }
 
+// ---------------------------------------------------------------- the news (design choices entry 149)
+
+/** One ARTICLE of a news run (the chunks of an article are joined): `number` is its first chunk's source number and `numbers` every chunk's, so each `[n]` of the summary finds its article. Text only: nothing here is HTML. */
+export interface NewsItem {
+  number: number;
+  numbers: number[];
+  headline: string | null;
+  publisher: string | null;
+  date: string | null;
+  published_utc: string | null;
+  url: string | null;
+  symbols: string[];
+  cited: boolean;
+}
+
+/** The `news` event: the news of a request that only asked for the news (`views.news_view`). */
+export interface NewsView {
+  request_id: string | null;
+  status: string | null;
+  stocks: { symbol: string; company: string | null }[];
+  not_found: { typed: string; reason: string }[];
+  /** A theme searched as a term (no stock is named). */
+  topic: string | null;
+  days: number | null;
+  /** True when the latest news of every stock was fetched just before the search. */
+  fetched: boolean;
+  /** Why the latest news could not be fetched ("could not fetch the latest news (reason): showing the stored news"); null when it was, or for a theme. */
+  fetch_note: string | null;
+  summary: string;
+  items: NewsItem[];
+  problems: string[];
+  notes: string[];
+  no_supporting_text: boolean;
+}
+
 // ---------------------------------------------------------------- the events (4.2)
 
 export interface RunStartedData {
@@ -401,6 +436,7 @@ export type ServerEvent =
   | { seq: number; type: "question_closed"; data: QuestionClosedData }
   | { seq: number; type: "work_order"; data: WorkOrderView & { ts: number } }
   | { seq: number; type: "portfolio"; data: PortfolioData }
+  | { seq: number; type: "news"; data: NewsView & { ts: number } }
   | { seq: number; type: "activity"; data: ActivityData }
   | { seq: number; type: "run_finished"; data: RunFinishedData }
   // the Proving Ground's run (design/proving_ground_spec.md section 9): the Desk's reducer ignores them, the Proving Ground's folds them
@@ -420,6 +456,7 @@ export const EVENT_TYPES: ServerEventType[] = [
   "question_closed",
   "work_order",
   "portfolio",
+  "news",
   "activity",
   "run_finished",
   "pv_research",

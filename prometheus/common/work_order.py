@@ -134,6 +134,7 @@ class DataResult(BaseModel):
     quotes: dict[str, dict] = Field(default_factory=dict)  # per symbol: the current quote (price, change, high, low, open, previous close, as_of_utc, source) of a `fetch_quote` order (entry 42); empty on any other order
     analysts: dict[str, dict] = Field(default_factory=dict)  # per symbol: the answer to a `fetch_analyst_ratings` order (Critic v3): {"periods": [{period, strongBuy, buy, hold, sell, strongSell}, ...] newest first, only those the day could know, "fetched": bool, "note"}; empty on any other order
     bars: dict[str, list[dict]] = Field(default_factory=dict)  # per symbol: the stored daily bars of a `fetch_bars` order, oldest first, each {"date": "YYYY-MM-DD", "open", "high", "low", "close", "volume"}; a symbol with none in the range is an empty list. Empty on any other order
+    refresh: list[dict] = Field(default_factory=list)  # a NEWS request only (entry 149, N7): what `DataClerk.refresh_news` did before the search, [{step: "news", symbol, outcome: "ok" | "error" | "refused", detail}]; empty on every other order
     security_dropped: list[dict] = Field(default_factory=list)  # the documents the security layer dropped from the evidence before anything read them: {id, corpus, action, risk, rules} (entry 116); empty when none was
     problems: list[str] = Field(default_factory=list)
     notes: list[str] = Field(default_factory=list)

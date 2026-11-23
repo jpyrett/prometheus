@@ -1,0 +1,481 @@
+{
+ "request": "What's Tesla doing the last week?",
+ "intent": {
+  "request": "What's Tesla doing the last week?",
+  "action": "news",
+  "topic": null,
+  "symbols": [],
+  "companies": [
+   "Tesla"
+  ],
+  "count": null,
+  "allocation": "default",
+  "budget": null,
+  "each": false,
+  "orders": [],
+  "news_days": 7
+ },
+ "path": [
+  "account_manager",
+  "data_clerk"
+ ],
+ "order": {
+  "schema_version": 1,
+  "request_id": "d6d0597df760",
+  "requester": "desk",
+  "created_utc": "2026-11-23T06:48:11Z",
+  "query": "Summarize the news of TSLA for the last 7 days",
+  "action_type": "search_news",
+  "subject": [
+   "TSLA"
+  ],
+  "company": "Tesla Inc",
+  "source": "news",
+  "time_period": "last 7 days",
+  "since_days": 7,
+  "live": true,
+  "top_k": 12,
+  "criteria": null,
+  "status": "data_ready",
+  "resolved": null,
+  "data": {
+   "answer": "In the past week the coverage of Tesla (TSLA) has focused on several operational and market\u2011related themes:\n\n* Analysts note that, beyond its hype\u2011driven brand, investors should watch three \u201cbigger challenges\u201d for Tesla, though the article does not list them specifically\u202f[1].  \n* JPMorgan projects that Tesla\u2019s robotaxi fleet could match Waymo\u2019s mileage by late\u202f2027 if it reaches about 18,000 cars, emphasizing that the economics per mile will be decisive\u202f[3][5].  \n* Tesla announced a $3.3\u202fbillion expansion of its Berlin plant\u202f[7] and is promoting a \u201ccybercab\u201d delivery program as part of that push\u202f[7].  \n* A new Model\u202fY variant without a steering wheel was highlighted as part of the company\u2019s autonomous\u2011vehicle push\u202f[7].  \n* SpaceX\u2011Tesla merger speculation resurfaced, with commentary on which side would benefit in a potential combination\u202f[2][7].  \n* The latest Full Self\u2011Driving software (FSD\u202fV15) was rolled out to a limited group of users, with a broader release slated for next month\u202f[11].  \n* Fund activity was mixed: 18 of 460 large funds that filed 13\u2011Fs for the quarter ended\u202fSept\u202f30 bought Tesla shares, while 15 sold, including notable purchases by Altimeter Capital and ARK\u202fInvest\u202f[9].  \n* Market\u2011performance reporting showed Tesla\u2019s stock down about 7.6\u202f% on the day of a broader market decline, with the S&P\u202f500, Nasdaq and Dow also falling\u202f[8].  \n* ARK\u2019s Cathie Wood said her firm doubled down on Tesla (along with Nvidia and AMD) during the recent market pullback\u202f[12].  \n* A valuation\u2011focused piece questioned whether the current price of roughly\u202f$345.82 per share is justified by Tesla\u2019s recent top\u2011line results and its \u20ac3\u202fbillion Berlin expansion plan\u202f[10].\n\nThese points capture the main topics mentioned in the stored news for Tesla over the last seven days.",
+   "references": [
+    {
+     "number": 1,
+     "chunk_id": "finnhub:144029392#0",
+     "article_id": "finnhub:144029392",
+     "headline": "Forget Flying Roadsters. Tesla Investors Have 3 Bigger Challenges to Watch.",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-23T02:20:01Z",
+     "url": "https://finnhub.io/api/news?id=69b5b93a7c36d23ff43bac80f98dff5c7a01f3eff6073ae7128c19d17da75265",
+     "score": 0.5045870542526245
+    },
+    {
+     "number": 3,
+     "chunk_id": "finnhub:144023622#0",
+     "article_id": "finnhub:144023622",
+     "headline": "J.P. Morgan Says Tesla\u2019s Robotaxi Fleet Could Match Waymo\u2019s Miles by Late 2027 With 18,000 Cars. The Number That Matters Is How Much Each Car Earns.",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-22T13:32:02Z",
+     "url": "https://finnhub.io/api/news?id=30301f97c9d0430ad62b59154caf3c5af564d35f77ebe5012d6fc7e1fe0b9567",
+     "score": 0.4318237900733948
+    },
+    {
+     "number": 5,
+     "chunk_id": "polygon:00f8578ee5623319a2bf634786553a6d9370862864fa053456ffa88af57e56ef#0",
+     "article_id": "polygon:00f8578ee5623319a2bf634786553a6d9370862864fa053456ffa88af57e56ef",
+     "headline": "J.P. Morgan Says Tesla\u2019s Robotaxi Fleet Could Match Waymo\u2019s Miles by Late 2027 With 18,000 Cars. The Number That Matters Is How Much Each Car Earns.",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-11-22T13:12:02Z",
+     "url": "https://www.fool.com/investing/2026/11/22/j-p-morgan-says-tesla-s-robotaxi-fleet-could-match-waymo-s-miles-by-late-2027-with-18-000-cars-the-number-that-matters-is-how-much-each-car-earns/?source=iedfolrf0000001",
+     "score": 0.4284975528717041
+    },
+    {
+     "number": 7,
+     "chunk_id": "finnhub:144024082#0",
+     "article_id": "finnhub:144024082",
+     "headline": "This Week in TSLA: Cybercab's Deliveries, SpaceX-Tesla Merger Talk, Model Y Without Steering Wheel and More",
+     "publisher": "Benzinga",
+     "published_utc": "2026-11-22T09:50:28Z",
+     "url": "https://finnhub.io/api/news?id=74bab9f0ac1ef59ca77737a3073d193a39ccde13795642b86fffff3116bc2bc9",
+     "score": 0.4771171808242798
+    },
+    {
+     "number": 2,
+     "chunk_id": "finnhub:144027215#0",
+     "article_id": "finnhub:144027215",
+     "headline": "Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-22T22:21:02Z",
+     "url": "https://finnhub.io/api/news?id=131443fcf6e684626624398f0a78f7b06dc9a3c135c971f4f4c65b77d8d4d43f",
+     "score": 0.40701931715011597
+    },
+    {
+     "number": 11,
+     "chunk_id": "finnhub:144017334#0",
+     "article_id": "finnhub:144017334",
+     "headline": "Tesla FSD V15 Rolling Out, Goes 'Wide' Next Month. Elon Musk Says It's 'Something Special.'",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-21T20:46:52Z",
+     "url": "https://finnhub.io/api/news?id=4c3763653020f888f8f3d04dd324d38837277935ea4307044491371c4da7d748",
+     "score": 0.40951651334762573
+    },
+    {
+     "number": 9,
+     "chunk_id": "finnhub:144018800#0",
+     "article_id": "finnhub:144018800",
+     "headline": "Cathie Wood, Brad Gerstner and 16 Other Big Funds Bought Tesla Last Quarter, While 15 Sold. Who\u2019s Right?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-21T21:19:05Z",
+     "url": "https://finnhub.io/api/news?id=981f1c99ba9e8420285d382574e4079ce34c3ff038a76fb5020b7fca4cf8c5b6",
+     "score": 0.44198817014694214
+    },
+    {
+     "number": 8,
+     "chunk_id": "polygon:ef79620d84cf7693862a376bdb0ea1b3c23051eb5d0c0addae131b325ee2510e#0",
+     "article_id": "polygon:ef79620d84cf7693862a376bdb0ea1b3c23051eb5d0c0addae131b325ee2510e",
+     "headline": "November 22, 2026: Markets Special Report",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-11-21T22:19:47Z",
+     "url": "https://www.fool.com/investing/2026/11/21/markets-special-report-november-22-2026/?source=iedfolrf0000001",
+     "score": 0.4071064591407776
+    },
+    {
+     "number": 12,
+     "chunk_id": "finnhub:144017318#0",
+     "article_id": "finnhub:144017318",
+     "headline": "Cathie Wood Doubles Down On \u2018Highest Conviction Names\u2019 Nvidia, Tesla and AMD As Cyclical Tech Stocks Get \u2018Slaughtered\u2019 Amid Market Pullback",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-21T19:30:08Z",
+     "url": "https://finnhub.io/api/news?id=5bab88f4f2ec1f8bd767ca9c316eaebca8540c53c40e71d08b3a73a5c1d8694f",
+     "score": 0.4036861062049866
+    },
+    {
+     "number": 10,
+     "chunk_id": "finnhub:144017333#0",
+     "article_id": "finnhub:144017333",
+     "headline": "Tesla (TSLA) Stock Looks Richly Priced After Its 47% Three Year Run",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-21T21:08:54Z",
+     "url": "https://finnhub.io/api/news?id=adc21ddaf27645ba440741675c40ab3940758e76f205d6a92c601ed1d7690c52",
+     "score": 0.42962509393692017
+    }
+   ],
+   "sources": [
+    {
+     "number": 1,
+     "chunk_id": "finnhub:144029392#0",
+     "article_id": "finnhub:144029392",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Forget Flying Roadsters. Tesla Investors Have 3 Bigger Challenges to Watch.",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-23T02:20:01Z",
+     "url": "https://finnhub.io/api/news?id=69b5b93a7c36d23ff43bac80f98dff5c7a01f3eff6073ae7128c19d17da75265",
+     "tickers": [
+      "TSLA"
+     ],
+     "text": "Forget Flying Roadsters. Tesla Investors Have 3 Bigger Challenges to Watch.\n\nTesla has never had trouble building hype or excitement for its business, but investors should keep an eye on these challenges.",
+     "score": 0.5045870542526245
+    },
+    {
+     "number": 2,
+     "chunk_id": "finnhub:144027215#0",
+     "article_id": "finnhub:144027215",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-22T22:21:02Z",
+     "url": "https://finnhub.io/api/news?id=131443fcf6e684626624398f0a78f7b06dc9a3c135c971f4f4c65b77d8d4d43f",
+     "tickers": [
+      "TSLA"
+     ],
+     "text": "Should You Buy Tesla or SpaceX Stock Before Their Potential Merger?\n\nThe potential combination has a clear winner.",
+     "score": 0.40701931715011597
+    },
+    {
+     "number": 3,
+     "chunk_id": "finnhub:144023622#0",
+     "article_id": "finnhub:144023622",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "J.P. Morgan Says Tesla\u2019s Robotaxi Fleet Could Match Waymo\u2019s Miles by Late 2027 With 18,000 Cars. The Number That Matters Is How Much Each Car Earns.",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-22T13:32:02Z",
+     "url": "https://finnhub.io/api/news?id=30301f97c9d0430ad62b59154caf3c5af564d35f77ebe5012d6fc7e1fe0b9567",
+     "tickers": [
+      "TSLA"
+     ],
+     "text": "J.P. Morgan Says Tesla\u2019s Robotaxi Fleet Could Match Waymo\u2019s Miles by Late 2027 With 18,000 Cars. The Number That Matters Is How Much Each Car Earns.\n\nThe robotaxi battle will be won and lost over the total cost of ownership per mile.",
+     "score": 0.4318237900733948
+    },
+    {
+     "number": 4,
+     "chunk_id": "polygon:153c7a0dccde665ecc579a4f114fc2fd7b8685e54316f9dcb9f448eedf2c5956#1",
+     "article_id": "polygon:153c7a0dccde665ecc579a4f114fc2fd7b8685e54316f9dcb9f448eedf2c5956",
+     "chunk": 2,
+     "chunks": 2,
+     "headline": "Democrats and Elon Musk Joining Forces? The Election Just Made the Unthinkable a Little More Possible.",
+     "publisher": "GlobeNewswire Inc.",
+     "published_utc": "2026-11-22T13:30:00Z",
+     "url": "https://www.globenewswire.com/news-release/2026/11/22/3407949/0/en/democrats-and-elon-musk-joining-forces-the-election-just-made-the-unthinkable-a-little-more-possible.html",
+     "tickers": [
+      "TSLA"
+     ],
+     "text": "Democrats and Elon Musk Joining Forces? The Election Just Made the Unthinkable a Little More Possible.\n\nTSLA | neutral | Tesla is mentioned only as having major operations in Texas alongside Musk's other ventures. No specific business developments, challenges, or opportunities are discussed that would warrant a positive or negative sentiment.",
+     "score": 0.43766266107559204
+    },
+    {
+     "number": 5,
+     "chunk_id": "polygon:00f8578ee5623319a2bf634786553a6d9370862864fa053456ffa88af57e56ef#0",
+     "article_id": "polygon:00f8578ee5623319a2bf634786553a6d9370862864fa053456ffa88af57e56ef",
+     "chunk": 1,
+     "chunks": 5,
+     "headline": "J.P. Morgan Says Tesla\u2019s Robotaxi Fleet Could Match Waymo\u2019s Miles by Late 2027 With 18,000 Cars. The Number That Matters Is How Much Each Car Earns.",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-11-22T13:12:02Z",
+     "url": "https://www.fool.com/investing/2026/11/22/j-p-morgan-says-tesla-s-robotaxi-fleet-could-match-waymo-s-miles-by-late-2027-with-18-000-cars-the-number-that-matters-is-how-much-each-car-earns/?source=iedfolrf0000001",
+     "tickers": [
+      "TSLA",
+      "GOOG",
+      "GOOGL",
+      "GOOGM",
+      "GOOGN"
+     ],
+     "text": "J.P. Morgan Says Tesla\u2019s Robotaxi Fleet Could Match Waymo\u2019s Miles by Late 2027 With 18,000 Cars. The Number That Matters Is How Much Each Car Earns.",
+     "score": 0.4284975528717041
+    },
+    {
+     "number": 6,
+     "chunk_id": "polygon:d2477921e5d8e840c882e9609cc082ebe5945bdbd31713dd96a33fb3305aa451#0",
+     "article_id": "polygon:d2477921e5d8e840c882e9609cc082ebe5945bdbd31713dd96a33fb3305aa451",
+     "chunk": 1,
+     "chunks": 4,
+     "headline": "Not Lucid. Not Ford. The EV Stock Most Likely to Catch Every Refunded Cybertruck Buyer.",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-11-22T12:07:02Z",
+     "url": "https://www.fool.com/investing/2026/11/22/not-lucid-not-ford-the-ev-stock-most-likely-to-catch-every-refunded-cybertruck-buyer/?source=iedfolrf0000001",
+     "tickers": [
+      "TSLA",
+      "RIVN",
+      "LCID",
+      "F",
+      "FpB",
+      "FpC",
+      "FpD"
+     ],
+     "text": "Not Lucid. Not Ford. The EV Stock Most Likely to Catch Every Refunded Cybertruck Buyer.\n\nTesla is ending Cybertruck production to focus on Cybercabs, creating an opportunity for Rivian. With the R2 launch already proving successful and becoming Rivian's best-selling model, the company is well-positioned to capture disappointed Cybertruck buyers. Rivian's 38% year-over-year revenue growth and 46% delivery increase in Q3 2026 demonstrate momentum, though the company still needs to achieve sustainable profitability.",
+     "score": 0.421278715133667
+    },
+    {
+     "number": 7,
+     "chunk_id": "finnhub:144024082#0",
+     "article_id": "finnhub:144024082",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "This Week in TSLA: Cybercab's Deliveries, SpaceX-Tesla Merger Talk, Model Y Without Steering Wheel and More",
+     "publisher": "Benzinga",
+     "published_utc": "2026-11-22T09:50:28Z",
+     "url": "https://finnhub.io/api/news?id=74bab9f0ac1ef59ca77737a3073d193a39ccde13795642b86fffff3116bc2bc9",
+     "tickers": [
+      "TSLA"
+     ],
+     "text": "This Week in TSLA: Cybercab's Deliveries, SpaceX-Tesla Merger Talk, Model Y Without Steering Wheel and More\n\nThis week, Tesla plans a $3.3 billion Berlin production expansion, Elon Musk touts autonomous Model Ys and SpaceX merger talks re-emerge.",
+     "score": 0.4771171808242798
+    },
+    {
+     "number": 8,
+     "chunk_id": "polygon:ef79620d84cf7693862a376bdb0ea1b3c23051eb5d0c0addae131b325ee2510e#0",
+     "article_id": "polygon:ef79620d84cf7693862a376bdb0ea1b3c23051eb5d0c0addae131b325ee2510e",
+     "chunk": 1,
+     "chunks": 3,
+     "headline": "November 22, 2026: Markets Special Report",
+     "publisher": "The Motley Fool",
+     "published_utc": "2026-11-21T22:19:47Z",
+     "url": "https://www.fool.com/investing/2026/11/21/markets-special-report-november-22-2026/?source=iedfolrf0000001",
+     "tickers": [
+      "NVDA",
+      "TSLA",
+      "META",
+      "METAM",
+      "AMZN",
+      "MSFT",
+      "AAPL",
+      "GOOG",
+      "GOOGL",
+      "GOOGM",
+      "GOOGN"
+     ],
+     "text": "November 22, 2026: Markets Special Report\n\nThe Motley Fool hosted a live market special report on November 22, 2026, to discuss current market conditions and investment strategies. Major indices showed significant declines, with the S&P 500 down 3.7%, NASDAQ down 5.3%, and the Dow down 1.9%. Tech stocks were particularly hard hit, with NVIDIA falling 14%, Tesla down 7.6%, and Meta down 5.9%. The team discussed how investors should approach their portfolios in this challenging market environment.",
+     "score": 0.4071064591407776
+    },
+    {
+     "number": 9,
+     "chunk_id": "finnhub:144018800#0",
+     "article_id": "finnhub:144018800",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Cathie Wood, Brad Gerstner and 16 Other Big Funds Bought Tesla Last Quarter, While 15 Sold. Who\u2019s Right?",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-21T21:19:05Z",
+     "url": "https://finnhub.io/api/news?id=981f1c99ba9e8420285d382574e4079ce34c3ff038a76fb5020b7fca4cf8c5b6",
+     "tickers": [
+      "TSLA"
+     ],
+     "text": "Cathie Wood, Brad Gerstner and 16 Other Big Funds Bought Tesla Last Quarter, While 15 Sold. Who\u2019s Right?\n\nKey TakeawaysOf the 460 big funds that have filed 13Fs for the quarter ended Sept. 30, 18 bought Tesla and 15 sold, with Brad Gerstner\u2019s Altimeter Capital and Cathie Wood\u2019s ARK Invest among the buyers.",
+     "score": 0.44198817014694214
+    },
+    {
+     "number": 10,
+     "chunk_id": "finnhub:144017333#0",
+     "article_id": "finnhub:144017333",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Tesla (TSLA) Stock Looks Richly Priced After Its 47% Three Year Run",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-21T21:08:54Z",
+     "url": "https://finnhub.io/api/news?id=adc21ddaf27645ba440741675c40ab3940758e76f205d6a92c601ed1d7690c52",
+     "tickers": [
+      "TSLA"
+     ],
+     "text": "Tesla (TSLA) Stock Looks Richly Priced After Its 47% Three Year Run\n\nTesla has been busy reshaping its business around robotaxis, humanoid robots and energy projects while the share price has swung sharply, and that leaves a basic question for you as an investor. Is the current US$345.82 price tag adequately backed by what the company is generating through its sales today? Over the past 3 years the stock has gained 46.9%, which puts a lot of weight on whether recent top line performance can carry that kind of market value. A planned \u20ac3b expansion of the...",
+     "score": 0.42962509393692017
+    },
+    {
+     "number": 11,
+     "chunk_id": "finnhub:144017334#0",
+     "article_id": "finnhub:144017334",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Tesla FSD V15 Rolling Out, Goes 'Wide' Next Month. Elon Musk Says It's 'Something Special.'",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-21T20:46:52Z",
+     "url": "https://finnhub.io/api/news?id=4c3763653020f888f8f3d04dd324d38837277935ea4307044491371c4da7d748",
+     "tickers": [
+      "TSLA"
+     ],
+     "text": "Tesla FSD V15 Rolling Out, Goes 'Wide' Next Month. Elon Musk Says It's 'Something Special.'\n\nTesla Full Self Driving version 15 rolled out to initial FSD users on Saturday. A wide release is planned for next month, CEO Elon Musk said.",
+     "score": 0.40951651334762573
+    },
+    {
+     "number": 12,
+     "chunk_id": "finnhub:144017318#0",
+     "article_id": "finnhub:144017318",
+     "chunk": 1,
+     "chunks": 1,
+     "headline": "Cathie Wood Doubles Down On \u2018Highest Conviction Names\u2019 Nvidia, Tesla and AMD As Cyclical Tech Stocks Get \u2018Slaughtered\u2019 Amid Market Pullback",
+     "publisher": "Yahoo",
+     "published_utc": "2026-11-21T19:30:08Z",
+     "url": "https://finnhub.io/api/news?id=5bab88f4f2ec1f8bd767ca9c316eaebca8540c53c40e71d08b3a73a5c1d8694f",
+     "tickers": [
+      "TSLA"
+     ],
+     "text": "Cathie Wood Doubles Down On \u2018Highest Conviction Names\u2019 Nvidia, Tesla and AMD As Cyclical Tech Stocks Get \u2018Slaughtered\u2019 Amid Market Pullback\n\nARK Invest founder, CEO, and Chief Investment Officer Cathie Wood stated her firm used the recent market pullback to purchase shares of Nvidia Corp., Tesla Inc., and Advanced Micro Devices Inc., while noting that cyclical technology and memory stocks fell...",
+     "score": 0.4036861062049866
+    }
+   ],
+   "sweep": {
+    "news": {
+     "by": "model",
+     "sources": 12,
+     "note": ""
+    }
+   },
+   "results": {
+    "news": {
+     "shown": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "cited": [
+      1,
+      2,
+      3,
+      5,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+     ],
+     "swept": []
+    },
+    "press_releases": {
+     "shown": [],
+     "cited": [],
+     "swept": []
+    },
+    "filings": {
+     "shown": [],
+     "cited": [],
+     "swept": []
+    }
+   },
+   "filing_evidence": {},
+   "metrics": {},
+   "companies": [
+    {
+     "brand": "TSLA",
+     "parent": null,
+     "symbol": "TSLA",
+     "company": "Tesla Inc",
+     "public": true,
+     "how": "company name",
+     "note": null
+    }
+   ],
+   "market_brief": {},
+   "verification": {},
+   "quotes": {},
+   "analysts": {},
+   "bars": {},
+   "refresh": [
+    {
+     "step": "news",
+     "symbol": "TSLA",
+     "outcome": "ok",
+     "detail": {
+      "fetched": 271,
+      "written": 0,
+      "duplicates": 271
+     }
+    }
+   ],
+   "security_dropped": [],
+   "problems": [],
+   "notes": [],
+   "no_supporting_text": false,
+   "tool_calls": [
+    {
+     "name": "retrieve_news",
+     "args": {
+      "query": "Tesla news",
+      "tickers": [
+       "TSLA"
+      ],
+      "since_days": 7,
+      "k": 12,
+      "newest_first": true
+     },
+     "outcome": "ok"
+    }
+   ],
+   "turns": 2,
+   "tokens_in": 5279,
+   "tokens_out": 880,
+   "completed_utc": "2026-11-23T06:48:39Z"
+  },
+  "recommendations": [],
+  "advisor_runs": [],
+  "errors": [],
+  "metrics": null,
+  "case": null,
+  "sector": null,
+  "candidates": [],
+  "verify": null,
+  "reviews": [],
+  "critic_runs": [],
+  "trade_decisions": [],
+  "bars": null,
+  "ratings": null,
+  "trades": [],
+  "trader_runs": [],
+  "direct_orders": [],
+  "max_price": null,
+  "min_price": null,
+  "ignore_critic": false
+ }
+}

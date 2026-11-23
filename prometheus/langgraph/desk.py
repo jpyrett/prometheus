@@ -38,6 +38,11 @@ The graph:
     without a question in AUTO mode and asked about one by one in ASK mode (the `approver` carries the question; the Account Manager's model words it, code checks it and reads the yes or no); a blocking issue (nothing found, a lookup that
     failed, two orders for one stock), a no, or no answer ends the run at the first node with the reasons, and its last message asks the user to clarify the request (`direct_order.CLARIFY`).
 
+    A REQUEST THAT ONLY ASKS FOR THE NEWS (entry 149, `design/news_view_spec.md`: "Show the news for Tesla", "What's TSLA's news?", "What's Tesla doing the last week?"; `intent.action == "news"`) is answered by the Data Clerk alone, on every desk:
+    START -> account_manager -> data_clerk -> END                                 (the Advisor, the Critic, the decision, the funds node and the Trader are never run; nothing reads or writes the account and nothing is asked, in either mode)
+    The Data Clerk node names the stocks as for any request (a theme is searched as a term and no company is looked for), always FETCHES the latest news of each stock first (`DataClerk.refresh_news`: the news only; refused while a past day is bound
+    and when the test-only `request["refuse_news_fetch"]` is set; a fetch that fails does not stop the run: the stored news is searched and the order says so) and answers with `DataClerk.request_news`: a cited summary, the news search only.
+
 Each node is one agent of the week 2 design, reduced to what exists today, and each one reads and updates the SAME work order, which is the
 state of the graph (the design: "the saved WORK_ORDER is the same object every agent reads"):
 
@@ -112,6 +117,7 @@ from prometheus.agents.account_manager import direct as direct_order
 from prometheus.agents.account_manager import funding as funding_module
 from prometheus.agents.account_manager import ignore_critic as ignoring
 from prometheus.agents.account_manager import neutral as neutral_names
+from prometheus.agents.account_manager.config import load_config as load_account_manager_config
 from prometheus.agents.account_manager.intent import one_stock_asked
 from prometheus.agents.account_manager.account_manager import DEFAULT_PORTFOLIO, DEFAULT_PROFILE, AccountManager, report as funds_report, top_recommendation
 from prometheus.agents.account_manager.decisions import terminal_approver
@@ -126,7 +132,7 @@ from prometheus.common import shares as sh
 from prometheus.common.market_calendar import eastern_date
 from prometheus.common.money import dumps
 from prometheus.common.trading_clock import clock_note, trading_now
-from prometheus.common.work_order import LOOKUP_SOURCES, REQUEST_LABEL, TRADING, WIRED_SOURCES, WorkOrder, new_work_order, verify_request
+from prometheus.common.work_order import LOOKUP_SOURCES, REQUEST_LABEL, TRADING, WIRED_SOURCES, DataResult, WorkOrder, new_work_order, verify_request
 from prometheus.common.portfolio import Portfolio, load_portfolio
 from prometheus.rag.loaders import check_symbol
 from prometheus.tools import symbols
@@ -172,6 +178,8 @@ def reached_its_end(state: DeskState) -> bool:
         return False
     if order.status == "traded" or "trader" in path:
         return True
+    if (state.get("plan") or {}).get("action") == "news":      # a request that only asks for the news ends at the Data Clerk, with its answer (entry 149)
+        return order.status == "data_ready"
     trader_built = bool(state.get("with_trader")) or (state.get("request") or {}).get("trade") is not None   # `trade` is in the request when `--trade` was typed
     if "account_manager_direct" in path:   # a direct order (entry 87) ends at the Account Manager's decision, as the Critic's path does; a decided order the Trader had nothing to do with did not reach it
         return not trader_built and order.status == "decided"
@@ -363,6 +371,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             return {"order": None, "errors": [str(error)], "plan": None, "clarify": True}
         if intent.action == "order" and not with_critic:
             return {"order": None, "errors": ["a direct order needs the desk that decides and trades (with the Critic's desk, build_desk(with_critic=True))"], "plan": None}
+        if intent.action == "news":      # the user only wants to see the news (entry 149): nothing is bought, decided or traded, so nothing is confirmed or asked, in either mode
+            return news_plan(state, intent, asked)
         if confirm is not None and confirm(intent) is not True:
             return {"order": None, "errors": ["stopped: what was understood was not confirmed, so nothing was done"], "plan": None}
         if intent.action == "order":      # the user named the trade (entries 87 and 88): the work order holds the user's own orders, and there is nothing to search, recommend or review
@@ -389,6 +399,54 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
                 "said_how_much": intent.said_how_much(), "request_text": intent.request, "fetch": fetch,
                 "news_days": days, "result": Result(asked, case, eastern_date(clock()), find)}
         return {"order": order, "errors": reasons, "plan": plan}
+
+    def news_plan(state: DeskState, intent, asked) -> dict:
+        """The work order and the plan of a request that only asks for the news (entry 149). The order is a search of the stored NEWS in the window (`since_days`, at most `news.top_k` sources, `live`: the latest news is fetched); a theme is its subject as a
+        term, and named stocks are its subject once the Data Clerk has found them (`news_data`). No case, no price limit: nothing is recommended."""
+        cap, days = load_account_manager_config().news, intent.news_days or load_account_manager_config().news.default_days
+        order = new_work_order(f"Summarize the news {'about' if intent.topic else 'of'} {intent.what()} for the last {days} day{'s' if days != 1 else ''}", requester=state["request"].get("requester", REQUESTER), action_type="search_news", source=DEFAULT_SOURCE,
+                               subject=asked.symbols or asked.phrase or asked.text, company=asked.company if asked.kind == "company" else None, time_period=f"last {days} days", since_days=days, top_k=cap.top_k, live=True)
+        reasons = verify_request(order)
+        order.errors = [*order.errors, *reasons]
+        named = [*intent.symbols, *intent.companies]
+        plan = {"intent": intent, "request": asked, "action": "news", "topic": intent.topic, "news_days": days, "find": max(1, len(named)), "request_text": intent.request, "refuse_fetch": bool(state["request"].get("refuse_news_fetch")),
+                "result": Result(asked, "funds", eastern_date(clock()), max(1, len(named)))}
+        return {"order": order, "errors": reasons, "plan": plan}
+
+    def news_data(state: DeskState, clerk: DataClerk) -> dict:
+        """The Data Clerk's part of a news run (entry 149): name the stocks (as for any request: `find_companies_of`; a theme is a term and no company is looked for), FETCH the latest news of each (`refresh_news`, the news only; always, N7: the
+        Data Clerk of this run may fetch whatever the run's fetch box says, unless the test-only `refuse_news_fetch` is set), then answer with `request_news`. A fetch that fails or is refused does not stop the run: the stored news is searched and
+        `order.data.refresh` says what happened. With no stock found and no theme the order is `data_failed` and the run's last message asks the user to clarify."""
+        order, plan = state["order"], state["plan"]
+        result, today, days, cap = plan["result"], eastern_date(clock()), plan["news_days"], load_account_manager_config().news
+        clerk = clerk.fetching(not plan.get("refuse_fetch")) if hasattr(clerk, "fetching") else clerk      # the news run's Data Clerk may fetch; the test-only switch takes that right away
+        listed: list[str] = []
+        if not plan.get("topic"):
+            try:
+                result.companies = find_companies_of(plan["request"], clerk, today, plan["find"], result)
+            except (RuntimeError, ValueError, OSError) as error:
+                order.status, order.errors = "data_failed", [*order.errors, f"the Data Clerk could not find the companies: {error}"]
+                return {"order": order, "clarify": True}
+            listed = [c["symbol"] for c in result.companies if c.get("symbol")][:cap.max_stocks]
+            if not listed:
+                order.status, order.errors = "data_failed", [*order.errors, "no listed company was found for the news you asked for"]
+                order.data = DataResult(companies=result.companies, notes=list(result.notes))
+                return {"order": order, "clarify": True}
+            order.subject = listed
+            order.company = next((c.get("company") for c in result.companies if c.get("symbol") == listed[0]), None) if len(listed) == 1 else None
+        what = plan["topic"] if plan.get("topic") else ", ".join(listed)
+        order.query = f"Summarize the news {'about' if plan.get('topic') else 'of'} {what} for the last {days} day{'s' if days != 1 else ''}"
+        refreshed = []
+        if listed:
+            try:
+                refreshed = clerk.refresh_news(listed, days)      # never raises for a failed or refused fetch: the report says so
+            except (RuntimeError, ValueError, OSError) as error:
+                refreshed = [{"step": "news", "symbol": None, "outcome": "error", "detail": f"{type(error).__name__}: {' '.join(str(error).split())[:160]}"}]
+        answered = clerk.request_news(order, today)
+        if answered.data is not None:
+            answered.data.companies, answered.data.refresh = result.companies, refreshed
+            answered.data.notes = [*answered.data.notes, *result.notes]
+        return {"order": answered}
 
     def account_manager(state: DeskState) -> dict:
         request, resolution = state["request"], None
@@ -421,6 +479,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         plan = state.get("plan")
         if plan is None:
             return {"order": clerk.request_data(order)}
+        if plan.get("action") == "news":      # a request that only asks for the news (entry 149): the Data Clerk alone answers it
+            return news_data(state, clerk)
         # a request in the user's own words: the companies first (a theme or a list of names is not a symbol yet), then their data, then the work order is answered
         result, today = plan["result"], eastern_date(clock())
         try:
@@ -586,6 +646,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         return "account_manager_funds" if funds_node and funding_module.needs_funding(order) else "trader"
 
     def after_data_clerk(state: DeskState) -> str:
+        if (state.get("plan") or {}).get("action") == "news":      # entry 149: a request that only asks for the news ends with the Data Clerk's answer
+            return END
         return "advisor" if with_advisor and state["order"].status == "data_ready" else END
 
     funds_node = with_funds or (with_critic and with_trader)      # entry 142: every desk that decides AND trades can raise funds for a purchase the cash does not cover

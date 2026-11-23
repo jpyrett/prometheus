@@ -66,6 +66,10 @@ price. Without these they are referring to quantity"*). A PROGRAM decides what a
     cover it. A PROGRAM decides it from the words (`RAISE_FUNDS_CUE`: raise funds / cash / money, free up cash, "sell some stock to pay for it", "take profits to buy"), and a negation wins ("don't raise funds", "do not sell anything",
     `NO_RAISE_FUNDS`): `TradeIntent.raise_funds`. The model's form has the field too and only has to agree: a `true` the words do not support is refused, a `false` is overruled by the words. Without the words (or the setting
     ALWAYS_RAISE_FUNDS, entry 142 R12) nothing is sold: Ask mode asks once, Auto mode says what to add.
+  * THE NEWS (entry 149; design/news_view_spec.md; Jacob, 2026-11-23: *"Show the news for Tesla"*, *"Whats Tesla doing the last week?"*): a request that ONLY asks to see the news of one or more stocks is `action: "news"`. THE MODEL reads it (no cue-word
+    filter decides it; a request that also asks to buy, sell, recommend or research is not news). It holds `symbols` and/or `companies` (at most `news.max_stocks`) or a `topic` searched as a term, and the window `news_days`, and NOTHING that moves money
+    or asks for a trade: the validator refuses orders, a budget, `each`, a count, an even split, `raise_funds`, a price limit or floor and typed shares, each with its reason. A PROGRAM reads an explicit window from the words and wins over the model
+    (`news_window`: "last 3 days", "past 2 weeks", "last week", "this month", "today", "yesterday"); with none written the model's value, and with none either `news.default_days`; a window over `news.max_days` (90) is cut and said (`corrected`).
   * "Skip recommendations" is not a request for them: a recommend cue inside a NEGATED span ("skip recommendations", "no research needed", "without the advisor") is no cue (`NO_RECOMMEND`, `asks_for_recommendation`), so "Buy $2500 worth of
     symbol KO and skip recommendations." is a direct order of $2,500 of KO. A request that skips them and names no stock to buy is `NeedsClarification` ("name the stocks to buy, or let me recommend some").
 """
@@ -78,6 +82,7 @@ from typing import Annotated, Literal
 
 from pydantic import AfterValidator, BaseModel, ConfigDict, Field, StrictBool, ValidationError, field_validator, model_serializer, model_validator
 
+from prometheus.agents.account_manager.config import load_config
 from prometheus.common import shares as sh
 from prometheus.common.money import Digits, PositiveMoney, Price, canonical, digits
 from prometheus.common.work_order import DIRECT_SIDES, MAX_DIRECT_SHARES
@@ -85,6 +90,7 @@ from prometheus.rag.loaders import check_symbol
 
 MAX_TEXT = 600
 MAX_COUNT = 10
+MAX_NEWS_DAYS = 90      # the news fetch's own limit (`work_order.MAX_DAYS["news"]`, `news.max_days` of the Account Manager's config): a window above it is cut (entry 149)
 MAX_BUDGET = Decimal(1_000_000_000)
 NAME = re.compile(r"^[A-Za-z0-9][A-Za-z0-9 &.,'’/+-]{0,59}$")
 CLERK_PHRASE_CHARS = r"[A-Za-z0-9 &.,'\u2019\-]"      # the characters of `DataClerk.find_companies`'s phrase rule (a test reads that source for this exact text): 1 to 60 of them
@@ -192,7 +198,7 @@ class TradeIntent(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     request: str
-    action: Literal["buy", "research", "order"]      # "order": the user named the trades themselves (`orders`): a direct order, entry 87
+    action: Literal["buy", "research", "order", "news"]      # "order": the user named the trades themselves (`orders`): a direct order, entry 87. "news": the user only wants to SEE the news of the stocks they named (entry 149): nothing is bought, decided or traded
     topic: str | None = None
     symbols: list[str] = Field(default_factory=list)
     companies: list[str] = Field(default_factory=list)
@@ -208,13 +214,14 @@ class TradeIntent(BaseModel):
     unclear_number: Digits | None = None      # a number written with no $ and no word dollars after a money verb ("spend 1000 on MU"): shares or dollars? The desk asks (Ask mode) or stops (Auto mode) before anything else (entry 138, D5); None once settled
     corrected: list[str] = Field(default_factory=list)      # what code changed in the model's reading, one sentence each (a number the model put in the wrong kind, a price limit it missed or a minimum price that is ignored: entry 138)
     orders: list[DirectOrder] = Field(default_factory=list, max_length=MAX_COUNT)      # only with action "order"
+    news_days: int | None = Field(default=None, ge=1, le=MAX_NEWS_DAYS)      # only with action "news" (entry 149): how many days of news to show, 1 to 90; a program reads an explicit window from the words (`news_window`) and wins over the model
 
     @model_serializer(mode="wrap")
     def _leave_out_what_entry_138_added_when_it_is_not_there(self, handler):
         """A dump has no `max_price`, `unclear_number`, `corrected`, `min_price`, `shares_of` or `shares_each` unless the request has one: every key of the Proving Ground's research cache made before entry 138 (it hashes this dump) is
         still the key of the same request, and a saved intent loads the same."""
         data = handler(self)
-        for key in ("max_price", "unclear_number", "min_price", "shares_each"):
+        for key in ("max_price", "unclear_number", "min_price", "shares_each", "news_days"):      # `news_days` is entry 149's: left out of every request that is not a news request, so the keys of the Proving Ground's research cache do not change
             if data.get(key) is None:
                 data.pop(key, None)
         if not data.get("raise_funds"):
@@ -226,6 +233,10 @@ class TradeIntent(BaseModel):
 
     @model_validator(mode="after")
     def _orders_go_with_the_order_action(self):
+        if self.news_days is not None and self.action != "news":
+            raise ValueError("news_days: the window of the news goes with a request for the news (action news)")
+        if self.action == "news":
+            self._a_news_request_holds_no_trade()
         if (self.shares_of or self.shares_each is not None) and self.action != "buy":
             raise ValueError("shares_of and shares_each: a number of shares typed with a recommendation goes with buying (a direct order has its shares on the order, and nothing is bought when the person only wants to look)")
         if self.raise_funds and self.action == "research":
@@ -273,6 +284,19 @@ class TradeIntent(BaseModel):
     def _symbols(cls, values):
         return list(dict.fromkeys(check_symbol(v.strip().lstrip("$")) for v in values))
 
+    def _a_news_request_holds_no_trade(self) -> None:
+        """Entry 149, N2: a request that only asks for the news holds the stocks (or a theme) and the window, and nothing that moves money or asks for a trade. Raises ValueError, with the reason, for each thing it may not hold."""
+        for name, held in (("orders", bool(self.orders)), ("budget", self.budget is not None), ("each", self.each), ("count", self.count is not None), ("allocation", self.allocation != "default"), ("raise_funds", self.raise_funds),
+                           ("max_price", self.max_price is not None), ("min_price", self.min_price is not None), ("shares_of", bool(self.shares_of)), ("shares_each", self.shares_each is not None)):
+            if held:
+                raise ValueError(f"{name}: a request for the news holds no {name.replace('_', ' ')} (nothing is bought, sold or sized): leave it empty, or, if the person also wants to buy, sell or be recommended something, this is not a news request")
+        named = [*self.symbols, *self.companies]
+        if self.topic and named:
+            raise ValueError("a news request is for named stocks or for a theme, not both: ask for one of them at a time")
+        most = load_config().news.max_stocks
+        if len(named) > most:
+            raise ValueError(f"a news request names at most {most} stocks ({len(named)} were named): ask for fewer at a time")
+
     def said_how_much(self) -> bool:
         """Whether the user's own words already say how much to buy: a dollar amount (the budget), a percentage, a number of shares, or "as much as I can" and its kin. When they do not, the Account Manager asks in Ask
         mode (`clarify.py`). A check of the typed words by a program, with no model."""
@@ -297,6 +321,8 @@ class TradeIntent(BaseModel):
         """What is to be bought or looked at, in words: the theme, or the names, or the tickers. ONE company asked for (count 1, entry 146) is said in the singular."""
         if self.action == "order":
             return ", ".join(o.named for o in self.orders)
+        if self.action == "news" and self.topic:
+            return repr(self.topic)      # the news about a theme is searched as a term: "the news about 'quantum computing'", never 'quantum computing' companies
         if self.topic:
             ends_in_a_noun = _token_list(self.topic)[-1:] and _token_list(self.topic)[-1] in THEME_NOUNS
             return repr(self.topic) if ends_in_a_noun else f"{self.topic!r} compan{'y' if self.count == 1 else 'ies'}"      # 'AI stocks', not 'AI stocks' companies
@@ -323,6 +349,9 @@ class TradeIntent(BaseModel):
 
     def _describe(self) -> str:
         limit = self.limit_words()
+        if self.action == "news":      # entry 149: only the news is shown
+            days = self.news_days if self.news_days is not None else load_config().news.default_days
+            return f"show the news {'about' if self.topic else 'of'} {self.what()} for the last {'day' if days == 1 else f'{days} days'} (nothing will be bought)"
         if self.action == "order":
             spend = f", spending ${self.budget:,.2f}" + (" spread evenly" if self.allocation == "even" else "") if self.budget else ""
             if self.each:      # entry 125: one amount, written once, for every stock
@@ -694,6 +723,80 @@ def check_order(order: DirectOrder, typed: str, each: bool = False) -> None:
         raise ValueError(f"{order.side} {order.named} is not what you typed: the last word about buying or selling before the {sh.text(order.shares)} shares is not a {word}")
 
 
+# THE WINDOW OF A NEWS REQUEST (entry 149, N3): a PROGRAM reads an explicit span from the user's words and wins over the model. A number of days moves no money, but it is a number, so code reads it. A closed list: "last/past N days/weeks/months"
+# ("last week" and "last month" with no number are 1), "this week", "this month", "today", "yesterday". A week is 7 days and a month 30. "this year" and "last year" are not read (over the limit): the model's value, or the default, stands.
+NEWS_UNITS = {"day": 1, "week": 7, "month": 30}
+NEWS_LAST = re.compile(rf"\b(?:last|past)\s+(?:(?P<n>\d+|{'|'.join(NUMBER_WORDS)})\s+)?(?P<unit>day|week|month)s?\b", re.I)
+NEWS_THIS = re.compile(r"\bthis\s+(?P<unit>week|month)\b", re.I)
+NEWS_TODAY = re.compile(r"\btoday\b", re.I)
+NEWS_YESTERDAY = re.compile(r"\byesterday\b", re.I)
+
+
+def news_window(typed: str) -> int | None:
+    """The number of days the user's words ask the news for, or None when they write none: "last 3 days" 3, "past 2 weeks" 14, "last week" 7, "last month" 30, "this week" 7, "this month" 30, "today" 1, "yesterday" 2 (it includes today). When
+    the words write more than one span ("today and the last week") the longest is the window. A span of 0 is not one. A program's check of the user's own words, no model (entry 149, N3); `news.max_days` is applied by the caller."""
+    found = []
+    for match in NEWS_LAST.finditer(typed):
+        word = (match["n"] or "1").lower()
+        found.append((NUMBER_WORDS[word] if word in NUMBER_WORDS else int(word)) * NEWS_UNITS[match["unit"].lower()])
+    found += [NEWS_UNITS[match["unit"].lower()] for match in NEWS_THIS.finditer(typed)]
+    found += [1] * len(NEWS_TODAY.findall(typed)) + [2] * len(NEWS_YESTERDAY.findall(typed))
+    found = [days for days in found if days >= 1]
+    return max(found) if found else None
+
+
+def check_named(intent: TradeIntent, typed: str) -> None:
+    """Raises ValueError, with the reason, unless the stocks and the theme of a request for companies (or for the news) are the user's own words: at least one of them, each ticker as typed, each company's name (case ignored) and the
+    theme sharing a word with the text (`theme_is_in`)."""
+    lowered = typed.lower()
+    if not (intent.topic or intent.symbols or intent.companies):
+        raise ValueError("no theme, ticker or company: name what you want to buy or look at")
+    for symbol in intent.symbols:
+        if not re.search(rf"(?<![A-Za-z0-9]){re.escape(symbol)}(?![A-Za-z0-9])", typed):
+            raise ValueError(f"the ticker {symbol} is not in what you typed")
+    for name in intent.companies:
+        if name.lower() not in lowered:
+            raise ValueError(f"the company {name!r} is not in what you typed")
+    if intent.topic and not theme_is_in(intent.topic, typed):
+        raise ValueError(f"the theme {intent.topic!r} shares no word with what you typed")
+
+
+def _news_intent(raw: dict, typed: str) -> TradeIntent:
+    """The form of a request that only asks for the news (entry 149), accepted only when the user's words support it. The window is the one the words write (`news_window`), else the model's `news_days` (a whole number of days, 1 or more),
+    else `news.default_days`, cut to `news.max_days` with a sentence in `corrected` that tells the user. Nothing that moves money is read here (no price limit, no number of shares, no permission to raise funds: `_read_numbers` is not run), and
+    whatever the model put in such a field is refused by the intent's own validator with its reason."""
+    raw, notes, cap = dict(raw), [], load_config().news
+    written, model_days = news_window(typed), raw.pop("news_days", None)
+    if model_days is not None:      # a whole number of days from the model's JSON, through the door of the number (a bool and a text are refused)
+        try:
+            exact = digits(model_days)
+        except ValueError:
+            exact = None
+        if exact is None or exact != exact.to_integral_value() or exact < 1:
+            raise ValueError("news_days must be a whole number of days (1 or more), or null when the person gave no window")
+        model_days = int(exact)
+    days = written if written is not None else model_days if model_days is not None else cap.default_days
+    if days > cap.max_days:
+        notes.append(f"the news is kept for at most {cap.max_days} days: showing {cap.max_days}")
+        days = cap.max_days
+    raw["news_days"] = days
+    named = [*(raw.get("symbols") or []), *(raw.get("companies") or [])]
+    if len(named) > cap.max_stocks:      # the user has to say fewer: the model is not asked again (it would drop one without telling them; found by the first real capture)
+        raise NeedsClarification(f"a news request names at most {cap.max_stocks} stocks and {len(named)} were named: ask for the news of {cap.max_stocks} or fewer at a time")
+    if raw.pop("raise_funds", None):
+        raw["raise_funds"] = True      # the intent refuses it: nothing is sold for the news
+    raw.pop("unclear_number", None)
+    try:
+        intent = TradeIntent(request=typed, corrected=notes, **raw)
+    except ValidationError as error:
+        first = error.errors()[0]
+        raise ValueError(f"{'.'.join(str(x) for x in first['loc']) or 'the form'}: {first['msg']}") from None
+    except ValueError as error:   # check_symbol
+        raise ValueError(str(error)) from None
+    check_named(intent, typed)
+    return intent
+
+
 def check_typed(typed) -> str:
     """The user's words with the spaces tidied. Raises ValueError for nothing at all or for more than the form can read: a request refused here costs no model call."""
     typed = " ".join(typed.split()) if isinstance(typed, str) else ""
@@ -903,7 +1006,7 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
         raise ValueError("not valid JSON") from None
     if not isinstance(raw, dict):
         raise ValueError("not a JSON object")
-    known = {"action", "topic", "symbols", "companies", "count", "allocation", "budget", "each", "max_price", "min_price", "raise_funds", "orders"}
+    known = {"action", "topic", "symbols", "companies", "count", "allocation", "budget", "each", "max_price", "min_price", "raise_funds", "orders", "news_days"}
     if set(raw) - known:
         raise ValueError(f"unknown fields: {', '.join(sorted(map(str, set(raw) - known)))}")
     orders = raw.get("orders", [])
@@ -944,6 +1047,9 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
         raw.pop("each", None)
     elif not isinstance(raw["each"], bool):
         raise ValueError("each must be true or false")
+    if raw.get("action") == "news":      # entry 149: the user only wants to see the news: no number of shares, no price and no permission to sell is read from the words
+        return _news_intent(raw, typed)
+    raw.pop("news_days", None)      # a window means nothing to a request that is not for the news
     said = raw.pop("raise_funds", None)      # the permission to sell holdings (entry 142, R2): the words decide, the model only has to agree
     if said is not None and not isinstance(said, bool):
         raise ValueError("raise_funds must be true or false")
@@ -969,7 +1075,7 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
     if intent.action in ("buy", "research") and skips_recommendations(typed) and as_direct_order(intent, typed) is None:      # S3: "skip recommendations" and no stock to buy: only the recommendations choose stocks for a theme
         raise NeedsClarification(SKIP_NEEDS_STOCKS)
     # every field must be in the user's own words
-    lowered, numbers = typed.lower(), _numbers(typed)
+    numbers = _numbers(typed)
     for order in intent.orders:
         check_order(order, typed, intent.each)
         check_dollars(order, typed)      # entry 122: the dollars of an order are an amount the user wrote as money
@@ -979,16 +1085,7 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
     if intent.action == "order":
         check_amount_was_read(intent, typed)      # entry 122: an amount of money in the words and none in the reading is refused, never turned into all the cash
         return intent
-    if not (intent.topic or intent.symbols or intent.companies):
-        raise ValueError("no theme, ticker or company: name what you want to buy or look at")
-    for symbol in intent.symbols:
-        if not re.search(rf"(?<![A-Za-z0-9]){re.escape(symbol)}(?![A-Za-z0-9])", typed):
-            raise ValueError(f"the ticker {symbol} is not in what you typed")
-    for name in intent.companies:
-        if name.lower() not in lowered:
-            raise ValueError(f"the company {name!r} is not in what you typed")
-    if intent.topic and not theme_is_in(intent.topic, typed):
-        raise ValueError(f"the theme {intent.topic!r} shares no word with what you typed")
+    check_named(intent, typed)
     if intent.count is not None and Decimal(intent.count) not in numbers:
         raise ValueError(f"the number {intent.count} is not in what you typed")
     if intent.allocation == "even" and not EVEN_CUE.search(typed):

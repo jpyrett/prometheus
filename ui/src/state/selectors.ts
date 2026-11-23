@@ -36,6 +36,7 @@ const FINISHED_LABEL: Record<string, { label: string; tone: Tone }> = {
   waiting: { label: "WAITING", tone: "pos" },
   no_trade: { label: "NOTHING TRADED", tone: "warn" },
   looked: { label: "COMPLETED", tone: "pos" },
+  news: { label: "COMPLETED", tone: "pos" },
   stopped: { label: "STOPPED", tone: "neg" },
   failed: { label: "STOPPED", tone: "neg" },
 };

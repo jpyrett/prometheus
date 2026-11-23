@@ -7,6 +7,9 @@ built, tested, screenshotted and shown for free.
 The capture's numbers are the ints and floats that `json` read: the account they build (`Portfolio`) turns them into Decimals through the typed doors, a recorded fill goes through `shares.quantity` and `money.price` before `apply_fill`, and what the page is sent is
 written by the one encoder (design choices entry 112).
 
+A capture of a request that only asked for the news (entry 149: `intent.action == "news"`, the work order WITH its `data`) is played as the live run plays it: the Account Manager and the Data Clerk, no question in either mode, the `news` event once the Data Clerk
+has answered, and the last line `news`; there is no work order table, no trade and no portfolio change.
+
 The account is the capture's: the portfolio before and after are the Trader's own (`trader_runs[-1].portfolio_before` and `portfolio_after`), the risk level a review's `risk.tolerance_stated`, the mode a decision's `mode`.
 The name is the one the file name carries (`bob_jones_oil.json` is Bob Jones): a capture does not keep the account. In Ask mode the replay asks what the live desk asks (the confirmation of what was understood, and each
 approval the capture records) and then plays the recorded session whatever the answer: the page says so. Writes to the account are refused: it is the capture's.
@@ -83,6 +86,7 @@ class Replay:
         order = capture["order"]
         self.order, self.path = order, list(capture["path"])
         self.intent = TradeIntent.model_validate(capture["intent"]) if capture.get("intent") else None
+        self.news = bool(self.intent and self.intent.action == "news")      # a request that only asked for the news (entry 149)
         self.top = self.intent.count if self.intent and self.intent.action not in ("order",) else None      # the number the recorded request asked for (entry 144); a capture with none shows every row
         self.names = {r["symbol"]: r["company"] for r in [*(order.get("candidates") or []), *(order.get("recommendations") or []), *(order.get("direct_orders") or [])] if r.get("company")}      # the names the capture has: a company the Advisor did not name stays unnamed
         stem = Path(capture.get("_file", "replay.json")).stem.split("_")
@@ -114,7 +118,7 @@ class Replay:
         out.log("you", capture.get("request", ""))
         out.log("account_manager", f"understood: {understood}")
         out.stages(views.stage_states(path=[], running=None, order=None))
-        if self.mode == "ask":
+        if self.mode == "ask" and not self.news:      # the news asks nothing, in either mode (entry 149, N4)
             answer = run.ask("confirm", {"title": "Confirm what was understood", "text": f"I understood: {understood}. Go ahead?"}, self.question_timeout)
             out.log("you", "yes, go ahead" if answer is True else "no, stop" if answer is False else "(no answer: not going ahead)", "info" if answer is True else "warn")
             if answer is not True:
@@ -135,6 +139,8 @@ class Replay:
             done.append(node)
             seconds[node] = round(time.perf_counter() - before_node, 1)
             cut = views.cut_order(order, done)
+            if self.news and "data_clerk" not in done:
+                cut = {**cut, "data": None}      # the Data Clerk's answer is not on the order before it has answered
             work = WorkOrder.model_validate(cut)
             if node == "trader":
                 self._play_fills(run, out, done, understood)          # the fills first, one by one, as they were booked; the node's own line after them
@@ -146,12 +152,17 @@ class Replay:
                 out.block("account_manager", [note for note in work.data.notes if note.startswith("dropped")])           # a stock that was left out of the order (entry 102): the live run says it as it happens
             if node == "account_manager_direct":
                 out.block("account_manager", direct_section(work))
-            out.work_order(work, understood=understood, top=self.top)
+            if self.news:
+                if node == "data_clerk":
+                    out.news(views.news_view(work, {"intent": self.intent}))      # the Data Clerk's answer is the run's result: the page selects its News pane
+            else:
+                out.work_order(work, understood=understood, top=self.top)
             out.stages(views.stage_states(path=done, seconds=seconds, running=None, order=cut))
             calls, tokens_in, tokens_out = self._activity(out, node, cut, calls, tokens_in, tokens_out)
         stopped = run.stop_flag.is_set() and len(done) < len(self.path)
         final = WorkOrder.model_validate(views.cut_order(order, done))
-        self._reports(out, final)
+        if not self.news:
+            self._reports(out, final)
         after = self.account(final=True) if "trader" in done else self.account()
         out.portfolio(after)
         before_view = self.account()

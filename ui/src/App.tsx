@@ -3,12 +3,14 @@ import { api, ApiError } from "./api/client";
 import type { Health, TradeMode, WorkRow } from "./api/types";
 import { ActivityFeed } from "./components/ActivityFeed";
 import { Header } from "./components/Header";
+import { NewsPanel } from "./components/NewsPanel";
 import { OpenOrdersCard } from "./components/OpenOrdersCard";
 import { Pipeline } from "./components/Pipeline";
 import { PortfolioCard } from "./components/PortfolioCard";
 import { ProfileCard } from "./components/ProfileCard";
 import { RecommendationPanel } from "./components/RecommendationPanel";
 import { RequestCard } from "./components/RequestCard";
+import { RightToggle, type RightView } from "./components/RightToggle";
 import { WorkOrderTable } from "./components/WorkOrderTable";
 import { Card } from "./components/ui/Card";
 import { loadFixture, parseFixtureParams } from "./devFixture";
@@ -65,6 +67,8 @@ export default function App() {
   const [openNew, setOpenNew] = useState(false);
   // The trade mode on show (Jacob: the Mode switch on the request card): the account's own once there is an account, else the page's value, which Create account sends.
   const [newMode, setNewMode] = useState<TradeMode>("ask");
+  // The right column shows the News or the work order (entry 149, N9): a run selects the work order when it starts, a news run selects News when its news arrives, and the user can switch at any time.
+  const [rightView, setRightView] = useState<RightView>("workorder");
   const [frozenNow, setFrozenNow] = useState<number | null>(null);
   const state = run.state;
   const running = state.phase === "running";
@@ -109,11 +113,15 @@ export default function App() {
     if (state.portfolio) applyPortfolio(state.portfolio);
   }, [state.portfolio, applyPortfolio]);
 
-  // A new run starts with nothing chosen.
+  // A new run starts with nothing chosen, and shows the work order; the news of a request that only asked for it replaces that when it arrives (declared after, so it wins when both happen at once: a page reloaded in the middle of a news run).
   useEffect(() => {
     setPicked(false);
     setSelected(null);
+    setRightView("workorder");
   }, [state.runId]);
+  useEffect(() => {
+    if (state.news) setRightView("news");
+  }, [state.news]);
 
   // The first row is selected when recommendations first arrive, unless the user already chose one.
   const rows = useMemo<WorkRow[]>(() => state.workOrder?.rows ?? [], [state.workOrder]);
@@ -211,8 +219,14 @@ export default function App() {
             <ActivityFeed state={state} answer={run.answer} rowOf={rowOf} reconnecting={run.reconnecting} />
           </div>
           <div className="col right">
-            <WorkOrderTable state={state} selectedKey={selected} onSelect={choose} />
-            <RecommendationPanel row={selectedRow} runId={state.runId} waitingForAdvisor={rows.length > 0 || running} />
+            <RightToggle view={rightView} onView={setRightView} />
+            <div className="rightpane" hidden={rightView !== "news"}>
+              <NewsPanel news={state.news} />
+            </div>
+            <div className="rightpane" hidden={rightView !== "workorder"}>
+              <WorkOrderTable state={state} selectedKey={selected} onSelect={choose} />
+              <RecommendationPanel row={selectedRow} runId={state.runId} waitingForAdvisor={rows.length > 0 || running} />
+            </div>
           </div>
         </main>
         </Pane>
