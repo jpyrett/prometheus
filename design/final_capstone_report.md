@@ -101,7 +101,11 @@ The most important refinement came from evaluation. The Proving Ground showed th
 - **Data:** Massive (historical bars, news, press releases), Finnhub (quotes, news, analyst ratings) and SEC EDGAR (filings).
 - **Storage:** Chroma for retrieval, and Postgres for the account book with row-level locks.
 - **Interface:** a React and TypeScript web page over FastAPI with Server-Sent Events, plus a command line session.
-- **Observability and tests:** LangSmith traces and datasets, and a pytest suite of about 2,700 tests that use real stored data and recorded real sessions.
+- **Observability and tests:** LangSmith traces and datasets, and a pytest suite of about 2,750 tests that use real stored data and recorded real sessions.
+- **LLM-as-a-Judge risk scorer (Claude Opus as the judge):**
+    - **Online:** the "Risk Scorer for Prometheus" evaluator on LangSmith scores every live desk run as it is traced. It gives a `risk_score` (0 to 1) and a `router_action`.
+    - **Offline:** the same rubric (`prometheus/prompts/risk_judge.py`) is run with `openevals.create_llm_as_judge` over the red-team and recorded-session datasets (`scripts/run_offline_evals.py`). The judge is Claude Opus 5.5 on OpenRouter (`JUDGE_MODEL`).
+    - The judge only gives the score. Code turns the score into the action (block, review, flag or allow) with the same router as the Security Guard, and the result is compared with the human labels.
 
 # 6. Evaluation Methods and Results
 ## 6.1 How the system was evaluated
