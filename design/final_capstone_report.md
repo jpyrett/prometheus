@@ -30,7 +30,7 @@ The problem: Develop a virtual financial stock trading desk providing high-level
 
 - **Case 1: trade with these funds.** "Here is $1,000, take it and buy some stocks." 
 - **Case 2: search by a phrase or trend.** "AI memory shortage", "energy companies", "EV cars". etc.
-- **Case 3: "What's happening?"** Recommendations from current market activity for a group such as the S&P 500.
+- **Case 3: "What's happening?"** Recommendations from current market activity for a group such as the S&P 500. *Partly built:* a request such as "Tell me the top 5 recommended stocks in the S&P 500" runs today as a search of the stored news for that group, as in Case 2. A scan of live market activity across the whole index is future work (section 8).
 - **"Case 4: Show the news for < company >"** (or "What's Tesla doing the last week?"). The Account Manager reads it as a request for the news alone, the Data Clerk fetches the stock's latest news, then summarizes it with a citation for every point.
 
 **Success** means the application can find & recommend quality stocks from simple high level User questions (prompts) and then place simulated (later: real) orders to a User portfolio. The app must translate intent of what the User wants into an actionable request. Then, generate recommendations which cite stored evidence and an independent Critic approves or denies it with reasons, the account's money always adds up, and the results are measured against what the stocks did afterwards. The desk records every recommendation and scores its outcome, so that experience can change what it does next (section 8 says how far that got). The User can guide the app for most steps (Ask mode) or just let it run without prompting after the initial request.
@@ -198,7 +198,7 @@ A trading desk handles real money on behalf of a person, so the design principle
 # 8. Current Limitations and Future Improvements
 
 - **Self-learning is only half answered.** Every recommendation is recorded in a ledger and scored by the Proving Ground, and those outcomes changed the Critic twice, but the developer made the changes. The agents do not yet adjust themselves from their own results.
-- **Case 3 ("What's happening?") is not built.**
+- **Case 3 ("What's happening?") is only partly built.** A group such as the S&P 500 is searched as a phrase in the stored news, as in Case 2. A scan of current market activity (movers, volume, sector moves) across the whole index is not built yet.
 - **No live broker.** The venue seam is built; a real broker is the third venue.
 - **Stops are not placed.** A plan's stop and target are only watched, so stop-loss orders and a monitoring mode come next.
 - **Request reading relies on word rules** in places; the next build lets the Account Manager's model read the request in full.
