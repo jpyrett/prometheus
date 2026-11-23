@@ -890,7 +890,13 @@ PART 14. A USER SESSION END TO END (design choices entry 78)
          A lookup that failed, nothing found, or two orders for one stock stop the run in either mode, and the last message says "Please clarify your request and send it again: name each stock by its ticker or by the listed company's name."
          ./test_prometheus.sh --session --name "D Test" --age 40 --risk moderate --cash 10000 --mode auto --yes --cleanup --prompt "Buy as much stock in: F, GM, Procter and gamble and Google. And Chick-fil-a."        (PAID; no fetch)
   FLAGS  --name --age --risk --cash --mode --account N|KEY --prompt --yes --no-fetch --no-trader-model --cleanup (delete the new account) --allow-no-trade --real-ledger --default-count N --model ID
-         --save FILE (what the desk made, as JSON)      (--auto-min-score is gone: entry 104)
+         --save FILE (what the desk made, as JSON)      (--auto-min-score is gone: entry 104)      --ignore-critic (below)
+  IGNORE CRITIC (entry 148, spec design/ignore_critic_spec.md): skip the Critic's step for ONE run, so that a recommendation the Critic would have denied can trade (the user's own override; without the flag "a denial is final" is as it was).
+         The desk goes Advisor -> the Account Manager's decision (the Critic's node is NOT run: no Critic model, no Finnhub re-asks) and every Advisor recommendation counts as approved: AUTO trades it (nothing is asked), ASK asks you about each
+         with a card that says "THE CRITIC DID NOT REVIEW THIS RECOMMENDATION". Sized like any other purchase (round robin, the number you asked for, your budget, price limits), together with neutral purchases, the Advisor's first.
+         python -m prometheus.application.session --name "Ada Lovelace" --age 45 --risk moderate --cash 15000 --mode auto --ignore-critic --cleanup --yes --prompt "..."          (PAID: models and quotes; no --fetch: nothing is fetched)
+         ./test_prometheus.sh --session ... --ignore-critic          the same through the script.   The page's box "Ignore Critic" (default off, one run) is the same; it unticks and disables "Strict recommendations" (Strict means only what the Critic approves).
+         A real Auto session (throwaway account, $15,000): tests/fixtures/session_real/auto_ignore_critic.json (EOG 31, CVX 30, COP 30; $14,941.30 spent).   pytest tests/test_ignore_critic.py -q
   COSTS: OpenRouter (the Account Manager's, the Advisor's, the Critic's GLM 5.3 and the Trader's models), Finnhub, and with a fetch the paid Massive and Finnhub APIs, which write files. It creates an account in the
   local Postgres (kept unless --cleanup; python -m prometheus.agents.account_manager.account_manager --account N shows it). Nothing is sent to a broker.
   EXIT CODE  0 the portfolio changed (or it was only a look)  1 it could not trade, with the reasons  2 a bad flag, or the account book, a key or the request could not be used.

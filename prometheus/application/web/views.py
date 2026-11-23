@@ -141,7 +141,10 @@ def _critic_cell(review: dict | None) -> dict | None:
 def _decision_cell(decision: dict | None) -> dict | None:
     if decision is None:
         return None
-    return {"will_trade": decision["will_trade"], "words": "WAITING (a day order: its cash or shares are set aside)" if decision.get("open_order_id") is not None else DECISION_WORDS.get(decision["will_trade"], decision["will_trade"]), "action": decision.get("action"), "shares": decision.get("shares"),
+    words = "WAITING (a day order: its cash or shares are set aside)" if decision.get("open_order_id") is not None else DECISION_WORDS.get(decision["will_trade"], decision["will_trade"])
+    if decision.get("origin") == "advisor":      # the user chose to ignore the Critic (entry 148, IC10): the page says the decision was made without it
+        words += f" · {CRITIC_SKIPPED}"
+    return {"will_trade": decision["will_trade"], "words": words, "action": decision.get("action"), "shares": decision.get("shares"),
             "est_cost": decision.get("est_cost"), "dollars": decision.get("dollars"), "price": decision.get("price"), "origin": decision.get("origin")}
 
 
@@ -218,22 +221,51 @@ def _review_part(review: dict | None) -> dict | None:
             "valid_until_utc": review.get("valid_until_utc"), "requires_human": bool(review.get("requires_human"))}
 
 
+CRITIC_SKIPPED = "Critic skipped"      # entry 148, IC10: the words of a recommendation the user chose not to have the Critic review ("Ignore Critic")
+CRITIC_SKIPPED_MESSAGE = "Critic skipped: you ticked Ignore Critic for this run, so the Critic did not review this recommendation. It counts as approved on the Advisor's word alone."
+
+
 def _recommended_detail(record: dict, review: dict | None, decision: dict | None, trade: dict | None, of: int | None) -> dict:
     thesis = record.get("thesis") or {}
     ranking = record.get("ranking") or {}
-    return {"header": {"score": record.get("score"), "stance": record.get("stance"), "rank": ranking.get("rank"), "of": of, "strategy": (record.get("trade") or {}).get("family")},
+    skipped = review is None and decision is not None and decision.get("origin") == "advisor"      # the Critic did not run for this run (entry 148)
+    return {**({"message": CRITIC_SKIPPED_MESSAGE} if skipped else {}), "header": {"score": record.get("score"), "stance": record.get("stance"), "rank": _overall(record), "of": of, "strategy": (record.get("trade") or {}).get("family")},
             "thesis": thesis.get("thesis"), "bull": [{"text": c["text"], "ref": c.get("ref")} for c in thesis.get("bull_case") or []], "bear": [{"text": c["text"], "ref": c.get("ref")} for c in thesis.get("bear_case") or []],
             "evidence": [{"source": s.get("source"), "direction": s.get("direction"), "quote": s.get("quote"), "verified": s.get("verified"), "counted": s.get("counted"), "reason": s.get("reason")} for s in record.get("signals") or []],
             "score_build": _score_build(record.get("blend")), "key_numbers": _key_numbers(record.get("features")), "plan": _plan(record.get("trade")), "review": _review_part(review), "order": _order_part(decision, trade)}
+
+
+def _overall(record: dict):
+    """A recommendation's rank among EVERY company the Advisor scored (`universe_rank`), the rank a scored candidate carries too (entry 145); its rank among the recommendations only when an older record has no other."""
+    ranking = record.get("ranking") or {}
+    return ranking.get("universe_rank") if ranking.get("universe_rank") is not None else ranking.get("rank")
+
+
+RANKED = ("recommended", "neutral", "scored")
+
+
+def _number_by_score(rows: list[dict]) -> list[dict]:
+    """The rows of the research path in the order of the Advisor's overall score, numbered 1, 2, 3 ... (entry 145): the `#` of a request for the top 5 runs from 1 to 5 whatever the Advisor's ranks of the companies
+    left out. The direct orders stay first; a row with no rank (nothing scored it) is not numbered and comes last."""
+    ranked = sorted((row for row in rows if row["group"] in RANKED), key=lambda row: (row["rank"] is None, row["rank"] or 0))
+    n = 0
+    for row in ranked:
+        if row["rank"] is not None:
+            n += 1
+            row["rank"] = n
+    return [row for row in rows if row["group"] not in RANKED] + ranked
 
 
 def _row(key: str, symbol: str, company: str | None, rank, group: str, **parts) -> dict:
     return {"key": key, "symbol": symbol, "company": company, "rank": rank, "group": group, "advisor": None, "critic": None, "decision": None, "trade": None, "detail": {}, **parts}
 
 
-def work_order_view(order, *, understood: str | None = None, found: list[dict] | None = None) -> dict:
-    """The stocks on the work order (spec 4.4): direct orders first, then the recommended by rank, the neutral passes, the scored and not recommended, and, before the Advisor has answered, the companies the Data Clerk found.
-    `found` is [{symbol, company}] for that last group (the live run knows the company names; a capture has the subject only). A trade that matches no row gets a row of its own."""
+def work_order_view(order, *, understood: str | None = None, found: list[dict] | None = None, top: int | None = None) -> dict:
+    """The stocks on the work order (spec 4.4): direct orders first, then the recommended, the neutral passes and the scored and not recommended in the order of the Advisor's overall score, numbered 1, 2, 3 ... (entry 145),
+    and, before the Advisor has answered, the companies the Data Clerk found.
+    `found` is [{symbol, company}] for that last group (the live run knows the company names; a capture has the subject only). A trade that matches no row gets a row of its own.
+    `top` is the number of companies the request asked for ("the top 5"; entry 144): the recommended and neutral rows are always shown (the Advisor and the Account Manager already keep to the number), and the scored,
+    not recommended rows only fill the list up to it, best score first; the others are named in `beyond` ({top, count, symbols}), not shown as rows. None (a Time Machine day, a capture with no count) shows every row."""
     recs = sorted(_get(order, "recommendations") or [], key=lambda r: ((r.get("ranking") or {}).get("rank") is None, (r.get("ranking") or {}).get("rank") or 0))
     candidates, reviews = _get(order, "candidates") or [], _by(_get(order, "reviews") or [])
     decisions, directs = _by(_get(order, "trade_decisions") or []), _get(order, "direct_orders") or []
@@ -258,11 +290,12 @@ def work_order_view(order, *, understood: str | None = None, found: list[dict] |
         rid = r["identity"]["record_id"]
         used.add(rid)
         review, decision, trade = reviews.get(rid), decisions.get(rid), trades.get(rid)
-        rows.append(_row(r["symbol"], r["symbol"], r.get("company"), (r.get("ranking") or {}).get("rank"), "recommended", advisor=_advisor_cell(r), critic=_critic_cell(review),
+        rows.append(_row(r["symbol"], r["symbol"], r.get("company"), _overall(r), "recommended", advisor=_advisor_cell(r), critic=_critic_cell(review),
                          decision=_decision_cell(decision), trade=_trade_cell(trade), detail=_recommended_detail(r, review, decision, trade, scored_count)))
     neutral = {d["symbol"]: d for d in decisions.values() if d.get("origin") == "neutral"}
-    shown = {r["symbol"] for r in recs}
-    for c in sorted(candidates, key=lambda c: (c.get("rank") is None, c.get("rank") or 0)):
+    shown, beyond = {r["symbol"] for r in recs}, []
+    first = (lambda c: c["symbol"] not in neutral) if top is not None else (lambda c: False)     # with `top`, a neutral pass is a row whatever its rank: it comes before the scored ones take the places that are left
+    for c in sorted(candidates, key=lambda c: (first(c), c.get("rank") is None, c.get("rank") or 0)):
         symbol = c["symbol"]
         if symbol in shown:
             continue
@@ -276,9 +309,13 @@ def work_order_view(order, *, understood: str | None = None, found: list[dict] |
             rows.append(_row(symbol, symbol, c.get("company"), c.get("rank"), "neutral", advisor=advisor, decision=_decision_cell(decision), trade=_trade_cell(trade),
                              detail={"header": header, "message": "The Advisor found no strategy for this company (a neutral score). A neutral recommendation counts as approved, so there is no Critic review.",
                                      "strategies": _strategies(c), "score_build": _score_build(c.get("blend")), "order": _order_part(decision, trade)}))
-        else:                                           # 4. scored and not recommended
+        else:                                           # 4. scored and not recommended, up to the number asked for (entry 144)
+            if top is not None and sum(1 for row in rows if row["group"] in ("recommended", "neutral", "scored")) >= top:
+                beyond.append(symbol)
+                continue
             rows.append(_row(symbol, symbol, c.get("company"), c.get("rank"), "scored", advisor=advisor, reason="not recommended: " + (c.get("reason") or "no reason was recorded"),
                              detail={"header": header, "message": "Not recommended: " + (c.get("reason") or "no reason was recorded"), "strategies": _strategies(c), "score_build": _score_build(c.get("blend"))}))
+    rows = _number_by_score(rows)                       # the # is the overall rank, 1 to the number shown (entry 145)
     if not recs and not candidates and not directs:     # 5. the Advisor has not answered yet: the companies the Data Clerk found
         subject = _get(order, "subject")
         names = found if found is not None else [{"symbol": s, "company": None} for s in (subject if isinstance(subject, list) else [])]
@@ -293,7 +330,8 @@ def work_order_view(order, *, understood: str | None = None, found: list[dict] |
         if seen[row["key"]] > 1:
             row["key"] = f"{row['key']}#{seen[row['key']]}"
         unique.append(row)
-    return {"request_id": _get(order, "request_id"), "status": _get(order, "status"), "kind": "direct" if directs or _get(order, "action_type") == "trade" else "research", "understood": understood, "rows": unique}
+    return {"request_id": _get(order, "request_id"), "status": _get(order, "status"), "kind": "direct" if directs or _get(order, "action_type") == "trade" else "research", "understood": understood, "rows": unique,
+            "beyond": {"top": top, "count": len(beyond), "symbols": beyond} if beyond else None}
 
 
 def records_of(order, key: str) -> dict | None:

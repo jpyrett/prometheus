@@ -23,6 +23,9 @@ no answer) the session says what was missing and why and asks the user to clarif
 Nothing here knows a sector, a company or a ticker: it is the same for any request the form can hold. Nothing is sent to a broker. A session that was meant to trade but left the portfolio as it was is a FAILED
 check (exit 1) with the reasons, because a sanity check that cannot trade has found something; `--allow-no-trade` accepts that.
 
+IGNORE CRITIC (design choices entry 148): `--ignore-critic` skips the Critic's step for the session. The desk goes Advisor -> the Account Manager's decision, and every Advisor recommendation counts as approved (Auto trades it, Ask asks you and says that the Critic did
+not review it); the report says so before the decisions ("IGNORE CRITIC: the Critic did not review these recommendations (the user's setting)"). Without the flag nothing is different.
+
 MONEY IS `decimal.Decimal` (design choices entry 112): the cash a user starts with is `parse_money`'s Decimal, the report's amounts are exact (`spent / cash` is a Decimal ratio, printed as a percentage), and the saved session (`--save`) is written by the one encoder
 (`money.dumps`): a Decimal is a JSON number, a whole value an integer, never a string; a capture made before this change loads as it is.
 
@@ -39,6 +42,7 @@ from dataclasses import dataclass
 from decimal import Decimal
 from typing import Callable
 
+from prometheus.agents.account_manager import ignore_critic as ignoring
 from prometheus.agents.account_manager.direct import CLARIFY, data_clerk_lines, direct_section
 from prometheus.agents.account_manager.neutral import neutral_lines
 from prometheus.common import shares as sh
@@ -86,6 +90,8 @@ def build_parser() -> argparse.ArgumentParser:
     desk.add_argument("--no-trader-model", action="store_true", help="the Trader without a model: the program places the default orders")
     desk.add_argument("--always-raise-funds", action="store_true", default=None, help="for this session ALWAYS_RAISE_FUNDS is true: the same as saying \"raise funds if needed\" in the request (entry 142, R12): when the cash does not cover a purchase you typed, holdings are sold to pay for it "
                       "(Ask mode still shows you the plan and asks; Auto mode sells and buys; \"don't sell anything\" in your words wins). Without the flag the setting is what the environment and .env say (false when unset)")
+    desk.add_argument("--ignore-critic", action="store_true", help="skip the Critic's step for THIS session (design choices entry 148): the desk goes Advisor -> the Account Manager's decision, and every Advisor recommendation counts as approved (Auto trades it; Ask asks you, "
+                      "and says the Critic did not review it). Without the flag the Critic reviews, and a denial is final")
     desk.add_argument("--real-ledger", action="store_true", help="use the real ledgers (data/ledger/): a company recommended before is then hidden by its cooldown. The default is throwaway ledgers, so a session can be repeated")
     run = parser.add_argument_group("the session")
     run.add_argument("--yes", "-y", action="store_true", help="do not ask to confirm what was understood (in Ask mode you are STILL asked to approve each trade: --yes never approves a trade)")
@@ -179,16 +185,19 @@ def account_block(title: str, holder, portfolio: Portfolio, profile) -> list[str
 
 
 def status_lines(result, intent, find: int) -> list[str]:
-    """A brief status of the recommendations: each company the Advisor recommended with the Critic's verdict, the Account Manager's decision and what was to be bought; then the companies that were scored and not recommended."""
+    """A brief status of the recommendations: the top N the request asked for as ONE list in the order of the Advisor's overall score, numbered 1 to N (entry 145): each recommendation with the Critic's verdict, the Account Manager's decision and what was to be bought, and the best scored companies that were not recommended in the places left; the others are counted."""
     from prometheus.agents.critic.report import DECISION_WORDS
     from prometheus.application.recommendations import ranking_rows
 
     order = result.order
     listed = [c for c in result.companies if c.get("symbol")]
     names = {c["symbol"]: c.get("company") for c in listed}
-    lines = [RULE, f"RECOMMENDATIONS  asked for the top {find} of {intent.what()}; {len(result.companies)} compan{'y' if len(result.companies) == 1 else 'ies'} found, {len(listed)} listed", RULE]
+    lines = [RULE, f"RECOMMENDATIONS  asked for the top {find} of {intent.what()}; the Data Clerk found {len(listed)} listed compan{'y' if len(listed) == 1 else 'ies'} to score"
+                   + (f" ({len(result.companies) - len(listed)} not listed)" if len(result.companies) > len(listed) else ""), RULE]
     if order is None:
         return lines + ["  no work order was made: " + ("; ".join(result.notes) or "no companies")]
+    if ignoring.skipped(order):      # entry 148: said once, at the head of the list
+        lines.append("  " + ignoring.SKIPPED_LINE)
     reviews = {r["record_id"]: r for r in order.reviews}
     decisions = {d["record_id"]: d for d in order.trade_decisions}
     recs = sorted(order.recommendations, key=lambda r: ((r.get("ranking") or {}).get("rank") is None, (r.get("ranking") or {}).get("rank") or 0))
@@ -196,9 +205,26 @@ def status_lines(result, intent, find: int) -> list[str]:
         lines.append(f"  the Advisor did not run: the work order is {order.status}" + (": " + "; ".join(order.errors)[:300] if order.errors else ""))
     elif not recs:
         lines.append("  the Advisor recommended none of them")
-    for r in recs:
+    if recs and len(recs) < find:
+        lines.append(f"  {len(recs)} of the top {find} passed a strategy: the Advisor recommends only what did")
+    others = [row for row in ranking_rows(result) if row["status"] != "RECOMMENDED"]
+    room = max(0, find - len(recs))                 # the list stops at the number asked for (entry 144): the best scored companies fill the places the recommendations left
+    overall = lambda r: (r.get("ranking") or {}).get("universe_rank") if (r.get("ranking") or {}).get("universe_rank") is not None else (r.get("ranking") or {}).get("rank")
+    shown = sorted([("rec", overall(r), r) for r in recs] + [("scored", row["rank"], row) for row in others[:room]], key=lambda item: (item[1] is None, item[1] or 0))      # ONE list in the order of the overall score, numbered 1 to N (entry 145)
+    for n, (kind, _, r) in enumerate(shown, 1):
+        if kind == "scored":
+            lines.append(f"  #{n:<2} {r['symbol']:<6} {(r.get('company') or names.get(r['symbol']) or '')[:26]:<26} Advisor {r.get('score') if r.get('score') is not None else '-':>3} {r.get('stance') or '':<8}  not recommended ({(r['reason'] or '')[:60]})")
+            continue
         record_id, review, decision = r["identity"]["record_id"], reviews.get(r["identity"]["record_id"]), decisions.get(r["identity"]["record_id"])
-        head = f"  #{(r.get('ranking') or {}).get('rank') or '-'}  {r['symbol']:<6} {(r.get('company') or names.get(r['symbol']) or '')[:26]:<26} Advisor {r.get('score') if r.get('score') is not None else '-':>3} {r.get('stance') or '':<8}"
+        head = f"  #{n:<2} {r['symbol']:<6} {(r.get('company') or names.get(r['symbol']) or '')[:26]:<26} Advisor {r.get('score') if r.get('score') is not None else '-':>3} {r.get('stance') or '':<8}"
+        if review is None and order.ignore_critic and decision and decision.get("origin") == ignoring.ADVISOR:      # the user chose to ignore the Critic (entry 148): it did not run, and the recommendation counts as approved
+            words = DECISION_WORDS.get(decision["will_trade"], decision["will_trade"])
+            what = (f"{money(decision['dollars'])}, about {sh.text(decision['shares'])} shares" + (f" at {money(decision['price'])}" if decision.get("price") else "") if decision.get("dollars") else
+                    f"{sh.text(decision['shares'])} shares, about {money(decision['est_cost'])}" if decision["shares"] else "")
+            lines.append(f"{head}  Critic SKIPPED (Ignore Critic)  decision: {words}" + (f"  {what}" if what else ""))
+            if decision["will_trade"] in ("no_funds", "no_expired", "pending_user", "no_system_denied"):
+                lines.append(f"{'':>8}{decision['reason']}")
+            continue
         if review is None:
             lines.append(head + "  not reviewed")
             continue
@@ -216,9 +242,8 @@ def status_lines(result, intent, find: int) -> list[str]:
     balanced = [d for d in order.trade_decisions if d.get("balance")]
     if balanced:
         lines.append(f"  balanced evenly: about {money(balanced[0]['balance']['target_dollars'])} for each of {balanced[0]['balance']['of']} purchases")
-    others = [row for row in ranking_rows(result) if row["status"] != "RECOMMENDED"]
-    if others:
-        lines.append("  scored, not recommended: " + "; ".join(f"{row['symbol']} ({(row['reason'] or '')[:48]})" for row in others[:6]) + ("; ..." if len(others) > 6 else ""))
+    if others[room:]:
+        lines.append(f"  {len(others[room:])} more scored below your top {find}, not shown")
     return lines
 
 
@@ -229,11 +254,11 @@ FRACTION_WORDS = {"money": "the cash: its equal share was spent to the cent", "b
 
 def sized_purchases(order) -> list[tuple[str, dict]]:
     """The purchases of the recommendation path that the Account Manager sized, in the order they were decided: each recommendation the Critic APPROVED, then each NEUTRAL recommendation counted as approved (entry 91, `origin:
-    "neutral"`; a run of neutral companies alone has no review at all, entry 123). [(symbol, decision)]; a purchase with no size (not decided as a trade) is left out."""
+    "neutral"`; a run of neutral companies alone has no review at all, entry 123), and each Advisor recommendation the user chose not to have the Critic review (`origin: "advisor"`, entry 148). [(symbol, decision)]; a purchase with no size (not decided as a trade) is left out."""
     approved = {r["record_id"]: r["symbol"] for r in order.reviews if r["approved"]}
     out = []
     for decision in order.trade_decisions:
-        symbol = approved.get(decision.get("record_id")) or (decision.get("symbol") if decision.get("origin") == "neutral" else None)
+        symbol = approved.get(decision.get("record_id")) or (decision.get("symbol") if decision.get("origin") in ("neutral", ignoring.ADVISOR) else None)      # an Advisor recommendation the user chose not to have reviewed (entry 148) has no review either
         if symbol and decision.get("size") is not None:
             out.append((symbol, decision))
     return out
@@ -267,7 +292,7 @@ def use_of_money_lines(order, before: Portfolio, after: Portfolio) -> list[str]:
         if decision["will_trade"] not in ("yes_auto", "yes_user"):
             text += f"; not traded ({decision['will_trade']})"
         lines.append(text)
-    if "round_robin" in ways:
+    if "round_robin" in ways and any((d.get("size") or {}).get("binding") != "asked" for _, d in sized_purchases(order)):      # every purchase the amount the user typed: nothing was spent round-robin (entry 146)
         lines.append("  Auto mode spent the funds round-robin: one share of the first stock, one of the next, and so on in rank order, until the money ran out.")
     if "even" in ways:
         if any((d.get("size") or {}).get("fractional") for d in order.trade_decisions):      # which split it was (entry 110): in fractions it is equal to the cent
@@ -364,7 +389,7 @@ def decision_lines(order, mode: str) -> list[str]:
     from prometheus.agents.account_manager.decisions import denied_lines
     from prometheus.agents.critic.report import DECISION_WORDS
 
-    lines, going = [], 0
+    lines, going = ([f"      {ignoring.SKIPPED_LINE}"] if ignoring.skipped(order) else []), 0      # the user chose to ignore the Critic (entry 148): said before the decisions
     for d in order.trade_decisions:
         what = (f"{money(d['dollars'])}, about {sh.text(d['shares'])} shares" + (f" at {money(d['price'])}" if d.get("price") else "") if d.get("dollars") else
                 f"{sh.text(d['shares'])} shares, about {money(d['est_cost'])}" if d["shares"] and d["est_cost"] else "")
@@ -465,7 +490,8 @@ def run_session(args: argparse.Namespace, person: dict, parts: Parts, ask=input,
     graph = build_desk(clerk_factory=lambda order: parts.clerk, advisor_factory=lambda order: parts.advisor, funds_factory=new_manager, with_critic=True, critic_factory=lambda order: parts.critic,
                        with_trader=True, trader_factory=lambda order: parts.trader, approver=approver_for(parts.approver, ask, out), store_factory=lambda: parts.store, confirm=confirm, clarify=clarifier_for(ask, out),
                        **({"guard": parts.guard} if parts.guard is not None else {}))
-    request = {"ask": {"text": args.prompt, "default_count": args.default_count, "fetch": args.fetch}, "account": {"account": account_id, "profile": profile}, "trade": {"mode": "paper", "book": True, "model": not args.no_trader_model}}
+    request = {"ask": {"text": args.prompt, "default_count": args.default_count, "fetch": args.fetch}, "account": {"account": account_id, "profile": profile}, "trade": {"mode": "paper", "book": True, "model": not args.no_trader_model},
+               **({"ignore_critic": True} if getattr(args, "ignore_critic", False) else {})}      # the user's box for this run (entry 148): the desk skips the Critic's node; with it off the request is what it always was
     say("", RULE, "THE DESK  (LangGraph: Account Manager -> Data Clerk -> Advisor -> Critic -> Account Manager's decision -> Trader; a trade you name yourself goes from the Account Manager straight to its decision and the Trader)", RULE)
     final, shown = None, 0
     for state in graph.stream({"request": request, "order": None, "errors": [], "resolution": None, "funds": None, "path": [], "seconds": {}, "with_trader": True, "plan": None}, stream_mode="values"):

@@ -1,8 +1,8 @@
 {
  "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to requests that say dollars or shares, skip the recommendations or give a price limit, recorded on 2026-11-20 by AccountManager.understand_request with the Account Manager's own prompt (prompts/account_manager_request.py after design choices entry 138: the form has `max_price`). 'replies' is what the model answered, in order (a second reply is the answer to code's refusal of the first); 'outcome' what parse_intent made of it. Nothing here is edited. The tests give these replies back to the real Account Manager, whose code checks every field against the user's own words. ENTRY 140 (recorded 2026-11-20, prompts/account_manager_request.py after design choices entry 140: the form has `min_price` and says that shares typed with a recommendation are 'buy'): the requests from 'Buy the top 3 AI stocks over $20 a share' on, and the text recorded again under the key '<text> [entry 140]'; the older requests keep the replies they were recorded with.",
  "model": "openai/gpt-oss-120b",
- "tokens_in": 60660,
- "tokens_out": 5470,
+ "tokens_in": 69831,
+ "tokens_out": 6155,
  "requests": {
   "Buy $2500 worth of symbol KO and skip recommendations.": {
    "replies": [
@@ -791,6 +791,92 @@
    },
    "tokens_in": 4381,
    "tokens_out": 395
+  },
+  "buy 5 shares of the most recommended shoe company": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"shoe\", \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 1 most recommended 'shoe' companies; if approved, 5 shares of each (note: you asked for one company (the most recommended, the best, the top one): only the first is recommended and bought)",
+    "budget": null,
+    "each": false,
+    "count": 1,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [
+     "you asked for one company (the most recommended, the best, the top one): only the first is recommended and bought"
+    ],
+    "unclear_number": null,
+    "topic": "shoe",
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": 5,
+    "orders": []
+   },
+   "tokens_in": 2295,
+   "tokens_out": 197
+  },
+  "buy the best AI stock": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"AI\", \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "buy",
+    "describe": "buy the 1 most recommended 'AI' companies; spending as much as the account allows (note: you asked for one company (the most recommended, the best, the top one): only the first is recommended and bought)",
+    "budget": null,
+    "each": false,
+    "count": 1,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [
+     "you asked for one company (the most recommended, the best, the top one): only the first is recommended and bought"
+    ],
+    "unclear_number": null,
+    "topic": "AI",
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": []
+   },
+   "tokens_in": 2290,
+   "tokens_out": 111
+  },
+  "buy 5 shares of the top 3 shoe stocks": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"shoe\", \"symbols\": [], \"companies\": [], \"count\": 3, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "refused": "you wrote 5 shares but not which stock they are for: say how many companies and the shares of each ('buy 5 shares of each of the top 3 shoe stocks'), or ask for one ('buy 5 shares of the most recommended shoe company'). Nothing was bought: a number of shares is never dropped, and the money is never spent in its place."
+   },
+   "tokens_in": 2296,
+   "tokens_out": 254
+  },
+  "Recommend the best oil company": {
+   "replies": [
+    "{\"action\": \"buy\", \"topic\": \"oil\", \"symbols\": [], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": []}"
+   ],
+   "outcome": {
+    "action": "research",
+    "describe": "look at (nothing will be bought) the 1 most recommended 'oil' companies (note: you asked for recommendations and said nothing about buying: this is a look, nothing will be bought) (note: you asked for one company (the most recommended, the best, the top one): only the first is recommended and bought)",
+    "budget": null,
+    "each": false,
+    "count": 1,
+    "max_price": null,
+    "min_price": null,
+    "corrected": [
+     "you asked for recommendations and said nothing about buying: this is a look, nothing will be bought",
+     "you asked for one company (the most recommended, the best, the top one): only the first is recommended and bought"
+    ],
+    "unclear_number": null,
+    "topic": "oil",
+    "symbols": [],
+    "shares_of": {},
+    "shares_each": null,
+    "orders": []
+   },
+   "tokens_in": 2290,
+   "tokens_out": 123
   }
  }
 }

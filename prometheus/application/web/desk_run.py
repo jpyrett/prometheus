@@ -1,6 +1,6 @@
 """The live run (UI v1 spec 4.3): what `session.run_session` does, with emitters where it prints.
 
-    run_live(run, params, accounts, question_timeout)         # params: {account_id, prompt, strict, neutral, fetch}; runs in the run's worker thread
+    run_live(run, params, accounts, question_timeout)         # params: {account_id, prompt, strict, neutral, fetch, raise_funds, ignore_critic}; runs in the run's worker thread
 
 THIS IS A PAID RUN (OpenRouter and Finnhub; with `fetch` also the paid data APIs, which write the data files) that writes the UI's own account in Postgres. It builds the REAL parts (`session.build_parts`) fresh for every
 run, the real LangGraph desk (`build_desk`, as the session does, with the Critic and the Trader) and streams it with `stream_mode=["tasks", "values"]`: `tasks` says a node started and ended, `values` is the state after each
@@ -43,6 +43,11 @@ class Live:
 
 def _understood(plan: dict | None) -> str | None:
     return plan["intent"].describe() if plan and plan.get("intent") is not None else None
+
+
+def _top(plan: dict | None) -> int | None:
+    """The number of companies a request for recommendations asked for (the desk's `find`: the request's count, else the default), so the work order lists that many (entry 144). None for a direct order."""
+    return plan.get("find") if plan and not plan.get("direct") else None
 
 
 def missing_payload(card: dict) -> dict:
@@ -129,7 +134,7 @@ class Poller(threading.Thread):
             try:
                 self.live.out.portfolio(self.read_account())
                 if self.live.order is not None:
-                    self.live.out.work_order(self.live.order, understood=_understood(self.live.plan), found=views.companies_found(self.live.order, self.live.plan))
+                    self.live.out.work_order(self.live.order, understood=_understood(self.live.plan), found=views.companies_found(self.live.order, self.live.plan), top=_top(self.live.plan))
             except Exception:
                 continue
 
@@ -141,7 +146,7 @@ class Poller(threading.Thread):
 def run_live(run: Run, params: dict, accounts, question_timeout: float = 600.0, *, parts_builder=None, graph_builder=build_desk) -> None:
     out, live, started = Emitter(run), None, time.perf_counter()
     live = Live(out)
-    chosen = run_settings_module.run_settings(params["strict"], params["neutral"], params.get("raise_funds", False))      # entry 142, R12: the box "Always raise funds" is ALWAYS_RAISE_FUNDS for this run (a missing value is false)
+    chosen = run_settings_module.run_settings(params["strict"], params["neutral"], params.get("raise_funds", False), params.get("ignore_critic", False))      # entry 142, R12: the box "Always raise funds" is ALWAYS_RAISE_FUNDS for this run; entry 148, IC1 and IC9: the box "Ignore Critic" skips the Critic's node and Strict cannot go with it (a missing value of either is false)
     account_id = params["account_id"]
     try:
         view = accounts.view(account_id)
@@ -149,7 +154,7 @@ def run_live(run: Run, params: dict, accounts, question_timeout: float = 600.0, 
         out.finished("failed", f"the account could not be read: {getattr(error, 'message', None) or type(error).__name__}", [], [], {}, 0)
         return
     mode = params.get("trade_mode") or view["account"]["mode"]
-    run.emit("run_started", {"run_id": run.id, "mode": "live", "account_id": account_id, "prompt": params["prompt"], "options": {"strict": params["strict"], "neutral": chosen.allow_neutral, "fetch": params["fetch"], "raise_funds": chosen.always_raise_funds},
+    run.emit("run_started", {"run_id": run.id, "mode": "live", "account_id": account_id, "prompt": params["prompt"], "options": {"strict": chosen.strict, "neutral": chosen.allow_neutral, "fetch": params["fetch"], "raise_funds": chosen.always_raise_funds, "ignore_critic": chosen.ignore_critic},
                              "trade_mode": mode, "started_utc": utc_now(), "stages": views.stage_list()})
     out.log("you", params["prompt"])
     final, poller, failure = None, None, None
@@ -203,11 +208,12 @@ def _stream(run, params, accounts, question_timeout, out, live, chosen, mode, pa
     graph = graph_builder(clerk_factory=lambda order: parts.clerk, advisor_factory=lambda order: parts.advisor, funds_factory=new_manager, with_critic=True, critic_factory=lambda order: parts.critic,
                           with_trader=True, trader_factory=lambda order: parts.trader, approver=approver, store_factory=lambda: parts.store, confirm=confirm, clarify=clarifier,
                           **({"guard": guard.without_rate_limit()} if guard is not None else {}))
-    request = {"ask": {"text": params["prompt"], "default_count": session.DEFAULT_COUNT, "fetch": params["fetch"]}, "account": {"account": params["account_id"], "profile": profile}, "trade": {"mode": "paper", "book": True, "model": True}}
+    request = {"ask": {"text": params["prompt"], "default_count": session.DEFAULT_COUNT, "fetch": params["fetch"]}, "account": {"account": params["account_id"], "profile": profile}, "trade": {"mode": "paper", "book": True, "model": True},
+               **({"ignore_critic": True} if chosen.ignore_critic else {})}      # the user's box for this run (entry 148): the desk skips the Critic's node; with it off the request is what it always was
     state0 = {**NO_RUN_STATE, "request": request}
     poller, final, shown = None, None, 0
     out.log("system", "THE DESK: Account Manager → Data Clerk → Advisor → Critic → Account Manager's decision → Trader (a trade you name yourself goes from the Account Manager straight to its decision and the Trader)")
-    for mode_, chunk in graph.stream(state0, stream_mode=["tasks", "values"], config=tracing.stream_config(run, on_activity=(lambda calls, tin, tout, model: out.activity(calls, tin, tout, model, live.running)) if COUNT_MODEL_CALLS else None, mode=holder.trade_mode, strict=params["strict"], neutral=chosen.allow_neutral)):
+    for mode_, chunk in graph.stream(state0, stream_mode=["tasks", "values"], config=tracing.stream_config(run, on_activity=(lambda calls, tin, tout, model: out.activity(calls, tin, tout, model, live.running)) if COUNT_MODEL_CALLS else None, mode=holder.trade_mode, strict=chosen.strict, neutral=chosen.allow_neutral, ignore_critic=chosen.ignore_critic)):
         if mode_ == "tasks":
             name = chunk.get("name")
             if "result" not in chunk and "error" not in chunk:                                    # a node started
@@ -234,7 +240,7 @@ def _stream(run, params, accounts, question_timeout, out, live, chosen, mode, pa
             shown = len(chunk["path"])
             live.running = None
             if live.order is not None:
-                out.work_order(live.order, understood=_understood(live.plan), found=views.companies_found(live.order, live.plan))
+                out.work_order(live.order, understood=_understood(live.plan), found=views.companies_found(live.order, live.plan), top=_top(live.plan))
             live.refresh()
         if run.stop_flag.is_set():
             out.log("system", "stopped: the desk stops before its next stage; a trade already placed stays", "warn")
@@ -273,7 +279,7 @@ def _finish(run: Run, params: dict, accounts, out: Emitter, live: Live, final: d
     if errors:                                  # a work order was made and the desk still stopped at its first node: a direct order with a stock the Data Clerk could not find (`AccountManager.name_the_stocks`). The
         live.request_errors = errors            # reasons are the Data Clerk's own words; nothing was priced, decided or traded, so the Trader's and the money's reports have nothing to say
         live.refresh()
-        out.work_order(order, understood=_understood(plan), found=views.companies_found(order, plan))
+        out.work_order(order, understood=_understood(plan), found=views.companies_found(order, plan), top=_top(plan))
         out.finished("stopped" if stopped else "no_trade", NOT_PLACED, [*errors, *([NOT_PLACED_HINT] if plan.get("direct") else [])], live.path, live.seconds, total())
         return
     intent, direct = plan["intent"], bool(plan.get("direct"))
@@ -291,7 +297,7 @@ def _finish(run: Run, params: dict, accounts, out: Emitter, live: Live, final: d
     if buying and session.sized_purchases(order) and not direct and before_view is not None:
         out.block("account_manager", session.use_of_money_lines(order, _portfolio_of(before_view), _portfolio_of(after_view)))
     out.portfolio(after_view)
-    out.work_order(order, understood=_understood(plan), found=views.companies_found(order, plan))
+    out.work_order(order, understood=_understood(plan), found=views.companies_found(order, plan), top=_top(plan))
     if stopped:
         out.finished("stopped", "Stopped. A trade already placed stays.", [], live.path, live.seconds, total())
         return

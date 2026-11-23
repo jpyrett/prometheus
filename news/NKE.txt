@@ -1,0 +1,4327 @@
+<<<ARTICLE>>>
+id: finnhub:143840436
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T19:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=62210c42f7a3f644e6c41cf5566068147a3dab79080f0a0b93f454b9610f02a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike’s First Investor Day in 9 Years Is Days Away: 3 Numbers You Need to Know Before Nov. 17
+<<<SUMMARY>>>
+The market wants clarity regarding management’s long-term plan to drive financial success at the storied company.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840478
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T19:08:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6db31df5d62667f02cc70f44aca4b1f88b252d4ece6c1b3d11394af458eb4cd2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: United Parcel Service (UPS) Appoints Shannon Eisenhardt To Its Board And Audit Committee
+<<<SUMMARY>>>
+United Parcel Service (NYSE:UPS) appointed Shannon Eisenhardt to its Board of Directors, effective immediately, and named her to the Audit Committee. Eisenhardt brings executive finance experience from prior senior roles at Reckitt Benckiser and Nike, with a focus on global consumer businesses. Her background spans corporate finance, business planning, and technology leadership, which may affect how UPS evaluates future projects and controls. The addition of Shannon Eisenhardt to the UPS...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840277
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T14:35:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=11c680a4ef4c3a721f463c2fae9d1aa223dbc9e0855a27e069068f2e4ec5f59c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Stock Just Jumped 13%. Should You Buy the Stock on the Way Up?
+<<<SUMMARY>>>
+The market sees value in the age of AI.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805621
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T21:59:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1ece2d00ecaa8cfa514d69ccfc05a61bcdda7b0dfca6e2c6daf70e1546a39dd6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike’s Future All Comes Down to Tuesday’s Investor Day, Its First in 9 Years
+<<<SUMMARY>>>
+Analysts are hoping the day will provide more clarity on how the Swoosh will solidify its turnaround.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143805026
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T18:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8f2ea69f371a80ca39aa54a57f1a248c85d37e069821c595ddc1e4468b2bf14d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike is purposely selling fewer shoes as its shares keep falling
+<<<SUMMARY>>>
+Behind the empty shelves is a calculated gamble. The question is how much lower the stock goes before it works.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804205
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T15:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d7b7ee8057e79848bb076f902ee59b9d41dfe65b8196cf4944d329d7f4704afd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: JD Sports leverages tech for faster replenishment
+<<<SUMMARY>>>
+The sportswear retailer is partnering with Zebra to gain real-time inventory visibility across its omnichannel operations, citing 98% on-shelf availability.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802427
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:12:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=811211702f800fb081befdc4b2884c91e525f76deb12f899cd149bf629829c75
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: What Is Nike Stock's Biggest Opportunity?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802778
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T06:54:44Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4703208c0d174914d2486bb0bea8b66ef3df76873e2cf685041f0ea7f96289a2
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: BTIG Reiterates Buy on Nike, Maintains $50 Price Target
+<<<SUMMARY>>>
+BTIG  analyst Robert Drbul   reiterates Nike (NYSE:NKE) with a Buy and maintains $50 price target.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143784039
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T04:38:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=450f155126a5c24c4506f28070089ae50451fc3b26bbb9defc1a47f965d0a738
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Chevron And 2 Other Dividend Stocks To Own
+<<<SUMMARY>>>
+Bond yields are climbing again as inflation worries resurface, which can put pressure on high-growth stories and push investors back toward reliable cash payouts. That backdrop makes companies with dividend yields above 3% that look well covered and steady feel a lot more appealing. This article walks through three dividend heavyweights from our income screen and explains why each could deserve a closer look for long term portfolio income. The three stocks highlighted here offer a compelling...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772280
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T19:07:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a9927f2d6c6cfe47fbcbcf9a152fe544f206180042ecb32c67376ed5627ccb49
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Shoe Shipments and Manufacturing Revenue Down at Yue Yuen
+<<<SUMMARY>>>
+Chinese footwear manufacturer Yue Yuen on Thursday reported financial results for the nine months ended Sept. 30, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143771080
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cb4c0e56d2ccb51186888a7f3902deb0fbbede56ff3427b80614803686a85c05
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE's Shares Slide Nearly 40% YTD: Is a Rebound in Sight?
+<<<SUMMARY>>>
+NKE's shares tumble nearly 40% YTD amid sluggish demand, China weakness and margin pressures.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143769602
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=94e554d16c9f7645ddee414c20b40aca523d903b823311871e424fa304fd19df
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: If You Ran Nike, What Would You Do?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143740318
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T19:56:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a4d9715a337ddbe2d6ac02f57b7de156928f2c5f4411a3017defa7485e21dde5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: A 72-Year-Old With $500,000 in PepsiCo, Nike and Bristol Myers Squibb Collects $1,729 a Month in Dividends. How Safe Is Each Check?
+<<<SUMMARY>>>
+Key TakeawaysA hypothetical $500,000 portfolio split evenly across PepsiCo, Nike and Bristol Myers Squibb pays $20,519. 20 a year in dividends, or $1,709.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739420
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T19:32:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2549ce94fd3e93a8fbb69a40ab0f6a9bdcd80cef6058a26c17903dbc656ad6ef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Why Nike’s CEO Comeback Isn’t Working
+<<<SUMMARY>>>
+Nike’s new CEO undid almost every bad decision his predecessor made. And they still got kicked out of the S&P 100.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739422
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T18:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=276aa132f76b9e93a73ed6ebbf79c00078912c975c15faaeb4aa5d27dde6c275
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Stock Is Down 78% From Its Peak. Here's Why I'd Buy and Hold for a Decade.
+<<<SUMMARY>>>
+Nike is giving up sales on purpose, and the margin target it reveals on Nov. 17 will show whether that sacrifice is worth waiting 10 years for.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143771081
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=edd38122e3ea0f565756b2e49c28d7c02681f1b9e6394470dc29765ade49286c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: On Holding’s Sell-Off Overlooks a Key Part of Its Earnings Story
+<<<SUMMARY>>>
+On Holding shares fell despite a strong Q3 beat, rising margins, and solid balance sheet, as analysts cite inventory growth and new launch risks amid a mostly bullish outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143737166
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T14:22:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ed88d3306b6b8e729905786fc3d0ba58bb65df2a13df26f2675645ac9193d77
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Lululemon Rebuild Continues With New Marketing, Strategy Officers
+<<<SUMMARY>>>
+Execs from Four Seasons Hotels and Boston Consulting Group join the retailer's new team.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766338
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b2893f36405b9b90f237df63e12ecab04af5e997b7fd2ebe357a34f9974022bb
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Cyclicals Lead Sectors In Wednesday Trading As Defensives Trail
+<<<SUMMARY>>>
+Five sectors are higher and six are lower in Wednesday&#39;s regular session, with cyclical sectors holding two of the top three positions. Technology sits well clear of the rest, separated from the next sector by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143725963
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T09:14:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f1ee886a66e08fca32288e00dfb587654f2d7cf9e7549b42134c493c56fe7cf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Will New Tech Leadership Change Hyatt Stock Narrative
+<<<SUMMARY>>>
+Hyatt Hotels appointed Danny Miles as Chief Digital & Information Officer, placing him in charge of a combined digital and technology organization that covers AI, cybersecurity, engineering and digital products across the global hotel portfolio. Miles’ track record building consumer-facing platforms at Under Armour, Dollar Shave Club and Nike points to a heavier focus on data driven guest engagement and operational efficiency inside Hyatt’s existing fee based model. This article will examine...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143713947
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T01:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1c17ce96037999664222c8a31283d45349fbf77942a3a6e1464172aa30b58c34
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2212701687/image_2212701687.jpg?io=getty-c-og
+category: company
+tickers: NKE
+keywords: 
+headline: Nvidia, Caterpillar And Nike: 3 Corporate Events That Could Move Markets
+<<<SUMMARY>>>
+Market volatility rose following the midterms, putting the AI trade and data center buildout under renewed scrutiny. Read more here.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143695449
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T21:45:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c9e8edc6a6c6c94687e9265ca161c5680aebffeed577a18c167cc40813c0d26
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike (NKE) Declines More Than Market: Some Information for Investors
+<<<SUMMARY>>>
+The latest trading day saw Nike (NKE) settling at $38.68, representing a -3.01% change from its previous close.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694020
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T21:09:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2a5d64041b609ea45a48fd74060b965134e303b0662bcb3a06a8fbed087c771b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike (NKE) Stock Trades Near Fair Value On Cash Flow
+<<<SUMMARY>>>
+NIKE has seen its share price go through a long slide, even as the business continues to generate cash flows that the market is trying to price. The question now is whether the current valuation really lines up with the cash that the company is expected to produce over time. Over the past 5 years the stock has fallen 74.1%, putting the focus squarely on whether the current price still reflects what NIKE’s cash flows can support. The launch of Vietnam’s first fully electric container barge,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143694021
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T20:42:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=97a8422ae19309f3dca6e2c886de71abec4f25a4ffe11639c65765233f1f7c92
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike retiree returns as CAO
+<<<SUMMARY>>>
+The Beaverton, Oregon-based sports apparel giant has brought back Dan McKenzie, a 19-year veteran, to serve as its chief accounting officer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692884
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T19:25:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5d2c9e222318583463f722616046cd0a21582e48230964b84f2ece1a715aa7df
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: On Co-CEO Says Asia-Pacific Region Is ‘Match Made in Heaven’ for Its Premium Positioning, But Will Controversy Get in the Way?
+<<<SUMMARY>>>
+The brand's growth in the region was made complicated last month when On’s newest ambassador Kylian Mbappé was caught up in scandal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143739269
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T19:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=face4b2a9ae680858cc420c56693b2615280507cd172350c59cd1c5e62d80eb0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Bonds Are Paying 5% Again, and the Repricing Has Reached Every Corner of the Market
+<<<SUMMARY>>>
+Treasury yields near 5% are compressing multiples across quality stocks and the AI build-out alike, and Porter Stansberry’s 4-bucket portfolio is built for it
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692721
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T19:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6c8e34faefd48491975d5f7b0d9e4678bcf02d8a3c9b9c7ab0c8963b8629c885
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike sales recovery pushed back as Bank of America cuts earnings forecast
+<<<SUMMARY>>>
+Bank of America has cut its Nike Inc (NYSE:NKE, XETRA:NKE) earnings forecasts after pushing back its expected sales recovery, warning that the sportswear group faces prolonged challenges in rebuilding growth. The broker now expects Nike's sales to inflect in the third quarter of financial 2028,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143692797
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:55:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32331c09368281485b2c6aa67cd193dd470e46c2292203ab04dccb85e0f53b88
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike or Starbucks: Only One Gets My Dividend Dollars for the Next 10 Years
+<<<SUMMARY>>>
+Key TakeawaysNike yields 4. 3% after its stock fell on weak fiscal 2027 guidance, while Starbucks raised its quarterly dividend to $0.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690227
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T17:03:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da4b6468f7b07843e1b9de42fc190efda0a049a2abd6c729c74866c400d1cd24
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Stock Market Today: Dow Dips On Hot Inflation Data; Nvidia Falls Again, Anthropic Sets IPO Range (Live Coverage)
+<<<SUMMARY>>>
+Stock Market Today: The Dow Jones index falls Tuesday on a hot inflation report. Anthropic prices its IPO range. Nvidia sells off.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139942604
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:58:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=2f2a60e82d9a51f6cfcf6a7d047b0fc69108cc5ad99a5637b62caae1852809d0
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Kandal M Venture shares are trading higher after the company announced an agreement to acquire 15% equity interest in Dumaine International for about the equivalent of $2.5 million in an all-cash transaction.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691813
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f281f853d4d55bb47e041df4742962b8780af38957f3ab4f08922c7f5752850c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: On Holding Stock Tumbles on Slowing U.S. Growth. Why Analysts See Better Days Ahead.
+<<<SUMMARY>>>
+Wall Street still sees plenty of upside in On Holding’s full-price strategy and long-term innovations, but the stock is tumbling anyway.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690219
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:18:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=52c71317d0f109ba0490b58170f1da1fd5bd8cce35bddbb1657078aae5398f54
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NVIDIA, Caterpillar & Nike: Three Corporate Events That Could Move Markets
+<<<SUMMARY>>>
+NVIDIA, Caterpillar, and Nike headline next week’s corporate events, offering important clues on AI investment, construction demand, and the consumer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690210
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:07:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f69dc4cd3cecf2b320aedeb32d0c89ba5a31c61a88fc39f748a6efa817f0df41
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: State of the tech market: Anthropic IPO and Nvidia CEO scandal are reshaping portfolios
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi tackles all the biggest stories of the market day, including a deep dive into the state of the tech market and how the Anthropic (ANTH.PVT) IPO and Jensen Huang affair are impacting investor portfolios. Chime (CHYM) CEO Chris Britt sits down with Sozzi for a 1-on-1 conversation about the financial health of US consumers and corporate earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690205
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:00:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=114c792300fb728be36f4eada01a68c44471a9ecf8dc8c304f1ef33421786c4d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: No chair and 30-year tenures: Will Nvidia's board go soft on Jensen?
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi argues that Nvidia's (NVDA) board of directors, which is expected to investigate claims about CEO Jensen Huang's conduct, has a composition that casts doubt on how rigorous the probe will be.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690385
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:46:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=710b127f7a812eb47cc79a57e40915d26fb10c81b18decc7806183660d289f17
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: DraftKings downgraded, Sarepta upgraded: Wall Street's top analyst calls
+<<<SUMMARY>>>
+DraftKings downgraded, Sarepta upgraded: Wall Street's top analyst calls
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690660
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:32:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=320c235ca0c72d58135c3a59b545a0e03cfc5b5048a3b10e83f061a82700bdff
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Youth Sports Market 2026: Global Size, Share, Trends and Forecast to 2030 | Capitalize on AI Coaching and Wearables as Key Players Nike, Adidas, Hudl and TeamSnap Compete in the $59.52 Billion Industry
+<<<SUMMARY>>>
+Boost ROI through AI analytics, wearables, virtual coaching, smart facilities, livestreaming, fan engagement, and data-driven talent scoutingDublin, Nov. 10, 2026 (GLOBE NEWSWIRE) -- "Youth Sports Market Report 2026" has been added to ResearchAndMarkets.com's offering. The global youth sports market is experiencing rapid growth as participation in organized athletics increases and families, schools, communities, and governments place greater emphasis on physical activity. The market is projected
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690486
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T14:09:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c5465eb446d9f665802891e38e476bdcaac0f521d5152477cbfea580e0648c1d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Pfizer’s comeback gets a new finance chief
+<<<SUMMARY>>>
+Cecile Guegan just became Pfizer’s first permanent female CFO as the large pharma navigates its major pipeline bets in obesity.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734168
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:35:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ade05757d094dfa83f3eaeed2705d6f537d751d54035b5424510ee068353d331
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/aggregated_options_1.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: 4 Consumer Discretionary Stocks With Whale Alerts In Today’s Session
+<<<SUMMARY>>>
+This whale alert can help traders discover the next big trading opportunities.
+Whales are entities with large sums of money and we track their transactions here at Benzinga on our options activity scanner.
+Traders will
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687328
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:47:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8c0e403d54f13a81bd3be0149efab9164e3023c1700591c38884145142a2219c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Buy, Sell, or Hold? Tuesday’s Top Upgrades and Downgrades: Cloudflare, Deckers Outdoors, DraftKings, MongoDB, Nike, Oneok, Philip Morris International, Riot Platforms, Wix.com, and More
+<<<SUMMARY>>>
+A two-day rally built partly on short covering faces its first real test when October inflation data lands at 8:30 ET. Meanwhile, analysts flipped hard on Wix and DraftKings, while a surprise double upgrade lifted a bitcoin miner's target.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143734174
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T12:00:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=100eea2b1f29d1ff263c2d959daa9cc8df79bf19c651b273ef0f9e361267946f
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/10/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: 11 Of 11 Sectors Fall In Tuesday Trading As Leaders Move Together
+<<<SUMMARY>>>
+All 11 sectors are lower in Tuesday&#39;s regular session, with Financials, Consumer Staples and Consumer Discretionary at the top of the table. The leaders are clustered rather than separated, with the first three sectors grouped within a narrow range of performance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143679112
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T09:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=874b85d430c745af46524b576b703d3b3ab0c12770380b5cd387b428bb216517
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Here's How Many Shares of Nike You Would Need for $1,000 in Yearly Dividends
+<<<SUMMARY>>>
+Nike's on the path to becoming a purer income stock, but it's not quite there.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143688093
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T08:50:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3c7337355779349f1c0e13721d71bc2425c49b60da40bef1ffd34da5759b5fc4
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Cantor Fitzgerald Initiates Coverage On Nike with Neutral Rating, Announces Price Target of $38
+<<<SUMMARY>>>
+Cantor Fitzgerald  analyst John Kernan   initiates coverage on Nike (NYSE:NKE) with a Neutral rating and announces Price Target of $38.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143668544
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T05:58:34Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=f39e62750f1b3185d2f1764d51a966ff5f60ab09ffec998fdc9880d076c23959
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE, Inc. Appoints Dan McKenzie as Chief Accounting Officer
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687603
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T04:57:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fea21015e01fb30692571a366c2152a29159c6be5c584bc925ee825dcfed49c7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Is Still Down 32% in a Year: Will Investor Day Mark the Bottom?
+<<<SUMMARY>>>
+Key TakeawaysNike stock is down 32% over the past year after a run of weak reports. The last one, on Oct.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662436
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T20:11:12Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=92116e6e259f79c5b099611cc06d2df36603031623883ef3b3e708a29e5fa995
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Dow Jones Gainers Today: Caterpillar, Cisco and Goldman Sachs Lead US Session
+<<<SUMMARY>>>
+Dow Jones top gainers in today's US session were led by Caterpillar (+6.72%), Cisco (+5.18%) and Goldman Sachs (+5.17%).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143688094
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T18:13:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=20b0efd6a681e070334c714507f3fd664f30aca6ba1b8fc5e26f10d55b61ba0c
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Appoints Dan McKenzie Chief Accounting Officer, Effective Immediately
+<<<SUMMARY>>>
+https://www.sec.gov/ix?doc=/Archives/edgar/data/320187/000032018726000197/nke-20261104.htm
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143662430
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T17:41:20Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=84ffe2159c85110b22526da2648e8b300f5b05353251fd1a2dfbd58e7f236398
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Dow Jones Top Gainers Today: Caterpillar, Goldman Sachs Lead US Session
+<<<SUMMARY>>>
+Dow Jones top gainers in today's US session, led by Caterpillar, Goldman Sachs and Cisco, with Honeywell, Amazon and Nike also among the strongest Dow names.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143658894
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T15:29:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6551493c3d917928488a7909398a1f3fec6eeaef02eb09265725d5a99095051c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE Reshapes Its Global Operations: Will Agility Improve?
+<<<SUMMARY>>>
+NKE's global restructuring aims to boost agility, streamline operations and deliver $2.5 billion in savings, but will execution costs temper the benefits?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686716
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T12:00:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0ae16468fb2d0b7cab7abf03424bf96c001876248f24bcc858b43baf9aed5a1a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/09/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: 11 Of 11 Sectors Rise Monday As Growth Leads
+<<<SUMMARY>>>
+All 11 sectors are higher in Monday’s regular session, with growth sectors holding two of the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143652454
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T11:09:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e3a9192d15286674e3f2d530efbfd957b4503fac0c0d2c77322f5bbf3ffd6b21
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: 3 Dividend Stocks With Yields Up To 4%
+<<<SUMMARY>>>
+With the US dollar holding firm as traders price in a possible extra Federal Reserve rate hike, cash in the bank works harder, yet it also makes dependable income streams more valuable. Solid dividend payers offering 3%+ yields with payouts that look well covered and steady can help balance higher borrowing costs. This article walks through three such dividend powerhouses from the screener worth a closer look. The three stocks highlighted here offer a compelling starting point if you want...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144026565
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T20:11:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=31e5ecace7e4037d9fbe3201f122dc5594acac39fdfeae8136481edf1b0c0f9e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Nike's direct-to-consumer push meets Procter & Gamble's everyday essentials, but their valuations and risk profiles tell very different stories for 2027.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144022688
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T11:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ddb7c3be9b0436748a7ec1908bd00c7acc73798f3e2e609e7150bbd0e40f9b70
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Is Down 79% From Its Peak. Here's How Much $10,000 Invested Pays in Dividends Now.
+<<<SUMMARY>>>
+The sneaker giant's stock is down, but its yield is up.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144017396
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T21:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50ce4eaea60b79bd29bdde879a18d9c0e1a0ce263fcb927c9ce043fe5572a723
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike to give every 2027 high school valedictorian custom Air Force 1s — a $3M+ gift sparked by Mississippi's Scott Colom
+<<<SUMMARY>>>
+The commitment could help the sneaker giant win over younger shoppers and establish brand loyalty at a time when the company is struggling to grow sales.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015639
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d422d4ec18d5c1af0915b17629a016b69d3b691eb915e8627c3d2d74ad653e67
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Feds arrest 14-person 'train robbery crew' accused of stealing $22M in Nike shoes and tools from 36 freight trains
+<<<SUMMARY>>>
+Prosecutors say 14 people used Instagram to sell stolen sneakers and tools. Here's how shoppers can avoid buying stolen goods.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015640
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T15:51:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8de4824fcae166240d1f3808e0c04c5c30666b81798fe91255ad27b42ba67ab5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: A $1,200,000 Portfolio in Prudential, Nike and Invitation Homes Pays $57,248 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA $1. 2 million portfolio split evenly across Prudential Financial, Nike and Invitation Homes pays about $57,200 a year in dividends at today’s prices, or about $4,770 a month.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015641
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T15:08:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1b08711a5f745166485aef71bd336fad6bad26d72a145c67a40aa88a6a3389e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: How Nike Sales Slump At DICK'S Sporting Goods Stock Has Changed Its Investment Story
+<<<SUMMARY>>>
+DICK'S Sporting Goods has expanded its vertical brands business by launching its first officially licensed collegiate apparel collections from VRST, CALIA and DSG. The collections are initially focused on The Ohio State University and the University of Iowa across men’s, women’s and youth ranges in stores and online. At the same time, long-term revenue pressure at Nike, a supplier that accounted for about 31% of DICK'S merchandise purchases in the year ended January 2026, raises fresh...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015642
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T14:07:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=24248f0c125605b4452c60ffa143d7484e0ca495ec10bae901f6107e2feb13de
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: DICK'S Sporting Goods (DKS) Stock Looks Below Fair Value As Cash Flow Holds Up
+<<<SUMMARY>>>
+DICK'S Sporting Goods has seen its share price slide over the past year, which naturally puts the focus on what investors are paying for its underlying cash flows. With sentiment also shaped by pressure on a key supplier, the central question is whether the current valuation still lines up with the cash the business is expected to generate. The stock is down 34.8% over the past year, which raises the question of whether the market is reassessing the durability and timing of DICK'S Sporting...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144011380
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T10:14:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e552f628067fda84b20f0844f9a941ad41ba00ec6add546764ffbcf41ec3314
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Is Down 46% in a Year and Calls Fiscal 2028 a “Challenging Year Financially.” Time to Sell, or Load Up?
+<<<SUMMARY>>>
+Key TakeawaysNike stock is down 46% over the past year as weak reports kept pushing its turnaround out, and its Nov. 17 Investor Day set fiscal 2029 as the year growth returns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024509
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T06:08:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8b6f165a89110858c9ca5d198fb17f49be1c448c807682550f2596811e0ba75a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Cantor Fitzgerald Cut Its Nike Target to $33 From $38. Is Even That Too Generous?
+<<<SUMMARY>>>
+Key TakeawaysCantor Fitzgerald cut its Nike price target to $33 from $38 after Nike’s Investor Day and kept its Neutral rating, which puts the target right around today’s price. Nike said fiscal 2028 adjusted EPS should decline modestly and put its turnaround in fiscal 2029, a long wait that also hits Dick’s Sporting Goods, which buys about 31% of its merchandise from Nike.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143992308
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T21:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e28d77e957ca3ad0a2f48b0da3d6abe4c5b96a87b2c8febcb468aa01b4e13aa1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE, Inc. Announces Second Quarter Fiscal 2027 Earnings and Conference Call
+<<<SUMMARY>>>
+BEAVERTON, Ore., November 20, 2026--NIKE, Inc. (NYSE: NKE) plans to release its second quarter fiscal 2027 financial results on Thursday, December 17, 2026, at approximately 1:15 p.m. PT, following the close of regular stock market trading hours. After the release, NIKE, Inc. management will host a conference call beginning at 2:00 p.m. PT to review results.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144010636
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T20:11:10Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=7aa175c311278ecbd1275fc71ee85e229a63315da628b158e8fdd3255c2db5a1
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Dow Jones Losers on Nov. 20, 2026: NVIDIA and Goldman Sachs Lead Declines
+<<<SUMMARY>>>
+Dow Jones losers on Nov. 20, 2026: NVIDIA fell 11.8% and Goldman Sachs 6.13%, leading declines also seen in Caterpillar, Cisco, Amazon, Nike, JPMorgan, Boeing, and Microsoft.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143991167
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T18:13:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=015ba62326cf4c9945f123bcdfd71bbf91326e023dfe0ecdcb4b3c10541dd72c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE (NKE) Resets Performance Push With Tuned Air, Nike Mind And Nike Free
+<<<SUMMARY>>>
+NIKE (NYSE:NKE) introduced new Tuned Air, Nike Mind, and Nike Free product platforms across footwear and apparel in a broad refresh. The release spans multiple performance categories, with Nike positioning the new lines as a comprehensive update to core sport offerings. Management presented Tuned Air, Nike Mind, and Nike Free as technology platforms intended to reshape how future products are developed and marketed. The Tuned Air, Nike Mind, and Nike Free overhaul is only one piece of a...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990136
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T17:54:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=282807d4b2d87929cc480caf34be53467d85ecebd50f8e15625b508c6d384d7c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Is Down About 80% From Its Peak and Just Told Investors Sales Will Fall Again
+<<<SUMMARY>>>
+Nike's stock has collapsed from its highs, analysts still show a 30% upside gap, and management just guided earnings far below what Wall Street expected. The math behind those price targets tells a very different story.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144010629
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T17:41:03Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=eeb30333385758d21baed4d4313db0707a3c230cafe0ee3bacc735015a4943fa
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Dow Jones Top Movers: US Session Gainers and Losers
+<<<SUMMARY>>>
+Dow Jones top movers for the US session: UNH, WMT, IBM and TRV led gainers, while NVDA, GS, CAT and CSCO were among the biggest decliners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990048
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T17:20:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=91eb9b21f712e9486faf0b70d9a4ba5bcdbe4e5278a6352cd6771381a10443b8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: What Would Warren Buffett Do With Nike Stock Down 79% From Its Peak?
+<<<SUMMARY>>>
+The Oracle of Omaha would probably agree that sentiment toward this business is characterized by extreme uncertainty.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990049
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:50:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=99da0282bb9b840f7b6b31352a92e283932040e10876680cac92c07e0668ce7a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: A $300,000 Portfolio in Kimco Realty, Eversource and Nike Pays $13,643 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA hypothetical $300,000 portfolio split evenly across Kimco Realty, Eversource Energy and Nike pays about $1,140 a month in dividends at today’s prices. Eversource’s dividend is the best covered of the three, at 63% of normalized EPS in fiscal 2025, and Kimco paid out 80% of its AFFO that year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990050
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ab01aec52486facf3df2a659739a3a2d04aa7da343ebb21052607c3ab46d2b44
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Vuori exec to lead struggling Athleta
+<<<SUMMARY>>>
+Ashley Kechter, who previously also had stints at Fabletics and Gap Inc., takes on a brand that just posted yet another quarter of double-digit declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143992309
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:58:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=146b767305dd4c938939fdfa9a3730a9a473d223ff9515bed00fb3e61fca3f7c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: A $4 Billion Fund Is Betting Big on NIKE
+<<<SUMMARY>>>
+Key TakeawaysMarshfield Associates more than doubled its Nike stake in the third quarter, to 9. 58 million shares worth $339 million, or 8.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988762
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:44:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ff006404b303634f55a689004504fe361bff2eaf7f0838f936fd63e48cdbaba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: How Nike's new F1 partnership could help the struggling stock
+<<<SUMMARY>>>
+Nike (NKE) is partnering with Formula One (FWONK, FWONA) on F1-branded Nike sportswear. "The 8:30" hosts Julie Hyman, Pras Subramanian, and Jake Conley take a closer look at the deal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143986424
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:47:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dda98a1d23912d38fb413c97c26472db1d1ad5b179e3b2d797d493d5f741d4c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike crashed to $34 with a 4.8% yield: Turnaround or value trap?
+<<<SUMMARY>>>
+Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143990146
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:01:54Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=fdecd3c27e18e4569aed5d8f0fea3595f8a59bcce79b8e815585a2fab21ae3ad
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1079127056/image_1079127056.jpg?io=getty-c-og
+category: company
+tickers: NKE
+keywords: 
+headline: Dividend Investing When Things Go South
+<<<SUMMARY>>>
+Rising yields have pressured some dividend portfolios. Yields are not the only thing that could throw a wrench in the works for dividend investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143986001
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:48:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8bb5b68bfc71555a1603dca737483161f9bdaa7049450a029e7f118705d94402
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: 343 Companies Report $28.5 Billion In Trump Tariff Refunds. Here's Where The Money Is Going.
+<<<SUMMARY>>>
+Major U.S. companies are recording billions in tariff recoveries following a Supreme Court ruling, with some reducing business costs and others returning payments to customers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144013212
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T11:40:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=001d6eb752a01de65a937ef1917044c12b052b74ee8057d58836f27afde9c953
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/20/Nike-Mind-Shoes-Sell-Out-On-Brain-Boosti.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Nike's Jordan And Sportswear Sales May Face Further Declines, Analyst Warns
+<<<SUMMARY>>>
+Nike faces renewed analyst concerns after Cantor Fitzgerald cuts its price target to $33, citing slower recovery and weaker fiscal 2028 earnings expectations.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143984553
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T11:05:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ede2637d22feb14259688c86d7d283e982d543e06f064820ceaf4a697e2f059e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Here’s How Many Shares of Nike You Need for $20,000 in Yearly Dividends
+<<<SUMMARY>>>
+Nike’s 4.6% yield sits near a record high as management targets $3 in adjusted earnings per share by fiscal 2031.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988010
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T10:03:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=541da6bb33985ccf31b42611db29c22631eaf65938ce0a5da6690480a7e09acd
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2219445955/image_2219445955.jpg?io=getty-c-og
+category: company
+tickers: NKE
+keywords: 
+headline: BUZZ Investing: AI Reassessment Drives Tech Rotation, BUZZ Index Declines
+<<<SUMMARY>>>
+Stocks Fell on AI Reassessment: The S&P 500 fell 2.2% and the Nasdaq Composite 6.7%, while the BUZZ Index declined 14.9% as investors rotated out of AI and semiconductors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143976913
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T09:53:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=719c4b5db499d9b4d33039633285b4e31bd7a9e9bb48056647a94a1dbb4136de
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Promised Free Sneakers to Every Valedictorian in America: We Did the Math on the Bill
+<<<SUMMARY>>>
+Nike just promised custom Air Force 1s to valedictorians nationwide, but it has not said who qualifies, how many pairs it will make, or what it will spend. We built our own estimate, and one wrinkle could push it higher.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988763
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T09:48:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ed4ac9084bb3b8f57fb92099838f31cb452e33706f450ee0cfc6bb8ade2db53c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Sees Sales Falling Through Fiscal 2028. That’s Bad News for Dick’s Sporting Goods
+<<<SUMMARY>>>
+Key TakeawaysNike shares fell 6. 3% on Nov.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988764
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T09:32:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ebaf3f4096e5843aeb25fd57e9e0bc548cf2563d1ea3dd1a87013e5a91f5cbe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Sinks 6.3% as Its CFO Admits Results Don’t “Reflect the Full Potential” of Its Brands
+<<<SUMMARY>>>
+Key TakeawaysNike shares fell 6. 3% after its first investor day in nine years, which targeted adjusted EPS of $3.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143985609
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T08:10:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=6d74c966a35be6c6627857e9b47fd19737719a881d6bd8b242f5492a29b77e9b
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2234370632/image_2234370632.jpg?io=getty-c-og
+category: company
+tickers: NKE
+keywords: 
+headline: What Stocks Will Become The S&P 500's Thanksgiving Leftovers Of 2026?
+<<<SUMMARY>>>
+Looking ahead to see who the leading contenders are for which companies will become the S&P 500's Thanksgiving Leftovers of 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143987109
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T07:34:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d4182473e28576b0f12eea59d26501f293483f55ae622550abc5a404558bd653
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Cantor Fitzgerald Maintains Neutral on Nike, Lowers Price Target to $33
+<<<SUMMARY>>>
+Cantor Fitzgerald  analyst John Kernan   maintains Nike (NYSE:NKE) with a Neutral and lowers the price target from $38 to $33.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143987110
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T02:52:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1baadd6de78bf3e1dd86851e3d306c67bd5b56c750e9e8bf1d19fb13339525ce
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Reported Earlier, Nike Announces Long-Term Formula 1 Partnership, Becoming Official Partner And Staff Apparel Provider Starting With 2027 Season
+<<<SUMMARY>>>
+https://about.nike.com/en/newsroom/releases/nike-and-formula-1-join-forces-in-long-term-global-partnership
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143949826
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T00:21:05Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=2e6833a48d02fe4fca6d2be1d4510d561a0cd022ff0257e22afee865489f8224
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Mónica Gil to Resign from NIKE, Inc. Board of Directors Effective November 19, 2026
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143949827
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T00:21:04Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=28ec502488ac4778cd8423a2d6ab20f97f1957c6e76cdcb1070351898397db40
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE, Inc. Appoints Alexandre Arnault to Compensation Committee
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143948418
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T22:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=406b81157e739203c04bee8b65177a4fef0aeee6d00f7151b133d6ea055996b0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE, Inc. Declares $0.41 Quarterly Dividend
+<<<SUMMARY>>>
+BEAVERTON, Ore., November 19, 2026--NIKE, Inc. (NYSE: NKE) announced today that its Board of Directors has declared a quarterly cash dividend of $0.41 per share on the Company’s outstanding Class A and Class B Common Stock payable on January 4, 2027, to shareholders of record at the close of business on December 1, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947245
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T21:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c2da34be09014b4fe708c8d76e0374132835324afedcc8ec1ef9106cbec2142c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike (NKE) Targets a Turnaround with Ambitious Fiscal 2031 Goals
+<<<SUMMARY>>>
+Nike (NKE) is targeting a major turnaround with ambitious Fiscal 2031 goals, and the stock’s current valuation reflects only a fraction of the long-term earnings potential those goals imply. Shares of the sportswear maker have fallen more than 40% in 2026, impacted by a mix of company-specific issues such as negative revenue growth and weak earnings momentum, as well as macro headwinds like high energy prices that weigh on discretionary consumer spending. In response, the company has laid out a
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143948036
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T21:14:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ccf24b1a7b8f904b4044d9cccf3900e2cc43c3d2e3c98f2474c0b3cc325defd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Dow Drops 1,100 Points as Anthropic Pops 17%: Stock Market Today
+<<<SUMMARY>>>
+Tech was not the main drag on Thursday, when not even the biggest IPO in the history of the stock market could pull the main indexes higher.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947718
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T20:10:56Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=764a49d7747e3d89111c720cc2e3ed6b4fcd0e72e6268381837376f4b640bb41
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Dow Jones Losers Today: NIKE and UnitedHealth Lead Declines
+<<<SUMMARY>>>
+Dow Jones losers in today's session were led by NIKE and UnitedHealth, with all ten decliners down between 2.21% and 5.77%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947717
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T20:06:06Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=73102896dfce0d758ab6d7d074ae4353ca7cd484765354ede458640651daee15
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: S&P 500 Top Movers: Gainers and Losers Today
+<<<SUMMARY>>>
+S&P 500 top movers today include Williams-Sonoma as the largest decliner at 15.64% and Everpure as the top gainer at 7.53%, based on percentage change.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947246
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T19:25:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c1ee47cf2f28fb33ba8c74d4c114d594341e67773b317da009dc76ec00dcc9c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Sinks 5%, Dick’s Sporting Goods Down 5% as Analyst Flags Jordan Allocation Cuts of Up to 50%
+<<<SUMMARY>>>
+Key TakeawaysNike fell 5% after an analyst said it plans to cut Jordan allocations to Dick’s Sporting Goods’ Foot Locker by up to 50%. Analysts already expect Nike’s revenue to fall to $42.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947715
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T19:05:54Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=57ace738ee9013b49dac801de5d3489eae89e39e87a2953122373ec19c2c0eb3
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Most-Active S&P 500 Stocks: Ford, Super Micro, Pfizer Lead Session Volume
+<<<SUMMARY>>>
+Ford, Super Micro Computer and Pfizer led S&P 500 volume as most active names closed lower; AES ended flat.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143946021
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T18:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8e78298d64b97f962c81730d8966f47baf9af8e2c150e490dce2318cebb04e17
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike’s CEO admitted a miss, but Morgan Stanley sees a bigger one
+<<<SUMMARY>>>
+The analyst who asked Elliott Hill about the mistake says Nike investors are now making their own blunder.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947711
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:41:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=b6162d886ac583e3fa73417f71ed6a81fb35f3b2fc24e5365a930308760a2b6d
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Dow Jones Decliners: UNH, NKE, CAT Lead Today's Session
+<<<SUMMARY>>>
+Dow Jones decliners in today's session include UnitedHealth, Nike, Caterpillar, Merck, Visa, Coca-Cola, Goldman Sachs, Honeywell and Johnson & Johnson, down roughly 2% to 5%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947710
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:36:10Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=50172c170a8d8ba6ea09444a9f4ef6c675d51557ea1668c565cce1e833e4cbd8
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: S&P 500 Top Movers for Today's Session
+<<<SUMMARY>>>
+S&P 500 top movers for today's session: P leads gainers at 9.37%, while WSM leads losers with a 13.74% decline.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944679
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T16:50:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=56e89b2228c53108cbd6e14c764897977432638ff172f036f97a4100d45f488a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: A 67-Year-Old With $500,000 in Nike, HP and Truist Collects $1,872 a Month in Dividends. How Safe Is Each Check?
+<<<SUMMARY>>>
+Key TakeawaysA hypothetical $500,000 portfolio split evenly across Nike, HP and Truist Financial pays about $22,500 a year in dividends, or about $1,870 a month. HP’s dividend is the safest of the three, taking 28% of its free cash flow over the last twelve months.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944482
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T16:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eef745b73a4b6b6c504fc43bd7ae7b5c12bd777ff059ae4454bf30240de36948
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Bank of America Chicago Marathon and Nike Extend Partnership Through 2036
+<<<SUMMARY>>>
+Today, the Bank of America Chicago Marathon announced the extension of its partnership with Nike through 2036, continuing a relationship that has connected Nike with runners in Chicago since 2008. The partnership spans the full Bank of America Chicago Distance Series, including the Chicago Marathon, Shamrock Shuffle and Chicago 13.1, creating more opportunities for runners to train, race and progress through Nike's growing World of Race.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944711
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T16:26:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d85ed9f1ecc47f05fdc78193379b316ce576bb07dc3041e8d7b3b4f02b1938f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Williams Trading cuts Dick’s Sporting Goods to sell, flags FL’s Jordan headwind
+<<<SUMMARY>>>
+Investing.com -- Williams Trading downgraded Dick’s Sporting Goods (NYSE:DKS) to Sell from Hold and cut its price target to $120 from $130 in a note on Thursday, warning that Nike’s reduced Jordan shipments will hit its Foot Locker business hard next year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143946715
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T16:12:52Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=e39d095034fbcb8fb6541472b79750eaa1fa833bb652244f8640a45b461dc304
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE, Inc. (NKE) Analyst/Investor Day Transcript
+<<<SUMMARY>>>
+NIKE, Inc. (NKE) Analyst/Investor Day November 17, 2026 11:30 AM ESTCompany ParticipantsKurt BeloffElliott Hill - CEO, President & DirectorAnn Miller -...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943228
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:40:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c094309252bae0528bb5287f1e820b7e321ebbcd9904d06a20bb6d743e26a019
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike’s 2031 Targets Look Great on Paper, but Sales Won’t Grow Until 2029. Here’s the Price I’d Pay to Buy Nike Stock Right Now.
+<<<SUMMARY>>>
+Nike's Investor Day outlined a path to significantly higher earnings by fiscal 2031. But with sales growth potentially several years away, investors should be selective about the price they're willing to pay.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143987111
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T13:10:19Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=fc39282e0ac2351ceaa893cfad4011dc1c07b8b1aac4f0f8d52dcb010befbc94
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/19/Nike-Mind-Shoes-Sell-Out-On-Brain-Boosti.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Why Is Nike Stock Falling on Thursday?
+<<<SUMMARY>>>
+Find out why Nike Inc (NYSE: NKE) stock is falling on Thursday. Read about the company&#39;s investor day outlook, analyst ratings, and broader market trends.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943229
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T13:00:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=96abb0e2c908190e20b4997a36271a9019ced24b921ff9a65e8b2644be4d3817
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE, Inc. (NKE) Is a Trending Stock: Facts to Know Before Betting on It
+<<<SUMMARY>>>
+Nike (NKE) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143937329
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:05:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9e9870603fb090b630a1f2ad0bd43a34faa3c87919d6d23e20b01dc9ae9d97dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike is Riding the GTA 6 Hype. Will Its Stock Price See Any Relief?
+<<<SUMMARY>>>
+Nike stock has lost more than 40% this year. Now Travis Scott, Rockstar and Nike drop GTA 6 Air Force 1 sneakers as the turnaround drags on.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143936705
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T10:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=248bf23c4b03d4222b90df621d0ef7cad2f8753b94ceaa1aa522eecb77369d04
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Sporticast: Nike’s Outlook Disappoints Investors Again
+<<<SUMMARY>>>
+On the 605th Sporticast episode, Scott Soshnick and Kurt Badenhausen break down Nike’s first investor day since 2017. Investors were not impressed. The stock price fell 6.3% on Tuesday and is down roughly 80% from its 2021 peak. Nike said it doesn’t expect to grow revenues for at least two years and acknowledged the company’s …
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143937133
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T07:16:35Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=334d4413ab0b6be28c1008c4088bd235f7cf553ec9cd862ebfaa94ff0550a668
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Nike: The Investor Day Event Does Not Change My Bearish Stance
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143931641
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T00:50:53Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=a3d77470eb32caf0ff8ad01cc9b6ec97dadebea1af992c79d273caab2a391693
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1900836845/image_1900836845.jpg?io=getty-c-og
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE Investor Day Update: It's Gonna Get Worse Before It Gets Better
+<<<SUMMARY>>>
+Analyst rates Nike a Sell as revenue is projected to decline through FY2028, with growth returning in FY2029.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922443
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T23:20:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c1096864926ec2b25dcd58d5b0c0a610fe3bda9fea5a695099eb5d8585fe9f92
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: 3 Dividend Stocks To Watch In November 2026
+<<<SUMMARY>>>
+The European Central Bank is openly comparing the AI boom to past bubbles, which has many traders glued to high growth tech stocks and short term stories. Income investors can look somewhere steadier. Reliable dividend payers with yields above 3% offer regular cash flow while others debate momentum. This article examines three such dividend heavyweights from our yield screen and explains where each one may fit in a long term portfolio. The three stocks highlighted here offer a compelling...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922441
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T22:35:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=828c17bbdefd7abcb83ce8cee955743bad81a3467b395d13b3c6a175aa8913ff
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: A 70-Year-Old With $1,000,000 in Nike, Invitation Homes and Eversource Collects $3,739 a Month in Dividends. How Safe Is Each Check?
+<<<SUMMARY>>>
+Key TakeawaysA $1,000,000 portfolio split evenly across Nike, Invitation Homes and Eversource Energy pays about $44,900 a year in dividends at today’s prices, a 4. 5% yield.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922442
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T21:28:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cf753695c6ff27d38df2cc66fa9a2b275cd941653605b43d2da4cddfc6e95a33
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike’s Greater China GM on New Retail Concepts and the Importance of Thinking Locally
+<<<SUMMARY>>>
+In a new interview with FN, Cathy Sparks explains the path forward for Nike in China.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921397
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T20:45:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=55a50a2ad602c28ad62ece67b6a02e51edcfcd819fd9eec553b38ed3a269815c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike's Extra $5 Billion Still Leaves Sales Below 2024
+<<<SUMMARY>>>
+Nike stock fell 6.3% on Tuesday and closed at $35.85. The S&P 500 slipped 1.0% the same day. So Nike did 5.3 percentage points worse than the market. The drop came on the day Nike held its first investor day in nine years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921398
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T20:11:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f40ed8eb18bdb40409399f757d1df681ca1c29685df240e89e22cc8442d64bab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Revenue Decline Outlook Might Change The Case For Investing In Nike Stock (NKE)
+<<<SUMMARY>>>
+Nike used its November 2026 investor day to reaffirm fiscal 2027 guidance for a high single digit revenue decline and to signal that operating income will fall faster than sales as the business resets product, pricing and distribution. Management now expects revenue pressure to extend through fiscal 2028 before targeting market level growth in 2029 and aiming for faster expansion in 2030 to 2031, which puts execution in Greater China, Sportswear and Jordan under sharper scrutiny for anyone...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143927048
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T19:09:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a6a81e9e0736f79c60d943597828aeffbc9700903c7af55d806fdde304f6d0d9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: How to Play NKE Stock as Nike Risks Becoming a Forever Turnaround Story
+<<<SUMMARY>>>
+Nike announced a new long-term turnaround roadmap during Investor Day. The announcements, however, failed to impress the market, with the stock dropping 6% on Nov. 17.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921846
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T19:06:26Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=721f466408568699a8bfceacc8ebfaea312a21a06117959f059928bcedc7348b
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: NKE
+keywords: 
+headline: S&P 500 Most Active Stocks on Nov. 18: AES Leads Volume, Freeport-McMoRan Drops 6.45%
+<<<SUMMARY>>>
+S&P 500 most active stocks on Nov. 18: AES led volume with 89.32M shares, and Freeport-McMoRan posted the steepest decline at 6.45% among the listed names.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143920246
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T19:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=715ea77dabed338f860b9ae21a027f346cf26367ef78622098472f5ae1eb1eef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike just put a date on its comeback after a 13-year stock low
+<<<SUMMARY>>>
+Nike’s 2031 earnings goal sits far above what it expects to make this year, and the stock now trades on whether that gap can close.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143920247
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T18:58:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d7063d295940f2a6e816c61fdde14a1994743f5665d9af809100f9aaedebc24
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike sets out path to $3.50 earnings per share as Jefferies reiterates 'buy' rating
+<<<SUMMARY>>>
+Nike Inc (NYSE:NKE, XETRA:NKE) has outlined a recovery plan targeting earnings per share of $3 to $3.50 by financial year 2031, with Jefferies describing the strategy as credible and potentially achievable despite a prolonged turnaround. The brokerage reiterated its 'buy' rating and $60 price...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143919975
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T18:43:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6f2c4e3d78b3d0221655ba79e66c4890f343d7150c284664b210492e7b67f342
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Who Really Pays For Nvidia's $1.2 Trillion?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918970
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:52:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=243e29fc0f945b690e63b393b3de2c4274e2b22014d656b85e02a5642a56cbb2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Jefferies’ $60 Target Says Nike’s Selloff Went Too Far
+<<<SUMMARY>>>
+Key TakeawaysJefferies reiterated its Buy rating and $60 target on Nike at its Nov. 17 Investor Day, 67% above that day’s $35.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921842
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:40:59Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=96fd5e32831eafb5792d0dc056ef2e93f5e80c0793dbfc7a95b8dcbb9a92f466
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Dow Jones Gainers and Losers: Top Movers in Nov. 18, 2026 US Session
+<<<SUMMARY>>>
+Dow Jones top movers for Nov. 18, 2026: DIS, AMZN, NKE and HON led gainers, while CVX, CRM, MRK and AMGN led losers in the US session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918765
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:23:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=41234b69baf8b01c6af21c2fdbb58c9a5f37a486f8ed7857e73a9347ff06fc5e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Moves on Investor Day; Lowe's Reports Earnings | Stock Movers
+<<<SUMMARY>>>
+On this episode of Stock Movers: - Lowe's (LOW) is also reporting its earnings this morning, a day after competitor Home Depot reported. Bloomberg Intelligence cites steady demand and data from Placer.ai which points to foot-traffic trends similar to the second quarter. - Nike (NKE) shares are moving following its investor day. The company is projecting a return to market-level expansion in the fiscal year through May 2029, but challenges in its Jordan and Converse brands, as well as its sportswear business, don't have an immediate fix. - Take-Two Interactive (TTWO) shares are jumping in premarket as its major video game Grand Theft Auto VI is an open-world game set in Vice City, a fictionalized version of Miami, with lifelike graphical fidelity.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917732
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:28:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a24915dd972a9162cad8d212e334372412a08357b2ad581e6ea3ddbc6d2b8b1d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Promises $12 Billion in Dividends as Its Stock Hits $35
+<<<SUMMARY>>>
+Nike's investor day opened with a rally that vanished within hours, just as management unveiled a five-year payout plan. Why did investors bolt, and what does the balance sheet have to carry before profits return?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143941152
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:18:02Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0e652f105826f1ddad8d27eff8341e8837a4e92ee27eb2e39fe932edaaf8a8bc
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/18/Konskie--Poland---January-04--2024-Nike-.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Swoosh and a Miss: Nike Investor Day Leaves Wall Street Cold-Footed
+<<<SUMMARY>>>
+Nike shares remain nearly 80% below their peak as weak forecasts and bearish trends overshadow its long-term recovery strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917480
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:15:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b785231e047644ade3247bc740b47f2bed3773e5a46da75a27afd9fb72ae76dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Tech stocks rise as investors shift focus to Anthropic IPO: AlphaCheck
+<<<SUMMARY>>>
+Stocks were mixed on Wednesday as investors turned their focus to Anthropic's looming IPO.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917526
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:22:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=de92c3b5e7d71161f71a9322a253e64c27bc2c33863e1f5c745c0e5d973f9809
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: How Much Downside Is Left In Nike Stock?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143941153
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:52:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=5833b20ca8999e0a10e9544e5a95d919740e094f75ab1ee2fd03df2423236cb2
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/18/Nike-Mind-Shoes-Sell-Out-On-Brain-Boosti.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Analysts Remain Bearish Despite 'Full Stride Ahead' Plan, Cite Sales Decline In FY28
+<<<SUMMARY>>>
+Nike shares faced pressure as analysts questioned its recovery outlook; JPMorgan and BofA analysts remain bearish on 2028 declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143914952
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:45:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=520ff635cbd85c134588e1d5f456ecd005f008c0431de9812e0e88a9f9f1e2b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Stock Draws Mixed Analyst Views After Investor Day – Morgan Stanley Flags Risks, Barclays Turns More Constructive
+<<<SUMMARY>>>
+Barclays cut its price target to $42 from $45 and kept an Overweight rating on the shares following the investor day, according to TheFly.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143920248
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:30:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=872f82228c1b0498371506c376eb6c009eea529e19e3ae0e2a8bf301ad56a334
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Stock Is Down 44% This Year. Why It’s Still Too Early to Buy.
+<<<SUMMARY>>>
+Although Nike stock has witnessed a significant correction, it isn’t undervalued. Moreover, Nike’s turnaround strategy remains in its early stages.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143912563
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:26:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=252741228970546540f47e61fd4bee41b52af700f7b35a6bbf5d338e72dad065
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Biggest Dow Jones Loser Nike Keeps Sinking After Investor Day. Here's Why.
+<<<SUMMARY>>>
+Sneaker giant Nike failed to reassure investors about its turnaround strategy after extended earnings slump.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143912314
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:21:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae3b9bc3218d7720abad81bacdcc5e407a7b2088477c34897a48d3b65733c7a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Why Did Nike Stock Move?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143939671
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:00:52Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d8be66ca1666cc7ea5db34f15835889e1bf485f6b257cb43fb2c146e4117a633
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/18/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Growth Leads Sectors In Wednesday Trading As Cyclicals Trail
+<<<SUMMARY>>>
+Five sectors are trading higher and six are lower in Wednesday&#39;s regular session, with growth sectors holding the top three positions. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915525
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T10:07:09Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6db20d9a14269e3f9d26844d5e206c2812f0faf6ccbf049c4ce384b1816a9d12
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Barclays Maintains Overweight on Nike, Lowers Price Target to $42
+<<<SUMMARY>>>
+Barclays  analyst Adrienne Yih   maintains Nike (NYSE:NKE) with a Overweight and lowers the price target from $45 to $42.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915526
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T09:59:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=beaffeb1a0de2d960539c19dab2db0e993ca16e8e6e0df736df1c8f016e39128
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Evercore ISI Group Maintains In-Line on Nike, Raises Price Target to $35
+<<<SUMMARY>>>
+Evercore ISI Group  analyst Michael Binetti   maintains Nike (NYSE:NKE) with a In-Line and raises the price target from $28 to $35.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143909607
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T09:32:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9268bc2c6ac3996dd995b25dff30399cf629cbbb5e4f14d9d035fa1de8048626
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Market Chatter: Nike Targets 50% Local Product Creation in China by Fiscal 2030
+<<<SUMMARY>>>
+Nike (NKE) aims to design and create half of the sportswear products it sells in China within the co
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143909608
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T09:18:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0f2bd5f9f38c264c3ad7181ce40413c4628316efdce0b2d3100db1d00c9eca18
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike outlines ‘Full Stride Ahead’ strategy and fiscal 2031 financial targets
+<<<SUMMARY>>>
+The company’s long-term financial framework sets a target operating margin of 12% to 14% and adjusted EPS of $3.00 to $3.50 by fiscal 2031, using fiscal 2027 as the baseline.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143911801
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T08:42:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9bdfb4e31b3b840545d6330497c2907d5ab25f1e9b747ea78909be86e3d8c1f6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Europe shares steady after Nvidia results; reels from steepest drop since March
+<<<SUMMARY>>>
+Investing.com - European shares were steady on Wednesday, after after AI-bellwether Nvidia delivered a blockbuster quarterly scorecard that reassured investors about the durability of the artificial intelligence boom.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915527
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T08:32:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=668059cfd266cb7da645086eb54cadc2d4e52665e2dcadbcac3b85481179e3ba
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/18/Konskie--Poland---March-01--2025-Vail-Re.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Wall Street's Most Accurate Analysts Weigh In On 3 Consumer Stocks With Over 4% Dividend Yields
+<<<SUMMARY>>>
+Analyst ratings highlight high-yield consumer stocks Vail Resorts, Nike and Newell Brands, offering dividend yields of 4.57%-5.85%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143907382
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T07:11:00Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=a7d3170e6944ba41cdec8801a73660c40c0d38aae243e342d0c8710886438178
+image_url: https://www.chartmill.com/images/uploads/THUMBNAILS_CHARTMILL_1000_528_8e5cb0d954.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Stock Market Today: Nvidia (NVDA) Beats and Raises Without Huang as Software Stocks Buckle Under the Anthropic Threat
+<<<SUMMARY>>>
+Nvidia topped forecasts and lifted next year’s growth outlook in its first call without Jensen Huang. Software stocks slumped ahead of Anthropic’s IPO, Nike fell after its investor day and Disney slipped despite a beat.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915528
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T06:55:33Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=df59a5ec7dfea7c633a49f0409c9b929042af75f7cf70e1db21f1b79b8c63b01
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/18/Nike-Mind-Shoes-Sell-Out-On-Brain-Boosti.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Warns of 'Challenging' 2028 As Investors Await Comeback
+<<<SUMMARY>>>
+Nike (NKE) stock slips after warning of a challenging fiscal 2028, even as it unveils its &#34;Full Stride Ahead&#34; growth plan.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143898555
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T05:34:37Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=91a6fc57983cce658441d500995ef911079904be8c7fb6663e6c998a9753ada9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike’s China weakness: What does it mean for local rivals?
+<<<SUMMARY>>>
+Investing.com -- Nike’s China problem looks like a share-loss story more than a market collapse-- a scenario that favors local brands poised to gain more market share.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143895157
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T03:46:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8d7fdccd8ba79d0e5dae8de24950895632056feb27326891ea27cee71d5d42bd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nasdaq Futures Lead Wall Street Rebound After Nvidia’s Blowout Forecast, Anthropic IPO Looms: SLS, NKE, MU In Focus
+<<<SUMMARY>>>
+Nvidia reported its third-quarter results after market hours on Tuesday, injecting optimism back into the AI trade after a strong print.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143893370
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T01:54:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0f51b924d61e7c1c40a558fb126503330741d1f07b081da96f8d3d34f1d21263
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NKE Stock Heads For Worst Week Since June: Analysts Flag Risks In Nike’s $5B Growth Plan— Retail Questions CEO Elliott Hill’s Leadership
+<<<SUMMARY>>>
+Nike stock fell 5.6% this week as analysts questioned its $5 billion growth plan.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143893706
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T00:13:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=50a446b839a863327ee9b6632b23766d72978384c75e6adc0eb474ddf78f31c7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE Sees Revenue Falling Through 2028, Targets $5 Billion Rebound by 2031
+<<<SUMMARY>>>
+NIKE (NYSE:NKE) expects revenue to decline through fiscal 2028 before returning to market-level growth in fiscal 2029, as the company resets its sportswear business, reduces discounting and works to stabilize sales in Greater China. At its investor day, the company outlined a plan to add approximat
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886795
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T22:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c7d4ad2dce958bc585c5eacbde44d778944b25f14806d97d2807d5d14069290d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Is Down 78% From Its High. Here's What That Does to the Yield.
+<<<SUMMARY>>>
+Investors continue to feel dismayed by the lack of a revenue turnaround.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886796
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T22:19:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d3a1b8185501c54257274a1022e4514c88a3dc763b12507824e389629b766379
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Stock Market Today, Nov. 17: Nike Shares Fall 6.3% After Investor Day Turnaround Plan Draws Scrutiny
+<<<SUMMARY>>>
+On Nov. 17, 2026, Nike shares slid as traders weighed an expected sales slowdown against its 2031 growth goals.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886797
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T21:49:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0aa37624148fc050502920bff2eb065056ef586e49915a8b13656bcf70351041
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike CFO Says It Will Take Two Years for Jordan Brand to Return to Growth
+<<<SUMMARY>>>
+As for Converse, the company expects the brand to return to growth beginning in fiscal 2028.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886798
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T21:45:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=14f4e26a4713d413f4f565bfaeb97fefc1c728c747e51a1b0024a9d6291df6b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike (NKE) Falls More Steeply Than Broader Market: What Investors Need to Know
+<<<SUMMARY>>>
+In the closing of the recent trading day, Nike (NKE) stood at $35.85, denoting a -6.3% move from the preceding trading day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143877912
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T21:41:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=925cd36377e0b788d5493604a7c322b8108f4a3c63fbd0fc5603e0f825798a2b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Stock Market Today: Dow Slides Ahead Of Retail Sales; Nvidia Rises With Earnings Report On Tap (Live Coverage)
+<<<SUMMARY>>>
+The Dow Jones index dropped Tuesday ahead of retail sales data. Nvidia stock bounced before its earnings report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143914205
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T21:25:21Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cd61f070ef1f5e59fd65f4985fd5ebe08acefe1a0e401181f91a97444882e66c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/18/Businessman-looks-at-a-stock-price-board.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Nvidia, Salesforce, Nebius Group, Applied Optoelectronics and Nike: Why These 5 Stocks Are on Investors' Radars Today
+<<<SUMMARY>>>
+Major U.S. indices closed sharply lower on Tuesday, with the Dow Jones Industrial Average tumbling 1.64% to 50,759.42
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143895247
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T21:22:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=319d2c2eeec139182fb71bbfbd04abdab83d1ec87df10f83de4b62367858d693
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: A $5 Billion Reason Why Nike Stock Is in Focus Today
+<<<SUMMARY>>>
+Nike stock extends gains as management introduces Full Strike Ahead strategy. Here’s why that doesn’t warrant buying NKE shares today.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143885686
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T20:42:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c71093a7f884b5ba17ec32a7f90986ada6293f9eb26104bcab339c4f791c3fee
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Sinks 7% as Investor Day Warns Fiscal 2028 Will Be a “Challenging Year Financially”
+<<<SUMMARY>>>
+Key TakeawaysNike sank 7% today after saying fiscal 2028 adjusted EPS will fall modestly. Nike’s 2031 targets look cheap, but a down year comes first.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143885611
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T20:24:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8673eb0ed79d751f5849b79bd7b5266657fee419af355d1865066cf5752493b3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: It’s a Stock Market Bloodbath! Why the Dow Dropped 1,000 Points.
+<<<SUMMARY>>>
+Can you smell it?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143885687
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T20:15:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=309307aa267ab2d0c5df47999f032bb0cc9cea767ed193be0419b55a26a9d08f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Stock Just Plunged Despite the Company's New Turnaround Plan. Here's What Spooked Investors
+<<<SUMMARY>>>
+Nike laid out an ambitious plan to more than double its profit margins by 2031. But the fine print shows two more years of shrinking sales first.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886056
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T20:11:01Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=0a9bd292bf4ab78b45a0cfa1eaee22f068ee43ad5668b447cd02f6155025aa3d
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Dow Jones Losers: Salesforce Leads Today's Steepest Declines
+<<<SUMMARY>>>
+Salesforce led Dow Jones decliners in today's session, falling 8.57%, followed by Nike, UnitedHealth, JPMorgan, Home Depot, Microsoft and Nvidia.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886055
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T20:05:57Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=721c0048b0b71f88ec9ae2302d80c50e984ad8713c5f39bac46c69796421e34d
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: S&P 500 Losers: Software Stocks Lead Session Declines
+<<<SUMMARY>>>
+S&P 500 top-mover losers were led by sharp software declines, while consumer, industrial and financial names also ranked among the day's laggards.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886799
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T19:34:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eb1b4866bedbe85a47f4904c3b357f1a00ad0273db8fa50769720df12e67239c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Wants to ‘Make More Epic S–t’ and Sees Outdoor as One of Its ‘Most Significant Untapped Opportunities’
+<<<SUMMARY>>>
+Faster product creation is one of the ways Nike expects to return to growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884527
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T19:13:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9462aff68237e14d601ff5b83f8c9205ad943db88bc1ebb588d5e91c66939b90
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Top 3 Dividend Stocks To Watch In November 2026
+<<<SUMMARY>>>
+With the US 10 year Treasury yield holding above 5%, cash and bonds are throwing off more income than many investors have seen in years. That raises the bar for every dividend portfolio. Income that simply looks high is no longer enough. You now need payouts that are well covered and consistently growing. This article walks through three higher yielding dividend stocks that fit that brief. The three stocks highlighted here offer a compelling starting point if you want exposure to higher...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886053
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T19:06:08Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=a4e4d66ea5c1ef63284ff1b414d3469a4c72686a0b34ea09961919fdfb5ad2b6
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: NKE
+keywords: 
+headline: S&P 500 Most Active Stocks for Nov. 17, 2026
+<<<SUMMARY>>>
+S&P 500 most active stocks for Nov. 17, 2026: NIKE, Super Micro, Ford and Netflix led volume as most names in the group declined.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884524
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T18:23:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3a9709de331e80bcb3bfa10546b662b533dfcc1f8b7a53d496c2abc674f7f6b9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Bets Its Comeback on Performance Sports
+<<<SUMMARY>>>
+The first sign of progress could be smaller declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883441
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T18:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=492868cc7f1b6e1aea113f571050f9b75d6d384e392e3c5ce7b66d2397757238
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike’s 2031 targets offer credible recovery path, says Jefferies
+<<<SUMMARY>>>
+Nike Inc (NYSE:NKE, XETRA:NKE) has outlined a long-term recovery plan targeting higher revenue, operating margins and earnings by fiscal 2031, with Jefferies describing the framework as credible and saying fiscal 2027 is likely to mark the bottom of its downturn. The sportswear group is...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883188
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:52:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dfe1f0fabcdac115bd6b79ead43d765f05321a28b693beea7b9635a4f8c1aea9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Stock Rises on Plan to Restore Earnings by 2031
+<<<SUMMARY>>>
+Revenue is still expected to fall in fiscal 2027 and 2028 before returning to growth
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143886050
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:40:48Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=900d6eda331972f34535d14243833d5d89243ff4c20dda60cfbd63ff135d54d9
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: NKE
+keywords: 
+headline: Dow Jones Losers in Today's US Session
+<<<SUMMARY>>>
+Dow Jones losers in today's US session, ranked by percentage decline, led by Salesforce, UnitedHealth, IBM, Microsoft, Nike, Home Depot, and JPMorgan.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882594
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:38:24Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=f3b4287fe396a312fa2084d8952e4ae449d7c3c5ae8f1fb169fe84899cb36e9d
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE, Inc. Announces Full Stride Ahead Strategy and 2031 Financial Framework
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884526
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=940893d4b9ddefe1f7d365ad20f30bf67d9a1acea239f998727878677046b863
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike’s Strategy to Add $5 Billion More in Sales by 2031 Meets Skeptics on Wall Street
+<<<SUMMARY>>>
+RBC Capital Markets warns that Nike’s ambitious 2031 financial targets leave little room for near-term upside surprises.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883189
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:36:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=32f126aea99e689bee29298452bed4827733b1f1e97ab6adaf577c2af9561946
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike won’t return to growth for 3 more years
+<<<SUMMARY>>>
+The activewear giant outlined a plan to grow revenue by $5 billion between fiscal 2027 and fiscal 2031, but it starts with two more years of declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883190
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:13:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=237059ea9287db1effd07773f9af6f7f1831cd684340c3406bb0c18247c74eb8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE (NKE) Unveils Tuned Air, Nike Mind And Nike Free Across Sports
+<<<SUMMARY>>>
+NIKE (NYSE:NKE) announced a wide new range of next-generation footwear and apparel technologies including Tuned Air, Nike Mind and Nike Free. The fresh product platforms span multiple sports categories and are built around athlete-focused design and performance goals. Management framed the launch as a large-scale, multi-sport push that aligns with the brand's long-term performance positioning. The broad Tuned Air, Nike Mind and Nike Free rollout is only one part of the NIKE story for...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882957
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:00:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8187ee235dbd52a049a95033f0babb6a59d1880fa5040eebd1fab07a6bfeee75
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Stock Market Today: Dow Dives As Software Sags; Nvidia Falls As This Jensen Huang Date Is Set (Live Coverage)
+<<<SUMMARY>>>
+The Dow Jones index drops on the stock market today despite a retail sales surprise. Nvidia stock falls as a Jensen Huang date is set.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883191
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T16:37:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3558430818d8f677ca06c790d68dd96c024b353559e8e6475d8937fb4b98b61c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike's Full Stride Ahead Strategy Targets $5B In Incremental Revenue Growth – A Look At The Company’s 2031 Expectations
+<<<SUMMARY>>>
+Nike is targeting operating margins of 12% to 14% and adjusted EPS of $3.00 to $3.50 by the end of fiscal 2031, with revenue growth expected to return to market levels in fiscal 2029 and exceed market growth in fiscal 2030 and fiscal 2031.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883192
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T16:31:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=11110fb50ce012de302fc93b3d56ee749f503f8f72f4c9a4c97cad8f576320ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: First Look at Nike’s New Game Plan Ahead of Investor Day
+<<<SUMMARY>>>
+The Swoosh's new comeback strategy is dubbed "Full Stride Ahead."
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883193
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T16:06:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=207670f248d41717da32a07ef705802a90c08b424666adebe78abf79da22f46d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Strategy Aims For $5 Bil Revenue Boost By 2031, Shares Jump
+<<<SUMMARY>>>
+Nike announced new turnaround efforts, including revenue growth plans, ahead of its investor day presentation. NKE stock surged.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918480
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T16:00:01Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=2e4bc19dfbc1f61b3b65f81edde735912cde9374d230acf6cba73e175cda581d
+image_url: https://image.cnbcfm.com/api/v1/image/108553363-261117-cn-SPORT-NIKE-Still001.jpg?v=1794942857&w=1920&h=1080
+category: company
+tickers: NKE
+keywords: 
+headline: Exclusive: Inside Nike’s next big bets on innovation
+<<<SUMMARY>>>
+Phil McCartney, Nike’s innovation chief, gives an advance look at some of the company's upcoming products. Nike is counting on innovation to drive growth and give consumers more reasons to choose the brand.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881401
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:53:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fbd86158c29455e96bf5ccc489ff18acd5f5f66784533bf53b50ef19401c26e6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Why Nike Stock Popped Today
+<<<SUMMARY>>>
+Nike has a plan for profit -- and investors love it.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881402
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:49:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8d8b5b005b4fa64447493f52def1dfab275159828991146247cff24786fdd33f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Stock Surges After CEO Reveals $5 Billion Turnaround Plan
+<<<SUMMARY>>>
+Nike outlines a new growth strategy focused on performance sports, targeting a return to market-level revenue growth by fiscal 2029.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883194
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=58497ab6415aaead980e4da29a455466777554074ac385c7719fa3173f653900
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE's China Sales Decline 26% in Q1: How Deep Is the Challenge?
+<<<SUMMARY>>>
+NKE's China sales decline 26% in first-quarter fiscal 2027 as discounting and digital disruptions persist, raising concerns about its turnaround efforts.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880880
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:24:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fd134ebc5958084d52fa212eb4770748543b571ba909528b27a82714a62dba17
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Stock Market Today: Dow Dips As Retail Sales Do This; Oil Plays Rise But Software Lags (Live Coverage)
+<<<SUMMARY>>>
+The Dow Jones index dropped Tuesday after surprise retail sales data. Nvidia stock bounced before its earnings report.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915530
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:16:27Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=c608fddf968672bf305eae1f2694d6785b92db363b488ea81c396b6137119b2f
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Executive Says 2028 Will Be ‘A Challenging Year Financially’; Co. Expects Adjusted EPS To Decline Modestly In Fiscal 2028 From Fiscal 2027 Levels
+<<<SUMMARY>>>
+-Investor Day Event
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884171
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e9dd1c8e86f1e8c8480adc817ed226cfb12ed8eb08313f37f6e3c0a8ce58f6a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: She Made $235 Million by Hiring the Right Team. This Is the Interview Question She Uses to Spot Winners.
+<<<SUMMARY>>>
+Kim Perell has built nine companies, invested in over 100, and sold brands for many millions. Here is her secret to hiring the best people.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883195
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:59:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fa81d562e930cb4e4512de8c786f4ddfb3618e3af72c41aa1b87762741de45ae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Stock Jumps as Fresh Game Plan Targets $5 Billion in New Sales Growth
+<<<SUMMARY>>>
+Under its ‘Full Stride Ahead’ strategy, the retailer aims to add $4 billion in annual sports revenue and $1 billion in casualwear by fiscal 2031.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881403
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:37:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae511260eb8fbabcc0463a82b109f269955446eb94d6a5ae2dd014f604f1b8e0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike shares rise as company outlines five-year turnaround plan and 2031 targets
+<<<SUMMARY>>>
+Investing.com -- Nike (NYSE: NKE) shares rose 2% on Tuesday after the company unveiled a new five-year strategy aimed at restoring sustainable, profitable growth, setting a target of $3.00 to $3.50 in adjusted earnings per share by fiscal 2031.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881405
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d031d093100d098d07d149693b02b8c87194ab49e98e96517a20407e84ec68a9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: One Reason Lululemon Stock Looks Better Than Its Price
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881404
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=efd58d4d7a201b3f29278a9dc6043e260fc63f82397d4b2c54c306999ee6aeb3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE, Inc. Announces Full Stride Ahead Strategy and 2031 Financial Framework at Investor Day
+<<<SUMMARY>>>
+BEAVERTON, Ore., November 17, 2026--NIKE, Inc. (NYSE: NKE) today will host its 2026 Investor Day at the Philip H. Knight Campus in Beaverton, Oregon, at 8:30 a.m. PT. The Company will introduce Full Stride Ahead, its strategy to get closer to athletes and focus resources on the greatest opportunities for long-term growth. NIKE will also outline its 2031 financial framework.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915531
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:48:49Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f7b39476aa4a5cafba5b6b47cd67f73630b58dbf1bd046e79889b044c55e9258
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Executive Says Advanced Innovation To Contribute Approximately 10% Of Annual Revenue On Average
+<<<SUMMARY>>>
+-Investor Day
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915532
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:37:14Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=19d9255c7e2abac7c8ca0573704dbd5b9442dfdd2f9e31a1ab7a84c14b39daae
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/17/Perak--Malaysia---February-18--2018---Ni.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Targets $5 Billion Incremental Revenue Growth By Fiscal 2031
+<<<SUMMARY>>>
+Nike unveiled its Full Stride Ahead strategy, reaffirmed fiscal 2027 guidance and outlined financial targets aimed at restoring sustainable, profitable growth through fiscal 2031.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915533
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:36:58Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0ddbd86b3a8557508f41ba283b4fd6dcaef4547439d49bdbe72b658482346542
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Executive Says Co Expects Sportswear Footwear Revenue From New Models, Updates To Be About 40% In Fiscal 2031
+<<<SUMMARY>>>
+-Semafor Event
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143915534
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:08:17Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ed2b94695a8fbc5fff4c36420bbc8b7893633094862961228d4d267a5bcf8bd2
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Nike CEO Says Co Aims To Double The Units Of Product Created In Under 14 Months By FY31
+<<<SUMMARY>>>
+-Investor Day
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878053
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fff0f9bc55b3abb4ce0c9d371dd7104ee4d708dc77d3868cbeb8e2527ebc1713
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: She Started a Pajama Brand While Undercover at the CIA
+<<<SUMMARY>>>
+Now it brings in $100 million, thanks to a savvy collabs strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882576
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:05:15Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=a46eb312db55d0bd51dd0413016ad65d144a2f4e345b9f18276229d2ccc8eeb0
+image_url: https://image.cnbcfm.com/api/v1/image/108553262-17949348661794934863-49695440238-1080pnbcnews.jpg?v=1794934865&w=1920&h=1080
+category: company
+tickers: NKE
+keywords: 
+headline: Nike lays out financial goals ahead of first investor day in 9 years
+<<<SUMMARY>>>
+Nike is hosting its first investor day in nine years at its Oregon headquarters as the company tries to prove to investors that its turnaround strategy is working. CNBC's Sara Eisen discusses.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143873571
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T10:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9252527bb63b59ff280b3e2500d99d4d04db019eba314ff887f66b67becf927d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike's Stock Is Down Big This Year. Here's When I'd Buy
+<<<SUMMARY>>>
+The stock has declined 40% since the start of the year, and it may still go lower.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143873572
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T10:15:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e417c3b61f17046ba79d0a8acdb41222b393036f1790113b003ba1cd38ec4148
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Electric barge launched for Nike cargo route in Vietnam
+<<<SUMMARY>>>
+Nike and its logistics partners CMA CGM and Gemadept have launched a fully electric barge service in Vietnam intended to reduce emissions from inland cargo transport.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143870807
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T04:46:08Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=b8b44e1a413a24a79c8444a1566b3df019ecec52f19eb2803a532fe3c9bcad82
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2249736264/image_2249736264.jpg?io=getty-c-og
+category: company
+tickers: NKE
+keywords: 
+headline: Deckers: Time To Dip A Toe In
+<<<SUMMARY>>>
+Analyst rates Deckers Outdoor a Buy: its $111 base-case valuation implies 28% upside, and buybacks could retire about 8% of shares this year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850533
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T20:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3ccd70ef2c03be7ada07523d8568820428b88557d291f9ac9c37749e4994af6f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike's Turnaround Is Taking Longer Than Expected. These 3 Stocks May Be Better Buys.
+<<<SUMMARY>>>
+Should investors show patience with Nike or turn to one of these alternatives?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849786
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T17:42:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=07467d9fcb11092ff61e914d1b31dbfa6786a661842180b48719ed3518fc2cc9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Nike Stock Faces a Major Test as CEO Prepares $2.5 Billion Turnaround Pitch
+<<<SUMMARY>>>
+The sportswear company will outline its turnaround strategy at its first investor day in nearly a decade as shareholders seek evidence of renewed growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849787
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T17:32:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0bc821645ac33d7d0f01230fdfbdac125a55138d9d9326a74d10e9f9e3712ea0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: Battling turnaround fatigue, Nike teases innovation pipeline
+<<<SUMMARY>>>
+A slate of upcoming products includes a revamp of the activewear giant’s training category and a new manufacturing process for its Air franchise.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849788
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T17:16:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6bb2907fbc513ef20cf70ef11afda0660808e4aa42c83dd2e3cfa2fe0ac7756a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: 3 Dividend Stocks With Yields Over 3%
+<<<SUMMARY>>>
+Higher inflation readings and fresh signals of more Fed rate hikes keep the spotlight on reliable cash returns. When borrowing costs climb, every dollar of interest and dividends matters more. That puts steady income streams front and center for anyone tired of guessing short term price moves. This article walks through three dividend workhorses from a high yield, quality focused screen paying 3% or more and aiming for sustainable payouts. The three stocks highlighted here offer a compelling...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143879216
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T14:30:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4627caa2976dbd2ef35efec56d682d0a4bbfdd04115850c29f3605f9c9bd3f8c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/16/Elon-Musk--founder-and-CEO-and-of-SpaceX.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: Elon Musk Backs Jensen Huang With One Word After Saying Hiring Him Would Be 'An Honor' and Signing a Petition to Reinstate the Ousted Nvidia CEO
+<<<SUMMARY>>>
+Elon Musk said hiring ousted Nvidia CEO Jensen Huang would be &#34;an honor,&#34; backed a petition to reinstate him and captioned a Matt Damon clip with one word.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849298
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T14:08:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f6076f8e35fb9ff7028eb425b809a542a0ed64d57bb1089841420f335a05e959
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: NIKE, Inc. Unveils the Next Generation of Innovation Across Performance Sports and Sportswear
+<<<SUMMARY>>>
+BEAVERTON, Ore., November 16, 2026--NIKE, Inc. (NYSE: NKE) is sharing a first look at its next generation of innovation, showcasing new technologies, product platforms and silhouettes across footwear, Sportswear and performance apparel.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143848070
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1c343bb152d6e0189fc3ee08e1614f9258152b50d081ebd3099803278d9692bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: NKE
+keywords: 
+headline: unspun Appoints Chuck Shehadi as Chief Executive Officer
+<<<SUMMARY>>>
+unspun, the B Corp behind OneWeave™ 3D weaving, has named Chuck Shehadi as Chief Executive Officer. He succeeds Arne Arens, who has relocated to Europe and now serves as Chair of the Board.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880129
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:01:14Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=6c30070a64340571b276e5bc6e8ebffb2d0a148857dfde1ac2a7b3935c1a67ae
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/16/Nike-Mind-Shoes-Sell-Out-On-Brain-Boosti.jpg?width=2048&height=1536
+category: company
+tickers: NKE
+keywords: 
+headline: What's Going On With Nike Stock Today?
+<<<SUMMARY>>>
+Shares of NIKE, Inc. (NYSE: NKE) are in focus Monday as the company showcases its next generation of innovation across footwear, sportswear and performance apparel ahead of its Investor Day.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143848097
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T08:01:04Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b2494952189ba729a11cb1cc3dd602fcbb8523a4fc5a97270eccfea678dccac4
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: 'Nike agrees four-year deal to become UEFA match ball provider for men’s club competitions' - The Athletic
+<<<SUMMARY>>>
+https://www.nytimes.com/athletic/7785010/2026/11/16/nike-uefa-ball-champions-league/
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143848098
+symbol: NKE
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T07:46:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=655026d86c989eba3c987b0b1e9ed44dfd58f2a46844147ab7dcb6edcb69488b
+image_url: 
+category: company
+tickers: NKE
+keywords: 
+headline: Cantor Fitzgerald Reiterates Neutral on Nike, Maintains $38 Price Target
+<<<SUMMARY>>>
+Cantor Fitzgerald  analyst John Kernan   reiterates Nike (NYSE:NKE) with a Neutral and maintains $38 price target.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:459990f553c3cc1e946ba6894d7f9326925d4b9bb77af901c479e48c93274f8e
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-09T15:29:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3026572/nike-reshapes-its-global-operations-will-agility-improve?cid=CS-ZC-FT-analyst_blog|quick_take-3026572
+image_url: https://staticx-tuner.zacks.com/images/articles/main/03/94.jpg
+category: 
+tickers: NKE, ADDYY, LULU
+keywords: restructuring, operational efficiency, geographic consolidation, cost savings, supply chain optimization, organizational agility
+headline: NIKE Reshapes Its Global Operations: Will Agility Improve?
+<<<SUMMARY>>>
+NIKE is implementing its Pace program to restructure global operations into three geographic regions by fiscal 2028, aiming to improve agility and decision-making. The initiative targets $2.5 billion in savings against $1 billion in implementation costs, with full benefits expected by fiscal 2031. However, near-term execution costs and business pressures may temper near-term benefits.
+<<<INSIGHTS>>>
+NKE | negative | Despite positive long-term restructuring goals, NIKE carries a Zacks Rank #5 (Strong Sell) rating. The stock has declined 8.4% in three months, trades at a premium valuation (28.81X forward P/E vs. 22.85X industry average), and faces a projected 22.8% EPS decline in fiscal 2026. Near-term execution costs and ongoing business pressures pose headwinds.
+ADDYY | neutral | Mentioned as a peer competitor implementing similar operational improvements through regional empowerment, localized sourcing, and supply-chain responsiveness. No specific performance data or sentiment indicators provided in the article.
+LULU | neutral | Mentioned as a peer competitor enhancing operational efficiency and product innovation through enterprise enablement initiatives. No specific performance data or sentiment indicators provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:90ab9325285bd8c492a999147ef41b18cb2daa6844c42138043bf4238287550a
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T03:00:02Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/coverage/better-buy/2026/11/09/dutch-bros-vs-on-which-stock-is-a-better-buy/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F4b94d60af61ec105db116c55530575df69073d91-2120x1414.jpg&w=1200&op=resize
+category: 
+tickers: BROS, ONON, NKE, ADDYY
+keywords: growth stocks, consumer brands, valuation comparison, revenue growth, expansion strategy, analyst price targets
+headline: Dutch Bros vs. On: Which Stock Is a Better Buy?
+<<<SUMMARY>>>
+The article compares two high-growth consumer stocks: Dutch Bros, a rapidly expanding drive-thru coffee chain with 27.9% revenue growth, and On, a Swiss athletic footwear brand with 30% revenue growth. While On has better valuation metrics and higher profitability margins, the author recommends Dutch Bros as the better buy due to its everyday consumption model, significant expansion potential (targeting 7,000+ locations), and more favorable analyst price targets (60% upside vs. 16% for On).
+<<<INSIGHTS>>>
+BROS | positive | The author recommends Dutch Bros as the better investment choice, citing strong revenue growth (27.9%), improved profitability, significant expansion opportunities (fewer than 30 states currently, targeting 7,000+ locations), favorable analyst outlook with 60% median one-year price target upside, and resilience of coffee as an affordable luxury in economic downturns.
+ONON | neutral | While On demonstrates solid fundamentals with 30% revenue growth, higher net margins (6.8%), and better valuation metrics (lower P/E and P/S ratios), the author views it less favorably due to lower frequency of customer purchases, vulnerability to economic downturns in premium apparel, and more modest analyst price target upside (16.1%).
+NKE | neutral | Mentioned as a major competitor to On in the crowded premium footwear market, indicating competitive pressure but no specific sentiment expressed about the company itself.
+ADDYY | neutral | Mentioned as a major competitor to On in the crowded premium footwear market, indicating competitive pressure but no specific sentiment expressed about the company itself.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:39619e2d7dc39e4d005291cfb2119756d58af7308f25696041f49102c43a04b4
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T09:15:00Z
+publisher: The Motley Fool
+author: Jack Delaney
+url: https://www.fool.com/investing/2026/11/10/how-many-shares-nike-need-1k-dividends/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893898%2Fnke.jpg&w=1200&op=resize
+category: 
+tickers: NKE
+keywords: dividend yield, income stock, stock price decline, sales slump, China segment, dividend payout
+headline: Here's How Many Shares of Nike You Would Need for $1,000 in Yearly Dividends
+<<<SUMMARY>>>
+Nike has increased its dividend for 24 consecutive years with a current yield of 4.2%, requiring approximately 610 shares (costing ~$23,539) to generate $1,000 in annual dividends. However, the stock has declined 38% in 2026 due to weak sales, particularly in China, and the author cautions that uncertainty around future stock price performance makes Nike too risky to rely on primarily as an income stock.
+<<<INSIGHTS>>>
+NKE | negative | While Nike demonstrates strong dividend consistency (24 consecutive years of increases) with an attractive 4.2% yield, the stock has declined 38% in 2026 amid weak sales, particularly in China, and underperforming brands. The author explicitly warns against relying on Nike as an income stock due to significant uncertainty and declining stock price, which could cut into total returns and limit dividend sustainability.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:27bd5849c0d2d620deb9d2a0f8373f889a603c7f32c73f1c15aba819b2740c64
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T21:45:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027576/nike-nke-declines-more-than-market-some-information-for-investors?cid=CS-ZC-FT-fundamental_analysis|yseop_template_6-3027576
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default53.jpg
+category: 
+tickers: NKE
+keywords: Nike, earnings decline, Strong Sell, valuation premium, analyst downgrade, consumer discretionary
+headline: Nike (NKE) Declines More Than Market: Some Information for Investors
+<<<SUMMARY>>>
+Nike (NKE) fell 3.01% in recent trading and received a Zacks Rank #5 (Strong Sell) rating. Analysts expect significant earnings declines of 35.85% year-over-year for the upcoming quarter and 22.78% for the full year, with revenue projected to drop 10.55% and 7.95% respectively. The stock trades at a premium valuation with a Forward P/E of 32.72 versus the industry average of 14.56, and the Shoes and Retail Apparel industry ranks in the bottom 12% of all industries.
+<<<INSIGHTS>>>
+NKE | negative | Nike received a Zacks Rank #5 (Strong Sell) rating with significant expected earnings declines (35.85% YoY for upcoming quarter, 22.78% for full year), revenue decreases (10.55% and 7.95% respectively), and a premium valuation (Forward P/E of 32.72 vs. industry average of 14.56). The stock also trades at a PEG ratio of 4.66, well above the industry average of 1.49, indicating overvaluation relative to growth prospects.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e36139af09a29db06fda8f22e7bfd2021c5177bbe9a2acda376dfa2d8970fa68
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T17:45:00Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/11/11/nike-stock-is-down-78-from-its-peak-heres-why-id/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893078%2Fshopping-for-sneakers-nike-addidas-athletic-apparel-2.jpg&w=1200&op=resize
+category: 
+tickers: NKE, AMZN
+keywords: Nike restructuring, operating margin recovery, supply reduction strategy, distribution channel expansion, women's business growth, long-term turnaround, Investor Day guidance
+headline: Nike Stock Is Down 78% From Its Peak. Here's Why I'd Buy and Hold for a Decade.
+<<<SUMMARY>>>
+Nike stock has fallen 78% from its peak, but the author argues this presents a long-term buying opportunity. CEO Elliott Hill is restructuring the company into sport-specific teams, deliberately cutting supply of popular products like Dunks and Jordan retros, and shifting distribution strategy to include Amazon and Dick's Sporting Goods. The key metric to watch is whether Nike can restore its operating margin to at least 10% by fiscal 2030, which will be revealed at the November 17 Investor Day.
+<<<INSIGHTS>>>
+NKE | positive | Despite current stock decline, the author sees strategic merit in management's deliberate restructuring, supply reduction, and distribution expansion. The company is choosing to shrink rather than being forced to, and the author would buy if operating margin targets reach 10% by fiscal 2030. The women's business and sport-specific reorganization are viewed as underappreciated growth opportunities.
+AMZN | neutral | Amazon is mentioned as a distribution partner that Nike resumed selling through in 2025 after a six-year gap. This is presented as a strategic move by Nike but doesn't directly impact Amazon's business materially enough to warrant positive or negative sentiment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b5e066c1d3c0763b5fa9a2aa955b64896a762330a7c1b210eb9b6ebc33189974
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:33:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028848/nike-s-shares-slide-nearly-40-ytd-is-a-rebound-in-sight?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3028848
+image_url: https://staticx-tuner.zacks.com/images/articles/main/42/95.jpg
+category: 
+tickers: NKE, ADDYY, WWW, SHOO
+keywords: NIKE stock decline, sportswear weakness, Greater China revenue drop, Jordan Brand, valuation concerns, earnings estimate revisions, business turnaround, competitive pressures
+headline: NIKE's Shares Slide Nearly 40% YTD: Is a Rebound in Sight?
+<<<SUMMARY>>>
+NIKE shares have declined 39.8% year-to-date, underperforming peers amid weak sportswear demand, Jordan Brand declines, and a 26% revenue drop in Greater China. With a premium 28.56X forward P/E valuation and projected fiscal 2027 revenue declines, the stock faces substantial near-term challenges despite long-term recovery potential. Zacks rates NKE as a Strong Sell, recommending investors wait for clearer evidence of improving demand and consistent revenue growth.
+<<<INSIGHTS>>>
+NKE | negative | 39.8% YTD decline, weak sportswear and Jordan Brand performance, 26% Greater China revenue drop, downward earnings revisions, premium valuation relative to peers, and management guidance for continued fiscal 2027 revenue declines. Zacks rates as Strong Sell with recommendation to avoid until clearer recovery signs emerge.
+ADDYY | neutral | Mentioned as a competitor that has outperformed NIKE with only a 0.2% YTD decline and trades at a significantly lower forward P/E multiple of 15.24X, suggesting better relative valuation and stability.
+WWW | neutral | Mentioned as an industry peer that has posted a 20.9% YTD gain, outperforming NIKE and the broader industry, indicating relative strength in the footwear sector.
+SHOO | neutral | Mentioned as an industry peer with a 2.6% YTD gain and forward P/E of 16.29X, outperforming NIKE and trading at a lower valuation multiple.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ee80117258b9c683d72b4320123d3b0869ec20f11e9803919a470cf666e46533
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-15T14:15:02Z
+publisher: The Motley Fool
+author: Jennifer Saibil
+url: https://www.fool.com/investing/2026/11/15/nike-stock-just-jumped-13-should-you-buy-the-stock-on-the-way-up/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F61832e224bbba158475beccaecb63ff473044e20-1600x1067.jpg&w=1200&op=resize
+category: 
+tickers: NKE
+keywords: Nike recovery, stock valuation, premium branding, China sales decline, dividend yield, athletic wear competition, CEO Elliott Hill
+headline: Nike Stock Just Jumped 13%. Should You Buy the Stock on the Way Up?
+<<<SUMMARY>>>
+Nike stock surged 13% from its October lows and is up 79% from its 2021 peak, but remains challenged by declining sales and increased competition. New CEO Elliott Hill is implementing a three-pronged recovery strategy focusing on premium branding, China expansion, and sports innovation. While the stock trades at 24x trailing earnings (not a bargain), its 4.3% dividend yield may appeal to long-term passive income investors.
+<<<INSIGHTS>>>
+NKE | neutral | Nike shows mixed signals: positive momentum with a 13% recent jump and improving gross margins, but fundamentals remain challenged with declining sales, a 79% drop from 2021 highs, and a 26% sales decline in China. The stock's 24x P/E ratio is not considered cheap. Recovery efforts are underway but unproven, warranting a cautious neutral stance rather than bullish or bearish.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7a975d4400b81245260c4cb715c662bea45ca8099796d9e6ff990b1c3c2f95a5
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T15:33:47Z
+publisher: The Motley Fool
+author: Rich Smith
+url: https://www.fool.com/investing/2026/11/17/why-nike-stock-popped-today/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F95f18f04512f7f0843f348c7d15a7dc876421bd5-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: NKE
+keywords: turnaround strategy, earnings per share, profitability, revenue growth, cost reduction, investor day, footwear focus
+headline: Why Nike Stock Popped Today
+<<<SUMMARY>>>
+Nike unveiled its 'Full Stride Ahead' five-year turnaround strategy, aiming to nearly double earnings per share from $2.08 to $3-$3.50 by 2031 through athlete endorsements, faster product launches, and cost cuts. While revenue targets of $47.8B fall short of Wall Street's $51B expectations, the profit goals exceed analyst forecasts of $2.95 per share, driving a 2.2% stock gain.
+<<<INSIGHTS>>>
+NKE | positive | Nike announced an ambitious turnaround plan with profit targets exceeding Wall Street expectations ($3-$3.50 EPS vs. $2.95 forecast), despite modest revenue goals. The stock popped 2.2% on investor optimism about improved profitability through strategic investments and cost management.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:1716cc5743733d72bd111f6f43aab5a3a02b2a867c75b69bd268084ac78ef6ea
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T15:35:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031284/nike-s-china-sales-decline-26-in-q1-how-deep-is-the-challenge?cid=CS-ZC-FT-analyst_blog|quick_take-3031284
+image_url: https://staticx-tuner.zacks.com/images/articles/main/42/95.jpg
+category: 
+tickers: NKE, ADDYY, LULU
+keywords: Greater China, revenue decline, digital restructuring, marketplace disruptions, discounting, turnaround strategy, Running business
+headline: NIKE's China Sales Decline 26% in Q1: How Deep Is the Challenge?
+<<<SUMMARY>>>
+NIKE's Greater China revenues fell 26% in Q1 FY27 due to excessive discounting and marketplace disruptions. The company is restructuring its digital distribution and reducing promotions to restore full-price selling, though near-term sales pressure is expected to continue. While the Running business showed double-digit growth for six consecutive quarters, management expects further revenue declines in China during the remainder of fiscal 2027.
+<<<INSIGHTS>>>
+NKE | negative | 26% revenue decline in Greater China, persistent marketplace disruptions, excessive discounting pressures, and management guidance for worsening performance in the remainder of FY2027. Stock rated Zacks Rank #5 (Strong Sell) and trading at premium valuation of 28.40X forward P/E versus industry average of 22.61X.
+ADDYY | positive | Demonstrating strong momentum in Greater China with 13% currency-neutral sales growth in Q3 2026, supported by product innovation, localized marketing, and improving consumer engagement despite competitive pressures.
+LULU | negative | Facing moderating growth in mainland China with comparable sales declining 8% on a constant-dollar basis in Q2 FY2026, indicating underlying demand pressure and challenges in maintaining sales productivity despite being an important market for expansion.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:483cc6e8490144f9dbb2d2b9613680d7953fef41761e2dfafc9859bb58e1f2f0
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T19:55:09Z
+publisher: The Motley Fool
+author: Jonathan Ponciano
+url: https://www.fool.com/investing/2026/11/17/nike-stock-just-plunged-despite-the-company-s-new-turnaround-plan-then-plunged-here-s-what-spooked-investors/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F94b3e2f0660b52ec51a9d1df096afcc74c74430a-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: NKE
+keywords: turnaround plan, revenue growth, operating margins, investor sentiment, stock decline, fiscal 2029, cost-cutting, dividend yield
+headline: Nike Stock Just Plunged Despite the Company's New Turnaround Plan. Here's What Spooked Investors
+<<<SUMMARY>>>
+Nike shares initially rose 6% after announcing its 'Full Stride Ahead' turnaround plan targeting $5 billion in added revenue and doubled operating margins by 2031, but reversed to trade 5% lower by afternoon. Investors were spooked by the fine print revealing two more years of declining sales before growth returns in fiscal 2029, making the recovery a five-year wait at current valuations.
+<<<INSIGHTS>>>
+NKE | negative | Despite unveiling an ambitious long-term turnaround plan with strong 2031 targets, Nike faces near-term headwinds with expected revenue declines through fiscal 2028 and challenging financial performance in 2028. The stock's initial 6% gain reversed to a 5% loss as investors realized the recovery is 5 years away, and the current valuation of 30x earnings is expensive for a company with falling sales.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d35987e5bde8d5d086f1d9315d0d7469f57f857c4a8e569bcaeaa30920b02e94
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T21:45:04Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3031432/nike-nke-falls-more-steeply-than-broader-market-what-investors-need-to-know?cid=CS-ZC-FT-fundamental_analysis|yseop_template_6-3031432
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default250.jpg
+category: 
+tickers: NKE
+keywords: Nike stock decline, earnings forecast, Strong Sell rating, valuation premium, consumer discretionary, market underperformance
+headline: Nike (NKE) Falls More Steeply Than Broader Market: What Investors Need to Know
+<<<SUMMARY>>>
+Nike stock fell 6.3% on November 17, 2026, significantly outpacing broader market losses. The company faces declining earnings expectations with EPS projected to fall 35.85% quarter-over-quarter and annual revenue expected to decline 7.95% year-over-year. Nike currently holds a Zacks Rank of #5 (Strong Sell) with a Forward P/E ratio of 30.8, well above its industry average of 13.39.
+<<<INSIGHTS>>>
+NKE | negative | Nike experienced a steep 6.3% single-day decline, significantly worse than the S&P 500's 1.03% loss. The company faces substantial headwinds including a projected 35.85% EPS decline quarter-over-quarter, 10.55% revenue decline, and a Zacks Rank #5 (Strong Sell) rating. Additionally, the stock trades at a significant valuation premium (Forward P/E of 30.8 vs. industry average of 13.39) and PEG ratio of 4.39, suggesting overvaluation relative to growth prospects.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f0d03b4ca00f11e650b8dc98cb5bf1080eab2fd31667b2ff398b861eff558ae7
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T21:59:09Z
+publisher: The Motley Fool
+author: Howard Smith
+url: https://www.fool.com/coverage/stock-market-today/2026/11/17/stock-market-today-nov-17-nike-shares-fall-63-after-investor-day-turnaround-plan-draws-scrutiny/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F0d8adf69c53e2e4487b769b8bd98924dbb7683d9-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: NKE, LULU, ADDYY
+keywords: Nike turnaround plan, Investor Day, 2031 growth targets, sales decline, earnings growth, capital returns, athletic footwear market
+headline: Stock Market Today, Nov. 17: Nike Shares Fall 6.3% After Investor Day Turnaround Plan Draws Scrutiny
+<<<SUMMARY>>>
+Nike shares fell 6.3% on November 17, 2026, following its Investor Day presentation of a 'Full Stride Ahead' turnaround strategy. While the company outlined ambitious 2031 targets including $5 billion in incremental revenue growth and 50% earnings growth, investors were concerned about expected sales declines for the next two years before returning to market-level growth in fiscal 2029. Nike plans to return $12 billion in cumulative capital through dividends over the next four years.
+<<<INSIGHTS>>>
+NKE | negative | Stock declined 6.3% as investors expressed skepticism about the turnaround plan's feasibility. The announcement of expected sales declines for two more years before recovery spooked traders, despite long-term growth targets and dividend commitments.
+LULU | neutral | Lululemon fell 1.25%, reflecting general sector weakness and competitive pressures in athletic apparel, but no company-specific negative news.
+ADDYY | neutral | Adidas declined 1.58%, tracking broader market weakness and category competition concerns similar to Nike, but without company-specific negative catalysts.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:de04f8d5ef71d6970e92708fe8f71644dcf0254a51ead534aaff36059144e7ff
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T22:30:00Z
+publisher: The Motley Fool
+author: Lawrence Rothman, Cfa
+url: https://www.fool.com/investing/2026/11/17/nike-is-down-78-from-its-high-heres-what-that-does/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F890301%2Fgettyimages-1407198336-1280x853-c533c3e1.jpg&w=1200&op=resize
+category: 
+tickers: NKE
+keywords: Nike stock decline, dividend yield, revenue decline, free cash flow, dividend coverage, payout ratio, product innovation, management outlook
+headline: Nike Is Down 78% From Its High. Here's What That Does to the Yield.
+<<<SUMMARY>>>
+Nike shares have plummeted 78% from their peak, resulting in a higher dividend yield of 4.29%. However, the company faces persistent revenue declines (down 5% year-over-year), weak management outlook, and concerning dividend coverage issues. Free cash flow of $2.2 billion failed to cover $2.4 billion in dividends, and projected earnings of $1.15-$1.35 per share fall short of the annualized $1.64 dividend. The analyst recommends passing on the stock despite the attractive yield due to ongoing operational challenges.
+<<<INSIGHTS>>>
+NKE | negative | Nike faces significant headwinds including a 78% stock price decline, persistent revenue drops (5% YoY), weakening free cash flow ($2.9B down from $3.7B), inadequate dividend coverage ($2.2B FCF vs $2.4B dividends), and management forecasting continued high-single-digit revenue declines. These fundamental deteriorations outweigh the superficially attractive dividend yield, indicating ongoing operational distress.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:de57642fab2119743d385d03f8b4aefeacd751c463fa575db810867a82a6c8ce
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T13:00:05Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3032293/nike-inc-nke-is-a-trending-stock-facts-to-know-before-betting-on-it?cid=CS-ZC-FT-fundamental_analysis|most_searched_stocks-3032293
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default141.jpg
+category: 
+tickers: NKE
+keywords: Nike, earnings decline, revenue contraction, valuation premium, Strong Sell rating, athletic apparel, stock performance
+headline: NIKE, Inc. (NKE) Is a Trending Stock: Facts to Know Before Betting on It
+<<<SUMMARY>>>
+Nike has been trending on Zacks.com but faces significant headwinds. The company received a Zacks Rank #5 (Strong Sell) rating due to declining earnings estimates and negative revenue growth projections. Current quarter earnings are expected to drop 35.9% year-over-year, and fiscal year revenue is projected to decline 7.9%. The stock is also trading at a premium valuation relative to peers.
+<<<INSIGHTS>>>
+NKE | negative | Nike received a Zacks Rank #5 (Strong Sell) rating. Current quarter earnings expected to decline 35.9% year-over-year with consensus estimate down 5.8% in the last 30 days. Fiscal year revenue projected to decline 7.9%, and the stock is trading at a premium valuation (F grade) relative to peers. The company is expected to underperform the broader market in the near term.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e8b45e6516c628b5d616112d0a0f3fb3d2d2d6e1f032a3e5a1d6ef130021550a
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T14:20:01Z
+publisher: The Motley Fool
+author: Matt Dilallo
+url: https://www.fool.com/investing/2026/11/19/nike-s-2031-targets-look-great-on-paper-but-sales-won-t-grow-until-2029-here-s-the-price-i-d-pay/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F0d8adf69c53e2e4487b769b8bd98924dbb7683d9-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: NKE
+keywords: Nike turnaround plan, fiscal 2031 targets, earnings per share, revenue growth delay, operating margins, dividend strategy, valuation, margin of safety
+headline: Nike’s 2031 Targets Look Great on Paper, but Sales Won’t Grow Until 2029. Here’s the Price I’d Pay to Buy Nike Stock Right Now.
+<<<SUMMARY>>>
+Nike unveiled an ambitious turnaround plan targeting more than double adjusted earnings per share by fiscal 2031, with operating margins expanding to 12%-14%. However, the company won't return to market-level revenue growth until fiscal 2029, creating a lengthy recovery timeline. The analyst suggests buying Nike stock only at $32-$35 per share to provide adequate margin of safety given execution risks and the delayed turnaround.
+<<<INSIGHTS>>>
+NKE | neutral | While Nike's 2031 targets are ambitious and could deliver attractive returns, the lengthy recovery timeline (no sales growth until 2029), execution risks, and current valuation near $38 per share leave limited margin of safety. The analyst recommends waiting for a lower entry price of $32-$35, suggesting the stock is not compelling at current levels despite positive long-term potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8a316ea67b004926b0e66956a3f8ba4d77ee5ed9dedec36c801b4522fb6cec19
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T14:55:02Z
+publisher: The Motley Fool
+author: Jake Lerch
+url: https://www.fool.com/coverage/better-buy/2026/11/19/dicks-sporting-goods-vs-etsy-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Faf96f83367efb533d5a74d76b2dfd7cdc2d0e882-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: DKS, ETSY, NKE, AMZN, EBAY
+keywords: retail comparison, e-commerce marketplace, valuation analysis, profitability margins, revenue growth, omnichannel strategy, vendor concentration risk
+headline: DICK'S Sporting Goods vs. Etsy: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares DICK'S Sporting Goods and Etsy as investment options for 2027. DICK'S shows stronger revenue growth (22% average since 2021) and operates an expanding omnichannel retail presence, but faces risks from Nike dependence (31% of purchases) and lower profitability margins (6.4%). Etsy operates a high-margin marketplace (18.1% operating margin) with 5.6 million sellers and 86.5 million buyers, but has modest revenue growth (2.1%). The analyst concludes Etsy is the better buy due to superior profitability and lower valuation (10x P/E vs. 15x for DICK'S), despite DICK'S faster growth trajectory.
+<<<INSIGHTS>>>
+DKS | neutral | Strong revenue growth (22% average) and market expansion through acquisitions are offset by significant risks including heavy Nike dependence (31% of inventory), lower operating margins (6.4%), and higher valuation (15x P/E). The company shows promise but carries notable vulnerabilities.
+ETSY | positive | Superior profitability with 18.1% operating margin, lower valuation at 10x P/E, strong free cash flow ($638.8M), and asset-light marketplace model connecting 5.6M sellers with 86.5M buyers. Analyst recommends it as the better buy despite modest 2.1% revenue growth.
+NKE | neutral | Mentioned as a significant concentration risk for DICK'S, accounting for nearly 31% of merchandise purchases, which creates vulnerability to supply chain or relationship disruptions.
+AMZN | neutral | Identified as a competitive threat to Etsy's marketplace model, representing intense competition in the e-commerce space.
+EBAY | neutral | Mentioned as a specialized e-commerce competitor to Etsy's marketplace platform.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:98c162e122b433917957c11e583ccfc8469a1043313ab34076daa94adb5361fb
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T10:45:02Z
+publisher: The Motley Fool
+author: John Ballard
+url: https://www.fool.com/investing/2026/11/20/heres-how-many-shares-of-nike-you-need-for-20000-in-yearly-dividends/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F95f18f04512f7f0843f348c7d15a7dc876421bd5-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: NKE
+keywords: dividend yield, stock decline, turnaround plan, free cash flow, earnings per share, revenue growth, Greater China weakness
+headline: Here’s How Many Shares of Nike You Need for $20,000 in Yearly Dividends
+<<<SUMMARY>>>
+Nike's stock has fallen 42% over the past year, pushing its dividend yield to a record 4.6%. Investors would need approximately 12,195 shares (costing ~$442,800) to generate $20,000 in annual dividends. While the company's recent Investor Day outlined plans to return $12 billion through dividends by fiscal 2031 and target $3-$3.50 EPS by that date, Nike faces near-term headwinds including expected revenue declines through fiscal 2028 and a dividend payout ratio exceeding free cash flow. The turnaround presents both risk and potential upside for patient investors.
+<<<INSIGHTS>>>
+NKE | neutral | Nike presents a mixed outlook. While the company offers an attractive 4.6% dividend yield and has outlined ambitious 2031 targets with management demonstrating cost discipline and performance segment growth, significant near-term risks exist including expected revenue declines through fiscal 2028, weakness in Greater China (down 26%), and a dividend payout ratio exceeding free cash flow. The stock's 42% decline creates opportunity but requires patience for the turnaround to materialize.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d0b2144adc553a046bfc6e2f0f1e37944cce6c4b2baa4550ddf07dd018dfea72
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T10:40:02Z
+publisher: The Motley Fool
+author: Jennifer Saibil
+url: https://www.fool.com/investing/2026/11/22/nike-is-down-79-from-its-peak-here-s-how-much-usd10-000-invested-pays-in-dividends-now/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fe4bb736e821206f65dcce2d76a3c4ac4cfbb6ed6-1620x1080.jpg&w=1200&op=resize
+category: 
+tickers: NKE, ADDYY
+keywords: Nike stock decline, dividend yield, activewear competition, blue chip stocks, sales decline, investment opportunity
+headline: Nike Is Down 79% From Its Peak. Here's How Much $10,000 Invested Pays in Dividends Now.
+<<<SUMMARY>>>
+Nike stock has declined 79% from its all-time high due to increased competition in the activewear market and declining sales. Despite the stock decline, Nike's dividend yield has risen to 4.98%, just off a 10-year high. A $10,000 investment today would yield approximately $431 annually in dividends, making it potentially attractive for dividend-focused investors seeking exposure to a potential rebound.
+<<<INSIGHTS>>>
+NKE | negative | Nike's stock is down 79% from its peak, sales have declined 4% year-over-year with management expecting high-single-digit declines for the full year, and the company faces increased competition from new premium brands. However, the negative sentiment is partially offset by its strong market position, reliable dividend history, and elevated yield attracting income investors.
+ADDYY | neutral | Adidas is mentioned as Nike's closest competitor with $31 billion in revenue compared to Nike's $46 billion. No specific performance data or outlook is provided, warranting a neutral stance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fd63d88ca98b47ca290795ea414b970fa213591903cc9c3813f73ee5e6cf491e
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T15:53:26Z
+publisher: The Motley Fool
+author: Robert Izquierdo
+url: https://www.fool.com/coverage/better-buy/2026/11/22/coupang-vs-dick-s-sporting-goods-which-retail-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Faf96f83367efb533d5a74d76b2dfd7cdc2d0e882-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: CPNG, DKS, NKE
+keywords: e-commerce, retail, profitability, valuation, dividend, expansion, data breach, acquisition, loyalty programs
+headline: Coupang vs. DICK'S Sporting Goods: Which Retail Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Coupang and DICK'S Sporting Goods as investment options for 2027. Coupang dominates South Korean e-commerce but is unprofitable with a $1.4 billion net loss, facing data breach fallout and regulatory challenges. DICK'S Sporting Goods is profitable with strong cash flow, a 3.8% dividend yield, and recently expanded through Foot Locker acquisition. The analyst recommends DICK'S as the better buy due to profitability, superior valuation metrics, and lower forward P/E ratio despite both stocks experiencing significant sell-offs in 2026.
+<<<INSIGHTS>>>
+CPNG | negative | Company is unprofitable with $1.4 billion net loss, negative net margin of 3.8%, facing data breach fallout affecting 33 million accounts, regulatory investigations into bundling practices, and complex Farfetch integration. While it dominates South Korean e-commerce, high valuation (140.5x forward P/E) and lack of profitability make it a riskier investment.
+DKS | positive | Company is solidly profitable with $838.8 million net income and 4% net margin. Strong free cash flow of $400.2 million, robust 3.8% dividend yield, and attractive valuation with 11.6x forward P/E (at low point for the year). Recent Foot Locker acquisition expands market reach, though some integration risks exist. Analyst recommends buying at current depressed valuations.
+NKE | neutral | Mentioned as a key vendor that DICK'S Sporting Goods relies heavily on. No specific positive or negative commentary provided; noted as a dependency risk factor for DICK'S operations.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0ef17c090f5a6da8a7deee4c7519bded092a33fbc24e96201161e8fae03f6cf6
+symbol: NKE
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T19:51:25Z
+publisher: The Motley Fool
+author: Sara Appino
+url: https://www.fool.com/coverage/better-buy/2026/11/22/nike-vs-procter-gamble-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F497213577468110e4ae04f3160ed91a99378c474-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: NKE, PG, WMT, UA, UAA, ADDYY
+keywords: consumer stocks, dividend investing, athletic apparel, consumer staples, brand loyalty, cash flow, valuation comparison, supply chain risk
+headline: Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Nike and Procter & Gamble as investment options for 2027. Nike faces challenges with declining sales and a struggling business model, while P&G demonstrates steady growth, strong profitability, and a 70-year dividend increase streak. The analyst recommends P&G as the better buy due to its trusted brands, consistent growth, and reliable dividend income, despite Nike's lower valuation metrics.
+<<<INSIGHTS>>>
+NKE | negative | Nike is experiencing declining revenue (-1.2% YoY), faces intense competition, has concentrated customer base risk (29% from top 3 customers), and expects sales to fall in the current fiscal year. The company is undergoing a challenging restructuring, particularly in China operations.
+PG | positive | P&G demonstrates strong fundamentals with 3.5% revenue growth, high net margins (18.2%), robust free cash flow ($15.1B), and an exceptional 70-year dividend increase streak. All five business segments grew in the latest quarter, and the company maintains trusted brands with consistent consumer demand.
+WMT | neutral | Walmart is mentioned as a significant customer representing 16% of P&G's sales, indicating a key distribution channel but not the primary focus of the analysis.
+UA | neutral | Under Armour is mentioned as a competitor to Nike but is not analyzed as an investment option in this article.
+UAA | neutral | Under Armour is mentioned as a competitor to Nike but is not analyzed as an investment option in this article.
+ADDYY | neutral | Adidas is mentioned as a competitor to Nike in the athletic footwear and apparel market but is not analyzed as an investment option in this article.
+<<<END>>>

@@ -294,12 +294,12 @@ class TradeIntent(BaseModel):
         return self.budget if self.each and self.action != "order" else None
 
     def what(self) -> str:
-        """What is to be bought or looked at, in words: the theme, or the names, or the tickers."""
+        """What is to be bought or looked at, in words: the theme, or the names, or the tickers. ONE company asked for (count 1, entry 146) is said in the singular."""
         if self.action == "order":
             return ", ".join(o.named for o in self.orders)
         if self.topic:
             ends_in_a_noun = _token_list(self.topic)[-1:] and _token_list(self.topic)[-1] in THEME_NOUNS
-            return repr(self.topic) if ends_in_a_noun else f"{self.topic!r} companies"      # 'AI stocks', not 'AI stocks' companies
+            return repr(self.topic) if ends_in_a_noun else f"{self.topic!r} compan{'y' if self.count == 1 else 'ies'}"      # 'AI stocks', not 'AI stocks' companies
         return ", ".join([*self.symbols, *self.companies])
 
     def limit_words(self) -> str:
@@ -330,11 +330,11 @@ class TradeIntent(BaseModel):
                 spend = f", spending at most ${one.dollars:,.2f} on each stock" if one.dollars is not None else f", {sh.text(one.shares)} share{'s' if sh.quantity(one.shares) != 1 else ''} of each stock"
             return ", ".join(o.describe() for o in self.orders) + spend + (f", {limit}" if limit else "") + " (your own order: no recommendation is made and the Critic is not asked)"
         verb = "buy" if self.action == "buy" else "look at (nothing will be bought)"
-        count = f"the {self.count} most recommended " if self.count else "the most recommended "
+        count = f"the {self.count} most recommended " if self.count and self.count != 1 else "the most recommended "      # count 1: "the most recommended 'shoe' company" (entry 146)
         spread = "; the money spread evenly over the companies that are approved" if self.allocation == "even" and not self.each else ""
         spend = (f"; spending at most ${self.budget:,.2f} on each stock" if self.each else f"; spending at most ${self.budget:,.2f}") if self.budget else "; spending as much as the account allows" if self.action == "buy" else ""
         if self.shares_words():
-            spend = f"; if approved, {self.shares_words()}" + (f", spending at most ${self.budget:,.2f}" if self.budget else "")      # the typed shares are each stock's limit (entry 140, C2); the cash is still the only other check
+            spend = f"; if approved, {sh.text(self.shares_each)} share{'s' if sh.quantity(self.shares_each) != 1 else ''} of it" if self.count == 1 and self.shares_each is not None and not self.shares_of else f"; if approved, {self.shares_words()}" + (f", spending at most ${self.budget:,.2f}" if self.budget else "")      # the typed shares are each stock's limit (entry 140, C2); the cash is still the only other check
         return f"{verb} {count}{self.what()}{spread}{spend}" + (f"; {limit}" if limit else "")
 
     def as_request(self) -> tuple[str, str]:
@@ -718,6 +718,16 @@ def count_written(typed: str) -> set[Decimal]:
     return found
 
 
+ONE_STOCK = re.compile(r"\bthe\s+(?:single\s+|very\s+)?(?:most[\s-]+recommended|best|top|number\s+one|#\s?1|no\.?\s?1|(?:highest|best|top)[\s-]+(?:rated|ranked|scored))\s+(?:[\w&'.-]+\s+){0,3}?"
+                       r"(?:stock|company|name|pick|ticker|equity)\b(?![\s-]+(?:stocks|companies|names|picks|ideas|tickers|symbols|list)\b)", re.I)      # "the most recommended shoe company", "the best AI stock": ONE company (entry 146)
+
+
+def one_stock_asked(typed: str) -> bool:
+    """True when the user asked for ONE company in the singular with no number ("buy 5 shares of the most recommended shoe company", "the best AI stock", "the top-rated oil company"; entry 146): the count is 1. A plural
+    ("the best shoe companies", "the top stock picks") is not. A program's check of the user's own words: a count of 1 decides that one stock, not three, is bought."""
+    return bool(ONE_STOCK.search(typed))
+
+
 SHARES_EACH = re.compile(rf"(?<![\w$.,%-])(?P<n>\d[\d,]*(?:\.\d+)?|{'|'.join(NUMBER_WORDS)})(?![\d.,%])\s+(?:shares?\s+)?(?:(?:of|in)\s+)?"
                          r"(?:each|apiece|a piece|per\s+(?:stock|company|name|ticker|symbol)s?|for every (?:one|stock|company|name|ticker|symbol))\b", re.I)      # "5 shares of each", "5 shares each", "5 apiece": ONE number of shares for every stock (entry 140, C1)
 
@@ -994,9 +1004,18 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
         check_dollars_each(direct, typed)
         check_amount_was_read(direct, typed)
         return direct
+    if intent.action in ("buy", "research") and intent.count is None and not intent.symbols and not intent.companies and one_stock_asked(typed):      # "the most recommended shoe company": ONE company (entry 146), never the default of 3
+        intent = intent.model_copy(update={"count": 1, "corrected": [*intent.corrected, "you asked for one company (the most recommended, the best, the top one): only the first is recommended" + (" and bought" if intent.action == "buy" else "")]})
     if intent.action == "buy":      # a number of shares typed WITH a recommendation (entry 140, C1): read from the words, it is each approved stock's own limit (C2)
         of, every = typed_shares(intent, typed)
         gone = [f"{sh.text(sh.quantity(n))} shares of {name} is not a number of shares you typed, so it is not used" for name, n in model_shares.items() if name not in of and not every]
+        loose = sorted(shares_written(typed) - set(of.values()) - ({every} if every is not None else set()))      # a number written as SHARES that no stock and no "each" took (entry 146): it is NEVER dropped
+        if loose:
+            if len(loose) == 1 and intent.count == 1 and not of and loose[0] == loose[0].to_integral_value():
+                every = loose[0]      # "buy 5 shares of the most recommended shoe company": the 5 shares of the ONE company
+            else:
+                raise NeedsClarification(f"you wrote {' and '.join(sh.text(n) for n in loose)} shares but not which stock they are for: say how many companies and the shares of each ('buy 5 shares of each of the top 3 shoe stocks'), "
+                                         "or ask for one ('buy 5 shares of the most recommended shoe company'). Nothing was bought: a number of shares is never dropped, and the money is never spent in its place.")
         if of or every is not None or gone:
             intent = intent.model_copy(update={"shares_of": of, "shares_each": every, "corrected": [*intent.corrected, *gone]})
     return intent

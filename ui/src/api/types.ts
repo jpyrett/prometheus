@@ -263,6 +263,8 @@ export interface WorkOrderView {
   kind: "research" | "direct";
   understood: string | null;
   rows: WorkRow[];
+  /** The scored companies below the number the request asked for (entry 144): named, not listed as rows. */
+  beyond?: { top: number; count: number; symbols: string[] } | null;
   ts?: number;
 }
 
@@ -273,7 +275,7 @@ export interface RunStartedData {
   mode: "live" | "replay";
   account_id: number;
   prompt: string;
-  options: { strict: boolean; neutral: boolean; fetch: boolean; raise_funds?: boolean; speed?: "fast" | "faithful" | null };
+  options: { strict: boolean; neutral: boolean; fetch: boolean; raise_funds?: boolean; ignore_critic?: boolean; speed?: "fast" | "faithful" | null };
   trade_mode: TradeMode;
   started_utc: string;
   stages: StageInfo[];
@@ -436,7 +438,7 @@ export interface Health {
   book: string;
   clock_note: string;
   clock_pill?: string;
-  defaults: { prompt: string; strict: boolean; neutral: boolean; fetch: boolean; raise_funds?: boolean };
+  defaults: { prompt: string; strict: boolean; neutral: boolean; fetch: boolean; raise_funds?: boolean; ignore_critic?: boolean };
   limits: { prompt_chars: number };
   active_run: string | null;
   /** What the active run is, when the server says (a desk run or a Proving Ground run): the page attaches it to the right tab. */
@@ -453,6 +455,8 @@ export interface RunRequest {
   fetch: boolean;
   /** The box "Always raise funds" (entry 142, R12): the setting ALWAYS_RAISE_FUNDS for this one run; off unless ticked. */
   raise_funds: boolean;
+  /** The box "Ignore Critic" (entry 148): skip the Critic's step for this one run; off unless ticked. Strict cannot go with it. */
+  ignore_critic: boolean;
   /** The Mode switch: what the run uses. The server saves it through the Account Manager when it differs from the account's. */
   mode: TradeMode;
 }

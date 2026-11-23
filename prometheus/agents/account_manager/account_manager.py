@@ -32,6 +32,9 @@ list of fills to a portfolio it holds.
 A NEUTRAL RECOMMENDATION IS AN APPROVAL (design choices entries 91 and 107): with `ALLOW_NEUTRAL_RECOMMENDATIONS=true` every company the Advisor scored neutral, whoever named it, counts as approved when `decide_trades` works with the
 work order's recommendation result, up to the number of companies the request asked for (`count`), and the Trader may buy it (`neutral.py`); it is sized together with the approved purchases, in one call.
 
+IGNORE CRITIC (design choices entry 148): when the user ticked the box for a run the desk skips the Critic's node and every recommendation of the Advisor counts as approved (`ignore_critic.py`, `origin: "advisor"`), decided like a neutral one and sized
+with the neutral ones in the same call; with the box off nothing here changes.
+
 THE ACCOUNT MANAGER DOES NO RISK MANAGEMENT (Jacob, 2026-11-15): it delegates tasks to the other agents, updates the user's profile and portfolio, and works with verifying the trades the Trader has made. The only check on
 an order is that the funds cover it (entry 91).
 
@@ -66,7 +69,7 @@ from pathlib import Path
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage
 
-from prometheus.agents.account_manager import funding, handshake, neutral, orders, sizing
+from prometheus.agents.account_manager import funding, handshake, ignore_critic, neutral, orders, sizing
 from prometheus.agents.critic import feedback
 from prometheus.agents.account_manager.config import load_config as load_account_manager_config
 from prometheus.agents.account_manager.intent import NeedsClarification, TradeIntent, check_typed, parse_intent, read_unit_answer, settle_unit
@@ -77,7 +80,7 @@ from prometheus.common.portfolio import Portfolio, after_purchase, apply_fill, l
 from prometheus.common.trading_clock import trading_now
 from prometheus.common.user_account import UserDirectory
 from prometheus.common.user_profile import RiskView, UserProfile, load_profile
-from prometheus.common.work_order import DIRECT, DataResult, WorkOrder, decision_dollars, decision_max_price, decision_min_price, decision_of, decision_pot, iso_date, new_work_order, verify_trade
+from prometheus.common.work_order import DIRECT, MAX_QUOTE_SYMBOLS, DataResult, WorkOrder, decision_dollars, decision_max_price, decision_min_price, decision_of, decision_pot, iso_date, new_work_order, verify_trade
 from prometheus.models.chat import get_chat_model, is_rate_limited
 from prometheus.models.chat import model_name as chat_model_name
 from prometheus.prompts import account_manager_request as request_prompt
@@ -245,7 +248,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
     @traced("account_manager.decide_trades")
     def decide_trades(self, order: WorkOrder, portfolio: Portfolio, approver=None, now=None, mode: str | None = None, balance: str | None = None, budget: Decimal | None = None,
                       clarify=None, said_how_much: bool = False, request_text: str = "", count: int | None = None, each: Decimal | None = None, max_price: Decimal | None = None,
-                      min_price: Decimal | None = None, shares_of: dict | None = None, shares_each: Decimal | None = None, raise_funds: bool = False) -> WorkOrder:
+                      min_price: Decimal | None = None, shares_of: dict | None = None, shares_each: Decimal | None = None, raise_funds: bool = False, top_pick: bool = False) -> WorkOrder:
         """The Critic's verdicts become trade decisions (`order.trade_decisions`, one per review; see `decisions.py` for the rules), and the Account Manager decides HOW MUCH (design choices entry 80: the Advisor and the
         Critic only deal with recommendations): a denial is final, an approval that ran out is not traded, every approved purchase is sized from the user's money (`sizing.py`: the only check is that the funds cover the order), and an approved recommendation
         is traded in Auto mode, where NOTHING is asked (design choices entry 104: there is no second mark and a review that wants a person was already denied by the Critic); in Ask mode it goes to the user, through `approver`
@@ -282,21 +285,31 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
         RaiseFunds plan before the Trader sells and buys (`fund_decisions`). Not permitted (Auto mode without the words, a no), nothing is sold: the round robin buys fewer shares with the cash, as ever, and the user is told what to say. A purchase with no
         typed shares (sized to the cash) never triggers it, and a request that has one is not funded at all (the money raised would reach it).
 
+        `top_pick` (entry 147): the user asked for THE most recommended company ("buy 5 shares of the most recommended shoe company", `intent.one_stock_asked`). When the Advisor recommended a company, that one company is the user's
+        choice: it is bought if the Critic approves it and NOTHING is bought if the Critic denies it; no neutral company takes its place (entry 107's filling is for a number of companies, not for the one the user named by its rank),
+        and the user is told why each neutral company was not bought. When the Advisor recommended none, the best neutral company is the most recommended one, as before.
+
+        IGNORE CRITIC (design choices entry 148; the order says `ignore_critic`, the desk set it when it routed around the Critic): the Critic did not run, so every recommendation of the Advisor counts as approved (`_advisor_picks`; `origin: "advisor"`, no review): Auto
+        trades them (`yes_auto`), Ask asks about each (a card that says the Critic did not review it) in the same proposal as the neutral purchases, and they are sized TOGETHER with those in ONE call, the Advisor's first. `count` keeps the number asked for (the Advisor's
+        recommendations first, then the neutral companies). With the box off none of this is touched.
+
         Returns the SAME order, `decided` unless an answer is pending. Refuses (a message on the order) a profile that is not the portfolio's user's."""
         from prometheus.agents.account_manager import clarify as clarifying, decisions
         if each is not None and budget is not None:
             order.errors = [*order.errors, "an amount for each stock and one total (a budget) are two ways to say how much: give one of them"]
             return order
         approved = decisions.purchases_to_size(order, portfolio, now, max_price, min_price)      # the purchases the Critic's approvals make (a denied recommendation is not one; one priced above the user's limit is not either): [] unless the order is `reviewed`
+        advisor_chosen, advisor_purchases = self._advisor_picks(order, approved, count, max_price, min_price)      # "Ignore Critic" (entry 148): the Advisor's recommendations count as approved, first by rank; [] with the box off
         names = neutral.neutral_candidates(order)
         known_prices: dict[str, Decimal] = {}
         if (max_price is not None or min_price is not None) and names:      # the user's price limit and floor (entries 138 and 140): price every neutral company first, so that the number asked for is filled from those inside them
             names, known_prices = self._neutral_under_limit(order, names, max_price, min_price)
-        chosen, unneeded = neutral.choose(names, len(approved), count)        # every neutral company counts as approved (entry 107), up to the number the request asked for
-        self._not_needed(order, unneeded, count)
+        pick = top_pick and bool(order.recommendations)      # "the most recommended company" and the Advisor recommended one: that one or nothing (entry 147)
+        chosen, unneeded = ([], names) if pick else neutral.choose(names, len(approved) + len(advisor_chosen), count)        # every neutral company counts as approved (entry 107), up to the number the request asked for, after the Advisor's own (entry 148)
+        self._not_needed(order, unneeded, count, top=order.recommendations[0] if pick else None)
         neutral_prices = (known_prices or self._neutral_prices(order, chosen)) if chosen else {}
-        neutral_purchases = neutral.purchases_for(order, chosen, neutral_prices, max((p.rank for p in approved), default=0))      # ranked after the approved ones: the sizing visits them in that order
-        extra = [p for p in neutral_purchases if p.price is not None]      # asked about with the approved ones: ONE set of questions, over everything that is to be bought
+        neutral_purchases = neutral.purchases_for(order, chosen, neutral_prices, max((p.rank for p in [*approved, *advisor_purchases]), default=0))      # ranked after the approved ones: the sizing visits them in that order
+        extra = [p for p in [*advisor_purchases, *neutral_purchases] if p.price is not None]      # asked about with the approved ones: ONE set of questions, over everything that is to be bought
         prices = self._held_prices(order, portfolio, now, bool(extra))
         wanted = None
         if each is not None:      # the user said the amount of EACH stock (entry 125): the plan of the answer "an amount for each company", with no question
@@ -310,7 +323,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             if plan is not None:
                 balance, budget, wanted = plan.balance, plan.budget, plan.wanted
         if shares_of or shares_each is not None:      # the shares the user typed with the recommendation (entry 140, C2): each such purchase is limited to them; the smaller of two limits on one purchase wins
-            rows = [(p, decisions.company_of(order, p)) for p in approved] + [(p, c.get("company")) for c, p in zip(chosen, neutral_purchases) if p.price is not None]
+            rows = [(p, decisions.company_of(order, p)) for p in [*approved, *(p for p in advisor_purchases if p.price is not None)]] + [(p, c.get("company")) for c, p in zip(chosen, neutral_purchases) if p.price is not None]
             typed = decisions.typed_wanted(rows, shares_of, shares_each)
             if typed:
                 wanted = decisions.combine_wanted(wanted, typed)
@@ -321,13 +334,32 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             raising = self._typed_funding(order, portfolio, [*approved, *extra], wanted, budget, prices, now, mode, approver, raise_funds, request_text)
         notes_before = len(order.data.notes) if order.data is not None else 0
         order = decisions.decide_trades(order, portfolio, self.profile, approver, now, mode, balance, budget, prices, wanted, neutral_purchases=list(zip(chosen, neutral_purchases)),
-                                        fractional=self.fractional_split(balance), max_price=max_price, min_price=min_price, funding=raising)
+                                        fractional=self.fractional_split(balance), max_price=max_price, min_price=min_price, funding=raising, advisor_purchases=list(zip(advisor_chosen, advisor_purchases)))
         for note in (order.data.notes[notes_before:] if order.data is not None else []):      # what a price limit or floor left without a decision: told to the user (the notes of the neutral ones were told as they were made)
             for prefix in (decisions.OVER_LIMIT, decisions.UNDER_FLOOR):
                 if note.startswith(prefix):
                     self.tell_user(f"      {note[len(prefix):]}")
         self._save_decisions(order)
         return order
+
+    def _advisor_picks(self, order: WorkOrder, approved: list[sizing.Purchase], count: int | None, max_price: Decimal | None, min_price: Decimal | None) -> tuple[list[dict], list[sizing.Purchase]]:
+        """(the Advisor's recommendations that are bought, their purchases) when the user chose to IGNORE THE CRITIC (entry 148; the order says `ignore_critic`), else ([], []): nothing changes with the box off. Every Advisor recommendation counts as approved and is
+        priced the way a neutral company is: ONE quote order to the Data Clerk (`_neutral_prices`; with a price limit or floor `_neutral_under_limit`, which leaves out one priced outside it, tells the user and writes the note), so a recommendation with no
+        price is decided `no_system_denied` (nothing is bought that cannot be priced). The number the request asked for (`count`) is kept: the best ranked come first, and a recommendation beyond it gets no decision and the user is told. Never raises."""
+        records, _ = ignore_critic.recommendations_of(order)
+        if not records:
+            return [], []
+        if max_price is not None or min_price is not None:
+            records, prices = self._neutral_under_limit(order, records, max_price, min_price)
+        else:
+            prices = self._neutral_prices(order, records[:MAX_QUOTE_SYMBOLS])
+        chosen, beyond = ignore_critic.choose(records, count)
+        for record in beyond:
+            line = ignore_critic.not_needed_line(record, count)
+            self.tell_user(f"      {line}")
+            if order.data is not None:
+                order.data.notes = [*order.data.notes, ignore_critic.NOT_NEEDED + line]
+        return chosen, ignore_critic.purchases_for(order, chosen, prices, max((p.rank for p in approved), default=0))
 
     def _typed_funding(self, order: WorkOrder, portfolio: Portfolio, rows: list[sizing.Purchase], wanted: dict[str, Decimal], budget: Decimal | None, prices: dict[str, Decimal], now, mode: str | None, approver,
                        raise_funds: bool, request_text: str) -> tuple[Decimal, str] | None:
@@ -396,10 +428,11 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             quotes = {}
         return _prices_of(quotes, [c["symbol"] for c in names])
 
-    def _not_needed(self, order: WorkOrder, unneeded: list[dict], count: int | None) -> None:
-        """Tell the user which neutral companies the number they asked for did not need (entry 107): one line each (`neutral.not_needed_line`), on the screen and as a note on the order's data. Such a company gets NO decision."""
+    def _not_needed(self, order: WorkOrder, unneeded: list[dict], count: int | None, top: dict | None = None) -> None:
+        """Tell the user which neutral companies the number they asked for did not need (entry 107): one line each (`neutral.not_needed_line`), on the screen and as a note on the order's data. Such a company gets NO decision.
+        `top`: the Advisor's recommendation when the user asked for THE most recommended company (entry 147): the line says that it is the one, whatever the Critic said of it."""
         for candidate in unneeded:
-            line = neutral.not_needed_line(candidate, count)
+            line = neutral.not_top_pick_line(candidate, top) if top is not None else neutral.not_needed_line(candidate, count)
             self.tell_user(f"      {line}")
             if order.data is not None:
                 order.data.notes = [*order.data.notes, neutral.NOT_NEEDED + line]

@@ -88,7 +88,7 @@ def _work_order(order) -> dict:
         "errors": _count(order.errors),
     }
     return {"type": "WorkOrder", "id": order.request_id, "requester": order.requester, "action": order.action_type, "status": order.status,
-            "query": _text(str(order.query), MAX_QUERY), "symbols": _items(symbols, 0), "counts": counts}
+            "query": _text(str(order.query), MAX_QUERY), "symbols": _items(symbols, 0), "counts": counts, **({"ignore_critic": True} if getattr(order, "ignore_critic", False) else {})}      # entry 148: the user skipped the Critic for this run
 
 
 def _items(values, depth: int) -> list:

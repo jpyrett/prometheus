@@ -108,7 +108,7 @@ def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None
     @app.get("/api/health")
     def health():
         return {"ok": True, "mode": "replay" if replay else "live", "book": "ok" if replay else accounts.book_status(), "clock_note": clock_note() or "", "clock_pill": clock_pill(),
-                "defaults": {"prompt": DEFAULT_PROMPT, "strict": False, "neutral": True, "fetch": False, "raise_funds": False}, "limits": {"prompt_chars": MAX_TEXT},
+                "defaults": {"prompt": DEFAULT_PROMPT, "strict": False, "neutral": True, "fetch": False, "raise_funds": False, "ignore_critic": False}, "limits": {"prompt_chars": MAX_TEXT},
                 "active_run": runs.active_id(), "active_kind": active_kind(runs), "tracing": tracing.status(), "replay_file": replay.capture.get("_file") if replay else None}
 
     # ---------------------------------------------------------------- accounts
@@ -190,7 +190,9 @@ def create_app(*, replay: Replay | None = None, accounts: Accounts | None = None
                 run = runs.start(replay.play, kind="replay")
             else:
                 from prometheus.application.web import desk_run
-                params = {"account_id": account_id, "prompt": " ".join(prompt.split()), "strict": bool(body.get("strict", False)), "neutral": bool(body.get("neutral", True)), "fetch": bool(body.get("fetch", False)), "raise_funds": bool(body.get("raise_funds", False)), "trade_mode": trade_mode}
+                ignore_critic = bool(body.get("ignore_critic", False))      # entry 148, IC1: the box "Ignore Critic", one run, a missing value is false
+                params = {"account_id": account_id, "prompt": " ".join(prompt.split()), "strict": bool(body.get("strict", False)) and not ignore_critic, "neutral": bool(body.get("neutral", True)), "fetch": bool(body.get("fetch", False)), "raise_funds": bool(body.get("raise_funds", False)),
+                          "ignore_critic": ignore_critic, "trade_mode": trade_mode}      # Strict cannot go with Ignore Critic (IC9): the Critic does not run, so "only what the Critic approves" has nothing to say; `run_settings` says the same
                 target = live_target or desk_run.run_live
                 run = runs.start(lambda r: target(r, params, accounts, question_timeout), kind="live")
         except RunBusy:

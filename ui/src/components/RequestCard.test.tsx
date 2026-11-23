@@ -21,6 +21,7 @@ const strict = () => screen.getByLabelText("Strict recommendations") as HTMLInpu
 const neutral = () => screen.getByLabelText("Neutral recommendations as passes") as HTMLInputElement;
 const refresh = () => screen.getByLabelText("Refresh market data first (paid)") as HTMLInputElement;
 const raiseFunds = () => screen.getByLabelText("Always raise funds") as HTMLInputElement;
+const ignoreCritic = () => screen.getByLabelText("Ignore Critic") as HTMLInputElement;
 const modeSwitch = () => screen.getByRole("switch") as HTMLButtonElement;
 
 describe("RequestCard", () => {
@@ -47,6 +48,29 @@ describe("RequestCard", () => {
     fireEvent.click(raiseFunds());
     fireEvent.click(screen.getByRole("button", { name: "Go!" }));
     expect(onGo).toHaveBeenLastCalledWith(expect.objectContaining({ raise_funds: true }));
+  });
+
+  it("has the box Ignore Critic OFF by default (entry 148); ticking it sends ignore_critic true, unticks and disables Strict with the reason, and unticking brings Strict back", () => {
+    const { onGo } = setup();
+    expect(ignoreCritic().checked).toBe(false);
+    expect(ignoreCritic().closest("label")?.getAttribute("title")).toContain("Skip the Critic for this run");
+    fireEvent.click(strict());                                                                  // Strict on, then Ignore Critic on: the Critic does not run, so Strict goes
+    fireEvent.click(ignoreCritic());
+    expect(strict().checked).toBe(false);
+    expect(strict().disabled).toBe(true);
+    expect(strict().closest("label")?.getAttribute("title")).toBe("Ignore Critic: the Critic does not run");
+    expect(neutral().checked).toBe(true);                                                       // the Neutral box keeps its own meaning
+    expect(neutral().disabled).toBe(false);
+    fireEvent.click(screen.getByRole("button", { name: "Go!" }));
+    expect(onGo).toHaveBeenLastCalledWith({ account_id: 7, prompt: DEFAULT_PROMPT, strict: false, neutral: true, fetch: true, raise_funds: false, ignore_critic: true, mode: "ask" });
+    fireEvent.click(ignoreCritic());
+    expect(strict().checked).toBe(true);
+    expect(strict().disabled).toBe(false);
+  });
+
+  it("locks Ignore Critic while a run is active", () => {
+    setup({ running: true });
+    expect(ignoreCritic().disabled).toBe(true);
   });
 
   it("shows Refresh unticked and disabled in a recorded session, and Go! then sends fetch false", () => {
@@ -79,11 +103,11 @@ describe("RequestCard", () => {
   it("Go! posts {account_id, prompt, strict, neutral, fetch, mode}; Refresh goes as true unless unticked, and with Strict on neutral goes as false", () => {
     const { onGo } = setup();
     fireEvent.click(screen.getByRole("button", { name: "Go!" }));
-    expect(onGo).toHaveBeenLastCalledWith({ account_id: 7, prompt: DEFAULT_PROMPT, strict: false, neutral: true, fetch: true, raise_funds: false, mode: "ask" });
+    expect(onGo).toHaveBeenLastCalledWith({ account_id: 7, prompt: DEFAULT_PROMPT, strict: false, neutral: true, fetch: true, raise_funds: false, ignore_critic: false, mode: "ask" });
     fireEvent.click(strict());
     fireEvent.click(refresh());
     fireEvent.click(screen.getByRole("button", { name: "Go!" }));
-    expect(onGo).toHaveBeenLastCalledWith({ account_id: 7, prompt: DEFAULT_PROMPT, strict: true, neutral: false, fetch: false, raise_funds: false, mode: "ask" });
+    expect(onGo).toHaveBeenLastCalledWith({ account_id: 7, prompt: DEFAULT_PROMPT, strict: true, neutral: false, fetch: false, raise_funds: false, ignore_critic: false, mode: "ask" });
   });
 
   it("the Mode switch is off for Ask and on for Auto, with the chosen word bold, and flipping it saves {mode} at once and Go! then carries it", async () => {

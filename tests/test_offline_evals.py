@@ -98,7 +98,7 @@ def test_a_score_that_is_not_a_number_from_zero_to_one_is_an_error_never_read_as
 def test_the_sessions_dataset_is_one_example_per_real_capture_that_holds_a_work_order_and_its_keys_are_stable():
     held = sorted(p.stem for p in CAPTURES.glob("*.json") if isinstance(json.loads(p.read_text(encoding="utf-8")).get("order"), dict))
     first, second = datasets.session_examples(), datasets.session_examples()
-    assert [e["key"] for e in first] == [f"session:{stem}" for stem in held] == [e["key"] for e in second] and len(first) == 17      # AMENDED (entry 142): one more real capture, `ant_raise_funds_ask` (was 16)
+    assert [e["key"] for e in first] == [f"session:{stem}" for stem in held] == [e["key"] for e in second] and len(first) == 20      # AMENDED (entry 148): one more real capture, `auto_ignore_critic`; (entry 146: `auto_one_company_five_shares` made it 19, entry 144 made it 18 with `sp500_top5`, entry 142 17)
     for example in first:
         assert set(example["inputs"]) == {"request", "mode", "example_key"} and example["inputs"]["mode"] in ("auto", "ask", "unknown") and set(example["outputs"]) == {"recorded"}
     assert datasets.recorded_summary("session:auto_even_split_dollars") == next(e for e in first if e["key"] == "session:auto_even_split_dollars")["outputs"]["recorded"]
@@ -191,8 +191,8 @@ def test_the_dry_run_of_the_command_is_free_and_prints_the_metrics_and_no_findin
     spec.loader.exec_module(module)
     assert module.main(["--dry-run"]) == 0
     shown = capsys.readouterr().out
-    assert "ATTACK BLOCK RATE      85/85 = 100.0%" in shown and "FALSE-POSITIVE RATE    0/40 = 0.0%" in shown and "CRITIC DENIAL RATE     11/23 = 47.8%" in shown
-    assert "within_pot                     17/17 pass" in shown and "FINDING" not in shown      # no session breaks a rule: the one that spent $30,015.00 of $30,000 was re-recorded
+    assert "ATTACK BLOCK RATE      85/85 = 100.0%" in shown and "FALSE-POSITIVE RATE    0/40 = 0.0%" in shown and "CRITIC DENIAL RATE     12/24 = 50.0%" in shown
+    assert "within_pot                     20/20 pass" in shown and "FINDING" not in shown      # no session breaks a rule: the one that spent $30,015.00 of $30,000 was re-recorded. AMENDED (entry 148): 20 sessions, the new real capture `auto_ignore_critic` included (it passes every code evaluator)
     assert module.main([]) == 0      # no flag at all is the dry run
 
 

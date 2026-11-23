@@ -51,7 +51,7 @@ def reads(key: str) -> it.TradeIntent:
 # ---------------------------------------------------------------- the recordings are what they say they are
 
 def test_the_recordings_of_entry_140_are_the_real_models_replies_and_the_older_ones_are_as_they_were():
-    assert len(FORMS) == 29 and {OVER_20, BETWEEN, SELL_600, MU_90, MSFT_OVER_20, EACH_5, MU_AMD, MU_PASSES, MU_PASSES_NEW} <= set(FORMS)
+    assert len(FORMS) == 33 and {OVER_20, BETWEEN, SELL_600, MU_90, MSFT_OVER_20, EACH_5, MU_AMD, MU_PASSES, MU_PASSES_NEW} <= set(FORMS)      # AMENDED (entry 146): four more recordings (was 29)
     assert json.loads(real(OVER_20))["min_price"] == 20 and json.loads(real(BETWEEN))["min_price"] == 20 and json.loads(real(BETWEEN))["max_price"] == 60
     assert json.loads(real(SELL_600))["orders"] == [{"side": "sell", "symbol": "MSFT", "shares": 10, "dollars": None}] and json.loads(real(MU_90))["max_price"] == 90
     assert "min_price" not in json.loads(real(MU_PASSES)) and json.loads(real(MU_PASSES_NEW))["orders"] == [] and len(FORMS[MU_PASSES_NEW]["replies"]) == 2      # the new prompt: "buy", no orders; the first reply named no stock and code refused it

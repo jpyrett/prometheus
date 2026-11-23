@@ -14,7 +14,7 @@ export interface RequestCardProps {
   accountId: number | null;
   running: boolean;
   starting: boolean;
-  defaults: { strict: boolean; neutral: boolean; fetch: boolean; raise_funds?: boolean };
+  defaults: { strict: boolean; neutral: boolean; fetch: boolean; raise_funds?: boolean; ignore_critic?: boolean };
   onGo: (request: RunRequest) => void;
   onStop: () => void;
   error: string | null;
@@ -38,6 +38,7 @@ export function RequestCard({ prompt, onPrompt, maxChars, accountId, running, st
   const [neutral, setNeutral] = useState(defaults.neutral);
   const [fetch, setFetch] = useState(defaults.fetch);
   const [raiseFunds, setRaiseFunds] = useState(defaults.raise_funds ?? false);      // "Always raise funds" (entry 142, R12): off unless ticked
+  const [ignoreCritic, setIgnoreCritic] = useState(defaults.ignore_critic ?? false);      // "Ignore Critic" (entry 148): skip the Critic's step for this run; off unless ticked
   const refresh = replay ? false : fetch;                  // a recorded session fetches nothing
   // The switch moves first; if the save is refused it moves back and the server's message shows under it.
   const [shown, setShown] = useState<TradeMode>(mode);
@@ -46,12 +47,13 @@ export function RequestCard({ prompt, onPrompt, maxChars, accountId, running, st
   const box = useRef<HTMLTextAreaElement>(null);
   const busy = running || starting;
   const canGo = prompt.trim().length > 0 && accountId !== null && !busy && !blockedReason;
-  // Strict means only what the Critic approves trades: neutral passes are off whatever the other box says.
-  const effectiveNeutral = strict ? false : neutral;
+  // Strict means only what the Critic approves trades: neutral passes are off whatever the other box says. And the Critic does not run with Ignore Critic, so Strict cannot be on with it (IC9): it shows unticked and disabled.
+  const effectiveStrict = strict && !ignoreCritic;
+  const effectiveNeutral = effectiveStrict ? false : neutral;
 
   const go = () => {
     if (!canGo || accountId === null) return;
-    onGo({ account_id: accountId, prompt, strict, neutral: effectiveNeutral, fetch: refresh, raise_funds: raiseFunds, mode: shown });
+    onGo({ account_id: accountId, prompt, strict: effectiveStrict, neutral: effectiveNeutral, fetch: refresh, raise_funds: raiseFunds, ignore_critic: ignoreCritic, mode: shown });
   };
 
   async function flip(on: boolean) {
@@ -93,17 +95,24 @@ export function RequestCard({ prompt, onPrompt, maxChars, accountId, running, st
           <div className="checks">
             <Check
               label="Strict recommendations"
-              checked={strict}
-              disabled={busy}
+              checked={effectiveStrict}
+              disabled={busy || ignoreCritic}
               onChange={(e) => setStrict(e.target.checked)}
-              title="Only recommendations the Critic approves may trade. A neutral recommendation never passes."
+              title={ignoreCritic ? "Ignore Critic: the Critic does not run" : "Only recommendations the Critic approves may trade. A neutral recommendation never passes."}
             />
             <Check
               label="Neutral recommendations as passes"
               checked={effectiveNeutral}
-              disabled={busy || strict}
+              disabled={busy || effectiveStrict}
               onChange={(e) => setNeutral(e.target.checked)}
-              title={strict ? "Strict: only what the Critic approves trades" : "A company you named that the Advisor scored neutral counts as approved (ALLOW_NEUTRAL_RECOMMENDATIONS, for this run)"}
+              title={effectiveStrict ? "Strict: only what the Critic approves trades" : "A company you named that the Advisor scored neutral counts as approved (ALLOW_NEUTRAL_RECOMMENDATIONS, for this run)"}
+            />
+            <Check
+              label="Ignore Critic"
+              checked={ignoreCritic}
+              disabled={busy}
+              onChange={(e) => setIgnoreCritic(e.target.checked)}
+              title="Skip the Critic for this run: it does not review anything, and every recommendation the Advisor makes counts as approved, including one the Critic would have denied. Auto mode trades them; Ask mode asks you about each and says the Critic did not review it."
             />
             <Check
               label="Always raise funds"

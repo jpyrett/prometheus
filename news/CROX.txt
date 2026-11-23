@@ -1,0 +1,719 @@
+<<<ARTICLE>>>
+id: finnhub:143807350
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-14T18:09:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=53ebebd1332b86f5ce2216a09c9ac202ff7d59b7289a644c8c102d4310a95a83
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Crocs And 2 Other Undervalued Cash Flow Stocks
+<<<SUMMARY>>>
+Inflation sits back in the spotlight after the latest US consumer price report came in hotter than forecasts, and higher interest rates are back on the table. When borrowing costs stay elevated, cash flow matters more than ever because it shows how much real money a business generates after the headlines fade. This article walks through three cash rich stocks that our screen flags as priced below their estimated fair value today. The three stocks in this article are just a small sample, and...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143804395
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T13:30:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=33bebe11df8f7a076eabaf92d2baf94b74e65955d05f0a2bd203954e9f060d08
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Is It Worth Investing in Crocs (CROX) Based on Wall Street's Bullish Views?
+<<<SUMMARY>>>
+According to the average brokerage recommendation (ABR), one should invest in Crocs (CROX). It is debatable whether this highly sought-after metric is effective because Wall Street analysts' recommendations tend to be overly optimistic. Would it be worth investing in the stock?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143784407
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T04:34:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f25d49330479c0006cbb452b7e7a0030322ea4fa5225572fcd588ebcfd2e753c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: 3 Undervalued Stocks To Own In November 2026
+<<<SUMMARY>>>
+Bond yields are climbing again as investors price in more Federal Reserve rate hikes, which puts pressure on highly valued stocks and makes cash today more valuable than distant profits. That shift draws attention to companies that already produce solid cash flows yet trade at discounted prices. This article highlights three such undervalued cash flow plays from the screener and explains why disciplined value hunters are watching them closely right now. The three stocks discussed below are...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143772280
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T19:07:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a9927f2d6c6cfe47fbcbcf9a152fe544f206180042ecb32c67376ed5627ccb49
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Shoe Shipments and Manufacturing Revenue Down at Yue Yuen
+<<<SUMMARY>>>
+Chinese footwear manufacturer Yue Yuen on Thursday reported financial results for the nine months ended Sept. 30, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143738273
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T16:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8adebc779164820d9e7fd2ad9022dd121e6af380a1f13189fb1ae8a8bd8ad02c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: G-III's DTC Strategy Gains Traction as DKNY & Donna Karan Grow Online
+<<<SUMMARY>>>
+GIII's DTC strategy gains momentum as DKNY's online sales climb, Donna Karan delivers strong growth and Marc Jacobs expands its retail reach.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143693089
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T18:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3d432e4b00a4a2e6299f56e51e6d7813e93504ec8ced4e4dd8cdd960c79a59e4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Crocs Product Innovation Pipeline: Can Newness Revive U.S. Growth?
+<<<SUMMARY>>>
+CROX expands product innovation across clogs, sandals and lifestyle offerings as record brand revenue and international growth support its North American strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143691935
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T18:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=735b93658faee0611a620d77a39a8c1e4215dd0dab72ae362b677cdbc07921ac
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Want to Escape the AI Sell-Off? This ETF Offers a Surprising Alternative
+<<<SUMMARY>>>
+As tech stocks sell off, the ProShares S&P 500 ex-Technology ETF (SPXT) offers reduced AI exposure, but its mega-cap holdings, light liquidity, and trailing returns temper its appeal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657934
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8980745004a1437382d079f2af27228501cb1ddb05393fb7e35a59f8ae104e32
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Under Armour's Q2 Earnings Beat Estimates on Cost Discipline
+<<<SUMMARY>>>
+UAA beats Q2 fiscal 2027 earnings estimates despite declining sales, traffic weakness and margin pressures, while maintaining its annual earnings outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143651830
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T09:14:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a09f6464e10cb7d1786dc17c2ef6bd3e4b1f1fc604ff5ea1425e5f78169ab756
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Crocs Heads 3 Undervalued Stocks To Watch
+<<<SUMMARY>>>
+China’s decision to keep higher tariffs on many US goods suspended for now helps maintain slightly less hostile global trade conditions, which can make corporate cash flows somewhat more predictable. When sentiment is still fragile, investors can sometimes overlook solid businesses whose future cash flows suggest an intrinsic value above what current prices reflect. This article highlights three such stocks that appear attractively priced based on their cash flow potential. The three...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144013175
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T13:07:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=353471e4c666a4ad728f64d7bb446cc3e14bc07ef4ed2ef594b18291ee21b521
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Crocs (CROX) Stock May Be 39% Undervalued After Footwear Price News
+<<<SUMMARY>>>
+Crocs has delivered a strong run for shareholders over the past year, which puts a sharper spotlight on whether the current share price lines up with the cash flows the business is expected to generate. With the stock now reflecting a lot of recent optimism, the question is how much of the underlying cash flow story is already built into that US$154.67 close. The share price has climbed 89.9% over the past year, which raises the stakes on whether Crocs' future cash flows can support that...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144011544
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T11:10:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cef59c236cdfa1ff3852d4e9622de10c1d784fddee9f01fcb2e6a1c73011a6d4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: What Crocs (CROX)'s Rising Earnings Estimates Mean For Shareholders
+<<<SUMMARY>>>
+Crocs recently presented at the Exane Outdoor & Sports Conference, updating investors on brand performance, cost discipline, direct-to-consumer traction, and the HEYDUDE integration alongside earnings estimate revisions. An important angle is how resilient demand drivers such as collaborations, product refreshes, and international expansion sit next to rising earnings expectations and execution pressure on margins. This analysis will examine how Crocs' optimistic margin narrative lines up...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144011545
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T10:08:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=539c74b7ded308c1cbdd240a19da9e9539d64f224e263f9a0d6530c7caef8871
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Crocs (CROX) Could Be 100% Below Fair Value On Earnings Momentum
+<<<SUMMARY>>>
+Crocs (CROX) is scheduled to appear at the Exane Outdoor & Sports Conference on 19 November 2026, with investors already focused on upbeat earnings estimate revisions and strong recent price momentum versus the wider market. Crocs shares recently pulled back with a 1-day share price return of 1.68% and a 7-day share price return of 5.53%. However, the 30-day share price return of 27.84% and year-to-date gain of 77.88% indicate strong momentum building off earlier highs. Over a longer horizon,...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988834
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1df43b2d9704572f2b3f1fb341fc6fb70ab9dab2cdc6f5449071505e6d04074b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Best Momentum Stocks to Buy for November 20th
+<<<SUMMARY>>>
+MSLOY, CROX and APA made it to the Zacks Rank #1 (Strong Buy) momentum stocks list on November 20th, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988993
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=938e7f0876634eb8dfa4f98b27b2934950eb79c072da01f8d05242da3a13ddca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Best Value Stocks to Buy for November 20th
+<<<SUMMARY>>>
+PEBO, CROX and CLDT made it to the Zacks Rank #1 (Strong Buy) value stocks list on November 20th, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143985185
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T11:04:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6f3305701edc04feb5ca243eddb1b1c4439c1a20c5471e31fe01de6d2c23a887
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: What Avantis U.S. Large Cap Value ETF (AVLV) Bought: Elevance Leads on Nov. 18
+<<<SUMMARY>>>
+The fund bought $173.7 million and sold $69.9 million in Qualcomm, lifting 164 positions while trimming just one.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944994
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T16:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f60daa96e524000bb6e946920ca26cf46329fb1b9bac6f2ace89e61325abba83
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Are You Looking for a Top Momentum Pick? Why Crocs (CROX) is a Great Choice
+<<<SUMMARY>>>
+Does Crocs (CROX) have what it takes to be a top stock pick for momentum investors? Let's find out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143939299
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:30:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eae471a73bfffc05aa840398a142642f91c19f449716d8e0eb5c5c88c28ff0a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: If You Invested $1000 in Crocs a Decade Ago, This is How Much It'd Be Worth Now
+<<<SUMMARY>>>
+Investing in certain stocks can pay off in the long run, especially if you hold on for a decade or more.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143919069
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:36:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=91e5d3bbac6b1cd151e301ef28b345efc68d29f4e35291dd069a5c0b49011273
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Crocs' International Sales Rise 12%: Can Overseas Growth Persist?
+<<<SUMMARY>>>
+CROX accelerates international growth through strong DTC sales, localized marketing and product innovation, with China and India leading demand.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883244
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:10:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dd3ac172541a43ad34cc9cfe1cf2e0d00345a49b4ac3c1678aee26adc56becce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Can Snap-on's Customized Industrial Solutions Take It Beyond Garages?
+<<<SUMMARY>>>
+SNA is expanding its industrial footprint through customized precision solutions as strong military and industrial demand drives record C&I sales and margins.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878053
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fff0f9bc55b3abb4ce0c9d371dd7104ee4d708dc77d3868cbeb8e2527ebc1713
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: She Started a Pajama Brand While Undercover at the CIA
+<<<SUMMARY>>>
+Now it brings in $100 million, thanks to a savvy collabs strategy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881978
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:38:54Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=2d38a9cdba1bd1366e0d2a9fb75e251a79fa89de36d86372864a914362e5acdd
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2234092712/image_2234092712.jpg?io=getty-c-og
+category: company
+tickers: CROX
+keywords: 
+headline: Crocs: Strong Earnings Result But Resiliency And Stability Are Far More Important
+<<<SUMMARY>>>
+Analyst sees Crocs as attractive at 10.70x forward earnings; buybacks could lift free cash flow per share, and stable results may support multiple expansion.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143871490
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T08:58:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7d33f083f0d79484ee25d740d2bc8d613977d476dcbbe1f58fb527a0b9b02fba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Best Value Stocks to Buy for November 17th
+<<<SUMMARY>>>
+EXPE, CROX and ESCA made it to the Zacks Rank #1 (Strong Buy) value stocks list on November 17th, 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143851379
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T22:46:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1166132c85b40da88080ad67269da9fda44190d42fcd0a64afa6d6a3df958cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Crocs, Inc. to Attend BNP Paribas Outdoor & Sports Conference and Present at The Morgan Stanley Global Consumer & Retail Conference
+<<<SUMMARY>>>
+Crocs, Inc. (NASDAQ: CROX), a world leader in innovative casual footwear for all, today announced that it will attend BNP Paribas Outdoor & Sports Conference on Thursday, November 19, 2026. In addition, the company will present at The Morgan Stanley Global Consumer & Retail Conference on Tuesday, December 01, 2026 at 11:45 AM ET.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849478
+symbol: CROX
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:15:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb1e7e09103567004dd9fdb628e9436bc31036c9da70022a6445127ca59d795f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: CROX
+keywords: 
+headline: Crocs, Inc. (CROX) Hits Fresh High: Is There Still Room to Run?
+<<<SUMMARY>>>
+Crocs (CROX) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ff9ee94d4fd2c0ef88af9c2a4350ceb3589ff1fa0d2afe6f3a969d319adb83ad
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-10T18:54:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3027452/crocs-product-innovation-pipeline-can-newness-revive-u-s-growth?cid=CS-ZC-FT-analyst_blog|rank_focused-3027452
+image_url: https://staticx-tuner.zacks.com/images/articles/main/b3/1166.jpg
+category: 
+tickers: CROX, VNCE, ACCO, KTB
+keywords: product innovation, Q3 2026 earnings, international growth, clog portfolio expansion, sandals category, North American growth, wholesale strategy
+headline: Crocs Product Innovation Pipeline: Can Newness Revive U.S. Growth?
+<<<SUMMARY>>>
+Crocs, Inc. (CROX) reported record third-quarter brand revenues of $873 million, up 4% year-over-year, driven by 12% international growth and expanded product portfolio including new clog iterations, sandals, and lifestyle categories. The company is leveraging product innovation, go-to-market strategies, and stronger wholesale relationships to support North American growth, with management expressing confidence in future growth trajectory despite consumer headwinds.
+<<<INSIGHTS>>>
+CROX | positive | Record Q3 revenues of $873M with 4% YoY growth, strong 12% international expansion, successful product diversification across clogs and sandals with double-digit growth in key categories, Zacks Rank #2 (Buy) rating, shares up 16% in past three months, and management confidence in North American growth trajectory despite market headwinds.
+VNCE | positive | Zacks Rank #1 (Strong Buy) with consensus estimates implying 15.5% sales growth and 175% earnings growth; exceptional trailing four-quarter earnings surprise of 561.4% average.
+ACCO | neutral | Zacks Rank #2 with modest consensus estimates showing 4.5% sales growth and 16.7% earnings growth; moderate trailing four-quarter earnings surprise of 48.7%.
+KTB | negative | Zacks Rank #2 but consensus estimates project declines of 14.3% in sales and 4.8% in earnings year-over-year, indicating headwinds despite positive earnings surprises.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:bf53ea05592d4f39142505f6bd03db0ab3ef27c40da28126476b0179fa4cc9ad
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-11T16:00:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3027810/g-iii-s-dtc-strategy-gains-traction-as-dkny-donna-karan-grow-online?cid=CS-ZC-FT-analyst_blog|rank_focused-3027810
+image_url: https://staticx-tuner.zacks.com/images/articles/main/2d/1853.jpg
+category: 
+tickers: GIII, CROX, RL, URBN
+keywords: direct-to-consumer, DTC strategy, DKNY, Donna Karan, Marc Jacobs, e-commerce growth, retail expansion, brand licensing
+headline: G-III's DTC Strategy Gains Traction as DKNY & Donna Karan Grow Online
+<<<SUMMARY>>>
+G-III Apparel Group is successfully building its direct-to-consumer business around owned brands as Calvin Klein and Tommy Hilfiger licenses wind down. DKNY's online sales grew mid-20% year-over-year with improved conversion and pricing, while Donna Karan brand sales surged over 45%. The Marc Jacobs acquisition, which closed September 1st, adds over 100 stores and an established e-commerce platform. G-III raised fiscal 2027 adjusted EPS guidance to $2.20-$2.30 and sees potential for Marc Jacobs to generate $1 billion in annual revenues long-term.
+<<<INSIGHTS>>>
+GIII | positive | Strong DTC momentum with DKNY online sales growing mid-20%, Donna Karan surging 45%, Marc Jacobs acquisition adding significant retail footprint, and raised fiscal 2027 EPS guidance. Company is successfully transitioning away from winding-down licenses to owned brands with healthy full-price selling and improving metrics.
+CROX | positive | Mentioned as a key pick with Zacks Rank #1 (Strong Buy), showing consensus earnings growth of 16.9% and sales growth of 3.4%, with a trailing four-quarter average earnings surprise of 10.9%.
+RL | positive | Listed as a key pick with Zacks Rank #2 (Buy), showing consensus earnings growth of 14.7% and sales growth of 8%, with a trailing four-quarter average earnings surprise of 8.4%.
+URBN | positive | Mentioned as a key pick with Zacks Rank #2 (Buy), showing consensus earnings growth of 14% and sales growth of 9.5%, with a trailing four-quarter average earnings surprise of 9.7%.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d6aa8d78af168e3b3a7e98d501c6ecb509a8794271ddfe4e2ee77459b4d2f484
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T08:58:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3030784/best-value-stocks-to-buy-for-november-17th?cid=CS-ZC-FT-zacks_1_rank_additions|value_additions-3030784
+image_url: https://staticx-tuner.zacks.com/images/articles/main/0d/733.jpg
+category: 
+tickers: EXPE, CROX, ESCA
+keywords: value stocks, strong buy, earnings growth, price-to-earnings ratio, investment opportunity
+headline: Best Value Stocks to Buy for November 17th
+<<<SUMMARY>>>
+Zacks highlights three stocks with Rank #1 (Strong Buy) ratings and strong value characteristics: Expedia Group (EXPE) with a P/E of 12.38 and 6.4% earnings estimate increase; Crocs (CROX) with a P/E of 11.20 and 4.8% earnings estimate increase; and Escalade (ESCA) with a P/E of 12.59 and 7.1% earnings estimate increase. All three trade at significant discounts to their respective industry averages.
+<<<INSIGHTS>>>
+EXPE | positive | Zacks Rank #1 rating, 6.4% consensus earnings estimate increase over 60 days, P/E of 12.38 significantly below industry average of 52.20, and Value Score of A indicate strong value characteristics and positive outlook.
+CROX | positive | Zacks Rank #1 rating, 4.8% consensus earnings estimate increase over 60 days, P/E of 11.20 well below industry average of 21.70, and Value Score of B suggest attractive valuation and positive momentum.
+ESCA | positive | Zacks Rank #1 rating, 7.1% consensus earnings estimate increase over 60 days (highest among the three), P/E of 12.59 significantly below industry average of 28.50, and Value Score of B indicate strong value opportunity.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:37e73224a4a3cb06dd2c20b16e6c922b2840a6c2d232246b88b3d1e528c2f50e
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T15:10:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3031251/can-snap-on-s-customized-industrial-solutions-take-it-beyond-garages?cid=CS-ZC-FT-analyst_blog|rank_focused-3031251
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ee/2958.jpg
+category: 
+tickers: SNA, KTB, CROX, ACCO
+keywords: industrial solutions, military demand, C&I segment, customized products, operational efficiency, specialty torque, business diversification
+headline: Can Snap-on's Customized Industrial Solutions Take It Beyond Garages?
+<<<SUMMARY>>>
+Snap-on Incorporated is expanding beyond traditional automotive repair into customized industrial solutions across military, general industries, and natural resources. In Q3 2026, the C&I segment achieved record sales of $404.3 million with 7.4% organic growth and operating margins expanded to 18.5%, driven by U.S. military demand, specialty torque products, and strong industrial division performance.
+<<<INSIGHTS>>>
+SNA | positive | Record C&I segment sales of $404.3M with 7.4% organic growth, operating income up 29.9%, and margins expanding 290 basis points to 18.5%. Strong demand from military and industrial sectors, successful specialty torque product performance, and successful business diversification beyond automotive repair support positive outlook.
+KTB | neutral | Mentioned as a comparison stock with Zacks Rank #1 (Strong Buy), but article provides no substantive analysis. Consensus estimates show sales decline of 15.1% and earnings decline of 3%, which are negative indicators despite the strong buy rating.
+CROX | neutral | Mentioned as a comparison stock with Zacks Rank #2 (Buy). Consensus estimates show modest sales growth of 3.4% and earnings growth of 16.9%, but no detailed analysis provided in the article.
+ACCO | neutral | Mentioned as a comparison stock with Zacks Rank #2. Consensus estimates show sales growth of 4.5% and earnings growth of 16.7%, but no detailed analysis provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2b997e92fe4ffa627006035fe1ddbedc2b81931c4e606f7d7dd61284623f92b0
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T16:36:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032025/crocs-international-sales-rise-12-can-overseas-growth-persist?cid=CS-ZC-FT-analyst_blog|rank_focused-3032025
+image_url: https://staticx-tuner.zacks.com/images/articles/main/ee/1487.jpg
+category: 
+tickers: CROX, RL, ACCO, KTB
+keywords: international expansion, direct-to-consumer growth, China market, India market, product innovation, Echo 2.0, DTC sales
+headline: Crocs' International Sales Rise 12%: Can Overseas Growth Persist?
+<<<SUMMARY>>>
+Crocs (CROX) reported strong Q3 2026 international performance with 12% revenue growth and 24% DTC sales surge, driven by expansion in China and India through localized campaigns and product innovation. The company raised its FY26 brand growth outlook to 4%, supported by international demand and new product lines like Echo 2.0.
+<<<INSIGHTS>>>
+CROX | positive | Strong international revenue growth of 12% YoY, exceptional DTC sales surge of 24%, successful market penetration in China and India through localized campaigns, product diversification driving demand, raised FY26 guidance to 4%, trading at attractive valuation (10.11X forward P/E vs 16.74X industry average), and Zacks Rank #2 (Buy) rating with 23% share gain in past three months.
+RL | neutral | Zacks Rank #2 with modest consensus estimates showing 8.1% sales growth and 12.8% earnings growth; consistent 8.4% average earnings surprise demonstrates reliable performance but lacks the strong momentum of other highlighted stocks.
+ACCO | neutral | Zacks Rank #2 with moderate 4.5% sales growth and 16.7% earnings growth; strong 48.7% average earnings surprise is notable but overall growth rates are modest compared to peers.
+KTB | negative | Zacks Rank #2 but consensus estimates show declining sales (-15.1%) and minimal earnings growth (-3%) YoY, indicating headwinds despite positive earnings surprises.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7387c074e34e427978f160d275ddc4b7348f0482ff8440375f5fce4af4927119
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T12:30:02Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3032260/if-you-invested-1000-in-crocs-a-decade-ago-this-is-how-much-it-d-be-worth-now?cid=CS-ZC-FT-fundamental_analysis|investing_$1000-3032260
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default197.jpg
+category: 
+tickers: CROX
+keywords: Crocs, stock performance, investment returns, footwear, HEYDUDE brand, direct-to-consumer, international expansion, licensing partnerships
+headline: If You Invested $1000 in Crocs a Decade Ago, This is How Much It'd Be Worth Now
+<<<SUMMARY>>>
+A $1,000 investment in Crocs made in November 2016 would be worth $19,633.29 as of November 19, 2026, representing a gain of 1,863.33%. This significantly outperforms the S&P 500's 235.65% gain and gold's 193.70% gain over the same period. Analysts remain optimistic about Crocs' future growth driven by strategic collaborations, international expansion, direct-to-consumer momentum, and the HEYDUDE brand's turnaround.
+<<<INSIGHTS>>>
+CROX | positive | Crocs demonstrated exceptional long-term performance with a 1,863% return over 10 years, significantly outperforming major benchmarks. The company benefits from strong brand recognition, successful licensing partnerships with major entertainment properties, growing direct-to-consumer operations, international expansion opportunities, and the successful turnaround of the HEYDUDE brand. Recent analyst upgrades and raised revenue guidance further support positive outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:66b77598f866a2370217b0351af41bf911fea42a0e3845cb00fd6b1196c0fe13
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T13:50:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3032477/why-crocs-crox-is-a-top-momentum-stock-for-the-long-term?cid=CS-ZC-FT-fundamental_analysis|zacks_education_momentum_score-3032477
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default125.jpg
+category: 
+tickers: CROX
+keywords: Zacks Rank, Style Scores, stock rating, investment research, earnings estimates, momentum investing, value investing, growth investing
+headline: Why Crocs (CROX) is a Top Momentum Stock for the Long-Term
+<<<SUMMARY>>>
+Zacks Premium offers investment research tools including the Zacks Rank and Style Scores to help investors identify stocks with strong performance potential. The service features daily updates, equity research reports, and stock screens. Crocs (CROX) is highlighted as a #2 Buy with strong momentum, up 37.4% in four weeks with upward earnings revisions.
+<<<INSIGHTS>>>
+CROX | positive | Crocs received a #2 (Buy) Zacks Rank with a VGM Score of B and Momentum Score of B. The stock has appreciated 37.4% over the past four weeks, with five analysts revising earnings estimates upward in the last 60 days. The company shows an average earnings surprise of +10.9%, indicating strong operational performance and positive market momentum.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9d11d91f0d32427df9a58d1f1af48d370badc8e2ed6129ae0d44de3c61bd4a13
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T16:00:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3032705/are-you-looking-for-a-top-momentum-pick-why-crocs-crox-is-a-great-choice?cid=CS-ZC-FT-fundamental_analysis|yseop_template_10-3032705
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default5.jpg
+category: 
+tickers: CROX
+keywords: momentum investing, Crocs, CROX, Zacks Rank, earnings estimate revisions, price performance, textile apparel industry
+headline: Are You Looking for a Top Momentum Pick? Why Crocs (CROX) is a Great Choice
+<<<SUMMARY>>>
+Crocs (CROX) is highlighted as a strong momentum pick with a Zacks Rank #2 (Buy) rating and Momentum Style Score of B. The stock has significantly outperformed its industry and the broader market, with gains of 7.81% over the past week, 37.36% monthly, 31.64% quarterly, and 105.58% annually. Positive earnings estimate revisions over the past two months support the bullish outlook.
+<<<INSIGHTS>>>
+CROX | positive | Crocs demonstrates strong momentum with significant outperformance relative to its industry and the S&P 500 across multiple timeframes (weekly, monthly, quarterly, and annual). The stock has received positive earnings estimate revisions with 5 upward revisions and no downward revisions in the past two months, boosting consensus estimates from $13.95 to $14.62. The company holds a Zacks Rank #2 (Buy) rating and Momentum Style Score of B, indicating it is well-positioned for near-term gains.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:dcd56195afc5d73b694213a2fb19290462ab84f9491007dff0829ace87937bd3
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T13:00:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3032913/the-zacks-rank-explained-how-to-find-strong-buy-consumer-discretionary-stocks?cid=CS-ZC-FT-fundamental_analysis|zacks_education_zacks_rank-3032913
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default345.jpg
+category: 
+tickers: CROX
+keywords: Zacks Rank, earnings estimate revisions, stock rating model, Strong Buy, institutional investors, consumer discretionary
+headline: The Zacks Rank Explained: How to Find Strong Buy Consumer Discretionary Stocks
+<<<SUMMARY>>>
+The article explains the Zacks Rank, a proprietary stock-rating model that uses earnings estimate revisions to identify investment opportunities. It details four key factors (Agreement, Magnitude, Upside, and Surprise) and demonstrates how retail investors can benefit from institutional investor trends. Crocs (CROX) is highlighted as a recent Strong Buy addition with positive earnings revisions and strong market momentum.
+<<<INSIGHTS>>>
+CROX | positive | Crocs received a Zacks Rank #1 (Strong Buy) rating on November 20, 2026. Five analysts revised earnings estimates higher in the last 60 days, with consensus estimate increasing $0.67 to $14.62 per share. The company shows strong fundamentals with 16.9% expected earnings growth, 10.9% average earnings surprise, and 30% stock price increase over four weeks compared to S&P 500's 6.6% decline.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:6e0511c27fd4903816038bab30966b58061ddf1ed9584fc22c5e4a41776ba4a6
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T13:47:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3033014/best-value-stocks-to-buy-for-november-20th?cid=CS-ZC-FT-zacks_1_rank_additions|value_additions-3033014
+image_url: https://staticx-tuner.zacks.com/images/articles/main/15/369.jpg
+category: 
+tickers: PEBO, CROX, CLDT, CLDTpA
+keywords: value stocks, strong buy, earnings growth, price-to-earnings ratio, financial holding company, footwear, real estate investment trust
+headline: Best Value Stocks to Buy for November 20th
+<<<SUMMARY>>>
+Zacks highlights three stocks with Rank #1 (Strong Buy) ratings and strong value characteristics: Peoples Bancorp Inc. (PEBO) with a P/E of 10.07 and 10.8% earnings estimate increase, Crocs Inc. (CROX) with a P/E of 11.14 and 5.1% earnings estimate increase, and Chatham Lodging Trust (CLDT) with a P/E of 11.37 and 6.5% earnings estimate increase. All three companies have a Value Score of B and trade below their respective industry P/E ratios.
+<<<INSIGHTS>>>
+PEBO | positive | Zacks Rank #1 rating, 10.8% earnings estimate increase over 60 days, P/E of 10.07 below industry average of 12.80, and Value Score of B indicate strong value characteristics and positive outlook.
+CROX | positive | Zacks Rank #1 rating, 5.1% earnings estimate increase over 60 days, P/E of 11.14 significantly below industry average of 21.80, and Value Score of B suggest attractive valuation and positive momentum.
+CLDT | positive | Zacks Rank #1 rating, 6.5% earnings estimate increase over 60 days, P/E of 11.37 below industry average of 13.40, and Value Score of B indicate solid value proposition and positive outlook.
+CLDTpA | positive | Zacks Rank #1 rating, 6.5% earnings estimate increase over 60 days, P/E of 11.37 below industry average of 13.40, and Value Score of B indicate solid value proposition and positive outlook.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3a00df904be747a611a0c9a139a3c1b2404267f4b57fdf3f7612f1d4fb3d6a27
+symbol: CROX
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T14:00:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/commentary/3032989/best-momentum-stocks-to-buy-for-november-20th?cid=CS-ZC-FT-zacks_1_rank_additions|momentum_additions-3032989
+image_url: https://staticx-tuner.zacks.com/images/articles/main/3d/606.jpg
+category: 
+tickers: MSLOY, CROX, APA
+keywords: Zacks Rank #1, Strong Buy, momentum stocks, maritime cargo, footwear, energy company, earnings growth
+headline: Best Momentum Stocks to Buy for November 20th
+<<<SUMMARY>>>
+Zacks highlights three stocks with Rank #1 (Strong Buy) ratings and strong momentum characteristics as of November 20. Mitsui O.S.K. Lines gained 13.3% over six months with a Momentum Score of A. Crocs surged 28.8% over three months with a Momentum Score of B. APA Corporation gained 3.4% over three months, also with a Momentum Score of B. All three companies have seen their consensus earnings estimates increase over the past 60 days.
+<<<INSIGHTS>>>
+MSLOY | positive | Zacks Rank #1 rating, 12.5% increase in consensus earnings estimate over 60 days, 13.3% share gain over six months, and Momentum Score of A indicate strong performance and positive outlook.
+CROX | positive | Zacks Rank #1 rating, 5.1% increase in consensus earnings estimate over 60 days, and exceptional 28.8% share gain over three months demonstrate strong momentum, though Momentum Score of B is slightly lower than Mitsui.
+APA | positive | Zacks Rank #1 rating and 15.6% increase in consensus earnings estimate over 60 days indicate positive fundamentals, though 3.4% three-month gain is modest and Momentum Score of B suggests moderate momentum.
+<<<END>>>

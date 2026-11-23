@@ -1,0 +1,99 @@
+<<<PRESS_RELEASE>>>
+id: ebcefba1570d6940
+symbol: CROX
+published_utc: 2026-01-22T07:30:00Z
+url: https://www.nasdaq.com/press-release/crocs-inc-announces-conference-call-review-fourth-quarter-and-full-year-2025-earnings
+headline: Crocs, Inc. Announces Conference Call to Review Fourth Quarter and Full Year 2025 Earnings Results
+<<<TEXT>>>
+Crocs, Inc., headquartered in Broomfield, Colorado, is a world leader in innovative casual footwear for all, combining comfort and style with a value that consumers know and love. For more information on Crocs, Inc. visit investors.crocs.com. Investor Contact: Erinn Murphy, Crocs, Inc. 848-7005 emurphy@crocs.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dc97926c11a24810
+symbol: CROX
+published_utc: 2026-01-28T09:00:00Z
+url: https://www.nasdaq.com/press-release/crocs-unveils-wonderfully-unordinary-new-global-brand-narrative-ushering-next-era
+headline: Crocs Unveils "Wonderfully Unordinary," a New Global Brand Narrative Ushering in the Next Era of Self-Expression
+<<<TEXT>>>
+--Crocs, a world leader in innovative casual footwear, today unveils "Wonderfully Unordinary," a bold new global brand platform and creative narrative that marks a defining new chapter for the Crocs brand.  "Since joining Crocs, I've seen firsthand how the brand brings joy to everyday life and invites people to experience the ordinary in wonderfully unordinary...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 69751883b5a0eac5
+symbol: CROX
+published_utc: 2026-02-12T07:00:00Z
+url: https://www.nasdaq.com/press-release/crocs-inc-reports-fourth-quarter-and-full-year-2025-results-issues-first-quarter-and
+headline: Crocs, Inc. Reports Fourth Quarter and Full-Year 2025 Results; Issues First Quarter and Full-Year 2026 Outlook
+<<<TEXT>>>
+For the year, revenue exceeded $4 billion, led by low-double digit international growth for the Crocs Brand. Our powerful value creation model drove operating cash flow of approximately $700 million which enabled us to return shareholder value as we repurchased approximately 10% of our shares outstanding, and paid down $128 million of debt, "said Andrew Rees,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c3d4331a97b980c7
+symbol: CROX
+published_utc: 2026-04-09T07:30:00Z
+url: https://www.nasdaq.com/press-release/crocs-inc-announces-conference-call-review-first-quarter-2026-earnings-results-2026
+headline: Crocs, Inc. Announces Conference Call to Review First Quarter 2026 Earnings Results
+<<<TEXT>>>
+--Crocs, Inc. announced today that on Thursday, April 30, 2026, at 8:30 am ET, it will host a conference call to discuss the results of its first quarter ended March 31, 2026. Crocs, Inc., headquartered in Broomfield, Colorado, is a world leader in innovative casual footwear for all, combining comfort and style with a value that consumers know and love.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6df3d94573e6ed37
+symbol: CROX
+published_utc: 2026-04-30T07:00:00Z
+url: https://www.nasdaq.com/press-release/crocs-inc-reports-better-expected-first-quarter-2026-results-and-raises-full-year
+headline: Crocs, Inc. Reports Better-Than-Expected First Quarter 2026 Results And Raises Full-Year Outlook
+<<<TEXT>>>
+--Crocs, Inc., a world leader in innovative casual footwear for all, today announced its first quarter 2026 financial results. We are encouraged by strong consumer response to product newness across categories, supported by our high pace of innovation and consistent brand storytelling, "said Andrew Rees, Chief Executive Officer. Mr. Rees continued, "Based on our...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9c8d11cd3bed8cd2
+symbol: CROX
+published_utc: 2026-04-30T16:00:00Z
+url: https://www.nasdaq.com/press-release/crocs-inc-publishes-2025-comfort-report-detailing-updates-purpose-sustainability-2026
+headline: Crocs, Inc. Publishes 2025 Comfort Report Detailing Updates on Purpose & Sustainability
+<<<TEXT>>>
+--Crocs, Inc., a world leader in innovative casual footwear for all, today published its 2025 Comfort Report, a summary of updates and key milestones surrounding the enterprise's Purpose, Corporate Responsibility and Sustainability activations in 2025.. Crocs, Inc. remains committed to its Purpose to Create a More Comfortable World for All.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8df854e2acc7c969
+symbol: CROX
+published_utc: 2026-06-01T11:32:00Z
+url: https://www.nasdaq.com/press-release/crocs-inc-present-bairds-2026-global-consumer-technology-services-conference-2026-06
+headline: Crocs, Inc. to Present at Baird's 2026 Global Consumer, Technology & Services Conference
+<<<TEXT>>>
+--Crocs, Inc., a world leader in innovative casual footwear for all, today announced that it will present at Baird's 2026 Global Consumer, Technology& Services Conference on Wednesday, June 3, 2026 at 9:40 AM ET. A live broadcast of the Company's presentation may be found on the Investor Relations section of the Crocs website, investors.crocs.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0e1b9c32af34550b
+symbol: CROX
+published_utc: 2026-06-10T10:20:00Z
+url: https://www.nasdaq.com/press-release/superordinary-and-crocs-launch-tiktok-microdrama-series-built-conversion-2026-06-10
+headline: SuperOrdinary and Crocs Launch TikTok Microdrama Series Built for Conversion
+<<<TEXT>>>
+--SuperOrdinary and Crocs, a world leader in innovative casual footwear, today announced the launch of Déjà Shoe, a new seven-episode TikTok microdrama series produced by SuperOrdinary Studios, SuperOrdinary's production and vertical entertainment arm. Crocs is the first footwear brand in the U.S. to integrate TikTok Shop product tagging into a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3c108cf0c65c8ff0
+symbol: CROX
+published_utc: 2026-07-09T07:30:00Z
+url: https://www.nasdaq.com/press-release/crocs-inc-announces-conference-call-review-second-quarter-2026-earnings-results-2026
+headline: Crocs, Inc. Announces Conference Call to Review Second Quarter 2026 Earnings Results
+<<<TEXT>>>
+--Crocs, Inc. announced today that on Thursday, July 30, 2026, at 8:30 am ET, it will host a conference call to discuss the results of its second quarter ended June 30, 2026. To receive conference call details, please register at the Investor Relations section of the Crocs website, investors.crocs.com. The webcast will also be available live and on replay through...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 30e221f11ad729b5
+symbol: CROX
+published_utc: 2026-07-30T07:00:00Z
+url: https://www.nasdaq.com/press-release/crocs-inc-reports-record-second-quarter-2026-results-raises-full-year-2026-outlook
+headline: Crocs, Inc. Reports Record Second Quarter 2026 Results; Raises Full-Year 2026 Outlook
+<<<TEXT>>>
+--Crocs, Inc., a world leader in innovative casual footwear for all, today announced its second quarter 2026 financial results. Based on our strong first half performance, we are again raising our full-year top- and bottom-line guidance, "said Andrew Rees, Chief Executive Officer. Mr. Rees continued, "Supported by our strong cash flow generation, we remain committed to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f6d095a4475f0c0c
+symbol: CROX
+published_utc: 2026-08-13T11:30:00Z
+url: https://www.nasdaq.com/press-release/crocs-introduces-niles-new-mascot-launches-bold-new-era-character-driven-storytelling
+headline: Crocs Introduces Niles: New Mascot Launches a Bold New Era of Character-Driven Storytelling
+<<<TEXT>>>
+--Crocs, a world leader in innovative casual footwear for all, today introduced Niles™, the brand's official mascot, and the beginning of a new chapter in the brand's storytelling strategy. Today's introduction was made following a series of playful "Easter eggs" that have appeared within varying brand assets over the last month leading up to this launch.
+<<<END>>>

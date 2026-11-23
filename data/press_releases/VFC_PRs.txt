@@ -1,0 +1,81 @@
+<<<PRESS_RELEASE>>>
+id: 370b99b4ee854a83
+symbol: VFC
+published_utc: 2026-01-07T16:30:00Z
+url: https://www.nasdaq.com/press-release/vf-corporation-announces-third-quarter-fiscal-2026-earnings-and-conference-call-date
+headline: VF Corporation Announces Third Quarter Fiscal 2026 Earnings and Conference Call Date
+<<<TEXT>>>
+VF Corporation plans to release its third quarter fiscal 2026 financial results on Wednesday, January 28 th, 2026 at approximately 6:00 a.m. ET. VF Corporation is a portfolio of leading outdoor, active and workwear brands, including The North Face ®, Vans ®, and Timberland ®. Investor Contact: Allegra Perry ir@vfc.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6f6a7119a44e4746
+symbol: VFC
+published_utc: 2026-01-13T06:00:00Z
+url: https://www.nasdaq.com/press-release/vf-corporation-announces-participation-28th-annual-icr-conference-2026-01-13
+headline: VF Corporation Announces Participation at the 28th Annual ICR Conference
+<<<TEXT>>>
+VF Corporation announced today that VF management will participate in a fireside chat at the 28 th Annual ICR Conference, being held today Tuesday, January 13, 2026 at 9:30 a.m. ET. VF Corporation is a portfolio of leading outdoor, active and workwear brands, including The North Face ®, Vans ® and Timberland ®. Investor Contact: Allegra Perry ir@vfc.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2ca45e7fc66246b0
+symbol: VFC
+published_utc: 2026-01-28T06:00:00Z
+url: https://www.nasdaq.com/press-release/vf-corporation-progressed-transformation-its-third-quarter-fiscal-2026-delivering
+headline: VF Corporation Progressed on Transformation in Its Third Quarter Fiscal 2026 Delivering Revenue Growth, Margin Expansion and Debt Reduction
+<<<TEXT>>>
+VF Corporation today reported financial results for its third quarter ended December 27, 2025, and the Company's Board of Directors authorized a quarterly per share dividend of $0.09. The Americas region had its strongest performance in over three years, while global DTC inflected to growth. Strong execution during holidays, led by the Americas region and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: da321ce195d0513d
+symbol: VFC
+published_utc: 2026-03-03T16:30:00Z
+url: https://www.nasdaq.com/press-release/vf-corporation-announces-participation-citis-2026-global-consumer-retail-conference
+headline: VF Corporation Announces Participation at Citi’s 2026 Global Consumer & Retail Conference
+<<<TEXT>>>
+VF Corporation announced today that VF management will participate in a fireside chat at Citi’ s 2026 Global Consumer& Retail Conference, being held Tuesday, March 10, 2026 at 9:30 a.m. ET. VF Corporation is a portfolio of leading outdoor and active brands, including The North Face ®, Vans ® and Timberland ®. Investor Contact: Allegra Perry ir@vfc.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5ec6ba88fe69f7b7
+symbol: VFC
+published_utc: 2026-04-21T03:00:00Z
+url: https://www.nasdaq.com/press-release/vf-corporation-enters-partnership-nedap-unlock-end-end-inventory-visibility-across
+headline: VF Corporation enters partnership with Nedap to unlock end-to-end inventory visibility across its global store estate
+<<<TEXT>>>
+GROENLO, The Netherlands, April 21, 2026/ PRNewswire/-- Nedap, a leader in item-level inventory visibility, today announced a partnership with VF Corporation, a global leader in apparel, footwear and equipment whose portfolio of iconic active and outdoor lifestyle brands includes The North Face ®, Vans ® and Timberland ®. As part of the collaboration, VF...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 49f846c67fddd81f
+symbol: VFC
+published_utc: 2026-04-29T16:30:00Z
+url: https://www.nasdaq.com/press-release/vf-corporation-announces-fourth-quarter-fiscal-2026-earnings-and-conference-call-date
+headline: VF Corporation Announces Fourth Quarter Fiscal 2026 Earnings and Conference Call Date
+<<<TEXT>>>
+VF Corporation plans to release its fourth quarter fiscal 2026 financial results on Wednesday, May 20 th, 2026 at approximately 6:00 a.m. ET. VF Corporation is a portfolio of leading outdoor, active and workwear brands, including The North Face ®, Vans ®, and Timberland ®. Investor Contact: Allegra Perry ir@vfc.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a9cdb4b8f967a45a
+symbol: VFC
+published_utc: 2026-05-20T06:00:00Z
+url: https://www.nasdaq.com/press-release/vf-corporation-returns-revenue-growth-full-year-fy26-expanded-margins-and-reduced
+headline: VF Corporation Returns to Revenue Growth for the Full Year in FY'26 With Expanded Margins and Reduced Debt
+<<<TEXT>>>
+VF Corporation today reported financial results for its fourth quarter ended March 28, 2026, and the Company's Board of Directors authorized a quarterly per share dividend of $0.09. These financial results are also reflected in a presentation available on the Investor Relations website at ir.vfc.com. Bracken Darrell, President and CEO, said:" For the first...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c7a3949631ed76f8
+symbol: VFC
+published_utc: 2026-07-08T16:30:00Z
+url: https://www.nasdaq.com/press-release/vf-corporation-announces-first-quarter-fiscal-2027-earnings-and-conference-call-date
+headline: VF Corporation Announces First Quarter Fiscal 2027 Earnings and Conference Call Date
+<<<TEXT>>>
+VF Corporation plans to release its first quarter fiscal 2027 financial results on Wednesday, July 29 th, 2026 at approximately 6:00 a.m. ET. Following the release, VF management will host a conference call at approximately 8:00 a.m. ET to review results. The conference call will be broadcast live via the Internet, accessible at ir.vfc.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2ae541a31fb7f135
+symbol: VFC
+published_utc: 2026-07-29T06:00:00Z
+url: https://www.nasdaq.com/press-release/vf-corporation-delivered-first-quarter-fiscal-2027-ahead-guidance-2026-07-29
+headline: VF Corporation Delivered First Quarter Fiscal 2027 Ahead of Guidance
+<<<TEXT>>>
+VF Corporation today reported financial results for its first quarter ended June 27, 2026 ahead of guidance and raises full year revenue outlook. The Company's Board of Directors authorized a quarterly per share dividend of $0.09. Bracken Darrell, President and CEO, said: "We had a solid start to the year, beating our revenue and operating income guidance. The...
+<<<END>>>

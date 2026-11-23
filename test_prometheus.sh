@@ -57,6 +57,7 @@
 #        --model ID (Advisor model)  --skip-inspect (skip the fastmcp smoke check)  --legacy  --help
 # SESSION FLAGS (with --session; anything not given is asked)  --name N  --age N  --risk conservative|moderate|aggressive  --cash DOLLARS  --mode ask|auto  --prompt TEXT  --account N|KEY (an existing account: no
 #        user is created)  --yes (ask nothing: not the fetch, not the understanding; in Ask mode you are still asked to approve each trade)  --no-fetch  --no-trader-model  --cleanup (delete the new account at the end)  --allow-no-trade  --real-ledger
+#        --ignore-critic (skip the Critic's step for this session, design choices entry 148: every Advisor recommendation counts as approved, Auto trades it, Ask asks you and says the Critic did not review it)
 #        --default-count N  --model ID (the Advisor's)  --save FILE (what the desk made, as JSON: a real capture)
 # PROMETHEUS_DRY_RUN=1 prints the command instead of running it (used by tests/test_prometheus_script.py).
 set -euo pipefail
@@ -68,7 +69,7 @@ usage() { sed -n '2,/^set -euo/p' "$0" | sed '$d' | sed 's/^# \{0,1\}//'; }
 SYMBOL=""; TERM_TEXT=""; SOURCE=""; DAYS=""; COMPANY=""; YES=0; NO_FETCH=0; NO_ADVISOR=0; MODEL=""; SKIP_INSPECT=0; LEGACY=0
 HAVE_SYMBOL=0; HAVE_TERM=0; HAVE_SOURCE=0; HAVE_DAYS=0; HAVE_COMPANY=0
 SESSION=0; S_NAME=""; S_AGE=""; S_RISK=""; S_CASH=""; S_MODE=""; S_PROMPT=""; S_ACCOUNT=""; S_CLEANUP=0; S_ALLOW_NO_TRADE=0; S_NO_TRADER_MODEL=0; S_REAL_LEDGER=0
-S_COUNT=""; S_SAVE=""
+S_COUNT=""; S_SAVE=""; S_IGNORE_CRITIC=0
 
 while [[ $# -gt 0 ]]; do
   case "$1" in
@@ -97,13 +98,14 @@ while [[ $# -gt 0 ]]; do
     --allow-no-trade) S_ALLOW_NO_TRADE=1; shift ;;
     --no-trader-model) S_NO_TRADER_MODEL=1; shift ;;
     --real-ledger)    S_REAL_LEDGER=1; shift ;;
+    --ignore-critic)  S_IGNORE_CRITIC=1; shift ;;
     -h|--help)        usage; exit 0 ;;
     *) echo "ERROR: unknown option: $1 (try --help)" >&2; exit 2 ;;
   esac
 done
 
 # The session flags belong to --session. Without it they are refused, not silently ignored.
-if [[ $SESSION -eq 0 ]] && [[ -n "$S_NAME$S_AGE$S_RISK$S_CASH$S_MODE$S_PROMPT$S_ACCOUNT$S_COUNT$S_SAVE" || $S_CLEANUP -eq 1 || $S_ALLOW_NO_TRADE -eq 1 || $S_NO_TRADER_MODEL -eq 1 || $S_REAL_LEDGER -eq 1 ]]; then
+if [[ $SESSION -eq 0 ]] && [[ -n "$S_NAME$S_AGE$S_RISK$S_CASH$S_MODE$S_PROMPT$S_ACCOUNT$S_COUNT$S_SAVE" || $S_CLEANUP -eq 1 || $S_ALLOW_NO_TRADE -eq 1 || $S_NO_TRADER_MODEL -eq 1 || $S_REAL_LEDGER -eq 1 || $S_IGNORE_CRITIC -eq 1 ]]; then
   echo "ERROR: --name, --age, --risk, --cash, --mode, --prompt, --account, --cleanup and the other session flags go with --session" >&2; exit 2
 fi
 # --company belongs to press releases. Alone it means that source; with another source it is a mistake, and it is refused, not silently ignored.
@@ -222,6 +224,7 @@ if [[ $SESSION -eq 1 ]]; then
   [[ -n "$S_COUNT" ]] && CMD+=(--default-count "$S_COUNT")
   [[ $S_NO_TRADER_MODEL -eq 1 ]] && CMD+=(--no-trader-model)
   [[ $S_REAL_LEDGER -eq 1 ]] && CMD+=(--real-ledger)
+  [[ $S_IGNORE_CRITIC -eq 1 ]] && CMD+=(--ignore-critic)
   [[ -n "$S_SAVE" ]] && CMD+=(--save "$S_SAVE")
   [[ $S_CLEANUP -eq 1 ]] && CMD+=(--cleanup)
   [[ $S_ALLOW_NO_TRADE -eq 1 ]] && CMD+=(--allow-no-trade)

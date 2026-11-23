@@ -177,7 +177,7 @@ def test_the_live_run_takes_the_box_always_raise_funds_as_the_setting_for_the_ru
     import inspect
 
     source = inspect.getsource(desk_run.run_live)
-    assert 'run_settings_module.run_settings(params["strict"], params["neutral"], params.get("raise_funds", False))' in source and "with run_settings_module.applied(chosen):" in source and '"raise_funds": chosen.always_raise_funds' in source
+    assert 'run_settings_module.run_settings(params["strict"], params["neutral"], params.get("raise_funds", False), params.get("ignore_critic", False))' in source and "with run_settings_module.applied(chosen):" in source and '"raise_funds": chosen.always_raise_funds' in source
 
 
 def test_the_approver_turns_the_two_funding_cards_into_their_own_questions_and_their_answers_are_a_yes_a_no_or_nothing():

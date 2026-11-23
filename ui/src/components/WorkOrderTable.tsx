@@ -60,6 +60,11 @@ export function WorkOrderTable({ state, selectedKey, onSelect }: WorkOrderTableP
             </tbody>
           </table>
         )}
+        {rows.length > 0 && order?.beyond ? (
+          <div className="muted" style={{ padding: "8px 12px", fontSize: "0.9em" }}>
+            {order.beyond.count} more scored below your top {order.beyond.top}, not shown: {order.beyond.symbols.join(", ")}
+          </div>
+        ) : null}
       </div>
     </Card>
   );
@@ -124,6 +129,10 @@ function Row({ row, selected, state, onSelect, onMove }: { row: WorkRow; selecte
               </Badge>
             ) : row.group === "neutral" ? (
               <Badge tone="info">NEUTRAL PASS</Badge>
+            ) : row.decision?.origin === "advisor" ? (
+              <Badge tone="warn" title="You ticked Ignore Critic: the Critic did not review this recommendation. It counts as approved on the Advisor's word alone.">
+                CRITIC SKIPPED
+              </Badge>
             ) : (
               <span className="muted">—</span>
             )}

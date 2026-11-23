@@ -48,6 +48,9 @@ THE POT AND ORDERS IN DOLLARS (design choices entry 111). Every decision sized f
 ESTIMATE), and the Account Manager turns the dollars into shares at the price the trade fills at. Every place that shows a decision says the dollars first (`order_phrase`). A purchase of the recommendation path's round robin, or one held to the shares the
 user asked for, is an order in shares, held by the pot.
 
+IGNORE CRITIC (design choices entry 148). When the user ticked "Ignore Critic" for the run, the Critic did not run and the order has no review: every recommendation of the Advisor counts as approved and is decided HERE, from `advisor_purchases`, as a neutral
+company is (`ignore_critic.py`): `origin: "advisor"`, `yes_auto` in Auto mode, the user's answer in Ask mode with a card that says the Critic did not review it, sized TOGETHER with the neutral purchases in the one call, the Advisor's first. With the box off none of this runs.
+
 DECIMAL MONEY (design choices entry 112): the cash, the budget, the prices, the amounts and the share counts of a decision are `Decimal` (a decision is a plain dict on the work order: a Decimal after this code wrote it, an int or a float after
 `json` read it back, and every reader goes through a door). The Critic's deal price and the Advisor's entry price are the Advisor's and the Critic's measurements, and cross into the account here, once, through the price door (`_price_of`, four
 places, half up); nothing here is a float.
@@ -60,7 +63,7 @@ import re
 from datetime import datetime
 from decimal import Decimal
 
-from prometheus.agents.account_manager import funding as funding_module, neutral, sizing
+from prometheus.agents.account_manager import funding as funding_module, ignore_critic, neutral, sizing
 from prometheus.agents.account_manager.config import load_config as load_account_manager_config
 from prometheus.agents.critic import feedback
 from prometheus.agents.critic.common import utc_text
@@ -300,7 +303,7 @@ def _size(order: WorkOrder, buying: list[tuple[dict, sizing.Purchase]], portfoli
 def decide_trades(order: WorkOrder, portfolio: Portfolio, profile: UserProfile, approver=None, now: datetime | None = None, mode: str | None = None,
                   balance: str | None = None, budget: Decimal | None = None, prices: dict[str, Decimal] | None = None, wanted: dict[str, Decimal] | None = None,
                   neutral_purchases: list[tuple[dict, sizing.Purchase]] | None = None, fractional: bool = False, max_price: Decimal | None = None, min_price: Decimal | None = None,
-                  funding: tuple[Decimal, str] | None = None) -> WorkOrder:
+                  funding: tuple[Decimal, str] | None = None, advisor_purchases: list[tuple[dict, sizing.Purchase]] | None = None) -> WorkOrder:
     """Turn every review into a trade decision, and size it (see the module text); return the SAME order. In Auto mode an approved purchase is `yes_auto` and NOTHING is asked; in Ask mode `approver` is called with the
     scorecard (a dict with `text`) of each approved purchase and returns True, False, or None (no answer); without one the decision is `pending_user`. `mode` overrides the profile's `trade_mode` for this run. `balance` ("even" or "round_robin") says how the money is spread over the purchases, and `budget` is the funds
     requested (dollars; the cash when left out). With no `balance` the money is spent round-robin, in both modes (entry 106). `prices` is {symbol: the current price} of the symbols the portfolio HOLDS, for the
@@ -314,12 +317,17 @@ def decide_trades(order: WorkOrder, portfolio: Portfolio, profile: UserProfile, 
     None: none): the same from the other side, a purchase priced under it gets no decision (`UNDER_FLOOR`), every decision carries it (`decision["min_price"]`) and the handshake refuses a fill under it.
     `funding` (entry 142, R10) is (the money to RAISE by selling holdings, how the user permitted it) when the Account Manager decided that the shares the user typed with the recommendation are paid for by selling: the purchases are sized
     as if the account held that money, each sized decision carries `funding` and the desk runs RaiseFunds before the Trader. None: sized to the cash, as ever.
+    `advisor_purchases` (entry 148; ((the Advisor's recommendation record, its `sizing.Purchase`) for each, best rank first, already limited to the number the user asked for: `ignore_critic.choose`) are the recommendations of a run where the user
+    ticked "Ignore Critic": the Critic did not run, so every one counts as approved. They are decided here, each `origin: "advisor"` with no review, after the reviews' decisions (there are none then) and BEFORE the neutral ones, and sized WITH them in the same ONE
+    call. An order that says `ignore_critic` and is still `recommended` is decided like one the Critic reviewed (it has no review to wait for). A record that is not a purchase gets a `no_funds` decision and no size.
     Never raises for the user's side of things: a refusal is a message on the order."""
     now = _aware(now)
     if order.status in ("decided", "traded"):   # decided already; or decided and then traded by the Trader (Trader v1): neither is decided again
         return order
     if order.status == "recommended" and not order.recommendations and neutral_purchases:
         order.status = "reviewed"      # the Advisor recommended nothing, so the Critic had nothing to review: only the neutral companies are decided here
+    elif order.status == "recommended" and order.ignore_critic:
+        order.status = "reviewed"      # the user chose to ignore the Critic (entry 148): it did not run and there is no review to wait for; the Advisor's recommendations are decided here
     if order.status != "reviewed":
         order.errors = [*order.errors, f"the Account Manager decides on an order the Critic reviewed (status {order.status})"]
         return order
@@ -370,7 +378,26 @@ def decide_trades(order: WorkOrder, portfolio: Portfolio, profile: UserProfile, 
                 decision.update(will_trade="pending_user", reason="waiting for the user")
                 to_ask.append((decision, lambda n, of, proposal, review=review, record=record, decision=decision: _card(review, record, decision, n, of, proposal, cash), ""))
         decisions.append(decision)
-    valid_minutes = load_account_manager_config().neutral.valid_minutes
+    config = load_account_manager_config()
+    if order.ignore_critic:      # the user chose to skip the Critic (entry 148): every Advisor recommendation counts as approved, decided like a neutral one and sized with them
+        for record in ignore_critic.recommendations_of(order)[1]:      # a record that is not a purchase (an old `reduce` or `hold`): no purchase, and the user is told why
+            decisions.append(ignore_critic.not_a_purchase(record, mode, now))
+        for record, purchase in advisor_purchases or []:
+            decision = ignore_critic.decision_for(record, purchase, mode, now, config.ignore_critic.valid_minutes)
+            if max_price is not None:
+                decision["max_price"] = max_price
+            if min_price is not None:
+                decision["min_price"] = min_price
+            decisions.append(decision)
+            if decision["will_trade"] is not None:      # no price: `no_system_denied`, nothing to size
+                continue
+            buying.append((decision, purchase))
+            if mode == "auto":      # Auto mode trades what is approved and nobody is asked (entry 104)
+                decision.update(will_trade="yes_auto")
+            else:      # Ask mode: the user decides, about the FINAL size, in the same proposal as the neutral purchases (entry 79)
+                decision.update(will_trade="pending_user")
+                to_ask.append((decision, lambda n, of, proposal, record=record, decision=decision: {**ignore_critic.confirmation_card(record, decision, cash), "n": n, "of": of, "proposal": proposal, "cash": cash}, decision["reason"]))
+    valid_minutes = config.neutral.valid_minutes
     for candidate, purchase in neutral_purchases or []:      # a neutral recommendation is an approval (entry 107): decided beside the reviews' decisions, and sized with them
         decision = neutral.decision_for(candidate, purchase, mode, now, valid_minutes)
         if max_price is not None:

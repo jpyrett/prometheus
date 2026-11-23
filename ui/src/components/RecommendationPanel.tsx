@@ -54,7 +54,7 @@ export function RecommendationPanel({ row, runId, waitingForAdvisor, loadRecords
   ].filter(Boolean);
 
   return (
-    <Card title="Recommendation" grow className="recommendation" right="by the Advisor · reviewed by the Critic">
+    <Card title="Recommendation" grow className="recommendation" right={row.decision?.origin === "advisor" ? "by the Advisor · Critic skipped" : "by the Advisor · reviewed by the Critic"}>
       <div className="scroll rec-scroll" role="group" tabIndex={0} aria-label={`Recommendation for ${row.symbol}`}>
         <div className="rec-h">
           {score !== null && <ScoreDial score={score} label={`${row.symbol}: Advisor score ${Math.round(score)} of 100`} />}

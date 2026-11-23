@@ -63,10 +63,10 @@ class Emitter:
                 self.last_states[state["key"]] = mark
                 self.run.emit("stage", state)
 
-    def work_order(self, order, understood: str | None = None, found: list[dict] | None = None) -> dict:
-        """Emit the whole work-order view, and keep the order as a plain dict for the records route. Not emitted again when nothing changed."""
+    def work_order(self, order, understood: str | None = None, found: list[dict] | None = None, top: int | None = None) -> dict:
+        """Emit the whole work-order view, and keep the order as a plain dict for the records route. Not emitted again when nothing changed. `top`: the number of companies asked for (`views.work_order_view`)."""
         snapshot = views.order_snapshot(order)
-        view = views.work_order_view(snapshot, understood=understood, found=found)
+        view = views.work_order_view(snapshot, understood=understood, found=found, top=top)
         with self._lock:
             self.run.snapshot = snapshot
             if view == self.last_rows:

@@ -1,0 +1,349 @@
+<<<ARTICLE>>>
+id: finnhub:143802427
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:12:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=811211702f800fb081befdc4b2884c91e525f76deb12f899cd149bf629829c75
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: What Is Nike Stock's Biggest Opportunity?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143780826
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T00:20:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4901a651390b8e214eca108791b84dbe5e8ff40972dc1d432dae2f20f704df20
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: Nvidia Is Not a Normal Company Having a CEO Issue: Everson
+<<<SUMMARY>>>
+Carolyn Everson, a board member at Coca-Cola, Disney and Under Armour and a senior advisor at Permira, discusses how boards respond to allegations involving executives. Everson speaks with Romaine Bostick and Jess Menton on "The Close."
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143782378
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T11:18:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=672f599e99a3cf33f3068badf8f11a81bb276553b67079d5a92f754f02db7d76
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: Under Armour lifts FY27 outlook despite Q2 revenue drop
+<<<SUMMARY>>>
+Under Armour has raised its fiscal 2027 (FY27) operating income forecast despite reporting a 7% fall in second quarter (Q2) revenue and narrowing its expected gross-margin improvement.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143766606
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T12:44:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=0367921b38b0885e0050afbcca4e98722cbe3206a50a514f97f71625f17522d2
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/11/Powder-Keg-Stocks-Ignite-The-Dynamite-Fo.jpg?width=2048&height=1536
+category: company
+tickers: UAA
+keywords: 
+headline: Short Interest Powder Kegs: 10 Stocks Bears Cannot Quit Buying
+<<<SUMMARY>>>
+Venture Global tops heavily shorted stocks at 90.11% of float, with Sunrun, Ondas, Kohl&#39;s and Under Armour also on the list.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143725963
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T09:14:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f1ee886a66e08fca32288e00dfb587654f2d7cf9e7549b42134c493c56fe7cf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: Will New Tech Leadership Change Hyatt Stock Narrative
+<<<SUMMARY>>>
+Hyatt Hotels appointed Danny Miles as Chief Digital & Information Officer, placing him in charge of a combined digital and technology organization that covers AI, cybersecurity, engineering and digital products across the global hotel portfolio. Miles’ track record building consumer-facing platforms at Under Armour, Dollar Shave Club and Nike points to a heavier focus on data driven guest engagement and operational efficiency inside Hyatt’s existing fee based model. This article will examine...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139942604
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T16:58:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=2f2a60e82d9a51f6cfcf6a7d047b0fc69108cc5ad99a5637b62caae1852809d0
+image_url: 
+category: company
+tickers: UAA
+keywords: 
+headline: Kandal M Venture shares are trading higher after the company announced an agreement to acquire 15% equity interest in Dumaine International for about the equivalent of $2.5 million in an all-cash transaction.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143661334
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T21:08:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3a485eb392114b7decef2bf96f0c93ab6c7dfb06d82ed1658015f17f9eccf233
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: Hyatt taps in new chief digital and information officer
+<<<SUMMARY>>>
+Danny Miles will oversee the hotelier’s modernization plans as it aims to use data and AI to create more personalized guest experiences.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143686967
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T17:17:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d6a48dec1d037d486da73fcd57cfeac649b4ee863b62b320a7c4cd0ab283d358
+image_url: 
+category: company
+tickers: UAA
+keywords: 
+headline: Telsey Advisory Group Maintains Market Perform on Under Armour, Lowers Price Target to $5
+<<<SUMMARY>>>
+Telsey Advisory Group  analyst Cristina Fernandez   maintains Under Armour (NYSE:UAA) with a Market Perform and lowers the price target from $5.5 to $5.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657932
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6845d66cffe9149379c7fd813507cecfce4a5b3676c58032fd06dc0900b705dd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: Hyatt Names Danny Miles Chief Digital & Information Officer to Lead Technology Transformation
+<<<SUMMARY>>>
+CHICAGO, November 09, 2026--Hyatt Hotels Corporation (NYSE: H) today announced that Danny Miles has joined Hyatt as Chief Digital & Information Officer, leading its newly combined Digital and Technology organization. Miles joins Hyatt’s Senior Leadership Team and reports to Mark Vondrasek, Chief Commercial Officer. His appointment marks a significant step in Hyatt’s continued investment in technology as a driver of innovation, guest engagement and hotel performance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143657934
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T13:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8980745004a1437382d079f2af27228501cb1ddb05393fb7e35a59f8ae104e32
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: Under Armour's Q2 Earnings Beat Estimates on Cost Discipline
+<<<SUMMARY>>>
+UAA beats Q2 fiscal 2027 earnings estimates despite declining sales, traffic weakness and margin pressures, while maintaining its annual earnings outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143921397
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T20:45:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=55a50a2ad602c28ad62ece67b6a02e51edcfcd819fd9eec553b38ed3a269815c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: Nike's Extra $5 Billion Still Leaves Sales Below 2024
+<<<SUMMARY>>>
+Nike stock fell 6.3% on Tuesday and closed at $35.85. The S&P 500 slipped 1.0% the same day. So Nike did 5.3 percentage points worse than the market. The drop came on the day Nike held its first investor day in nine years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917526
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:22:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=de92c3b5e7d71161f71a9322a253e64c27bc2c33863e1f5c745c0e5d973f9809
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: How Much Downside Is Left In Nike Stock?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143912314
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:21:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae3b9bc3218d7720abad81bacdcc5e407a7b2088477c34897a48d3b65733c7a1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: Why Did Nike Stock Move?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883236
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T16:23:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=49f7092062eb3e9e6e73ae3137ac667bbcceb331b4722a12f4cf70306293ed61
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: UAA
+keywords: 
+headline: Under Armour Refines Its Product Assortment to Drive Full-Price Sales
+<<<SUMMARY>>>
+UAA sharpens its product lineup to drive full-price sales, betting on performance gear and fewer styles while managing weak demand and inventory pressure.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143879010
+symbol: UAA
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T10:05:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=1643a0c70e385d1e588034b875164a53a7785dcad43980eb128d0b2645484115
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/17/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: UAA
+keywords: 
+headline: Capri Holdings Chairman John D. Idol Sells $47M After Rally Cools
+<<<SUMMARY>>>
+John D Idol, chairman and CEO of Capri Holdings Ltd (NYSE:CPRI), sold 2,384,806 shares worth $46.93 million on Nov. 16, 2026, reducing his holdings by 100%.Capri shares had climbed 28.84% over the month leading into the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c68df30e4cca729396ec7eefbb7c0b0c8fd74928cfc77fd2ec1bb786e4f46f82
+symbol: UAA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T16:23:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3031359/under-armour-refines-its-product-assortment-to-drive-full-price-sales?cid=CS-ZC-FT-analyst_blog|rank_focused-3031359
+image_url: https://staticx-tuner.zacks.com/images/articles/main/f3/111.jpg
+category: 
+tickers: UA, UAA, TPR, FIGS, URBN
+keywords: product assortment, full-price sales, inventory reduction, revenue decline, performance products, margin pressure, SKU reduction
+headline: Under Armour Refines Its Product Assortment to Drive Full-Price Sales
+<<<SUMMARY>>>
+Under Armour is narrowing its product assortment by nearly 50% to focus on core performance products that can sell at full price. Q2 revenues fell 6.9% to $1.24 billion with weakness in apparel, though HeatGear and Core Vanish showed double-digit growth. The company faces margin pressure from excess inventory ($1.1 billion, up 4%) and elevated costs, but sees potential in full-price performers like the Bouncy Tee and upcoming Tech Helix.
+<<<INSIGHTS>>>
+UA | negative | Q2 revenues declined 6.9% year-over-year with both wholesale and direct-to-consumer sales down. Apparel revenues fell 6%, inventory is elevated at $1.1 billion, and gross margin outlook is pressured by excess inventory, elevated costs, and a stronger dollar. While the company has strategic initiatives underway, current financial performance and near-term headwinds are concerning.
+UAA | negative | Q2 revenues declined 6.9% year-over-year with both wholesale and direct-to-consumer sales down. Apparel revenues fell 6%, inventory is elevated at $1.1 billion, and gross margin outlook is pressured by excess inventory, elevated costs, and a stronger dollar. While the company has strategic initiatives underway, current financial performance and near-term headwinds are concerning.
+TPR | positive | Carries Zacks Rank #2 (Buy) with consensus estimates suggesting 17% earnings growth and 7.2% sales growth. Delivered a trailing four-quarter average earnings surprise of 17.6%, indicating consistent outperformance.
+FIGS | positive | Carries Zacks Rank #2 with consensus estimates showing 115.8% earnings growth and 23.1% sales growth. Delivered an exceptional trailing four-quarter average earnings surprise of 175%, demonstrating strong operational execution.
+URBN | positive | Carries Zacks Rank #2 with consensus estimates indicating 14% earnings growth and 9.6% sales growth. Delivered a trailing four-quarter average earnings surprise of 9.7%, showing consistent positive performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0ef17c090f5a6da8a7deee4c7519bded092a33fbc24e96201161e8fae03f6cf6
+symbol: UAA
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T19:51:25Z
+publisher: The Motley Fool
+author: Sara Appino
+url: https://www.fool.com/coverage/better-buy/2026/11/22/nike-vs-procter-gamble-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F497213577468110e4ae04f3160ed91a99378c474-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: NKE, PG, WMT, UA, UAA, ADDYY
+keywords: consumer stocks, dividend investing, athletic apparel, consumer staples, brand loyalty, cash flow, valuation comparison, supply chain risk
+headline: Nike vs. Procter & Gamble: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Nike and Procter & Gamble as investment options for 2027. Nike faces challenges with declining sales and a struggling business model, while P&G demonstrates steady growth, strong profitability, and a 70-year dividend increase streak. The analyst recommends P&G as the better buy due to its trusted brands, consistent growth, and reliable dividend income, despite Nike's lower valuation metrics.
+<<<INSIGHTS>>>
+NKE | negative | Nike is experiencing declining revenue (-1.2% YoY), faces intense competition, has concentrated customer base risk (29% from top 3 customers), and expects sales to fall in the current fiscal year. The company is undergoing a challenging restructuring, particularly in China operations.
+PG | positive | P&G demonstrates strong fundamentals with 3.5% revenue growth, high net margins (18.2%), robust free cash flow ($15.1B), and an exceptional 70-year dividend increase streak. All five business segments grew in the latest quarter, and the company maintains trusted brands with consistent consumer demand.
+WMT | neutral | Walmart is mentioned as a significant customer representing 16% of P&G's sales, indicating a key distribution channel but not the primary focus of the analysis.
+UA | neutral | Under Armour is mentioned as a competitor to Nike but is not analyzed as an investment option in this article.
+UAA | neutral | Under Armour is mentioned as a competitor to Nike but is not analyzed as an investment option in this article.
+ADDYY | neutral | Adidas is mentioned as a competitor to Nike in the athletic footwear and apparel market but is not analyzed as an investment option in this article.
+<<<END>>>

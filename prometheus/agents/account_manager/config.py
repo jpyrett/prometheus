@@ -4,6 +4,7 @@
     config.sizing.fractional_even_split     # true: an even split is in fractional shares (design choices entry 110); false: in whole shares
     config.clarify.max_questions            # 3: the Ask-mode questions about how much to buy (entry 85)
     config.direct.valid_minutes             # 30: how long the price of a trade the user named stays good (entry 87)
+    config.ignore_critic.valid_minutes      # 30: the same for an Advisor recommendation the Critic did not review because the user ticked "Ignore Critic" (entry 148)
     config.missing.max_prompts              # 5: the most Ask-mode questions about stocks the Data Clerk did not find (entry 102)
     config.orders.watch_seconds             # 60: how often the web server's watcher checks the waiting limit orders while the market is open (entry 140)
 
@@ -54,6 +55,10 @@ class Neutral(_Section):
     valid_minutes: int = Field(ge=1, le=240)         # a neutral recommendation has no review and so no `valid_until_utc` of the Critic's: the price the Account Manager asked of the Data Clerk is good for this long (entry 91)
 
 
+class IgnoreCritic(_Section):
+    valid_minutes: int = Field(ge=1, le=240)         # an Advisor recommendation the user chose not to have the Critic review (entry 148, "Ignore Critic") has no review and so no `valid_until_utc` of the Critic's: the price the Account Manager asked of the Data Clerk is good for this long, as a neutral one's
+
+
 class Orders(_Section):
     watch_seconds: int = Field(ge=5, le=3600)        # how often the watcher in the web server quotes the symbols of the waiting limit orders, DURING the regular session only (entry 140, W5): one Finnhub quote call for all of them, a convention of 60 seconds
 
@@ -65,6 +70,7 @@ class AccountManagerConfig(_Section):
     missing: Missing
     direct: Direct
     neutral: Neutral
+    ignore_critic: IgnoreCritic
     orders: Orders
 
 

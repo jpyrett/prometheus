@@ -54,6 +54,11 @@ REQUESTS = (
     "buy MSFT over $20 a share",
     "buy 5 shares of each of the top 3 oil stocks if recommended",
     "Buy 10 of MU and 5 of AMD if they're recommended",
+    # entry 146: ONE company asked for in the singular, and a number of shares with no stock named (Jacob's own request first: it spent all the cash on three companies)
+    "buy 5 shares of the most recommended shoe company",
+    "buy the best AI stock",
+    "buy 5 shares of the top 3 shoe stocks",
+    "Recommend the best oil company",
 )
 # Texts that are already recorded (with the older prompt) and are recorded AGAIN with the prompt after entry 140, under the key "<text> [entry 140]": the old reply stays as it was.
 AGAIN = ("Buy 10 of MU if the recommendation passes",)

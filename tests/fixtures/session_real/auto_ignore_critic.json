@@ -1,0 +1,5727 @@
+{
+ "request": "I want to buy oil stocks. Buy the most amount of oil stocks shares from the 3 most recommended companies.",
+ "intent": {
+  "request": "I want to buy oil stocks. Buy the most amount of oil stocks shares from the 3 most recommended companies.",
+  "action": "buy",
+  "topic": "oil",
+  "symbols": [],
+  "companies": [],
+  "count": 3,
+  "allocation": "default",
+  "budget": null,
+  "each": false,
+  "orders": []
+ },
+ "path": [
+  "account_manager",
+  "data_clerk",
+  "advisor",
+  "account_manager_decision",
+  "trader"
+ ],
+ "order": {
+  "schema_version": 4,
+  "request_id": "ae07f7b7d65e",
+  "requester": "desk",
+  "created_utc": "2026-11-23T05:19:45Z",
+  "query": "What do the stored news, press releases and filings say about XOM, CVX, COP, BP.L, SHEL.L, TTE.PA, 2222.SR, ENI.MI, EQNR.OL, OXY, EOG, CNQ, DK, FANG, VLO?",
+  "action_type": "search_news",
+  "subject": [
+   "XOM",
+   "CVX",
+   "COP",
+   "BP.L",
+   "SHEL.L",
+   "TTE.PA",
+   "2222.SR",
+   "ENI.MI",
+   "EQNR.OL",
+   "OXY",
+   "EOG",
+   "CNQ",
+   "DK",
+   "FANG",
+   "VLO"
+  ],
+  "company": null,
+  "source": "news",
+  "time_period": "last 14 days",
+  "since_days": 14,
+  "live": false,
+  "top_k": 10,
+  "criteria": {
+   "sentiment": "bullish or bearish"
+  },
+  "status": "traded",
+  "resolved": null,
+  "recommendations": [
+   {
+    "symbol": "EOG",
+    "company": null,
+    "stance": "bullish",
+    "model_score": null,
+    "score": 72,
+    "supported": true,
+    "consistent": null,
+    "bullish_signals": 0,
+    "bearish_signals": 0,
+    "signals_claimed": 0,
+    "signals_verified": 0,
+    "signals_counted": 0,
+    "signals": [],
+    "advisor": {
+     "model": "openai/gpt-oss-120b",
+     "version": "v1",
+     "proposed_archetypes": []
+    },
+    "blend": {
+     "value": 0.4334,
+     "score": 72,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.5468,
+       "available": true,
+       "n": 4,
+       "contribution": 0.164,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 0.537004,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.059256,
+         "value": -0.395
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.895558,
+         "value": 0.5822
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": true,
+         "value": 1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.8469,
+       "available": true,
+       "n": 6,
+       "contribution": 0.1694,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.106247,
+         "value": 1.0
+        },
+        {
+         "metric": "roe",
+         "raw": 26.05,
+         "value": 0.8025
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 30.03,
+         "value": 1.0
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 36.23,
+         "value": 1.0
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 1.8985,
+         "value": 0.8985
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.2393,
+         "value": 0.3803
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 1.0,
+       "available": true,
+       "n": 1,
+       "contribution": 0.1,
+       "parts": [
+        {
+         "metric": "payout_coverage",
+         "raw": 0.217502,
+         "value": 1.0
+        }
+       ]
+      }
+     }
+    },
+    "negative_equity": false,
+    "identity": {
+     "schema_version": 3,
+     "record_id": "23f183830c4e",
+     "request_id": "ae07f7b7d65e",
+     "case": "industry",
+     "sleeve": "industry",
+     "as_of_utc": "2026-11-23T00:00:00Z",
+     "sector_etf": "XLE",
+     "regime": "stress",
+     "regime_note": "SPY is under its 200-day mean"
+    },
+    "action": {
+     "action": "open",
+     "reason": "conviction: blended score 72 (news, performance, history and filings together)",
+     "cooldown_of": null
+    },
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "mom_12_1": 0.5370038653719242,
+       "pct_of_52w_high": 0.8955583679865002,
+       "above_sma_200": true,
+       "ret_21d": -0.05925550772347443,
+       "rsi_14": 43.10374577227145,
+       "atr_pct": 0.029008129500521382,
+       "above_sma_50": false,
+       "residual_mom_12_1": 0.7567877951491019,
+       "macd_hist": -0.8470748345054184,
+       "adx_14": 18.375867659136286,
+       "obv_20d_change": -0.10377049931679536,
+       "vol_63d_ann": 0.30188968613815337,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.24960905942609407
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.896 is under 0.9"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.3333,
+      "features_used": {
+       "atr_pct": 0.029008129500521382,
+       "ret_1d": -0.005953575489999419,
+       "volume_ratio_1d": 1.4271157666695231,
+       "gap_1d": -0.00026757642651698
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "ret_5d": -0.061394643759474454,
+       "zscore_21d": -1.0212912854787037,
+       "rsi_14": 43.10374577227145,
+       "atr_pct": 0.029008129500521382,
+       "roe": 26.05,
+       "debt_to_equity": 0.2393,
+       "current_ratio": 1.8985,
+       "revenue_growth": 30.03,
+       "residual_5d": 0.00710905082180624,
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449,
+       "above_sma_200": true,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.24960905942609407,
+       "volume_ratio_1d": 1.4271157666695231,
+       "gap_1d": -0.00026757642651698,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 31.276297335203378
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not oversold: ret_5d -0.061, zscore_21d -1.02, rsi_14 43.1",
+       "not idiosyncratic: residual_5d 0.007 against the sector's -0.069"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.6,
+      "features_used": {
+       "earnings_yield": 0.10624734381640458,
+       "debt_to_equity": 0.2393,
+       "payout_coverage": 0.21750167000668003,
+       "revenue_growth": 30.03,
+       "cash_balance": 5747000000.0
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": true,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": 0.5,
+      "direction": "bullish",
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": 0.0015,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 43.10374577227145
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.433 (score 72) from performance, historical, filings; no news counted"
+      ]
+     }
+    ],
+    "quality": {
+     "multiplier": 1.0,
+     "haircuts": [],
+     "haircuts_skipped": [
+      "share_count_change: no shares issued and outstanding on the stored balance sheet",
+      "sbc_to_revenue: no revenue figure for the year to date in the stored filings",
+      "receivables_vs_sales: no revenue figure for the year to date in the stored filings",
+      "inventory_vs_sales: no revenue figure for the year to date in the stored filings",
+      "risk_factor_change: not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+     ],
+     "turned_off": []
+    },
+    "modifiers": [],
+    "evidence": {
+     "signals": [],
+     "e_items": [],
+     "events": [],
+     "counter_evidence": [],
+     "contradictions": []
+    },
+    "features": {
+     "mom_12_1": {
+      "value": 0.5370038653719242,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "pct_of_52w_high": {
+      "value": 0.8955583679865002,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "above_sma_200": {
+      "value": true,
+      "unit": "bool",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "ret_21d": {
+      "value": -0.05925550772347443,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "rsi_14": {
+      "value": 43.10374577227145,
+      "unit": "0-100",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "atr_pct": {
+      "value": 0.029008129500521382,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "above_sma_50": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "residual_mom_12_1": {
+      "value": 0.7567877951491019,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "macd_hist": {
+      "value": -0.8470748345054184,
+      "unit": "USD",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "adx_14": {
+      "value": 18.375867659136286,
+      "unit": "0-100",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "obv_20d_change": {
+      "value": -0.10377049931679536,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "vol_63d_ann": {
+      "value": 0.30188968613815337,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "breakout_20d": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "bollinger_pct_b": {
+      "value": 0.24960905942609407,
+      "unit": "ratio",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "ret_1d": {
+      "value": -0.005953575489999419,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "volume_ratio_1d": {
+      "value": 1.4271157666695231,
+      "unit": "ratio",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "gap_1d": {
+      "value": -0.00026757642651698,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "ret_5d": {
+      "value": -0.061394643759474454,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "zscore_21d": {
+      "value": -1.0212912854787037,
+      "unit": "std",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "roe": {
+      "value": 26.05,
+      "unit": "%",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "debt_to_equity": {
+      "value": 0.2393,
+      "unit": "ratio",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "current_ratio": {
+      "value": 1.8985,
+      "unit": "x",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "revenue_growth": {
+      "value": 30.03,
+      "unit": "%",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "residual_5d": {
+      "value": 0.00710905082180624,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "sector_ret_5d": {
+      "value": -0.0685036945812807,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "spy_ret_5d": {
+      "value": -0.08558134602383449,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "candle_reversal_1d": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "stoch_k_14": {
+      "value": 31.276297335203378,
+      "unit": "0-100",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "earnings_yield": {
+      "value": 0.10624734381640458,
+      "unit": "fraction",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "payout_coverage": {
+      "value": 0.21750167000668003,
+      "unit": "ratio",
+      "as_of": "2026-11-05",
+      "source": "filing:0000821189-26-000227"
+     },
+     "cash_balance": {
+      "value": 5747000000.0,
+      "unit": "USD",
+      "as_of": "2026-11-05",
+      "source": "filing:0000821189-26-000227"
+     },
+     "residual_21d": {
+      "value": 0.04522873084393708,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "operating_margin": {
+      "value": 36.23,
+      "unit": "%",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "recent_bars": {
+      "value": [
+       [
+        "2026-10-05",
+        144.08,
+        2523368.130765
+       ],
+       [
+        "2026-10-06",
+        144.28,
+        2826289.638223
+       ],
+       [
+        "2026-10-07",
+        144.21,
+        2141431.362345
+       ],
+       [
+        "2026-10-08",
+        148.51,
+        2932037.128764
+       ],
+       [
+        "2026-10-09",
+        148.16,
+        2277820.219331
+       ],
+       [
+        "2026-10-12",
+        150.51,
+        2890463.130383
+       ],
+       [
+        "2026-10-13",
+        153.17,
+        2310846.33956
+       ],
+       [
+        "2026-10-14",
+        154.19,
+        2509002.218159
+       ],
+       [
+        "2026-10-15",
+        152.62,
+        2929106.467242
+       ],
+       [
+        "2026-10-16",
+        158.01,
+        5299558.18173
+       ],
+       [
+        "2026-10-19",
+        157.65,
+        2355962.349867
+       ],
+       [
+        "2026-10-20",
+        157.91,
+        2077639.712231
+       ],
+       [
+        "2026-10-21",
+        157.88,
+        2100461.976558
+       ],
+       [
+        "2026-10-22",
+        157.96,
+        2200140.989447
+       ],
+       [
+        "2026-10-23",
+        163.03,
+        3228766.210415
+       ],
+       [
+        "2026-10-26",
+        163.68,
+        2012369.561857
+       ],
+       [
+        "2026-10-27",
+        161.1,
+        2280497.302062
+       ],
+       [
+        "2026-10-28",
+        160.92,
+        1869108.209427
+       ],
+       [
+        "2026-10-29",
+        162.22,
+        2487550.4986
+       ],
+       [
+        "2026-10-30",
+        165.54,
+        2592783.462162
+       ],
+       [
+        "2026-11-02",
+        157.89,
+        3064072.805594
+       ],
+       [
+        "2026-11-03",
+        155.17,
+        3178968.074972
+       ],
+       [
+        "2026-11-04",
+        147.06,
+        5096651.647834
+       ],
+       [
+        "2026-11-05",
+        144.89,
+        5265468.297118
+       ],
+       [
+        "2026-11-06",
+        147.13,
+        4564711.199434
+       ],
+       [
+        "2026-11-09",
+        148.43,
+        5779049.993706
+       ],
+       [
+        "2026-11-10",
+        151.51,
+        4333084.269184
+       ],
+       [
+        "2026-11-11",
+        153.77,
+        3130665.101695
+       ],
+       [
+        "2026-11-12",
+        155.62,
+        2549672.38124
+       ],
+       [
+        "2026-11-13",
+        158.32,
+        3241959.761363
+       ],
+       [
+        "2026-11-16",
+        155.47,
+        3301655.850013
+       ],
+       [
+        "2026-11-17",
+        154.91,
+        2928736.075488
+       ],
+       [
+        "2026-11-18",
+        149.69,
+        3138992.616451
+       ],
+       [
+        "2026-11-19",
+        149.49,
+        2898271.933411
+       ],
+       [
+        "2026-11-20",
+        148.6,
+        4776773.053844
+       ]
+      ],
+      "unit": "[date, close, volume]",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "last_close": {
+      "value": 148.6,
+      "unit": "USD",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "negative_equity": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-05",
+      "source": "filing:0000821189-26-000227"
+     },
+     "cfo_negative_with_profit": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-05",
+      "source": "filing:0000821189-26-000227"
+     },
+     "atr_14": {
+      "value": 4.310608043777477,
+      "unit": "USD",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "sma_50": {
+      "value": 150.5436,
+      "unit": "USD",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "beta_63d": {
+      "value": -0.14673893919002454,
+      "unit": "ratio",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "max_drawdown_63d": {
+      "value": -0.12474326446780237,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "spy_above_sma_200": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "spy_vol_21d_ann": {
+      "value": 0.2587673173976472,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "spy_drawdown_63d": {
+      "value": -0.1145952328999218,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "spy_ret_21d": {
+      "value": -0.09706005550028807,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "sector_etf": {
+      "value": "XLE",
+      "unit": "ticker",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "accrual_ratio": {
+      "value": -0.07018134164482538,
+      "unit": "ratio",
+      "as_of": "2026-11-05",
+      "source": "filing:0000821189-26-000227"
+     }
+    },
+    "agreement": {
+     "agreement": 0.5,
+     "evidence_n": 0,
+     "completeness": 1.0,
+     "confidence": 0.7167
+    },
+    "ranking": {
+     "composite": 0.0015,
+     "conflict": false,
+     "stance": "bullish",
+     "stance_reason": null,
+     "rank": 1,
+     "universe_rank": 1,
+     "diversity_adjustment": false,
+     "displaced_by": null,
+     "concentrated": false
+    },
+    "trade": {
+     "family": "conviction",
+     "entry_basis": "last_close",
+     "entry_zone": [
+      146.4447,
+      150.7553
+     ],
+     "entry_mid": 148.6,
+     "stop_distance": 12.9318,
+     "stop_price": 135.6682,
+     "target_price": 174.4636,
+     "trailing": false,
+     "trail_distance": null,
+     "horizon_bars": 40,
+     "time_stop_date": "2027-01-18",
+     "time_stop_note": "weekdays only: holidays of the coming weeks are not known",
+     "gap_risk": false,
+     "order_style": "limit",
+     "limit_price": 148.6,
+     "invalidation": [
+      {
+       "kind": "price_below",
+       "value": 135.6682
+      },
+      {
+       "kind": "days_elapsed",
+       "value": 40
+      },
+      {
+       "kind": "event_class",
+       "value": [
+        "guidance_cut",
+        "earnings_miss",
+        "dividend_cut",
+        "dilution_offering",
+        "ceo_departure_unplanned",
+        "material_weakness",
+        "restatement",
+        "going_concern",
+        "form_144_sale_notice"
+       ]
+      }
+     ],
+     "notes": [
+      "entry zone = last +- 0.5 x atr_14; stop = 3 x atr_14 (atr_14 = 4.31)",
+      "the target is 2 x the stop distance above the entry (174.46): the family's edge alone gave 149.27, a reward of 0.05 for each unit risked"
+     ]
+    },
+    "risk": {
+     "vol_63d_ann": 0.30188968613815337,
+     "atr_pct": 0.029008129500521382,
+     "beta_63d": -0.14673893919002454,
+     "max_drawdown_63d": -0.12474326446780237,
+     "days_to_next_earnings": null,
+     "earnings_move_abs": null,
+     "gap_risk": false,
+     "red_flags": []
+    },
+    "concentration": {
+     "note": null
+    },
+    "gates": [
+     {
+      "gate": "no_metrics",
+      "passed": true,
+      "value": null,
+      "threshold": null,
+      "note": null
+     },
+     {
+      "gate": "freshness",
+      "passed": true,
+      "value": {
+       "newest_bar": "2026-11-20",
+       "sessions_behind": 1,
+       "fundamentals_as_of": "2026-11-23"
+      },
+      "threshold": {
+       "max_bar_age_sessions": 1,
+       "max_fundamentals_age_days": 100
+      },
+      "note": null
+     },
+     {
+      "gate": "red_flag",
+      "passed": true,
+      "value": [],
+      "threshold": "none",
+      "note": null
+     },
+     {
+      "gate": "event_risk",
+      "passed": true,
+      "value": null,
+      "threshold": null,
+      "note": "no earnings date known: the calendar is not available and no results press release is stored"
+     }
+    ],
+    "thesis": {
+     "thesis": null,
+     "bull_case": [],
+     "bear_case": [],
+     "thesis_error": "the thesis has numbers that are not in the record: 52"
+    },
+    "audit": {
+     "metric_order": "2d7cdee094b9",
+     "plan_run": {
+      "model": "openai/gpt-oss-120b",
+      "tokens_in": 2631,
+      "tokens_out": 1357,
+      "calls": 1,
+      "error": null
+     },
+     "thesis_run": {
+      "model": "openai/gpt-oss-120b",
+      "tokens_in": 3564,
+      "tokens_out": 1526,
+      "calls": 2,
+      "error": null
+     },
+     "config_version": "3",
+     "family_versions": {
+      "trend": "v1",
+      "event": "v1",
+      "reversion": "v1",
+      "capital_return": "v1",
+      "theme": "v1",
+      "conviction": "v1"
+     }
+    },
+    "critic": null
+   },
+   {
+    "symbol": "CVX",
+    "company": "Chevron",
+    "stance": "bullish",
+    "model_score": 62,
+    "score": 71,
+    "supported": true,
+    "consistent": null,
+    "bullish_signals": 2,
+    "bearish_signals": 0,
+    "signals_claimed": 3,
+    "signals_verified": 2,
+    "signals_counted": 2,
+    "signals": [
+     {
+      "source": 1,
+      "chunk_id": "finnhub:143988365#0",
+      "direction": "bullish",
+      "quote": "Chevron's 39% Gain Rests On A Supply Squeeze",
+      "verified": true,
+      "reason": null,
+      "counted": true
+     },
+     {
+      "source": 2,
+      "chunk_id": null,
+      "direction": "bullish",
+      "quote": "Benefits from high oil prices with growing production volumes from Permian operations, positioning the company well to capitalize on elevated crude prices.",
+      "verified": false,
+      "reason": "the quote does not name the company",
+      "counted": false
+     },
+     {
+      "source": 9,
+      "chunk_id": "finnhub:143942839#0",
+      "direction": "bullish",
+      "quote": "Chevron gained 2.3% from November 10 to November 17, while the S&P 500 lost 2.4%.",
+      "verified": true,
+      "reason": null,
+      "counted": true
+     }
+    ],
+    "advisor": {
+     "model": "openai/gpt-oss-120b",
+     "version": "v1",
+     "proposed_archetypes": [
+      "trend"
+     ]
+    },
+    "blend": {
+     "value": 0.4132,
+     "score": 71,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.4145,
+       "available": true,
+       "n": 2,
+       "contribution": 0.1658,
+       "parts": [
+        {
+         "ref": "[1]",
+         "kind": "news",
+         "direction": "bullish",
+         "age_days": 3,
+         "recency": 0.743,
+         "weight": 0.743
+        },
+        {
+         "ref": "[9]",
+         "kind": "news",
+         "direction": "bullish",
+         "age_days": 4,
+         "recency": 0.673,
+         "weight": 0.673
+        }
+       ]
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.4965,
+       "available": true,
+       "n": 4,
+       "contribution": 0.1489,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 0.551527,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.080775,
+         "value": -0.5385
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.881132,
+         "value": 0.5245
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": true,
+         "value": 1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.4925,
+       "available": true,
+       "n": 6,
+       "contribution": 0.0985,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.06587,
+         "value": 0.7174
+        },
+        {
+         "metric": "roe",
+         "raw": 14.3,
+         "value": 0.215
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 20.75,
+         "value": 1.0
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 15.34,
+         "value": 0.267
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 1.3419,
+         "value": 0.3419
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.1726,
+         "value": 0.4137
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "identity": {
+     "schema_version": 3,
+     "record_id": "819513327db7",
+     "request_id": "ae07f7b7d65e",
+     "case": "industry",
+     "sleeve": "industry",
+     "as_of_utc": "2026-11-23T00:00:00Z",
+     "sector_etf": "XLE",
+     "regime": "stress",
+     "regime_note": "SPY is under its 200-day mean"
+    },
+    "action": {
+     "action": "open",
+     "reason": "conviction: blended score 71 (news, performance, history and filings together)",
+     "cooldown_of": null
+    },
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "mom_12_1": 0.5515268445213226,
+       "pct_of_52w_high": 0.8811315967523681,
+       "above_sma_200": true,
+       "ret_21d": -0.08077466031409919,
+       "rsi_14": 40.15793428990742,
+       "atr_pct": 0.023996666586135414,
+       "above_sma_50": false,
+       "residual_mom_12_1": 0.7713107742985003,
+       "macd_hist": -1.7095393911099463,
+       "adx_14": 26.137415653035767,
+       "obv_20d_change": -0.10382769389388831,
+       "vol_63d_ann": 0.25261169869979294,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.20693577135632946
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.881 is under 0.9"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.3333,
+      "features_used": {
+       "atr_pct": 0.023996666586135414,
+       "ret_1d": 0.009055690072639289,
+       "volume_ratio_1d": 1.4249052225433976,
+       "gap_1d": -0.00029055690072643525
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "ret_5d": -0.05238983127927588,
+       "zscore_21d": -1.1786824020286764,
+       "rsi_14": 40.15793428990742,
+       "atr_pct": 0.023996666586135414,
+       "roe": 14.3,
+       "debt_to_equity": 0.1726,
+       "current_ratio": 1.3419,
+       "revenue_growth": 20.75,
+       "residual_5d": 0.016113863302004816,
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449,
+       "above_sma_200": true,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.20693577135632946,
+       "volume_ratio_1d": 1.4249052225433976,
+       "gap_1d": -0.00029055690072643525,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 12.726710447326834
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not oversold: ret_5d -0.052, zscore_21d -1.18, rsi_14 40.2",
+       "not idiosyncratic: residual_5d 0.016 against the sector's -0.069",
+       "company-specific news in the last 5 bars (2) and no neutral cause was given"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "earnings_yield": 0.06586964397457432,
+       "debt_to_equity": 0.1726,
+       "revenue_growth": 20.75
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": true,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": 0.5,
+      "direction": "bullish",
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": 0.0015,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 40.15793428990742
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.413 (score 71) from news, performance, historical"
+      ]
+     }
+    ],
+    "quality": {
+     "multiplier": 1.0,
+     "haircuts": [],
+     "haircuts_skipped": [
+      "share_count_change: no shares issued and outstanding on the stored balance sheet",
+      "sbc_to_revenue: no revenue figure for the year to date in the stored filings",
+      "accrual_ratio: the units of the statement are not stated or not understood (''): its figures cannot be put in dollars",
+      "receivables_vs_sales: no accounts receivable on the stored balance sheet",
+      "inventory_vs_sales: no revenue figure for the year to date in the stored filings",
+      "cfo_negative_with_profit: the units of the statement are not stated or not understood (''): its figures cannot be put in dollars",
+      "risk_factor_change: not built: needs the embedding comparison of the risk factors of the two latest 10-Ks (spec 5.5)"
+     ],
+     "turned_off": []
+    },
+    "modifiers": [],
+    "evidence": {
+     "signals": [
+      {
+       "source": 1,
+       "chunk_id": "finnhub:143988365#0",
+       "direction": "bullish",
+       "quote": "Chevron's 39% Gain Rests On A Supply Squeeze",
+       "verified": true,
+       "reason": null,
+       "counted": true
+      },
+      {
+       "source": 9,
+       "chunk_id": "finnhub:143942839#0",
+       "direction": "bullish",
+       "quote": "Chevron gained 2.3% from November 10 to November 17, while the S&P 500 lost 2.4%.",
+       "verified": true,
+       "reason": null,
+       "counted": true
+      }
+     ],
+     "e_items": [],
+     "events": [],
+     "counter_evidence": [],
+     "contradictions": []
+    },
+    "features": {
+     "mom_12_1": {
+      "value": 0.5515268445213226,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "pct_of_52w_high": {
+      "value": 0.8811315967523681,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "above_sma_200": {
+      "value": true,
+      "unit": "bool",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "ret_21d": {
+      "value": -0.08077466031409919,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "rsi_14": {
+      "value": 40.15793428990742,
+      "unit": "0-100",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "atr_pct": {
+      "value": 0.023996666586135414,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "above_sma_50": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "residual_mom_12_1": {
+      "value": 0.7713107742985003,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "macd_hist": {
+      "value": -1.7095393911099463,
+      "unit": "USD",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "adx_14": {
+      "value": 26.137415653035767,
+      "unit": "0-100",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "obv_20d_change": {
+      "value": -0.10382769389388831,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "vol_63d_ann": {
+      "value": 0.25261169869979294,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "breakout_20d": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "bollinger_pct_b": {
+      "value": 0.20693577135632946,
+      "unit": "ratio",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "ret_1d": {
+      "value": 0.009055690072639289,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "volume_ratio_1d": {
+      "value": 1.4249052225433976,
+      "unit": "ratio",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "gap_1d": {
+      "value": -0.00029055690072643525,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "ret_5d": {
+      "value": -0.05238983127927588,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "zscore_21d": {
+      "value": -1.1786824020286764,
+      "unit": "std",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "roe": {
+      "value": 14.3,
+      "unit": "%",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "debt_to_equity": {
+      "value": 0.1726,
+      "unit": "ratio",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "current_ratio": {
+      "value": 1.3419,
+      "unit": "x",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "revenue_growth": {
+      "value": 20.75,
+      "unit": "%",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "residual_5d": {
+      "value": 0.016113863302004816,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "sector_ret_5d": {
+      "value": -0.0685036945812807,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "spy_ret_5d": {
+      "value": -0.08558134602383449,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "candle_reversal_1d": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "stoch_k_14": {
+      "value": 12.726710447326834,
+      "unit": "0-100",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "earnings_yield": {
+      "value": 0.06586964397457432,
+      "unit": "fraction",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "residual_21d": {
+      "value": 0.023709578253312324,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "operating_margin": {
+      "value": 15.34,
+      "unit": "%",
+      "as_of": "2026-11-23",
+      "source": "finnhub_metric:2026-11-23"
+     },
+     "recent_bars": {
+      "value": [
+       [
+        "2026-10-05",
+        206.47,
+        6447760.843258
+       ],
+       [
+        "2026-10-06",
+        207.58,
+        5473532.581327
+       ],
+       [
+        "2026-10-07",
+        205.15,
+        5735935.629709
+       ],
+       [
+        "2026-10-08",
+        211.55,
+        7628152.816414
+       ],
+       [
+        "2026-10-09",
+        211.98,
+        6300416.987394
+       ],
+       [
+        "2026-10-12",
+        215.0,
+        8307227.247788
+       ],
+       [
+        "2026-10-13",
+        217.73,
+        7435226.763107
+       ],
+       [
+        "2026-10-14",
+        222.04,
+        9505099.897486
+       ],
+       [
+        "2026-10-15",
+        219.32,
+        7103368.948218
+       ],
+       [
+        "2026-10-16",
+        224.99,
+        8722048.469604
+       ],
+       [
+        "2026-10-19",
+        224.37,
+        9516164.258966
+       ],
+       [
+        "2026-10-20",
+        225.71,
+        8015738.086881
+       ],
+       [
+        "2026-10-21",
+        226.78,
+        8205950.081824
+       ],
+       [
+        "2026-10-22",
+        226.68,
+        6593698.296935
+       ],
+       [
+        "2026-10-23",
+        233.21,
+        8143041.996002
+       ],
+       [
+        "2026-10-26",
+        232.01,
+        6963982.062833
+       ],
+       [
+        "2026-10-27",
+        228.23,
+        6435494.928531
+       ],
+       [
+        "2026-10-28",
+        229.2,
+        6348197.176308
+       ],
+       [
+        "2026-10-29",
+        231.46,
+        5648641.448952
+       ],
+       [
+        "2026-10-30",
+        235.52,
+        11016713.1906
+       ],
+       [
+        "2026-11-02",
+        227.77,
+        9171139.304066
+       ],
+       [
+        "2026-11-03",
+        225.27,
+        7372800.547885
+       ],
+       [
+        "2026-11-04",
+        216.96,
+        11587735.912891
+       ],
+       [
+        "2026-11-05",
+        212.93,
+        10455601.594705
+       ],
+       [
+        "2026-11-06",
+        212.61,
+        8083144.277766
+       ],
+       [
+        "2026-11-09",
+        210.78,
+        9400348.408926
+       ],
+       [
+        "2026-11-10",
+        211.22,
+        10050011.959596
+       ],
+       [
+        "2026-11-11",
+        213.28,
+        6301601.91273
+       ],
+       [
+        "2026-11-12",
+        216.35,
+        9048441.270649
+       ],
+       [
+        "2026-11-13",
+        219.89,
+        7579317.013557
+       ],
+       [
+        "2026-11-16",
+        217.14,
+        6150966.239668
+       ],
+       [
+        "2026-11-17",
+        216.13,
+        8413318.867656
+       ],
+       [
+        "2026-11-18",
+        205.88,
+        10158197.4984
+       ],
+       [
+        "2026-11-19",
+        206.5,
+        8587964.833824
+       ],
+       [
+        "2026-11-20",
+        208.37,
+        11892021.059918
+       ]
+      ],
+      "unit": "[date, close, volume]",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "last_close": {
+      "value": 208.37,
+      "unit": "USD",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "negative_equity": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-05",
+      "source": "filing:0000093410-26-000200"
+     },
+     "atr_14": {
+      "value": 5.000185416553037,
+      "unit": "USD",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "sma_50": {
+      "value": 215.38119999999998,
+      "unit": "USD",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "beta_63d": {
+      "value": -0.255218882971398,
+      "unit": "ratio",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "max_drawdown_63d": {
+      "value": -0.12584918478260876,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "spy_above_sma_200": {
+      "value": false,
+      "unit": "bool",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "spy_vol_21d_ann": {
+      "value": 0.2587673173976472,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "spy_drawdown_63d": {
+      "value": -0.1145952328999218,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "spy_ret_21d": {
+      "value": -0.09706005550028807,
+      "unit": "fraction",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     },
+     "sector_etf": {
+      "value": "XLE",
+      "unit": "ticker",
+      "as_of": "2026-11-20",
+      "source": "day_aggs:2025-09-15..2026-11-20"
+     }
+    },
+    "agreement": {
+     "agreement": 0.75,
+     "evidence_n": 2,
+     "completeness": 1.0,
+     "confidence": 0.7066
+    },
+    "ranking": {
+     "composite": 0.0015,
+     "conflict": false,
+     "stance": "bullish",
+     "stance_reason": null,
+     "rank": 2,
+     "universe_rank": 2,
+     "diversity_adjustment": false,
+     "displaced_by": null,
+     "concentrated": false
+    },
+    "trade": {
+     "family": "conviction",
+     "entry_basis": "last_close",
+     "entry_zone": [
+      205.8699,
+      210.8701
+     ],
+     "entry_mid": 208.37,
+     "stop_distance": 15.0006,
+     "stop_price": 193.3694,
+     "target_price": 238.3711,
+     "trailing": false,
+     "trail_distance": null,
+     "horizon_bars": 40,
+     "time_stop_date": "2027-01-18",
+     "time_stop_note": "weekdays only: holidays of the coming weeks are not known",
+     "gap_risk": false,
+     "order_style": "limit",
+     "limit_price": 208.37,
+     "invalidation": [
+      {
+       "kind": "price_below",
+       "value": 193.3694
+      },
+      {
+       "kind": "days_elapsed",
+       "value": 40
+      },
+      {
+       "kind": "event_class",
+       "value": [
+        "guidance_cut",
+        "earnings_miss",
+        "dividend_cut",
+        "dilution_offering",
+        "ceo_departure_unplanned",
+        "material_weakness",
+        "restatement",
+        "going_concern",
+        "form_144_sale_notice"
+       ]
+      }
+     ],
+     "notes": [
+      "entry zone = last +- 0.5 x atr_14; stop = 3 x atr_14 (atr_14 = 5.00)",
+      "the target is 2 x the stop distance above the entry (238.37): the family's edge alone gave 209.31, a reward of 0.06 for each unit risked"
+     ]
+    },
+    "risk": {
+     "vol_63d_ann": 0.25261169869979294,
+     "atr_pct": 0.023996666586135414,
+     "beta_63d": -0.255218882971398,
+     "max_drawdown_63d": -0.12584918478260876,
+     "days_to_next_earnings": null,
+     "earnings_move_abs": null,
+     "gap_risk": false,
+     "red_flags": []
+    },
+    "concentration": {
+     "note": null
+    },
+    "gates": [
+     {
+      "gate": "no_metrics",
+      "passed": true,
+      "value": null,
+      "threshold": null,
+      "note": null
+     },
+     {
+      "gate": "freshness",
+      "passed": true,
+      "value": {
+       "newest_bar": "2026-11-20",
+       "sessions_behind": 1,
+       "fundamentals_as_of": "2026-11-23"
+      },
+      "threshold": {
+       "max_bar_age_sessions": 1,
+       "max_fundamentals_age_days": 100
+      },
+      "note": null
+     },
+     {
+      "gate": "red_flag",
+      "passed": true,
+      "value": [],
+      "threshold": "none",
+      "note": null
+     },
+     {
+      "gate": "event_risk",
+      "passed": true,
+      "value": null,
+      "threshold": null,
+      "note": "no earnings date known: the calendar is not available and no results press release is stored"
+     }
+    ],
+    "thesis": {
+     "thesis": null,
+     "bull_case": [],
+     "bear_case": [],
+     "thesis_error": "the thesis has numbers that are not in the record: 52"
+    },
+    "audit": {
+     "metric_order": "2d7cdee094b9",
+     "plan_run": {
+      "model": "openai/gpt-oss-120b",
+      "tokens_in": 2631,
+      "tokens_out": 1357,
+      "calls": 1,
+      "error": null
+     },
+     "thesis_run": {
+      "model": "openai/gpt-oss-120b",
+      "tokens_in": 3564,
+      "tokens_out": 1526,
+      "calls": 2,
+      "error": null
+     },
+     "config_version": "3",
+     "family_versions": {
+      "trend": "v1",
+      "event": "v1",
+      "reversion": "v1",
+      "capital_return": "v1",
+      "theme": "v1",
+      "conviction": "v1"
+     }
+    },
+    "critic": null
+   }
+  ],
+  "advisor_runs": [
+   {
+    "stage": "plan",
+    "model": "openai/gpt-oss-120b",
+    "tokens_in": 2631,
+    "tokens_out": 1357,
+    "calls": 1,
+    "dropped": [
+     "XOM: drop_cause dropped: the quote does not name the company"
+    ],
+    "error": null,
+    "metric_order": "2d7cdee094b9"
+   },
+   {
+    "stage": "thesis",
+    "model": "openai/gpt-oss-120b",
+    "tokens_in": 3564,
+    "tokens_out": 1526,
+    "calls": 2,
+    "dropped": [],
+    "error": null
+   }
+  ],
+  "errors": [],
+  "metrics": null,
+  "case": "industry",
+  "sector": "XLE",
+  "candidates": [
+   {
+    "symbol": "COP",
+    "company": "ConocoPhillips",
+    "origin": "subject",
+    "gate": null,
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "mom_12_1": 0.7240196638847607,
+       "pct_of_52w_high": 0.8822919367383978,
+       "above_sma_200": true,
+       "ret_21d": -0.06530247888484508,
+       "rsi_14": 44.59763867110299,
+       "atr_pct": 0.028939558884057637,
+       "above_sma_50": false,
+       "residual_mom_12_1": 0.9438035936619383,
+       "macd_hist": -0.9442378316045844,
+       "adx_14": 22.309882804584742,
+       "obv_20d_change": -0.07836098588175446,
+       "vol_63d_ann": 0.314418359516887,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.2876203459182292
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.882 is under 0.9"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.3333,
+      "features_used": {
+       "atr_pct": 0.028939558884057637,
+       "ret_1d": 0.00837099044373657,
+       "volume_ratio_1d": 1.146023629835336,
+       "gap_1d": 0.0016297503518778456
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "ret_5d": -0.043294911442226525,
+       "zscore_21d": -0.8751436263476762,
+       "rsi_14": 44.59763867110299,
+       "atr_pct": 0.028939558884057637,
+       "roe": 17.75,
+       "debt_to_equity": 0.3525,
+       "current_ratio": 1.5182,
+       "revenue_growth": 13.32,
+       "residual_5d": 0.02520878313905417,
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449,
+       "above_sma_200": true,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.2876203459182292,
+       "volume_ratio_1d": 1.146023629835336,
+       "gap_1d": 0.0016297503518778456,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 31.685678073510772
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not oversold: ret_5d -0.043, zscore_21d -0.88, rsi_14 44.6",
+       "not idiosyncratic: residual_5d 0.025 against the sector's -0.069",
+       "company-specific news in the last 5 bars (1) and no neutral cause was given"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "earnings_yield": 0.07180967563569515,
+       "debt_to_equity": 0.3525,
+       "revenue_growth": 13.32
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 44.59763867110299
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.281 is under 0.3",
+       "only 2 of 4 blend parts have a value (performance, historical); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.281,
+     "score": 64,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.5235,
+       "available": true,
+       "n": 4,
+       "contribution": 0.157,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 0.72402,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.065302,
+         "value": -0.4353
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.882292,
+         "value": 0.5292
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": true,
+         "value": 1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.6199,
+       "available": true,
+       "n": 6,
+       "contribution": 0.124,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.07181,
+         "value": 0.8362
+        },
+        {
+         "metric": "roe",
+         "raw": 17.75,
+         "value": 0.3875
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 13.32,
+         "value": 0.888
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 25.31,
+         "value": 0.7655
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 1.5182,
+         "value": 0.5182
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.3525,
+         "value": 0.3237
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 64,
+    "stance": "neutral",
+    "rank": 3,
+    "reason": "stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": {
+     "stop_price": 128.2415,
+     "time_stop_date": "2026-12-22",
+     "basis": "stop 2 x atr_14 (3.94) under the last close 136.12; time stop 20 trading days after 2026-11-23; no target"
+    }
+   },
+   {
+    "symbol": "VLO",
+    "company": null,
+    "origin": "subject",
+    "gate": null,
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "mom_12_1": 1.4545135230066735,
+       "pct_of_52w_high": 0.7240859438749974,
+       "above_sma_200": true,
+       "ret_21d": -0.21605517500234583,
+       "rsi_14": 33.564690668185406,
+       "atr_pct": 0.049645889516138,
+       "above_sma_50": false,
+       "residual_mom_12_1": 1.674297452783851,
+       "macd_hist": -3.0571047971957412,
+       "adx_14": 26.31973678763918,
+       "obv_20d_change": -0.3068021786677972,
+       "vol_63d_ann": 0.44670257282322645,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.10331350440472713
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.724 is under 0.9"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.3333,
+      "features_used": {
+       "atr_pct": 0.049645889516138,
+       "ret_1d": -0.012645512025054595,
+       "volume_ratio_1d": 0.9379354958767546,
+       "gap_1d": -0.006263664834840199
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "ret_5d": -0.12018534607587594,
+       "zscore_21d": -1.5239343227495625,
+       "rsi_14": 33.564690668185406,
+       "atr_pct": 0.049645889516138,
+       "roe": 51.49,
+       "debt_to_equity": 0.3933,
+       "current_ratio": 1.7238,
+       "revenue_growth": 24.58,
+       "residual_5d": -0.05168165149459525,
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449,
+       "above_sma_200": true,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.10331350440472713,
+       "volume_ratio_1d": 0.9379354958767546,
+       "gap_1d": -0.006263664834840199,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 1.406035665294913
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not idiosyncratic: residual_5d -0.052 against the sector's -0.069"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "earnings_yield": 0.13889853462045976,
+       "debt_to_equity": 0.3933,
+       "revenue_growth": 24.58
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 33.564690668185406
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.204 is under 0.3",
+       "only 2 of 4 blend parts have a value (performance, historical); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.2039,
+     "score": 60,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.2241,
+       "available": true,
+       "n": 4,
+       "contribution": 0.0672,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 1.454514,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.216055,
+         "value": -1.0
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.724086,
+         "value": -0.1037
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": true,
+         "value": 1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.6834,
+       "available": true,
+       "n": 6,
+       "contribution": 0.1367,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.138899,
+         "value": 1.0
+        },
+        {
+         "metric": "roe",
+         "raw": 51.49,
+         "value": 1.0
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 24.58,
+         "value": 1.0
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 11.46,
+         "value": 0.073
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 1.7238,
+         "value": 0.7238
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.3933,
+         "value": 0.3034
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 60,
+    "stance": "neutral",
+    "rank": 4,
+    "reason": "stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": {
+     "stop_price": 300.9987,
+     "time_stop_date": "2026-12-22",
+     "basis": "stop 2 x atr_14 (16.59) under the last close 334.18; time stop 20 trading days after 2026-11-23; no target"
+    }
+   },
+   {
+    "symbol": "XOM",
+    "company": "Exxon Mobil",
+    "origin": "subject",
+    "gate": null,
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "mom_12_1": 0.5656298068706205,
+       "pct_of_52w_high": 0.8487533156498674,
+       "above_sma_200": true,
+       "ret_21d": -0.1023396734556471,
+       "rsi_14": 36.22903052503639,
+       "atr_pct": 0.026437532373327653,
+       "above_sma_50": false,
+       "residual_mom_12_1": 0.7854137366477981,
+       "macd_hist": -1.611306659806061,
+       "adx_14": 28.793755029999357,
+       "obv_20d_change": -0.06649389218015651,
+       "vol_63d_ann": 0.27554941097408786,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.17422512660454287
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.849 is under 0.9"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.3333,
+      "features_used": {
+       "atr_pct": 0.026437532373327653,
+       "ret_1d": 0.006669602969860966,
+       "volume_ratio_1d": 1.2777674986871468,
+       "gap_1d": -0.0006292078273453239
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "ret_5d": -0.06213728823494924,
+       "zscore_21d": -1.3103100971196475,
+       "rsi_14": 36.22903052503639,
+       "atr_pct": 0.026437532373327653,
+       "roe": 15.64,
+       "debt_to_equity": 0.1289,
+       "current_ratio": 1.1931,
+       "revenue_growth": 19.48,
+       "residual_5d": 0.006366406346331455,
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449,
+       "above_sma_200": true,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.17422512660454287,
+       "volume_ratio_1d": 1.2777674986871468,
+       "gap_1d": -0.0006292078273453239,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 6.405529953917114
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not oversold: ret_5d -0.062, zscore_21d -1.31, rsi_14 36.2",
+       "not idiosyncratic: residual_5d 0.006 against the sector's -0.069",
+       "company-specific news in the last 5 bars (2) and no neutral cause was given"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "earnings_yield": 0.062243246607743066,
+       "debt_to_equity": 0.1289,
+       "revenue_growth": 19.48
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 36.22903052503639
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.111 is under 0.3",
+       "the news part is -0.271, under 0.0"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.111,
+     "score": 56,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": -0.2709,
+       "available": true,
+       "n": 1,
+       "contribution": -0.1084,
+       "parts": [
+        {
+         "ref": "[3]",
+         "kind": "news",
+         "direction": "bearish",
+         "age_days": 3,
+         "recency": 0.743,
+         "weight": 0.743
+        }
+       ]
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.4282,
+       "available": true,
+       "n": 4,
+       "contribution": 0.1285,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 0.56563,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.10234,
+         "value": -0.6823
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.848753,
+         "value": 0.395
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": true,
+         "value": 1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.4546,
+       "available": true,
+       "n": 6,
+       "contribution": 0.0909,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.062243,
+         "value": 0.6449
+        },
+        {
+         "metric": "roe",
+         "raw": 15.64,
+         "value": 0.282
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 19.48,
+         "value": 1.0
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 13.44,
+         "value": 0.172
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 1.1931,
+         "value": 0.1931
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.1289,
+         "value": 0.4355
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 56,
+    "stance": "neutral",
+    "rank": 5,
+    "reason": "stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": {
+     "stop_price": 151.5305,
+     "time_stop_date": "2026-12-22",
+     "basis": "stop 2 x atr_14 (4.23) under the last close 159.99; time stop 20 trading days after 2026-11-23; no target"
+    }
+   },
+   {
+    "symbol": "DK",
+    "company": null,
+    "origin": "subject",
+    "gate": "freshness",
+    "gate_value": {
+     "newest_bar": "2026-11-19",
+     "sessions_behind": 2,
+     "fundamentals_as_of": "2026-11-23"
+    },
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "mom_12_1": 0.8778493557978198,
+       "pct_of_52w_high": 0.7323447186094567,
+       "above_sma_200": true,
+       "ret_21d": -0.22973664024546148,
+       "rsi_14": 35.25701270632652,
+       "atr_pct": 0.06737970197478764,
+       "above_sma_50": false,
+       "residual_mom_12_1": 1.0976332855749975,
+       "macd_hist": -0.5691336784525052,
+       "adx_14": 21.414787040044043,
+       "obv_20d_change": -0.06485862310977586,
+       "vol_63d_ann": 0.5696535860635727,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.08957349246187522
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.732 is under 0.9"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.3333,
+      "features_used": {
+       "atr_pct": 0.06737970197478764,
+       "ret_1d": -0.0011604774535809437,
+       "volume_ratio_1d": 0.8671056248972465,
+       "gap_1d": 0.00762599469496017
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "ret_5d": -0.11928080689957599,
+       "zscore_21d": -1.6143160499899398,
+       "rsi_14": 35.25701270632652,
+       "atr_pct": 0.06737970197478764,
+       "roe": 127.12,
+       "debt_to_equity": 17.1029,
+       "current_ratio": 0.763,
+       "revenue_growth": 11.4,
+       "residual_5d": -0.05077711231829529,
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449,
+       "above_sma_200": true,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.08957349246187522,
+       "volume_ratio_1d": 0.8671056248972465,
+       "gap_1d": 0.00762599469496017,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 6.171107994389921
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not idiosyncratic: residual_5d -0.051 against the sector's -0.069",
+       "not sound: roe 127.12, debt_to_equity 17.1029, current_ratio 0.763, revenue_growth 11.4"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "earnings_yield": 0.06193561173803713,
+       "debt_to_equity": 17.1029,
+       "revenue_growth": 11.4
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "share_count_change: no stored filings of DK (fetch_filings has not been run for it)"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 35.25701270632652
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.100 is under 0.3",
+       "only 2 of 4 blend parts have a value (performance, historical); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.0995,
+     "score": 55,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.2324,
+       "available": true,
+       "n": 4,
+       "contribution": 0.0697,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 0.877849,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.229737,
+         "value": -1.0
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.732345,
+         "value": -0.0706
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": true,
+         "value": 1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.1489,
+       "available": true,
+       "n": 6,
+       "contribution": 0.0298,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.061936,
+         "value": 0.6387
+        },
+        {
+         "metric": "roe",
+         "raw": 127.12,
+         "value": 1.0
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 11.4,
+         "value": 0.76
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 4.64,
+         "value": -0.268
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 0.763,
+         "value": -0.237
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 17.1029,
+         "value": -1.0
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 55,
+    "stance": "neutral",
+    "rank": 7,
+    "reason": "gate freshness failed: the newest bar is 2026-11-19, 2 sessions before 2026-11-23; stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": null
+   },
+   {
+    "symbol": "CNQ",
+    "company": null,
+    "origin": "subject",
+    "gate": null,
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "mom_12_1": 0.6208419193405947,
+       "pct_of_52w_high": 0.7886973520526035,
+       "above_sma_200": false,
+       "ret_21d": -0.17692878338278928,
+       "rsi_14": 27.152237709338948,
+       "atr_pct": 0.032630993123442885,
+       "above_sma_50": false,
+       "residual_mom_12_1": 0.8406258491177724,
+       "macd_hist": -0.7467845581222706,
+       "adx_14": 35.22143965540155,
+       "obv_20d_change": -0.4275407112514649,
+       "vol_63d_ann": 0.3137695638949954,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.09217360013616613
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.789 is under 0.9",
+       "the price is not above its 200-day mean"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.3333,
+      "features_used": {
+       "atr_pct": 0.032630993123442885,
+       "ret_1d": -0.007158836689038051,
+       "volume_ratio_1d": 1.8867527693856438,
+       "gap_1d": -0.007829977628635354
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "ret_5d": -0.10793969849246221,
+       "zscore_21d": -1.6259780883627164,
+       "rsi_14": 27.152237709338948,
+       "atr_pct": 0.032630993123442885,
+       "roe": 30.98,
+       "debt_to_equity": 0.4171,
+       "current_ratio": 0.9945,
+       "revenue_growth": 24.16,
+       "residual_5d": -0.039436003911181516,
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449,
+       "above_sma_200": false,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.09217360013616613,
+       "volume_ratio_1d": 1.8867527693856438,
+       "gap_1d": -0.007829977628635354,
+       "candle_reversal_1d": true,
+       "stoch_k_14": 2.918562054667678
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not idiosyncratic: residual_5d -0.039 against the sector's -0.069",
+       "not sound: roe 30.98, debt_to_equity 0.4171, current_ratio 0.9945, revenue_growth 24.16",
+       "not in an uptrend: below the 200-day mean"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "earnings_yield": 0.10847987155983208,
+       "debt_to_equity": 0.4171,
+       "revenue_growth": 24.16
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 27.152237709338948
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.080 is under 0.3",
+       "only 2 of 4 blend parts have a value (performance, historical); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.0795,
+     "score": 54,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": -0.2113,
+       "available": true,
+       "n": 4,
+       "contribution": -0.0634,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 0.620842,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.176929,
+         "value": -1.0
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.788697,
+         "value": 0.1548
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": false,
+         "value": -1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.7143,
+       "available": true,
+       "n": 6,
+       "contribution": 0.1429,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.10848,
+         "value": 1.0
+        },
+        {
+         "metric": "roe",
+         "raw": 30.98,
+         "value": 1.0
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 24.16,
+         "value": 1.0
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 41.71,
+         "value": 1.0
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 0.9945,
+         "value": -0.0055
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.4171,
+         "value": 0.2914
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 54,
+    "stance": "neutral",
+    "rank": 6,
+    "reason": "stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": {
+     "stop_price": 41.4837,
+     "time_stop_date": "2026-12-22",
+     "basis": "stop 2 x atr_14 (1.45) under the last close 44.38; time stop 20 trading days after 2026-11-23; no target"
+    }
+   },
+   {
+    "symbol": "OXY",
+    "company": null,
+    "origin": "subject",
+    "gate": "freshness",
+    "gate_value": {
+     "newest_bar": "2026-11-19",
+     "sessions_behind": 2,
+     "fundamentals_as_of": "2026-11-23"
+    },
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "mom_12_1": 0.5078407720144751,
+       "pct_of_52w_high": 0.7977761304670126,
+       "above_sma_200": false,
+       "ret_21d": -0.14178628389154702,
+       "rsi_14": 31.587457822968545,
+       "atr_pct": 0.03303875494104409,
+       "above_sma_50": false,
+       "residual_mom_12_1": 0.7276247017916527,
+       "macd_hist": -0.563812166557081,
+       "adx_14": 32.51042176426674,
+       "obv_20d_change": 0.06469436329027853,
+       "vol_63d_ann": 0.32567862733598824,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.11158933107145663
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.798 is under 0.9",
+       "the price is not above its 200-day mean"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.3333,
+      "features_used": {
+       "atr_pct": 0.03303875494104409,
+       "ret_1d": 0.0009300595238095344,
+       "volume_ratio_1d": 0.8487872572782372,
+       "gap_1d": 0.0076264880952381375
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "ret_5d": -0.07859589041095882,
+       "zscore_21d": -1.563578411176991,
+       "rsi_14": 31.587457822968545,
+       "atr_pct": 0.03303875494104409,
+       "roe": 20.59,
+       "debt_to_equity": 0.2741,
+       "current_ratio": 1.3848,
+       "revenue_growth": 16.61,
+       "residual_5d": -0.01009219582967813,
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449,
+       "above_sma_200": false,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.11158933107145663,
+       "volume_ratio_1d": 0.8487872572782372,
+       "gap_1d": 0.0076264880952381375,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 5.664263645726099
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not idiosyncratic: residual_5d -0.010 against the sector's -0.069",
+       "not in an uptrend: below the 200-day mean"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "earnings_yield": 0.15270672673131253,
+       "debt_to_equity": 0.2741,
+       "revenue_growth": 16.61
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "share_count_change: no stored filings of OXY (fetch_filings has not been run for it)"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 31.587457822968545
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.086 is under 0.3",
+       "only 2 of 4 blend parts have a value (performance, historical); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.0861,
+     "score": 54,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": -0.1885,
+       "available": true,
+       "n": 4,
+       "contribution": -0.0565,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 0.507841,
+         "value": 1.0
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.141786,
+         "value": -0.9452
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.797776,
+         "value": 0.1911
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": false,
+         "value": -1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.7129,
+       "available": true,
+       "n": 6,
+       "contribution": 0.1426,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.152707,
+         "value": 1.0
+        },
+        {
+         "metric": "roe",
+         "raw": 20.59,
+         "value": 0.5295
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 16.61,
+         "value": 1.0
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 30.66,
+         "value": 1.0
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 1.3848,
+         "value": 0.3848
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.2741,
+         "value": 0.3629
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 54,
+    "stance": "neutral",
+    "rank": 8,
+    "reason": "gate freshness failed: the newest bar is 2026-11-19, 2 sessions before 2026-11-23; stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": null
+   },
+   {
+    "symbol": "2222.SR",
+    "company": null,
+    "origin": "subject",
+    "gate": "freshness",
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "mom_12_1",
+       "pct_of_52w_high",
+       "above_sma_200",
+       "ret_21d",
+       "rsi_14",
+       "atr_pct"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "mom_12_1: needs 252 bars, 0 stored",
+       "pct_of_52w_high: needs 252 bars, 0 stored",
+       "above_sma_200: needs 200 bars, 0 stored",
+       "ret_21d: needs 22 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "atr_pct",
+       "ret_1d",
+       "volume_ratio_1d",
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "atr_pct: needs 20 bars, 0 stored",
+       "ret_1d: needs 2 bars, 0 stored",
+       "volume_ratio_1d: needs 21 bars, 0 stored",
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "ret_5d",
+       "zscore_21d",
+       "rsi_14",
+       "atr_pct",
+       "roe",
+       "debt_to_equity",
+       "current_ratio",
+       "revenue_growth"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "ret_5d: needs 6 bars, 0 stored",
+       "zscore_21d: needs 21 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored",
+       "roe: no Finnhub metric payload for 2222.SR (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for 2222.SR (it was not fetched or the call failed)",
+       "current_ratio: no Finnhub metric payload for 2222.SR (it was not fetched or the call failed)",
+       "revenue_growth: no Finnhub metric payload for 2222.SR (it was not fetched or the call failed)"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "earnings_yield",
+       "debt_to_equity",
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "earnings_yield: no Finnhub metric payload for 2222.SR (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for 2222.SR (it was not fetched or the call failed)",
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.000 is under 0.3",
+       "only 0 of 4 blend parts have a value (none); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.0,
+     "score": 50,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 50,
+    "stance": "neutral",
+    "rank": 9,
+    "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": null
+   },
+   {
+    "symbol": "BP.L",
+    "company": null,
+    "origin": "subject",
+    "gate": "freshness",
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "mom_12_1",
+       "pct_of_52w_high",
+       "above_sma_200",
+       "ret_21d",
+       "rsi_14",
+       "atr_pct"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "mom_12_1: needs 252 bars, 0 stored",
+       "pct_of_52w_high: needs 252 bars, 0 stored",
+       "above_sma_200: needs 200 bars, 0 stored",
+       "ret_21d: needs 22 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "atr_pct",
+       "ret_1d",
+       "volume_ratio_1d",
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "atr_pct: needs 20 bars, 0 stored",
+       "ret_1d: needs 2 bars, 0 stored",
+       "volume_ratio_1d: needs 21 bars, 0 stored",
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "ret_5d",
+       "zscore_21d",
+       "rsi_14",
+       "atr_pct",
+       "roe",
+       "debt_to_equity",
+       "current_ratio",
+       "revenue_growth"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "ret_5d: needs 6 bars, 0 stored",
+       "zscore_21d: needs 21 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored",
+       "roe: no Finnhub metric payload for BP.L (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for BP.L (it was not fetched or the call failed)",
+       "current_ratio: no Finnhub metric payload for BP.L (it was not fetched or the call failed)",
+       "revenue_growth: no Finnhub metric payload for BP.L (it was not fetched or the call failed)"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "earnings_yield",
+       "debt_to_equity",
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "earnings_yield: no Finnhub metric payload for BP.L (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for BP.L (it was not fetched or the call failed)",
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.000 is under 0.3",
+       "only 0 of 4 blend parts have a value (none); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.0,
+     "score": 50,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 50,
+    "stance": "neutral",
+    "rank": 10,
+    "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": null
+   },
+   {
+    "symbol": "ENI.MI",
+    "company": null,
+    "origin": "subject",
+    "gate": "freshness",
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "mom_12_1",
+       "pct_of_52w_high",
+       "above_sma_200",
+       "ret_21d",
+       "rsi_14",
+       "atr_pct"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "mom_12_1: needs 252 bars, 0 stored",
+       "pct_of_52w_high: needs 252 bars, 0 stored",
+       "above_sma_200: needs 200 bars, 0 stored",
+       "ret_21d: needs 22 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "atr_pct",
+       "ret_1d",
+       "volume_ratio_1d",
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "atr_pct: needs 20 bars, 0 stored",
+       "ret_1d: needs 2 bars, 0 stored",
+       "volume_ratio_1d: needs 21 bars, 0 stored",
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "ret_5d",
+       "zscore_21d",
+       "rsi_14",
+       "atr_pct",
+       "roe",
+       "debt_to_equity",
+       "current_ratio",
+       "revenue_growth"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "ret_5d: needs 6 bars, 0 stored",
+       "zscore_21d: needs 21 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored",
+       "roe: no Finnhub metric payload for ENI.MI (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for ENI.MI (it was not fetched or the call failed)",
+       "current_ratio: no Finnhub metric payload for ENI.MI (it was not fetched or the call failed)",
+       "revenue_growth: no Finnhub metric payload for ENI.MI (it was not fetched or the call failed)"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "earnings_yield",
+       "debt_to_equity",
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "earnings_yield: no Finnhub metric payload for ENI.MI (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for ENI.MI (it was not fetched or the call failed)",
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.000 is under 0.3",
+       "only 0 of 4 blend parts have a value (none); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.0,
+     "score": 50,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 50,
+    "stance": "neutral",
+    "rank": 11,
+    "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": null
+   },
+   {
+    "symbol": "EQNR.OL",
+    "company": null,
+    "origin": "subject",
+    "gate": "freshness",
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "mom_12_1",
+       "pct_of_52w_high",
+       "above_sma_200",
+       "ret_21d",
+       "rsi_14",
+       "atr_pct"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "mom_12_1: needs 252 bars, 0 stored",
+       "pct_of_52w_high: needs 252 bars, 0 stored",
+       "above_sma_200: needs 200 bars, 0 stored",
+       "ret_21d: needs 22 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "atr_pct",
+       "ret_1d",
+       "volume_ratio_1d",
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "atr_pct: needs 20 bars, 0 stored",
+       "ret_1d: needs 2 bars, 0 stored",
+       "volume_ratio_1d: needs 21 bars, 0 stored",
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "ret_5d",
+       "zscore_21d",
+       "rsi_14",
+       "atr_pct",
+       "roe",
+       "debt_to_equity",
+       "current_ratio",
+       "revenue_growth"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "ret_5d: needs 6 bars, 0 stored",
+       "zscore_21d: needs 21 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored",
+       "roe: no Finnhub metric payload for EQNR.OL (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for EQNR.OL (it was not fetched or the call failed)",
+       "current_ratio: no Finnhub metric payload for EQNR.OL (it was not fetched or the call failed)",
+       "revenue_growth: no Finnhub metric payload for EQNR.OL (it was not fetched or the call failed)"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "earnings_yield",
+       "debt_to_equity",
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "earnings_yield: no Finnhub metric payload for EQNR.OL (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for EQNR.OL (it was not fetched or the call failed)",
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.000 is under 0.3",
+       "only 0 of 4 blend parts have a value (none); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.0,
+     "score": 50,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 50,
+    "stance": "neutral",
+    "rank": 12,
+    "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": null
+   },
+   {
+    "symbol": "SHEL.L",
+    "company": "Shell plc",
+    "origin": "subject",
+    "gate": "freshness",
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "mom_12_1",
+       "pct_of_52w_high",
+       "above_sma_200",
+       "ret_21d",
+       "rsi_14",
+       "atr_pct"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "mom_12_1: needs 252 bars, 0 stored",
+       "pct_of_52w_high: needs 252 bars, 0 stored",
+       "above_sma_200: needs 200 bars, 0 stored",
+       "ret_21d: needs 22 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "atr_pct",
+       "ret_1d",
+       "volume_ratio_1d",
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "atr_pct: needs 20 bars, 0 stored",
+       "ret_1d: needs 2 bars, 0 stored",
+       "volume_ratio_1d: needs 21 bars, 0 stored",
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "ret_5d",
+       "zscore_21d",
+       "rsi_14",
+       "atr_pct",
+       "roe",
+       "debt_to_equity",
+       "current_ratio",
+       "revenue_growth"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "ret_5d: needs 6 bars, 0 stored",
+       "zscore_21d: needs 21 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored",
+       "roe: no Finnhub metric payload for SHEL.L (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for SHEL.L (it was not fetched or the call failed)",
+       "current_ratio: no Finnhub metric payload for SHEL.L (it was not fetched or the call failed)",
+       "revenue_growth: no Finnhub metric payload for SHEL.L (it was not fetched or the call failed)"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "earnings_yield",
+       "debt_to_equity",
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "earnings_yield: no Finnhub metric payload for SHEL.L (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for SHEL.L (it was not fetched or the call failed)",
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.000 is under 0.3",
+       "only 0 of 4 blend parts have a value (none); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.0,
+     "score": 50,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 50,
+    "stance": "neutral",
+    "rank": 13,
+    "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": null
+   },
+   {
+    "symbol": "TTE.PA",
+    "company": null,
+    "origin": "subject",
+    "gate": "freshness",
+    "gate_value": null,
+    "families": [
+     {
+      "family": "trend",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "mom_12_1",
+       "pct_of_52w_high",
+       "above_sma_200",
+       "ret_21d",
+       "rsi_14",
+       "atr_pct"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "mom_12_1: needs 252 bars, 0 stored",
+       "pct_of_52w_high: needs 252 bars, 0 stored",
+       "above_sma_200: needs 200 bars, 0 stored",
+       "ret_21d: needs 22 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "atr_pct",
+       "ret_1d",
+       "volume_ratio_1d",
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "atr_pct: needs 20 bars, 0 stored",
+       "ret_1d: needs 2 bars, 0 stored",
+       "volume_ratio_1d: needs 21 bars, 0 stored",
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "ret_5d",
+       "zscore_21d",
+       "rsi_14",
+       "atr_pct",
+       "roe",
+       "debt_to_equity",
+       "current_ratio",
+       "revenue_growth"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "ret_5d: needs 6 bars, 0 stored",
+       "zscore_21d: needs 21 bars, 0 stored",
+       "rsi_14: needs 30 bars, 0 stored",
+       "atr_pct: needs 20 bars, 0 stored",
+       "roe: no Finnhub metric payload for TTE.PA (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for TTE.PA (it was not fetched or the call failed)",
+       "current_ratio: no Finnhub metric payload for TTE.PA (it was not fetched or the call failed)",
+       "revenue_growth: no Finnhub metric payload for TTE.PA (it was not fetched or the call failed)"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "earnings_yield",
+       "debt_to_equity",
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "earnings_yield: no Finnhub metric payload for TTE.PA (it was not fetched or the call failed)",
+       "debt_to_equity: no Finnhub metric payload for TTE.PA (it was not fetched or the call failed)",
+       "share_count_change: no shares issued and outstanding on the stored balance sheet"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 0.0,
+      "features_used": {},
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend +0.000 is under 0.3",
+       "only 0 of 4 blend parts have a value (none); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": 0.0,
+     "score": 50,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 50,
+    "stance": "neutral",
+    "rank": 14,
+    "reason": "gate freshness failed: no bars: needs 1 bars, 0 stored; stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": null
+   },
+   {
+    "symbol": "FANG",
+    "company": null,
+    "origin": "subject",
+    "gate": "freshness",
+    "gate_value": {
+     "newest_bar": "2026-11-19",
+     "sessions_behind": 2,
+     "fundamentals_as_of": "2026-11-23"
+    },
+    "families": [
+     {
+      "family": "trend",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 63,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_titman_1993",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "mom_12_1": 0.325845719281727,
+       "pct_of_52w_high": 0.8149838635315814,
+       "above_sma_200": false,
+       "ret_21d": -0.1202408799084258,
+       "rsi_14": 37.31860399011563,
+       "atr_pct": 0.03333903814375023,
+       "above_sma_50": false,
+       "residual_mom_12_1": 0.5456296490589047,
+       "macd_hist": -1.329637669613085,
+       "adx_14": 31.22639522526891,
+       "obv_20d_change": -0.32068779629646177,
+       "vol_63d_ann": 0.3503283313399092,
+       "breakout_20d": false,
+       "bollinger_pct_b": 0.25803774030817545
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "pct_of_52w_high 0.815 is under 0.9",
+       "the price is not above its 200-day mean"
+      ]
+     },
+     {
+      "family": "event",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "a verified bullish or bearish event of the last 10 bars (or sue_4q)"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.008,
+      "basis": "prior",
+      "basis_ref": "bernard_thomas_1989",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.3333,
+      "features_used": {
+       "atr_pct": 0.03333903814375023,
+       "ret_1d": 0.014054612207434758,
+       "volume_ratio_1d": 1.5005325968705694,
+       "gap_1d": 0.009809545663148178
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "no counted event: none were verified"
+      ]
+     },
+     {
+      "family": "reversion",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 10,
+      "prior_20d": 0.01,
+      "basis": "prior",
+      "basis_ref": "jegadeesh_1990",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "ret_5d": -0.029802414928649767,
+       "zscore_21d": -0.9881536700294588,
+       "rsi_14": 37.31860399011563,
+       "atr_pct": 0.03333903814375023,
+       "roe": 3.9,
+       "debt_to_equity": 0.3395,
+       "current_ratio": 0.5484,
+       "revenue_growth": 21.45,
+       "residual_5d": 0.03870127965263093,
+       "sector_ret_5d": -0.0685036945812807,
+       "spy_ret_5d": -0.08558134602383449,
+       "above_sma_200": false,
+       "above_sma_50": false,
+       "bollinger_pct_b": 0.25803774030817545,
+       "volume_ratio_1d": 1.5005325968705694,
+       "gap_1d": 0.009809545663148178,
+       "candle_reversal_1d": false,
+       "stoch_k_14": 12.516680010675202
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "not oversold: ret_5d -0.030, zscore_21d -0.99, rsi_14 37.3",
+       "not idiosyncratic: residual_5d 0.039 against the sector's -0.069",
+       "not sound: roe 3.9, debt_to_equity 0.3395, current_ratio 0.5484, revenue_growth 21.45",
+       "not in an uptrend: below the 200-day mean"
+      ]
+     },
+     {
+      "family": "capital_return",
+      "computable": false,
+      "passed": false,
+      "missing": [
+       "share_count_change"
+      ],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 126,
+      "prior_20d": 0.003,
+      "basis": "prior",
+      "basis_ref": "boudoukh_et_al_2007",
+      "n": 0,
+      "regime_multiplier": 1.0,
+      "edge_20d": null,
+      "completeness": 0.2,
+      "features_used": {
+       "earnings_yield": 0.02989983555090447,
+       "debt_to_equity": 0.3395,
+       "revenue_growth": 21.45
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "share_count_change: no stored filings of FANG (fetch_filings has not been run for it)"
+      ]
+     },
+     {
+      "family": "conviction",
+      "computable": true,
+      "passed": false,
+      "missing": [],
+      "waived": [],
+      "scoring_basis": "threshold",
+      "score": null,
+      "direction": null,
+      "horizon_bars": 40,
+      "prior_20d": 0.006,
+      "basis": "prior",
+      "basis_ref": "borrowed_from_trend",
+      "n": 0,
+      "regime_multiplier": 0.5,
+      "edge_20d": null,
+      "completeness": 1.0,
+      "features_used": {
+       "rsi_14": 37.31860399011563
+      },
+      "evidence_ids": [],
+      "counter_evidence_ids": [],
+      "notes": [
+       "blend -0.053 is under 0.3",
+       "only 2 of 4 blend parts have a value (performance, historical); it needs 3"
+      ]
+     }
+    ],
+    "blend": {
+     "value": -0.0526,
+     "score": 47,
+     "weights": {
+      "news": 0.4,
+      "performance": 0.3,
+      "historical": 0.2,
+      "filings": 0.1
+     },
+     "half_life_days": 7.0,
+     "components": {
+      "news": {
+       "weight": 0.4,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      },
+      "performance": {
+       "weight": 0.3,
+       "value": -0.2225,
+       "available": true,
+       "n": 4,
+       "contribution": -0.0668,
+       "parts": [
+        {
+         "metric": "mom_12_1",
+         "raw": 0.325846,
+         "value": 0.6517
+        },
+        {
+         "metric": "ret_21d",
+         "raw": -0.120241,
+         "value": -0.8016
+        },
+        {
+         "metric": "pct_of_52w_high",
+         "raw": 0.814984,
+         "value": 0.2599
+        },
+        {
+         "metric": "above_sma_200",
+         "raw": false,
+         "value": -1.0
+        }
+       ]
+      },
+      "historical": {
+       "weight": 0.2,
+       "value": 0.0712,
+       "available": true,
+       "n": 6,
+       "contribution": 0.0142,
+       "parts": [
+        {
+         "metric": "earnings_yield",
+         "raw": 0.0299,
+         "value": -0.002
+        },
+        {
+         "metric": "roe",
+         "raw": 3.9,
+         "value": -0.305
+        },
+        {
+         "metric": "revenue_growth",
+         "raw": 21.45,
+         "value": 1.0
+        },
+        {
+         "metric": "operating_margin",
+         "raw": 7.11,
+         "value": -0.1445
+        },
+        {
+         "metric": "current_ratio",
+         "raw": 0.5484,
+         "value": -0.4516
+        },
+        {
+         "metric": "debt_to_equity",
+         "raw": 0.3395,
+         "value": 0.3302
+        }
+       ]
+      },
+      "filings": {
+       "weight": 0.1,
+       "value": 0.0,
+       "available": false,
+       "n": 0,
+       "contribution": 0.0,
+       "parts": []
+      }
+     }
+    },
+    "negative_equity": false,
+    "score": 47,
+    "stance": "neutral",
+    "rank": 15,
+    "reason": "gate freshness failed: the newest bar is 2026-11-19, 2 sessions before 2026-11-23; stance neutral (no family passed)",
+    "cooldown_of": null,
+    "theme_role": null,
+    "exit_plan": null
+   }
+  ],
+  "verify": null,
+  "reviews": [],
+  "critic_runs": [],
+  "trade_decisions": [
+   {
+    "record_id": "23f183830c4e",
+    "review_id": null,
+    "symbol": "EOG",
+    "action": "open",
+    "shares": 31,
+    "est_cost": 4606.6,
+    "mode": "auto",
+    "will_trade": "yes_auto",
+    "funds_avail": true,
+    "funds_note": null,
+    "asked_user": false,
+    "reason": "the Critic was skipped by the user's 'Ignore Critic' setting, so the Advisor's recommendation of EOG (score 72) counts as approved; no profile limit applies (spent round-robin: one share of each purchase at a time, in rank order)",
+    "decided_utc": "2026-11-23T05:20:11Z",
+    "size": {
+     "shares": 31,
+     "caps": {
+      "money": 100,
+      "budget": null
+     },
+     "binding": "money",
+     "equity": 15000,
+     "equity_basis": "cash only (no holdings)",
+     "notes": [
+      "round robin: 31 rounds, one share of each purchase in rank order, $15,000.00 to spend (money), $58.70 left",
+      "closed at 31 shares: the cash has no money for another share"
+     ],
+     "allocation": "round_robin",
+     "pot": 15000
+    },
+    "origin": "advisor",
+    "company": null,
+    "price": 148.6,
+    "valid_until_utc": "2026-11-23T05:50:11Z"
+   },
+   {
+    "record_id": "819513327db7",
+    "review_id": null,
+    "symbol": "CVX",
+    "action": "open",
+    "shares": 30,
+    "est_cost": 6251.1,
+    "mode": "auto",
+    "will_trade": "yes_auto",
+    "funds_avail": true,
+    "funds_note": null,
+    "asked_user": false,
+    "reason": "the Critic was skipped by the user's 'Ignore Critic' setting, so the Advisor's recommendation of CVX (score 71) counts as approved; no profile limit applies (spent round-robin: one share of each purchase at a time, in rank order)",
+    "decided_utc": "2026-11-23T05:20:11Z",
+    "size": {
+     "shares": 30,
+     "caps": {
+      "money": 71,
+      "budget": null
+     },
+     "binding": "money",
+     "equity": 15000,
+     "equity_basis": "cash only (no holdings)",
+     "notes": [
+      "round robin: 31 rounds, one share of each purchase in rank order, $15,000.00 to spend (money), $58.70 left",
+      "closed at 30 shares: the cash has no money for another share"
+     ],
+     "allocation": "round_robin",
+     "pot": 15000
+    },
+    "origin": "advisor",
+    "company": "Chevron",
+    "price": 208.37,
+    "valid_until_utc": "2026-11-23T05:50:11Z"
+   },
+   {
+    "record_id": "neutral-ae07f7b7d65e-1",
+    "review_id": null,
+    "symbol": "COP",
+    "action": "open",
+    "shares": 30,
+    "est_cost": 4083.6,
+    "mode": "auto",
+    "will_trade": "yes_auto",
+    "funds_avail": true,
+    "funds_note": null,
+    "asked_user": false,
+    "reason": "the Advisor scored COP NEUTRAL (score 64: stance neutral (no family passed)); ALLOW_NEUTRAL_RECOMMENDATIONS is on, so a neutral recommendation counts as approved; no profile limit applies (spent round-robin: one share of each purchase at a time, in rank order)",
+    "decided_utc": "2026-11-23T05:20:11Z",
+    "size": {
+     "shares": 30,
+     "caps": {
+      "money": 110,
+      "budget": null
+     },
+     "binding": "money",
+     "equity": 15000,
+     "equity_basis": "cash only (no holdings)",
+     "notes": [
+      "round robin: 31 rounds, one share of each purchase in rank order, $15,000.00 to spend (money), $58.70 left",
+      "closed at 30 shares: the cash has no money for another share"
+     ],
+     "allocation": "round_robin",
+     "pot": 15000
+    },
+    "origin": "neutral",
+    "company": "ConocoPhillips",
+    "price": 136.12,
+    "valid_until_utc": "2026-11-23T05:50:11Z"
+   }
+  ],
+  "bars": null,
+  "ratings": null,
+  "trades": [
+   {
+    "trade_id": "T1",
+    "kind": "recommendation",
+    "record_id": "23f183830c4e",
+    "review_id": null,
+    "funds_for": null,
+    "symbol": "EOG",
+    "side": "buy",
+    "shares_approved": 31,
+    "dollars": null,
+    "shares": 31,
+    "order_type": "limit",
+    "limit_price": 148.6,
+    "ref_price": 148.6,
+    "limit_low": 146.4447,
+    "limit_high": 150.086,
+    "status": "filled",
+    "reject_code": null,
+    "reason": "limit order filled at 148.6000 (the quote is 148.6000, the limit 148.6000)",
+    "placed_by": "model",
+    "note": "",
+    "placed_utc": "2026-11-23T05:20:11Z",
+    "mode": "paper",
+    "fill": {
+     "price": 148.6,
+     "shares": 31,
+     "amount": 4606.6,
+     "commission": 0,
+     "date": "2026-11-23",
+     "price_source": "quote",
+     "slippage_bps": 0
+    },
+    "booked": true,
+    "outcome": null
+   },
+   {
+    "trade_id": "T2",
+    "kind": "recommendation",
+    "record_id": "819513327db7",
+    "review_id": null,
+    "funds_for": null,
+    "symbol": "CVX",
+    "side": "buy",
+    "shares_approved": 30,
+    "dollars": null,
+    "shares": 30,
+    "order_type": "limit",
+    "limit_price": 208.37,
+    "ref_price": 208.37,
+    "limit_low": 205.8699,
+    "limit_high": 210.4537,
+    "status": "filled",
+    "reject_code": null,
+    "reason": "limit order filled at 208.3700 (the quote is 208.3700, the limit 208.3700)",
+    "placed_by": "model",
+    "note": "",
+    "placed_utc": "2026-11-23T05:20:11Z",
+    "mode": "paper",
+    "fill": {
+     "price": 208.37,
+     "shares": 30,
+     "amount": 6251.1,
+     "commission": 0,
+     "date": "2026-11-23",
+     "price_source": "quote",
+     "slippage_bps": 0
+    },
+    "booked": true,
+    "outcome": null
+   },
+   {
+    "trade_id": "T3",
+    "kind": "recommendation",
+    "record_id": "neutral-ae07f7b7d65e-1",
+    "review_id": null,
+    "funds_for": null,
+    "symbol": "COP",
+    "side": "buy",
+    "shares_approved": 30,
+    "dollars": null,
+    "shares": 30,
+    "order_type": "market",
+    "limit_price": null,
+    "ref_price": 136.12,
+    "limit_low": 132.0364,
+    "limit_high": 137.4812,
+    "status": "filled",
+    "reject_code": null,
+    "reason": "market order filled at the quote 136.1200 with 0 bps of slippage",
+    "placed_by": "model",
+    "note": "",
+    "placed_utc": "2026-11-23T05:20:11Z",
+    "mode": "paper",
+    "fill": {
+     "price": 136.12,
+     "shares": 30,
+     "amount": 4083.6,
+     "commission": 0,
+     "date": "2026-11-23",
+     "price_source": "quote",
+     "slippage_bps": 0
+    },
+    "booked": true,
+    "outcome": null
+   }
+  ],
+  "trader_runs": [
+   {
+    "model": "openai/gpt-oss-120b",
+    "temperature": 0.0,
+    "mode": "paper",
+    "now_utc": "2026-11-23T05:20:11Z",
+    "use_model": true,
+    "turns": 7,
+    "tokens_in": 12369,
+    "tokens_out": 311,
+    "tool_calls": [
+     {
+      "name": "verify_request",
+      "args": {},
+      "outcome": "ok"
+     },
+     {
+      "name": "place_order",
+      "args": {
+       "trade_id": "T1"
+      },
+      "outcome": "ok"
+     },
+     {
+      "name": "place_order",
+      "args": {
+       "trade_id": "T2"
+      },
+      "outcome": "ok"
+     },
+     {
+      "name": "place_order",
+      "args": {
+       "trade_id": "T3"
+      },
+      "outcome": "ok"
+     },
+     {
+      "name": "check_trade_status",
+      "args": {},
+      "outcome": "ok"
+     },
+     {
+      "name": "notify_account_manager",
+      "args": {},
+      "outcome": "ok"
+     }
+    ],
+    "placed_by_model": 3,
+    "placed_by_code": 0,
+    "summary": "All three trades filled: T1 31@148.6, T2 30@208.37, T3 30@136.12; cash left 58.7",
+    "summary_by": "model",
+    "portfolio_before": {
+     "cash": 15000,
+     "positions": []
+    },
+    "portfolio_after": {
+     "cash": 58.7,
+     "positions": [
+      {
+       "symbol": "COP",
+       "shares": 30,
+       "cost_basis": 136.12,
+       "acquired": "2026-11-23"
+      },
+      {
+       "symbol": "CVX",
+       "shares": 30,
+       "cost_basis": 208.37,
+       "acquired": "2026-11-23"
+      },
+      {
+       "symbol": "EOG",
+       "shares": 31,
+       "cost_basis": 148.6,
+       "acquired": "2026-11-23"
+      }
+     ]
+    },
+    "price_order": "6daa03369bea",
+    "funding": null,
+    "booked": true,
+    "config_version": "1",
+    "dropped": [],
+    "errors": []
+   }
+  ],
+  "direct_orders": [],
+  "max_price": null,
+  "min_price": null,
+  "ignore_critic": true
+ }
+}

@@ -1,0 +1,18 @@
+<<<PRESS_RELEASE>>>
+id: 56722528c7859b8b
+symbol: UAA
+published_utc: 2026-04-09T09:00:00Z
+url: https://www.nasdaq.com/press-release/c-o-r-r-e-c-t-i-o-n-unrivaled-sports-2026-04-09
+headline: /C O R R E C T I O N -- Unrivaled Sports/
+<<<TEXT>>>
+--Unrivaled Sports, the nation's leader in youth sports experiences, today announced landmark partnerships with Under Armour and DICK'S, two of the most influential brands in sports, deepening its commitment to elevating the athlete experience and further strengthening Unrivaled Sports' leadership in the youth sports ecosystem. Through these...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1eb5409641b5792e
+symbol: UAA
+published_utc: 2026-05-11T12:56:00Z
+url: https://www.nasdaq.com/press-release/persona-ai-collaborates-under-armour-explore-performance-materials-humanoid-robotics
+headline: Persona AI Collaborates with Under Armour to Explore Performance Materials for Humanoid Robotics
+<<<TEXT>>>
+--Persona AI today announced a research and development collaboration with Under Armour to learn how advanced performance materials will support the next generation of humanoid robotics operating in demanding environments. The joint eﬀort focuses on early-stage research and testing, examining how diﬀerent textiles behave under conditions such as...
+<<<END>>>

@@ -201,6 +201,9 @@ class WorkOrder(BaseModel):
     # A PRICE FLOOR the user wrote ("the top 3 AI stocks over $20 a share", design choices entry 140): the least one share may cost. The same filter as `max_price` from the other side: the Advisor drops what costs less, the Account Manager gives no
     # decision to a purchase priced under it and its handshake refuses a fill under it. None when the user gave none. A price, never an amount of money or a size.
     min_price: Price | None = None
+    # IGNORE CRITIC (design choices entry 148): True when the USER's setting for this run ("Ignore Critic", `--ignore-critic`) made the desk skip the Critic's node. The Advisor's recommendations then count as approved (a decision with
+    # `origin: "advisor"`, no review beside it) and `verify_trade` accepts such a decision ONLY while this is true. Set by the desk when it routes around the Critic and nowhere else; False on every other order.
+    ignore_critic: bool = False
 
 
 def new_work_order(query: str, *, requester: str = "user", action_type: str = "search_news", subject=None, source: str = "news",
@@ -466,6 +469,7 @@ EVIDENCE_ID = re.compile(r"E\d+")
 WILL_TRADE = ("yes_auto", "yes_user", "pending_user", "no_system_denied", "no_expired", "no_funds", "no_user_denied")  # the week 5 design's WillTrade: Yes (user approved), No (system denied), No (no funds), No (user denied)
 TRADING = ("yes_auto", "yes_user")                  # the only two decisions that let the Trader trade
 NEUTRAL = "neutral"                                 # the `origin` of a decision for a company the Advisor scored NEUTRAL while ALLOW_NEUTRAL_RECOMMENDATIONS is on (entry 91): no review and no plan; the Advisor's own `order.candidates` record is its permission
+ADVISOR = "advisor"                                 # the `origin` of a decision for an Advisor recommendation the Critic did NOT review because the user ticked "Ignore Critic" (entry 148): no review; the order's `ignore_critic` and the Advisor's own record on `order.recommendations` are its permission
 DIRECT = "direct"                                   # the `origin` of a decision made for a trade the USER named (entry 87): no recommendation, no Critic review; the order's `direct_orders` is its permission
 DIRECT_SIDES = ("buy", "sell")
 DIRECT_KEYS = ("record_id", "side", "symbol", "company", "shares", "request", "requested_utc")   # what a record of `order.direct_orders` holds: `company` is the company's name as the data source gives it (entry 88)
@@ -560,6 +564,17 @@ def neutral_candidate_of(order: WorkOrder, symbol: str) -> dict | None:
     return next((c for c in order.candidates if is_neutral_candidate(c) and c["symbol"] == symbol), None)
 
 
+def advisor_record_of(order: WorkOrder, record_id: str) -> dict | None:
+    """The Advisor's own recommendation record of this `identity.record_id` on `order.recommendations`, or None. Beside `review_of` and `decision_of`: the permission of an `origin: "advisor"` decision (entry 148)."""
+    return next((r for r in order.recommendations if isinstance(r, dict) and (r.get("identity") or {}).get("record_id") == record_id), None)
+
+
+def record_action_of(record) -> str | None:
+    """What an Advisor record recommends ("open": a purchase): `record["action"]["action"]` (schema 2 and 3), or None when the record has none."""
+    action = record.get("action") if isinstance(record, dict) else None
+    return action.get("action") if isinstance(action, dict) else None
+
+
 def direct_order_of(order: WorkOrder, record_id: str) -> dict | None:
     """The user's own direct order (entry 87) that a decision answers, by `record_id`, or None."""
     return next((d for d in order.direct_orders if isinstance(d, dict) and d.get("record_id") == record_id), None)
@@ -635,14 +650,32 @@ def verify_trade(order: WorkOrder, record_id: str, now: datetime) -> list[str]:
 
     A NEUTRAL RECOMMENDATION (design choices entries 91 and 107) is the third way: while the Account Manager's setting ALLOW_NEUTRAL_RECOMMENDATIONS is on, a company the Advisor scored neutral (whoever named it) counts as approved.
     A decision with `origin` "neutral" needs, instead of the review, the Advisor's own neutral record of that symbol on `order.candidates` (`is_neutral_candidate`), is only a purchase, has no review beside it, and runs out at
-    its own `valid_until_utc`. The word alone permits nothing here either, and a Critic denial is never turned into this: a denied recommendation has a review, and a neutral candidate never had one."""
+    its own `valid_until_utc`. The word alone permits nothing here either, and a Critic denial is never turned into this: a denied recommendation has a review, and a neutral candidate never had one.
+
+    AN ADVISOR RECOMMENDATION THE CRITIC DID NOT REVIEW (design choices entry 148; the user ticked "Ignore Critic" for this run) is the fourth way. A decision with `origin` "advisor" needs ALL of: the order's own `ignore_critic` is true (the desk sets it
+    when it routes around the Critic), the Advisor's own record with that `record_id` and symbol is on `order.recommendations` and recommends a purchase (`action: "open"`), there is NO review of it on `order.reviews` (when the Critic did review it, its verdict stands: a
+    denial is never relabelled), the decision is a purchase, and its own `valid_until_utc` has not run out. The word alone permits nothing."""
     if not isinstance(now, datetime) or now.tzinfo is None:
         raise ValueError("now must be a datetime with a timezone")
     review, decision = review_of(order, record_id), decision_of(order, record_id)
     direct = direct_order_of(order, record_id) if decision is not None and decision.get("origin") == DIRECT else None
     neutral = decision is not None and decision.get("origin") == NEUTRAL
+    advisor = decision is not None and decision.get("origin") == ADVISOR
     reasons = []
-    if neutral:
+    if advisor:
+        # an Advisor recommendation the Critic did not review because the user chose to ignore it (entry 148): the order's own flag and the Advisor's record on the order are the permission, and no review stands in for it
+        record = advisor_record_of(order, record_id)
+        if not order.ignore_critic:
+            reasons.append(f"the decision for {record_id} says it is an Advisor recommendation the Critic did not review, but the work order does not say the user chose to ignore the Critic (ignore_critic)")
+        if record is None or record.get("symbol") != decision.get("symbol"):
+            reasons.append(f"the decision for {record_id} says it is an Advisor recommendation, but the work order holds no recommendation of the Advisor's for {decision.get('symbol')!r} with that record id")
+        elif record_action_of(record) != "open":
+            reasons.append(f"the Advisor's record of {decision.get('symbol')!r} recommends {record_action_of(record)!r}, not a purchase to open")
+        if decision.get("action") != "open":
+            reasons.append("an Advisor recommendation the Critic did not review is only a purchase")
+        if review is not None:
+            reasons.append("an Advisor recommendation the user chose not to have reviewed has no Critic review: the work order holds one for it, and the Critic's verdict stands")
+    elif neutral:
         # a company the Advisor scored neutral, while the Account Manager's setting treats that as approved (entry 91): the Advisor's own record on the order is the permission, and no review stands in for it
         if neutral_candidate_of(order, decision.get("symbol")) is None:
             reasons.append(f"the decision for {record_id} says it is a neutral recommendation, but the work order holds no neutral score of the Advisor's for {decision.get('symbol')!r}")
@@ -667,13 +700,13 @@ def verify_trade(order: WorkOrder, record_id: str, now: datetime) -> list[str]:
         reasons.append(f"there is no Critic review of recommendation {record_id}")
     elif not review.get("approved"):
         reasons.append("the Critic did not approve it")
-    if decision is not None and decision.get("origin") not in (DIRECT, NEUTRAL) and decision.get("action") != "open":
+    if decision is not None and decision.get("origin") not in (DIRECT, NEUTRAL, ADVISOR) and decision.get("action") != "open":
         reasons.append(f"the decision's action is {decision.get('action')!r}: a recommendation is a purchase to open, and a sale never comes from a recommendation (it is the user's own direct order or RaiseFunds; entry 105)")
     if decision is None:
         reasons.append(f"there is no trade decision for recommendation {record_id}")
     elif decision.get("will_trade") not in TRADING:
         reasons.append(f"the trade decision is {decision.get('will_trade')!r}, not one of {', '.join(TRADING)}")
-    approval = decision if direct is not None or neutral else review if review is not None and review.get("approved") else None
+    approval = decision if direct is not None or neutral or advisor else review if review is not None and review.get("approved") else None
     if approval is not None:
         until = parse_utc(approval.get("valid_until_utc"))
         if until is None:
@@ -834,7 +867,8 @@ def verify_trades(order: WorkOrder) -> list[str]:
     trade with no fill, or a fill whose price or share count is not positive; a funding trade that is not a sale, or whose `funds_for` names no purchase on the order; a `filled` funding sale whose purchase is not `filled` (holdings sold and nothing bought: the Trader's order of work prevents it, and this is the check behind that); and, for a `filled` trade of a
     recommendation: a `record_id` with no decision that says `yes_auto` or `yes_user`, a symbol or a side that is not the decision's (a sale only for a `reduce`), a SALE that is not the user's own direct order (a
     sale tied to a recommendation: it never comes from one, entry 105), more shares than the decision gave, and a second filled trade for the same recommendation. A trade that is only `active` or `rejected` cannot move the account, so it is held to the shape above and not to the decision.
-    AND THE POT (design choices entry 111, M1; `pot_reasons`): the decisions of the purchases that carry a pot all carry the same one, and the fills of those purchases cost no more than it in all."""
+    AND THE POT (design choices entry 111, M1; `pot_reasons`): the decisions of the purchases that carry a pot all carry the same one, and the fills of those purchases cost no more than it in all. A purchase of an Advisor recommendation the Critic did not
+    review (`origin` "advisor", entry 148) is counted in the pot like any other, and is not refused for having no review: that is `verify_trade`'s business (the order's `ignore_critic`), and a fill is checked against its decision only."""
     reasons: list[str] = []
     seen: set[str] = set()
     by_id = {t.get("trade_id"): t for t in order.trades if isinstance(t, dict)}

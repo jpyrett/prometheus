@@ -3,6 +3,7 @@
     python design/make_submission_pdf.py        # week 4
     python design/make_submission_pdf.py 3      # week 3
     python design/make_submission_pdf.py 5 week5_submission_jpyrett.pdf   # week 5, named output
+    python design/make_submission_pdf.py final  # design/final_capstone_report.md -> design/final_capstone_report.pdf
 
 Markdown (tables, fenced code) -> HTML -> PDF with WeasyPrint. Letter paper, 0.75 inch margins. Edit the markdown, run this again.
 Anything before the first line starting with "# " is left out (week 5 keeps the assignment text above its submission).
@@ -15,12 +16,16 @@ from weasyprint import HTML
 
 HERE = Path(__file__).parent
 WEEK = sys.argv[1] if len(sys.argv) > 1 else "4"
-SOURCE = HERE / f"week{WEEK}_submission.md"
-TARGET = HERE / (sys.argv[2] if len(sys.argv) > 2 else f"week{WEEK}_submission.pdf")
+FINAL = WEEK == "final"  # the final capstone report: its own file names, title and footer, and its sections are "# " headings
+STEM = "final_capstone_report" if FINAL else f"week{WEEK}_submission"
+TITLE = "Prometheus - Final Capstone Report" if FINAL else f"Prometheus Capstone: Week {WEEK} Submission"
+FOOTER = "Prometheus - Final Capstone Report" if FINAL else f"Prometheus Capstone - Week {WEEK} Submission"
+SOURCE = HERE / f"{STEM}.md"
+TARGET = HERE / (sys.argv[2] if len(sys.argv) > 2 else f"{STEM}.pdf")
 
 CSS = """
 @page { size: Letter; margin: 0.75in 0.8in 0.8in 0.8in;
-        @bottom-center { content: "Prometheus Capstone - Week WEEK_NUMBER Submission - page " counter(page) " of " counter(pages); font: 8pt 'DejaVu Sans', sans-serif; color: #666; } }
+        @bottom-center { content: "FOOTER_TEXT - page " counter(page) " of " counter(pages); font: 8pt 'DejaVu Sans', sans-serif; color: #666; } }
 body { font: 10pt/1.38 'DejaVu Serif', Georgia, serif; color: #1a1a1a; }
 h1 { font: bold 17pt 'DejaVu Sans', sans-serif; margin: 0 0 4pt 0; color: #14305c; border-bottom: 2px solid #14305c; padding-bottom: 4pt; }
 h1 + p { color: #444; margin-top: 2pt; font-size: 9.5pt; }
@@ -41,12 +46,21 @@ strong { color: #000; }
 img { max-width: 100%; display: block; margin: 6pt auto 8pt auto; }
 """
 
+FINAL_CSS = """
+h1 { font-size: 13pt; margin: 14pt 0 4pt 0; break-after: avoid; }
+body > h1:first-child { font-size: 18pt; margin-top: 0; }
+h1 + p { color: #555; font-size: 9pt; break-after: avoid; }
+img { break-inside: avoid; border: 1px solid #d5d9e0; }
+p:has(+ pre) { break-after: avoid; }
+p:has(> img) { break-inside: avoid; text-align: center; color: #555; font-size: 8.8pt; }
+"""
+
 
 def main() -> None:
     text = SOURCE.read_text(encoding="utf-8")
     text = text[text.index("# "):] if text.startswith("# ") else text[text.index("\n# ") + 1:]
     body = markdown.markdown(text, extensions=["tables", "fenced_code", "sane_lists"])
-    html = f"<html><head><meta charset='utf-8'><title>Prometheus Capstone: Week {WEEK} Submission</title><style>{CSS.replace('WEEK_NUMBER', WEEK)}</style></head><body>{body}</body></html>"
+    html = f"<html><head><meta charset='utf-8'><title>{TITLE}</title><style>{CSS.replace('FOOTER_TEXT', FOOTER)}{FINAL_CSS if FINAL else ''}</style></head><body>{body}</body></html>"
     HTML(string=html, base_url=str(HERE)).write_pdf(TARGET)
     print(f"wrote {TARGET}")
 

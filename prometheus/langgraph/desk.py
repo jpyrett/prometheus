@@ -21,6 +21,11 @@ The graph:
                                                   |
                                                   +-- no recommendations --> END
 
+    IGNORE CRITIC (entry 148; `request["ignore_critic"]`, the page's box and the session's `--ignore-critic`; default OFF, one run, nothing saved): the user skips the Critic's step for this run. `after_advisor` then sends the Advisor's recommendations straight to the decision
+    (advisor -> account_manager_decision -> [funds ->] trader): the `critic` node is NOT run (neither its model nor its Finnhub re-asks), the Trust Score that follows it is not made, the node stays in the graph for the runs that use it, and the work order says
+    `ignore_critic` (set when the decision node runs, with its status moved to `reviewed`). Every recommendation of the Advisor then counts as approved, decided with `origin: "advisor"`: Auto trades it, Ask asks the user with a card that says the Critic did not review it.
+    Without the Critic's desk (`with_critic=False`) the flag is ignored, a direct order never meets the Critic and is unchanged, and "research only" still ends after the Advisor. OFF, nothing here is touched.
+
     with_trader=True (Trader v1, entries 73 to 75; `--trade`; needs the Critic):
     ... -> critic -> account_manager_decision -> trader -> END            (with_funds: ... -> account_manager_decision -> account_manager_funds -> trader -> END)
                                   |                                       The trader node runs only when at least one decision says yes_auto or yes_user; otherwise the graph ends before it.
@@ -105,7 +110,9 @@ from langgraph.graph import END, START, StateGraph
 
 from prometheus.agents.account_manager import direct as direct_order
 from prometheus.agents.account_manager import funding as funding_module
+from prometheus.agents.account_manager import ignore_critic as ignoring
 from prometheus.agents.account_manager import neutral as neutral_names
+from prometheus.agents.account_manager.intent import one_stock_asked
 from prometheus.agents.account_manager.account_manager import DEFAULT_PORTFOLIO, DEFAULT_PROFILE, AccountManager, report as funds_report, top_recommendation
 from prometheus.agents.account_manager.decisions import terminal_approver
 from prometheus.agents.advisor.advisor import Advisor
@@ -168,7 +175,7 @@ def reached_its_end(state: DeskState) -> bool:
     trader_built = bool(state.get("with_trader")) or (state.get("request") or {}).get("trade") is not None   # `trade` is in the request when `--trade` was typed
     if "account_manager_direct" in path:   # a direct order (entry 87) ends at the Account Manager's decision, as the Critic's path does; a decided order the Trader had nothing to do with did not reach it
         return not trader_built and order.status == "decided"
-    if "critic" in path:
+    if "critic" in path or (order.ignore_critic and "account_manager_decision" in path):      # a run that skipped the Critic at the user's word (entry 148) ends at the decision as the Critic's path does
         return not trader_built and order.status in CRITIC_ENDS
     return order.status == "recommended"
 
@@ -377,6 +384,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
                 "min_price": intent.min_price,      # "over $20 a share" (entry 140): the same from the other side
                 "raise_funds": intent.raise_funds,      # the user's words let the Account Manager sell holdings to pay for a purchase the cash does not cover (entry 142, R2)
                 "shares_of": dict(intent.shares_of) or None, "shares_each": intent.shares_each,      # "buy 10 of MU if the recommendation passes", "5 shares of each of the top 3" (entry 140, C1): the shares are each approved purchase's limit
+                "top_pick": intent.count == 1 and one_stock_asked(intent.request),      # "the most recommended shoe company" (entry 147): the Advisor's recommendation or nothing, never a neutral company in its place
                 "count": intent.count,      # the number of companies the request asked for, or None: `find` falls back to a default of 3 for the Advisor and that default must not cut anything (entry 107)
                 "said_how_much": intent.said_how_much(), "request_text": intent.request, "fetch": fetch,
                 "news_days": days, "result": Result(asked, case, eastern_date(clock()), find)}
@@ -463,6 +471,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         """The Account Manager turns each review into a trade decision and sizes it: Auto trades (round-robin, unless the user asked for another split), Ask asks the user, a denial is final. It asks the Data Clerk for the
         holdings' current prices itself, when it needs them (`AccountManager.decide_trades`)."""
         order = state["order"]
+        if ignores_the_critic(state) and order.recommendations and "critic" not in state.get("path", []) and order.status == "recommended":      # the user's box (entry 148): the Critic did not run. The order says so (`verify_trade` reads it) and is `reviewed` for the Account Manager's decision
+            order.ignore_critic, order.status = True, "reviewed"
         try:
             manager, portfolio = account(state)
         except (RuntimeError, ValueError, OSError) as error:
@@ -471,7 +481,8 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         plan = state.get("plan") or {}
         return {"order": manager.decide_trades(order, portfolio, approver, clock(), (state["request"].get("account") or {}).get("mode"), plan.get("balance"), plan.get("budget"),
                                                clarify=clarify, said_how_much=bool(plan.get("said_how_much")), request_text=plan.get("request_text") or "", count=plan.get("count"), each=plan.get("each"), max_price=plan.get("max_price"),
-                                               min_price=plan.get("min_price"), shares_of=plan.get("shares_of"), shares_each=plan.get("shares_each"), raise_funds=bool(plan.get("raise_funds")))}
+                                               min_price=plan.get("min_price"), shares_of=plan.get("shares_of"), shares_each=plan.get("shares_each"), raise_funds=bool(plan.get("raise_funds")),
+                                               top_pick=bool(plan.get("top_pick")))}
 
     def account_manager_direct(state: DeskState) -> dict:
         """A DIRECT ORDER (entry 87): the Account Manager prices the trades the user named (it asks the Data Clerk for the quotes) and decides them: the user's own order is the approval, so there is no recommendation, no
@@ -532,6 +543,10 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             return {"funds": {"status": "refused", "errors": [f"the Account Manager could not start: {error}"], "quotes": {}, "run": {}}}
         return {"funds": manager.raise_funds(portfolio, target, spec.get("shares", 1))}
 
+    def ignores_the_critic(state: DeskState) -> bool:
+        """Whether this run skips the Critic (entry 148): the user's box, on a desk that has the Critic. The flag is the run's own (`request["ignore_critic"]`): default False, never saved, never read from `.env`."""
+        return with_critic and bool(state["request"].get("ignore_critic"))
+
     def after_advisor(state: DeskState) -> str:
         if with_critic:
             if (state.get("plan") or {}).get("action") == "research":   # the user asked only to look: nothing is reviewed, decided or traded
@@ -540,7 +555,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             if order.status != "recommended":
                 return END
             if order.recommendations:
-                return "critic"
+                return "account_manager_decision" if ignores_the_critic(state) else "critic"      # IGNORE CRITIC (entry 148): the user's box skips the Critic's node, and the Advisor's recommendations count as approved
             return "account_manager_decision" if neutral_names.neutral_candidates(order) else END       # nothing for the Critic to review, but a company the user named that the Advisor scored neutral counts as approved (entry 91)
         return "account_manager_funds" if with_funds and state["order"].status == "recommended" else END
 
@@ -693,6 +708,9 @@ def report(state: DeskState, total_seconds: float | None = None) -> str:
     neutral = neutral_names.neutral_lines(order)
     if neutral:
         lines.append("\n" + "\n".join(neutral))
+    skipped = ignoring.advisor_lines(order)      # entry 148: the Critic did not review these recommendations (the user's setting)
+    if skipped:
+        lines.append("\n" + "\n".join(skipped))
     if state.get("funds"):
         lines.append("\nACCOUNT MANAGER: RAISE FUNDS (a Tree of Thought, entry 42)\n" + funds_report(state["funds"]))
     direct = direct_order.direct_section(order)

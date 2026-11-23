@@ -105,6 +105,14 @@ describe("WorkOrderTable", () => {
     expect(within(screen.getByText("Work order").closest("section")!).getByText("TRADED")).toBeTruthy();
   });
 
+  it("says CRITIC SKIPPED for a recommendation decided without the Critic (entry 148: Ignore Critic), and nothing of the kind for a reviewed one", () => {
+    const rows = bobDone.workOrder!.rows.map((r) => (r.key === "APA" ? { ...r, critic: null, decision: { ...r.decision!, origin: "advisor", words: "yes (AUTO) · Critic skipped" } } : r));
+    render(<WorkOrderTable state={{ ...bobDone, workOrder: { ...bobDone.workOrder!, rows } }} selectedKey="XOM" onSelect={vi.fn()} />);
+    const grid = within(screen.getByRole("grid"));
+    expect(grid.getByRole("row", { name: /^2 APA/ }).textContent).toContain("CRITIC SKIPPED");
+    expect(grid.getByRole("row", { name: /^1 XOM/ }).textContent).not.toContain("CRITIC SKIPPED");
+  });
+
   it("arrow keys move the selection", () => {
     const onSelect = vi.fn();
     render(<WorkOrderTable state={bobDone} selectedKey="XOM" onSelect={onSelect} />);

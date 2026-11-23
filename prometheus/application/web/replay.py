@@ -83,6 +83,7 @@ class Replay:
         order = capture["order"]
         self.order, self.path = order, list(capture["path"])
         self.intent = TradeIntent.model_validate(capture["intent"]) if capture.get("intent") else None
+        self.top = self.intent.count if self.intent and self.intent.action not in ("order",) else None      # the number the recorded request asked for (entry 144); a capture with none shows every row
         self.names = {r["symbol"]: r["company"] for r in [*(order.get("candidates") or []), *(order.get("recommendations") or []), *(order.get("direct_orders") or [])] if r.get("company")}      # the names the capture has: a company the Advisor did not name stays unnamed
         stem = Path(capture.get("_file", "replay.json")).stem.split("_")
         self.user = " ".join(w.capitalize() for w in stem[:2]) if len(stem) >= 3 else "Replay user"
@@ -105,7 +106,7 @@ class Replay:
         started = time.perf_counter()
         out = Emitter(run)
         order, capture = self.order, self.capture
-        run.emit("run_started", {"run_id": run.id, "mode": "replay", "account_id": 0, "prompt": capture.get("request", ""), "options": {"strict": False, "neutral": True, "fetch": False}, "trade_mode": self.mode,
+        run.emit("run_started", {"run_id": run.id, "mode": "replay", "account_id": 0, "prompt": capture.get("request", ""), "options": {"strict": False, "neutral": True, "fetch": False, **({"ignore_critic": True} if order.get("ignore_critic") else {})}, "trade_mode": self.mode,
                                  "started_utc": utc_now(), "stages": views.stage_list(), "source": capture.get("_file")})
         out.portfolio(self.account(), start=True)
         out.log("system", f"REPLAY of a recorded session ({capture.get('_file')}): no model is called, no quote is read and no database is touched. The seconds shown are the replay's own pacing.")
@@ -145,7 +146,7 @@ class Replay:
                 out.block("account_manager", [note for note in work.data.notes if note.startswith("dropped")])           # a stock that was left out of the order (entry 102): the live run says it as it happens
             if node == "account_manager_direct":
                 out.block("account_manager", direct_section(work))
-            out.work_order(work, understood=understood)
+            out.work_order(work, understood=understood, top=self.top)
             out.stages(views.stage_states(path=done, seconds=seconds, running=None, order=cut))
             calls, tokens_in, tokens_out = self._activity(out, node, cut, calls, tokens_in, tokens_out)
         stopped = run.stop_flag.is_set() and len(done) < len(self.path)
@@ -191,7 +192,7 @@ class Replay:
             fill = trade["fill"]
             held = apply_fill(held, trade["symbol"], trade["side"], sh.quantity(fill["shares"]), price_door(fill["price"]), date.fromisoformat(fill["date"]), name=self.names.get(trade["symbol"]))      # the capture's numbers through their doors
             partial = {**views.cut_order(self.order, done), "trades": [t for t in (self.order.get("trades") or [])[:k]], "status": "decided"}
-            out.work_order(partial, understood=understood)
+            out.work_order(partial, understood=understood, top=self.top)
             out.portfolio(views.account_view(self.holder, held, as_of=utc_now(), read_only=True))
             out.log("trader", f"{trade['trade_id']} {trade['symbol']} {trade['side']} {sh.text(fill['shares'])}: {trade.get('reason') or trade['status']}")
             out.log("account_manager", f"booked {trade['trade_id']} in the account: cash ${held.cash_avail:,.2f}")

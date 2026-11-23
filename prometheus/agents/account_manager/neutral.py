@@ -76,6 +76,12 @@ def not_needed_line(candidate: dict, count: int) -> str:
             f"and the approved ones and the better neutral ones make them")
 
 
+def not_top_pick_line(candidate: dict, top: dict) -> str:
+    """What the Account Manager tells the user about a neutral company when the user asked for THE most recommended company and the Advisor recommended one (entry 147): it is not bought, whatever the Critic said of the one."""
+    return (f"{candidate['symbol']} was scored neutral by the Advisor (score {candidate.get('score', '-')}) and is not bought: you asked for the most recommended company, and that is the Advisor's recommendation, "
+            f"{top['symbol']}; only it may be bought, and if the Critic denies it nothing takes its place")
+
+
 def record_id_of(order: WorkOrder, number: int) -> str:
     return f"neutral-{order.request_id}-{number}"
 

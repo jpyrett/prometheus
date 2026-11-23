@@ -93,15 +93,16 @@ def startup_line() -> str:
     return "tracing: off (set LANGFUSE_PUBLIC_KEY and LANGFUSE_SECRET_KEY to turn Langfuse on)"
 
 
-def stream_config(run, *, on_activity: Callable[[int, int, int, str | None], None] | None, mode: str, strict: bool, neutral: bool) -> dict:
-    """The `config` handed to `graph.stream`: the activity counter (when `on_activity` is given), Langfuse's handler when it is on, and the run's id as the trace's session with its tags."""
+def stream_config(run, *, on_activity: Callable[[int, int, int, str | None], None] | None, mode: str, strict: bool, neutral: bool, ignore_critic: bool = False) -> dict:
+    """The `config` handed to `graph.stream`: the activity counter (when `on_activity` is given), Langfuse's handler when it is on, and the run's id as the trace's session with its tags. A run that skips the Critic (entry 148, "Ignore Critic")
+    says so in the metadata of the trace (`ignore_critic`, which LangSmith reads too) and in Langfuse's tags; with the box off nothing is added."""
     handlers = [ActivityHandler(on_activity)] if on_activity is not None else []
-    metadata = {}
+    metadata = {"ignore_critic": True} if ignore_critic else {}
     try:
         traced = _langfuse_handler()
     except Exception:
         traced = None
     if traced is not None:
         handlers.append(traced)
-        metadata = {"langfuse_session_id": run.id, "langfuse_tags": ["prometheus-ui", mode, "strict" if strict else "not-strict", "neutral" if neutral else "no-neutral"]}
+        metadata = {**metadata, "langfuse_session_id": run.id, "langfuse_tags": ["prometheus-ui", mode, "strict" if strict else "not-strict", "neutral" if neutral else "no-neutral", *(["ignore-critic"] if ignore_critic else [])]}
     return {"callbacks": handlers, "metadata": metadata}

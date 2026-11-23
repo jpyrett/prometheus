@@ -1,0 +1,564 @@
+<<<ARTICLE>>>
+id: finnhub:143805072
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T18:01:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a29f494e23e933d70265c367331970eeb11af5772f078e2a594c4b6bff43742
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: What Does Ralph Lauren Stock's Winning Streak Really Prove?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143802744
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-13T12:55:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=802ac0c5bb0f39e3ead2993432f541fb8daa21bfdf12e85d3ea8ad7ce94a1b13
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: Despite Fast-paced Momentum, V.F. (VFC) Is Still a Bargain Stock
+<<<SUMMARY>>>
+V.F. (VFC) made it through our 'Fast-Paced Momentum at a Bargain' screen and could be a great choice for investors looking for stocks that have gained strong momentum recently but are still trading at reasonable prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143773623
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T21:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e6c22611b19015391188b744adfb51743c2c7d36bd2812503c43438fe5e7eb6d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: VF Corporation Announces Participation at J.P. Morgan’s 8th Annual Global Luxury & Brands Conference
+<<<SUMMARY>>>
+DENVER, November 12, 2026--VF Corporation Announces Participation At J.P. Morgan’s 8th Annual Global Luxury & Brands Conference
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143770662
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-12T15:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9b6b722c26b2727f9b323beec718c400d7e6b2d114b2dc564a20b8c287b73a92
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: Best Health & Fitness Stocks to Buy on Strong Market Potential
+<<<SUMMARY>>>
+Rising demand for wearables, performance footwear and outdoor apparel puts VFC, GRMN and AS in focus as the health & fitness market expands.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143735217
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-11T13:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ee2aa08b0d5c2e3a531752f94b234cc1c0138fa3e92659aab1895d48dca1b30
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: SAP and VFC Open Intelligent Fashion Store
+<<<SUMMARY>>>
+SAP SE (NYSE: SAP) and VF Corporation (NYSE: VFC) today opened S.Fashion, a retail innovation space at the SAP headquarters in Walldorf designed to explore how AI-enabled, end-to-end processes can enhance the consumer experience while making store operations more effective.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143690704
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T15:18:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7663b1496ded96895007fa0dcef45ec9a04b5a4b65f4898c3eedf60099747a22
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: How Ralph Lauren Stock Is Engineered To Make Money For You
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143687394
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-10T13:11:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1435b4d7f8403b65b957fdc5c69e17e4262c8c7abedea97c36312a110b1cb2c3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: Why Did Ralph Lauren Stock Jump?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143655656
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-09T08:46:44Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=84253f4562a0b9bfa6fedb22228cd60b99e359deb9d4dea33b0f8bba0f52728a
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/09/Jim-Cramer.jpg?width=2048&height=1536
+category: company
+tickers: VFC
+keywords: 
+headline: Jim Cramer Praises The 'Number One Oil Company In The World'
+<<<SUMMARY>>>
+Jim Cramer discusses Okta, VF, Trinity Capital, JPMorgan, Ameriprise Financial, Cardinal Health, D-Wave, Chevron and Netflix.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144013556
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T13:11:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b1b3029a893ce0b655957c4bf438a365cf68c6a639b4b6752e834a46ca73dc67
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: V.F. (VFC) Stock Looks Undervalued Based On Future Cash Flow
+<<<SUMMARY>>>
+V.F has delivered a mixed journey for shareholders, with shorter term gains set against a much longer term decline. This raises a clear question for you as an investor: Is the current price for V.F stock adequately supported by the cash flows the business is expected to generate over time? The share price has fallen 69.2% over 5 years, which puts the spotlight on whether the cash flow profile still lines up with what the market is paying today. Management has highlighted a decision to keep...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144013555
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T12:10:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ca0160d1faa24a09f445c5709fb8b9f3ae1e2b75db81b5a3f72ee3d35c64d674
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: Why Is V.F (VFC) Keeping Its Key Brand Instead Of Exploring A Divestiture?
+<<<SUMMARY>>>
+VF Corp (NYSE:VFC) leadership addressed market speculation on a Vans sale during a recent public discussion. The CFO and CEO stated that VF Corp intends to keep Vans within the group rather than pursue a divestiture. Management highlighted visible improvements in Vans' performance trajectory as part of the rationale for retaining the brand. The clarification around a potential Vans sale is only one piece of the wider VF Corp story. Take a look at 2 warning signs we have identified for...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144011517
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T11:07:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9d34bbd1bbaa37e288c40c16450850606d5ae5cb723b68467e9e5bd85e1685b1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: Is V.F (VFC) Cheap As Its AI Retail Pilot Tests The Valuation Story?
+<<<SUMMARY>>>
+V.F (VFC) has stepped into the spotlight after opening S.Fashion, an AI-driven retail test store with SAP in Walldorf, just ahead of its Paris appearance at the Global Luxury & Brands Conference. That Walldorf pilot and the upcoming Paris conference slot arrive after a sharp share price swing, with V.F posting a 90-day share price return of 34.31% and a 30-day gain of 12.54%, even though the 1-day move was down 3.16% and the 7-day return slipped 6.67%. The longer view shows total shareholder...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144011365
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T10:05:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=286f53e84f92e2e5fb1253099da52600bb093e3858f6c4478530a970673fb972
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: AI Retail Push Could Be A Game Changer For VF Stock (VFC)
+<<<SUMMARY>>>
+V.F. Corporation set a revenue goal of at least US$9.8 billion for next year with an operating margin near 9%, while also outlining a medium term aim of 10% and a continued focus on debt reduction. The S.Fashion test store with SAP in Walldorf uses AI, RFID, robotics and SAP applications as a live lab to streamline retail operations and link VF’s brands, including Vans and The North Face, to highly automated store processes. We will look at how V.F. Corporation's investment narrative...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143985185
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T11:04:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6f3305701edc04feb5ca243eddb1b1c4439c1a20c5471e31fe01de6d2c23a887
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: What Avantis U.S. Large Cap Value ETF (AVLV) Bought: Elevance Leads on Nov. 18
+<<<SUMMARY>>>
+The fund bought $173.7 million and sold $69.9 million in Qualcomm, lifting 164 positions while trimming just one.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143985326
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T10:12:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b0e520b1bf27c02751b4da430b772694dce5f49bbcad87c1738bde090d9bfa15
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: V.F. Targets $9.8 Billion in Revenue as Vans Turnaround Takes Shape
+<<<SUMMARY>>>
+V.F. (NYSE:VFC) expects revenue of at least $9.8 billion and an operating margin of about 9% next year, executives said at JPMorgan’s Global Luxury & Brands Conference in Paris, as the company pursues growth in its outdoor brands and a turnaround at Vans. CEO Bracken Darrell said the company al
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143946194
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T18:35:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f8ae0567697cf7c07672f244beb3740e95c1c4b1da62afca166f8f5085bd935a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: V.F.: 3 Key Takeaways for Long-Term Investors
+<<<SUMMARY>>>
+Operating leverage from cost discipline is outpacing revenue growth, a rare dynamic that could reshape long-term returns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943479
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:19:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1b52eda77f8aacb643c6c3b0543d2579f7ba1c32224a202d7e6ca4b4292e3c73
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: Hiking Gear & Equipment - Global Strategic Business Report 2026-2032: Secure Share of a $7.7B Market by 2032 as Amer Sports, Black Diamond, North Face and VF Corp. Accelerate Competition
+<<<SUMMARY>>>
+Dublin, Nov. 19, 2026 (GLOBE NEWSWIRE) -- "Hiking Gear & Equipment - Global Strategic Business Report 2026" has been added to ResearchAndMarkets.com's offering. The global hiking gear and equipment market was valued at US$5.2 billion in 2025 and is projected to reach US$7.7 billion by 2032, expanding at a compound annual growth rate of 5.6% during the forecast period. Market growth is supported by rising participation in hiking, trekking, outdoor recreation, adventure tourism and eco-tourism, al
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938843
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T08:24:18Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=43bf3bb4a539921389ce5e5043be0a95cd73fd20003c2b45304dff38dd64f3d9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/484083168/image_484083168.jpg?io=getty-c-og
+category: company
+tickers: VFC
+keywords: 
+headline: V.F. Corporation: Post Earnings Jump Is Not Sustainable
+<<<SUMMARY>>>
+V.F. Corporation (VFC) stock is a hold, as Vans is still struggling with declining sales globally, creating a meaningful drag on the overall growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143922918
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T22:14:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=841843e5913b629c49a9bd67ac782132ae98cd63bfb42dfdc719097120a34d2a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: VF Could Sell Vans, But it Probably Won’t
+<<<SUMMARY>>>
+VF Corp.'s looking at outdoor for growth for Timberland, North Face and Altra brands; Vans provides additional upside to the balance sheet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881405
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d031d093100d098d07d149693b02b8c87194ab49e98e96517a20407e84ec68a9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: One Reason Lululemon Stock Looks Better Than Its Price
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882651
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:43:15Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=4d58c43df4e781f32e1a61b29fe012e844829d0d886f9ac5215f72004751ef36
+image_url: https://static.seekingalpha.com/assets/og_image_1200-29b2bfe1a595477db6826bd2126c63ac2091efb7ec76347a8e7f81ba17e3de6c.png
+category: company
+tickers: VFC
+keywords: 
+headline: V.F. Corporation (VFC) Presents at Global Luxury & Brands Conference Transcript
+<<<SUMMARY>>>
+V.F. Corporation (VFC) Global Luxury & Brands Conference November 17, 2026 3:00 AM ESTCompany ParticipantsBracken Darrell - President, CEO &...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143875729
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:21:13Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=4ceafc1021e87d078a427b6525e6bea53970b15a8de4e8b37c8b3902e71b0b1b
+image_url: 
+category: company
+tickers: VFC
+keywords: 
+headline: V.F. Corporation Announces Initial FY'28 Guidance and Reaffirms FY'27 Outlook
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143866327
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T08:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8662ee4107fa6da9a38819a975e3eb0445c988ecb8c1562a62c6ce42d1225bc1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: VF Corporation Participates in a Fireside Chat at J.P. Morgan’s 8th Annual Global Luxury & Brands Conference
+<<<SUMMARY>>>
+DENVER, November 17, 2026--VF Corporation Participates in a Fireside Chat at J.P. Morgan’s 8th Annual Global Luxury & Brands Conference
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849945
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T16:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7130c9e03516d4d27ee7fbb1156a83faf17aa9fc6447ba8c4cbc8bcb95f6f44a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: V.F. (VFC) is a Great Momentum Stock: Should You Buy?
+<<<SUMMARY>>>
+Does V.F. (VFC) have what it takes to be a top stock pick for momentum investors? Let's find out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849478
+symbol: VFC
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T13:15:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb1e7e09103567004dd9fdb628e9436bc31036c9da70022a6445127ca59d795f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VFC
+keywords: 
+headline: Crocs, Inc. (CROX) Hits Fresh High: Is There Still Room to Run?
+<<<SUMMARY>>>
+Crocs (CROX) is at a 52-week high, but can investors hope for more gains in the future? We take a look at the company's fundamentals for clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0662a2cfdf5c7a00d1e7cd34bc088f2d4db3c904e897e0ae6941b80b0669b009
+symbol: VFC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-12T15:37:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3028861/best-health-fitness-stocks-to-buy-on-strong-market-potential?cid=CS-ZC-FT-health_&_fitness-3028861
+image_url: https://staticx-tuner.zacks.com/images/articles/main/cd/160615.webp
+category: 
+tickers: AAPL, AMZN, VFC, GRMN, AS
+keywords: health and fitness market, wellness spending, wearable devices, digital health, preventive care, fitness apparel, sports equipment, consumer wellness trends
+headline: Best Health & Fitness Stocks to Buy on Strong Market Potential
+<<<SUMMARY>>>
+The global health and wellness market is projected to reach $7.76 trillion by 2035 with a 4.94% CAGR, driven by increased consumer spending on fitness, preventive care, and digital health tools. Major technology companies like Apple and Amazon are expanding health-related offerings, while specialized companies in fitness apparel, wearables, and sports equipment are capitalizing on shifting consumer preferences toward personalized wellness solutions.
+<<<INSIGHTS>>>
+AAPL | positive | Apple is actively combining health tracking through Apple Watch with fitness programs via Fitness+, positioning itself at the intersection of consumer technology and health services with strong market integration.
+AMZN | positive | Amazon is expanding healthcare offerings through One Medical with virtual care and AI-supported services, demonstrating strategic investment in the growing health and wellness market.
+VFC | positive | VFC holds Zacks Rank #2 (Buy) with strong growth in fitness-related businesses through The North Face and Altra brands, showing 4% revenue growth and successful product expansion in running and outdoor segments.
+GRMN | positive | Garmin holds Zacks Rank #2 with robust fitness segment growth of 16% year-over-year and 33% operating margins, plus strong outdoor segment growth of 20%, demonstrating strong market demand for wearables and fitness devices.
+AS | positive | Amer Sports is successfully diversifying from equipment to footwear and apparel, with these categories expected to represent 75% of Outdoor Performance revenues in 2026 versus 54% in 2022, and Salomon showing 30% CAGR since 2022.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:30454aa1f4da4a130a73a87379806c96cba60ddbed9195d6a88537ee2c57ee14
+symbol: VFC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T12:55:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029320/despite-fast-paced-momentum-v-f-vfc-is-still-a-bargain-stock?cid=CS-ZC-FT-fundamental_analysis|fast_paced_momentum_at_a_bargain-3029320
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default205.jpg
+category: 
+tickers: VFC
+keywords: momentum investing, valuation, price momentum, Zacks Rank, stock screening, earnings estimates
+headline: Despite Fast-paced Momentum, V.F. (VFC) Is Still a Bargain Stock
+<<<SUMMARY>>>
+The article discusses momentum investing strategies and highlights V.F. Corporation (VFC) as an example of a stock combining fast price momentum with attractive valuation. VFC has shown 17.8% four-week price gains and 43.6% twelve-week returns while trading at a reasonable 0.84 Price-to-Sales ratio, earning a Zacks Rank #2 (Buy) rating.
+<<<INSIGHTS>>>
+VFC | positive | VFC demonstrates strong recent price momentum (17.8% in 4 weeks, 43.6% in 12 weeks), has a favorable Momentum Score of B, earned a Zacks Rank #2 (Buy) rating due to upward earnings estimate revisions, and trades at an attractive valuation (0.84 Price-to-Sales ratio), suggesting room for continued appreciation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b0f5dbbd01cff1c5b85820a0d2c39c60c7d04286c83c0929673a223616a5c09c
+symbol: VFC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-13T13:50:04Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3029518/here-s-why-v-f-vfc-is-a-strong-momentum-stock?cid=CS-ZC-FT-fundamental_analysis|zacks_education_momentum_score-3029518
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default111.jpg
+category: 
+tickers: VFC
+keywords: Zacks Rank, Style Scores, stock rating system, investment research, Value Score, Growth Score, Momentum Score, VGM Score, earnings estimate revisions
+headline: Here's Why V.F. (VFC) is a Strong Momentum Stock
+<<<SUMMARY>>>
+Zacks Premium offers investment research tools including Style Scores (Value, Growth, Momentum, and VGM) that complement the Zacks Rank system to help investors identify stocks with the best performance potential. The article highlights V.F. Corp. as a stock to watch with a #2 Buy rank and strong momentum metrics.
+<<<INSIGHTS>>>
+VFC | positive | V.F. Corp. received a #2 (Buy) Zacks Rank with an A VGM Score and B Momentum Score. The stock has risen 17.8% over the past four weeks, with eight analysts revising earnings estimates upward in the last 60 days. The company shows a strong average earnings surprise of +35.5%, positioning it as a recommended stock for investors.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7955c63c629fc272d9ddece65e98874c9b48fd90be2c4ea2c63ffc14df740348
+symbol: VFC
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-16T16:00:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3030535/v-f-vfc-is-a-great-momentum-stock-should-you-buy?cid=CS-ZC-FT-fundamental_analysis|yseop_template_10-3030535
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default181.jpg
+category: 
+tickers: VFC
+keywords: momentum investing, earnings estimate revisions, Zacks Rank, price momentum, apparel industry, stock performance
+headline: V.F. (VFC) is a Great Momentum Stock: Should You Buy?
+<<<SUMMARY>>>
+V.F. Corporation (VFC), maker of brands including Vans, North Face, and Timberland, has received a Zacks Rank #2 (Buy) rating with a Momentum Style Score of B. The stock has outperformed its industry significantly, rising 22.73% monthly and 43.91% quarterly, while earnings estimates have been revised upward over the past two months, with consensus estimates increasing from $1.08 to $1.18.
+<<<INSIGHTS>>>
+VFC | positive | VFC demonstrates strong momentum with a Zacks Rank #2 (Buy) and Momentum Style Score of B. The stock significantly outperforms its industry (22.73% monthly vs 1.06% industry average), shows strong quarterly (43.91%) and annual (38.14%) gains, and has received multiple upward earnings estimate revisions in the past two months, indicating positive analyst sentiment and improving financial outlook.
+<<<END>>>

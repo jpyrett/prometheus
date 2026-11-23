@@ -79,7 +79,7 @@ def fields(intent: it.TradeIntent) -> list[tuple]:
 # ---------------------------------------------------------------- the recordings are what they say they are
 
 def test_the_recordings_are_the_real_models_replies_to_the_spec_s_texts_and_the_msft_ones():
-    assert len(FORMS) == 29 and all(r["replies"] and all(isinstance(x, str) for x in r["replies"]) for r in FORMS.values())      # AMENDED (entry 140): 21 and the eight of entry 140 (see "the price floor" below)
+    assert len(FORMS) == 33 and all(r["replies"] and all(isinstance(x, str) for x in r["replies"]) for r in FORMS.values())      # AMENDED (entry 146): 21, the eight of entry 140 (see "the price floor" below) and the four of entry 146 (`test_one_company_shares.py`)
     assert {KO, MU_10, MU_1000, MU_LIMIT, MSFT_SKIP, MSFT_10, MSFT_UNDER_50, MSFT_UNDER_1000, MSFT_SPEND} <= set(FORMS)
     assert json.loads(real(KO))["orders"] == [order_of("KO", None, 2500)] and json.loads(real(MU_10))["orders"] == [order_of("MU", 10, None)]
 

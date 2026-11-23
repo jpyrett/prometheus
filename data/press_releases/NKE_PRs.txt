@@ -1,0 +1,126 @@
+<<<PRESS_RELEASE>>>
+id: 1d4e693f80dc2e39
+symbol: NKE
+published_utc: 2025-11-24T17:00:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-announces-second-quarter-fiscal-2026-earnings-and-conference-call-2025-11-24
+headline: NIKE, Inc. Announces Second Quarter Fiscal 2026 Earnings and Conference Call
+<<<TEXT>>>
+NIKE, Inc. plans to release its second quarter fiscal 2026 financial results on Thursday, December 18, 2025, at approximately 1:15 p.m. PT, following the close of regular stock market trading hours. Following the news release, NIKE, Inc. management will host a conference call beginning at 2:00 p.m. PT to review results. NIKE, Inc., headquartered in Beaverton,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 28aa6005750a8e0e
+symbol: NKE
+published_utc: 2025-12-02T16:15:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-announces-senior-leadership-changes-accelerate-win-now-actions-2025-12-02
+headline: NIKE, Inc. Announces Senior Leadership Changes to Accelerate "Win Now" Actions
+<<<TEXT>>>
+NIKE, Inc. today shared the following note with employees regarding changes to its Senior Leadership Team. Venkatesh Alagirisamy, currently Chief Supply Chain Officer and a nearly 20- year Nike veteran, will take on this role effective December 8. Muge Dogan will leave the company.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5452dd19be2ce370
+symbol: NKE
+published_utc: 2025-12-18T16:15:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-reports-fiscal-2026-second-quarter-results-2025-12-18
+headline: NIKE, Inc. Reports Fiscal 2026 Second Quarter Results
+<<<TEXT>>>
+NIKE, Inc. today reported fiscal 2026 financial results for its second quarter ended November 30, 2025. We are making progress in the areas we prioritized first and remain confident in the actions we're taking to drive the long-term growth and profitability of our brands, "said Elliott Hill, President& CEO, NIKE, Inc." Fiscal 26 continues to be a year of taking...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d5b6b2254e6bfa9d
+symbol: NKE
+published_utc: 2026-01-20T16:15:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-announces-new-geography-leadership-appointments-2026-01-20
+headline: NIKE, Inc. Announces New Geography Leadership Appointments
+<<<TEXT>>>
+NIKE, Inc. today shared the following note with teammates regarding changes to its Senior Leadership Team:. César Garcia, VP/GM Nike Europe, Middle East and Africa. As we continue to drive our Win Now actions and stand up our Sport Offense, I’ d like to share several important leadership changes across three of our Geo VP/ GM roles.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 840cdb63a58e05d6
+symbol: NKE
+published_utc: 2026-02-13T17:00:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-declares-041-quarterly-dividend-2026-02-13
+headline: NIKE, Inc. Declares $0.41 Quarterly Dividend
+<<<TEXT>>>
+NIKE, Inc. announced today that its Board of Directors has declared a quarterly cash dividend of $0.41 per share on the Company’ s outstanding Class A and Class B Common Stock payable on April 1, 2026, to shareholders of record at the close of business on March 2, 2026. NIKE, Inc., headquartered near Beaverton, Oregon, is the world's leading designer, marketer and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ae479f7f8b85137b
+symbol: NKE
+published_utc: 2026-02-26T17:00:00Z
+url: https://www.nasdaq.com/press-release/deleted-nike-inc-announces-third-quarter-fiscal-2026-earnings-and-conference-call
+headline: DELETED: NIKE, Inc. Announces Third Quarter Fiscal 2026 Earnings and Conference Call
+<<<TEXT>>>
+This story has been deleted by the news provider.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 66deb807eb2a6039
+symbol: NKE
+published_utc: 2026-02-26T17:00:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-announces-third-quarter-fiscal-2026-earnings-and-conference-call-2026-02-26
+headline: NIKE, Inc. Announces Third Quarter Fiscal 2026 Earnings and Conference Call
+<<<TEXT>>>
+NIKE, Inc. plans to release its third quarter fiscal 2026 financial results on Thursday, April 2, 2026, at approximately 1:15 p.m. PT, following the close of regular stock market trading hours. Following the news release, NIKE, Inc. management will host a conference call beginning at 2:00 p.m. PT to review results. NIKE, Inc., headquartered in Beaverton, Oregon, is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 46feb386dc486168
+symbol: NKE
+published_utc: 2026-03-31T16:15:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-reports-fiscal-2026-third-quarter-results-2026-03-31
+headline: NIKE, Inc. Reports Fiscal 2026 Third Quarter Results
+<<<TEXT>>>
+NIKE, Inc. today reported fiscal 2026 financial results for its third quarter ended February 28, 2026. Revenues for NIKE, Inc. were $11.3 billion, flat on a reported basis and down 3 percent on a currency-neutral basis. NIKE Brand revenues were $11.0 billion, up 1 percent on a reported basis and down 2 percent on a currency-neutral basis, primarily due to declines...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: de172af5615983fe
+symbol: NKE
+published_utc: 2026-05-04T17:00:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-declares-041-quarterly-dividend-2026-05-04
+headline: NIKE, Inc. Declares $0.41 Quarterly Dividend
+<<<TEXT>>>
+NIKE, Inc. announced today that its Board of Directors has declared a quarterly cash dividend of $0.41 per share on the Company’ s outstanding Class A and Class B Common Stock payable on July 1, 2026, to shareholders of record at the close of business on June 1, 2026. NIKE, Inc., headquartered near Beaverton, Oregon, is the world's leading designer, marketer and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 099a95a298d7971b
+symbol: NKE
+published_utc: 2026-05-28T17:00:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-announces-fourth-quarter-fiscal-2026-earnings-and-conference-call-2026-05-28
+headline: NIKE, Inc. Announces Fourth Quarter Fiscal 2026 Earnings and Conference Call
+<<<TEXT>>>
+NIKE, Inc. plans to release its fourth quarter fiscal 2026 financial results on Tuesday, June 30, 2026, at approximately 1:15 p.m. PT, following the close of regular stock market trading hours. Following the news release, NIKE, Inc. management will host a conference call beginning at 2:00 p.m. PT to review results. NIKE, Inc., headquartered in Beaverton, Oregon, is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 973cd319bae430e2
+symbol: NKE
+published_utc: 2026-06-18T16:15:00Z
+url: https://www.nasdaq.com/press-release/john-rogers-jr-founder-ariel-investments-retire-nike-inc-board-directors-rogers-serve
+headline: John Rogers, Jr., Founder of Ariel Investments, to Retire from the NIKE, Inc. Board of Directors, Rogers to Serve as Strategic Advisor to Nike Focused on the Future of Sport and Community
+<<<TEXT>>>
+NIKE, Inc. today announced that John Rogers, Jr., a director of the Company since 2018, has decided to retire and will not stand for re-election to the NIKE, Inc. Board of Directors at the September 2026 Annual Meeting of Shareholders. We are grateful for the support and guidance he provided during his tenure, and we are delighted he will remain as an advisor to the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 20f85cf14f01eb2c
+symbol: NKE
+published_utc: 2026-06-23T16:17:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-announces-planned-cfo-transition-2026-06-23
+headline: NIKE, Inc. Announces Planned CFO Transition
+<<<TEXT>>>
+NIKE, Inc. today announced that David M. Denton will join the company as Executive Vice President and Chief Financial Officer, effective August 17. David M. Denton|&# xD; Incoming Executive Vice President& Chief Financial Officer, NIKE, Inc.. "Dave is a proven public-company CFO who knows how to help great consumer brands operate with discipline and invest to win," said...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b179cbbfa9c88c80
+symbol: NKE
+published_utc: 2026-06-30T16:15:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-reports-fiscal-2026-fourth-quarter-and-full-year-results-2026-06-30
+headline: NIKE, Inc. Reports Fiscal 2026 Fourth Quarter and Full Year Results
+<<<TEXT>>>
+"In fiscal 2026, we took decisive actions to strengthen the foundation of NIKE, Inc. and reposition our business for long-term growth," said Elliott Hill, President and Chief Executive Officer, NIKE, Inc. "We made meaningful structural improvements to lay the groundwork for our Sport Offense across our team culture, innovative product, brand strength, and how we...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ae534fa48c34250e
+symbol: NKE
+published_utc: 2026-08-06T17:00:00Z
+url: https://www.nasdaq.com/press-release/nike-inc-declares-041-quarterly-dividend-2026-08-06
+headline: NIKE, Inc. Declares $0.41 Quarterly Dividend
+<<<TEXT>>>
+NIKE, Inc. announced today that its Board of Directors has declared a quarterly cash dividend of $0.41 per share on the Company’ s outstanding Class A and Class B Common Stock payable on October 1, 2026, to shareholders of record at the close of business on September 1, 2026. NIKE, Inc., headquartered near Beaverton, Oregon, is the world's leading designer, marketer...
+<<<END>>>
