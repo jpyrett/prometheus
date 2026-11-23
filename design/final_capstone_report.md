@@ -6,7 +6,7 @@ Final Capstone Report | Agentic AI Program: Building Autonomous Systems for Real
 
 **Public GitHub Repository:** https://github.com/jpyrett/prometheus
 
-**Video Presentation (walkthrough of the app):** https://www.youtube.com/watch?v=O7FFbg52UYg
+**Video Presentation (walkthrough of the app):** https://youtu.be/6otAFtNlbO4
 
 # 1. Problem and Intended User
 The problem: Develop a virtual financial stock trading desk providing high-level analyst and trading (broker). Automated stock trading (a "trading bot") has been requested by real users of the developer's personal stock application: friends, family and work colleagues. Literally: "If I gave you $1,000, can your app trade for me?" The developer had stayed away from it because of the fear and the risk.
@@ -215,7 +215,7 @@ A trading desk handles real money on behalf of a person, so the design principle
 Here is the main GitHub link: 
 https://github.com/jpyrett/prometheus
 
-Video presentation (a walkthrough of the app): https://www.youtube.com/watch?v=O7FFbg52UYg
+Video presentation (a walkthrough of the app): https://youtu.be/6otAFtNlbO4
 
 - `README.md`: the project, the architecture and the layout.
 - `HowToRun.txt`: setup and every command (`./run_ui.sh --replay` replays a real session for free).
