@@ -17,6 +17,8 @@ questions the week 3 design asks of retrieval (design choices entry 20):
   stories (maximal marginal relevance), for a broad question over news that repeats itself.
 * Nothing from the future of the desk's day. While a past trading day is bound (`trading_clock.as_of`, the Proving Ground, design choices entry 127) every search is closed at the end of that day by the
   search itself: `until` defaults to `trading_clock.horizon()`, a later `until` is cut to it, and `since_days` counts back from it. No caller has to remember to pass a date.
+* A dated window, exactly (entry 151). `since` and `until` are explicit aware moments, so a request for the news of ONE DAY ("what was the news on TSLA on November 20?") is held to that Eastern day to the instant: `since` is the day's first
+  instant and `until` its last, whatever the daylight saving of that day. `since_days` counts back from `now` and, beside `since`, the later bound counts: it can narrow the window and never widen it.
 * Newest first, on request. A search ranks by meaning, not by date, so a question about "the latest news" can be
   answered with older articles that match the words better (found in the SNDK run: all five hits were from Oct 19
   while newer articles were stored). With newest_first=True the articles that pass the relevance bar are ordered
@@ -121,7 +123,7 @@ def _hit(doc: Document, score: float) -> Hit:
 def search_news(query: str, *, tickers: str | list[str] | None = None, since_days: int | None = None,
                 k: int = K, min_score: float | None = MIN_SCORE, diverse: bool = False,
                 lambda_mult: float = MMR_LAMBDA, newest_first: bool = False, store: Chroma | None = None,
-                now: datetime | None = None, until: datetime | None = None) -> list[Hit]:
+                now: datetime | None = None, until: datetime | None = None, since: datetime | None = None) -> list[Hit]:
     """Search the news index by meaning. Returns at most k hits, one per article, best first (or, with
     diverse=True, in the order maximal marginal relevance picks them). An empty list means "no supporting text".
 
@@ -135,6 +137,8 @@ def search_news(query: str, *, tickers: str | list[str] | None = None, since_day
     newest_first: of the articles that pass the relevance bar (among the closest k * FETCH_FACTOR chunks), return the
                 newest k, newest first, instead of the k that match best. For "latest", "newest", "most recent". The bar
                 still applies, so a new article that is not about the question is not returned. It wins over diverse.
+    since:      only articles published at or after this moment (an aware datetime): an explicit lower bound, for a DATED window (entry 151: the first instant of an Eastern day, so a day's edge is exact whatever the daylight saving
+                of that day). With `since_days` as well, the LATER of the two bounds counts, so `since_days` can only narrow the window, never widen it. Left out: no explicit lower bound, as before.
     until:      only articles published at or before this moment (an aware datetime). While a day is bound (`trading_clock.as_of`) it is `trading_clock.horizon()` when left out and never later than it,
                 and `now` is never later than it either, so `since_days` counts back from the bound day. Unbound and left out: no upper bound, as before.
     store, now: for tests; the real index and the real clock when left out."""
@@ -151,9 +155,9 @@ def search_news(query: str, *, tickers: str | list[str] | None = None, since_day
     if not isinstance(newest_first, bool):
         raise ValueError("newest_first must be true or false")
     symbols = _symbols(tickers)
-    for name, moment in (("until", until), ("now", now)):
+    for name, moment in (("until", until), ("now", now), ("since", since)):
         if moment is not None and (not isinstance(moment, datetime) or moment.tzinfo is None or moment.utcoffset() is None):
-            if name == "until" or trading_clock.bound_day() is not None:
+            if name != "now" or trading_clock.bound_day() is not None:
                 raise ValueError(f"{name} must be a datetime with a timezone")
     horizon = trading_clock.horizon()
     if horizon is not None:   # a past trading day is bound: nothing after its end, and the window counts back from it
@@ -164,6 +168,8 @@ def search_news(query: str, *, tickers: str | list[str] | None = None, since_day
     since_ts = None
     if since_days is not None:
         since_ts = int(((now or datetime.now(timezone.utc)) - timedelta(days=since_days)).timestamp())
+    if since is not None:      # an explicit first moment (entry 151): the later of it and the rolling bound counts
+        since_ts = int(since.timestamp()) if since_ts is None else max(since_ts, int(since.timestamp()))
     store = store or get_vector_store()
     # The store returns cosine DISTANCES (0 is identical) and the collection is cosine (entry 10), so 1 - distance
     # is the cosine similarity. LangChain's similarity_search_with_relevance_scores adds up the same way, but it

@@ -30,6 +30,7 @@ A REQUEST THAT ONLY ASKS FOR THE NEWS ("Show the news for Tesla", "What's TSLA d
 recommended, decided or traded, and the session prints the stocks, the window, the summary and the numbered list of the articles (headline, publisher, date, link), and nothing about decisions, trades or money. The Data Clerk ALWAYS fetches the latest news of each stock first
 (the news only); `--refuse-news-fetch` is the TEST-ONLY switch that takes that right away for the run (a fetch writes `news/SYMBOL.txt`; the news is then searched as it is stored and the report says so). `--save` writes the work order WITH its `data` (the news is the result). A
 news run is not saved for the Track Record: it has no recommendation to score.
+A news request may name a PAST DAY or span (entry 151, `design/news_dated_window_spec.md`: "What was the news on TSLA on November 20?"): the headline, the "understood" line and the list say "on 2026-11-20" or "from 2026-11-20 to 2026-11-22" in place of "for the last 7 days".
 
 A REQUEST THAT ONLY ASKS FOR THE CURRENT PRICE ("What's the current price of TSLA?", "Price of Tesla", "Quote for TSLA and NVDA"; design choices entry 150, `design/quote_request_spec.md`) is answered the same way, by the Data Clerk alone (Account Manager -> Data Clerk): nothing is asked,
 recommended, decided or traded, and the session prints one line for each stock (symbol, company, price, the change and its percent, the time or the simulated clock's market close) and the problems, and nothing about decisions, trades or money. The quote is the live one
@@ -390,7 +391,7 @@ def news_lines(view: dict, intent=None) -> list[str]:
             if item.get("url"):
                 lines.append(f"      {item['url']}")
     elif view["status"] == "data_ready":
-        lines += ["", "ARTICLES  none: the stored news has nothing about this in the window"]
+        lines += ["", "ARTICLES  none: the stored news has nothing about this " + (views.news_window_text(view) if view.get("window") else "in the window")]      # a past day is named (entry 151): "... nothing about this on 2026-11-03"
     lines += [f"  problem: {p}" for p in view["problems"]] + [f"  note: {n}" for n in view["notes"]]
     return lines
 

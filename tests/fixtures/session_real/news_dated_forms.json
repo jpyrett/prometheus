@@ -1,0 +1,130 @@
+{
+ "_note": "REAL replies of the Account Manager's model (openai/gpt-oss-120b on OpenRouter, the account_manager role) to news requests that name a past day or span, and to a rolling control, recorded on 2026-11-28 by AccountManager.understand_request with the Account Manager's own prompt (prompts/account_manager_request.py after design choices entry 151: the form has `news_from` and `news_to`) and TODAY FIXED at 2026-11-28 (the user message begins \"Today is Saturday 2026-11-28.\"). 'replies' is what the model answered, in order (a second reply is the answer to code's refusal of the first); 'outcome' what parse_intent made of it. Nothing here is edited. The tests give these replies back to the real Account Manager, with the same fixed today, and its code checks every field against the user's own words.",
+ "model": "openai/gpt-oss-120b",
+ "today": "2026-11-28",
+ "tokens_in": 21665,
+ "tokens_out": 1136,
+ "requests": {
+  "news on TSLA on November 20": {
+   "replies": [
+    "{\"action\": \"news\", \"topic\": null, \"symbols\": [\"TSLA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null, \"news_from\": \"2026-11-20\", \"news_to\": \"2026-11-20\"}"
+   ],
+   "outcome": {
+    "action": "news",
+    "describe": "show the news of TSLA on Friday 2026-11-20 (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "TSLA"
+    ],
+    "companies": [],
+    "news_days": null,
+    "news_from": "2026-11-20",
+    "news_to": "2026-11-20",
+    "corrected": []
+   },
+   "tokens_in": 3059,
+   "tokens_out": 134
+  },
+  "What was the news on TSLA on 2026-11-20?": {
+   "replies": [
+    "{\"action\":\"news\",\"topic\":null,\"symbols\":[\"TSLA\"],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"each\":false,\"max_price\":null,\"min_price\":null,\"raise_funds\":false,\"orders\":[],\"news_days\":null,\"news_from\":\"2026-11-20\",\"news_to\":\"2026-11-20\"}"
+   ],
+   "outcome": {
+    "action": "news",
+    "describe": "show the news of TSLA on Friday 2026-11-20 (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "TSLA"
+    ],
+    "companies": [],
+    "news_days": null,
+    "news_from": "2026-11-20",
+    "news_to": "2026-11-20",
+    "corrected": []
+   },
+   "tokens_in": 3066,
+   "tokens_out": 119
+  },
+  "NVDA news from Nov 3 to Nov 5": {
+   "replies": [
+    "{\"action\": \"news\", \"topic\": null, \"symbols\": [\"NVDA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null, \"news_from\": \"2026-11-03\", \"news_to\": \"2026-11-05\"}"
+   ],
+   "outcome": {
+    "action": "news",
+    "describe": "show the news of NVDA from 2026-11-03 to 2026-11-05 (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "NVDA"
+    ],
+    "companies": [],
+    "news_days": null,
+    "news_from": "2026-11-03",
+    "news_to": "2026-11-05",
+    "corrected": []
+   },
+   "tokens_in": 3062,
+   "tokens_out": 199
+  },
+  "TSLA news the day before Thanksgiving": {
+   "replies": [
+    "{\"action\": \"news\", \"topic\": null, \"symbols\": [\"TSLA\"], \"companies\": [], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null, \"news_from\": \"2026-11-25\", \"news_to\": \"2026-11-25\"}"
+   ],
+   "outcome": {
+    "action": "news",
+    "describe": "show the news of TSLA on Wednesday 2026-11-25 (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "TSLA"
+    ],
+    "companies": [],
+    "news_days": null,
+    "news_from": "2026-11-25",
+    "news_to": "2026-11-25",
+    "corrected": []
+   },
+   "tokens_in": 3058,
+   "tokens_out": 182
+  },
+  "TSLA news last week": {
+   "replies": [
+    "{\"action\":\"news\",\"topic\":null,\"symbols\":[\"TSLA\"],\"companies\":[],\"count\":null,\"allocation\":\"default\",\"budget\":null,\"each\":false,\"max_price\":null,\"min_price\":null,\"raise_funds\":false,\"orders\":[],\"news_days\":7,\"news_from\":null,\"news_to\":null}"
+   ],
+   "outcome": {
+    "action": "news",
+    "describe": "show the news of TSLA for the last 7 days (nothing will be bought)",
+    "topic": null,
+    "symbols": [
+     "TSLA"
+    ],
+    "companies": [],
+    "news_days": 7,
+    "news_from": null,
+    "news_to": null,
+    "corrected": []
+   },
+   "tokens_in": 3056,
+   "tokens_out": 96
+  },
+  "what happened with Apple last Tuesday?": {
+   "replies": [
+    "{\"action\": \"news\", \"topic\": null, \"symbols\": [], \"companies\": [\"Apple\"], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null, \"news_from\": \"2026-11-22\", \"news_to\": \"2026-11-22\"}",
+    "{\"action\": \"news\", \"topic\": null, \"symbols\": [], \"companies\": [\"Apple\"], \"count\": null, \"allocation\": \"default\", \"budget\": null, \"each\": false, \"max_price\": null, \"min_price\": null, \"raise_funds\": false, \"orders\": [], \"news_days\": null, \"news_from\": \"2026-11-24\", \"news_to\": \"2026-11-24\"}"
+   ],
+   "outcome": {
+    "action": "news",
+    "describe": "show the news of Apple on Tuesday 2026-11-24 (nothing will be bought)",
+    "topic": null,
+    "symbols": [],
+    "companies": [
+     "Apple"
+    ],
+    "news_days": null,
+    "news_from": "2026-11-24",
+    "news_to": "2026-11-24",
+    "corrected": []
+   },
+   "tokens_in": 6364,
+   "tokens_out": 406
+  }
+ }
+}

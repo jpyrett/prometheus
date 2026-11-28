@@ -49279,3 +49279,3027 @@ WMT | neutral | Referenced as a potential competitive threat through its store-b
 BRK.A | positive | Mentioned as a major Coca-Cola shareholder with $38.4 billion invested, reflecting Warren Buffett's confidence in the company's economic moat and long-term value creation through dividend income.
 BRK.B | positive | Mentioned as a major Coca-Cola shareholder with $38.4 billion invested, reflecting Warren Buffett's confidence in the company's economic moat and long-term value creation through dividend income.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143993223
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T22:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=892fb1ad617770d3e0b2d383801971b31594f97039b1126abd363aefe630fa77
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Is Coca-Cola a Millionaire-Maker Stock?
+<<<SUMMARY>>>
+Sometimes boring stocks have the brightest futures.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015553
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T16:40:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8a2a1ddebbfef350e4eae9fa1756c1b2c6fe4ffb1adba21382fb184f6f8cf439
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: 3 Dividend ETFs Offering Steadier Footing in a Shaky Market
+<<<SUMMARY>>>
+SCHD, LVHI, and VYM have held up better than the S&P 500 amid the recent tech sell-off, offering lower-volatility dividend ETF options for investors seeking stability without exiting stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144011315
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:58:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fbf6846e433464b6b7f548f0b37ee71a397bbc72d2d118f9d4a3d84e5bec9e9e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: TC Energy or Coca-Cola: The One Dividend Stock I’d Hold for the Next 10 Years
+<<<SUMMARY>>>
+Key TakeawaysTC Energy yields 3. 9% and Coca-Cola 2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144185204
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T21:52:19Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7f5a7e214d69d543468aa4db0db96e64820b5ebff89b1a65861a47c9e5b89edc
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-og
+category: company
+tickers: KO
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week November 29
+<<<SUMMARY>>>
+Dividend Champions, Contenders and Challengers: this week's roundup lists companies that changed payouts and upcoming ex-dividend dates and pay dates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144176952
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T16:34:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb15634153f3d30ea5235e1ce3700472303fa1716abf8525ebc3ea38d3dda45c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Own SCHD? These 6 Dividend Aristocrats Are Protecting Your Income for 2027
+<<<SUMMARY>>>
+SCHD's dividend screens catch most trouble before it starts, yet one snack giant in the fund is stretching its payout thinner than the rest. Meanwhile, a famous 50-year streak holder sits outside the portfolio entirely.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144176954
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T16:10:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dd96d1e10997a4ddd673013f22fa4aef9563669e152443b846a786a6fa3f7fa2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola (KO) Hands 75% Of Its African Bottler To A Bigger Franchise Partner
+<<<SUMMARY>>>
+Coca-Cola (NYSE:KO) announced that Coca-Cola HBC will acquire a 75% stake in Coca-Cola Beverages Africa, creating a larger bottling group. The deal makes Coca-Cola HBC the second-largest Coca-Cola bottler globally by volume and geographic reach across Europe and Africa. Coca-Cola Beverages Africa operations will be consolidated under Coca-Cola HBC control, shifting how Coca-Cola serves several key African markets. The Coca-Cola HBC purchase of 75% of Coca-Cola Beverages Africa is only one...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175830
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:47:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=133cabdd5fa1f5d6ea1954138600194577d6084fbce4ee3714bc97096a1f15af
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: The Dividend Portfolio It Takes to Pay $85,000 a Year
+<<<SUMMARY>>>
+Chasing a bigger yield shrinks the nest egg you need, but it also hands your paycheck to the companies with the least room to keep paying. Which trade-off can a retiring couple live with?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175883
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:27:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2843cc69439779cab2243de0db6fbe97dae6ec250ac00ae64f26bc8c1b84d27b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola Completes Major $2.6 Billion Africa Deal
+<<<SUMMARY>>>
+The beverage giant is quietly reshaping its global business.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175864
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:23:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=54cc95c14fbdd6d19b6a652cd28edc60ce2214802ac4b3ef20f16d3ece39c7c5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: S&P 500 Investors Make Surprising Shift as Tech Stocks Sink
+<<<SUMMARY>>>
+A familiar investment strategy is suddenly gaining fresh appeal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175889
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:16:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a9942c6bff402a6664f794f75f4c519794b66974cd112cf2b3f586bab118a18e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Has PepsiCo Become A Different Stock To Own?
+<<<SUMMARY>>>
+Today's big story: Anthropic Broke Its $83 IPO Price. What Did Facebook Do Next.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175885
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:04:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bd3dfc109e13575b065ae5102fd47941561c72ada6506bbe674b4c4779ef18ca
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: If This Dividend King Doubles, Here’s What $10,000 Could Become
+<<<SUMMARY>>>
+Coca-Cola already doubled once in five years, yet the next double faces a steep valuation and a price target that even the bullish model never reaches. Can a 63-year dividend streak close the gap?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175856
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:03:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6084e6adc33adf99b31d2150fae5929a0435ca36fd39f17e810a4547d4d1c742
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: McDonald’s Joined the Dividend Kings in September, but These 4 Have Been Kings for Decades
+<<<SUMMARY>>>
+A 50-year dividend streak proves a company has paid, not that it can keep paying. Five consumer giants now wear the Kings crown, yet each one faces a different threat to its next raise, and one carries a risk the market has already priced in.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175853
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:03:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f0247d5ae6d10def906e28f4a771ab1984d56ff2b5923aa0773afecb9afd2f30
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Forget Yield Chasing. These 5 Dividend Stocks Have Raised Payouts Through Every Recession Since the 1970s
+<<<SUMMARY>>>
+High yields tend to vanish when recessions hit, but a handful of blue chips kept raising payouts through six downturns. Each faces a real threat to its next raise, and one of them barely covers its dividend with free cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144208874
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T13:22:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=514a4fad02dfa808bfdae339b1f84374e4bfddb864882e96ac7efd9cbe233676
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/27/New-York-NY-USA-November-24--2023-Hordes.jpg?width=2048&height=1536
+category: company
+tickers: KO
+keywords: 
+headline: Black Friday Spending Is Booming, But These Retail ETFs Could Tell a Different Story
+<<<SUMMARY>>>
+Record holiday sales mask cautious, essentials-focused shoppers, challenging retail ETFs and favoring defensive consumer stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175260
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T10:35:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=d148a149f057aa18a992b1a2f9f7c00cd21582159e7937ca0c723f3f7322d675
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/27/Warren-Buffett.jpg?width=2048&height=1536
+category: company
+tickers: KO
+keywords: 
+headline: Warren Buffett Loves These Dividend Stocks. Investors in These ETF Own Them Too
+<<<SUMMARY>>>
+Warren Buffett&#39;s dividend strategy puts ETFs offering exposure to Berkshire Hathaway&#39;s favourite dividend-paying stocks in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144173515
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T10:26:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f755ec3c5ed35af5610fc01057c9bb1a94c4acc8440da7fc603c101a781682a3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Warren Buffett's Successor, Greg Abel, Has 47% of Berkshire Hathaway's $346 Billion Portfolio Invested in 3 Proven Winners
+<<<SUMMARY>>>
+Nearly $163 billion of Berkshire’s invested assets are concentrated in the Oracle of Omaha’s and Abel’s best ideas.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174748
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T09:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1477a1141141434681f03409dc8c281f2fa12b6af8e14d602be4a52ab29721c7
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1393736657/image_1393736657.jpg?io=getty-c-og
+category: company
+tickers: KO
+keywords: 
+headline: What To Expect From November 2026's Job Report
+<<<SUMMARY>>>
+Markets put December Fed hike odds at 98.1% after core PCE rose to 3.3%; a severe November jobs decline could avert the 25-basis-point move.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175886
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T08:17:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f913634d5fb4ea8e24f19f6394194569b98686c6562eee48fc31e3d0ea206e1f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Is Coca-Cola Stock Outperforming the Dow?
+<<<SUMMARY>>>
+Coca-Cola has outpaced the Dow on resilient demand, with analysts remaining optimistic about its business outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144172482
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T07:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=54b7816489f5b8baf6306a7dcf5a412263fca1fd75a0a87216bcd90c171fa936
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: The Coca-Cola Company and Gutsche Family Investments Close on Sale of Controlling Interest in Coca-Cola Beverages Africa to Coca-Cola HBC AG
+<<<SUMMARY>>>
+ATLANTA & ZUG, Switzerland, November 27, 2026--The Coca-Cola Company and Gutsche Family Investments (GFI) have completed the sale of a 75% controlling interest in Coca-Cola Beverages Africa Pty. Ltd. (CCBA) to Coca-Cola HBC AG.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144158516
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T21:33:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3a1d0862f827c6c657a91ba818520876b8edb92a070d7acab98e15bfc9f2cf26
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: The Nasdaq Composite Is in a Correction, but These 3 Dividend Stocks Are Near 52-Week Highs. Here's Why They're Still Worth Buying Right Now.
+<<<SUMMARY>>>
+Johnson & Johnson, Visa, and Coca-Cola have held up during the market's recent turbulence.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144156856
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T15:30:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=af6c60814c399ae42b90d8c380bb5d1733ee6295d2bc67c59296bff6dcfb9a9b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola (KO) Up 6.4% Since Last Earnings Report: Can It Continue?
+<<<SUMMARY>>>
+Coca-Cola (KO) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144155846
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T14:51:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2ad275d6e397811660a6db96c3124264b9134a01fc91e5b9d7c8598fe8b60c1b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Investing $500 a Month in Coca-Cola, Realty Income, and Altria Could Generate Over $1,000 in Monthly Dividend Income by 2046
+<<<SUMMARY>>>
+As the old adage goes, slow and steady wins the race. And as another adage reminds us, quality pays for itself.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144155937
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T13:50:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f25a7b9564c07a6646a748cb525d5822c0079ed8e2673c7b459dd92081ceaf9f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola vs. Keurig Dr Pepper: Which Beverage Stock Looks Stronger?
+<<<SUMMARY>>>
+KO and KDP battle for beverage supremacy, with stronger stock returns, market share gains and valuation shaping the investment comparison.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154403
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T13:32:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=15103eca25a63942c0e5ce168433d166cb05e729047c1a0ffbca73cd7703e25c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: 3 Dividend Kings Retirees Can Own for the Rest of Their Lives
+<<<SUMMARY>>>
+Nearly two centuries of combined dividend raises sit behind three household names, yet each one carries a catch that could trim your future payouts. Which risk matters most, and which stock asks you to pay a record price for safety?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154404
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T13:07:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ed926cf1b9d448666aac11a95669e47fc7f9ab4f82f4ee536d8c59c9e09483c1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Investors 50 and Older Can Put $8,600 Into a Roth IRA in 2026 to Build Tax-Free Dividend Income
+<<<SUMMARY>>>
+Four household-name dividend stocks can quietly hand the IRS a four-figure bill every year, and one of them does most of the damage. Investors over 50 hold a special tool to fight back, but income limits can shut some couples out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154247
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T12:59:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=41abcd86c8c947af9e82f4a280db4a3f5e92897ba7c855e3d720fc71ba6d1dd4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola Is the Most Boring Stock I Own. After 64 Years of Dividend Raises, I'll Never Sell.
+<<<SUMMARY>>>
+It's a blue chip dividend stock that you don't have to second-guess.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144153355
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T11:05:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e9f6587fb2b4d9835d4569d099f7127b01e9de80378141c55ab03e3719db12a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: What State Street Consumer Staples SPDR (XLP) Bought: Walmart Leads on Nov. 24
+<<<SUMMARY>>>
+The fund added $256.6 million in new buying across all 33 positions, led by a $30.1 million purchase of Walmart.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144135127
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T01:14:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44f75d0c55ef5451b9e6583be79b5f0e6bb615c50a1f0b5ceacbe90e3952efc1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: 3 US Consumer Staples Stocks Built For Sticky Inflation
+<<<SUMMARY>>>
+Inflation is proving sticky, with October PCE running at 3.8% year-on-year and markets bracing for higher rates for longer, so simply hiding in cash may not feel comfortable. Persistent price pressure can reward businesses that keep shoppers coming back while managing their own costs, and punish those that cannot. This article walks through three US consumer staples stocks exposed to this backdrop and explains why each might deserve a closer look now. The stocks covered next are only a sample...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144128878
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T23:48:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2f506230a20bd6a894ea1e43fb515a86316c5d9fe5bd96e5d1e5ea0ce1a13a7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Here’s How Many Coca-Cola Shares It Takes to Earn $1,300 Every Quarter in Dividends
+<<<SUMMARY>>>
+You would need to own more than 2,450 shares of Coca-Cola to generate $1,300 in dividend income.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144128114
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T21:07:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6a9ea0044b28b08513ecff7c5acce8d38ca1a83d66f9aad1a3ddb668603e80a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola Has Raised Its Dividend 64 Straight Years. Here's What $10,000 Will Pay You in 2027.
+<<<SUMMARY>>>
+This Dividend King pays investors reliably, but its stock price has run ahead of the business.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144128095
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T20:17:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2c536c7c8d52da694271ad7debf712c1df4a11d7337fb1ad387217420f6a2f71
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: How Much You’d Need in Dividend Stocks to Generate $5,000 a Month in Passive Income
+<<<SUMMARY>>>
+The price tag on a $60,000 dividend paycheck swings by nearly $2 million depending on the yield you chase. Higher payouts shrink the bill, but one tier hides a trap that can gut your income when a cut arrives.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144126984
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T19:47:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=459d8b6611f39b35952b40c2e7aec2b117518961ebe0f99d1fc8488e87d007c0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Leaving a Roth IRA to Your Kids? Why Dividend Stocks Make the 10-Year Rule Work for Them
+<<<SUMMARY>>>
+One stock in a six-pack of blue-chip dividend payers drives nearly two-fifths of the tax bill on an inherited portfolio, and it belongs somewhere else entirely. Your kids could pay for that mistake for decades.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144127001
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T19:17:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=af416f1bdfa65842ebeced877b250db123adceb12a27472dfa939aafb23c7d91
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Corporate Bonds vs. Dividend Stocks: Which Pays a Retiree More Reliably?
+<<<SUMMARY>>>
+Corporate bond yields just hit a 12-month high, yet that fat payout hides trade-offs in price risk, reinvestment, and taxes. For retirees weighing bonds against Procter & Gamble and Coca-Cola, the tax bill may decide the winner.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144125806
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T16:30:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=71a6257e074429cadbdbd804adabc09409657fa0c50fc73c50a4235added8559
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola Consolidated (COKE) Stock Is Up 5.9% Today Without Company News
+<<<SUMMARY>>>
+Coca-Cola Consolidated shares rose 5.9% on Wednesday, Nov. 25, without company-specific news, as the S&P 500 fell 2.9% in a tech-led selloff.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144125802
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T16:12:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5f1584454e69528f38c23e32f535faa8d2f52e717ec864ca650d55cfbe236cb7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: How Warren Buffett Makes Billions from Dividends: Top 5 Stocks
+<<<SUMMARY>>>
+Warren Buffett and dividends are an old love story that continues to this day, as Berkshire’s latest 13F filing shows. The filing also reveals portfolio changes as CEO Greg Abel reshapes Berkshire’s stock holdings after succeeding Buffett in January as the Omaha, Nebraska-based conglomerate’s leader. Berkshire bought $2.37 billion worth of stocks in the third […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124477
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T14:19:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=72a412a5a06b578d15c366cc7041522bdb73e483c6d7439969def3a9f9273e2e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Warren Buffett and Greg Abel Collect Billions From These Untouchable Berkshire Hathaway Dividend Stocks
+<<<SUMMARY>>>
+Five Berkshire holdings never budged in the latest 13F, yet their yields range from a sliver to a hefty payout. Which ones actually deliver income for retirees, and which carry risks that could trim the checks?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124616
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:51:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=91d2955f10eaf531c633e7d97ba1ba01f1beadcaceea7af937282d18857f8a60
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Prediction: Coca-Cola Stock Will Close 2026 Over $100 per Share. Here’s Why It’s a No-Brainer Buy for 2027.
+<<<SUMMARY>>>
+The beverage giant is ready to pop, in more ways than one.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124618
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:35:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=89157d96e76eacbb506f1775bf6bc9e28e4bc44be3f621fae42777178ec234f2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola (KO) Just Reclaimed the 20-Day Moving Average
+<<<SUMMARY>>>
+Good things could be on the horizon when a stock surpasses the 20-day simple moving average. How should investors react?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122493
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:03:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f5e8753f2e5e2d16da84f7ac14faf725ee18c2492d0fc06695146f1fade16cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: These 5 Dividend Stocks Are Brands You Use Every Day
+<<<SUMMARY>>>
+Burgers, wireless plans, soda and snacks already drain your wallet every week. Five of those brands pay you back through dividends, but each one hides a risk that could shrink your next raise.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144127002
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T12:30:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d46408b301693ddbc720c0e4d055d89d432f0e88a3bb9255ccd20341a9cbdf23
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: 3 Top Dividend Stocks to Buy and Hold for Decades
+<<<SUMMARY>>>
+Looking beyond high yields, PG, KO, and MCD offer the potential for decades of dividend income and long-term returns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154155
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e9d5efeef41bb3058fe79cbc5266db9469ca3b5f6afcf5ff4a4a47749470e48c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/25/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: KO
+keywords: 
+headline: Defensives Lead Sectors In Wednesday Trading As Growth Trails
+<<<SUMMARY>>>
+Four sectors are higher and seven are lower in Wednesday&#39;s regular session, with defensive sectors holding the top three positions. Technology sits well clear of the rest, separated by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144121548
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T11:05:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c99b67bcf8c19acce2c564dffe7164253b71ccdf4b6ecf80833c35cf828f7e83
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: State Street Consumer Staples SPDR (XLP) Adds Walmart and Costco on Nov. 23
+<<<SUMMARY>>>
+The fund bought $266.6 million of stock and sold nothing, lifting all 33 of its positions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144115061
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T09:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9cc08fe01657315a9d8bb02a3f37094b47e8a4b96dc8dd620d7a1fe156d96ca8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Up 41% at Just Over Half Costco’s P/E: Inside Coca-Cola’s Quiet Rally
+<<<SUMMARY>>>
+Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122974
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T09:02:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=94875ef1889ac6238f9b22495500c5bbf5842927527bfe923031c7559ab1f0d0
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2235939814/image_2235939814.jpg?io=getty-c-og
+category: company
+tickers: KO
+keywords: 
+headline: Best Dividend Aristocrats For December 2026
+<<<SUMMARY>>>
+The bull case for Dividend Aristocrats: 27 potentially undervalued picks may return at least 10% annually, led by FactSet at an estimated 22.4%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144109238
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T03:07:38Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=548bd0df6638c513dcdf070bc281b01101c7f3975ebe413560685e80e6f4390c
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/904040614/image_904040614.jpg?io=getty-c-w630
+category: company
+tickers: KO
+keywords: 
+headline: Nvidia Upheaval, 21% Yielding Portfolio Changes, And My New Watchlist
+<<<SUMMARY>>>
+My revised portfolio yields over 21% on cost; equal-weighted technology exposure is estimated at 18.4%, with a substantial Canadian financials overweight.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144099118
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T02:47:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=147c1d42e0bc259677eb4bfbecc1506da6224aaa74556874026dec11041da8cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Warren Buffett Finished Buying Coca-Cola in August 1994 and Never Bought Another Share. Under Greg Abel, Berkshire Now Collects $2.3 Million a Day From It
+<<<SUMMARY>>>
+Berkshire Hathaway's 400 million Coca-Cola shares, bought for $1,299 million between 1988 and 1994 and never added to since, now pay $848 million a year, about $2.3 million a day. Computed from Coca-Cola's split-adjusted dividend history, the checks since 1994 add up to about $13 billion, ten times the cost, and the next $212 million payment is due December 15.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144096763
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T22:33:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=af698f247cc74de3590fc2b57ed41bb57bc1389b5f1d674f2d64cd3690747318
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Prediction: Here's What $10,000 in Coca-Cola Could Pay You in Dividends by 2036
+<<<SUMMARY>>>
+Coca-Cola's dividend could grow nearly 50% by 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144090195
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T21:45:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=759bc355e994966eb62eb48ab98f3b7176c8854ca7156174c4dd065d2ae8930b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Anthropic falls below IPO price as Nvidia gives back gains
+<<<SUMMARY>>>
+In this edition of Sozzi Unleashed: At The Close, Brian Sozzi sorts through "reality trading" as Nvidia slides nearly 7% after Monday's 31% surge and Anthropic falls below its $83 IPO price less than a week after the biggest offering in history. GCG Advisory Partners' Bill Gunderson makes the case that Nvidia is the cheapest growth stock in the market at nine times forward earnings and names Nvidia and Eli Lilly as his top picks for 2027. Brian breaks down Dell's blowout quarter and $132 billion AI backlog, and HPE CEO Antonio Neri joins to explain the company's raised outlook, why it refuses to finance neoclouds, and whether server margins have peaked. Brian closes by arguing the AI trade is reaching consumers' wallets, pointing to Best Buy's strongest comparable sales growth in five years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144098215
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T21:12:54Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=dca74df97a8326e1faf36c3b8f635c4fe210ddc22d70a6c363c6c3718d6fcc30
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2226751695/image_2226751695.jpg?io=getty-c-og
+category: company
+tickers: KO
+keywords: 
+headline: Best Dividend Kings: November 2026
+<<<SUMMARY>>>
+The bull case for Dividend Kings: 26 appear undervalued and could deliver annualized returns above 10%; Gorman-Rupp leads at 19.6%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144089121
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T19:07:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d05fe923fcfaa670559fe2022f910c05a764a4415cc664f9048ad3a53b24de9a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola hires pharma vet for CFO
+<<<SUMMARY>>>
+The beverage giant is breaking from its typical practice of appointing insiders by naming pharma finance alum David Elkins as its incoming CFO, analysts noted.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088019
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T18:56:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1509d90ba7f9de491a7532e47cbcd99672a652f92fc00f4f6dfcf3f5299ce951
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Short-Term Bond Funds vs. Dividend Stocks: Which Income Holds Up Better for Retirees?
+<<<SUMMARY>>>
+Treasury bills out-yield Exxon and Coca-Cola today, but that paycheck resets with every Fed move while dividends answer to a board. Before choosing, retirees should weigh what each income stream can lose, and what the tax code lets them keep.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088034
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T18:26:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e33f50289bc5d2ba8d8f694102e92436b2835a6535da6f3b94be92d9460475ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: What Did Coca-Cola Do That PepsiCo Did Not?
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144089897
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:41:01Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=b5aaf59971062b660cdf1102aa4a86e59a9594f64475df4676cf2972702be157
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: KO
+keywords: 
+headline: Dow Jones Top Gainers: Nov. 24, 2026 US Session
+<<<SUMMARY>>>
+Dow Jones gainers on Nov. 24, 2026: NKE rose 5.91% to $35.76, AMGN gained 4.43% to $468.92, and CRM advanced 4.18% to $193.22 in the US session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144086854
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T16:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7fed4efb440d8226489a10aa40b93ff40d1bd9697a471c020b42029877b6b90d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Can Coca-Cola Navigate Rising Costs While Protecting Margins?
+<<<SUMMARY>>>
+KO tackles rising logistics and transportation costs through productivity gains and strategic pricing while sustaining margin expansion and brand investments.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144086855
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T16:32:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b32caf850965d1f78bf7063876f8b3e8418307df6cf8f0f791887fb180b70247
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Is PepsiCo Sacrificing Pricing Power to Regain Snack Volumes?
+<<<SUMMARY>>>
+PEP's affordability push is reviving snack volumes and market share, but mounting margin pressure raises questions about sustainable growth and pricing power.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085478
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T15:13:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2266ade2aae8195ae01569a53e8a568efac484a3ef0220449b98406771e8128c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola (KO) Appoints David Elkins As CFO Effective April 2027
+<<<SUMMARY>>>
+Coca-Cola (NYSE:KO) faces a formal E.U. antitrust investigation into Coca-Cola Europacific Partners for possible abuse of market dominance. The European Commission is examining whether Coca-Cola Europacific Partners restricted rival soft drinks from key retail channels across several member states. The Coca-Cola Company has appointed David Elkins as its next Chief Financial Officer, with his tenure scheduled to begin in April 2027. The E.U. antitrust probe and David Elkins' 2027 CFO...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085479
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T14:29:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44167cfd4d1d434f043161d9acdc9d9259fa954a60ad46fce3ae6f59aafe6921
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola at $95 or PepsiCo at $140: Which Dividend King Could Turn $1,000 Into More Money by 2036?
+<<<SUMMARY>>>
+Coca-Cola and PepsiCo have rewarded investors with decades of dividend growth. But which Dividend King offers the better opportunity to turn $1,000 into substantially more money over the next decade?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124620
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T14:25:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=59e67295f728c22980190e01f8d2a60498556495dab329235e6eacac35dd7d5c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Anthropic’s Wild IPO Debut Sparks 2 New Ways to Trade the AI Stock’s Volatility
+<<<SUMMARY>>>
+New Tradr ETFs ANTT and ANTZ offer 2x leveraged long and short daily exposure to Anthropic stock, launching amid high volatility following the AI firm's record-setting IPO.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085457
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:43:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d90f55c900fa78e773b17b1b2ccbb2310b8af5e8db7bbd784a1857ebaeb3565f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola Shakes up Leadership, Names Pharma Veteran as CFO
+<<<SUMMARY>>>
+Coca-Cola Company (NYSE:KO) announced Monday the appointment of David Elkins as its incoming executive vice president and chief financial officer, effective April 2, 2027. Elkins will succeed John Murphy, who plans to retire in 2027 after nearly four decades with the beverage giant. Murphy, who has been CFO since 2019, will continue serving as president, supporting the CFO transition and advancing key enterprise priorities during 2027. Incoming CFO Brings Extensive Global Experience Elkins will
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122171
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=37dd8624437c8b63ae7f493f24a751f8b16d32426983b4e2362706aec7cd3525
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/24/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: KO
+keywords: 
+headline: 8 Of 11 Sectors Rise Tuesday As Defensives Lead
+<<<SUMMARY>>>
+Tuesday&#39;s regular session has eight sectors higher and three lower, with defensive sectors holding the top two positions. The leaders are separated rather than clustered, with Health Care and Consumer Staples ahead of the rest of the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144080844
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T11:18:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a1d2c8367cb50fb05bbb72ef3ca3d16a9db1bb2596448659c790815b7e7cb8a0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: These 3 Stocks Have Raised Their Dividends Annually for at Least 49 Years. Should you Buy Them?
+<<<SUMMARY>>>
+One of their annual raise streaks stands at 64.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144084518
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T09:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=153efe6bf8aed0c6803815071a0be2e1e2893febc89eb62714ed0ab5106b1969
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2161521312/image_2161521312.jpg?io=getty-c-og
+category: company
+tickers: KO
+keywords: 
+headline: PepsiCo: 4.2% Dividend Yield Looks More Attractive As Volatility Returns
+<<<SUMMARY>>>
+Analyst rates PepsiCo a Hold: at 16.81x blended earnings, it offers 7.7% expected annual returns; no additions until operations improve.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144062228
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T03:04:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dcf8d3a7be5903ec94485a9224153db8240fab0a59fe61620f33553c33224942
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: BofA spots opportunities in these nine consumer staples stocks for 2027
+<<<SUMMARY>>>
+Investing.com -- Bank of America has highlighted several U.S. consumer staples stocks as potential winners heading into 2027, as investors reconsider defensive holdings following a recent sector rally and look for companies with stronger earnings growth and improving sales prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144064855
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T00:35:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=369b3937d721260ebe6829513943004ecdbe129e99c74ee587455a53ac8ff1ad
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2218739654/image_2218739654.jpg?io=getty-c-og
+category: company
+tickers: KO
+keywords: 
+headline: ValuEngine Weekly Market Commentary: Bear Market For Nasdaq-100 Headlines Historic Weekly Meltdown
+<<<SUMMARY>>>
+U.S. equity markets experienced a sharp and broad-based selloff this week, with all major ETFs and sector benchmarks posting significant declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144054364
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T23:10:32Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=c8cacd2876f559138668bfdb1c6eeb54a56b921c5e75ede33affc158191f6a8e
+image_url: 
+category: company
+tickers: KO
+keywords: 
+headline: The Coca-Cola Company Announces David V. Elkins Will Succeed John Murphy as Chief Financial Officer, Effective April 2, 2027
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050113
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T21:56:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f781a840321cfedf6a87e5387889c3ce39b0e3331e64be1fdaa5755ba26621d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Stock Market Today: Dow, Nasdaq Surge As Jensen Huang Returns To Nvidia; Chip Plays Rocket (Live Coverage)
+<<<SUMMARY>>>
+Stock Market Today: The Dow Jones index surges Monday as Nvidia stock soars 33% on the return of Jensen Huang as CEO.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144053614
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T21:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=546cbddd565b15dc37d25160e220fe12019a868e84edf0bb68f4acd3fde681ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: The Coca-Cola Company Names David Elkins as Incoming Chief Financial Officer
+<<<SUMMARY>>>
+ATLANTA, November 23, 2026--The Coca-Cola Company today announced that David Elkins, a finance leader with extensive experience across global pharmaceuticals and consumer products companies, will become executive vice president and chief financial officer of Coca-Cola April 2, 2027, succeeding John Murphy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144052640
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T19:17:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1018ef8429b4d035a2008c3678bb97727c05327f7714907d50aa35a629bc9ba5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: How Much You Really Need Invested to Generate $50,000 a Year in Retirement
+<<<SUMMARY>>>
+Safe blue chips have rallied so hard that their yields now trail Treasuries, while the highest payers promise to slash the capital you need. Before you chase either, see what each shortcut quietly puts at risk in year ten.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144052580
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T18:59:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6d12e224d34ccec424c6cb59d7420c45315303a15ec9b5eee98b1d8a6a988346
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Jensen Huang's return to Nvidia: Long or short accountability?
+<<<SUMMARY>>>
+Market Hang tackles the top stories of the day. Including Nvidia's board unanimously reinstating Jensen Huang as CEO and what the White House's involvement says about accountability in corporate America, whether the government has effectively put a floor under the AI trade, and Anthropic falling as options on the stock begin trading for the first time. The panel, with Yahoo Finance's Julie Hyman, debates where everyone sits on a one-to-five bullishness scale, whether this is a stock picker's market or a CapEx bubble that precedes a secular bear, the risk of a politically driven slowdown in data center construction, and OpenAI's chief scientist calling for a speed limit on AI development, including whether an FDA-style regulator is the right model for AI.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144052675
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T18:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f28d6f25a3ad8cd0ae36403c3802c5e6a3fd9641a8fb8dfb48c18429e1a75882
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: If a Recession Hits in 2027, This Is the Dividend Stock I Want to Own
+<<<SUMMARY>>>
+Coca-Cola stock has crushed the market this year, but its real appeal shows up when the economy turns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051457
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T17:50:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4847d48636c8a96f5eb6a4d0b2ce3eb15e4c6569288325986216767584b6b487
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola vs. PepsiCo: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Coca-Cola's asset-light model and PepsiCo's snack empire take very different routes to the same shelf, and their valuation gap may decide the winner.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144054177
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T17:36:03Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=7050038ae79c0e8b822532c0d4a1f6be470fdee2b7d409f7f75d1ad5a11981a5
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: KO
+keywords: 
+headline: S&P 500 Top Movers for Nov. 23, 2026: Gainers and Losers
+<<<SUMMARY>>>
+S&P 500 top movers on Nov. 23, 2026 included NVIDIA, Dell, Micron and Bloom Energy among gainers, while CrowdStrike led declines.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144053497
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:38:01Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8fb6199d68b04118baa58568f92dc0d6bd3d582637b7271182b080c94e199dee
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1082044584/image_1082044584.jpg?io=getty-c-og
+category: company
+tickers: KO
+keywords: 
+headline: 9 DGI Stocks To Help You SWAN, No Matter What The Future Brings
+<<<SUMMARY>>>
+The bull case for a nine-stock dividend growth portfolio: $10,000 grew to over $41,000 in back-testing, with potential to outperform over five years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051458
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:05:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=500e2ad242b08d77025df94654354304fe059435607a8d0a81e0854e8a3e17f4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Berkshire Has Owned These 2 Consumer Stocks for Decades. I'd Buy Both Before December and Never Sell.
+<<<SUMMARY>>>
+These two Berkshire holdings have outlasted almost everything else; here's why I'd own both before the calendar flips.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050211
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T15:17:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e3886098dc99ff144bf7f905b8feb8bbd2af7218089b0f2060586d395cec6585
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: The Average 1-Year CD Pays 1.81%. Dividend Stocks Offer a Different Trade-Off
+<<<SUMMARY>>>
+Your CD just matured, and the bank's clock is ticking. Doing nothing triggers an automatic rollover, while three dividend giants tempt you with raises, risks, and a very different tax bill. Which choice quietly costs more?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050241
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=45daa6528059f8c36166390714e9a0e784e539f68ae82845434bdc67c1692b24
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Take the Zacks Approach to Beat the Markets: BRK.B, VRA & ULTA
+<<<SUMMARY>>>
+Berkshire Hathaway, Vera Bradley and Ulta Beauty outpace the market as Zacks' research-driven strategies deliver gains amid heightened volatility.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050243
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:53:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fde7e8f0fd4524e09524174232183dd706ec87262a00d132ae2ab350e8b84c44
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola Stock Returned 40%. How Much Is Left?
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048555
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:59:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5b84e7c7a307029df325f77370b1b959c66eb210aa22d571f675869f4f62a195
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: EU Commission opens anti-trust probe into CCEP
+<<<SUMMARY>>>
+"We are firmly committed to complying with all applicable laws and regulations in every market in which we operate, globally," CCEP said.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048552
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:52:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=97e2105b38db255ffdf27b9c6c854c72ac9267e237e04f7ffbd1bf21c55bf3a6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: 2 Safe S&P 500 Consumer Staples Stocks Boomers Can Buy and Hold Forever
+<<<SUMMARY>>>
+Staples feel safe, and that comfort can cost new buyers dearly. We checked two household giants on cash flow, debt, and dividend records, and found one hidden risk that could turn a retiree's favorite holding into a long wait.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051202
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:45:16Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=72c32a1ba7b083689a37edb858980798cfddb93ddd405db0090b8e1be448801d
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/471907411/image_471907411.jpg?io=getty-c-og
+category: company
+tickers: KO
+keywords: 
+headline: Nvidia: The Trade Of A Lifetime
+<<<SUMMARY>>>
+Analyst sees Cerebras as a stronger AI inference bet with less management risk than Nvidia Corporation, buying at half the planned Nvidia weight.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082422
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:00:25Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7849cbb86e22717be37f15e7dd3458af446008b8ca28197d597cc3fd18cfe561
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: KO
+keywords: 
+headline: 9 Of 11 Sectors Rise Monday As Growth Leads
+<<<SUMMARY>>>
+Nine of 11 sectors are higher in Monday&#39;s regular session, with growth sectors holding two of the top three positions alongside Industrials. Technology sits well clear of the rest, separated from the next sector by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048553
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=71e4b647afd44dc7def4e638fa3da1a166705380f16edbc08e9e3690ca827f25
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: The Zacks Analyst Blog Highlights Coca-Cola, UnitedHealth, Palo Alto Networks, Natural Resource Partners and Bank of the James Financial
+<<<SUMMARY>>>
+Coca-Cola, UnitedHealth and Palo Alto Networks headline Zacks research, while microcaps Natural Resource Partners and Bank of the James show notable gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048554
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=91c271a0a732b4650765e2773a7c5b9f48fe500396b57e8b4302cf282130392b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Your brand is famous. That’s not why people buy it
+<<<SUMMARY>>>
+Being different gets you chosen, and paid for.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144045542
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:04:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=79c24e014f3c43dfd721f0507052dc69b3942e37250afd118e7cc42a9c73bfdb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Vanguard U.S. Momentum Factor ETF (VFMO) Adds Altria and ADP on Thursday
+<<<SUMMARY>>>
+The fund bought $13.6 million of Altria and $12.9 million of ADP while selling out of KLA and Corning.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144025843
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T19:37:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0cee499412bd0e6ee84d690da151950d3a66ea393f72354dd0c684bb7e4ff3cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: What These 6 Snack and Beverage Stocks Have in Common
+<<<SUMMARY>>>
+Coca-Cola and an array of other beverage and snack stocks deliver tasty dividends to income investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144025040
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T16:50:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b23ac453f81df99f5160fd7e05ccc5ebc7f63f17a0bf5ef29aa72b864f3d3e2e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: How Many Shares of Coca-Cola or PepsiCo Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, collecting $1,000 a month in dividends takes 5,661 shares of Coca-Cola, about $549,100, or 2,028 shares of PepsiCo, about $285,000. PepsiCo looks like the better buy for that income, as long as its turnaround gets its free cash flow growing again.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024458
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T15:07:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d0aa72d1f951da00393e3fe350ebe85c4d50b0f002d7e5b79a294676e8875c42
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: 10-Year TIPS Pay 2.77% Above Inflation. Here’s How Dividend Stocks Compare
+<<<SUMMARY>>>
+A Treasury coupon can't be cut, but a dividend can grow faster than inflation. Before you pick a side, check the tax bill hiding inside TIPS and the raise that trails inflation at one famous monthly payer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024452
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T15:02:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4bf57a5411b66f636320c9d207882e05921f8d9d674b8cbfefe6c01876b7979b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: The Dividend Investing Strategy That Made Geraldine Weiss a Wall Street Legend
+<<<SUMMARY>>>
+Wall Street shut her out, so she signed her newsletter "G. Weiss" and went on to rewrite how investors judge value. Her yield test now splits Coca-Cola, Johnson & Johnson, and PepsiCo, and only one of them tempts her.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144023660
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T13:33:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7c703193c9d58f21455bff9599b5e824e216d34f3125ee743d9f776c5755caf6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Warren Buffett’s Favorite Type of Stock Is Perfect for Patient Investors
+<<<SUMMARY>>>
+Buffett once held hundreds of positions, yet only a tiny few have survived a decade. Coca-Cola, American Express and Moody's earned their spots, but one of them just missed earnings and another is sinking this year. Why does Berkshire still hold on?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144023621
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T12:19:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cb47138b5cbe7da90b73a6bde96df5f29ade88054b4dbfd933c9e1127dde70c8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Here’s How Many Shares of Coca-Cola You’d Need for $10,000 in Yearly Dividends.
+<<<SUMMARY>>>
+It would be a tough ask if you're starting from scratch, but doable over time.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144022581
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T06:21:37Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=73075644b4c52a99e1ccd18926f08be8a08baa4ac6ad570d7ec4a1d5c17ffde9
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/156630107/image_156630107.jpg?io=getty-c-og
+category: company
+tickers: KO
+keywords: 
+headline: Wall Street Week Ahead
+<<<SUMMARY>>>
+U.S. markets enter Thanksgiving week after the Nasdaq fell 10% and S&P 500 8.6%; investors watch Dell AI results and core PCE, expected at 3.2%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144019953
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T00:12:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bd52353c3a4cce434976b22c88a85d3b31250da48c1029af4c10d5f2d043190b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Coca Cola (KO) Stock Looks Fully Priced After Its 109% Run
+<<<SUMMARY>>>
+Coca-Cola has delivered a powerful long run for shareholders, and with the stock recently around US$96.99, the question now is whether that price still lines up with the cash the business can produce over time. After such a strong stretch, investors are increasingly asking if the current valuation is supported by the company’s underlying cash flows or if expectations have moved ahead of the fundamentals. Over the past 5 years, Coca-Cola has returned about 109.0%. This places significant...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144018050
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T22:38:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=74eb2f9b3d80996e315791011628037b5b53745ef8b639195aaa044cc4eadf8f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Kraft Heinz vs. Coca-Cola: Here's the Stock to Buy
+<<<SUMMARY>>>
+Kraft Heinz's net loss and Coca-Cola's net margin tell very different stories, and the valuation gap may surprise you.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144016377
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T17:50:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=861b5462a5ba9cbe574514e3e457b8b768c9d49c3243dab6a2d105e48a71df36
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Here's How Many Shares of Coca-Cola You'd Need for $1,000 in Monthly Income
+<<<SUMMARY>>>
+Just like Berkshire Hathaway, you can build a steady income stream with Coca-Cola stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015576
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:57:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3ffc10a878f86ab6bec20542c0289642634e67706e133acc4c5cf3c19ca5f624
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Turn Your Roth IRA Into a Tax-Free Dividend Income Machine With These 3 Simple Moves
+<<<SUMMARY>>>
+Three household-name dividend stocks quietly hand the IRS a surprisingly large check every year, and one of them drives most of the bill. Where you hold them decides how much of your income you actually keep.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015493
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:00:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=40ffb1a825864d86535bd4786456b01f87125616e12c141673336e72b23f5971
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: Warren Buffet’s Stock Portfolio: Top 5 Picks
+<<<SUMMARY>>>
+Warren Buffett no longer runs the conglomerate he built over six decades, but his fingerprints are still on nearly everything it owns. He handed the chief executive role to Greg Abel at the end of 2025, and Abel took over at the start of 2026. On September 18, Buffett, 96, stepped down as chairman, a […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144014695
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T15:31:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=345982f50572b7961712e6b895e67e74c88397ceeafa9bb6a3cad12c60c1d197
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: 3 Reasons Dividend Aristocrats Belong in Your Roth IRA Before You Retire
+<<<SUMMARY>>>
+Three of the most reliable dividend payers in America quietly hand the IRS a bill every year, and the size of it depends on your income. Find out why the account holding them may matter more than the stocks themselves.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012464
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T13:03:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b6d1fa59ef59ce02a68d5e60e425cf14c27dcc6722536e7caad506e46d0c0075
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: 5 Dividend Kings to Buy for Lifelong Income Before the End of November
+<<<SUMMARY>>>
+A fat yield means nothing if the cash behind it dries up. Five companies with 50-plus years of dividend raises put safety ahead of income, yet one of them leaves almost no room for error.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012060
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T12:30:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d96cc822f5db7dda2d25fb8416f73688e1f0f2e3a7f67c6aca93259bf6f4fb27
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: How Retirees Can Turn $450,000 Into Passive Income With These 5 Dividend Stocks
+<<<SUMMARY>>>
+Selling shares in a downturn can turn a temporary loss into a permanent one for retirees. Five dividend payers from five sectors might offer a way out, but each hides a risk worth knowing before you commit a dollar.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144000305
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T03:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=883f82ba0917f5ad71e94cf810af4c32aeda71e8e098b2b2a3d6ff93c3ed6f67
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: From Winning Attention to Driving Growth: SMARTIES™ APAC 2026 Honours Marketing That Delivers Real Business Impact
+<<<SUMMARY>>>
+Marketing + Media Alliance (MMA) today announced the winners of the SMARTIES™ Asia Pacific 2026 Awards at the Awards Evening held at JW Marriott Singapore Hotel South Beach. "Made in India. Made for the Screen." by Titan won Best in Show. The winners represent the campaigns, advertisers, brands and agencies across the region that connect sharp insight, data and technology to measurable business impact.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144210889
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T17:12:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d2b3621b6b9f25d8d494c526d82efdc6e1298ce9033ea4191545223859f14ba4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: How Much Do You Need in a Taxable Account to Collect $4,425 a Month in Dividends and Pay $0 in Federal Tax?
+<<<SUMMARY>>>
+A married couple can collect over $53,000 a year in dividends and still owe the IRS nothing, but one wrong kind of income quietly ends the deal. Here is why the flashy high yields often fail and the slower payers win.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144210174
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T15:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c9bc588357d5b030c4c2c0e59d32e404ec0b0d0210750dbc220a458c7cc4e0cf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: This Dividend King Has Raised Its Payout 54 Straight Years. It's My Top Pick for December.
+<<<SUMMARY>>>
+Investors and analysts alike are skeptical at best. This skepticism, however, only bolsters the contrarian argument.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144207805
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T11:12:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f1b3b0c2415bb61734b91b59654ab1c00861f2a86fc292825d85e5daaeb4145b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: The Best 3 Dividend-Raising Stocks to Own Until 2030
+<<<SUMMARY>>>
+Two of these dividend raisers sit well below their records. The one near a record spends the largest share of its cash on its payout.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144202482
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T04:43:21Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=bf4de9d3079bfc7b20b24771230e226c46e2cc968d28773d193d46bca2366ee4
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/487787108/image_487787108.jpg?io=getty-c-og
+category: company
+tickers: KO
+keywords: 
+headline: Coca-Cola: The Safe Haven For Dividends Now Trades At A Premium
+<<<SUMMARY>>>
+Coca-Cola (KO) stock is a hold at 27.8x forward earnings; its 2.2% yield limits appeal, and the writer would accumulate on a sizeable pullback toward $80.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144185485
+symbol: KO
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T03:41:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0be7f60c375c291a0705b53e1f85f25e494ee7103b7f8f33ff33f7f2d5eae6d1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: KO
+keywords: 
+headline: 3 Reasons I’d Be Nervous Buying Coca-Cola’s Stock Today
+<<<SUMMARY>>>
+Key TakeawaysCoca-Cola stock is up 39% this year and trades at 24. 8x forward EBITDA, well above its 10-year average of 20.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:83c99ca7a82843e369ea62849c1fcf8a314e9d97fe569a628e9b44c5653fad36
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T20:42:00Z
+publisher: Zacks Investment Research
+author: Mark Vickery
+url: https://www.zacks.com/commentary/3033022/top-research-reports-for-coca-cola-medtronic-palo-alto-networks?cid=CS-ZC-FT-research_daily-3033022
+image_url: https://staticx-tuner.zacks.com/images/articles/main/00/1011.jpg
+category: 
+tickers: KO, UNH, PANW, NRP, BOTJ, ON, CRWV, ARCC
+keywords: stock analysis, earnings reports, investment research, beverage industry, healthcare, cybersecurity, coal royalties, regional banking, AI infrastructure
+headline: Top Research Reports for Coca-Cola, Medtronic & Palo Alto Networks
+<<<SUMMARY>>>
+Zacks Research Daily features analysis of 16 major stocks on November 20, 2026. Coca-Cola benefits from strong brand portfolio and emerging market demand but faces margin pressures. UnitedHealth receives a Neutral rating due to diversified operations offset by elevated medical costs and enrollment declines. Palo Alto Networks outperforms the security industry but faces margin headwinds from cloud mix and competitive intensity. Additional coverage includes microcap stocks Natural Resource Partners and Bank of the James Financial, along with analysis of ON Semiconductor, CoreWeave, and Ares Capital.
+<<<INSIGHTS>>>
+KO | positive | Strong outperformance vs. industry (+35.2% vs +24.9%), robust emerging market demand, accelerating Zero Sugar sales, and management's raised 2026 guidance support sustained growth, though margin pressures and tax litigation present headwinds.
+UNH | neutral | Diversified operations and disciplined pricing support earnings recovery with Optum as key driver, but elevated commercial medical costs, declining insured enrollment, and debt obligations constrain upside, warranting Neutral recommendation.
+PANW | neutral | Significant outperformance (+97.8% vs +79.8%) driven by enterprise security consolidation and platformization, but cloud/SaaS mix pressures gross margins, and Applied Compute acquisition brings integration and dilution risks.
+NRP | neutral | Royalty model and long-term leases support cash generation with improved financial flexibility, but soft coal pricing, loss of Sisecam distributions, and slow diversification into renewables limit upside potential.
+BOTJ | positive | Strong outperformance (+40.9% vs +15.5%), wider net interest margins, growing loan book, and diversified advisory fees support earnings, though concentrated commercial real estate exposure and large 2030 balloon payment present risks.
+ON | positive | Benefiting from solid momentum across AI data center, industrial, and automotive end-markets, positioning the company well for continued growth.
+CRWV | positive | Rapid demand for AI infrastructure, large contracted backlog, and expanding enterprise adoption drive growth, though rising interest costs present a headwind.
+ARCC | neutral | Rising demand for customized financing supports investment income growth, but higher expansion-related costs may constrain profit margins.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:9b59eeb1d5048cde94f0d07a36356ee97a226fe91038e138fcad5b9f9a3759b0
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T12:30:02Z
+publisher: The Motley Fool
+author: Tmf Breakfast News
+url: https://www.fool.com/investing/breakfast-news/2026/11/21/breakfast-news/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fmisc-assets%2Flive-1121-tech-div.png&w=1200&op=resize
+category: 
+tickers: KO, AXP, DPZ, GE, CSCO, ABBV, PFE, BRK.A, BRK.B
+keywords: dividend stocks, tech volatility, market correction, dividend growth, dividend yield, market downturn
+headline: Breakfast News: When Tech Wobbles, Dividends Pay
+<<<SUMMARY>>>
+As tech stocks experience significant volatility with the Nasdaq-100 down over 13% in one month, dividend-paying stocks have proven more resilient. Motley Fool analysts highlight dividend aristocrats and growth compounders as attractive alternatives, emphasizing that consistent dividend increases signal company confidence and provide steady cash returns regardless of market conditions.
+<<<INSIGHTS>>>
+KO | positive | Highlighted by Warren Buffett as a prime example of consistent dividend growth; mentioned as a reliable dividend payer with a long history of increases.
+AXP | positive | Cited by Warren Buffett as exemplifying above-average dividend growth over extended periods; positioned as a dividend darling.
+DPZ | positive | Praised for asset-light business model generating strong free cash flow; uses cash to shrink share count and pay consistently higher dividends.
+GE | positive | Raised quarterly dividend 68% cumulatively since April 2024; strong financial margins (~18%), healthy payout ratio (20%), and solid backlog support future dividend growth.
+CSCO | positive | 15 consecutive years of dividend increases; conservative payout ratio under 45%, strong AI infrastructure revenue growth ($9B forecast), and reliable income stream backed by accelerating growth.
+ABBV | positive | true Dividend Aristocrat with 50+ year history of annual dividend increases; attractive 2.5% yield with sustainable payout ratio and easier growth ahead after patent expiration.
+PFE | negative | Payout ratio stretched at 83%; likely to face dividend cuts in coming years due to upcoming patent expirations peaking in 2027-2028; high yield may be unsustainable.
+BRK.A | positive | Referenced as exemplifying dividend growth investment philosophy; positions dividend growth as the 'secret sauce' to sustained success.
+BRK.B | positive | Referenced as exemplifying dividend growth investment philosophy; positions dividend growth as the 'secret sauce' to sustained success.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:759f677ab2af49056b7534ffc55318a09a16ce276296f54cb069ef136be4304b
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T17:30:02Z
+publisher: The Motley Fool
+author: Thomas Niel
+url: https://www.fool.com/investing/2026/11/21/heres-how-many-shares-of-coca-cola-youd-need-for-1000-in-monthly-income/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F0e0af1a312a62a08047b2d2339b56c4a979efab5-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: KO, BRK.A, BRK.B
+keywords: dividend income, Coca-Cola, dividend growth, dividend yield, blue chip stocks, long-term investing, valuation
+headline: Here's How Many Shares of Coca-Cola You'd Need for $1,000 in Monthly Income
+<<<SUMMARY>>>
+Coca-Cola, a Dividend King with 64 years of consecutive dividend increases, would require approximately 5,661 shares (worth ~$560,000) to generate $1,000 in monthly dividend income at its current $0.53-per-share dividend. While the stock offers dividend durability and growth averaging 4.45% annually over the past decade, recent valuation has reached 28.5 times forward earnings, suggesting it may be richly priced after its recent rally.
+<<<INSIGHTS>>>
+KO | neutral | While Coca-Cola is praised for its 64-year dividend growth track record and reliability as a core holding, the article notes that shares have become richly priced at 28.5x forward earnings after a recent rally. The 2.15% dividend yield is modest compared to the federal funds rate of 3.9%, and the stock has underperformed the S&P 500 over the past decade, suggesting a balanced view rather than a strong positive or negative outlook.
+BRK.A | positive | Berkshire Hathaway is mentioned as a major Coca-Cola shareholder with a 400 million-share position generating nearly $850 million in annual dividend income, illustrating the stock's reliability and appeal to sophisticated investors like Warren Buffett.
+BRK.B | positive | Berkshire Hathaway is mentioned as a major Coca-Cola shareholder with a 400 million-share position generating nearly $850 million in annual dividend income, illustrating the stock's reliability and appeal to sophisticated investors like Warren Buffett.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7f5c181549a798be76c60631241bb3d155baeccd103ab0e05a4b471cbde4af83
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T10:51:02Z
+publisher: The Motley Fool
+author: Anthony Di Pizio
+url: https://www.fool.com/investing/2026/11/22/41-6-berkshire-hathaways-358-billion-portfolio-parked-3-artificial-intelligence-ai-stocks/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd42c7109dcfdf45aeb7faf5f6382ee3c2fc0319e-2048x1365.jpg&w=1200&op=resize
+category: 
+tickers: GOOG, GOOGL, GOOGM, GOOGN, AAPL, KO, MSFT, BRK.A, BRK.B
+keywords: artificial intelligence, Berkshire Hathaway, Greg Abel, AI stocks, portfolio allocation, Google Cloud, Apple Intelligence, Coca-Cola AI transformation
+headline: 41.6% of Berkshire Hathaway's $358 Billion Portfolio Is Parked in 3 Artificial Intelligence (AI) Stocks
+<<<SUMMARY>>>
+Berkshire Hathaway's new CEO Greg Abel has significantly increased the conglomerate's exposure to artificial intelligence through three major holdings: Alphabet (8.2% of portfolio), Coca-Cola (11%), and Apple (22.4%). These three AI-focused stocks represent 41.6% of Berkshire's $358 billion portfolio. Abel has aggressively expanded Alphabet's position sixfold in 2026, while Apple remains the largest single holding despite Buffett reducing the stake by 75% in 2025.
+<<<INSIGHTS>>>
+GOOG | positive | Aggressive sixfold position increase by new CEO Abel in 2026; leading AI integration in Google Search and Google Cloud with 103% revenue surge in Q3 and $561 billion order backlog
+GOOGL | positive | Aggressive sixfold position increase by new CEO Abel in 2026; leading AI integration in Google Search and Google Cloud with 103% revenue surge in Q3 and $561 billion order backlog
+GOOGM | positive | Aggressive sixfold position increase by new CEO Abel in 2026; leading AI integration in Google Search and Google Cloud with 103% revenue surge in Q3 and $561 billion order backlog
+GOOGN | positive | Aggressive sixfold position increase by new CEO Abel in 2026; leading AI integration in Google Search and Google Cloud with 103% revenue surge in Q3 and $561 billion order backlog
+AAPL | positive | Largest Berkshire holding at 22.4% of portfolio; positioned as world's biggest AI distributor to consumers with 2.5 billion active devices; Apple Intelligence suite expanding AI capabilities across ecosystem
+KO | positive | 11% of Berkshire portfolio; investing heavily in AI for marketing, manufacturing, and product development; $1.1 billion Microsoft Azure deal demonstrates commitment to AI transformation
+MSFT | neutral | Mentioned as provider of Azure cloud platform to Coca-Cola; supporting role in broader AI ecosystem but not a primary focus of the article
+BRK.A | positive | 41.6% of $358 billion portfolio concentrated in three AI-focused stocks; new CEO actively increasing AI exposure; demonstrates strategic pivot toward AI despite Buffett's historical tech skepticism
+BRK.B | positive | 41.6% of $358 billion portfolio concentrated in three AI-focused stocks; new CEO actively increasing AI exposure; demonstrates strategic pivot toward AI despite Buffett's historical tech skepticism
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d5dd766f25c9e1bcccedabc49173d15dbbf3ae35b347708e730ae9e4a2b4a266
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T13:11:02Z
+publisher: The Motley Fool
+author: Erin Kennedy
+url: https://www.fool.com/coverage/better-buy/2026/11/22/pepsico-vs-starbucks-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F90c0575767a574caf98fff88bd74a707a6433372-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: PEP, SBUX, WMT, KO, YUM, NSRGY
+keywords: dividend stocks, consumer goods, valuation comparison, cash flow analysis, long-term investing, beverage industry
+headline: PepsiCo vs. Starbucks: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares PepsiCo and Starbucks as investment options for 2027. PepsiCo offers diversified snacks and beverages with strong cash flow ($7.7B), a lower P/E ratio of 17.66, and a 54-year dividend growth streak, making it attractive for conservative investors. Starbucks trades at a premium valuation (P/E of 46.68) with modest revenue growth of 1.9% and higher debt levels. The author recommends PepsiCo as the better choice for steady, reliable returns despite both stocks underperforming the S&P 500 over the past decade.
+<<<INSIGHTS>>>
+PEP | positive | Strong fundamentals with $7.7B free cash flow, lower valuation (P/E 17.66), 54-year dividend growth streak, diversified portfolio, and stable revenue growth of 6.4%. Author explicitly recommends it as the better choice for 2027.
+SBUX | negative | Significantly higher valuation (P/E 46.68) relative to modest 1.9% revenue growth, negative debt-to-equity ratio (-2.9), lower free cash flow ($3.7B), and operational challenges including unionization efforts and restructuring risks.
+WMT | neutral | Mentioned as PepsiCo's largest customer (14% of revenue), representing a concentration risk factor rather than an investment recommendation.
+KO | neutral | Mentioned as a competitive threat to PepsiCo but not evaluated as an investment option in this comparison.
+YUM | neutral | Mentioned as a long-term partner providing stable foundation for PepsiCo but not evaluated as an investment option.
+NSRGY | neutral | Mentioned as Starbucks' global alliance partner for packaged coffee but not evaluated as an investment option.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5374153df632622adbb89adff386a9822d3d43d204437f787085d47e49538998
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T19:17:02Z
+publisher: The Motley Fool
+author: Todd Shriber
+url: https://www.fool.com/investing/2026/11/22/what-these-6-snack-and-beverage-stocks-have-in-common/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F9837e9a1bbbdfd7816b2067f60759c3fba2977fb-7216x5412.jpg&w=1200&op=resize
+category: 
+tickers: KO, PEP, SJM, HRL, SYY, BF.A, BF.B
+keywords: dividend stocks, Dividend Aristocrats, consumer staples, dividend growth, snack stocks, beverage stocks
+headline: What These 6 Snack and Beverage Stocks Have in Common
+<<<SUMMARY>>>
+Six consumer staples companies—Coca-Cola, PepsiCo, Brown-Forman, Hormel Foods, J.M. Smucker, and Sysco—are examined for their dividend appeal. All are Dividend Aristocrats or Kings with 25+ years of consecutive dividend increases. Coca-Cola shows strong momentum with new all-time highs, while PepsiCo faces headwinds in North America and snacks. J.M. Smucker outperforms with 41% year-to-date gains, Hormel struggles but maintains dividend focus, and Sysco offers potential despite recent weakness.
+<<<INSIGHTS>>>
+KO | positive | Strong momentum with new all-time highs, 65-year dividend increase streak (Dividend King), outperforming PepsiCo by roughly 10:1 this year, and less exposure to struggling salty snacks segment.
+PEP | neutral | While a Dividend King with 55-year dividend streak and safe dividends, the stock faces headwinds from tepid North American performance and sluggish salty snacks division, described as a 'show me' story lacking clarity.
+SJM | positive | Stellar 41% year-to-date performance among packaged-food stocks, raised full-year earnings guidance in August, successfully passing higher costs to consumers, and defying concerns about weight-loss drugs hurting snack consumption.
+HRL | neutral | Dividend King with prudent balance sheet management and dividend focus, but shares slightly in the red this year. Expected 3% annual dividend growth could keep pace with inflation, offering modest upside potential.
+SYY | neutral | Dividend King with 2.9% yield, but stock slipped after weak fiscal Q1 earnings due to soft sales and higher costs. However, potential $100 million in AI-driven savings in 2027 and food-service scaling could present opportunity if market is overreacting.
+BF.A | positive | 42-year consecutive dividend raise streak with 3% yield (nearly triple S&P 500), potential for 43rd consecutive raise, and evidence of consumer trading up to premium brands despite younger demographic drinking less alcohol.
+BF.B | positive | 42-year consecutive dividend raise streak with 3% yield (nearly triple S&P 500), potential for 43rd consecutive raise, and evidence of consumer trading up to premium brands despite younger demographic drinking less alcohol.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:35e03957d4b1f797a5ce7c9d3ffd7fe26554be10cc65645ad472c9b3eae98b44
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T19:23:20Z
+publisher: The Motley Fool
+author: Seena Hassouna
+url: https://www.fool.com/coverage/better-buy/2026/11/22/elf-beauty-vs-monster-beverage-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fc608edc6523c713633ddf50ab8ac8081c367a06e-2233x1343.jpg&w=1200&op=resize
+category: 
+tickers: ELF, MNST, KO, PEP
+keywords: cosmetics, energy drinks, valuation comparison, revenue growth, net margins, distribution partnerships, consumer goods, acquisition strategy
+headline: e.l.f. Beauty vs. Monster Beverage: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares e.l.f. Beauty and Monster Beverage as investment options for 2027. e.l.f. Beauty offers prestige-quality cosmetics at accessible prices with 39.9% revenue growth but lower margins (4.5%), while Monster Beverage dominates the energy drink market with stronger profitability (22.7% net margin) and zero debt. The analyst recommends e.l.f. Beauty for 2027 due to strong growth and the rhode skincare acquisition, but suggests treating it as a starter position given execution risks.
+<<<INSIGHTS>>>
+ELF | positive | Strong revenue growth of 39.9%, attractive valuation metrics (lower Forward P/E and P/S ratios), successful rhode skincare acquisition, and analyst recommendation for 2027. However, sentiment is tempered by execution risks, customer concentration, and lower profit margins.
+MNST | neutral | Demonstrates strong financial fundamentals with 22.7% net margins, zero debt, solid 20.2% revenue growth, and dominant market position. However, not selected as the preferred buy for 2027, indicating the analyst views it as stable but less attractive than e.l.f. for growth investors.
+KO | neutral | Mentioned as Monster Beverage's critical global distribution partner, indicating importance to Monster's operations but no independent investment thesis presented.
+PEP | neutral | Identified as a significant competitor to Monster Beverage in the energy drink category, but no specific performance analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:20c6a9d7da977b711ad6365de9fe0e0a68f4f8033ad875e4c0d055ea536434fa
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T20:27:02Z
+publisher: The Motley Fool
+author: Bram Berkowitz
+url: https://www.fool.com/investing/2026/11/22/warren-buffett-s-successor-greg-abel-has-invested-nearly-47-of-berkshire-hathaway-s-usd360-billion-stock-portfolio-in-just-3-stocks-and-none-are-ai-hyperscalers/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F3fa6d30276fc5eb6b7d794f515c9e58b00f2c501-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, AXP, KO, BRK.A, BRK.B
+keywords: Berkshire Hathaway, Greg Abel, concentrated portfolio, value investing, dividend stocks, consumer staples
+headline: Warren Buffett’s Successor, Greg Abel, Has Invested Nearly 47% of Berkshire Hathaway’s $360 Billion Stock Portfolio in Just 3 Stocks (and None Are AI Hyperscalers)
+<<<SUMMARY>>>
+Greg Abel, Warren Buffett's successor at Berkshire Hathaway, continues the concentrated investment approach with nearly 47% of the company's $360 billion stock portfolio invested in just three stocks: Apple (22.3%), American Express (13.3%), and Coca-Cola (11%). Notably, none of these are AI hyperscalers, reflecting Berkshire's long-term value investing philosophy that has generated strong returns for shareholders.
+<<<INSIGHTS>>>
+AAPL | positive | Largest Berkshire position with 228 million shares unchanged for four quarters. Praised for loyal customer base, high-margin services revenue, massive share buybacks ($24B latest quarter), record fiscal 2026 revenue of $478.8B (+15%), and leadership in consumer tech hardware for AI delivery.
+AXP | positive | Held since early 1990s with 22%+ ownership. Described as having fantastic brand and difficult-to-replicate business model combining credit card issuance and payments network. Q3 showed record revenue of $20.1B (+9%), net card fee growth accelerated to 17% YoY, and company raised full-year earnings guidance.
+KO | positive | Owned since 1988 with 400 million shares generating ~$848M in annual dividends. Valued for global brands, pricing power, and steady cash flow. Q3 showed unit case volume growth of 5%, organic revenue up 7%, and comparable EPS up 11%. 64 consecutive years of dividend increases.
+BRK.A | positive | Generated terrific returns for shareholders through concentrated, disciplined value investing approach without heavy AI exposure. Demonstrates successful long-term investment strategy under both Buffett and successor Abel.
+BRK.B | positive | Generated terrific returns for shareholders through concentrated, disciplined value investing approach without heavy AI exposure. Demonstrates successful long-term investment strategy under both Buffett and successor Abel.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fbbc26324fe9fa36b35f6002e1abf4c31c45b43b6da5e591dc07512b7cf42f0c
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T11:51:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3033593/the-zacks-analyst-blog-highlights-coca-cola-unitedhealth-palo-alto-networks-natural-resource-partners-and-bank-of-the-james-financial?cid=CS-ZC-FT-press_releases-3033593
+image_url: https://staticx-tuner.zacks.com/images/articles/main/24/67.jpg
+category: 
+tickers: KO, UNH, PANW, NRP, BOTJ
+keywords: stock analysis, research reports, earnings, industry performance, financial outlook
+headline: The Zacks Analyst Blog Highlights Coca-Cola, UnitedHealth, Palo Alto Networks, Natural Resource Partners and Bank of the James Financial
+<<<SUMMARY>>>
+Zacks analysts published research reports on five featured stocks. Coca-Cola benefits from strong brand portfolio and emerging market demand but faces margin pressures from rising costs. UnitedHealth receives a Neutral rating due to diversified operations offset by elevated medical costs and enrollment challenges. Palo Alto Networks outperforms the security industry driven by AI-driven threats and platformization, though gross margins face headwinds. Natural Resource Partners' royalty model supports cash generation despite soft coal pricing. Bank of the James Financial generates improved spread income from wider net interest margins and loan growth.
+<<<INSIGHTS>>>
+KO | neutral | Strong outperformance (+35.2% vs industry +24.9%) and positive drivers like emerging market demand and product innovation are offset by challenges including uneven demand, margin pressures from rising costs, and U.S. tax litigation risks.
+UNH | neutral | Diversified operations and disciplined pricing support earnings recovery, but elevated commercial medical costs, declining insured enrollment, and debt obligations constrain growth. Analysts assign a Neutral recommendation.
+PANW | neutral | Strong outperformance (+97.8% vs industry +79.8%) driven by enterprise security consolidation and AI-driven threats, but gross margin pressures from cloud/SaaS mix and integration risks from acquisitions warrant a Neutral rating.
+NRP | neutral | Royalty model and long-term leases support cash generation with outperformance (+17.3% vs industry -6.7%), but soft coal pricing, concentrated exposure to few operators, and slow diversification progress present headwinds.
+BOTJ | positive | Strong outperformance (+40.9% vs industry +15.5%) driven by wider net interest margins, loan book growth, and diversified advisory fees. However, concentrated commercial real estate exposure and balance sheet constraints present some risks.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:250876bad26cce11012d8786b1d86bdb5c5c861a222e000f89254fd81660fbb0
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T12:25:00Z
+publisher: The Motley Fool
+author: Selena Maranjian
+url: https://www.fool.com/investing/2026/11/23/mcdonalds-mcd-raise-dividend-50-year-buy-sell/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893385%2Ffool-mcdonalds-mcd-mcdonalds.jpg&w=1200&op=resize
+category: 
+tickers: MCD, PG, KO, LOW
+keywords: dividend increase, Dividend Kings, McDonald's, valuation, real estate model, franchisee, long-term investment, shareholder returns
+headline: McDonald's (MCD) Has Raised Its Dividend 50 Straight Years. I'd Buy It in November and Never Sell.
+<<<SUMMARY>>>
+McDonald's achieved its 50th consecutive annual dividend increase, joining the elite 'Dividend Kings' club. The company announced a 4% dividend hike to $1.93 per share quarterly. With an attractive business model combining fast-food operations with real estate ownership, a reasonable valuation, and a 2.83% dividend yield (nearly 4% including buybacks), the article suggests McDonald's is worth considering for long-term investors.
+<<<INSIGHTS>>>
+MCD | positive | 50 consecutive years of dividend increases demonstrates financial stability and resilience through economic cycles. The company has an attractive dual business model (fast-food + real estate), reasonable valuation metrics below five-year averages, and strong quarterly earnings growth. The author recommends it as a long-term hold for dividend investors.
+PG | positive | Mentioned as an elite Dividend King with 70 consecutive years of dividend increases, demonstrating exceptional long-term financial performance and stability.
+KO | positive | Cited as a Dividend King with 64 consecutive years of dividend increases, indicating strong sustained financial performance and shareholder returns.
+LOW | positive | Listed as a Dividend King with 64 consecutive years of dividend increases, demonstrating long-term financial stability and commitment to shareholders.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ee7284e501dc3b51b7df03b66c9b9b3209f08394ad20f36de302de99b383d684
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T14:33:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033912/take-the-zacks-approach-to-beat-the-markets-brk-b-vra-ulta?cid=CS-ZC-FT-analyst_blog|investment_ideas-3033912
+image_url: https://staticx-tuner.zacks.com/images/articles/main/eb/1045.jpg
+category: 
+tickers: BRK.A, BRK.B, BANF, BANFP, VRA, PRGS, ULTA, HCA, MTD, PG, TSCO, KO, LRN, NVDA
+keywords: stock market decline, technology selloff, AI concerns, inflation, earnings estimate revisions, market volatility
+headline: Take the Zacks Approach to Beat the Markets: BRK.B, VRA & ULTA
+<<<SUMMARY>>>
+U.S. stock markets experienced a challenging week with major indexes posting significant losses (Nasdaq -7.72%, S&P 500 -6.83%, Dow -6.71%), driven by a sharp selloff in AI and technology stocks, concerns over AI investment profitability, and sticky inflation fears. Despite broad market weakness, several stocks upgraded by Zacks research outperformed, including Berkshire Hathaway (+13.9%), Vera Bradley (+15.6%), and Ulta Beauty (+18.1%).
+<<<INSIGHTS>>>
+BRK.A | positive | Stock gained 13.9% following Zacks Rank upgrade to #2 (Buy) on October 2, significantly outperforming S&P 500's 9.6% decline during the same period.
+BRK.B | positive | Stock gained 13.9% following Zacks Rank upgrade to #2 (Buy) on October 2, significantly outperforming S&P 500's 9.6% decline during the same period.
+BANF | positive | Stock returned 11.4% following Zacks Rank upgrade to #2 on October 2, outperforming S&P 500's 9.6% decline.
+BANFP | positive | Stock returned 11.4% following Zacks Rank upgrade to #2 on October 2, outperforming S&P 500's 9.6% decline.
+VRA | positive | Stock advanced 15.6% after Zacks Recommendation upgrade to Outperform on September 23, significantly outperforming S&P 500's 10.7% decline.
+PRGS | positive | Stock gained 8.2% following Zacks Recommendation upgrade to Outperform on October 5, outperforming S&P 500's 10.3% decline.
+ULTA | positive | Stock surged 18.1% over 12 weeks as part of Zacks Focus List, significantly outperforming S&P 500's 9.83% decline during the same period.
+HCA | positive | Stock returned 10.8% over 12 weeks as a Focus List holding, outperforming S&P 500's 9.83% decline.
+MTD | positive | Stock jumped 19.5% over 12 weeks as part of Zacks Earnings Certain Admiral Portfolio (ECAP).
+PG | positive | Stock gained 17.1% over 12 weeks as part of Zacks Earnings Certain Admiral Portfolio (ECAP).
+TSCO | positive | Stock returned 9.9% over 12 weeks as part of Zacks Earnings Certain Dividend Portfolio (ECDP), benefiting from investor preference for quality dividend stocks.
+KO | positive | Stock increased 6.5% over 12 weeks as part of Zacks Earnings Certain Dividend Portfolio (ECDP), benefiting from investor inclination toward dividend stocks amid volatility.
+LRN | positive | Stock jumped 15.4% since Zacks Top 10 Stocks for 2026 list release on January 5, 2026, significantly outperforming S&P 500's 1.1% increase.
+NVDA | negative | Stock experienced significant losses that spread across the tech sector, contributing to the broader market selloff and heightened investor anxiety.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8c7ef7906e5f7c9c42576371ca21ccb6db2c8b7c0b9ec4ced50310d32dbd1c64
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T15:45:02Z
+publisher: The Motley Fool
+author: Micah Zimmerman
+url: https://www.fool.com/investing/2026/11/23/berkshire-has-owned-these-2-consumer-stocks-for-decades-id-buy-both-before-december-and-never-sell/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F0e0af1a312a62a08047b2d2339b56c4a979efab5-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: KO, AXP, BRK.A, BRK.B
+keywords: Berkshire Hathaway, long-term investing, dividend stocks, consumer brands, pricing power, network effects
+headline: Berkshire Has Owned These 2 Consumer Stocks for Decades. I'd Buy Both Before December and Never Sell.
+<<<SUMMARY>>>
+The article recommends buying Coca-Cola and American Express before December, highlighting Berkshire Hathaway's decades-long holdings in both companies. Coca-Cola is raising its full-year outlook with strong growth in Zero Sugar products and affordable packs, while American Express is attracting younger millennials and Gen Z cardholders with new partnerships and rewards programs ahead of Small Business Saturday.
+<<<INSIGHTS>>>
+KO | positive | Company raised full-year outlook three quarters in a row, CEO reports affordability strategy is working, Coca-Cola Zero Sugar grew 16% last quarter, and demonstrates pricing power in North America. Strong brand equity and consistent dividend growth support long-term investment thesis.
+AXP | positive | Successfully attracting younger demographics (millennials and Gen Z), maintaining 99% spend retention on refreshed Platinum card, launching new partnerships (Airbnb, Resy Rewards), and creating network effects. Despite regulatory challenges and workforce cuts, the company demonstrates strong competitive positioning in premium card market.
+BRK.A | positive | Maintains unwavering commitment to both holdings since 1990s with no material changes in positions, demonstrating confidence in long-term value creation. Greg Abel's endorsement of both companies as businesses Berkshire 'understands well' and expects to 'compound over decades' reinforces conviction.
+BRK.B | positive | Maintains unwavering commitment to both holdings since 1990s with no material changes in positions, demonstrating confidence in long-term value creation. Greg Abel's endorsement of both companies as businesses Berkshire 'understands well' and expects to 'compound over decades' reinforces conviction.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:03a43041e84a4a9d5cfa9466f08860afd3f84777f8e12c90acf8c006e06f7073
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T17:30:02Z
+publisher: The Motley Fool
+author: Jake Lerch
+url: https://www.fool.com/coverage/better-buy/2026/11/23/coca-cola-vs-pepsico-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F61ea707ee5315922f898d43f2d4a684c09a21556-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: KO, PEP, MNST, WMT, YUM, KDP, KHC, NSRGY
+keywords: beverage industry, consumer staples, valuation comparison, dividend stocks, business model comparison, profitability analysis
+headline: Coca-Cola vs. PepsiCo: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Coca-Cola and PepsiCo represent two distinct strategies in the beverage and consumer goods space. Coca-Cola operates an asset-light beverage-only model with higher profitability (32.1% operating margin) and faster revenue growth (4.9% since 2023), but trades at a premium valuation (P/E 28.3x). PepsiCo offers a diversified snacks and beverages portfolio with lower profitability (15.8% operating margin) but more attractive valuation (P/E 17.6x). The analyst concludes Coca-Cola is the better choice for 2027 despite its higher valuation, though PepsiCo remains a viable alternative.
+<<<INSIGHTS>>>
+KO | positive | Coca-Cola demonstrates superior revenue growth (4.9% average since 2023), significantly higher operating margins (32.1%), and stronger profitability metrics. The asset-light model and global bottling network provide competitive advantages, though offset by premium valuation and risks including KFC partnership ending in 2027 and IRS tax litigation.
+PEP | neutral | PepsiCo offers attractive valuation (lower P/E at 17.6x and P/S at 1.9x) and strong free cash flow ($7.7B), but lags in revenue growth (2.5% average) and profitability (15.8% operating margin). The diversified snacks portfolio provides stability but faces integration risks from acquisitions and higher customer concentration risk with Walmart.
+MNST | neutral | Mentioned as a strategic partner and competitor to Coca-Cola in the beverage market, indicating competitive pressure in the industry.
+WMT | neutral | Identified as a vital distribution partner for PepsiCo accounting for 14% of consolidated net revenue, representing significant customer concentration risk.
+YUM | neutral | Mentioned as a key foodservice operator partner for PepsiCo, supporting its distribution network.
+KDP | neutral | Identified as a competitor to Coca-Cola in the beverage market.
+KHC | neutral | Mentioned as a competitor to PepsiCo across multiple food and beverage categories.
+NSRGY | neutral | Identified as a major competitor to PepsiCo in the snacks and food categories.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:4a38ed476f07ae0c40f159eaf3d825c56644de67f90f8c7977de444ad28d1b62
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T18:00:02Z
+publisher: The Motley Fool
+author: John Ballard
+url: https://www.fool.com/investing/2026/11/23/if-recession-hits-2027-this-dividend-stock-i-want-to-own/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fcb3e3ee7cc459b18d7ca762c9d13f0b1be57d993-2120x1414.jpg&w=1200&op=resize
+category: 
+tickers: KO
+keywords: dividend stock, recession, Coca-Cola, bear market, operating margins, payout ratio, valuation, consumer staples
+headline: If a Recession Hits in 2027, This Is the Dividend Stock I Want to Own
+<<<SUMMARY>>>
+Coca-Cola is highlighted as an attractive dividend stock for potential recession protection, having returned 36% year-to-date. The company has increased its dividend for 64 consecutive years and historically outperforms during bear markets. Rising operating margins (from 27.9% in 2019 to 32% currently) and a lower payout ratio (62% vs. 75% previously) provide cushion for continued dividend growth. However, the stock trades at a premium valuation of 29x forward earnings versus its 5-year median of 23x, leaving less room for error.
+<<<INSIGHTS>>>
+KO | positive | Strong historical recession resilience, 64 consecutive years of dividend increases, improving margins, lower payout ratio providing dividend growth cushion, and resilient sales volume support a positive outlook despite premium valuation concerns.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:8407873c77865d075cf73220bd686b95c3eacae02a4aad0ff4f71272bb4acda5
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T21:59:02Z
+publisher: The Motley Fool
+author: David Jagielski, Cpa
+url: https://www.fool.com/investing/2026/11/23/as-tech-stocks-crash-is-berkshire-hathaway-a-safe-haven-investment/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F944e0431cf34787d4c109a930544ffe9cccff265-2560x1707.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, AXP, KO, XLK, BRK.A, BRK.B
+keywords: safe-haven investment, tech stock crash, value stocks, portfolio diversification, dividend stocks, market volatility
+headline: As Tech Stocks Crash, Is Berkshire Hathaway a Safe-Haven Investment?
+<<<SUMMARY>>>
+Berkshire Hathaway's stock has risen 16% over the past three months while tech stocks fell 11%, suggesting investors are shifting to safer value stocks. However, the article argues that despite being a quality investment with a portfolio centered on Apple, American Express, and Coca-Cola, Berkshire may not be the best safe-haven option due to its lack of dividend payments and valuation at 16 times earnings. Investors might find better opportunities in discounted dividend stocks.
+<<<INSIGHTS>>>
+AAPL | positive | Apple is highlighted as one of three blue-chip stalwarts that form close to half of Berkshire's portfolio, indicating it is a high-quality, iconic company that provides portfolio stability.
+AXP | positive | American Express is identified as one of the three large, iconic companies that anchor Berkshire's portfolio, representing a quality, established business.
+KO | positive | Coca-Cola is cited as one of three blue-chip stalwarts central to Berkshire's portfolio, representing a stable, high-quality investment.
+XLK | negative | The tech-focused ETF has fallen 11% over the past three months, demonstrating weakness in the technology sector amid recent market turmoil.
+BRK.A | neutral | While the stock has performed well recently and is described as a quality investment with strong holdings, the author expresses caution about its valuation (16x earnings) and lack of dividend, suggesting it may not be the best safe-haven choice despite its defensive characteristics.
+BRK.B | neutral | While the stock has performed well recently and is described as a quality investment with strong holdings, the author expresses caution about its valuation (16x earnings) and lack of dividend, suggesting it may not be the best safe-haven choice despite its defensive characteristics.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:19ec541ea18801d6c6d07992048e23bfa3bb9b3563f5011ad339d48733dba633
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T12:53:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3034339/consumer-staples-etfs-back-in-favor-amid-growing-market-uncertainty?cid=CS-ZC-FT-etf_news_and_commentary-3034339
+image_url: https://staticx-tuner.zacks.com/images/articles/main/bd/484.jpg
+category: 
+tickers: WMT, COST, PG, KO, XLP, VDC, IYK, FTXG
+keywords: consumer staples, defensive investing, market rotation, technology stocks, AI stocks, inflation, ETFs, household budgets, dividend payments
+headline: Consumer Staples ETFs Back in Favor Amid Growing Market Uncertainty
+<<<SUMMARY>>>
+Investors are shifting toward consumer staples stocks and ETFs as a defensive strategy amid concerns about elevated technology valuations, AI sustainability, and economic uncertainty. Rising inflation and tighter household budgets are expected to boost demand for essential, value-priced goods, making consumer staples companies more attractive for stable earnings and dividend payments.
+<<<INSIGHTS>>>
+WMT | positive | Mentioned as a major holding in XLP ETF; benefits from consumer rotation toward defensive staples and price-conscious shopping during inflationary periods.
+COST | positive | Mentioned as a major holding in XLP ETF; positioned to benefit from defensive consumer staples demand and value-oriented purchasing patterns.
+PG | positive | Mentioned as a major holding in XLP ETF; household products company well-positioned for stable demand during economic uncertainty.
+KO | positive | Mentioned as a major holding in XLP ETF; beverage company benefits from consistent consumer demand for essential goods.
+XLP | positive | Recommended as broad exposure to defensive consumer staples with $14.90B AUM, low 0.08% expense ratio, and high liquidity.
+VDC | positive | Recommended for diversified exposure to U.S. consumer staples with $8.29B AUM and low 0.09% expense ratio.
+IYK | positive | Recommended for exposure to consumer staples businesses across food, beverages, and personal care with $1.39B AUM.
+FTXG | positive | Recommended as focused option for food and beverage manufacturers; benefits from consumer staples rotation despite smaller $38M AUM.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:59792d7355d5598b5ce5727006d8dbd5335488eb5989998c18d855d9ef63bce3
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T13:02:01Z
+publisher: The Motley Fool
+author: Matt Dilallo
+url: https://www.fool.com/investing/2026/11/24/i-own-schd-here-s-why-i-also-own-this-7-yielding-income-etf/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F2d854357627ee6ea9b7c91dd7a1bb85f61bf7ca5-2149x1394.jpg&w=1200&op=resize
+category: 
+tickers: SCHD, JEPI, PG, KO
+keywords: dividend ETF, income strategy, covered call ETF, passive income, retirement planning, dividend growth
+headline: I Own SCHD. Here’s Why I Also Own This 7%-Yielding Income ETF.
+<<<SUMMARY>>>
+The author explains his complementary income strategy using two ETFs: SCHD (Schwab U.S. Dividend Equity ETF) as a core holding providing stable, growing dividend income with a 3% yield, and JEPI (JPMorgan Equity Premium Income ETF) as a supplemental position using covered calls to generate higher income at 7%+ yield. Together, these funds support his early retirement income goals.
+<<<INSIGHTS>>>
+SCHD | positive | Positioned as a core anchor holding with high-quality dividend stocks, consistent dividend growth history (P&G 70 years, Coca-Cola 64 years), attractive 3% yield, and strong 13.8% annualized total return since inception.
+JEPI | positive | Praised as an income enhancer with attractive 7%+ yield and defensive characteristics that outperform during market downturns, though acknowledged to underperform during strong bull markets due to covered call cap.
+PG | positive | Highlighted as a top holding in SCHD with 70 years of consecutive dividend increases, exemplifying the high-quality dividend growth stocks the fund targets.
+KO | positive | Featured as a top holding in SCHD with 64 years of consecutive dividend increases, demonstrating the fund's focus on established dividend aristocrats.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a0ad698df944eff8792863b71d4339e40e8f86288443310cff6ad275b9ed71c5
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T16:32:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3034744/is-pepsico-sacrificing-pricing-power-to-regain-snack-volumes?cid=CS-ZC-FT-analyst_blog|quick_take-3034744
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/102.jpg
+category: 
+tickers: PEP, KO, MNST
+keywords: volume recovery, affordability initiatives, margin compression, pricing strategy, snack foods, consumer demand, profitability trade-off
+headline: Is PepsiCo Sacrificing Pricing Power to Regain Snack Volumes?
+<<<SUMMARY>>>
+PepsiCo is pursuing volume recovery in North American snacks through affordability initiatives and innovation, achieving four consecutive quarters of salty snack volume growth. However, this strategy is compressing margins by 280 basis points due to increased promotional spending and lower pricing power. The company is expanding portion-control multipacks generating $3.5B annually to balance value delivery with profitability, while competitors like Coca-Cola and Monster Beverage employ mixed pricing and premiumization strategies.
+<<<INSIGHTS>>>
+PEP | negative | Stock declined 2.3% YTD vs. industry growth of 21.8%; core operating margins contracted 280 bps; earnings estimates for 2026-2027 moved lower; carries Zacks Rank #4 (Sell). While volume growth is positive, profitability pressure and valuation concerns outweigh near-term benefits.
+KO | neutral | Successfully balancing pricing and volume through mixed strategy: 5% unit case volume growth with 1% price/mix improvement. Leveraging both affordability and premiumization effectively, with management targeting sustainable 2-3% growth from both volume and price/mix.
+MNST | neutral | Implementing targeted price increases while maintaining resilient demand and minimal anticipated volume disruption. Diversified approach across price points with affordable offerings and multipacks supports volume momentum, balancing profitability with consumer accessibility.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aae6147a840619412e1b7ad1e19a1df366502c5c8031d9d32ba182ab907c3322
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T16:35:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3034753/can-coca-cola-navigate-rising-costs-while-protecting-margins?cid=CS-ZC-FT-analyst_blog|quick_take-3034753
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a5/1022.jpg
+category: 
+tickers: KO, PEP, KDP
+keywords: margin expansion, inflationary pressures, cost management, pricing strategy, productivity initiatives, beverage industry, Q3 2026 earnings
+headline: Can Coca-Cola Navigate Rising Costs While Protecting Margins?
+<<<SUMMARY>>>
+Coca-Cola demonstrated resilience in Q3 2026 with gross and operating margin expansions of 170 bps and 110 bps respectively, despite inflationary pressures. The company is managing costs through joint commodity procurement, productivity initiatives, and strategic pricing while expecting further margin expansion in 2026. Peers PepsiCo and Keurig Dr Pepper face greater margin pressures despite similar cost management efforts.
+<<<INSIGHTS>>>
+KO | positive | Strong Q3 margin expansion (170 bps gross, 110 bps operating), effective cost management strategies, expected margin expansion in 2026, and outperformance versus industry peers (4.7% vs 1.6% gain in past three months) demonstrate resilience and operational strength.
+PEP | neutral | While implementing productivity initiatives and pricing strategies, PepsiCo's core operating margin contracted 35 bps in Q3 2026 and management expects North American margins to remain pressured in Q4, indicating ongoing challenges despite cost-saving efforts.
+KDP | neutral | Company is managing inflationary pressures through pricing and productivity, but excluding tariff refunds, inflationary pressures outweighed pricing and cost-saving benefits in Q3 2026, suggesting underlying margin pressure despite strategic initiatives.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ac0f4602549a477fad2fef1b228b027bf483c89eee5f51c27b89f03d39b2b6cd
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T08:00:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/25/3410018/0/en/energy-drinks-market-in-india-2032-usd-980-million-opportunity-amid-evolving-consumer-preferences-says-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: MNST, PEP, KO, BUD
+keywords: energy drinks market, India, CAGR 3.15%, botanical formulations, ready-to-drink beverages, FSSAI labeling, price-tiered portfolios, natural/organic energy drinks
+headline: Energy Drinks Market in India 2032: USD 980 Million Opportunity Amid Evolving Consumer Preferences, Says Mordor Intelligence
+<<<SUMMARY>>>
+India's energy drinks market is projected to grow from USD 0.82 billion in 2026 to USD 0.98 billion by 2032 at a 3.15% CAGR. Growth is driven by convenient ready-to-drink servings for work and gaming occasions, botanical formulations for product differentiation, and price-tiered portfolios. However, FSSAI labeling enforcement beginning July 2026 presents regulatory considerations for suppliers.
+<<<INSIGHTS>>>
+MNST | positive | Listed as a key competitor in India's growing energy drinks market with 3.15% CAGR expansion through 2032, benefiting from increased consumption occasions and product differentiation trends.
+PEP | positive | Competing through Sting brand in India's energy drinks market, which is experiencing growth driven by work routines, gaming occasions, and differentiated product positioning.
+KO | positive | Competing through Thums Up Charged in India's growing energy drinks market; positioned to benefit from price-tiered portfolios and botanical formulation trends.
+BUD | positive | Competing through Budweiser Beats in India's expanding energy drinks market with opportunities in convenient servings and differentiated product positioning.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:38011a1b391c3dd03b09f3abd5f6beee6d1b2f03af4e11fde520e2cc5969720f
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T13:31:52Z
+publisher: The Motley Fool
+author: Rick Munarriz
+url: https://www.fool.com/investing/2026/11/25/prediction-coca-cola-stock-will-close-2026-over-100-per-share-heres-why-its-a-no-brainer-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fdfbb1d338b7f95a86521c645d4152d2f86e6aa5a-1500x1000.jpg&w=1200&op=resize
+category: 
+tickers: KO
+keywords: Coca-Cola, stock prediction, dividend growth, valuation, defensive stock, earnings beats, market volatility
+headline: Prediction: Coca-Cola Stock Will Close 2026 Over $100 per Share. Here’s Why It’s a No-Brainer Buy for 2027.
+<<<SUMMARY>>>
+Coca-Cola stock has surged 40% in 2026 and is approaching $100 per share. The analyst predicts it will exceed $100 by year-end and continue outperforming the market in 2027, citing consistent earnings beats, annual dividend increases, and its defensive characteristics as a low-beta stock. However, the current valuation at a 29x earnings multiple is elevated compared to historical levels, and the dividend yield has compressed to 2.2%.
+<<<INSIGHTS>>>
+KO | positive | The article presents a bullish case for Coca-Cola, highlighting its 40% year-to-date performance, 11+ consecutive quarters of earnings beats, consistent dividend increases, low-beta defensive characteristics, and expected outperformance in 2027. While acknowledging elevated valuation concerns, the analyst maintains a positive outlook for the stock's ability to beat a volatile market.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:018bb9605ecf21b613a25fafa894c26c4bf37ff9310bdf3aaf209ef82bcbb711
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T14:30:02Z
+publisher: The Motley Fool
+author: Daniel Foelber
+url: https://www.fool.com/investing/2026/11/25/even-without-warren-buffett-as-ceo-berkshire-hathaway-is-outperforming-the-s-and-p-500-nasdaq-and-dow-by-the-widest-margin-since-2022-history-says-this-is-what-happens-next/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F3067bb9afe420729bf75ef0b6fed3a0ab059dd8b-2048x1365.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, AXP, KO, GOOG, GOOGL, GOOGM, GOOGN, MCO, BRK.A, BRK.B
+keywords: Berkshire Hathaway, market outperformance, Greg Abel, value investing, market volatility, cash reserves, disciplined capital allocation
+headline: Even Without Warren Buffett as CEO, Berkshire Hathaway Is Outperforming the S&P 500, Nasdaq, and Dow by the Widest Margin Since 2022. History Says This Is What Happens Next.
+<<<SUMMARY>>>
+Berkshire Hathaway is outperforming major market indexes by its widest margin since 2022, up 13.4% year-to-date compared to the S&P 500's 1% gain. Under new CEO Greg Abel, Berkshire maintains Warren Buffett's disciplined investment philosophy while holding a record $372.77 billion in cash. The company's strong performance during market volatility reflects its value-stock portfolio and reputation as a safe-haven investment.
+<<<INSIGHTS>>>
+AAPL | positive | Berkshire's largest holding with strong dividend income; characterized as a modern consumer-staples company with steady cash flows and lower AI capital expenditures, indicating quality and stability.
+AXP | positive | Core Berkshire position expected to compound long-term; generated significant dividend income ($1.668 billion combined with other core holdings) with substantial unrealized gains.
+KO | positive | Core Berkshire holding maintained for long-term compounding; part of portfolio generating strong dividend income with exceptional cost basis advantage.
+GOOG | positive | Elevated to Berkshire's fourth-largest holding; generates high free cash flow from Google Search and YouTube; expected to return to positive FCF as AI investments convert to profits.
+GOOGL | positive | Elevated to Berkshire's fourth-largest holding; generates high free cash flow from Google Search and YouTube; expected to return to positive FCF as AI investments convert to profits.
+GOOGM | positive | Elevated to Berkshire's fourth-largest holding; generates high free cash flow from Google Search and YouTube; expected to return to positive FCF as AI investments convert to profits.
+GOOGN | positive | Elevated to Berkshire's fourth-largest holding; generates high free cash flow from Google Search and YouTube; expected to return to positive FCF as AI investments convert to profits.
+MCO | positive | Core Berkshire position maintained for long-term compounding; part of disciplined portfolio of well-understood businesses.
+BRK.A | positive | Significantly outperforming major indexes with 13.4% YTD return, maintaining disciplined investment approach under new leadership, holding substantial cash reserves for opportunities, and demonstrating resilience during market uncertainty.
+BRK.B | positive | Significantly outperforming major indexes with 13.4% YTD return, maintaining disciplined investment approach under new leadership, holding substantial cash reserves for opportunities, and demonstrating resilience during market uncertainty.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a13b41197e62460ee2f238f45508851b20da22151577ecadfed2357e05ec6aae
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T14:45:02Z
+publisher: The Motley Fool
+author: Jennifer Saibil
+url: https://www.fool.com/investing/2026/11/25/warren-buffetts-rule-is-to-be-greedy-only-when-others-are-fearful-the-sp-500-gained-23-in-the-year-after-the-1987-crash/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Ff02a2f3bf4ae18595979874dc2ffefd81d68ed79-5580x3720.jpg&w=1200&op=resize
+category: 
+tickers: KO, BRK.A, BRK.B
+keywords: Warren Buffett, market correction, Buffett indicator, value investing, market crash, contrarian investing, stock market valuation
+headline: Warren Buffett's Rule Is to Be "Greedy Only When Others Are Fearful." The S&P 500 Gained 23% in the Year After the 1987 Crash.
+<<<SUMMARY>>>
+With the market entering a correction and the Buffett indicator at 275% (indicating overvaluation), investors should consider Warren Buffett's famous investing philosophy of being fearful when others are greedy and greedy when others are fearful. Historical precedent shows that the S&P 500 gained 23% in the year following the 1987 crash, suggesting potential opportunities during market downturns for value investors willing to buy quality stocks at discounted prices.
+<<<INSIGHTS>>>
+KO | positive | Cited as Buffett's longest-held position, acquired in 1988 during the post-crash period when he was being 'greedy.' Used as an example of a life-changing investment made during fearful market conditions.
+BRK.A | positive | Presented as a successful example of Buffett's contrarian investing strategy, built through disciplined buying during market downturns. The article highlights its market-beating performance and positions it as a potential safe-haven investment during market volatility.
+BRK.B | positive | Presented as a successful example of Buffett's contrarian investing strategy, built through disciplined buying during market downturns. The article highlights its market-beating performance and positions it as a potential safe-haven investment during market volatility.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:371cdd5d2624e5f63b54d3664201b150a78b8e09665709aabd36486892827beb
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T19:53:02Z
+publisher: The Motley Fool
+author: Thomas Niel
+url: https://www.fool.com/investing/2026/11/25/heres-how-much-a-10000-investment-in-mcdonalds-pays-you-every-single-year/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fe6290c224b5111dd1e3935076dac60cc7210df17-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: MCD, KO
+keywords: dividend growth, Dividend King, McDonald's, dividend yield, consumer staples, turnaround strategy
+headline: Here's How Much a $10,000 Investment in McDonald's Pays You Every Single Year
+<<<SUMMARY>>>
+McDonald's has achieved Dividend King status with its 50th consecutive annual dividend increase. A $10,000 investment generates approximately $277.92 in annual dividend income at a 2.8% yield. While the stock has underperformed in 2026, analysts view current valuations as favorable for dividend growth investors, with potential upside if the company's turnaround efforts succeed and the stock rebounds to historical highs.
+<<<INSIGHTS>>>
+MCD | positive | Achieved Dividend King status with 50 consecutive dividend increases. Current valuation offers attractive entry point with 2.8% dividend yield. Strong potential for total returns through dividend growth and stock price appreciation if turnaround efforts succeed. Company has historically overcome headwinds and could reach new all-time highs.
+KO | neutral | Mentioned as a comparison point for valuation multiples (trading at 25x forward earnings vs McDonald's at 20x), indicating it trades at a premium. No direct investment recommendation or analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b345b925d09dc28eef096b90a3b5731ee10b7aaa12ef01764b217bea954f4b8d
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T19:57:02Z
+publisher: The Motley Fool
+author: Anders Bylund
+url: https://www.fool.com/coverage/better-buy/2026/11/25/cava-vs-monster-beverage-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb87002131a6e039ab8fc62272c140c1b76703a72-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: CAVA, MNST, KO, PEP, CELH, SBUX
+keywords: restaurant expansion, energy drinks, valuation comparison, cash flow, debt-to-equity ratio, forward P/E ratio, growth vs. stability
+headline: CAVA vs. Monster Beverage: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares CAVA Group and Monster Beverage as investment options for 2027. CAVA operates a rapidly expanding Mediterranean fast-casual restaurant chain with 500 locations and 27% revenue growth, but faces valuation concerns with a 93.4x forward P/E ratio and slowing same-restaurant sales growth of 3.1%. Monster Beverage dominates the global energy drink market with $9.6 billion in revenue, 20.2% growth, $1.9 billion in free cash flow, zero debt, and a more attractive 38.0x forward P/E ratio. The analyst recommends Monster Beverage as the better choice for 2027, citing stronger financial fundamentals and lower valuation despite CAVA's impressive growth trajectory.
+<<<INSIGHTS>>>
+CAVA | neutral | While CAVA demonstrates impressive revenue growth of 27% and maintains profitability with positive net income, the analyst expresses concerns about its high forward P/E of 93.4x, slowing same-restaurant sales growth of 3.1%, declining net income in the latest quarter, and overvaluation relative to fundamentals. The company is viewed as a high-growth story but not recommended at current prices.
+MNST | positive | Monster Beverage is recommended as the better investment choice due to its strong financial performance including $9.6 billion in revenue with 20.2% growth, $1.9 billion in free cash flow, zero debt, lower forward P/E of 38.0x, and a clean balance sheet. The company's established market dominance, efficient distribution model through Coca-Cola partners, and superior cash generation make it the preferred pick for 2027.
+KO | positive | Coca-Cola is mentioned positively as Monster Beverage's key distribution partner through its bottler network, enabling Monster's global reach with minimal capital investment. This partnership is highlighted as a significant competitive advantage supporting Monster's growth strategy.
+PEP | neutral | PepsiCo is mentioned as a competitor to Monster Beverage in the global energy drink market, representing competitive pressure but without specific negative commentary about its performance.
+CELH | neutral | Celsius is mentioned as an emerging rival to Monster Beverage in the energy drink sector, representing competitive threats but without detailed analysis of its performance or outlook.
+SBUX | neutral | Starbucks is mentioned as a national competitor to CAVA in the restaurant and food manufacturing sectors, representing competitive pressure but without specific performance commentary.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3fbececd3e4a26b7b8aecc106cd0024fc90a390d4a47401b75b858dbe6be2077
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T21:15:02Z
+publisher: The Motley Fool
+author: Stefon Walters
+url: https://www.fool.com/investing/2026/11/25/the-dividend-etf-id-choose-to-to-generate-500-a-month-in-passive-income/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F6323f9b8d0100eaa66bdb491f3032511aef5ea0c-2000x1335.jpg&w=1200&op=resize
+category: 
+tickers: SCHD, PG, KO, PEP, ABT
+keywords: dividend ETF, passive income, SCHD, dividend yield, Dividend Kings, portfolio diversification, long-term investing
+headline: The Dividend ETF I'd Choose to to Generate $500 a Month in Passive Income
+<<<SUMMARY>>>
+The Schwab U.S. Dividend Equity ETF (SCHD) is recommended as a diversified, high-yield dividend ETF for generating passive income. With a current yield of 3.1% and holdings of 102 well-vetted dividend-paying stocks, investors would need approximately $200,000 invested to generate $500 monthly. The ETF holds 11 Dividend Kings and complements S&P 500 investments due to its lower tech exposure and focus on consumer staples, healthcare, and energy sectors.
+<<<INSIGHTS>>>
+SCHD | positive | Recommended as a reliable, diversified dividend ETF with high yield (3.1%), low expense ratio (0.06%), strong holdings including 11 Dividend Kings, and suitable for long-term passive income generation.
+PG | positive | Highlighted as a Dividend King with 50+ consecutive years of dividend increases and a top holding in SCHD (4.66%), representing financial stability and reliability.
+KO | positive | Identified as a Dividend King with consistent dividend history, included in SCHD's top 10 holdings (4.41%), exemplifying quality and longevity.
+PEP | positive | Listed as a Dividend King in SCHD's top holdings, demonstrating long-term dividend growth and financial strength.
+ABT | positive | Identified as a Dividend King in SCHD's top 10 holdings, representing healthcare sector quality and dividend reliability.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f2a19d134c08bc6ca0990e7b3da7cc35623ae11cbf919fc5fad0656ba2c0f511
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T22:27:01Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/25/2-bargain-stocks-to-buy-with-usd1-000-in-november/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd52078e466c0df8f9b9300b1695388012bc06b4d-2119x1414.jpg&w=1200&op=resize
+category: 
+tickers: NVO, PEP, KO
+keywords: dividend stocks, bargain stocks, GLP-1 drugs, Novo Nordisk, PepsiCo, high yield, consumer staples, pharmaceuticals
+headline: 2 Bargain Stocks to Buy With $1,000 in November
+<<<SUMMARY>>>
+The article recommends Novo Nordisk and PepsiCo as bargain stocks in November, both offering historically high dividend yields (4.4% and 4.1% respectively) well above the S&P 500's 1% yield. Novo Nordisk is improving execution in its GLP-1 weight-loss drug portfolio and raised 2026 guidance, while PepsiCo, though facing near-term headwinds in organic sales growth, remains a strong long-term business with a 50+ year dividend increase streak. Both stocks trade at valuations below their industry averages.
+<<<INSIGHTS>>>
+NVO | positive | Company is showing improved execution with its GLP-1 pill launch, raised full-year 2026 guidance, and trades at an attractive 10x P/E ratio well below the pharma industry average of 27x. The 4.4% dividend yield is historically high and above industry average.
+PEP | positive | Despite current business headwinds and lagging organic sales growth versus competitors, PepsiCo is a Dividend King with 50+ years of consecutive dividend increases. It trades at 18x P/E below its 5-year average of 25x, offers a 4.1% yield, and is making strategic acquisitions and product innovations to navigate current challenges.
+KO | neutral | Mentioned as a peer comparison showing stronger organic sales growth (7% vs PepsiCo's 3.1%), but no investment recommendation or detailed analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:fdf19a0b7ae641b0559c7e296141118adcc0758ca09627fc44cd366a77d510da
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T23:28:02Z
+publisher: The Motley Fool
+author: Matthew Benjamin
+url: https://www.fool.com/investing/2026/11/25/heres-how-many-coca-cola-shares-it-takes-to-earn-1300-every-quarter-in-dividends/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F079cd8f958b5260838fd10b8dac16758eaa65886-1280x865.jpg&w=1200&op=resize
+category: 
+tickers: KO
+keywords: dividend income, Coca-Cola shares, Dividend King, quarterly dividends, stock performance, recession-resistant, low-calorie beverages
+headline: Here’s How Many Coca-Cola Shares It Takes to Earn $1,300 Every Quarter in Dividends
+<<<SUMMARY>>>
+To generate $1,300 in quarterly dividend income from Coca-Cola, an investor would need to own approximately 2,453 shares, costing around $240,394 at the current share price of $98. The article highlights Coca-Cola's strong 2026 performance (up 40% year-to-date), its status as a Dividend King with 64 consecutive years of dividend increases, and its resilience during recessions. The company's portfolio of low- or no-calorie beverages also positions it well against GLP-1 drug trends.
+<<<INSIGHTS>>>
+KO | positive | The article presents Coca-Cola favorably, citing its 40% year-to-date outperformance versus the S&P 500's 4.5%, its 64-year dividend increase streak, historical resilience during recessions, and portfolio composition of 68% low- or no-calorie drinks that positions it well against emerging health trends.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:babbe724f6b103c6cffd134c645e24daaddff6e61aff591a0f6a2ce737791337
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T12:39:02Z
+publisher: The Motley Fool
+author: Stefon Walters
+url: https://www.fool.com/investing/2026/11/26/coca-cola-is-the-most-boring-stock-i-own-after-64-years-of-dividend-raises-ill-never-sell/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F1c1391dac27f219d90e921d1e00eb76d22990755-1836x1225.jpg&w=1200&op=resize
+category: 
+tickers: KO
+keywords: dividend king, dividend stocks, Coca-Cola, asset-light business model, recession-proof, brand moat, valuation premium, long-term investment
+headline: Coca-Cola Is the Most Boring Stock I Own. After 64 Years of Dividend Raises, I'll Never Sell.
+<<<SUMMARY>>>
+Coca-Cola is highlighted as a premier dividend stock with 64 consecutive years of dividend increases, earning it Dividend King status. The company's asset-light business model, strong brand moat, and recession-resistant nature make it an attractive long-term holding despite trading at a premium valuation of 28.9x earnings following a 40% year-to-date gain.
+<<<INSIGHTS>>>
+KO | positive | The article praises Coca-Cola's 64-year dividend streak, efficient asset-light business model, strong global brand recognition, recession-resistant characteristics, and consistent cash flows. The author expresses commitment to never selling the stock. However, the positive sentiment is tempered by acknowledgment of premium valuation at 28.9x earnings and limited near-term upside potential.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:58425f637f6607d5cdc486163d23e34f70a8ea52fcc4e13a25949d978113fcd3
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T13:32:02Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/26/forget-the-markets-hottest-stocks-this-boring-dividend-stock-is-where-id-put-1000-before-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F9a27cb2a1e29cf849f4a8b605a9c2c4f4d655fa5-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: PEP, KO
+keywords: dividend stock, PepsiCo, Dividend King, consumer staples, long-term investing, valuation, dividend yield, business diversification
+headline: Forget the Market's Hottest Stocks. This Boring Dividend Stock Is Where I'd Put $1,000 Before 2027.
+<<<SUMMARY>>>
+PepsiCo is recommended as an attractive long-term dividend investment despite current underperformance versus Coca-Cola. The company, a Dividend King with 54 years of consecutive dividend increases, offers a 4.2% dividend yield and trades at valuations below its historical average. While facing headwinds from inflation and changing consumer preferences, PepsiCo's diversified business across beverages, snacks, and packaged foods, combined with strategic brand acquisitions and product innovation, positions it well for patient long-term investors.
+<<<INSIGHTS>>>
+PEP | positive | Despite current underperformance, PepsiCo is recommended as a compelling long-term opportunity. The company offers an attractive 4.2% dividend yield backed by 54 years of consecutive dividend increases (Dividend King status), trades at valuations below historical averages, maintains industry-leading competitive advantages, and is actively adapting to consumer preferences through strategic acquisitions and product innovation.
+KO | neutral | Coca-Cola is presented as the current industry leader with stronger near-term performance (7% organic sales growth vs. PepsiCo's 3.1%), but is noted as trading at premium valuations relative to its historical average. While acknowledged as a strong competitor with brand strength and market leadership, it lacks the business diversification that PepsiCo offers.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:7107f65c674b1d596901f789647a57080555cfd877417d940b5808993d859d94
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T13:50:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3035870/coca-cola-vs-keurig-dr-pepper-which-beverage-stock-looks-stronger?cid=CS-ZC-FT-analyst_blog|most_popular_stocks-3035870
+image_url: https://staticx-tuner.zacks.com/images/articles/main/00/1011.jpg
+category: 
+tickers: KO, KDP
+keywords: beverage market share, brand portfolio, distribution networks, organic revenue growth, valuation comparison, energy drinks, coffee business, market momentum
+headline: Coca-Cola vs. Keurig Dr Pepper: Which Beverage Stock Looks Stronger?
+<<<SUMMARY>>>
+In a comparison of two major beverage companies, Coca-Cola (KO) is identified as the stronger investment choice over Keurig Dr Pepper (KDP). KO benefits from global scale, 32 billion-dollar brands, and 22 consecutive quarters of value share gains, with Q3 organic revenue growth of 7% and earnings growth of 11%. While KDP offers a lower valuation (14.22X forward P/E vs KO's 27.69X) and growth in energy drinks and coffee, KO's stronger one-year stock performance (33.9% vs 28.6%), operating momentum, and earnings visibility make it the more compelling choice despite its premium valuation.
+<<<INSIGHTS>>>
+KO | positive | Strong global presence in 200+ countries, 32 billion-dollar brands, 22 consecutive quarters of value share gains, Q3 organic revenue growth of 7%, comparable earnings growth of 11% to 91 cents per share, management guidance for 2026 organic revenue growth of at least 5% and earnings growth of at least 11%, and outperformance over KDP with 33.9% one-year returns. Upward earnings estimate revisions signal improving analyst confidence.
+KDP | neutral | Demonstrates competitive momentum with energy brands surpassing 10% market share, Dr Pepper as America's second-largest soda brand, and Dr Pepper Zero franchise achieving 25% retail sales growth. Q3 constant-currency sales increased 8.6% with U.S. Refreshment Beverages growing 10.9%. However, trades at a lower valuation (14.22X forward P/E) and offers less compelling investment case compared to KO despite credible growth opportunities in energy drinks and coffee segments.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:15cbbb9cf94aa36f19a600b5d0f1dd9230b18214f9c91a593c7a3a6237db3b83
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T14:31:02Z
+publisher: The Motley Fool
+author: James Brumley
+url: https://www.fool.com/investing/2026/11/26/investing-usd500-a-month-in-coca-cola-realty-income-and-altria-could-generate-over-usd1-000-in-monthly-dividend-income-by-2046/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Ffaa514331cf4ff9c6af2fad6cb1960c03c07b256-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: KO, O, MO
+keywords: dividend investing, dividend reinvestment, long-term investing, dividend stocks, compound growth, retirement income, Dividend Kings
+headline: Investing $500 a Month in Coca-Cola, Realty Income, and Altria Could Generate Over $1,000 in Monthly Dividend Income by 2046
+<<<SUMMARY>>>
+The article demonstrates how investing $500 monthly in three Dividend King stocks—Coca-Cola, Realty Income, and Altria—could generate over $1,400 in monthly dividend income within 20 years through dividend reinvestment and compound growth. Assuming a 10% annual return and current dividend yields, a $380,000 portfolio would be built by 2046, highlighting the power of long-term dividend investing combined with reinvestment strategies.
+<<<INSIGHTS>>>
+KO | positive | Positioned as a reliable Dividend King with 50+ consecutive years of dividend increases, 2.2% dividend yield, and solid long-term demand for its products. Author expects it to continue delivering steady returns, though acknowledges past gains may have been exaggerated.
+O | positive | Highlighted as one of the market's highest-yielding dividend payers with 5.6% dividend yield and 50+ years of consecutive dividend increases. Presented as a strong income-generating investment for the 20-year accumulation strategy.
+MO | neutral | Included as a Dividend King with 6% dividend yield and 50+ years of dividend increases, but author expresses caution about future performance due to the smoking-cessation movement, suggesting it may not repeat past two decades' performance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:766d97c12fca61d3c3143f728530a6f5a63c507595981df1739a7bb88c50c0d1
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T15:30:14Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3035990/coca-cola-ko-up-6-4-since-last-earnings-report-can-it-continue?cid=CS-ZC-FT-realtime_blog-3035990
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default65.jpg
+category: 
+tickers: KO, COCO
+keywords: earnings beat, revenue growth, guidance raised, volume growth, pricing power, margin expansion, emerging markets
+headline: Coca-Cola (KO) Up 6.4% Since Last Earnings Report: Can It Continue?
+<<<SUMMARY>>>
+Coca-Cola reported strong Q3 2026 results, beating earnings and revenue estimates with 11% EPS growth and 7% revenue increase. The company raised its 2026 full-year guidance, projecting at least 5% organic revenue growth and 11% comparable EPS growth. Global unit case volume grew 5%, driven by strong performance in India, China, Mexico, and Brazil, with particular strength in Coca-Cola Zero Sugar (+16%). The stock has gained 6.4% in the past month and currently holds a Zacks Rank #3 (Hold) rating.
+<<<INSIGHTS>>>
+KO | positive | Strong Q3 earnings beat with 11% EPS growth and 7% revenue growth exceeding consensus estimates. Company raised full-year 2026 guidance for organic revenue growth and EPS growth. Global volume growth of 5% across key markets, margin expansion of 170 bps, and improved free cash flow outlook demonstrate solid operational momentum.
+COCO | positive | Reported 33.7% year-over-year revenue growth and 45% EPS growth ($0.58 vs $0.40 prior year). Expected to post 88.9% year-over-year earnings growth in the current quarter. Stock gained 8.4% over the past month, outperforming broader market trends.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e1851c5917ff8bad51cfaf0adf4c2a3ac132460ce057d5714fbfaf20ce5ad218
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T22:00:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/26/3411040/0/en/functional-beverage-market-outlook-2026-2032-usd-255-3-billion-as-demand-for-healthier-drinks-accelerates-says-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: PEP, MNST, DANOY, KO
+keywords: functional beverages, market growth, health and wellness, sports drinks, energy drinks, hydration beverages, Asia-Pacific expansion, clean-label products, gut health
+headline: Functional Beverage Market Outlook 2026–2032: USD 255.3 Billion as Demand for Healthier Drinks Accelerates, Says Mordor Intelligence
+<<<SUMMARY>>>
+The global functional beverage market is projected to grow from USD 163.8 billion in 2026 to USD 255.3 billion by 2032, registering a CAGR of 7.62% during 2027–2032. Asia-Pacific is emerging as the fastest-growing region at 8.2% CAGR, driven by demand for hydration, sports nutrition, and gut health-focused beverages. Key growth drivers include integration of functional ingredients into familiar formats (fiber-added carbonated drinks), clean-label natural ingredients, and regional expansion of hydration and sports beverages.
+<<<INSIGHTS>>>
+PEP | positive | Listed as a key competitor in the rapidly growing functional beverage market with strong positioning in sports and energy drink categories, benefiting from market expansion and consumer shift toward healthier beverages.
+MNST | positive | Identified as a major player in the energy drink segment, which is experiencing strong growth driven by increasing consumer demand for functional beverages and expanding retail distribution.
+DANOY | positive | Key competitor with portfolio opportunities in functional beverages, particularly in hydration and gut health segments, which are identified as major growth drivers.
+KO | positive | Major global beverage manufacturer with extensive functional beverage portfolio (Aquarius, Pocari Sweat through partnerships) and strong regional expansion capabilities, particularly in high-growth Asia-Pacific market.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:2cb5d351baa67dcbf64be159ac01f7a47585881987037059ad59c2cb51953ab9
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-27T10:06:02Z
+publisher: The Motley Fool
+author: Sean Williams
+url: https://www.fool.com/investing/2026/11/27/warren-buffett-successor-greg-abel-has-47-berkshire-hathaway-346-billion-portfolio-invested-3-proven-winners/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb436aa54c2a8bbb266f5d52862f3c53fbdc88fc4-3000x2076.jpg&w=1200&op=resize
+category: 
+tickers: AAPL, AXP, KO, BRK.A, BRK.B
+keywords: Berkshire Hathaway, Greg Abel, Warren Buffett, portfolio concentration, Apple, American Express, Coca-Cola, investment strategy
+headline: Warren Buffett's Successor, Greg Abel, Has 47% of Berkshire Hathaway's $346 Billion Portfolio Invested in 3 Proven Winners
+<<<SUMMARY>>>
+Following Warren Buffett's retirement as CEO at the end of 2025, successor Greg Abel has maintained the company's investment philosophy of portfolio concentration. Nearly $163 billion (47%) of Berkshire Hathaway's $346 billion investment portfolio is concentrated in three holdings: Apple ($78.08B), American Express ($45.74B), and Coca-Cola ($38.8B). All three positions were originally built by Buffett and are valued for their competitive advantages, brand strength, and consistent performance.
+<<<INSIGHTS>>>
+AAPL | positive | Highlighted as the largest position at $78.08B (22.5% of portfolio). Praised for loyal customer base, exceptional pricing power, massive share buyback program ($902.8B), and innovative capabilities including Apple Intelligence AI platform under new leadership.
+AXP | positive | Second-largest position at $45.74B (13.2% of portfolio). Labeled as an 'indefinite' holding by Buffett. Valued for dual revenue streams (merchant fees and lending), cyclical benefits, and affluent customer base with lower default risk.
+KO | positive | Third-largest position at $38.8B (11.2% of portfolio). Longest-held stock since 1988 with 64-year dividend streak. Praised for global brand recognition, worldwide operations, emerging market growth potential, and superior marketing capabilities.
+BRK.A | positive | Described as having a record-breaking year with shares at all-time highs under new leadership. Maintains disciplined investment philosophy focused on concentrated positions in high-quality businesses with durable competitive advantages.
+BRK.B | positive | Described as having a record-breaking year with shares at all-time highs under new leadership. Maintains disciplined investment philosophy focused on concentrated positions in high-quality businesses with durable competitive advantages.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3922252b00ca7190d905898b880b4a4c03058d47f4797099938ed8ea3e3f7114
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-27T11:26:02Z
+publisher: The Motley Fool
+author: Neil Patel
+url: https://www.fool.com/investing/2026/11/27/if-you-put-usd10-000-in-the-schwab-u-s-dividend-equity-etf-10-years-ago-here-s-what-you-d-have-now/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F12b1980bc5220e15b1e620002c32bf01384bcdf3-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: SCHD, PG, KO, HD
+keywords: dividend ETF, SCHD, long-term returns, dividend yield, tech underperformance, income investing, portfolio diversification
+headline: If You Put $10,000 in the Schwab U.S. Dividend Equity ETF 10 Years Ago, Here’s What You’d Have Now
+<<<SUMMARY>>>
+A $10,000 investment in the Schwab U.S. Dividend Equity ETF (SCHD) 10 years ago would be worth approximately $33,320 today, representing a 12.8% annualized return. While this underperformed the S&P 500's 270% return over the decade due to limited tech exposure, SCHD has outperformed significantly in 2026 with a 24% gain versus the S&P 500's 1% climb. The ETF offers a 2.95% dividend yield and low 0.06% expense ratio, making it suitable for income-focused investors seeking stability rather than growth.
+<<<INSIGHTS>>>
+SCHD | positive | The ETF demonstrated solid 10-year performance (12.8% annualized return), exceptional 2026 performance (24% gain), attractive dividend yield (2.95%), and low expense ratio (0.06%). It provides stability and income through exposure to profitable, dividend-paying companies with strong financials.
+PG | positive | Listed as a top holding (4.64%) in SCHD with 10+ consecutive years of dividend payments, indicating financial stability and shareholder-friendly policies.
+KO | positive | Top holding (4.37%) in SCHD representing a durable, cash-generating business with strong financials and consistent dividend history.
+HD | positive | Second-largest holding (4.48%) in SCHD, representing a profitable business that has stood the test of time with reliable dividend payments.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:12b3803c7cf8697788e6941ffe63284f3fc68176ab0d212a34d56c914fb7c350
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-27T15:11:41Z
+publisher: The Motley Fool
+author: Sara Appino
+url: https://www.fool.com/coverage/better-buy/2026/11/27/celsius-vs-lululemon-athletica-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F497213577468110e4ae04f3160ed91a99378c474-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: CELH, LULU, PEP, MNST, KO
+keywords: functional beverages, athletic apparel, revenue growth, distribution partnership, premium brand positioning, valuation comparison, market expansion
+headline: Celsius vs. lululemon athletica: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Celsius Holdings and lululemon athletica as investment options for 2027. Celsius, a functional beverage company backed by PepsiCo's distribution network, shows rapid 49% revenue growth and profitability, though it faces concentration risk with Pepsi accounting for 43% of revenue. Lululemon, a premium athletic apparel company, maintains higher margins but struggles with slowing growth and declining sales. The analyst recommends Celsius as the better buy for growth-oriented investors despite higher valuation multiples, citing its profitable expansion and Alani Nu brand momentum versus lululemon's stalled momentum.
+<<<INSIGHTS>>>
+CELH | positive | Strong 49% revenue growth, profitability with 10% net margin, successful Alani Nu acquisition driving 50% YoY retail sales growth, and international expansion potential via PepsiCo partnership. Analyst recommends it as the better buy for 2027.
+LULU | neutral | Maintains premium brand positioning with 12.8% net margin and strong free cash flow of $921.7M, but faces headwinds including slowing growth (1.7%), declining North American sales, leadership transition, and stalled momentum. Cheaper valuation but business has not turned the corner.
+PEP | neutral | Mentioned as Celsius's primary distributor accounting for 43.2% of revenue, representing both an opportunity for distribution scale and a concentration risk for Celsius.
+MNST | neutral | Mentioned as a major competitor to Celsius in the functional beverage market, representing competitive pressure.
+KO | neutral | Mentioned as a large-scale competitor to Celsius in the beverage market.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:81db282324ca3fee572f948b43b44ebd0c2208c34544787df2a9f0c46404973a
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-28T10:30:00Z
+publisher: The Motley Fool
+author: Selena Maranjian
+url: https://www.fool.com/investing/2026/11/28/1000-invested-in-berkshire-hathaway-brkb-stock-10/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F892530%2Ffool-berkshire-hathaway-brk.jpg&w=1200&op=resize
+category: 
+tickers: AXP, KO, OXY, OXY.WS, BRK.A, BRK.B
+keywords: Berkshire Hathaway, stock valuation, long-term investing, Warren Buffett, S&P 500 comparison, price-to-earnings ratio, dividend policy, market correction
+headline: $1,000 Invested in Berkshire Hathaway Stock 10 Years Ago Is Worth About $3,650. Where Will It Be in 2036?
+<<<SUMMARY>>>
+A $1,000 investment in Berkshire Hathaway 10 years ago has grown to approximately $3,650. The article projects the stock could reach around $11,336 by 2036, assuming 12% annual growth. While Berkshire's long-term performance has been strong, current valuations appear elevated compared to historical averages, and the company's growth rate is expected to moderate from its historical 20% annual average due to its massive $1.2 trillion market cap.
+<<<INSIGHTS>>>
+AXP | neutral | Mentioned as a significant Berkshire Hathaway holding (22% ownership). No independent analysis provided; included only as part of Berkshire's diversified portfolio composition.
+KO | neutral | Mentioned as a Berkshire Hathaway holding (9% ownership). Included only to illustrate Berkshire's diversified stock portfolio; no independent sentiment analysis provided.
+OXY | neutral | Mentioned as a Berkshire Hathaway holding (26% ownership). Included only as part of Berkshire's portfolio diversification; no independent analysis provided.
+OXY.WS | neutral | Mentioned as a Berkshire Hathaway holding (26% ownership). Included only as part of Berkshire's portfolio diversification; no independent analysis provided.
+BRK.A | positive | The article presents Berkshire as a well-diversified, built-to-last company with strong historical performance (13.82% 10-year average return) and significant cash reserves ($373 billion). The author holds it as their largest position and projects continued outperformance of the S&P 500 at ~12% annual growth. However, sentiment is tempered by concerns about current overvaluation.
+BRK.B | positive | The article presents Berkshire as a well-diversified, built-to-last company with strong historical performance (13.82% 10-year average return) and significant cash reserves ($373 billion). The author holds it as their largest position and projects continued outperformance of the S&P 500 at ~12% annual growth. However, sentiment is tempered by concerns about current overvaluation.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:55c6f65ccd7e878c7a7c23d75617b8de4f8484e3531915dfe50d461c6598a8e3
+symbol: KO
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-28T10:52:02Z
+publisher: The Motley Fool
+author: Daniel Sparks
+url: https://www.fool.com/investing/2026/11/28/the-best-3-dividend-raising-stocks-to-own-until-2030/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Ff105e6d51ff8103de7e26661c8d92e9df3bf2417-2560x1707.jpg&w=1200&op=resize
+category: 
+tickers: AVGO, MSFT, KO
+keywords: dividend stocks, dividend raises, long-term investing, free cash flow, valuation, semiconductor, software, beverages
+headline: The Best 3 Dividend-Raising Stocks to Own Until 2030
+<<<SUMMARY>>>
+The article analyzes three dividend-raising stocks suitable for long-term holding until 2030: Broadcom, Microsoft, and Coca-Cola. Broadcom offers the best value with the lowest valuation and most room for dividend growth, using only 29% of free cash flow for dividends. Microsoft maintains solid fundamentals with free cash flow covering dividends over twice, though capital spending has increased significantly. Coca-Cola offers the highest yield and longest dividend streak (64 years), but trades at a premium valuation of 29x earnings.
+<<<INSIGHTS>>>
+AVGO | positive | Cheapest valuation at 16x earnings, lowest dividend payout ratio (29% of FCF) leaving most room for future raises, 15-year consecutive dividend increase history, and strong free cash flow generation ($31.9B in 3 quarters of FY2026).
+MSFT | positive | Solid dividend coverage with FCF covering payout over 2x, 18% earnings growth in fiscal Q1, fair valuation at 25x forward earnings, though recent dividend raise (8%) was smaller than previous years and capital spending has surged significantly.
+KO | neutral | Highest yield at 2.2% and impressive 64-year consecutive dividend increase streak, but valuation is stretched at 29x earnings (up from 23x at end of 2025), and dividend uses 60% of free cash flow, limiting growth potential compared to peers.
+<<<END>>>

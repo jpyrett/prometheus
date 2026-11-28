@@ -7,6 +7,8 @@
     as_of(day)                    # a context manager (design choices entry 127, the Proving Ground): while it is open the desk works AS OF a past trading day, whatever the setting
     bound_day()                   # the day `as_of` binds, or None
     horizon()                     # the last instant the desk may know while a day is bound: the end of that day, Eastern time, as an aware UTC datetime; None when no day is bound
+    start_of_day(day)             # the first instant of a calendar day in Eastern time, as an aware UTC datetime (with `end_of_day`, the bounds of a dated window of the news: entry 151)
+    calendar_today()              # today's calendar date in Eastern time (the bound day while a day is bound): the "today" of a person's words, never the simulated trading day
 
 WHY. The desk judges a recommendation at a moment: the market must be open, the recommendation must be for that trading day, a quote must be fresh, and an approval lasts until the window closes (Critic v1, entries
 57 and 69). At night, at the weekend and on a holiday none of that can be true, so the desk could not be run for testing and development. With `USE_LIVE_TRADING=false` the desk works at a simulated moment:
@@ -80,6 +82,22 @@ def end_of_day(day: date, config: CalendarConfig | None = None) -> datetime:
     """The last instant of a calendar day in the market's own time zone (US Eastern), as an aware UTC datetime: 23:59:59.999999 on that day in New York."""
     config = config or load_calendar()
     return datetime.combine(day, time.max, tzinfo=ZoneInfo(config.timezone)).astimezone(timezone.utc)
+
+
+def start_of_day(day: date, config: CalendarConfig | None = None) -> datetime:
+    """The first instant of a calendar day in the market's own time zone (US Eastern), as an aware UTC datetime: 00:00:00 on that day in New York (04:00 or 05:00 UTC, by the daylight saving of that day: no 24-hour arithmetic, so a day
+    that is 23 or 25 hours long starts and ends where it should). With `end_of_day` it bounds a DATED window of the news (entry 151): the Eastern day, not the UTC one."""
+    config = config or load_calendar()
+    return datetime.combine(day, time.min, tzinfo=ZoneInfo(config.timezone)).astimezone(timezone.utc)
+
+
+def calendar_today(real_now: datetime | None = None, config: CalendarConfig | None = None) -> date:
+    """Today's CALENDAR date in the market's own time zone (US Eastern), the date a person means by "today" and by "last Tuesday" (entry 151): the real clock's Eastern date, whatever `USE_LIVE_TRADING` says (the simulated clock
+    of entry 76 is the last CLOSED trading day, and a Saturday request for the news of that Saturday is not a request about the future), and the BOUND day while the Proving Ground has one. Not `market_day`: that is a trading day."""
+    day = _BOUND.get()
+    if day is not None:
+        return day
+    return eastern_date(real_now or datetime.now(timezone.utc), config)
 
 
 def horizon() -> datetime | None:

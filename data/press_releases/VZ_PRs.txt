@@ -1,0 +1,495 @@
+<<<PRESS_RELEASE>>>
+id: 09bc8075ea3ed221
+symbol: VZ
+published_utc: 2025-12-04T13:31:00Z
+url: https://www.nasdaq.com/press-release/verizon-declares-quarterly-dividend-december-4-2025-12-04
+headline: Verizon declares quarterly dividend on December 4
+<<<TEXT>>>
+--The Board of Directors at Verizon Communications Inc. today declared a quarterly dividend of 69 cents per outstanding share, consistent with the prior quarter's dividend rate. The quarterly dividend is payable on February 2, 2026 to Verizon shareholders of record at the close of business on January 12, 2026. "Verizon is transforming to be a leaner, faster and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1a68fb27edfb2b20
+symbol: VZ
+published_utc: 2025-12-11T09:00:00Z
+url: https://www.nasdaq.com/press-release/denver-broncos-and-verizon-business-enhance-stadium-operations-and-fan-experiences
+headline: Denver Broncos and Verizon Business enhance stadium operations and fan experiences
+<<<TEXT>>>
+--Fans at Empower Field at Mile High, home of the Denver Broncos, can now enjoy a significantly upgraded game-day experience thanks to the new Wi-Fi 6 E and Local Area Network installation led by Verizon Business. Through this collaboration with Verizon, this new Wi-Fi 6 E ready network is a team investment into technology that delivers exceptional experiences...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4d0daab0e7f37e4c
+symbol: VZ
+published_utc: 2025-12-17T09:05:00Z
+url: https://www.nasdaq.com/press-release/total-wireless-introduces-edge-comprehensive-device-financing-program-prepaid
+headline: Total Wireless Introduces Edge, a Comprehensive Device Financing Program for Prepaid Customers
+<<<TEXT>>>
+Total Wireless, a leading provider of premium, no-contract wireless service covered by the Verizon 5 G network, today announced the launch of Total Wireless Edge 1, a groundbreaking financing solution provided through Glow Services Corp and created specifically for prepaid customers. Total Wireless seeks to eliminate those barriers, and makes it simple– the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8424b140898367ba
+symbol: VZ
+published_utc: 2025-12-29T09:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-report-earnings-january-30-2026-2025-12-29
+headline: Verizon to report earnings January 30, 2026
+<<<TEXT>>>
+--Verizon Communications Inc. will report fourth-quarter 2025 earnings on Friday, January 30, 2026. Verizon Communications Inc. powers and empowers how its millions of customers live, work and play, delivering on their demand for mobility, reliable network connectivity and security. Headquartered in New York City, serving countries worldwide and nearly all...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 705c419fc808ffd1
+symbol: VZ
+published_utc: 2026-01-05T09:00:00Z
+url: https://www.nasdaq.com/press-release/media-alert-verizon-launches-ultimate-super-bowl-lx-experience-2026-01-05
+headline: *MEDIA ALERT* Verizon Launches The Ultimate Super Bowl LX Experience
+<<<TEXT>>>
+The ultimate prize is the Super Bowl Experience, which includes game tickets, VIP on-field access, and all travel and accommodations included. Winning customers will have exclusive behind the scenes access on Super Bowl Sunday, with opportunities to either throw passes on the sideline or participate in the post-game celebration by handing out Championship...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 589befd1bb45ffb3
+symbol: VZ
+published_utc: 2026-01-05T09:00:00Z
+url: https://www.nasdaq.com/press-release/media-alert-verizon-and-david-beckham-kick-third-wave-verizon-ultimate-access
+headline: *MEDIA ALERT* Verizon and David Beckham Kick Off Third Wave of Verizon Ultimate Access, Dropping Free FIFA World Cup 2026™ Tickets Exclusively for Customers
+<<<TEXT>>>
+WHAT: Verizon is back with David Beckham to announce the third Verizon Ultimate Access ticket drop for FIFA World Cup 2026™ giving customers an unprecedented opportunity to attend World Cup matches. From January 7-11, customers will have the chance to score hundreds of free tickets to every match, including all group stage matches in every U.S. city.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3e9de99b9a7609d4
+symbol: VZ
+published_utc: 2026-01-16T18:26:00Z
+url: https://www.nasdaq.com/press-release/standardaero-set-join-sp-midcap-400-2026-01-16
+headline: StandardAero Set to Join S&P MidCap 400
+<<<TEXT>>>
+ABOUT S&P DOW JONES INDICES. S&P Dow Jones Indices is the largest global resource for essential index-based concepts, data and research, and home to iconic financial market indicators, such as the S&P 500 ® and the Dow Jones Industrial Average ®. S&P Dow Jones Indices is a division of S&P Global, which provides essential intelligence for individuals, companies,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 845289ac68cc285e
+symbol: VZ
+published_utc: 2026-01-27T08:30:00Z
+url: https://www.nasdaq.com/press-release/verizon-report-earnings-january-30-2026-2026-01-27
+headline: Verizon to report earnings January 30, 2026
+<<<TEXT>>>
+--Verizon Communications Inc. will report fourth-quarter 2025 earnings on Friday, January 30, 2026. Verizon Communications Inc. powers and empowers how its millions of customers live, work and play, delivering on their demand for mobility, reliable network connectivity and security. Headquartered in New York City, serving countries worldwide and nearly all...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2cf0fd6a0bca09bc
+symbol: VZ
+published_utc: 2026-01-30T06:30:00Z
+url: https://www.nasdaq.com/press-release/verizon-delivers-2025-financial-guidance-highest-quarterly-net-adds-2019-2026-01-30
+headline: Verizon Delivers on 2025 Financial Guidance with Highest Quarterly Net Adds Since 2019
+<<<TEXT>>>
+--Verizon Communications Inc. today reported fourth-quarter and full-year 2025 results, marking a critical inflection point for the company. Driven by a play to win mandate from CEO Dan Schulman, Verizon delivered its highest quarterly total mobility and broadband volumes since 2019, signaling the start of a comprehensive strategic turnaround.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2c1b53e131cf8c1e
+symbol: VZ
+published_utc: 2026-02-18T09:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-speak-barclays-communications-and-content-symposium-february-24-2026-02-18
+headline: Verizon to speak at Barclays Communications and Content Symposium on February 24
+<<<TEXT>>>
+--Tony Skiadas, executive vice president and chief financial officer at Verizon, is scheduled to speak at the Barclays Communications and Content Symposium on Tuesday, February 24, at 8:00 a.m. ET. Verizon Communications Inc. powers and empowers how its millions of customers live, work and play, delivering on their demand for mobility, reliable network...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c0c5937be10f0c20
+symbol: VZ
+published_utc: 2026-03-05T09:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-speak-deutsche-bank-media-internet-telecom-conference-march-10-2026-03-05
+headline: Verizon to speak at Deutsche Bank Media, Internet & Telecom Conference on March 10
+<<<TEXT>>>
+--Tony Skiadas, executive vice president and chief financial officer at Verizon, is scheduled to speak at the Deutsche Bank Media, Internet& Telecom Conference on Tuesday, March 10, at 8:00 a.m. ET. Verizon Communications Inc. powers and empowers how its millions of customers live, work and play, delivering on their demand for mobility, reliable network...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a30e85603b4178c5
+symbol: VZ
+published_utc: 2026-03-23T09:00:00Z
+url: https://www.nasdaq.com/press-release/media-alert-all-ways-verizon-customers-can-win-free-tickets-fifa-world-cup-2026tm
+headline: *MEDIA ALERT* All the ways Verizon customers can win free tickets to the FIFA World Cup 2026™ this spring
+<<<TEXT>>>
+--As part of Verizon Ultimate Access to FIFA World Cup 2026™, Verizon is announcing multiple new ways for customers to win free tickets to the FIFA World Cup 2026™, bringing fans closer than ever to the action:. The prize: FIFA World Cup tickets for round 32 and round 16 matches across Philadelphia, Boston, Miami, Atlanta, Houston, Kansas City, New York/ New Jersey and Dallas,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8223602dcdce33a9
+symbol: VZ
+published_utc: 2026-03-30T11:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-report-earnings-april-27-2026-2026-03-30
+headline: Verizon to report earnings April 27, 2026
+<<<TEXT>>>
+--Verizon Communications Inc. will report first-quarter 2026 earnings on Monday, April 27, 2026. Verizon Communications Inc. powers and empowers how its millions of customers live, work and play, delivering on their demand for mobility, reliable network connectivity and security. Headquartered in New York City, serving countries worldwide and nearly all of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 62d31be85d96b4bf
+symbol: VZ
+published_utc: 2026-04-09T10:26:00Z
+url: https://www.nasdaq.com/press-release/total-wireless-hiding-fifa-world-cup-2026tm-tickets-plain-sight-2026-04-09
+headline: Total Wireless Is Hiding FIFA World Cup 2026™ Tickets in Plain Sight
+<<<TEXT>>>
+As excitement builds for the FIFA World Cup 2026™, Total Wireless is taking an unexpected, community-first approach to connecting fans with one of the biggest sporting events in the world. Across major host cities— including New York, Miami, Houston, and Los Angeles— Total Wireless is posting street flyers designed to look like ordinary community notices.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 97579db5c7d57be7
+symbol: VZ
+published_utc: 2026-04-16T00:01:00Z
+url: https://www.nasdaq.com/press-release/verizon-power-unforgettable-fan-experiences-fifa-world-cup-2026tm-2026-04-16
+headline: Verizon to Power Unforgettable Fan Experiences at the FIFA World Cup 2026™
+<<<TEXT>>>
+--As the host countries prepare for the FIFA World Cup 2026™, Verizon has been instrumental in designing and delivering the connected experience that will power the world’ s most anticipated soccer tournament.  "Our partnership with Verizon has been pivotal in realizing the vision for the FIFA World Cup 2026™— a truly connected and unforgettable event," said Nacho...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 13dfe88502febb39
+symbol: VZ
+published_utc: 2026-04-22T10:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-report-first-quarter-earnings-april-27-2026-2026-04-22
+headline: Verizon to report first-quarter earnings on April 27, 2026
+<<<TEXT>>>
+--Verizon Communications Inc. will report first-quarter 2026 earnings on Monday, April 27, 2026. Verizon Communications Inc. powers and empowers how its millions of customers live, work and play, delivering on their demand for mobility, reliable network connectivity and security. Headquartered in New York City, serving countries worldwide and nearly all of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 617be325844cc093
+symbol: VZ
+published_utc: 2026-04-23T09:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-frontline-network-slice-available-laptops-tablets-and-smartphones-nationwide
+headline: Verizon Frontline Network Slice available for laptops, tablets and smartphones nationwide
+<<<TEXT>>>
+--Building on the successful nationwide launch of the Verizon Frontline Network Slice, Verizon today announced the expansion of this game-changing technology to include availability on compatible laptops, tablets and smartphones. Dedicated 5 G UW network resources reserved exclusively for first responders, helping ensure network resource...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 53113543ed59fcfb
+symbol: VZ
+published_utc: 2026-04-27T07:00:00Z
+url: https://www.nasdaq.com/press-release/verizons-transformation-actions-deliver-growth-profitability-1q26-company-raises
+headline: Verizon’s Transformation Actions Deliver Growth & Profitability in 1Q26; Company Raises Adjusted EPS Guidance
+<<<TEXT>>>
+--Verizon Communications Inc. today reported first-quarter 2026 results that demonstrate accelerating momentum in its strategic transformation. "Our first-quarter 2026 results show that our turnaround is not only progressing, it is gaining momentum, "said Verizon CEO Dan Schulman." This result was driven in part by the company's disciplined approach to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6f8c28f84b5828ee
+symbol: VZ
+published_utc: 2026-04-28T06:00:00Z
+url: https://www.nasdaq.com/press-release/media-alert-how-win-free-tickets-fifa-world-cup-2026tm-final-verizon-2026-04-28
+headline: *MEDIA ALERT* How to win free tickets to the FIFA World Cup 2026™ Final with Verizon
+<<<TEXT>>>
+--Verizon is giving its mobile and home customers, as well as small businesses nationwide, the ultimate chance to experience the FIFA World Cup 2026™ Final. Please note that travel and accommodations are not included. Who can claim: Verizon mobile and home customers nationwide When: The national drop occurs at 3 pm EST on April 28, 2026, on a first-come, first-serve...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b5e4315d90f5cd06
+symbol: VZ
+published_utc: 2026-05-06T08:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-unveils-digital-twin-technology-and-expanded-satellite-fleet-preparation-2026
+headline: Verizon Unveils Digital Twin Technology and Expanded Satellite Fleet in Preparation for the 2026 Hurricane Season
+<<<TEXT>>>
+--As the June 1 start of the 2026 hurricane season approaches, Verizon is taking a massive leap forward in disaster response and recovery. Recognizing that the hours following a landfalling storm are the most critical for the safety and well being of our communities, Verizon is introducing a suite of technological innovations designed to restore connectivity...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2bb974584f7b33dc
+symbol: VZ
+published_utc: 2026-05-08T09:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-speak-upcoming-investor-conferences-2026-05-08
+headline: Verizon to Speak at Upcoming Investor Conferences
+<<<TEXT>>>
+--Dan Schulman, CEO of Verizon, is scheduled to speak at the MoffettNathanson Media, Internet& Communications Conference on Wednesday, May 13, at 9:00 a.m. ET. Verizon Communications Inc. powers and empowers how its millions of customers live, work and play, delivering on their demand for mobility, reliable network connectivity and security.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 608c8de9a6cda066
+symbol: VZ
+published_utc: 2026-05-11T08:25:00Z
+url: https://www.nasdaq.com/press-release/verizon-announces-private-exchange-offers-and-consent-solicitations-11-series-notes
+headline: Verizon announces private exchange offers and consent solicitations for 11 series of notes open to certain investors
+<<<TEXT>>>
+--Verizon Communications Inc. today announced the commencement of offers to exchange, on behalf of certain of its wholly-owned subsidiaries, any and all of the outstanding series of debt securities listed below for specified series of newly issued notes of Verizon on the terms and subject to the conditions set forth in the Exchange Offer and Consent...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 536cb10ddd0cde66
+symbol: VZ
+published_utc: 2026-05-11T08:25:00Z
+url: https://www.nasdaq.com/press-release/verizon-announces-tender-offers-and-consent-solicitations-20-series-verizon-and
+headline: Verizon announces tender offers and consent solicitations for 20 series of Verizon and certain of its subsidiaries’ notes
+<<<TEXT>>>
+--Verizon Communications Inc. today announced the commencement of 20 separate offers, for its own account and on behalf of certain of its wholly-owned subsidiaries, to purchase for cash any and all of the debt securities listed in Table 1 below and up to $1.25 billion aggregate purchase price of the outstanding series of debt securities listed in Table 2 below,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9dc4cccf9f6f02a8
+symbol: VZ
+published_utc: 2026-05-19T09:02:00Z
+url: https://www.nasdaq.com/press-release/vulnerability-exploitation-top-breach-entry-point-2026-industry-wide-dbir-finds-2026
+headline: Vulnerability Exploitation Top Breach Entry Point, 2026 Industry-Wide DBIR Finds
+<<<TEXT>>>
+--Verizon published the annual Data Breach Investigations Report today, which shows how Artificial Intelligence is impacting the cyber threat landscape as a whole. Although this report uses 2025 data— predating the latest frontier model advancements— the trends are clear: AI is fundamentally reshaping the cybersecurity industry.  "While the velocity of cyber...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 79f2386bcbe4f38c
+symbol: VZ
+published_utc: 2026-05-20T13:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-champions-innovators-tomorrow-names-winner-verizon-frontline-app-developer
+headline: Verizon champions the innovators of tomorrow, names winner of Verizon Frontline App Developer Challenge
+<<<TEXT>>>
+--Continuing a decades-long commitment to driving innovation in public safety, emergency response and community resilience, Verizon today announced the winner of its first-ever Verizon Frontline App Developer Challenge. The winner of this year’ s Verizon Frontline App Developer Challenge was Rian Karim of San Jose, Calif., who designed a situational...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: eb81366cc0c02f9f
+symbol: VZ
+published_utc: 2026-05-20T13:06:00Z
+url: https://www.nasdaq.com/press-release/verizon-redeem-debt-securities-june-20-2026-2026-05-20
+headline: Verizon to redeem debt securities on June 20, 2026
+<<<TEXT>>>
+--Verizon Communications Inc. today announced that it will redeem the following notes on June 20, 2026:. We are redeeming $1,274,166,000 of the Notes under CUSIP 92343 V ER1, $11,012,000 of the Notes under CUSIP 92343 V EQ3, and $10,104,000 of the Notes under CUSIP U9221A BK3 for a total redemption amount of $1,295,282,000 of the outstanding $2,545,282,000...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 63d4a078250baca1
+symbol: VZ
+published_utc: 2026-05-21T08:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-announces-massive-ticket-drop-fifa-world-cup-2026tm-2026-05-21
+headline: Verizon announces a massive ticket drop for FIFA World Cup 2026™
+<<<TEXT>>>
+Today Verizon, the Official Telecommunication Services Sponsor for FIFA World Cup 2026™, announced its largest free ticket giveaway for Verizon customers to secure free seats at the world’ s biggest sporting event. To mark the occasion, Verizon is debuting a brand new commercial featuring David Beckham, who returns to show fans how Verizon is the only way to get "...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8f54fb9bb80ebac9
+symbol: VZ
+published_utc: 2026-05-21T09:10:00Z
+url: https://www.nasdaq.com/press-release/iconic-flip-meets-incredible-value-new-motorola-razr-2026-joins-verizons-lineup-2026
+headline: The iconic flip meets incredible value: The new motorola razr 2026 joins Verizon’s lineup
+<<<TEXT>>>
+--Today, Verizon announced its most affordable folding phone, the next-generation motorola razr 2026, available on May 21 for $0 with a new line on any myPlan for 36 months on Verizon Device Payment. That's why Verizon is making it easier than ever to upgrade to the latest Motorola tech with some of the most competitive offers yet:. Not a Verizon customer yet?
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 49bc0befeadcaddd
+symbol: VZ
+published_utc: 2026-05-21T13:13:00Z
+url: https://www.nasdaq.com/press-release/verizon-announces-preliminary-shareholder-voting-results-2026-annual-meeting-2026-05
+headline: Verizon Announces Preliminary Shareholder Voting Results from 2026 Annual Meeting
+<<<TEXT>>>
+--Verizon Communications Inc. today announced the preliminary voting results from its 2026 annual meeting of shareholders. Approved the compensation of the company’ s named executive officers as described in the 2026 proxy statement; Approved the company’ s 2026 long-term incentive plan; and Ratified the appointment of Ernst& Young LLP as the company’ s...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 604ec630809f3a0e
+symbol: VZ
+published_utc: 2026-06-01T16:05:00Z
+url: https://www.nasdaq.com/press-release/array-completes-sale-select-spectrum-assets-verizon-10-billion-2026-06-01
+headline: Array completes sale of select spectrum assets to Verizon for $1.0 billion
+<<<TEXT>>>
+--Array Digital Infrastructure, Inc. today announced the successful closing of the previously announced agreement with Verizon to sell a portion of the Company's retained spectrum licenses for total consideration of $1.0 billion. These transactions further the objective announced on May 28, 2024, to opportunistically monetize remaining spectrum...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: df6ef0e813e9ad5a
+symbol: VZ
+published_utc: 2026-06-02T07:54:00Z
+url: https://www.nasdaq.com/press-release/verizon-announces-extension-early-participation-date-its-tender-offers-and-consent
+headline: Verizon announces extension of early participation date of its tender offers and consent solicitations for certain series of its subsidiaries’ notes, increase to the waterfall cap of its tender offers for certain series of Verizon and its subsidiaries...
+<<<TEXT>>>
+--Verizon Communications Inc. today announced that it amended the terms of its previously announced Tender Offers and Consent Solicitations to extend the early participation date until 5:00 p.m. on June 16, 2026, with respect to its previously announced 11 separate offers, on behalf of certain of its wholly-owned subsidiaries, to purchase for cash any and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5a6e888567bb41fb
+symbol: VZ
+published_utc: 2026-06-02T07:54:00Z
+url: https://www.nasdaq.com/press-release/verizon-announces-extension-early-participation-date-and-early-results-its-private
+headline: Verizon announces extension of early participation date and early results of its private exchange offers and consent solicitations for 11 series of notes open to certain investors
+<<<TEXT>>>
+--Verizon Communications Inc. today announced that the early participation date has been extended until 5:00 p.m. on June 16, 2026, with respect to its previously announced offers to exchange, on behalf of certain of its wholly-owned subsidiaries, any and all of the outstanding series of debt securities listed below for specified series of newly issued...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 97ce8a76fe665eab
+symbol: VZ
+published_utc: 2026-06-02T14:02:00Z
+url: https://www.nasdaq.com/press-release/verizon-announces-pricing-terms-its-tender-offers-and-consent-solicitations-20-series
+headline: Verizon announces pricing terms of its tender offers and consent solicitations for 20 series of Verizon and certain of its subsidiaries’ notes
+<<<TEXT>>>
+--Verizon Communications Inc. today announced the pricing terms of its previously announced 20 separate offers, for its own account and on behalf of certain of its wholly-owned subsidiaries, to purchase for cash any and all of the debt securities listed in Table 1 below and a total aggregate purchase price that shall be in an amount sufficient to allow Verizon...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0cd1bf6af68de365
+symbol: VZ
+published_utc: 2026-06-04T18:48:00Z
+url: https://www.nasdaq.com/press-release/verizon-declares-quarterly-dividend-june-4-2026-2026-06-04
+headline: Verizon declares quarterly dividend on June 4, 2026
+<<<TEXT>>>
+--The Board of Directors at Verizon Communications Inc. today declared a quarterly dividend of 70.75 cents per outstanding share, consistent with the prior quarter's dividend rate. The quarterly dividend is payable on August 3, 2026 to Verizon shareholders of record at the close of business on July 10, 2026.  "Verizon’ s commitment to the dividend remains...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 89a5b6135fcb9a00
+symbol: VZ
+published_utc: 2026-06-08T09:00:00Z
+url: https://www.nasdaq.com/press-release/new-465-area-code-coming-347-718-917-929-area-code-region-new-york-2026-06-08
+headline: The New 465 Area Code is Coming to the 347/718/917/929 Area Code Region in New York
+<<<TEXT>>>
+--All customers with telephone numbers with the 347/ 718/ 917/ 929 area codes should be aware of the introduction of the new 465 area code. Beginning June 18, 2026, customers ordering new telephone lines or services in the boroughs of the Bronx, Brooklyn, Queens, Staten Island as well as the Marble Hill section of Manhattan may be assigned numbers using the new 465 area...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e333bb64da16cc2c
+symbol: VZ
+published_utc: 2026-06-16T07:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-breaks-industry-mold-put-customers-first-2026-06-16
+headline: Verizon Breaks Industry Mold to Put Customers First
+<<<TEXT>>>
+--Verizon today announced the next step in its ongoing transformation, replacing complexity and friction with simplicity and true customer choice. As part of the customer-centered reboot, Verizon is also launching" Verizon Simplicity," the industry’ s most simple and cost-effective plan. Also available starting today, the company launched Verizon One, a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 81ac41e50b9d807f
+symbol: VZ
+published_utc: 2026-06-16T17:16:00Z
+url: https://www.nasdaq.com/press-release/verizons-ready-keep-you-connected-potential-tropical-storm-forms-gulf-offers-tips
+headline: Verizon’s Ready to keep you Connected as a Potential Tropical Storm Forms in the Gulf; Offers Tips to Prepare
+<<<TEXT>>>
+Digital Twin Technology: Utilizing drone-captured 3 D imagery and artificial intelligence, Verizon engineers can virtually visit and inspect cell sites immediately following a storm. This high-clearance vehicle can dynamically toggle between Geosynchronous and Low-Earth Orbit satellites to drop off 5 G connection kits for first responders while...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 05800f9be03cf115
+symbol: VZ
+published_utc: 2026-06-17T07:47:00Z
+url: https://www.nasdaq.com/press-release/verizon-announces-expiration-and-final-results-its-private-exchange-offers-and
+headline: Verizon announces expiration and final results of its private exchange offers and consent solicitations for 11 series of notes
+<<<TEXT>>>
+--Verizon Communications Inc. today announced the expiration and final results, as of 5:00 p.m. on June 16, 2026, which was also the Extended Early Participation Date (as defined in Verizon’ s press release relating to the Exchange Offers and Consent Solicitations dated June 2, 2026 (the" Early Results Press Release"), of its previously announced (i) offers to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2adef6b2e7994f31
+symbol: VZ
+published_utc: 2026-06-17T07:47:00Z
+url: https://www.nasdaq.com/press-release/verizon-announces-expiration-and-final-results-its-tender-offers-and-consent
+headline: Verizon announces expiration and final results of its tender offers and consent solicitations for 20 series of Verizon and certain of its subsidiaries’ notes
+<<<TEXT>>>
+--Verizon Communications Inc. today announced the expiration and final results, as of 5:00 p.m. on June 16, 2026, which was also the Any and All Notes Extended Early Participation Date (as defined in Verizon’ s press releases relating to the Tender Offers and Consent Solicitations dated June 2, 2026 (collectively, the" June 2026 Press Release") of its previously...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 554c6d25f2945e5a
+symbol: VZ
+published_utc: 2026-06-26T09:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-report-earnings-july-24-2026-2026-06-26
+headline: Verizon to report earnings July 24, 2026
+<<<TEXT>>>
+--Verizon Communications Inc. will report second-quarter 2026 earnings on Friday, July 24, 2026. This announcement was originally published by Verizon. Read the original press release.. Headquartered in New York City, serving countries worldwide and nearly all of the Fortune 500, Verizon generated revenues of $138.2 billion in 2025.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7b9789a2f24d3f9a
+symbol: VZ
+published_utc: 2026-06-29T02:00:00Z
+url: https://www.nasdaq.com/press-release/bt-group-and-verizon-form-joint-venture-creating-scaled-international-connectivity
+headline: BT Group and Verizon to form joint venture, creating a scaled international connectivity platform for multinational customers
+<<<TEXT>>>
+--BT Group and Verizon Communications Inc. today announced the signing of an agreement to combine their respective international enterprise operations into a 50:50 joint venture– in a move that is set to transform international connectivity. Both BT and Verizon will hold equal voting rights and Verizon has agreed to pay BT an equalization payment of $625...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2de942c9be5b726e
+symbol: VZ
+published_utc: 2026-07-09T08:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-named-us-connectivity-provider-newly-manufactured-bmw-group-vehicles-through
+headline: Verizon named U.S. connectivity provider for newly manufactured BMW Group vehicles through KDDI partnership
+<<<TEXT>>>
+--Verizon Business and KDDI today announced a collaboration with BMW Group uniting Verizon’ s world-class 5 G and LTE networks, KDDI’ s expansive Global Communications Platform, and BMW Group’ s superior automotive engineering for a second-to-none connected-vehicle experience. This collaboration delivers cellular connectivity directly to BMW Group...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e7384eea07c23acc
+symbol: VZ
+published_utc: 2026-07-13T09:30:00Z
+url: https://www.nasdaq.com/press-release/four-small-businesses-compete-finals-verizons-small-business-super-pitch-2026-07-13
+headline: Four small businesses to compete in finals of Verizon’s Small Business Super Pitch
+<<<TEXT>>>
+The Verizon Small Business Super Pitch is a nationwide pitch competition designed to discover some of America’ s most promising small businesses. The four finalists in the Verizon Small Business Super Pitch are:. Verizon is proud to support these essential community anchors through Verizon Small Business Digital Ready, which provides free resources—...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d5e80b057dc5cbea
+symbol: VZ
+published_utc: 2026-07-13T15:00:00Z
+url: https://www.nasdaq.com/press-release/meet-gizmo-watch-4-verizons-new-kid-friendly-smartwatch-2026-07-13
+headline: Meet the Gizmo Watch 4: Verizon’s new kid-friendly smartwatch
+<<<TEXT>>>
+--Verizon today announced the launch of the new Gizmo Watch 4, expanding the Verizon Family ecosystem. Starting today, customers can get the Gizmo Watch 4 for free with a new line, avoid activation fees with Verizon Loyalty and unlock exclusive rewards through Verizon Shine. Powered by a faster processor and a battery that lasts up to 3 days, it supports...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 21cdf600f8b2da39
+symbol: VZ
+published_utc: 2026-07-22T09:00:00Z
+url: https://www.nasdaq.com/press-release/samsungs-next-generation-z-fold-meets-simplicity-value-verizon-2026-07-22
+headline: Samsung’s next-generation Z Fold meets simplicity & value on Verizon
+<<<TEXT>>>
+--Starting today, customers can preorder Samsung’ s highly anticipated foldable lineup on Verizon' s Simplicity Plan and My Biz Plan. At Verizon, we’ ve removed plan complexity to put control back in our customers’ hands. Galaxy Z Fold8 will be available in Lavender, Graphite and Cream starting at $1,899.99. Galaxy Z Fold8 Ultra will be available in Violet Shadow,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3c10c155621ac14c
+symbol: VZ
+published_utc: 2026-07-22T12:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-launches-exclusive-back-school-deals-2026-07-22
+headline: Verizon Launches Exclusive Back-to-School Deals
+<<<TEXT>>>
+As the new school year approaches, Verizon is taking the guesswork out of back-to-school prep by making essential tech easy and affordable. From simple plans that fit your budget to exclusive savings on the latest devices, Verizon is offering big deals and built-in digital safety tools to give parents peace of mind.. For the upcoming school year, Verizon is a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9ff1ab4cb3267f40
+symbol: VZ
+published_utc: 2026-07-24T07:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-delivers-record-2q26-results-strategic-transformation-ignites-accelerated
+headline: Verizon Delivers Record 2Q26 Results as Strategic Transformation Ignites Accelerated Growth
+<<<TEXT>>>
+--Verizon Communications Inc. today announced exceptional second-quarter 2026 financial and operational results, showcasing how its customer-first strategic transformation is driving sustainable growth and momentum. "We’ re putting customers at the center of every decision we make," said Dan Schulman, Verizon CEO." With recent updates including our new...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 48f57c892472517d
+symbol: VZ
+published_utc: 2026-07-29T07:00:00Z
+url: https://www.nasdaq.com/press-release/bain-capital-and-tillman-global-holdings-announce-15-billion-investment-eaton-fiber
+headline: Bain Capital and Tillman Global Holdings Announce $1.5 Billion Investment in Eaton Fiber to Power the Expansion of Verizon Fiber Broadband across the United States
+<<<TEXT>>>
+Supported by the acquisition of Ripple Fiber, Eaton Fiber will bring Verizon fiber broadband to over a million locations outside Verizon’ s current fiber footprint over the next few years. BOSTON& NEW YORK---- Bain Capital and Tillman Global Holdings today announced a $1.5 billion investment in Eaton Fiber, an affiliate of Tillman, to accelerate the expansion of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3e9385bfd60091f1
+symbol: VZ
+published_utc: 2026-07-30T09:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-kicks-nfl-season-nfl-sunday-ticket-youtube-us-2026-07-30
+headline: Verizon Kicks Off NFL Season with NFL Sunday Ticket from YouTube, on Us
+<<<TEXT>>>
+Purchase an eligible 5 G phone and activate a new smartphone line on an Unlimited Ultimate or Unlimited Plus plan Upgrade an existing line to an Unlimited Ultimate or Unlimited Plus plan after the purchase of an eligible 5 G phone Switch your home internet connection to our 100% fiber-optic Fios Home Internet plans or select premium Verizon Home Internet...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0062218743c5e639
+symbol: VZ
+published_utc: 2026-08-04T17:21:00Z
+url: https://www.nasdaq.com/press-release/verizon-helps-families-stay-connected-during-washington-wildfires-2026-08-04
+headline: Verizon Helps Families Stay Connected During Washington Wildfires
+<<<TEXT>>>
+--As crews continue to fight ongoing wildfires across Washington, Verizon is working to keep the community and displaced residents connected. In response to the devastating wildfires in Spokane, Verizon will waive domestic call, text, and data charges until August 31 for prepaid and postpaid consumer customers along with small business customers* in Spokane...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3766255b2692d815
+symbol: VZ
+published_utc: 2026-08-11T09:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-frontline-powers-mission-critical-communications-america-250-celebrations
+headline: Verizon Frontline powers mission-critical communications for America 250 celebrations
+<<<TEXT>>>
+Throughout this milestone year, the Verizon Frontline Crisis Response Team has worked in close partnership with more than 40 different public safety agencies across 16 states, serving as the connective tissue for public safety communication during multiple high-profile America 250 events and local celebrations. From the Sail 250 maritime celebrations...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3f41c0c3cc3afaea
+symbol: VZ
+published_utc: 2026-08-11T18:50:00Z
+url: https://www.nasdaq.com/press-release/verizon-announces-25000-reward-program-protect-communities-network-vandalism-2026-08
+headline: Verizon announces a $25,000 reward program to protect communities from network vandalism
+<<<TEXT>>>
+--Verizon today announced a $25,000 reward program for information leading to the arrest and conviction of individuals involved in vandalism that have cut off thousands of Verizon customers from critical wireless and wireline communications services.. California and Texas account for more than half of all reported incidents. California is the hardest hit...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d18a914a6da08cb9
+symbol: VZ
+published_utc: 2026-08-12T06:30:00Z
+url: https://www.nasdaq.com/press-release/lockheed-martin-verizon-keysight-odc-and-astris-ai-demonstrate-technology-public
+headline: Lockheed Martin, Verizon, Keysight, ODC and Astris AI Demonstrate Technology for Public Airspace Protection with NVIDIA Technology
+<<<TEXT>>>
+--Lockheed Martin, in collaboration with Verizon, NVIDIA, Keysight Technologies, ODC and Astris AI, recently showcased how commercial off-the-shelf technologies can make detecting and tracking unmanned aircraft systems more accessible, faster to deploy, and easier to scale for public and critical infrastructure protection. In a July demonstration in the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0d9f8b644bcc32bf
+symbol: VZ
+published_utc: 2026-08-12T10:00:00Z
+url: https://www.nasdaq.com/press-release/verizon-simplicity-meets-google-ai-preorder-pixel-11-series-today-2026-08-12
+headline: Verizon Simplicity meets Google AI: Preorder the Pixel 11 series today
+<<<TEXT>>>
+Verizon’ s latest wireless plan is simple, transparent and built around what customers actually need, with no activation or upgrade fees though Verizon Loyalty. All four models, including the new Pixel Watch 5, will be available for customers at Verizon stores and online, with preorders starting August 12 at 10 am ET. Switch to a Simplicity Plan& get Pixel 11 Pro: Get...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0e3d322f70095ae5
+symbol: VZ
+published_utc: 2026-08-13T17:42:00Z
+url: https://www.nasdaq.com/press-release/verizon-readies-tropical-storm-lala-offers-tips-hawaii-residents-and-businesses-2026
+headline: Verizon readies for Tropical Storm Lala; Offers tips for Hawai’i residents and businesses
+<<<TEXT>>>
+Verizon has taken proactive, on-the-ground measures across the islands to protect connectivity. To further reinforce operational resilience against potential commercial power loss or third-party fiber disruptions, Verizon engineers have satellite assets available to dispatch as needed. Verizon is also working in close coordination with local power...
+<<<END>>>

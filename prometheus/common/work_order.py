@@ -19,6 +19,11 @@ FILINGS (design choices entry 35): `source="filings"` (the SEC's filings: 10-K, 
 same messages. Its `action_type` is `search_filing` (design choices entry 37; entry 35 had kept `search_news`): the work order checks that `search_filing` goes with `source="filings"` and
 that a filings order has that action. Press releases keep `search_news` (entry 34): `source` says which corpus is searched.
 
+A DATED WINDOW OF THE NEWS (design choices entry 151; design/news_dated_window_spec.md; Jacob, 2026-11-28: *"We cannot fetch a single day news in the past ... it is currently finding the last most recent day instead of the specific day"*): a news order
+(`source="news"`) holds EITHER `since_days`, a rolling window counted back from now (entry 149), OR `news_from` and `news_to`, two calendar dates ("2026-11-03", US Eastern days, `news_to` included; one day is `news_from == news_to`), never both and
+never one of the two. `verify_request` checks the form of the dates, their order, the longest span (`MAX_DAYS["news"]`) and that `since_days` is left empty; that a date is not in the future and not older than `news.max_age_days` is the Account
+Manager's check of the user's words (`intent.py`), not the order's. `window_words` says a window in words ("on 2026-11-03", "from 2026-11-03 to 2026-11-05"). Every other order is as it was.
+
 STATUS moves one way:  new -> data_ready | data_failed -> recommended -> reviewed -> decided -> traded   (the Critic sets `reviewed`, the Account Manager `decided`: Critic v1, design choices entry 59; the Trader sets `traded`: Trader v1).
 `data_ready` means the Data Clerk did its job. That includes an honest "the stored news does not cover it" (`data.no_supporting_text`):
 nothing to find is a result, not a failure. `data_failed` means something is wrong: an invalid citation, an empty answer, a model
@@ -168,6 +173,8 @@ class WorkOrder(BaseModel):
     source: str = "news"                        # news | press_releases | filings. For press_releases and filings the Data Clerk resolves symbol/company first (`resolved`)
     time_period: str | None = None              # in words ("last 7 days")
     since_days: int | None = None               # the same, as a number of days
+    news_from: str | None = None                # a DATED window of the news (entry 151): the first day, "2026-11-03", a US Eastern calendar day; set together with `news_to`, and then `since_days` is None
+    news_to: str | None = None                  # the last day of the dated window, included ("2026-11-03" again for one day)
     live: bool = False                          # needs fresh, uncached data
     top_k: int = 5
     criteria: dict | None = None                # for the Advisor, for example {"sentiment": "bullish"}
@@ -210,14 +217,43 @@ class WorkOrder(BaseModel):
 def new_work_order(query: str, *, requester: str = "user", action_type: str = "search_news", subject=None, source: str = "news",
                    time_period: str | None = None, since_days: int | None = None, top_k: int = 5, live: bool = False,
                    criteria: dict | None = None, company: str | None = None, metrics: list[dict] | None = None, case: str | None = None,
-                   sector: str | dict[str, str] | None = None, verify: dict | None = None, bars: dict | None = None, ratings: dict | None = None, max_price: Decimal | None = None, min_price: Decimal | None = None) -> WorkOrder:
+                   sector: str | dict[str, str] | None = None, verify: dict | None = None, bars: dict | None = None, ratings: dict | None = None, max_price: Decimal | None = None, min_price: Decimal | None = None,
+                   news_from: str | None = None, news_to: str | None = None) -> WorkOrder:
     """A new order, with an id and a timestamp. It is not checked here: `verify_request` is the check, so that a bad request becomes
     a reported reason and not an exception halfway through the desk."""
     return WorkOrder.model_construct(
         schema_version=2 if (metrics is not None or case is not None or sector is not None or verify is not None or bars is not None or ratings is not None) else 1, request_id=uuid.uuid4().hex[:12], requester=requester, created_utc=_now(), query=query, action_type=action_type,
-        subject=subject, company=company, source=source, time_period=time_period, since_days=since_days, live=live, top_k=top_k, criteria=criteria,
+        subject=subject, company=company, source=source, time_period=time_period, since_days=since_days, news_from=news_from, news_to=news_to, live=live, top_k=top_k, criteria=criteria,
         status="new", resolved=None, data=None, recommendations=[], advisor_runs=[], errors=[], metrics=metrics, case=case, sector=sector, candidates=[], verify=verify,
         reviews=[], critic_runs=[], trade_decisions=[], bars=bars, ratings=ratings, trades=[], trader_runs=[], direct_orders=[], max_price=max_price, min_price=min_price)
+
+
+def window_words(news_from: str, news_to: str) -> str:
+    """A dated window in words (entry 151): "on 2026-11-03" for one day, "from 2026-11-03 to 2026-11-05" for a span. The dates are the order's own ISO text; nothing is parsed here."""
+    return f"on {news_from}" if news_from == news_to else f"from {news_from} to {news_to}"
+
+
+def _dated_window_reasons(order: WorkOrder, maximum: int) -> list[str]:
+    """Why the dated window of a news order (`news_from`, `news_to`: entry 151, D4) is not one the Data Clerk may search; empty when the order has none or it is right. Both or neither, two real dates written YYYY-MM-DD, the first not after the
+    last, a span of at most `maximum` days (`MAX_DAYS["news"]`: the news fetch's own limit), the news corpus only, and no rolling `since_days` beside it (the two are two ways to say the same thing). Whether the days are in the past and not too old is
+    the Account Manager's check of the user's words (`intent.py`), not the order's."""
+    if order.news_from is None and order.news_to is None:
+        return []
+    if order.news_from is None or order.news_to is None:
+        return ["news_from and news_to go together: a dated window has a first day and a last day (the same day twice for one day)"]
+    reasons = []
+    first, last = iso_date(order.news_from), iso_date(order.news_to)
+    if first is None or last is None:
+        reasons.append("news_from and news_to must be real dates written YYYY-MM-DD")
+    elif first > last:
+        reasons.append(f"news_from ({order.news_from}) is after news_to ({order.news_to})")
+    elif (last - first).days + 1 > maximum:
+        reasons.append(f"the dated window is {(last - first).days + 1} days: at most {maximum} days at a time")
+    if order.source != "news":
+        reasons.append("a dated window (news_from, news_to) is for the news only")
+    if order.since_days is not None:
+        reasons.append("since_days is not used with a dated window (news_from, news_to): leave it empty")
+    return reasons
 
 
 def verify_request(order: WorkOrder) -> list[str]:
@@ -243,6 +279,7 @@ def verify_request(order: WorkOrder) -> list[str]:
     if order.since_days is not None and (not isinstance(order.since_days, int) or isinstance(order.since_days, bool)
                                          or not 1 <= order.since_days <= maximum):
         reasons.append(f"since_days must be a whole number of days from 1 to {maximum}")
+    reasons += _dated_window_reasons(order, maximum)
     if order.source not in WIRED_SOURCES:
         reasons.append(f"source {order.source!r} is not wired yet (only: {', '.join(WIRED_SOURCES)})")
     if order.source in LOOKUP_SOURCES:  # argument #1 is the symbol (subject), argument #2 the company name: at least one, and one company

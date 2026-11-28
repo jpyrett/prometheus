@@ -4819,3 +4819,80 @@ THE COCA-COLA COMPANY(Registrant)
 Date: | October 28, 2026 | Erin L. MaySenior Vice President, Controller and Chief Accounting Officer(Principal Accounting Officer)
 55
 <<<END>>>
+<<<FILING>>>
+accession: 0001552781-26-000567
+symbol: KO
+form: 8-K
+filed: 2026-11-23
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/21344/0001552781-26-000567.txt
+text_status: ok
+<<<TEXT>>>
+== items ==
+Item
+                                            5.02.Departure of Directors or Certain Officers; Election of Directors; Appointment of Certain Officers; Compensatory
+Arrangements of Certain Officers.
+On November 23, 2026, The Coca-Cola Company (the "Company")
+announced that David V. Elkins will succeed John Murphy as Executive Vice President and Chief Financial Officer, effective April 2, 2027.
+Mr. Murphy will continue to serve as President of the Company. Mr. Murphy intends to retire at a later date in 2027.
+Mr. Elkins, age 58, has served as Executive Vice President
+and Chief Financial Officer of Bristol Myers Squibb Company ("BMS") since 2019. He joined BMS in connection with its acquisition
+of Celgene Corporation, where he served as Executive Vice President and Chief Financial Officer. Before joining Celgene Corporation, Mr.
+Elkins held senior finance positions at Johnson & Johnson. His prior experience also includes roles at Becton, Dickinson and Company
+and AstraZeneca PLC. He began his career in finance at The Boeing Company.
+In connection with Mr. Elkins' appointment, the
+Company provided Mr. Elkins a letter setting forth the primary compensation elements that will be effective upon the commencement of his
+employment and the Company and Mr. Elkins separately entered into a deferred cash agreement providing for the replacement of certain compensation
+he will forfeit from BMS.
+Pursuant to Mr. Elkins' letter, his base salary
+will be $1,180,000. Mr. Elkins will be eligible to participate in the Company's annual and long-term incentive programs, and his
+target annual incentive will be 135% of his annual base salary.
+Following the commencement of Mr. Elkins' employment,
+the Company will present to the Talent and Compensation Committee of the Company's Board of Directors for approval one-time awards
+intended to replace equity that Mr. Elkins will forfeit from BMS upon joining the Company, which one-time awards consist of (i) restricted
+stock units with an approximate grant-date value of $5,400,000, expected to vest in two equal installments in February 2028 and February
+2029, and (ii) deferred cash in the aggregate amount of $5,400,000, expected to be paid in two equal installments in February 2028 and
+February 2029, in each case subject to continued employment through the vesting or payment dates, as applicable, as well as the other terms
+and conditions of the applicable agreement.
+Pursuant to the deferred cash agreement, Mr. Elkins
+will also be eligible to receive a one-time cash payment in 2028, intended to replace the annual incentive he forfeits for the portion
+of 2027 during which he was employed by BMS. The amount of the payment will be based on BMS's 2027 performance and prorated for
+the portion of 2027 during which Mr. Elkins was employed by BMS, subject to the terms and conditions of the deferred cash agreement.
+The letter also provides that Mr. Elkins may receive
+a one-time cash payment of $300,000 if he does not receive certain one-time contributions from BMS under its retirement and deferred compensation
+programs. In addition, the letter provides for make-whole compensation if, as a result of his employment with the Company, Mr. Elkins
+forfeits his 2026 annual incentive award or certain BMS equity scheduled to vest in March 2027.
+Mr. Elkins will be subject to the Company's share
+ownership guidelines, and he will receive certain additional benefits described in his letter.
+The foregoing descriptions of Mr. Elkins' letter
+and deferred cash agreement are qualified in their entirety by the terms of such letter and agreement, copies of which are attached hereto
+as Exhibits 10.1 and 10.2, respectively, and incorporated herein by reference. Details regarding the Company's annual and long-term
+incentive programs are included in the Compensation Discussion and Analysis section of the Company's definitive proxy statement
+for the 2026 Annual Meeting of Shareowners filed with the Securities and Exchange Commission on March 16, 2026.
+There are no arrangements or understandings between
+Mr. Elkins and any other person pursuant to which he was selected as an officer of the Company. Mr. Elkins does not have any family relationship
+with any director or executive officer of the Company and is not a party to any transaction requiring disclosure under Item 404(a) of
+Regulation S-K.
+A copy of the Company's press release announcing
+these changes is furnished to this report as Exhibit 99.1.
+Item
+                                            9.01(d).Financial
+                                            Statements and Exhibits.
+EXHIBIT INDEX
+| Exhibit                                             No. | Description |
+| Exhibit 10.1 | Letter, dated November 13, 2026, from The Coca-Cola Company to David V. Elkins. |
+| Exhibit 10.2 | Deferred Cash Agreement, dated November 14, 2026, between The Coca-Cola Company and David V. Elkins. |
+| Exhibit     99.1 | Press Release of The Coca-Cola Company, dated November 23, 2026. |
+| Exhibit     104 | Cover Page Interactive Data File (the cover page XBRL tags are embedded within the iXBRL document). |
+<<<END>>>
+<<<FILING>>>
+accession: 0001950047-26-011581
+symbol: KO
+form: 144
+filed: 2026-11-27
+period_end: 
+url: https://www.sec.gov/Archives/edgar/data/21344/0001950047-26-011581.txt
+text_status: not_available
+<<<TEXT>>>
+
+<<<END>>>

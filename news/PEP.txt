@@ -32906,3 +32906,1596 @@ The beverage and snack powerhouse’s stock may be underperforming, but its quar
 <<<INSIGHTS>>>
 
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144014368
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T17:35:50Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=582e29a18d36a9a112f573c327899bddc885575274f46acb9376fc2df7f53ccb
+image_url: 
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo Files Shelf Prospectus For Offering; Size Not Disclosed
+<<<SUMMARY>>>
+https://www.sec.gov/Archives/edgar/data/77476/000110465926130634/tm2628616-1_s3asr.htm
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012484
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4605497b15fe0521bed14b35d729a6ba0bb70d9b806a949d13f1fe5b391a38bd
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/20/Technical-analysis.jpg?width=2048&height=1536
+category: company
+tickers: PEP
+keywords: 
+headline: Defensives Lead Sectors Friday As Growth Trails
+<<<SUMMARY>>>
+Six sectors are higher and five are lower in Friday&#39;s regular session, with defensive sectors holding two of the top three positions alongside Energy. The leaders are separated rather than clustered, with no single gap clearly standing apart from the other breaks across the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144185204
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T21:52:19Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7f5a7e214d69d543468aa4db0db96e64820b5ebff89b1a65861a47c9e5b89edc
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week November 29
+<<<SUMMARY>>>
+Dividend Champions, Contenders and Challengers: this week's roundup lists companies that changed payouts and upcoming ex-dividend dates and pay dates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144176952
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T16:34:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb15634153f3d30ea5235e1ce3700472303fa1716abf8525ebc3ea38d3dda45c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Own SCHD? These 6 Dividend Aristocrats Are Protecting Your Income for 2027
+<<<SUMMARY>>>
+SCHD's dividend screens catch most trouble before it starts, yet one snack giant in the fund is stretching its payout thinner than the rest. Meanwhile, a famous 50-year streak holder sits outside the portfolio entirely.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175889
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:16:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a9942c6bff402a6664f794f75f4c519794b66974cd112cf2b3f586bab118a18e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Has PepsiCo Become A Different Stock To Own?
+<<<SUMMARY>>>
+Today's big story: Anthropic Broke Its $83 IPO Price. What Did Facebook Do Next.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175856
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:03:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6084e6adc33adf99b31d2150fae5929a0435ca36fd39f17e810a4547d4d1c742
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: McDonald’s Joined the Dividend Kings in September, but These 4 Have Been Kings for Decades
+<<<SUMMARY>>>
+A 50-year dividend streak proves a company has paid, not that it can keep paying. Five consumer giants now wear the Kings crown, yet each one faces a different threat to its next raise, and one carries a risk the market has already priced in.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175853
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:03:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f0247d5ae6d10def906e28f4a771ab1984d56ff2b5923aa0773afecb9afd2f30
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Forget Yield Chasing. These 5 Dividend Stocks Have Raised Payouts Through Every Recession Since the 1970s
+<<<SUMMARY>>>
+High yields tend to vanish when recessions hit, but a handful of blue chips kept raising payouts through six downturns. Each faces a real threat to its next raise, and one of them barely covers its dividend with free cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144208875
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T12:49:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cd37ca799a47fd8f2522603257edd35d42c46f7af3ba76b75f2a59b4d0154731
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/27/Congressional-Trades.jpg?width=2048&height=1536
+category: company
+tickers: PEP
+keywords: 
+headline: Congressman Discloses First Public Stock Trades, and It’s All Sales
+<<<SUMMARY>>>
+A congressman recently disclosed their first stock trades since taking office in January 2025. Here&#39;s the trades.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174329
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T12:35:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=630710586a51aafda94a13234707c68edf8b49a02e7985176c7a0a9fe3015011
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: 3 Stocks I'd Love to Buy at Black Friday Sale Prices
+<<<SUMMARY>>>
+Here are three excellent businesses I'd love to buy if their stocks hit Black Friday sale prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144208877
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T12:00:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=84671d80aa3c67eaff7663f614c9abf7aaa0cc1028846ba57e6d9be965653582
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/27/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: PEP
+keywords: 
+headline: Health Care Only Sector Lower In Friday Trading As Growth Leads
+<<<SUMMARY>>>
+Ten of 11 sectors are higher in Friday’s regular session, with growth sectors holding the top three positions. The leaders are clustered rather than separated, with the top three within a narrow range of one another.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144173686
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T11:01:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=04aa7d0d16dd2b5bede346201938b9fcfe6eea80ddeedbd03980cc0def8dab85
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: 44 ETFs Add to PepsiCo (PEP) on Nov. 25
+<<<SUMMARY>>>
+ETFs bought $59.0 million of PepsiCo stock, with 44 buyers against 15 sellers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174748
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T09:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1477a1141141434681f03409dc8c281f2fa12b6af8e14d602be4a52ab29721c7
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1393736657/image_1393736657.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: What To Expect From November 2026's Job Report
+<<<SUMMARY>>>
+Markets put December Fed hike odds at 98.1% after core PCE rose to 3.3%; a severe November jobs decline could avert the 25-basis-point move.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144172762
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T03:44:12Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=db599f2a00d61b4623e040b4b9c0acf6474a00768ad2c3535612f22532f42f1e
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2222307214/image_2222307214.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: DVY Vs. SPHD: Dividend Growth Beats A Higher Yield
+<<<SUMMARY>>>
+DVY ETF is rated buy over the SPHD through 2027, citing cheaper holdings, faster expected earnings growth, and historically stronger dividend growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144155987
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T14:20:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0326ecf5de19fa2d60e699c6a161dda1ec6ea95e9089fba7b5665557ac8fd5a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: A $1,500,000 Portfolio in McCormick, PepsiCo and Bristol Myers Squibb Pays $61,489 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA $1,500,000 portfolio split evenly across McCormick, PepsiCo and Bristol Myers Squibb pays about $61,500 a year in dividends at today’s prices, or about $5,120 a month. McCormick and Bristol Myers Squibb each paid out 55% of their free cash flow as dividends over the last twelve months, against 75% for PepsiCo.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144155988
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T13:52:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=334ba69161c110695d938ea691c405a7d4383e05ad3b2f5ce2512936024056a4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Forget the Market's Hottest Stocks. This Boring Dividend Stock Is Where I'd Put $1,000 Before 2027.
+<<<SUMMARY>>>
+This unloved Dividend King isn't performing well right now, but history suggests it will get back on track.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144153432
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T11:01:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f82f195d9c72b3c4faacb1571c12ea235f81047e93c76d8667678d4c2fa1ff79
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: ETFs Bought $39.1 Million of PepsiCo (PEP) on Nov. 24
+<<<SUMMARY>>>
+ETFs added $39.1 million of PepsiCo stock on Tuesday, Nov. 24.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154186
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T08:00:00Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=86591eafad39de72e9e4b7959d600f4fce0987f93d3c1bb21156ea90c554376b
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/26/Financial-Trader-Monitoring-Market-Trend.jpg?width=2048&height=1536
+category: company
+tickers: PEP
+keywords: 
+headline: EXCLUSIVE: Black Friday Could Outperform Cyber Monday as AI Memory Crunch Pushes Up Prices, Says Louis Navellier — Experts List Top 5 Stocks to Watch
+<<<SUMMARY>>>
+Louis Navellier expects stronger Black Friday sales but warns high memory prices could hurt Cyber Monday. Walmart, Target, Best Buy in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144129012
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T22:47:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=134422158c60dfd9c5fa760221013a55cc6e579ef4408e275f474f78ea485287
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: 2 Bargain Stocks to Buy With $1,000 in November
+<<<SUMMARY>>>
+A drug maker and a food maker, both of which have attractive yields and strong businesses backing their dividends.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144128095
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T20:17:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2c536c7c8d52da694271ad7debf712c1df4a11d7337fb1ad387217420f6a2f71
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: How Much You’d Need in Dividend Stocks to Generate $5,000 a Month in Passive Income
+<<<SUMMARY>>>
+The price tag on a $60,000 dividend paycheck swings by nearly $2 million depending on the yield you chase. Higher payouts shrink the bill, but one tier hides a trap that can gut your income when a cut arrives.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144126984
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T19:47:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=459d8b6611f39b35952b40c2e7aec2b117518961ebe0f99d1fc8488e87d007c0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Leaving a Roth IRA to Your Kids? Why Dividend Stocks Make the 10-Year Rule Work for Them
+<<<SUMMARY>>>
+One stock in a six-pack of blue-chip dividend payers drives nearly two-fifths of the tax bill on an inherited portfolio, and it belongs somewhere else entirely. Your kids could pay for that mistake for decades.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144125806
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T16:30:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=71a6257e074429cadbdbd804adabc09409657fa0c50fc73c50a4235added8559
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Coca-Cola Consolidated (COKE) Stock Is Up 5.9% Today Without Company News
+<<<SUMMARY>>>
+Coca-Cola Consolidated shares rose 5.9% on Wednesday, Nov. 25, without company-specific news, as the S&P 500 fell 2.9% in a tech-led selloff.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122493
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:03:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f5e8753f2e5e2d16da84f7ac14faf725ee18c2492d0fc06695146f1fade16cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: These 5 Dividend Stocks Are Brands You Use Every Day
+<<<SUMMARY>>>
+Burgers, wireless plans, soda and snacks already drain your wallet every week. Five of those brands pay you back through dividends, but each one hides a risk that could shrink your next raise.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154155
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e9d5efeef41bb3058fe79cbc5266db9469ca3b5f6afcf5ff4a4a47749470e48c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/25/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: PEP
+keywords: 
+headline: Defensives Lead Sectors In Wednesday Trading As Growth Trails
+<<<SUMMARY>>>
+Four sectors are higher and seven are lower in Wednesday&#39;s regular session, with defensive sectors holding the top three positions. Technology sits well clear of the rest, separated by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122974
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T09:02:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=94875ef1889ac6238f9b22495500c5bbf5842927527bfe923031c7559ab1f0d0
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2235939814/image_2235939814.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: Best Dividend Aristocrats For December 2026
+<<<SUMMARY>>>
+The bull case for Dividend Aristocrats: 27 potentially undervalued picks may return at least 10% annually, led by FactSet at an estimated 22.4%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144118480
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T05:52:21Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=d1a5b92e73e2d94c3ac43a73def57ce9d365f3505e1f08dcf0a19ad9695c1cdf
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2161521312/image_2161521312.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo: Valuation Improved, Growth Story Hasn't
+<<<SUMMARY>>>
+PepsiCo (PEP) stock is a hold, as a $136.39 fair value assumes 5% free cash flow growth for 10 years and 4% thereafter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144091799
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T22:15:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cc97acf3b53e32800e2f9799ec0b8d78cfa50da808a8d41848efb10469392388
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Does PepsiCo (PEP) Change Its Long Term Case With Its Efficiency Reset?
+<<<SUMMARY>>>
+PepsiCo (NasdaqGS:PEP) outlined a broad efficiency plan that trims its product portfolio and targets higher operational margins. The company signed a new 10 year beverage and snacks partnership with Hyatt Hotels, covering more than 700 U.S. properties. Management tied these moves to ongoing sustainability commitments and continued focus on Frito Lay as a key growth platform. The new efficiency plan and Hyatt partnership tell only part of the PepsiCo story investors need to think through...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144090195
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T21:45:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=759bc355e994966eb62eb48ab98f3b7176c8854ca7156174c4dd065d2ae8930b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Anthropic falls below IPO price as Nvidia gives back gains
+<<<SUMMARY>>>
+In this edition of Sozzi Unleashed: At The Close, Brian Sozzi sorts through "reality trading" as Nvidia slides nearly 7% after Monday's 31% surge and Anthropic falls below its $83 IPO price less than a week after the biggest offering in history. GCG Advisory Partners' Bill Gunderson makes the case that Nvidia is the cheapest growth stock in the market at nine times forward earnings and names Nvidia and Eli Lilly as his top picks for 2027. Brian breaks down Dell's blowout quarter and $132 billion AI backlog, and HPE CEO Antonio Neri joins to explain the company's raised outlook, why it refuses to finance neoclouds, and whether server margins have peaked. Brian closes by arguing the AI trade is reaching consumers' wallets, pointing to Best Buy's strongest comparable sales growth in five years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144098215
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T21:12:54Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=dca74df97a8326e1faf36c3b8f635c4fe210ddc22d70a6c363c6c3718d6fcc30
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2226751695/image_2226751695.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: Best Dividend Kings: November 2026
+<<<SUMMARY>>>
+The bull case for Dividend Kings: 26 appear undervalued and could deliver annualized returns above 10%; Gorman-Rupp leads at 19.6%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144089189
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T20:47:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=114f175642208efe13389d88e8aa594507f870508a2f66007a1baf965475b122
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: $13,000/Month in Dividend Income: The Simple 3-Bucket Blueprint
+<<<SUMMARY>>>
+A couple with $4.7 million wants a $13,000 monthly paycheck without selling a single share while the market sinks. The tempting shortcut of chasing the biggest yields could quietly leave them short in the years ahead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088034
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T18:26:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e33f50289bc5d2ba8d8f694102e92436b2835a6535da6f3b94be92d9460475ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: What Did Coca-Cola Do That PepsiCo Did Not?
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088094
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:38:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b113de2a124b900313a0d5d3e8d1dddef563ae3627a085967fe0b8e5f4f9b05
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: PETA, PepsiCo shareholders call out animal abuse across its supply chain
+<<<SUMMARY>>>
+The activist group is urging PepsiCo to be more transparent about the treatment of animals across its supply chain, especially in India, and honor its animal welfare policies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144086854
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T16:35:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7fed4efb440d8226489a10aa40b93ff40d1bd9697a471c020b42029877b6b90d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Can Coca-Cola Navigate Rising Costs While Protecting Margins?
+<<<SUMMARY>>>
+KO tackles rising logistics and transportation costs through productivity gains and strategic pricing while sustaining margin expansion and brand investments.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144086855
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T16:32:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b32caf850965d1f78bf7063876f8b3e8418307df6cf8f0f791887fb180b70247
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Is PepsiCo Sacrificing Pricing Power to Regain Snack Volumes?
+<<<SUMMARY>>>
+PEP's affordability push is reviving snack volumes and market share, but mounting margin pressure raises questions about sustainable growth and pricing power.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088528
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T15:23:04Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=6aa1b986dba9f07edf34294032975923d3cd1782ea9790fc52421e833dc26072
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2269895958/image_2269895958.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo: Still Not Refreshing, Remains A Sell
+<<<SUMMARY>>>
+Analyst rates PepsiCo a Sell: 23â24x trailing free cash flow leaves little margin of safety as it cuts core EPS growth guidance to 2.5%â3.5%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085541
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T14:38:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6749eb63ba41a73f3b077e549d7d10c22bfad589a7841459e7ed6ad17d8590cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: 3 defensive stocks to watch as tech, chip volatility persists
+<<<SUMMARY>>>
+Investing.com -- The tech rout has pushed money into defensive sectors. Hedge funds lost more than 3% in the week ended Nov 20, their worst week since April 2025, and the Nasdaq Composite fell 10% that week. JPMorgan said healthcare has drawn large inflows and staples positioning is at historical highs (Read more, Nov 23, 2026).
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085479
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T14:29:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=44167cfd4d1d434f043161d9acdc9d9259fa954a60ad46fce3ae6f59aafe6921
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Coca-Cola at $95 or PepsiCo at $140: Which Dividend King Could Turn $1,000 Into More Money by 2036?
+<<<SUMMARY>>>
+Coca-Cola and PepsiCo have rewarded investors with decades of dividend growth. But which Dividend King offers the better opportunity to turn $1,000 into substantially more money over the next decade?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122171
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T12:00:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=37dd8624437c8b63ae7f493f24a751f8b16d32426983b4e2362706aec7cd3525
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/24/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: PEP
+keywords: 
+headline: 8 Of 11 Sectors Rise Tuesday As Defensives Lead
+<<<SUMMARY>>>
+Tuesday&#39;s regular session has eight sectors higher and three lower, with defensive sectors holding the top two positions. The leaders are separated rather than clustered, with Health Care and Consumer Staples ahead of the rest of the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144081649
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T11:37:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=87ebbf5ba5349650791445a4871fb75096f365f57e2d6577aa98e80e00979551
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Who Pays P&G? The American Shopper In Four Lines
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085968
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T11:06:13Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=fda907fee9b9d2e598fcda7fde5d05522a9edc552a33b6a6f66a71a7b9157b37
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/487787092/image_487787092.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo: A Defensive 'Buy' In A Market Sell-Off
+<<<SUMMARY>>>
+Pepsi stock is facing a slow recovery in North America, but even with that slow recovery, the dividend coverage has sharply improved.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144084518
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T09:30:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=153efe6bf8aed0c6803815071a0be2e1e2893febc89eb62714ed0ab5106b1969
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2161521312/image_2161521312.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo: 4.2% Dividend Yield Looks More Attractive As Volatility Returns
+<<<SUMMARY>>>
+Analyst rates PepsiCo a Hold: at 16.81x blended earnings, it offers 7.7% expected annual returns; no additions until operations improve.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082941
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T08:57:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=2ee0718e9695070fd983f4663b50b37a1dcb23e22ce3edcd36e689e367a78cef
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/487787092/image_487787092.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: Pepsi Is A Treat For Dividend Investors
+<<<SUMMARY>>>
+The bull case for PEP: resolving beverage struggles could lift its 16.7x forward earnings multiple toward Coca-Cola's 29.0x; its dividend yields 4.2%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082216
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T08:00:46Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7b68e61cf2a5022257250b2a10daac90d4f7083c6517d51c44590debf0110ad4
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1326187119/image_1326187119.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo: Cheap, With A Record Dividend, But The Downtrend Channel Still Rules
+<<<SUMMARY>>>
+PepsiCo (PEP) stock is a hold, as 2026 core EPS growth guidance is 2.5%-3.5%; consider entry at $128-$136 or after a sustained weekly close above $152.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144079810
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T06:11:53Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=987a0700d301a83e6157b3168c58cda12767885c603ce8e28bd4c71488adc7c1
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/487787092/image_487787092.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo: A Dividend King With Little Room For Error
+<<<SUMMARY>>>
+PepsiCo (PEP) stock is a sell as its projected 86% 2026 free-cash-flow dividend payout limits flexibility, leaving little margin of safety.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144053613
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T20:17:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d22a94f90992e388c915b7b1429220738bf57aaf700ca38578705d016642ca7e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: 5 Blue-Chip Dividend Stocks Built to Keep Paying Through Tough Markets
+<<<SUMMARY>>>
+A fat yield means nothing if the cash isn't there to fund it. Five blue chips face the same coverage test, and two of them pay out with almost no room to spare. Which dividends hold up when markets turn?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144052755
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T19:11:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1d59442061ba215c21644277dea47817074a385666940c2a168237648b5cdea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo (PEP) Stock May Be 49% Undervalued Following Margin Concerns
+<<<SUMMARY>>>
+PepsiCo has seen a muted share price journey in recent years, and investors are increasingly asking whether the current valuation is still supported by the cash the business can generate. With the stock around US$140.54 at the last close, the key issue is how that price lines up against the strength and timing of its future cash flows. The share price has edged down about 7.0% over the past 3 years, which puts the focus squarely on whether the underlying cash generation justifies staying...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144052756
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T18:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=badd0653f7757d41b7b7019e1875c4c9a43086d72c214e719be08f47e7b64734
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Gatorade "Body of Science" Highlights Women's Research Gap with F1 ACADEMY at Las Vegas Grand Prix
+<<<SUMMARY>>>
+Women are gaining ground in motorsports but the science behind their performance isn't keeping pace. As F1 ACADEMY, the F1 women's development league, creates greater visibility and opportunity for female drivers, a significant research gap remains: only about 6% of sports science research focuses exclusively on women*. Through "Body of Science," Gatorade is working to help close that gap with a multi-year global research commitment led by the Gatorade Sports Science Institute (GSSI), the brand'
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051457
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T17:50:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4847d48636c8a96f5eb6a4d0b2ce3eb15e4c6569288325986216767584b6b487
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Coca-Cola vs. PepsiCo: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Coca-Cola's asset-light model and PepsiCo's snack empire take very different routes to the same shelf, and their valuation gap may decide the winner.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144053816
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T17:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7ad792d17dab88ab09fa4f3f3de9042a07658ccc4035759a8232e98c7e2c2da8
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/865972662/image_865972662.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: Strategically Building A $75,000 Dividend Portfolio With November's Top High-Yield Picks
+<<<SUMMARY>>>
+Investors are looking for stock selections for their dividend portfolios. Considerations include income, dividend growth, capital appreciation, and limited downside risk.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144053381
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:07:55Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=ac09204dedde70f07de3b5e0ddd02d1a2dd9a08b245d06df0b1b2b0e48abe3a1
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2237052232/image_2237052232.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo: Staples Ugly Duckling (Rating Downgrade)
+<<<SUMMARY>>>
+PepsiCo is downgraded to "Sell": Market share losses and secular headwinds are not fully reflected at $140 per share.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050243
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:53:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fde7e8f0fd4524e09524174232183dd706ec87262a00d132ae2ab350e8b84c44
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Coca-Cola Stock Returned 40%. How Much Is Left?
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048543
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:37:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fee280aa3430d277d2490922ed0ac3d6182e34c0f18ece159f24e184c7f29837
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: Forget Chasing Double-Digit Yields. These 5 Dividend Stocks Offer Something Better
+<<<SUMMARY>>>
+A double-digit yield often means the market expects a cut. Five dividend payers from real estate, lending, pipelines, medicine and snacks pass a tougher test, and one of them covers its payout nearly twice over.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082422
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:00:25Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7849cbb86e22717be37f15e7dd3458af446008b8ca28197d597cc3fd18cfe561
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: PEP
+keywords: 
+headline: 9 Of 11 Sectors Rise Monday As Growth Leads
+<<<SUMMARY>>>
+Nine of 11 sectors are higher in Monday&#39;s regular session, with growth sectors holding two of the top three positions alongside Industrials. Technology sits well clear of the rest, separated from the next sector by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144047723
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T11:01:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=26a68079b2d94337bfd6a15dc08c490bf0a0349ddcd5926109f1272ab2a803fc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: 41 ETFs Add to PepsiCo (PEP) Holdings on Nov. 19
+<<<SUMMARY>>>
+ETFs bought $40.1 million of PepsiCo stock in Thursday's session.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144049049
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T09:06:52Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=82abfa467153783fb873e4c3b5ba59b17d715316a036193093faebdcacea376f
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/487787092/image_487787092.jpg?io=getty-c-og
+category: company
+tickers: PEP
+keywords: 
+headline: Pepsi Has Drawn My Interest
+<<<SUMMARY>>>
+The bull case for PepsiCo: its over-4% yield and 53 years of dividend growth appear supported by $4.220 billion in quarterly levered free cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144025843
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T19:37:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0cee499412bd0e6ee84d690da151950d3a66ea393f72354dd0c684bb7e4ff3cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: What These 6 Snack and Beverage Stocks Have in Common
+<<<SUMMARY>>>
+Coca-Cola and an array of other beverage and snack stocks deliver tasty dividends to income investors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144025040
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T16:50:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b23ac453f81df99f5160fd7e05ccc5ebc7f63f17a0bf5ef29aa72b864f3d3e2e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: How Many Shares of Coca-Cola or PepsiCo Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, collecting $1,000 a month in dividends takes 5,661 shares of Coca-Cola, about $549,100, or 2,028 shares of PepsiCo, about $285,000. PepsiCo looks like the better buy for that income, as long as its turnaround gets its free cash flow growing again.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024458
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T15:07:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d0aa72d1f951da00393e3fe350ebe85c4d50b0f002d7e5b79a294676e8875c42
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: 10-Year TIPS Pay 2.77% Above Inflation. Here’s How Dividend Stocks Compare
+<<<SUMMARY>>>
+A Treasury coupon can't be cut, but a dividend can grow faster than inflation. Before you pick a side, check the tax bill hiding inside TIPS and the raise that trails inflation at one famous monthly payer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024452
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T15:02:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4bf57a5411b66f636320c9d207882e05921f8d9d674b8cbfefe6c01876b7979b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: The Dividend Investing Strategy That Made Geraldine Weiss a Wall Street Legend
+<<<SUMMARY>>>
+Wall Street shut her out, so she signed her newsletter "G. Weiss" and went on to rewrite how investors judge value. Her yield test now splits Coca-Cola, Johnson & Johnson, and PepsiCo, and only one of them tempts her.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144023651
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T13:31:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b87a2c34a19b51fb191360f537a241175c5921c497911fc47f35a3bbeed2418
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo vs. Starbucks: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Starbucks trades at nearly twice PepsiCo's forward earnings multiple, but its free cash flow and loyalty-driven model raise a sharper question about which premium is justified.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012464
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T13:03:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b6d1fa59ef59ce02a68d5e60e425cf14c27dcc6722536e7caad506e46d0c0075
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: 5 Dividend Kings to Buy for Lifelong Income Before the End of November
+<<<SUMMARY>>>
+A fat yield means nothing if the cash behind it dries up. Five companies with 50-plus years of dividend raises put safety ahead of income, yet one of them leaves almost no room for error.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144010736
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T09:41:00Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=4ee88a6b605204cf5a05c4d5c56e6758de5128e840d826745362dca8a9a9829c
+image_url: https://www.chartmill.com/images/uploads/thumbnail_article_luc_kroeze_c1f44c837d.webp
+category: company
+tickers: PEP
+keywords: 
+headline: PEPSICO INC (NASDAQ:PEP): A Quality Investing Case With High ROIC but Mature Growth
+<<<SUMMARY>>>
+PepsiCo’s high ROIC and cash conversion fit quality investing, but slow revenue growth and leverage limit its Caviar Cruise screen appeal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144003547
+symbol: PEP
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T05:12:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=138b12a8ff224aa0f3f8745e95673eeeebd4a8eb1ee191e0a3d5d4e2788c8ff4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: PEP
+keywords: 
+headline: PepsiCo Stock And Other Defensive Value Picks For Higher Rates
+<<<SUMMARY>>>
+Fed officials are openly debating whether rates need to climb again, and that raises the stakes for U.S. large caps that rely on stable funding costs and steady consumer demand. When policy makers talk about getting “behind the curve” on inflation, investors who react late risk watching others reposition first. This piece walks through three large-cap defensive value stocks exposed to this macro shock and how the new rate risk could influence their appeal. The three stocks covered next are...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d5dd766f25c9e1bcccedabc49173d15dbbf3ae35b347708e730ae9e4a2b4a266
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T13:11:02Z
+publisher: The Motley Fool
+author: Erin Kennedy
+url: https://www.fool.com/coverage/better-buy/2026/11/22/pepsico-vs-starbucks-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F90c0575767a574caf98fff88bd74a707a6433372-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: PEP, SBUX, WMT, KO, YUM, NSRGY
+keywords: dividend stocks, consumer goods, valuation comparison, cash flow analysis, long-term investing, beverage industry
+headline: PepsiCo vs. Starbucks: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares PepsiCo and Starbucks as investment options for 2027. PepsiCo offers diversified snacks and beverages with strong cash flow ($7.7B), a lower P/E ratio of 17.66, and a 54-year dividend growth streak, making it attractive for conservative investors. Starbucks trades at a premium valuation (P/E of 46.68) with modest revenue growth of 1.9% and higher debt levels. The author recommends PepsiCo as the better choice for steady, reliable returns despite both stocks underperforming the S&P 500 over the past decade.
+<<<INSIGHTS>>>
+PEP | positive | Strong fundamentals with $7.7B free cash flow, lower valuation (P/E 17.66), 54-year dividend growth streak, diversified portfolio, and stable revenue growth of 6.4%. Author explicitly recommends it as the better choice for 2027.
+SBUX | negative | Significantly higher valuation (P/E 46.68) relative to modest 1.9% revenue growth, negative debt-to-equity ratio (-2.9), lower free cash flow ($3.7B), and operational challenges including unionization efforts and restructuring risks.
+WMT | neutral | Mentioned as PepsiCo's largest customer (14% of revenue), representing a concentration risk factor rather than an investment recommendation.
+KO | neutral | Mentioned as a competitive threat to PepsiCo but not evaluated as an investment option in this comparison.
+YUM | neutral | Mentioned as a long-term partner providing stable foundation for PepsiCo but not evaluated as an investment option.
+NSRGY | neutral | Mentioned as Starbucks' global alliance partner for packaged coffee but not evaluated as an investment option.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5374153df632622adbb89adff386a9822d3d43d204437f787085d47e49538998
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T19:17:02Z
+publisher: The Motley Fool
+author: Todd Shriber
+url: https://www.fool.com/investing/2026/11/22/what-these-6-snack-and-beverage-stocks-have-in-common/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F9837e9a1bbbdfd7816b2067f60759c3fba2977fb-7216x5412.jpg&w=1200&op=resize
+category: 
+tickers: KO, PEP, SJM, HRL, SYY, BF.A, BF.B
+keywords: dividend stocks, Dividend Aristocrats, consumer staples, dividend growth, snack stocks, beverage stocks
+headline: What These 6 Snack and Beverage Stocks Have in Common
+<<<SUMMARY>>>
+Six consumer staples companies—Coca-Cola, PepsiCo, Brown-Forman, Hormel Foods, J.M. Smucker, and Sysco—are examined for their dividend appeal. All are Dividend Aristocrats or Kings with 25+ years of consecutive dividend increases. Coca-Cola shows strong momentum with new all-time highs, while PepsiCo faces headwinds in North America and snacks. J.M. Smucker outperforms with 41% year-to-date gains, Hormel struggles but maintains dividend focus, and Sysco offers potential despite recent weakness.
+<<<INSIGHTS>>>
+KO | positive | Strong momentum with new all-time highs, 65-year dividend increase streak (Dividend King), outperforming PepsiCo by roughly 10:1 this year, and less exposure to struggling salty snacks segment.
+PEP | neutral | While a Dividend King with 55-year dividend streak and safe dividends, the stock faces headwinds from tepid North American performance and sluggish salty snacks division, described as a 'show me' story lacking clarity.
+SJM | positive | Stellar 41% year-to-date performance among packaged-food stocks, raised full-year earnings guidance in August, successfully passing higher costs to consumers, and defying concerns about weight-loss drugs hurting snack consumption.
+HRL | neutral | Dividend King with prudent balance sheet management and dividend focus, but shares slightly in the red this year. Expected 3% annual dividend growth could keep pace with inflation, offering modest upside potential.
+SYY | neutral | Dividend King with 2.9% yield, but stock slipped after weak fiscal Q1 earnings due to soft sales and higher costs. However, potential $100 million in AI-driven savings in 2027 and food-service scaling could present opportunity if market is overreacting.
+BF.A | positive | 42-year consecutive dividend raise streak with 3% yield (nearly triple S&P 500), potential for 43rd consecutive raise, and evidence of consumer trading up to premium brands despite younger demographic drinking less alcohol.
+BF.B | positive | 42-year consecutive dividend raise streak with 3% yield (nearly triple S&P 500), potential for 43rd consecutive raise, and evidence of consumer trading up to premium brands despite younger demographic drinking less alcohol.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:35e03957d4b1f797a5ce7c9d3ffd7fe26554be10cc65645ad472c9b3eae98b44
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T19:23:20Z
+publisher: The Motley Fool
+author: Seena Hassouna
+url: https://www.fool.com/coverage/better-buy/2026/11/22/elf-beauty-vs-monster-beverage-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fc608edc6523c713633ddf50ab8ac8081c367a06e-2233x1343.jpg&w=1200&op=resize
+category: 
+tickers: ELF, MNST, KO, PEP
+keywords: cosmetics, energy drinks, valuation comparison, revenue growth, net margins, distribution partnerships, consumer goods, acquisition strategy
+headline: e.l.f. Beauty vs. Monster Beverage: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares e.l.f. Beauty and Monster Beverage as investment options for 2027. e.l.f. Beauty offers prestige-quality cosmetics at accessible prices with 39.9% revenue growth but lower margins (4.5%), while Monster Beverage dominates the energy drink market with stronger profitability (22.7% net margin) and zero debt. The analyst recommends e.l.f. Beauty for 2027 due to strong growth and the rhode skincare acquisition, but suggests treating it as a starter position given execution risks.
+<<<INSIGHTS>>>
+ELF | positive | Strong revenue growth of 39.9%, attractive valuation metrics (lower Forward P/E and P/S ratios), successful rhode skincare acquisition, and analyst recommendation for 2027. However, sentiment is tempered by execution risks, customer concentration, and lower profit margins.
+MNST | neutral | Demonstrates strong financial fundamentals with 22.7% net margins, zero debt, solid 20.2% revenue growth, and dominant market position. However, not selected as the preferred buy for 2027, indicating the analyst views it as stable but less attractive than e.l.f. for growth investors.
+KO | neutral | Mentioned as Monster Beverage's critical global distribution partner, indicating importance to Monster's operations but no independent investment thesis presented.
+PEP | neutral | Identified as a significant competitor to Monster Beverage in the energy drink category, but no specific performance analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:03a43041e84a4a9d5cfa9466f08860afd3f84777f8e12c90acf8c006e06f7073
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T17:30:02Z
+publisher: The Motley Fool
+author: Jake Lerch
+url: https://www.fool.com/coverage/better-buy/2026/11/23/coca-cola-vs-pepsico-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F61ea707ee5315922f898d43f2d4a684c09a21556-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: KO, PEP, MNST, WMT, YUM, KDP, KHC, NSRGY
+keywords: beverage industry, consumer staples, valuation comparison, dividend stocks, business model comparison, profitability analysis
+headline: Coca-Cola vs. PepsiCo: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Coca-Cola and PepsiCo represent two distinct strategies in the beverage and consumer goods space. Coca-Cola operates an asset-light beverage-only model with higher profitability (32.1% operating margin) and faster revenue growth (4.9% since 2023), but trades at a premium valuation (P/E 28.3x). PepsiCo offers a diversified snacks and beverages portfolio with lower profitability (15.8% operating margin) but more attractive valuation (P/E 17.6x). The analyst concludes Coca-Cola is the better choice for 2027 despite its higher valuation, though PepsiCo remains a viable alternative.
+<<<INSIGHTS>>>
+KO | positive | Coca-Cola demonstrates superior revenue growth (4.9% average since 2023), significantly higher operating margins (32.1%), and stronger profitability metrics. The asset-light model and global bottling network provide competitive advantages, though offset by premium valuation and risks including KFC partnership ending in 2027 and IRS tax litigation.
+PEP | neutral | PepsiCo offers attractive valuation (lower P/E at 17.6x and P/S at 1.9x) and strong free cash flow ($7.7B), but lags in revenue growth (2.5% average) and profitability (15.8% operating margin). The diversified snacks portfolio provides stability but faces integration risks from acquisitions and higher customer concentration risk with Walmart.
+MNST | neutral | Mentioned as a strategic partner and competitor to Coca-Cola in the beverage market, indicating competitive pressure in the industry.
+WMT | neutral | Identified as a vital distribution partner for PepsiCo accounting for 14% of consolidated net revenue, representing significant customer concentration risk.
+YUM | neutral | Mentioned as a key foodservice operator partner for PepsiCo, supporting its distribution network.
+KDP | neutral | Identified as a competitor to Coca-Cola in the beverage market.
+KHC | neutral | Mentioned as a competitor to PepsiCo across multiple food and beverage categories.
+NSRGY | neutral | Identified as a major competitor to PepsiCo in the snacks and food categories.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:654b350e7982d84a652e07e4309acbe7d10894cf9f5d328f625bce4d047bec94
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T13:22:02Z
+publisher: The Motley Fool
+author: Lawrence Rothman, Cfa
+url: https://www.fool.com/coverage/better-buy/2026/11/24/colgate-palmolive-vs-starbucks-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Ffe4d70b5057ad9e791099f06e14116fef2b1ddad-1499x1000.jpg&w=1200&op=resize
+category: 
+tickers: CL, SBUX, WMT, PEP, NSRGY
+keywords: consumer goods stocks, valuation comparison, same-store sales growth, turnaround strategy, investment recommendation, earnings growth, market competition
+headline: Colgate-Palmolive vs. Starbucks: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Colgate-Palmolive and Starbucks as investment options for 2027. Colgate offers stability through essential household products with steady 5.9% revenue growth but slower momentum. Starbucks demonstrates stronger turnaround momentum with 7.2% same-store sales growth and successful execution of its improvement strategy. Despite Starbucks' higher valuation (32.0x forward P/E vs. 25.2x), the analyst recommends Starbucks for 2027 due to its successful turnaround and stronger growth trajectory.
+<<<INSIGHTS>>>
+CL | neutral | Colgate demonstrates steady but slow growth (5.9% revenue growth, 3.6% organic growth) with stable margins and essential product portfolio. However, it faces headwinds from customer concentration (Walmart 11% of sales), talc litigation, and slower momentum compared to peers. The analyst does not recommend it over Starbucks.
+SBUX | positive | Starbucks shows strong turnaround execution with 7.2% same-store sales growth, improved traffic, and successful management initiatives. The company is expanding internationally and closing underperforming locations. Despite higher valuation multiples, the analyst recommends Starbucks as the better buy for 2027 due to its momentum and successful strategic turnaround.
+WMT | neutral | Walmart is mentioned only as a significant customer of Colgate-Palmolive (11% of sales), representing a concentration risk. No independent analysis or recommendation is provided.
+PEP | neutral | PepsiCo is mentioned only as a partner with Starbucks for distribution. No independent analysis or recommendation is provided.
+NSRGY | neutral | Nestlé is mentioned only as a partner with Starbucks through the Global Coffee Alliance. No independent analysis or recommendation is provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a0ad698df944eff8792863b71d4339e40e8f86288443310cff6ad275b9ed71c5
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T16:32:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3034744/is-pepsico-sacrificing-pricing-power-to-regain-snack-volumes?cid=CS-ZC-FT-analyst_blog|quick_take-3034744
+image_url: https://staticx-tuner.zacks.com/images/articles/main/40/102.jpg
+category: 
+tickers: PEP, KO, MNST
+keywords: volume recovery, affordability initiatives, margin compression, pricing strategy, snack foods, consumer demand, profitability trade-off
+headline: Is PepsiCo Sacrificing Pricing Power to Regain Snack Volumes?
+<<<SUMMARY>>>
+PepsiCo is pursuing volume recovery in North American snacks through affordability initiatives and innovation, achieving four consecutive quarters of salty snack volume growth. However, this strategy is compressing margins by 280 basis points due to increased promotional spending and lower pricing power. The company is expanding portion-control multipacks generating $3.5B annually to balance value delivery with profitability, while competitors like Coca-Cola and Monster Beverage employ mixed pricing and premiumization strategies.
+<<<INSIGHTS>>>
+PEP | negative | Stock declined 2.3% YTD vs. industry growth of 21.8%; core operating margins contracted 280 bps; earnings estimates for 2026-2027 moved lower; carries Zacks Rank #4 (Sell). While volume growth is positive, profitability pressure and valuation concerns outweigh near-term benefits.
+KO | neutral | Successfully balancing pricing and volume through mixed strategy: 5% unit case volume growth with 1% price/mix improvement. Leveraging both affordability and premiumization effectively, with management targeting sustainable 2-3% growth from both volume and price/mix.
+MNST | neutral | Implementing targeted price increases while maintaining resilient demand and minimal anticipated volume disruption. Diversified approach across price points with affordable offerings and multipacks supports volume momentum, balancing profitability with consumer accessibility.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aae6147a840619412e1b7ad1e19a1df366502c5c8031d9d32ba182ab907c3322
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T16:35:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3034753/can-coca-cola-navigate-rising-costs-while-protecting-margins?cid=CS-ZC-FT-analyst_blog|quick_take-3034753
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a5/1022.jpg
+category: 
+tickers: KO, PEP, KDP
+keywords: margin expansion, inflationary pressures, cost management, pricing strategy, productivity initiatives, beverage industry, Q3 2026 earnings
+headline: Can Coca-Cola Navigate Rising Costs While Protecting Margins?
+<<<SUMMARY>>>
+Coca-Cola demonstrated resilience in Q3 2026 with gross and operating margin expansions of 170 bps and 110 bps respectively, despite inflationary pressures. The company is managing costs through joint commodity procurement, productivity initiatives, and strategic pricing while expecting further margin expansion in 2026. Peers PepsiCo and Keurig Dr Pepper face greater margin pressures despite similar cost management efforts.
+<<<INSIGHTS>>>
+KO | positive | Strong Q3 margin expansion (170 bps gross, 110 bps operating), effective cost management strategies, expected margin expansion in 2026, and outperformance versus industry peers (4.7% vs 1.6% gain in past three months) demonstrate resilience and operational strength.
+PEP | neutral | While implementing productivity initiatives and pricing strategies, PepsiCo's core operating margin contracted 35 bps in Q3 2026 and management expects North American margins to remain pressured in Q4, indicating ongoing challenges despite cost-saving efforts.
+KDP | neutral | Company is managing inflationary pressures through pricing and productivity, but excluding tariff refunds, inflationary pressures outweighed pricing and cost-saving benefits in Q3 2026, suggesting underlying margin pressure despite strategic initiatives.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ac0f4602549a477fad2fef1b228b027bf483c89eee5f51c27b89f03d39b2b6cd
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T08:00:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/25/3410018/0/en/energy-drinks-market-in-india-2032-usd-980-million-opportunity-amid-evolving-consumer-preferences-says-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: MNST, PEP, KO, BUD
+keywords: energy drinks market, India, CAGR 3.15%, botanical formulations, ready-to-drink beverages, FSSAI labeling, price-tiered portfolios, natural/organic energy drinks
+headline: Energy Drinks Market in India 2032: USD 980 Million Opportunity Amid Evolving Consumer Preferences, Says Mordor Intelligence
+<<<SUMMARY>>>
+India's energy drinks market is projected to grow from USD 0.82 billion in 2026 to USD 0.98 billion by 2032 at a 3.15% CAGR. Growth is driven by convenient ready-to-drink servings for work and gaming occasions, botanical formulations for product differentiation, and price-tiered portfolios. However, FSSAI labeling enforcement beginning July 2026 presents regulatory considerations for suppliers.
+<<<INSIGHTS>>>
+MNST | positive | Listed as a key competitor in India's growing energy drinks market with 3.15% CAGR expansion through 2032, benefiting from increased consumption occasions and product differentiation trends.
+PEP | positive | Competing through Sting brand in India's energy drinks market, which is experiencing growth driven by work routines, gaming occasions, and differentiated product positioning.
+KO | positive | Competing through Thums Up Charged in India's growing energy drinks market; positioned to benefit from price-tiered portfolios and botanical formulation trends.
+BUD | positive | Competing through Budweiser Beats in India's expanding energy drinks market with opportunities in convenient servings and differentiated product positioning.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b345b925d09dc28eef096b90a3b5731ee10b7aaa12ef01764b217bea954f4b8d
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T19:57:02Z
+publisher: The Motley Fool
+author: Anders Bylund
+url: https://www.fool.com/coverage/better-buy/2026/11/25/cava-vs-monster-beverage-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fb87002131a6e039ab8fc62272c140c1b76703a72-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: CAVA, MNST, KO, PEP, CELH, SBUX
+keywords: restaurant expansion, energy drinks, valuation comparison, cash flow, debt-to-equity ratio, forward P/E ratio, growth vs. stability
+headline: CAVA vs. Monster Beverage: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares CAVA Group and Monster Beverage as investment options for 2027. CAVA operates a rapidly expanding Mediterranean fast-casual restaurant chain with 500 locations and 27% revenue growth, but faces valuation concerns with a 93.4x forward P/E ratio and slowing same-restaurant sales growth of 3.1%. Monster Beverage dominates the global energy drink market with $9.6 billion in revenue, 20.2% growth, $1.9 billion in free cash flow, zero debt, and a more attractive 38.0x forward P/E ratio. The analyst recommends Monster Beverage as the better choice for 2027, citing stronger financial fundamentals and lower valuation despite CAVA's impressive growth trajectory.
+<<<INSIGHTS>>>
+CAVA | neutral | While CAVA demonstrates impressive revenue growth of 27% and maintains profitability with positive net income, the analyst expresses concerns about its high forward P/E of 93.4x, slowing same-restaurant sales growth of 3.1%, declining net income in the latest quarter, and overvaluation relative to fundamentals. The company is viewed as a high-growth story but not recommended at current prices.
+MNST | positive | Monster Beverage is recommended as the better investment choice due to its strong financial performance including $9.6 billion in revenue with 20.2% growth, $1.9 billion in free cash flow, zero debt, lower forward P/E of 38.0x, and a clean balance sheet. The company's established market dominance, efficient distribution model through Coca-Cola partners, and superior cash generation make it the preferred pick for 2027.
+KO | positive | Coca-Cola is mentioned positively as Monster Beverage's key distribution partner through its bottler network, enabling Monster's global reach with minimal capital investment. This partnership is highlighted as a significant competitive advantage supporting Monster's growth strategy.
+PEP | neutral | PepsiCo is mentioned as a competitor to Monster Beverage in the global energy drink market, representing competitive pressure but without specific negative commentary about its performance.
+CELH | neutral | Celsius is mentioned as an emerging rival to Monster Beverage in the energy drink sector, representing competitive threats but without detailed analysis of its performance or outlook.
+SBUX | neutral | Starbucks is mentioned as a national competitor to CAVA in the restaurant and food manufacturing sectors, representing competitive pressure but without specific performance commentary.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3fbececd3e4a26b7b8aecc106cd0024fc90a390d4a47401b75b858dbe6be2077
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T21:15:02Z
+publisher: The Motley Fool
+author: Stefon Walters
+url: https://www.fool.com/investing/2026/11/25/the-dividend-etf-id-choose-to-to-generate-500-a-month-in-passive-income/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F6323f9b8d0100eaa66bdb491f3032511aef5ea0c-2000x1335.jpg&w=1200&op=resize
+category: 
+tickers: SCHD, PG, KO, PEP, ABT
+keywords: dividend ETF, passive income, SCHD, dividend yield, Dividend Kings, portfolio diversification, long-term investing
+headline: The Dividend ETF I'd Choose to to Generate $500 a Month in Passive Income
+<<<SUMMARY>>>
+The Schwab U.S. Dividend Equity ETF (SCHD) is recommended as a diversified, high-yield dividend ETF for generating passive income. With a current yield of 3.1% and holdings of 102 well-vetted dividend-paying stocks, investors would need approximately $200,000 invested to generate $500 monthly. The ETF holds 11 Dividend Kings and complements S&P 500 investments due to its lower tech exposure and focus on consumer staples, healthcare, and energy sectors.
+<<<INSIGHTS>>>
+SCHD | positive | Recommended as a reliable, diversified dividend ETF with high yield (3.1%), low expense ratio (0.06%), strong holdings including 11 Dividend Kings, and suitable for long-term passive income generation.
+PG | positive | Highlighted as a Dividend King with 50+ consecutive years of dividend increases and a top holding in SCHD (4.66%), representing financial stability and reliability.
+KO | positive | Identified as a Dividend King with consistent dividend history, included in SCHD's top 10 holdings (4.41%), exemplifying quality and longevity.
+PEP | positive | Listed as a Dividend King in SCHD's top holdings, demonstrating long-term dividend growth and financial strength.
+ABT | positive | Identified as a Dividend King in SCHD's top 10 holdings, representing healthcare sector quality and dividend reliability.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f2a19d134c08bc6ca0990e7b3da7cc35623ae11cbf919fc5fad0656ba2c0f511
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T22:27:01Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/25/2-bargain-stocks-to-buy-with-usd1-000-in-november/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd52078e466c0df8f9b9300b1695388012bc06b4d-2119x1414.jpg&w=1200&op=resize
+category: 
+tickers: NVO, PEP, KO
+keywords: dividend stocks, bargain stocks, GLP-1 drugs, Novo Nordisk, PepsiCo, high yield, consumer staples, pharmaceuticals
+headline: 2 Bargain Stocks to Buy With $1,000 in November
+<<<SUMMARY>>>
+The article recommends Novo Nordisk and PepsiCo as bargain stocks in November, both offering historically high dividend yields (4.4% and 4.1% respectively) well above the S&P 500's 1% yield. Novo Nordisk is improving execution in its GLP-1 weight-loss drug portfolio and raised 2026 guidance, while PepsiCo, though facing near-term headwinds in organic sales growth, remains a strong long-term business with a 50+ year dividend increase streak. Both stocks trade at valuations below their industry averages.
+<<<INSIGHTS>>>
+NVO | positive | Company is showing improved execution with its GLP-1 pill launch, raised full-year 2026 guidance, and trades at an attractive 10x P/E ratio well below the pharma industry average of 27x. The 4.4% dividend yield is historically high and above industry average.
+PEP | positive | Despite current business headwinds and lagging organic sales growth versus competitors, PepsiCo is a Dividend King with 50+ years of consecutive dividend increases. It trades at 18x P/E below its 5-year average of 25x, offers a 4.1% yield, and is making strategic acquisitions and product innovations to navigate current challenges.
+KO | neutral | Mentioned as a peer comparison showing stronger organic sales growth (7% vs PepsiCo's 3.1%), but no investment recommendation or detailed analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:58425f637f6607d5cdc486163d23e34f70a8ea52fcc4e13a25949d978113fcd3
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T13:32:02Z
+publisher: The Motley Fool
+author: Reuben Gregg Brewer
+url: https://www.fool.com/investing/2026/11/26/forget-the-markets-hottest-stocks-this-boring-dividend-stock-is-where-id-put-1000-before-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F9a27cb2a1e29cf849f4a8b605a9c2c4f4d655fa5-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: PEP, KO
+keywords: dividend stock, PepsiCo, Dividend King, consumer staples, long-term investing, valuation, dividend yield, business diversification
+headline: Forget the Market's Hottest Stocks. This Boring Dividend Stock Is Where I'd Put $1,000 Before 2027.
+<<<SUMMARY>>>
+PepsiCo is recommended as an attractive long-term dividend investment despite current underperformance versus Coca-Cola. The company, a Dividend King with 54 years of consecutive dividend increases, offers a 4.2% dividend yield and trades at valuations below its historical average. While facing headwinds from inflation and changing consumer preferences, PepsiCo's diversified business across beverages, snacks, and packaged foods, combined with strategic brand acquisitions and product innovation, positions it well for patient long-term investors.
+<<<INSIGHTS>>>
+PEP | positive | Despite current underperformance, PepsiCo is recommended as a compelling long-term opportunity. The company offers an attractive 4.2% dividend yield backed by 54 years of consecutive dividend increases (Dividend King status), trades at valuations below historical averages, maintains industry-leading competitive advantages, and is actively adapting to consumer preferences through strategic acquisitions and product innovation.
+KO | neutral | Coca-Cola is presented as the current industry leader with stronger near-term performance (7% organic sales growth vs. PepsiCo's 3.1%), but is noted as trading at premium valuations relative to its historical average. While acknowledged as a strong competitor with brand strength and market leadership, it lacks the business diversification that PepsiCo offers.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e1851c5917ff8bad51cfaf0adf4c2a3ac132460ce057d5714fbfaf20ce5ad218
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T22:00:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/26/3411040/0/en/functional-beverage-market-outlook-2026-2032-usd-255-3-billion-as-demand-for-healthier-drinks-accelerates-says-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: PEP, MNST, DANOY, KO
+keywords: functional beverages, market growth, health and wellness, sports drinks, energy drinks, hydration beverages, Asia-Pacific expansion, clean-label products, gut health
+headline: Functional Beverage Market Outlook 2026–2032: USD 255.3 Billion as Demand for Healthier Drinks Accelerates, Says Mordor Intelligence
+<<<SUMMARY>>>
+The global functional beverage market is projected to grow from USD 163.8 billion in 2026 to USD 255.3 billion by 2032, registering a CAGR of 7.62% during 2027–2032. Asia-Pacific is emerging as the fastest-growing region at 8.2% CAGR, driven by demand for hydration, sports nutrition, and gut health-focused beverages. Key growth drivers include integration of functional ingredients into familiar formats (fiber-added carbonated drinks), clean-label natural ingredients, and regional expansion of hydration and sports beverages.
+<<<INSIGHTS>>>
+PEP | positive | Listed as a key competitor in the rapidly growing functional beverage market with strong positioning in sports and energy drink categories, benefiting from market expansion and consumer shift toward healthier beverages.
+MNST | positive | Identified as a major player in the energy drink segment, which is experiencing strong growth driven by increasing consumer demand for functional beverages and expanding retail distribution.
+DANOY | positive | Key competitor with portfolio opportunities in functional beverages, particularly in hydration and gut health segments, which are identified as major growth drivers.
+KO | positive | Major global beverage manufacturer with extensive functional beverage portfolio (Aquarius, Pocari Sweat through partnerships) and strong regional expansion capabilities, particularly in high-growth Asia-Pacific market.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:63035be210abb2ddad3b737037af542f4196424f722a4b6ec2efd05ceaf97145
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-27T12:15:02Z
+publisher: The Motley Fool
+author: Matt Dilallo
+url: https://www.fool.com/investing/2026/11/27/3-stocks-i-d-love-to-buy-at-black-friday-sale-prices/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fc381e5c96e40370c2c60e065ae2c3b35b3d9b3b8-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: CTAS, WM, PEP
+keywords: stock valuation, dividend stocks, recurring revenue, market downturn, entry price, long-term investing
+headline: 3 Stocks I'd Love to Buy at Black Friday Sale Prices
+<<<SUMMARY>>>
+An investor identifies three high-quality companies he would like to purchase at lower valuations: Cintas (target price $185 vs. current $227.65), Waste Management (target price $200 vs. current $247.29), and PepsiCo (target price $130 vs. current $143.93). While all three are considered excellent long-term holdings with strong business models and dividend histories, the author believes their current valuations are too rich and prefers to wait for more attractive entry points.
+<<<INSIGHTS>>>
+CTAS | positive | Described as a high-quality compounding business with durable recurring revenue, strong cash flow, and 43 consecutive years of dividend increases. However, current valuation at 40x forward earnings is considered too expensive, hence the desire for a lower entry point.
+WM | positive | Characterized as an essential business with an irreplaceable competitive moat, 75% recurring revenue, strong free cash flow growth, and 23 consecutive years of dividend increases. Current 30x earnings valuation is viewed as high, but the business fundamentals are strong.
+PEP | positive | Recognized as a resilient global leader with strong brand portfolio, consistent dividend growth (54 years of increases qualifying as Dividend King), and expected high-single-digit long-term EPS growth. Already considered good value at current price, with potential for even better returns at lower levels.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:12b3803c7cf8697788e6941ffe63284f3fc68176ab0d212a34d56c914fb7c350
+symbol: PEP
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-27T15:11:41Z
+publisher: The Motley Fool
+author: Sara Appino
+url: https://www.fool.com/coverage/better-buy/2026/11/27/celsius-vs-lululemon-athletica-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F497213577468110e4ae04f3160ed91a99378c474-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: CELH, LULU, PEP, MNST, KO
+keywords: functional beverages, athletic apparel, revenue growth, distribution partnership, premium brand positioning, valuation comparison, market expansion
+headline: Celsius vs. lululemon athletica: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Celsius Holdings and lululemon athletica as investment options for 2027. Celsius, a functional beverage company backed by PepsiCo's distribution network, shows rapid 49% revenue growth and profitability, though it faces concentration risk with Pepsi accounting for 43% of revenue. Lululemon, a premium athletic apparel company, maintains higher margins but struggles with slowing growth and declining sales. The analyst recommends Celsius as the better buy for growth-oriented investors despite higher valuation multiples, citing its profitable expansion and Alani Nu brand momentum versus lululemon's stalled momentum.
+<<<INSIGHTS>>>
+CELH | positive | Strong 49% revenue growth, profitability with 10% net margin, successful Alani Nu acquisition driving 50% YoY retail sales growth, and international expansion potential via PepsiCo partnership. Analyst recommends it as the better buy for 2027.
+LULU | neutral | Maintains premium brand positioning with 12.8% net margin and strong free cash flow of $921.7M, but faces headwinds including slowing growth (1.7%), declining North American sales, leadership transition, and stalled momentum. Cheaper valuation but business has not turned the corner.
+PEP | neutral | Mentioned as Celsius's primary distributor accounting for 43.2% of revenue, representing both an opportunity for distribution scale and a concentration risk for Celsius.
+MNST | neutral | Mentioned as a major competitor to Celsius in the functional beverage market, representing competitive pressure.
+KO | neutral | Mentioned as a large-scale competitor to Celsius in the beverage market.
+<<<END>>>

@@ -1,0 +1,486 @@
+<<<PRESS_RELEASE>>>
+id: 3dfb9242b5c941be
+symbol: WMT
+published_utc: 2025-12-02T05:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-supercharges-holiday-traditions-biggest-fastest-black-friday-and-cyber-monday
+headline: Walmart Supercharges Holiday Traditions with Biggest, Fastest Black Friday and Cyber Monday Yet
+<<<TEXT>>>
+This Black Friday and Cyber Monday, Walmart once again set the pace for how America shops— faster, smarter and more conveniently than ever.  "We curated an incredible assortment of the most sought-after gifts— from Barbie to Vizio to Apple— at the best prices of the season," said Latriece Watkins, Chief Merchant, Walmart US." And thanks to our coast-to-coast Fast...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f53e8c446e1ae44a
+symbol: WMT
+published_utc: 2025-12-02T09:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-opens-second-owned-and-operated-milk-processing-facility-valdosta-georgia
+headline: Walmart Opens Second Owned and Operated Milk Processing Facility in Valdosta, Georgia, Creating More Than 400 New Jobs
+<<<TEXT>>>
+Walmart today celebrated the grand opening of its second owned and operated milk processing facility in Valdosta, Georgia— a major milestone that will create more than 400 new jobs, strengthen Walmart’ s end-to-end supply chain for affordable, high-quality milk, and advance the company’ s long-standing commitment to U.S. manufacturing and local sourcing.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: af6432fb86a8ca7e
+symbol: WMT
+published_utc: 2025-12-09T07:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-debuts-nasdaq-marking-its-first-day-trading-2025-12-09
+headline: Walmart Debuts on Nasdaq, Marking Its First Day of Trading
+<<<TEXT>>>
+Walmart Inc. today announced it has completed the listing transfer of its common stock and bonds to Nasdaq and will begin trading, marking a new chapter in the company’ s 63- year history of growth, innovation, and long-term value creation for shareholders. As Walmart continues to define and lead the future of global retail, the company is confident that Nasdaq...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 94c0c83ec22a4c99
+symbol: WMT
+published_utc: 2025-12-09T13:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-gives-last-minute-shoppers-more-time-order-gifts-2025-12-09
+headline: Walmart Gives Last Minute Shoppers More Time to Order Gifts
+<<<TEXT>>>
+Fresh off a record-breaking Black Friday and Cyber Monday, Walmart is bringing the magic of fast, easy shopping to customers by offering Express Delivery in as fast as one hour on orders placed up to 5 p.m. local time on Christmas Eve*, perfect for last-minute gifts, ingredients and holiday essentials. "More people are using Express Delivery to get their items...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5f5e7c270c27ddce
+symbol: WMT
+published_utc: 2026-01-06T07:30:00Z
+url: https://www.nasdaq.com/press-release/becketts-kicks-multi-channel-dry-january-campaign-across-retail-subscription-services
+headline: Beckett's Kicks Off Multi-Channel Dry January Campaign Across Retail, Subscription Services, and Influencer Partnerships
+<<<TEXT>>>
+Throughout January, Beckett's will offer promotions that may include product discounts, end-cap displays, and samplings at Total Wine& More, Walmart.com, Amazon.com, and select independent retailers such as Burden of Proof in Los Angeles.  "Beckett's has been a tremendous partner throughout our first year in business," said Obreanna McReynolds, co-founder of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0fe12f8599e0d7b9
+symbol: WMT
+published_utc: 2026-01-08T08:02:00Z
+url: https://www.nasdaq.com/press-release/walmart-names-shishir-mehrotra-board-directors-2026-01-08
+headline: Walmart names Shishir Mehrotra to Board of Directors
+<<<TEXT>>>
+Walmart Inc. announced the appointment of Shishir Mehrotra, Chief Executive Officer at Superhuman, to the company’ s Board of Directors, effective today. He will serve on the Board’ s Compensation and Management Development Committee and the Technology and eCommerce Committee. "I have long admired Walmart’ s ability to innovate while staying true to its core...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 65ef95530a044816
+symbol: WMT
+published_utc: 2026-01-08T13:00:00Z
+url: https://www.nasdaq.com/press-release/new-year-new-you-walmart-launches-better-care-services-and-rolls-back-prices-1000
+headline: New Year, New You: Walmart Launches Better Care Services and Rolls Back Prices on 1,000+ Wellness Essentials
+<<<TEXT>>>
+Walmart is starting the new year by making healthcare easier and more affordable with the launch of Better Care Services. Once a same-day consultation is complete, Walmart’ s flexible pickup and delivery options, including free delivery for Walmart+ members, help customers get their prescriptions and over-the-counter needs through a health journey that...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b4155e0ee09ec2ae
+symbol: WMT
+published_utc: 2026-01-09T20:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-inc-join-nasdaq-100-indexr-beginning-january-20th-2026-2026-01-10
+headline: Walmart Inc. to Join the Nasdaq-100 Index® Beginning January 20th, 2026
+<<<TEXT>>>
+--Nasdaq today announced that Walmart Inc., will become a component of the Nasdaq-100 Index ®, the Nasdaq-100 Equal Weighted™ Index, and the Nasdaq-100 Ex-Tech Sector™ Index prior to market open on Tuesday, January 20, 2026- the first trading day following the third Friday of the month. Walmart Inc. will replace AstraZeneca PLC in the Nasdaq-100 Index ®, the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a7ba1d89b026b372
+symbol: WMT
+published_utc: 2026-01-11T10:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-and-google-turn-ai-discovery-effortless-shopping-experiences-2026-01-11
+headline: Walmart and Google Turn AI Discovery Into Effortless Shopping Experiences
+<<<TEXT>>>
+Today, Walmart Inc. and Google share plans to launch a new experience that pairs the intelligence of Google’ s Gemini with Walmart and Sam’ s Club’ s unmatched assortment, value and convenience, to make shopping more intuitive, reliable and perfectly aligned with the rhythms of everyday life. And since people talk back-and-forth with Gemini, there are more...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f325594c8790bc7e
+symbol: WMT
+published_utc: 2026-01-14T10:30:00Z
+url: https://www.nasdaq.com/press-release/walmart-opens-new-eastvale-supercenter-support-growing-community-speed-value-and
+headline: Walmart Opens New Eastvale Supercenter to Support a Growing Community with Speed, Value, and Choice
+<<<TEXT>>>
+With the opening of Eastvale’ s first Walmart Supercenter, Walmart continues its long-term commitment to modernizing retail while expanding access to value, convenience, and services in local communities. Designed around how customers live, work and commute today, the store delivers a modern layout, digital-first shopping experiences, flexible...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1a623858558faa0d
+symbol: WMT
+published_utc: 2026-01-15T17:33:00Z
+url: https://www.nasdaq.com/press-release/kathryn-mclay-depart-walmart-2026-01-15
+headline: Kathryn McLay to depart Walmart
+<<<TEXT>>>
+Walmart Inc. today announced Kathryn McLay, President and CEO, Walmart International, will depart Walmart. "I’ m grateful for the positive impact Kath has had on our people and our company throughout her decade of service," said Doug McMillon, President and CEO of Walmart Inc." Since stepping in to lead Walmart International in 2023, Kath has led a growth agenda,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: af3ab3407de33f2b
+symbol: WMT
+published_utc: 2026-01-16T09:04:00Z
+url: https://www.nasdaq.com/press-release/walmart-announces-leadership-changes-2026-01-16
+headline: Walmart Announces Leadership Changes
+<<<TEXT>>>
+Walmart Inc. today announced that its Board of Directors has elected new leaders to its Executive Council. Incoming President and Chief Executive Officer of Walmart Inc. John Furner also shared additional changes designed to help fuel innovation and drive the new era of retail. Walmart' s Board of Directors elects new leaders and incoming Walmart Inc....
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8b25ca2cf6ec5ca8
+symbol: WMT
+published_utc: 2026-01-20T09:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-marketplace-expands-premium-musical-instruments-leading-global-brands-2026-01
+headline: Walmart Marketplace Expands into Premium Musical Instruments with Leading Global Brands
+<<<TEXT>>>
+The new digital storefront marks the first phase of Walmart Marketplace’ s expansion into professional-grade musical instruments and accessories, giving everyday shoppers, creators, and musicians access to both new and resold gear from globally trusted brands. The launch reflects Walmart Marketplace’ s continued focus on broadening its selection in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3b8a92bfd3da3a65
+symbol: WMT
+published_utc: 2026-01-27T10:00:00Z
+url: https://www.nasdaq.com/press-release/major-league-soccer-unveils-walmart-saturday-showdown-weekly-marquee-matchup-2026-01
+headline: Major League Soccer Unveils Walmart Saturday Showdown, a Weekly Marquee Matchup
+<<<TEXT>>>
+Major League Soccer today announced the launch of Walmart Saturday Showdown, spotlighting a marquee MLS matchup each Saturday throughout the regular season and establishing a consistent appointment-viewing experience for fans. Walmart Saturday Showdown will debut during the league’ s Opening Weekend with one of the season’ s most anticipated matchups,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fe1fe9138657ca65
+symbol: WMT
+published_utc: 2026-02-04T14:14:00Z
+url: https://www.nasdaq.com/press-release/walmart-opens-next-generation-supercenter-jacksonville-2026-02-04
+headline: Walmart Opens Next Generation Supercenter in Jacksonville
+<<<TEXT>>>
+Today, Walmart’ s newest Supercenter in Jacksonville, located at 10000 Omni Dr. in the growing Oakleaf community, officially opened with a community celebration that recognized long-term and new associates, as well as several organizations making a difference in the region. Grand Opening of Walmart' s Next Generation Supercenter in Jacksonville, Florida.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6c82430afc4da951
+symbol: WMT
+published_utc: 2026-02-12T06:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-host-fourth-quarter-earnings-conference-call-february-19-2026-2026-02-12
+headline: Walmart To Host Fourth Quarter Earnings Conference Call February 19, 2026
+<<<TEXT>>>
+Walmart Inc. announced it will release its fourth quarter earnings results at 6 a.m. CST and hold a live conference call with the investment community at 7 a.m. CST on Thursday, February 19, 2026. Walmart Inc. is a people-led, tech-powered omnichannel retailer helping people save money and live better- anytime and anywhere- in stores, online, and through their...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4910f52e526497d8
+symbol: WMT
+published_utc: 2026-02-19T07:02:00Z
+url: https://www.nasdaq.com/press-release/walmart-reports-revenue-growth-56-49-constant-currency-cc-2026-02-19
+headline: Walmart reports revenue growth of 5.6%, up 4.9% in constant currency (cc)
+<<<TEXT>>>
+Revenue of $190.7 billion, up 5.6%, or 4.9% Global eCommerce sales grew 24%, led by store-fulfilled pickup& delivery and marketplace Global advertising business up 37%, including VIZIO; Walmart Connect in the U.S. up 41% Membership fee revenue grew 15.1% globally Gross margin rate up 13 bps, led by Walmart U.S. Operating income up $0.8 billion, or 10.8% up 10.5%...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: be0372b4dd6aa362
+symbol: WMT
+published_utc: 2026-02-19T07:03:00Z
+url: https://www.nasdaq.com/press-release/walmart-raises-annual-dividend-099-share-marking-53rd-consecutive-year-dividend
+headline: Walmart Raises Annual Dividend to $0.99 per Share, Marking 53rd Consecutive Year of Dividend Increases
+<<<TEXT>>>
+The Board of Directors of Walmart Inc. approved an annual cash dividend for fiscal year 2027 of $0.99 per share. This decision is a proof point of our continued confidence in our business performance and forward momentum," said John David Rainey, executive vice president and chief financial officer at Walmart Inc.. Walmart Inc. is a people-led, tech-powered...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1a9c3e9dc12537e8
+symbol: WMT
+published_utc: 2026-02-26T08:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-leadership-participate-upcoming-investor-events-2026-02-26
+headline: Walmart Leadership to Participate in Upcoming Investor Events
+<<<TEXT>>>
+Walmart Inc. announced today that company leadership will participate in upcoming investor events. Mar. 3: Raymond James Institutional Investors Conference– Kary Brunner, senior director of investor relations, will participate in meetings with investors. Mar. 4: Morgan Stanley Tech, Media& Telecom Conference– Daniel Danker, EVP of AI acceleration, product and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 890bae206db66258
+symbol: WMT
+published_utc: 2026-03-04T18:55:00Z
+url: https://www.nasdaq.com/press-release/walmart-opens-next-generation-supercenter-villages-highlights-florida-grown-products
+headline: Walmart Opens Next Generation Supercenter in The Villages, Highlights Florida-Grown Products
+<<<TEXT>>>
+Today, Walmart’ s newest Supercenter at 11115 Waxman Drive officially opened in The Villages with a community celebration highlighting the store’ s associates, new products and services, Fresh From Florida produce, and local nonprofit partners. "Today is a proud moment for our team and The Villages community," said Store Manager Trish Rubio." Thanks to the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: edb3af8f41b9321a
+symbol: WMT
+published_utc: 2026-03-12T16:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-names-erin-nealy-cox-chief-legal-officer-2026-03-12
+headline: Walmart Names Erin Nealy Cox as Chief Legal Officer
+<<<TEXT>>>
+Walmart Inc. announced today that Erin Nealy Cox has been named Walmart’ s next Executive Vice President of Global Governance, Chief Legal Officer, and Corporate Secretary. Erin is exactly that leader," said Walmart President and Chief Executive Officer John Furner." She brings a rare combination of legal strategy and operational rigor that will be essential as...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cc3405d9c74d83c9
+symbol: WMT
+published_utc: 2026-04-14T09:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-joins-us-cotton-trust-protocol-taking-major-step-advance-sustainable-cotton
+headline: Walmart Joins U.S. Cotton Trust Protocol, Taking Major Step to Advance Sustainable Cotton Sourcing
+<<<TEXT>>>
+--The U.S. Cotton Trust Protocol announced today that Walmart, a global retail powerhouse, has joined the program. As a member of the Trust Protocol, Walmart will gain access to aggregated, verifiable data on sustainability practices from U.S. cotton growers and have the ability to track the movement of U.S. Cotton and Protocol Cotton through its supply chain.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cac2c5c0ee1daf9d
+symbol: WMT
+published_utc: 2026-04-14T14:27:00Z
+url: https://www.nasdaq.com/press-release/walmart-introduces-upstream-facility-services-bringing-its-maintenance-expertise
+headline: Walmart introduces Upstream Facility Services, bringing its maintenance expertise to businesses nationwide
+<<<TEXT>>>
+Walmart introduces Upstream Facility Services, a new business bringing its in-house maintenance expertise to companies nationwide. This press release features multimedia. "We’ ve spent years building one of the largest in-house facility service operations in the country," said R.J. Zanes, Vice President of Walmart Facility Services." Upstream takes that...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: eeca7c403b8b958d
+symbol: WMT
+published_utc: 2026-04-15T06:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-unveils-modern-redesign-great-value-its-flagship-private-brand-2026-04-15
+headline: Walmart Unveils Modern Redesign of Great Value, Its Flagship Private Brand
+<<<TEXT>>>
+Walmart today announced a comprehensive redesign of its flagship private brand, Great Value, reinforcing its commitment to delivering high-quality products customers need, want and love— at an affordable price. Walmart unveils redesign of flagship private brand, Great Value. "At Walmart, we’ re focused on delivering quality and value our customers can count on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0910689e2dbe82bc
+symbol: WMT
+published_utc: 2026-04-16T09:57:00Z
+url: https://www.nasdaq.com/press-release/walmart-deepens-commitment-utah-fueling-long-term-impact-and-future-statewide
+headline: Walmart Deepens Commitment to Utah, Fueling Long-Term Impact and Future Statewide Investments
+<<<TEXT>>>
+Walmart today announced continued reinvestment across Utah, with plans in 2026 to remodel seven stores as part of ongoing efforts to modernize the in-store and digital shopping experience– upgrading layouts, technology, and services to offer faster, more convenient shopping and delivery in as little as an hour for most customers. Additionally, Walmart...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b6884d2d7d7333db
+symbol: WMT
+published_utc: 2026-04-16T09:57:00Z
+url: https://www.nasdaq.com/press-release/walmart-deepens-commitment-mississippi-fueling-long-term-impact-and-future-statewide
+headline: Walmart Deepens Commitment to Mississippi, Fueling Long-Term Impact and Future Statewide Investments
+<<<TEXT>>>
+Walmart today announced continued reinvestment across Mississippi, with plans in 2026 to remodel 19 stores as part of ongoing efforts to modernize the in-store and digital shopping experience— upgrading layouts, technology, and services to offer faster, more convenient shopping and delivery in as little as an hour for most customers. Additionally, Walmart...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0376101a2e1e468b
+symbol: WMT
+published_utc: 2026-04-16T09:57:00Z
+url: https://www.nasdaq.com/press-release/walmart-deepens-commitment-maryland-fueling-long-term-impact-and-future-statewide
+headline: Walmart Deepens Commitment to Maryland, Fueling Long-Term Impact and Future Statewide Investments
+<<<TEXT>>>
+Walmart announced continued reinvestment across Maryland, with plans in 2026 to remodel 10 stores as part of ongoing efforts to modernize the in-store and digital shopping experience— upgrading layouts, technology, and services to offer faster, more convenient in-store shopping and delivery in as little as an hour for most customers. Nationally, Walmart is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a3dd4cd7a3663b72
+symbol: WMT
+published_utc: 2026-04-16T09:58:00Z
+url: https://www.nasdaq.com/press-release/walmart-deepens-commitment-georgia-fueling-long-term-impact-and-future-statewide
+headline: Walmart Deepens Commitment to Georgia, Fueling Long-Term Impact and Future Statewide Investments
+<<<TEXT>>>
+Walmart today announced continued reinvestment across Georgia, with plans in 2026 to remodel 13 stores as part of ongoing efforts to modernize the in-store and digital shopping experience— upgrading layouts, technology, and services to offer faster, more convenient shopping and delivery in as little as an hour for most customers. Nationally, Walmart is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c011ec7821239869
+symbol: WMT
+published_utc: 2026-04-16T09:58:00Z
+url: https://www.nasdaq.com/press-release/walmart-deepens-commitment-minnesota-fueling-long-term-impact-and-future-statewide
+headline: Walmart Deepens Commitment to Minnesota, Fueling Long-Term Impact and Future Statewide Investments
+<<<TEXT>>>
+Walmart today announced continued reinvestment across Minnesota, with plans in 2026 to remodel 16 stores as part of ongoing efforts to modernize the in-store and digital shopping experience– upgrading layouts, technology, and services to offer faster, more convenient shopping and delivery in as little as an hour for most customers. Additionally, Walmart...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1ae9b0643a5072ed
+symbol: WMT
+published_utc: 2026-04-16T09:58:00Z
+url: https://www.nasdaq.com/press-release/walmart-deepens-commitment-new-hampshire-fueling-long-term-impact-and-future
+headline: Walmart Deepens Commitment to New Hampshire, Fueling Long-Term Impact and Future Statewide Investments
+<<<TEXT>>>
+Walmart announced continued reinvestment across New Hampshire, with plans in 2026 to remodel nine stores and open a new pharmacy as part of ongoing efforts to modernize the in-store and digital shopping experience— upgrading layouts, technology, and services to offer faster, more convenient shopping and delivery in as little as an hour for most customers.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0a9c87bef50bf914
+symbol: WMT
+published_utc: 2026-04-16T09:58:00Z
+url: https://www.nasdaq.com/press-release/walmart-deepens-commitment-connecticut-fueling-long-term-impact-and-future-statewide
+headline: Walmart Deepens Commitment to Connecticut, Fueling Long-Term Impact and Future Statewide Investments
+<<<TEXT>>>
+Walmart announced c ontinued reinvestment across Connecticut, with plans in 2026 to remodel 10 stores as part of ongoing efforts to modernize the in-store and digital shopping experience— upgrading layouts, technology, and services to offer faster, more convenient shopping and delivery in as little as an hour to most customers. Across Connecticut, Walmart’ s...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3427a2ffafb74c42
+symbol: WMT
+published_utc: 2026-04-16T09:59:00Z
+url: https://www.nasdaq.com/press-release/walmart-deepens-commitment-new-jersey-fueling-long-term-impact-and-future-statewide
+headline: Walmart Deepens Commitment to New Jersey, Fueling Long-Term Impact and Future Statewide Investments
+<<<TEXT>>>
+Walmart announced continued reinvestment across New Jersey, with plans in 2026 to remodel 12 stores as part of ongoing efforts to improve the in-store and online shopping experience— upgrading layouts and services to offer faster, more convenient in-store shopping and delivery in as little as an hour to most customers. Additionally, Walmart invested more...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3d59a07cf1c0aa94
+symbol: WMT
+published_utc: 2026-04-16T09:59:00Z
+url: https://www.nasdaq.com/press-release/walmart-deepens-commitment-massachusetts-fueling-long-term-impact-and-future
+headline: Walmart Deepens Commitment to Massachusetts, Fueling Long-Term Impact and Future Statewide Investments
+<<<TEXT>>>
+Walmart announced continued reinvestment across Massachusetts, with plans in 2026 to remodel 13 stores as part of ongoing efforts to modernize the in-store and digital shopping experience— upgrading layouts, technology, and services to offer faster, more convenient shopping and delivery in as little as an hour for most customers. Additionally, Walmart...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3d45c0ec0af00c32
+symbol: WMT
+published_utc: 2026-04-22T07:00:00Z
+url: https://www.nasdaq.com/press-release/sams-club-launches-enhanced-express-delivery-fueling-continued-ecommerce-growth
+headline: Sam’s Club Launches Enhanced Express Delivery, Fueling Continued eCommerce Growth with Checkout to Doorstep Delivery in as Soon as an Hour – Often Less
+<<<TEXT>>>
+"Members love our three hours or less Express delivery, but they told us they wanted an even faster option— so, we delivered," said Greg Pulsifer, Senior Vice President, eCommerce at Sam’ s Club." We continue to differentiate ourselves as a leader in club retail through true omnichannel shopping experiences: in-club, online, in-app, Curbside Pickup, and fast delivery—...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0b83181a93bb0d83
+symbol: WMT
+published_utc: 2026-04-23T16:21:00Z
+url: https://www.nasdaq.com/press-release/walmart-releases-2026-annual-report-and-proxy-statement-2026-04-23
+headline: Walmart Releases 2026 Annual Report and Proxy Statement
+<<<TEXT>>>
+Walmart Inc. issued its 2026 Annual Report and filed its Proxy Statement today in preparation for the company’ s Annual Shareholders’ Meeting on Thursday, June 4, 2026. In his first letter to shareholders and associates as Walmart President and Chief Executive Officer, John Furner expressed confidence in the business model that delivered results, and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c739034e204bcf09
+symbol: WMT
+published_utc: 2026-04-29T09:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-opens-third-owned-and-operated-milk-processing-facility-robinson-texas
+headline: Walmart Opens Third Owned and Operated Milk Processing Facility in Robinson, Texas, Creating More Than 400 New Jobs
+<<<TEXT>>>
+Walmart today celebrated the grand opening of its third owned and operated milk processing facility in Robinson, Texas— a major milestone that will create more than 400 new jobs, strengthen Walmart’ s end-to-end supply chain for affordable, high-quality milk, and advance the company’ s long-standing commitment to U.S. manufacturing and local sourcing.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3306b6adbd20e006
+symbol: WMT
+published_utc: 2026-05-14T08:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-host-first-quarter-earnings-conference-call-may-21-2026-2026-05-14
+headline: Walmart To Host First Quarter Earnings Conference Call May 21, 2026
+<<<TEXT>>>
+Walmart Inc. announced it will release its first quarter earnings results at 6 a.m. CDT and hold a live conference call with the investment community at 7 a.m. CDT on Thursday, May 21, 2026. Walmart Inc. is a people-led, tech-powered omnichannel retailer helping people save money and live better- anytime and anywhere- in stores, online, and through their mobile...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8f78cfced7e9ff3f
+symbol: WMT
+published_utc: 2026-05-21T07:02:00Z
+url: https://www.nasdaq.com/press-release/walmart-reports-revenue-growth-73-59-constant-currency-cc-2026-05-21
+headline: Walmart reports revenue growth of 7.3%, up 5.9% in constant currency (cc)
+<<<TEXT>>>
+Walmart U.S. advertising up 36% Membership fee revenue grew 17.4% globally Gross profit rate up 6 bps, led by Walmart U.S. Operating income up $0.4 billion, or 5.0% up 5.1% adjusted Adjusted EPS of $0.66 excludes the impact, net of tax, from a net gain of $0.02 on equity and other investments, and $0.01 from business reorganization charges ROA at 8.4%; ROI at 14.9%,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8f035486d2d4eaf5
+symbol: WMT
+published_utc: 2026-05-22T08:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-leadership-participate-upcoming-investor-events-2026-05-22
+headline: Walmart Leadership to Participate in Upcoming Investor Events
+<<<TEXT>>>
+May 27: Buyside U.S. Diversified CEO Conference– John Furner, president and CEO, will participate in meetings with investors. May 28: Bernstein Strategic Decisions Conference– Steph Wissink, senior vice president of investor relations, and Michael Marks, senior director of investor relations, will participate in meetings with investors. Jun. 2: DB Global Consumer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a5bf41d44379c0dc
+symbol: WMT
+published_utc: 2026-05-28T07:00:00Z
+url: https://www.nasdaq.com/press-release/sams-clubs-members-marktm-community-surges-over-150000-participants-2026-05-28
+headline: Sam’s Club’s Member’s Mark™ Community Surges to Over 150,000 Participants
+<<<TEXT>>>
+The Member’ s Mark Community gives members the ability to trial, test, taste, and recommend hundreds of exclusive Member’ s Mark products, Sam’ s Club’ s private brand, and are now doing so on a scale that sets Sam’ s Club apart from its peer competitors and other retailers. The rapid growth of the Member’ s Mark Community comes as Sam’ s Club has identified a shift from...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6731218f94ad946a
+symbol: WMT
+published_utc: 2026-05-28T07:00:00Z
+url: https://www.nasdaq.com/press-release/come-join-us-jason-sudeikis-teams-sams-club-2026-05-28
+headline: Come Join Us: Jason Sudeikis Teams Up with Sam's Club
+<<<TEXT>>>
+Sam’ s Club, a leading membership retail club, is teaming up with actor and producer Jason Sudeikis to invite people everywhere this summer to experience what it truly means to belong to a club built for members and with members. "People want to feel connected to their communities and the things they love," said Jason Sudeikis." That’ s what I like about Sam's Club.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c59f26bede1d9533
+symbol: WMT
+published_utc: 2026-06-02T08:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-helps-first-responders-comfort-children-crisis-across-florida-2026-06-02
+headline: Walmart Helps First Responders Comfort Children in Crisis Across Florida
+<<<TEXT>>>
+Walmart is expanding its commitment to Florida communities with a statewide expansion of its support for the Bridegan Foundation’ s Bexley Boxes program, helping every law enforcement agency in Florida provide access to comfort kits for children impacted by crime. As part of an expanded statewide commitment to help all law enforcement agencies in Florida...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3281ebd2a380f39e
+symbol: WMT
+published_utc: 2026-06-03T16:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-grants-108m-matthew-25-ministries-disaster-fleet-expansion-collaboration
+headline: Walmart Grants $10.8M to Matthew 25: Ministries for Disaster Fleet Expansion in Collaboration with Procter & Gamble
+<<<TEXT>>>
+Today, Walmart announced that it is helping speed critical disaster relief to communities. Building on a proven disaster relief model, this program expansion supports the addition of seven laundry trailers and multi-service shower units from P&G and Walmart, along with tow vehicles and generators. "When disaster strikes, those first few days can be...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1475ce55656cf158
+symbol: WMT
+published_utc: 2026-06-04T17:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-adds-express-delivery-store-restaurants-starting-subwayr-2026-06-04
+headline: Walmart Adds Express Delivery From In-Store Restaurants, Starting With Subway®
+<<<TEXT>>>
+Beginning this month, customers in select locations can order Subway directly through the Walmart app or Walmart.com and have their meal delivered in as little as 30 minutes or less, either on its own or alongside their Walmart Express Delivery order. Customers make around 21 meal decisions each week, and the new offering gives them a fast, affordable way to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c275bbb920182178
+symbol: WMT
+published_utc: 2026-06-04T17:30:00Z
+url: https://www.nasdaq.com/press-release/walmart-announces-2026-annual-shareholders-meeting-voting-results-2026-06-04
+headline: Walmart Announces 2026 Annual Shareholders’ Meeting Voting Results
+<<<TEXT>>>
+Walmart Inc. today announced preliminary shareholder voting results for its Annual Shareholders’ Meeting. John Furner, President and CEO of Walmart Inc., provided an overview of Walmart’ s business model and strong FY26 results. "The business has changed a lot since Sam Walton opened the first Walmart, and it has changed a lot since I started in the garden center.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: fd8b22e3cfc91f76
+symbol: WMT
+published_utc: 2026-06-22T11:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-and-sams-club-expand-support-medicare-customers-new-weight-management
+headline: Walmart and Sam’s Club Expand Support for Medicare Customers as New Weight Management Coverage Launches
+<<<TEXT>>>
+Walmart and Sam’ s Club today announced the launch of a nationwide effort to help Medicare beneficiaries better understand new prescription drug coverage options related to weight management and other chronic health conditions.  "Healthcare can be complex, especially when coverage programs change," said Kevin Host, SVP, Walmart Health& Wellness.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cd5c356f1c7edd2a
+symbol: WMT
+published_utc: 2026-06-23T08:00:00Z
+url: https://www.nasdaq.com/press-release/constellation-and-walmart-announce-long-term-agreement-support-reliable-emissions
+headline: Constellation and Walmart Announce Long-Term Agreement to Support Reliable, Emissions-Free Nuclear Energy in Illinois
+<<<TEXT>>>
+BALTIMORE& BENTONVILLE, Ark.---- Constellation and Walmart today announced a long-term nuclear power purchase agreement for emissions-free electricity from Constellation’ s Dresden Clean Energy Center in Illinois. Walmart will purchase energy, environmental attributes and capacity through two 15‑ year terms beginning in 2029 and 2030.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: cb4e0f64597fc2c1
+symbol: WMT
+published_utc: 2026-06-23T09:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-acquire-vibeco-expand-access-connected-tv-advertising-2026-06-23
+headline: Walmart to Acquire Vibe.co to Expand Access to Connected TV Advertising
+<<<TEXT>>>
+Acquisition brings Vibe.co’ s self-serve, connected TV advertising platform into Walmart Connect’ s commerce media platform, making TV advertising more accessible and measurable for small and mid-sized businesses and mid-market advertisers.. BENTONVILLE, Ark.& NEW YORK---- Walmart and Vibe.co today announced they have entered into an agreement under which...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a41a16519c82a202
+symbol: WMT
+published_utc: 2026-07-06T17:10:00Z
+url: https://www.nasdaq.com/press-release/walmart-and-sams-club-lower-prices-help-customers-make-most-out-summer-2026-07-06
+headline: Walmart and Sam's Club Lower Prices to Help Customers Make the Most out of Summer
+<<<TEXT>>>
+This summer, Walmart and Sam's Club are helping customers and members save more with thousands of lower prices through Walmart' s signature Rollbacks and Sam's Club offers across stores and clubs nationwide. From weekly grocery trips and backyard cookouts to vacations and summer fun, Walmart is helping customers save on the products they need all season long.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 429afca873bf6acb
+symbol: WMT
+published_utc: 2026-07-09T08:00:00Z
+url: https://www.nasdaq.com/press-release/sams-clubr-and-weight-watchersr-collaborate-expand-access-affordable-holistic
+headline: Sam's Club® and Weight Watchers® Collaborate to Expand Access to Affordable, Holistic Wellness Experiences for Members
+<<<TEXT>>>
+Sam's Club Plus members may receive a complimentary three-month Weight Watchers Core membership, while all Sam's Club members can save up to 50% on select Weight Watchers programs. Combining Sam's Club's commitment to value with Weight Watchers' expertise in personalized wellness support, the collaboration expands access to science-backed guidance,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9c0c9d191cf351a3
+symbol: WMT
+published_utc: 2026-07-15T08:37:00Z
+url: https://www.nasdaq.com/press-release/walmart-helps-americans-navigate-their-annual-back-school-reset-unmatched-value
+headline: Walmart Helps Americans Navigate Their Annual Back-to-School Reset with Unmatched Value, Convenience and Style
+<<<TEXT>>>
+Every summer, millions of Americans prepare for one of life's biggest annual reset moments. Students are getting ready for new classrooms and campuses. Teachers are stocking supplies for a new school year.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0fa1b9847323ae08
+symbol: WMT
+published_utc: 2026-07-24T17:54:00Z
+url: https://www.nasdaq.com/press-release/walmart-and-walmart-foundation-announce-500000-commitment-west-virginia-flood-relief
+headline: Walmart and the Walmart Foundation Announce $500,000 Commitment to West Virginia Flood Relief
+<<<TEXT>>>
+Walmart and the Walmart Foundation are supporting communities across West Virginia following the severe flooding that has devastated neighborhoods, damaged homes and businesses, and disrupted the lives of families across the region. The response includes a $500,000 commitment from Walmart and the Walmart Foundation, along with on-the-ground relief...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: aaccb4908f27711d
+symbol: WMT
+published_utc: 2026-08-11T17:55:00Z
+url: https://www.nasdaq.com/press-release/walmart-and-walmart-foundation-commit-500000-spokane-wildfire-relief-2026-08-11
+headline: Walmart and the Walmart Foundation Commit $500,000 to Spokane Wildfire Relief
+<<<TEXT>>>
+As communities face the impacts of the Spokane Complex Fires, Walmart and the Walmart Foundation are committing $500,000 in grants and in-kind support to help meet immediate needs across the region. Since the fires began, Walmart teams have been working closely with local leaders and community organizations including Innovia Foundation, Save The Children,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 27cfe2f779091929
+symbol: WMT
+published_utc: 2026-08-13T08:00:00Z
+url: https://www.nasdaq.com/press-release/walmart-host-second-quarter-earnings-conference-call-august-20-2026-2026-08-13
+headline: Walmart To Host Second Quarter Earnings Conference Call August 20, 2026
+<<<TEXT>>>
+Walmart Inc. announced it will release its second quarter earnings results at 6 a.m. CDT and hold a live conference call with the investment community at 7 a.m. CDT on Thursday, August 20, 2026. John Furner, president and chief executive officer, and John David Rainey, executive vice president and chief financial officer, will host the call to discuss the results...
+<<<END>>>

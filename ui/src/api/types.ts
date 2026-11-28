@@ -291,7 +291,10 @@ export interface NewsView {
   not_found: { typed: string; reason: string }[];
   /** A theme searched as a term (no stock is named). */
   topic: string | null;
+  /** The rolling window: how many days back from now; null for a dated window (`window`). */
   days: number | null;
+  /** A DATED window (entry 151): the first and the last day asked for (ISO dates, US Eastern days, `to` included; the same day twice for one day). Absent or null for a rolling window (`days`). */
+  window?: { from: string; to: string } | null;
   /** True when the latest news of every stock was fetched just before the search. */
   fetched: boolean;
   /** Why the latest news could not be fetched ("could not fetch the latest news (reason): showing the stored news"); null when it was, or for a theme. */

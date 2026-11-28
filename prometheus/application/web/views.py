@@ -21,7 +21,7 @@ from zoneinfo import ZoneInfo
 from prometheus.agents.critic.report import DECISION_WORDS, LABELS, analysts_line
 from prometheus.common import shares as sh
 from prometheus.common.portfolio import trade_amount
-from prometheus.common.work_order import corpus_of
+from prometheus.common.work_order import corpus_of, window_words
 from prometheus.rag.citations import CITATION
 from prometheus.application.recommendations import KEY_NUMBERS, _number
 
@@ -428,8 +428,9 @@ def _plain_marks(text: str) -> str:
 
 
 def news_view(order, plan=None, guard=None, account_id=None) -> dict:
-    """The news of a run that only asked for the news, in the ONE shape the page and the session read (entry 149, N8): {stocks: [{symbol, company}], not_found: [{typed, reason}], topic, days, fetched, fetch_note, summary, items: [{number, numbers,
-    headline, publisher, date, url, symbols, cited}], problems, notes, no_supporting_text, status}. (No item carries a sentiment: a stored article has none.) `order` is a work order or its dict (a capture); `plan` is the desk's plan, or None (a replay: the order says it all). `fetched` is true when the latest news
+    """The news of a run that only asked for the news, in the ONE shape the page and the session read (entry 149, N8): {stocks: [{symbol, company}], not_found: [{typed, reason}], topic, days, window, fetched, fetch_note, summary, items: [{number, numbers,
+    headline, publisher, date, url, symbols, cited}], problems, notes, no_supporting_text, status}. `window` is {from, to} (ISO dates, US Eastern days, `to` included) for a request about a past day or span (entry 151, D8) and then `days` is None; for a
+    rolling window `window` is None and `days` is the number of days. (No item carries a sentiment: a stored article has none.) `order` is a work order or its dict (a capture); `plan` is the desk's plan, or None (a replay: the order says it all). `fetched` is true when the latest news
     of every stock was fetched before the search; when it was not, `fetch_note` says why in the page's words ("could not fetch the latest news (reason): showing the stored news"). The summary is the Data Clerk's answer through the redaction door of the
     run's last message (`screened`: a secret and another account's number are replaced). Pure: nothing is called, nothing is invented."""
     data = _get(order, "data")
@@ -444,17 +445,31 @@ def news_view(order, plan=None, guard=None, account_id=None) -> dict:
     if not topic and not fetched:
         why = "; ".join(dict.fromkeys(str(r.get("detail") or r.get("outcome")) for r in unfetched)) or "no fetch was made"
         fetch_note = f"could not fetch the latest news ({why}): showing the stored news"
-    return {"request_id": _get(order, "request_id"), "status": _get(order, "status"), "stocks": stocks, "not_found": missing, "topic": topic, "days": _get(order, "since_days"), "fetched": fetched, "fetch_note": fetch_note,
+    return {"request_id": _get(order, "request_id"), "status": _get(order, "status"), "stocks": stocks, "not_found": missing, "topic": topic, "days": _get(order, "since_days"), "window": _news_window(order), "fetched": fetched, "fetch_note": fetch_note,
             "summary": screened(_plain_marks((_get(data, "answer") or "").strip()), guard, account_id) if data is not None else "", "items": _news_items(data) if data is not None else [],
             "problems": [screened(p, guard, account_id) for p in dict.fromkeys([*((_get(data, "problems") or []) if data is not None else []), *(e for e in (_get(order, "errors") or []) if isinstance(e, str))])],      # what went wrong: the Data Clerk's own problems, then the order's errors
             "notes": [screened(n, guard, account_id) for n in (_get(data, "notes") or [])] if data is not None else [], "no_supporting_text": bool(_get(data, "no_supporting_text")) if data is not None else False}
 
 
-def news_headline(view: dict) -> str:
-    """The last line of a news run: "The news of TSLA for the last 7 days" (a theme: "The news about 'quantum computing' for the last 7 days")."""
+def _news_window(order) -> dict | None:
+    """{from, to} of the order's DATED window (entry 151), or None for a rolling one: the order says it all, so a replay of a capture reads it the same as a live run."""
+    first, last = _get(order, "news_from"), _get(order, "news_to")
+    return {"from": first, "to": last} if first is not None and last is not None else None
+
+
+def news_window_text(view: dict) -> str:
+    """The window of a news view in words: "on 2026-11-03", "from 2026-11-03 to 2026-11-05" or "for the last 7 days" (entry 151, D8). The headline, the session's lines and the page's header all say it this way."""
+    window = view.get("window")
+    if window:
+        return window_words(window["from"], window["to"])
     days = view.get("days") or 0
+    return f"for the last {'day' if days == 1 else f'{days} days'}"
+
+
+def news_headline(view: dict) -> str:
+    """The last line of a news run: "The news of TSLA for the last 7 days" (a theme: "The news about 'quantum computing' for the last 7 days"; a past day: "The news of TSLA on 2026-11-03", a span: "... from 2026-11-03 to 2026-11-05")."""
     what = f"about {view['topic']!r}" if view.get("topic") else "of " + (", ".join(s["symbol"] for s in view.get("stocks") or []) or "no stock")
-    return f"The news {what} for the last {'day' if days == 1 else f'{days} days'}"
+    return f"The news {what} {news_window_text(view)}"
 
 
 # ---------------------------------------------------------------- the current price (entry 150)

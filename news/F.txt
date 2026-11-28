@@ -38682,3 +38682,1105 @@ FpC | neutral | Ford shows mixed signals with strong commercial division (Ford P
 FpD | neutral | Ford shows mixed signals with strong commercial division (Ford Pro) providing steady cash flow, but significant operational challenges including $7.8B net loss, high debt-to-equity ratio (4.48x), and ongoing EV losses. While valuation appears attractive, profitability concerns and flat earnings expectations for 2027 limit upside potential.
 GM | positive | GM demonstrates superior financial health with $4.0B net profitability, lower debt-to-equity ratio (2.0x), declining EV losses, and strong cash generation ($11.1B free cash flow). The $20 billion share buyback program and consistent truck/SUV profit engine provide confidence for 2027 performance, making it the recommended choice.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144177108
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T15:30:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=643b12a23ecb24002c73d545b53b9754fc6456ba5ba536161ab9536417a73f2a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Why Is Ford Motor (F) Down 1.5% Since Last Earnings Report?
+<<<SUMMARY>>>
+Ford Motor (F) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174886
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T04:13:40Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=05cadd2dc3318326574f29693bac9bf6569a2dbd3c00f934dbd6633ae3ea5b53
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/27/United-States-of-America-and-China-flags.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: US Could Ban China-Linked Connected Cars as Bipartisan Push Gathers Steam: What It Means for Tesla, Ford and GM
+<<<SUMMARY>>>
+Bipartisan Senate bill targeting China-linked vehicle components may face a December vote after revisions ease industry concerns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144169840
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T00:30:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b7d4727dc0ca7e32190d6a4a924b475c10f883816d7925b19564743bf378fd20
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: This Dividend Stock Yields 5% and Trades Near 52-Week Lows. Buy It for 2027 and Beyond.
+<<<SUMMARY>>>
+Ford stock fell to its 52-week low last week and offers a dividend yield of over 5%. The stock could fit into portfolios of investors seeking high-dividend stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144158595
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T20:08:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=332359eed336f71877277efa0653364e3085999fbf69efdcd9dea5c087943ab8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford CEO on Le Mans, New Electric Pickup and Trade Talks
+<<<SUMMARY>>>
+Bloomberg's Matt Miller sits down with Ford CEO Jim Farley to talk racing, Ford's planned $30,000 electric pickup, Chinese EV competition and USMCA trade talks, zeroing in on how to protect US auto manufacturing while competing on a global stage.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144156830
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T17:06:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=95ad73aab2fba59c46ecac27649acb35d2ea4e514a3c7be63fc7f2a62d94e049
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Rivian Is Down 41% This Year. Can RIVN Stock Get Back to $20 in 2027?
+<<<SUMMARY>>>
+Rivian posted record deliveries and a hit new R2, yet investors keep heading for the exits while losses pile up. Three pressure points will decide whether the factory-floor momentum ever reaches the share price.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144155899
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T14:50:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8acba3042743f76b584351eb41ecf930c7e674bcd39876a0afb425931c9d09ef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: General Motors Is Up 11% in a Month as the Nasdaq-100 Fell 10%. Is Its Nasdaq Switch Really That Good?
+<<<SUMMARY>>>
+Key TakeawaysGeneral Motors stock is up 11% in the past month, mostly on its move to Nasdaq, while the Nasdaq-100 fell 10%. Ford’s higher profit floor and a shift out of Tesla helped too, but Ford expects flat 2027 profit.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154018
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T13:36:09Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=dc160478100dbb3dc6522508d969d49c6248c5add8f0e6a87d67b222dfab34d3
+image_url: https://www.chartmill.com/images/uploads/ev_stocks_b3412c42aa.webp
+category: company
+tickers: F
+keywords: 
+headline: EV Stocks’ Big Split: Legacy Value Outperforms as Premium Pure Plays Face Earnings Test
+<<<SUMMARY>>>
+EV stocks split: legacy automakers trade cheap with better momentum, while pure-play EV names face premium valuations and weaker performance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144153545
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T10:08:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aa5cef80468bcf8f38325b1c8ff3d9330218cc46f438bf23e37eeb35d7b1230b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford (F) Agreed To A $390.5 Million Transmission Defect Settlement
+<<<SUMMARY>>>
+Ford Motor (NYSE:F) agreed to a proposed US$390.5 million settlement resolving transmission defect claims affecting up to 180,000 drivers. The class action deal addresses long running allegations over certain automatic transmissions and follows years of vehicle quality complaints. Ford has been in talks with the Pentagon about supplying components for military drone production as a potential new revenue stream. Both the US$390.5 million transmission settlement and the Pentagon drone...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144140391
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T05:19:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4b246ed5de85c4b9fb6e8625901bcb3e757c41bb10b7b216a827fa74c199c638
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford (F) Stock Looks Pricey Against Its Cash Flow Outlook
+<<<SUMMARY>>>
+Ford Motor has delivered mixed returns over different time frames, and recent headlines around electric vehicles, government support and new ventures now put a sharper spotlight on whether the current share price is in line with the cash the business can generate. For anyone looking at Ford stock today, the key issue is how those cash flows stack up against the valuation implied by the market. Over the past 3 years, Ford Motor has returned 38.3%, which puts real weight on the question of...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154202
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T05:14:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f5c7b9b74d464f96c5a5df63b343a4e35fb9ea76f5198a20d8c01a928ae9b7d8
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/26/Shark-Tank-co-star-and-serial-entreprene.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: ‘I’ve Never Seen Anything Like This’: Kevin O’Leary Admits Being ‘Wrong’ About Trump, Says He Underestimated President’s Push to Beat China in AI
+<<<SUMMARY>>>
+Kevin O&#39;Leary says he underestimated Trump&#39;s resolve to use executive power to make the U.S. an AI leader and beat China.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144136935
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T02:12:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d01d00840eddcd171d339be298c876bb4f1d4ffdfa1aaa92e620d29360480ec1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford (F) Stock Gets Fair Value Trim As Analysts Cut Targets On Cost And Execution Risk
+<<<SUMMARY>>>
+Ford Motor has seen its assessed fair value edge down from US$15.28 to about US$14.96 per share, which contributes to a slightly lower price target narrative. Recent research commentary links these trimmed targets of roughly US$1 to US$2 per share to concerns about execution risk, cost pressures, regulatory questions, and how reliably Ford can deliver on its 2027 plans. As you read on, you will see how to interpret these shifting targets and track the evolving story around Ford Motor. Stay...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144135386
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T01:13:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=611836d4bdfedda3cc3a94094125e604430d26e4fac79aeb6c91799cf9c6e892
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor (F) Enters Space Race On Questions Over Whether The Stock Is Fully Valued
+<<<SUMMARY>>>
+Ford Motor (F) is drawing fresh attention after agreeing to a minority stake in Revolution Space through its Industrial Platforms unit, a move that extends Ford’s manufacturing playbook into the commercial space economy. Recent trading reflects that attention. Ford Motor’s 7 day share price return of 7.9% and 1 day move of 1.8% have come after a tougher spell, with the 90 day share price return down 12.8% and the year to date share price return down 8.8%. Scan how Ford Motor’s move into space...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144149400
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T19:05:44Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=07400e3d6bf02bb01a72ef90d7a596a91c929200831d5c789977f55719726968
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: F
+keywords: 
+headline: S&P 500 Most-Active Stocks: Nov. 25, 2026 Session
+<<<SUMMARY>>>
+Nov. 25, 2026 scan of the most-active S&P 500 stocks, including Ford, Super Micro, HP, Netflix, Oracle, Bank of America, Dell, AT&T, Marvell and Alphabet.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144126961
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T18:13:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=20f4f00b72c95809bf9240cd0a0f8701c7bb841c37671053599cf3f0ffb87d30
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor vs. Tesla: Which Automaker Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Ford's truck empire and commercial fleet business stand against Tesla's EV leadership and AI ambitions, with valuations that sharply diverge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144126115
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T16:12:22Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ddc174a059bdb5cbfb46d1a46bf3f1f4513fe2d34619244e18bae675a9156b27
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: What is holding back bidirectional EV charging as a grid resource?
+<<<SUMMARY>>>
+Costs remain high and tech solutions are incomplete, but experts say careful utility program design and a new generation of vehicle charging solutions will bring value to both consumers and the grid.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122806
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T12:20:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7ee53c3dad8eb8c88ff788fa249cacd328f2066984f22fc16cf78e25936d186e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Practicality Takes the Wheel: New Zealand Drivers Shift Toward SUVs, Hybrids and Hard-Working Utes
+<<<SUMMARY>>>
+North Shore dealership Simon Lucas Mitsubishi reports Auckland buyers are choosing vehicles built around everyday life, as national registration data confirms a lasting change in what Kiwis driveAUCKLAND, NZ / ACCESS Newswire / November 25, 2026 / New Zealand drivers are rethinking what they want from a vehicle, and the answer increasingly comes down to practicality. Across the country, buyers are moving toward SUVs that handle the school run and the weekend away, utes that work as hard on the f
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144098740
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T02:25:36Z
+publisher: Fintel
+author: 
+url: https://finnhub.io/api/news?id=eda9f08c3e1898eb995bc3095f6934a26865427fb0f99d2c49ff24ee2ce91b17
+image_url: 
+category: company
+tickers: F
+keywords: 
+headline: Seaport Global Initiates Coverage of Ford Motor with Buy
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144089325
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T20:03:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a06926ba64d87bdbf1a7251a30f2be0f5dac46dbdb700b68c0980697d1d9a5a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Unusual Machines Is Down 47% in a Month. Can UMAC Stock Hit Oppenheimer’s $30 Target by 2030?
+<<<SUMMARY>>>
+Wall Street just slapped a bullish target on this drone-parts maker, yet the shares kept sliding. With Detroit automakers eyeing its core product and fresh stock hitting the market, can strong sales and a big cash pile still win over skeptics?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144089901
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T19:05:58Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=714287aa0ad1dff9a762cf4f5839c2b109eba6074c93d68db52b5df53ca38897
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: F
+keywords: 
+headline: S&P 500 Most Active Stocks for Nov. 24, 2026
+<<<SUMMARY>>>
+S&P 500 most-active stocks on Nov. 24, 2026, including Ford, HPE, Super Micro, Netflix, Nike, Bank of America, Alphabet, AT&T, Marvell and Pfizer.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144087157
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:26:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7f5a165bc153f98ff173b45be3619e28e76c2b872dd7081e1b5445c9413e30f6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford to acquire minority stake in satellite maker Revolution Space
+<<<SUMMARY>>>
+The automaker made an undisclosed investment in Revolution Space through its subsidiary, Industrial Platform. The companies will work together to scale production of spacecraft and related components.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144087101
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T16:01:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e4e9ef0b52eecbbb965ffcf0664115a8c7697a72242ac1080b62d6e3eb3eff18
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: GM, Ford in Pentagon Talks to Build Military Drones
+<<<SUMMARY>>>
+The U.S. military is exploring partnerships with automakers to expand domestic defense manufacturing capacity.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085804
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T15:58:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e0ee324d646342d44c7a61f73290309e0a781ad3fc70d1b1c01ddcff194fc15
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Red Cat Sinks 9%, Unusual Machines Slides 7%, Ondas Drops 4%: Is the Pentagon’s Reported Push to Bring In General Motors and Ford a Threat to Drone Stocks?
+<<<SUMMARY>>>
+Drone stocks are slipping as investors consider a report that the Pentagon wants big automakers helping build its drone fleet. Red Cat Holdings (NASDAQ:RCAT) stock is at $1.73, down 9% in early trading. On a year-to-date (YTD) basis, the small-cap drone maker is down 78%. Unusual Machines (NYSEAMERICAN:UMAC) stock is at $8.85, down 7%. Within […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085412
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T14:56:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f3fe85b7b76d682f0106ba3c7b46370c1133390f186cb00736c459522456cf60
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Tesla’s Europe Sales Soar 84%
+<<<SUMMARY>>>
+Europe is buying Tesla at a pace that outruns the entire EV market, while American drivers keep their distance. One tariff wall and a stalled US appetite for electric cars may decide whether Tesla's overseas momentum ever comes home.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139902997
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T14:48:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b96f0b8f61b37a8e2fb4af286e0966118ca804774df687c4f39c8f1b9d2ee2b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Snap upgraded, Pinterest downgrade: Wall Street's top analyst calls
+<<<SUMMARY>>>
+Snap upgraded, Pinterest downgrade: Wall Street's top analyst calls
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085286
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:56:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cceab338d4e8d788b1e0b1fffdedd666f9da1931e5641ae1ef86bef8511566ae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: America Has Had Indispensable Men Before. Why Is Jensen Huang Different?
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144083785
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:54:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=204e37c02d81b41d0949bec294c87e422d7939ec0f9308bce140ab1170d253e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Should You Trim Or Add To Your Tesla Position?
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082894
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:12:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1d1e69469d76ae62a0d9573dcf0fe50d3dcf7e3aa474e9ca50b1fad971f1874
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: What Made Tesla Stock Jump On Monday?
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085805
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:00:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=093b8f2c92e9ed7e1a9eccf79b5377eb1d9ead0edec678397da1483eeecec848
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Motor Company (F) Is a Trending Stock: Facts to Know Before Betting on It
+<<<SUMMARY>>>
+Ford Motor (F) has been one of the stocks most watched by Zacks.com users lately. So, it is worth exploring what lies ahead for the stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144083294
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T12:38:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ffcd3381d8484fca7b4cd528f1334f4dffde9680e824100020db2dc37b74f4fe
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Pentagon Reportedly Taps GM, Ford To Strengthen Drone Production – Why Washington Is Looking Beyond Traditional UAV Makers
+<<<SUMMARY>>>
+The Pentagon plans to purchase ‘millions of drones’ over the coming years, but domestic drone manufacturers lack the production capacity to meet the anticipated demand, WSJ reported.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144083270
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T12:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=62c72a7a476434b55a4b17509c6f7a766fce3af35a5cb9cd943166cc8fc27f61
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: 4 Dividend-Paying Auto Stocks to Consider as Fed Rate Hike Looms
+<<<SUMMARY>>>
+With another Fed rate hike looming, Magna, Autoliv, Ford and Cummins stand out as dividend-paying auto stocks offering steady income and potential long-term gains.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085667
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T12:26:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=274020fe101989a9d8b5e7a233c1e9f41b3efe483b205c6b927fde48c743629c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Pentagon reportedly in talks with GM, Ford to scale US military drone production
+<<<SUMMARY>>>
+U.S. defense officials are reportedly exploring deals with Detroit automakers and parts suppliers to mass-produce military drone components, though profit margins remain a hurdle.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144081884
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T11:28:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=802a39358921bd9aaabc009ecee11b77d89ea96be84367b86af3ce2af2f64ea0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford invests in space systems company
+<<<SUMMARY>>>
+Ford says it can provide Revolution Space with the design, engineering, manufacturing, and supply chain capabilities needed to build and scale satellites.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144081317
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T11:21:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=15ad13e2f8ac0fdbfd6754e181f0248d1869fd643413fd4bc826a87d237a52ec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Pentagon Holds Talks With General Motors and Ford Over Military Drone Production, WSJ Reports
+<<<SUMMARY>>>
+General Motors (NYSE:GM) and Ford Motor (NYSE:F) are in discussions with the Pentagon over potential involvement in the large-scale production of military drones, according to a report by The Wall Street Journal on Tuesday. The proposed arrangement would involve the automotive manufacturers supplying components to drone producers, the report said, citing people familiar with the matter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144081318
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T10:12:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=36549be1a62bd330641ff8e8952154475da828e0869dadce7c49866c90f4a174
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Will Spacecraft Bet Change Ford's (F) Narrative
+<<<SUMMARY>>>
+Ford Motor has agreed to take a minority stake in Revolution Space, aiming to apply its high volume manufacturing expertise to scale production of advanced spacecraft and propulsion systems as part of a push to diversify beyond traditional vehicles. The move into spacecraft manufacturing adds a new use case for Ford Motor's industrial platform. It could complement its connected vehicle software, Ford Energy and Universal EV efforts by spreading fixed costs over a broader set of complex...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144083962
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T09:08:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=47ffb94b0c2be1d753150a06dcc91603c100d8e6d4c94bdf82b684ad40a77b87
+image_url: 
+category: company
+tickers: F
+keywords: 
+headline: Seaport Global Initiates Coverage On Ford Motor with Buy Rating, Announces Price Target of $14
+<<<SUMMARY>>>
+Seaport Global  analyst Ron Jewsikow   initiates coverage on Ford Motor (NYSE:F) with a Buy rating and announces Price Target of $14.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144076127
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T08:36:59Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b7acd7a32e566638b0c51534d4029f1b7196e1fad4490bd9bbc84e83d0d07805
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: GM Eyes a Former Tesla Autopilot Chief as CEO. No Autonomy, “No More GM,” Says Jason Calacanis
+<<<SUMMARY>>>
+Key TakeawaysGM’s board sees Sterling Anderson, its product chief and Tesla’s former Autopilot head, as a strong contender to succeed CEO Mary Barra. Jason Calacanis says GM has no future without autonomy, and Ford faces the same question.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082181
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T07:49:57Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=5b8915c92667704c12b965c3d3a63aa1044c97d2c3f350a04a9c57ee14fdc21e
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2217657448/image_2217657448.jpg?io=getty-c-og
+category: company
+tickers: F
+keywords: 
+headline: Ford: A 5% Yield And Recovery Potential At Under 6x FY 2027 Earnings
+<<<SUMMARY>>>
+Ford (F) stock is a buy at roughly 6x FY2027 consensus EPS and a yield over 5%, with warranty savings and Super Duty recovery supporting profits.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082466
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T06:31:53Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ac074efc9e45d0aac063b978bfd45674e877486721e9a5c4c30cec166847a275
+image_url: 
+category: company
+tickers: F
+keywords: 
+headline: 'Pentagon in Talks With General Motors and Ford to Make Military Drones; The Pentagon wants automakers to bolster drone production, but executives say the business case may be thin' - WSJ Exclusive
+<<<SUMMARY>>>
+https://www.wsj.com/politics/national-security/ford-general-motors-military-drones-c082d202
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144083685
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T03:39:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=20734787518ad6b4ceb0a5ba7b70344803fdccf9d491aa401ad12030a3e13809
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/24/Ford-Motor-Co--CEO-Jim-Farley-smiles-as-.jpg?width=2048&height=1536
+category: company
+tickers: F
+keywords: 
+headline: Jim Farley’s Ford Makes Unexpected Space Move, Eyes $1.8 Trillion Opportunity With New Bet Against Elon Musk’s SpaceX
+<<<SUMMARY>>>
+Ford invests in Revolution Space to scale spacecraft manufacturing, expanding into the growing satellite market and competing with SpaceX.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144053596
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T20:50:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7a066a3eeff04c030a3ba35564e9e0673b892c23f98e1ccd3600582e4f1e60bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Sector Update: Consumer Stocks Advance Late Afternoon
+<<<SUMMARY>>>
+Consumer stocks were higher late Monday afternoon, with the State Street Consumer Staples Select Sec
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144054182
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T19:06:02Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=522bd3d5cda9dc1c68603f8761449d667a6a9be5fc5b8c7da7e282124e903310
+image_url: https://www.chartmill.com/images/uploads/CM_Most_Active_Stocks_Small_free_fec0650b7f.webp
+category: company
+tickers: F
+keywords: 
+headline: S&P 500 Most Active Stocks Today: Heavy Turnover and Double-Digit Moves
+<<<SUMMARY>>>
+S&P 500 most active stocks today included INTC, SMCI, F, ORCL, MRVL, T, NFLX, HPE, GOOG and BE, with volumes from 16.83M to 90.27M shares and several double-digit moves.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144052868
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T18:30:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a89271d75e2a4de135efa139da32eaf4a766c39db0f2e2a29930e0fb4cf79c5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Eyes $600B Space Market With Satellite Startup Bet – Picks Up Minority Stake In Revolution Space
+<<<SUMMARY>>>
+Ford said it is set to help Revolution Space manufacture advanced spacecraft at a larger scale.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051723
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T17:48:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=57208c51e2bb95c7c8728949fb9aee66db1f41ea4e56a1208dffafca832cd630
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Automaker Ford eyes aerospace growth with minority bet on Revolution Space
+<<<SUMMARY>>>
+Investing.com -- Ford Motor Company (NYSE:F) has agreed to acquire a minority stake in U.S. defense contractor Revolution Space, extending its push to diversify revenue streams beyond traditional automotive manufacturing. Through its Industrial Platform LLC subsidiary, the Dearborn, Michigan-based automaker plans to lend its high-volume production expertise to help scale the startup’s next-generation spacecraft and propulsion systems.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051393
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T17:32:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=55d6ddd6741ce82a2531374a72bff852d969b04b73275415d54788b2ef38713f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Tesla’s FSD v15 An ‘Illustration’ Of Head Start In Consumer Autonomy, Says JPMorgan – TSLA Stock Eyes Best Day In Over 19 Months
+<<<SUMMARY>>>
+Tesla began rolling out FSD v15 to select customers over the weekend, with a broader launch expected next month.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051728
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:39:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb924b9c0dec5c15ebea470b67ccab4bad8a335b75e2c4845278b6aea19a88ed
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Canada and Ontario back Ford Oakville revamp with C$928.5m
+<<<SUMMARY>>>
+The federal government is contributing C$464.5m through its Strategic Response Fund, while Ontario is providing C$464m.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051401
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:19:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d5085d040729763db5559110411fe83a7ea351a476c8fe46d4f82db342a8ccd0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Beats Out Tesla, Barely
+<<<SUMMARY>>>
+Both automakers are losing to the S&P 500 this year, yet one has a few things going for it that the other lacks. Tariffs, pickup trucks, and a CEO's shifting pitch all play a part.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051725
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b999f0b5361ef691c4828647853c8b3e1adbe90413bd36ddcdaf0c6cd3b5f54
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford and Revolution Space Partner to Scale Production of a New Generation of Spacecraft
+<<<SUMMARY>>>
+DEARBORN, Mich. & BOSTON, November 23, 2026--Ford Motor Company today announced that its subsidiary, Industrial Platform LLC, has signed an agreement to make a minority investment in Revolution Space, a prime contractor for advanced space systems leveraging unique in-space propulsion technologies, to support the scaling of Revolution Space’s new generation of spacecraft. With Ford’s manufacturing capabilities, the companies are partnering to industrialize Revolution Space’s next-generation space
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051402
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T15:55:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=61edd3772462eb9b81ff693faad3e0ccb3fce9447c1194e0c1985fc8fc5b31a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Why Did Tesla Stock Fall On Friday?
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140036658
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T15:13:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=267d488446046eb937127a2362c5409f7f13794a7a412ba3dcf99b7e7bb7583b
+image_url: 
+category: company
+tickers: F
+keywords: 
+headline: Li Auto shares are trading higher after the company reported a year-over-year increase in March vehicle deliveries.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144207885
+symbol: F
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T10:37:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e96080afe87070c4d60033909a4a7a10905e41ad7f15fe674202577fa5696a26
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: F
+keywords: 
+headline: Ford Soars 10% in a Week on a Spacecraft Stake and Pentagon Talks. Is It Time to Buy?
+<<<SUMMARY>>>
+Key TakeawaysFord stock rose 10% in the week to Nov. 27 on a minority stake in spacecraft maker Revolution Space and reported Pentagon talks alongside General Motors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a6933034072dbaccb8024fe7fcd95ec7939488c98063f22f543616d0b9e44a57
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T12:38:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3034305/4-dividend-paying-auto-stocks-to-consider-as-fed-rate-hike-looms?cid=CS-ZC-FT-analyst_blog|industry_focus-3034305
+image_url: https://staticx-tuner.zacks.com/images/articles/main/7d/155505.webp
+category: 
+tickers: MGA, ALV, F, FpB, FpC, FpD, CMI
+keywords: dividend stocks, auto stocks, inflation, Fed rate hike, dividend yield, income investing, automotive suppliers
+headline: 4 Dividend-Paying Auto Stocks to Consider as Fed Rate Hike Looms
+<<<SUMMARY>>>
+With persistent inflation and expectations of another Fed rate hike, dividend-paying auto stocks are gaining investor attention. Magna International, Autoliv, Ford, and Cummins offer dividend yields above 2% with sustainable payout ratios below 60% and strong dividend growth histories. These stocks provide income cushion during periods of elevated borrowing costs and economic uncertainty.
+<<<INSIGHTS>>>
+MGA | positive | 16 consecutive years of dividend increases, 3.22% dividend yield, sustainable 27% payout ratio, strong EPS growth projections (23% in 2026, 11% in 2027), Zacks Rank #3 with VGM Score A, and solid operational efficiency improvements.
+ALV | positive | Recent 15% dividend increase, 3.34% dividend yield, 7.38% annualized dividend growth over 5 years, safe 35% payout ratio, benefits from rising safety content and expanding business with Chinese automakers, Zacks Rank #3 with VGM Score B.
+F | positive | Highest dividend yield among the four at over 5%, 6.42% annualized dividend growth, acceptable 35% payout ratio, strong leadership in trucks/SUVs, $1 billion cost reduction target for 2026, and 74% projected EPS growth for 2026.
+FpB | positive | Highest dividend yield among the four at over 5%, 6.42% annualized dividend growth, acceptable 35% payout ratio, strong leadership in trucks/SUVs, $1 billion cost reduction target for 2026, and 74% projected EPS growth for 2026.
+FpC | positive | Highest dividend yield among the four at over 5%, 6.42% annualized dividend growth, acceptable 35% payout ratio, strong leadership in trucks/SUVs, $1 billion cost reduction target for 2026, and 74% projected EPS growth for 2026.
+FpD | positive | Highest dividend yield among the four at over 5%, 6.42% annualized dividend growth, acceptable 35% payout ratio, strong leadership in trucks/SUVs, $1 billion cost reduction target for 2026, and 74% projected EPS growth for 2026.
+CMI | positive | 17 consecutive years of dividend increases with recent 10% hike, 2.07% dividend yield, 8.47% annualized dividend growth, sustainable 33% payout ratio, strong demand from data centers and improving truck demand, consistent 20% EPS growth projected for 2026-2027.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:170c79e8ae8343d3c0f20754e0b15b4574c5f10e1f17449e917449b4f41cd362
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T13:00:04Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3034359/ford-motor-company-f-is-a-trending-stock-facts-to-know-before-betting-on-it?cid=CS-ZC-FT-fundamental_analysis|most_searched_stocks-3034359
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default358.jpg
+category: 
+tickers: F, FpB, FpC, FpD
+keywords: Ford Motor Company, earnings estimates, stock valuation, Zacks Rank, automotive industry, revenue growth, EPS surprise
+headline: Ford Motor Company (F) Is a Trending Stock: Facts to Know Before Betting on It
+<<<SUMMARY>>>
+Ford Motor Company is receiving increased investor attention. The stock has outperformed the broader market over the past month (+0.6% vs S&P 500's -10.2%), though it lags its industry peers. Ford's current quarter earnings are expected to surge 169.2% year-over-year, but the consensus estimate has declined 11% in the past month. The company holds a Zacks Rank #3 (Hold) rating with a Grade A valuation score, suggesting it trades at a discount to peers but is expected to perform in line with the broader market in the near term.
+<<<INSIGHTS>>>
+F | neutral | Ford received a Zacks Rank #3 (Hold) rating, indicating expected performance in line with the broader market. While the stock outperformed the S&P 500 recently and trades at a valuation discount (Grade A), earnings estimate revisions have declined 11% in the past month. Strong EPS growth expectations (+169.2% current quarter) are offset by modest revenue growth forecasts (+1.2% and +0.6% for current and next fiscal years) and a slight decline in next year's earnings estimates (-1.4%).
+FpB | neutral | Ford received a Zacks Rank #3 (Hold) rating, indicating expected performance in line with the broader market. While the stock outperformed the S&P 500 recently and trades at a valuation discount (Grade A), earnings estimate revisions have declined 11% in the past month. Strong EPS growth expectations (+169.2% current quarter) are offset by modest revenue growth forecasts (+1.2% and +0.6% for current and next fiscal years) and a slight decline in next year's earnings estimates (-1.4%).
+FpC | neutral | Ford received a Zacks Rank #3 (Hold) rating, indicating expected performance in line with the broader market. While the stock outperformed the S&P 500 recently and trades at a valuation discount (Grade A), earnings estimate revisions have declined 11% in the past month. Strong EPS growth expectations (+169.2% current quarter) are offset by modest revenue growth forecasts (+1.2% and +0.6% for current and next fiscal years) and a slight decline in next year's earnings estimates (-1.4%).
+FpD | neutral | Ford received a Zacks Rank #3 (Hold) rating, indicating expected performance in line with the broader market. While the stock outperformed the S&P 500 recently and trades at a valuation discount (Grade A), earnings estimate revisions have declined 11% in the past month. Strong EPS growth expectations (+169.2% current quarter) are offset by modest revenue growth forecasts (+1.2% and +0.6% for current and next fiscal years) and a slight decline in next year's earnings estimates (-1.4%).
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:084feda386fbc221d039a975e29e89e9174c826705679058a68ec1a9d3f0028d
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T17:53:01Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/25/ford-motor-vs-tesla-which-automaker-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fc04f487d4ad8c1ecbd42b1807cf400ce29be876c-3840x2160.jpg&w=1200&op=resize
+category: 
+tickers: F, FpB, FpC, FpD, TSLA, GM
+keywords: Ford Motor, Tesla, electric vehicles, stock comparison, valuation, EV market, commercial vehicles, battery storage, 2027 outlook
+headline: Ford Motor vs. Tesla: Which Automaker Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Ford Motor and Tesla as investment options for 2027. Ford maintains strong commercial presence through Ford Pro and dealership networks but faces declining market share and profitability challenges. Tesla leads in EV production with strong margins and low debt but faces valuation concerns and potential SpaceX merger complications. The author suggests Ford as a better turnaround bet due to its bargain valuation, despite Tesla's growth prospects.
+<<<INSIGHTS>>>
+F | positive | Despite operational challenges and market share losses, Ford is positioned as a better buy for 2027 due to its bargain-basement valuation (P/E 5.9x), strong free cash flow ($12.5B), and potential game-changer with Ford Energy battery manufacturing. Expected net income improvement to $7.5B in 2027 supports turnaround thesis.
+FpB | positive | Despite operational challenges and market share losses, Ford is positioned as a better buy for 2027 due to its bargain-basement valuation (P/E 5.9x), strong free cash flow ($12.5B), and potential game-changer with Ford Energy battery manufacturing. Expected net income improvement to $7.5B in 2027 supports turnaround thesis.
+FpC | positive | Despite operational challenges and market share losses, Ford is positioned as a better buy for 2027 due to its bargain-basement valuation (P/E 5.9x), strong free cash flow ($12.5B), and potential game-changer with Ford Energy battery manufacturing. Expected net income improvement to $7.5B in 2027 supports turnaround thesis.
+FpD | positive | Despite operational challenges and market share losses, Ford is positioned as a better buy for 2027 due to its bargain-basement valuation (P/E 5.9x), strong free cash flow ($12.5B), and potential game-changer with Ford Energy battery manufacturing. Expected net income improvement to $7.5B in 2027 supports turnaround thesis.
+TSLA | neutral | Tesla demonstrates strong fundamentals with EV market leadership, excellent margins (19.29%), low debt (0.1x), and expected 132% sales growth to $122B in 2027. However, concerns include extremely high valuation (P/E 423.14), recent 9% YoY sales decline, and uncertainty around potential SpaceX merger that could impact share value.
+GM | neutral | Mentioned as currently ranking ahead of Ford in U.S. car sales (second place), indicating competitive positioning in the automotive market, though no detailed analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:73a184f913147401fdfb31d95711200c84c2112a49bde92e3be41de0c66fdda9
+symbol: F
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T18:13:00Z
+publisher: GlobeNewswire Inc.
+author: Newmedia.Com
+url: https://www.globenewswire.com/news-release/2026/11/26/3411019/0/en/ai-seo-in-new-york-city-how-brands-get-recommended-by-ai-answers-not-just-ranked-on-google.html
+image_url: https://ml.globenewswire.com/Resource/Download/893c5ecb-3db6-4e8a-b3a6-4d88cefb5c4d
+category: 
+tickers: GOOG, GOOGL, GOOGM, GOOGN, DAL, F, FpB, FpC, FpD
+keywords: answer engine optimization, AI SEO, AI visibility, entity clarity, AI recommendations, RankOS platform, digital marketing, search visibility
+headline: AI SEO in New York City: How Brands Get Recommended by AI Answers, Not Just Ranked on Google
+<<<SUMMARY>>>
+Answer engine optimization (AI SEO) has become a separate discipline from traditional SEO, focusing on earning citations and recommendations within AI-generated answers rather than just Google rankings. A benchmark study found approximately 87% of U.S. businesses are absent from AI answers despite ranking on Google's first page, creating both a warning and opportunity for early adopters in competitive markets like New York.
+<<<INSIGHTS>>>
+GOOG | neutral | Google is mentioned as the primary search platform and source of guidance on content fundamentals, but the article positions AI assistants as an emerging alternative channel that brands need to optimize for separately from Google rankings.
+GOOGL | neutral | Google is mentioned as the primary search platform and source of guidance on content fundamentals, but the article positions AI assistants as an emerging alternative channel that brands need to optimize for separately from Google rankings.
+GOOGM | neutral | Google is mentioned as the primary search platform and source of guidance on content fundamentals, but the article positions AI assistants as an emerging alternative channel that brands need to optimize for separately from Google rankings.
+GOOGN | neutral | Google is mentioned as the primary search platform and source of guidance on content fundamentals, but the article positions AI assistants as an emerging alternative channel that brands need to optimize for separately from Google rankings.
+DAL | positive | Listed as a client of NEWMEDIA.COM's AI SEO services, suggesting the company is investing in answer engine optimization.
+F | positive | Listed as a client of NEWMEDIA.COM's AI SEO services, indicating engagement with AI visibility strategy.
+FpB | positive | Listed as a client of NEWMEDIA.COM's AI SEO services, indicating engagement with AI visibility strategy.
+FpC | positive | Listed as a client of NEWMEDIA.COM's AI SEO services, indicating engagement with AI visibility strategy.
+FpD | positive | Listed as a client of NEWMEDIA.COM's AI SEO services, indicating engagement with AI visibility strategy.
+<<<END>>>

@@ -70,6 +70,12 @@ price. Without these they are referring to quantity"*). A PROGRAM decides what a
     filter decides it; a request that also asks to buy, sell, recommend or research is not news). It holds `symbols` and/or `companies` (at most `news.max_stocks`) or a `topic` searched as a term, and the window `news_days`, and NOTHING that moves money
     or asks for a trade: the validator refuses orders, a budget, `each`, a count, an even split, `raise_funds`, a price limit or floor and typed shares, each with its reason. A PROGRAM reads an explicit window from the words and wins over the model
     (`news_window`: "last 3 days", "past 2 weeks", "last week", "this month", "today", "yesterday"); with none written the model's value, and with none either `news.default_days`; a window over `news.max_days` (90) is cut and said (`corrected`).
+  * A DATED WINDOW OF THE NEWS (entry 151; design/news_dated_window_spec.md; Jacob, 2026-11-28: *"We cannot fetch a single day news in the past ... it is currently finding the last most recent day instead of the specific day"*): a news request may ask for
+    a PAST DAY or span of days, not only for a rolling `news_days` counted back from now. `TradeIntent.news_from` and `news_to` are two calendar dates (US Eastern days, `news_to` included, one day is the same date twice), both or neither, and then `news_days`
+    is None and used nowhere. Who reads it, as for the rolling window (N3): a PROGRAM reads an explicit date from the words and wins over the model (`news_dates`: ISO `2026-11-03`, `11/3`, `11/3/2026`, `Nov 3`, `November 3rd`, `3 November 2026`, a range
+    joined by to, through, thru, until, a dash or "between X and Y"; a date with no year is the most recent such date on or before today; a date that does not exist is not read); otherwise the MODEL's `news_from` and `news_to` ("last Tuesday", "the day
+    before Thanksgiving": the model reads the request, and today's date is in its user message); otherwise the rolling rules of N3. CODE checks the result: the first day is not after the last, the last is not after today, the span is at most
+    `news.max_days` (90) and the first day is at most `news.max_age_days` (365) before today (a date a program read that fails is `NeedsClarification` at once: the model cannot fix the user's words).
   * THE QUOTE (entry 150; design/quote_request_spec.md; Jacob, 2026-11-23: *"Whats the current price of: TSLA?"* was answered with the news): a request that ONLY asks for the current PRICE of one or more named stocks is `action: "quote"`.
     THE MODEL reads it (no cue-word filter decides it; a request that also asks to buy, sell, recommend, research or see the news is not a quote). It holds `symbols` and/or `companies` (1 to `quote.max_stocks`) and NOTHING else: no theme (a
     theme has no price: it is a request to clarify), no order, budget, each, count, split, `raise_funds`, price limit or floor, typed shares or window, each refused with its reason. NO number of the words is read for it (`_read_numbers` is not run:
@@ -81,15 +87,17 @@ import json
 import re
 from collections import Counter
 from dataclasses import dataclass
+from datetime import date, timedelta
 from decimal import Decimal
 from typing import Annotated, Literal
 
-from pydantic import AfterValidator, BaseModel, ConfigDict, Field, StrictBool, ValidationError, field_validator, model_serializer, model_validator
+from pydantic import AfterValidator, BaseModel, ConfigDict, Field, StrictBool, ValidationError, ValidationInfo, field_validator, model_serializer, model_validator
 
 from prometheus.agents.account_manager.config import load_config
 from prometheus.common import shares as sh
+from prometheus.common import trading_clock
 from prometheus.common.money import Digits, PositiveMoney, Price, canonical, digits
-from prometheus.common.work_order import DIRECT_SIDES, MAX_DIRECT_SHARES
+from prometheus.common.work_order import DIRECT_SIDES, MAX_DIRECT_SHARES, iso_date, window_words
 from prometheus.rag.loaders import check_symbol
 
 MAX_TEXT = 600
@@ -219,13 +227,15 @@ class TradeIntent(BaseModel):
     corrected: list[str] = Field(default_factory=list)      # what code changed in the model's reading, one sentence each (a number the model put in the wrong kind, a price limit it missed or a minimum price that is ignored: entry 138)
     orders: list[DirectOrder] = Field(default_factory=list, max_length=MAX_COUNT)      # only with action "order"
     news_days: int | None = Field(default=None, ge=1, le=MAX_NEWS_DAYS)      # only with action "news" (entry 149): how many days of news to show, 1 to 90; a program reads an explicit window from the words (`news_window`) and wins over the model
+    news_from: str | None = None      # only with action "news" (entry 151): the FIRST day of a dated window, "2026-11-03", a US Eastern calendar day; with `news_to` (both or neither), and then `news_days` is None. A program reads a date from the words (`news_dates`) and wins over the model
+    news_to: str | None = None      # the LAST day of the dated window, included ("2026-11-03" again for one day)
 
     @model_serializer(mode="wrap")
     def _leave_out_what_entry_138_added_when_it_is_not_there(self, handler):
         """A dump has no `max_price`, `unclear_number`, `corrected`, `min_price`, `shares_of` or `shares_each` unless the request has one: every key of the Proving Ground's research cache made before entry 138 (it hashes this dump) is
         still the key of the same request, and a saved intent loads the same."""
         data = handler(self)
-        for key in ("max_price", "unclear_number", "min_price", "shares_each", "news_days"):      # `news_days` is entry 149's: left out of every request that is not a news request, so the keys of the Proving Ground's research cache do not change
+        for key in ("max_price", "unclear_number", "min_price", "shares_each", "news_days", "news_from", "news_to"):      # `news_days` is entry 149's and `news_from` and `news_to` entry 151's: left out of every request that has none, so the keys of the Proving Ground's research cache do not change
             if data.get(key) is None:
                 data.pop(key, None)
         if not data.get("raise_funds"):
@@ -264,6 +274,29 @@ class TradeIntent(BaseModel):
             if len({o.named.casefold() for o in self.orders}) != len(self.orders):
                 raise ValueError("orders: one trade for each stock")
         return self
+
+    @model_validator(mode="after")
+    def _a_dated_window_is_a_window_of_the_news(self, info: ValidationInfo):
+        """Entry 151, D1: `news_from` and `news_to` go together, only with action "news", with no `news_days` beside them, and `window_problem` finds nothing wrong with them (the first day is not after the last, the last is not after today, a span of at most
+        `news.max_days`, a first day at most `news.max_age_days` before today). "Today" is the calendar date of the Eastern clock (the bound day while the Proving Ground has one) unless the caller says otherwise (`context={"today": date}`:
+        `parse_intent` passes the day its model was told, so a form is judged by the day it was read on)."""
+        if self.news_from is None and self.news_to is None:
+            return self
+        if self.action != "news":
+            raise ValueError("news_from and news_to: the dates of the news go with a request for the news (action news)")
+        if self.news_days is not None:
+            raise ValueError("news_days: a dated window (news_from, news_to) and a window counted back from now (news_days) are two ways to say the same thing: leave news_days null")
+        problem = window_problem(self.news_from, self.news_to, (info.context or {}).get("today") or trading_clock.calendar_today())
+        if problem:
+            raise ValueError(problem)
+        return self
+
+    @field_validator("news_from", "news_to")
+    @classmethod
+    def _a_day(cls, value):
+        if value is not None and iso_date(value) is None:
+            raise ValueError("a day is written YYYY-MM-DD and has to exist (2026-11-03), or is null")
+        return value
 
     @field_validator("topic")
     @classmethod
@@ -371,6 +404,9 @@ class TradeIntent(BaseModel):
         limit = self.limit_words()
         if self.action == "quote":      # entry 150: only the price is shown
             return f"show the current price of {self.what()} (nothing will be bought)"
+        if self.action == "news" and self.news_from is not None:      # entry 151: the news of a past day or span: one day says its weekday ("on Tuesday 2026-11-03")
+            when = f"on {date.fromisoformat(self.news_from):%A} {self.news_from}" if self.news_from == self.news_to else window_words(self.news_from, self.news_to)
+            return f"show the news {'about' if self.topic else 'of'} {self.what()} {when} (nothing will be bought)"
         if self.action == "news":      # entry 149: only the news is shown
             days = self.news_days if self.news_days is not None else load_config().news.default_days
             return f"show the news {'about' if self.topic else 'of'} {self.what()} for the last {'day' if days == 1 else f'{days} days'} (nothing will be bought)"
@@ -768,6 +804,143 @@ def news_window(typed: str) -> int | None:
     return max(found) if found else None
 
 
+# THE DATE OF A NEWS REQUEST (entry 151, D2): a PROGRAM reads an explicit date or range of dates from the user's words and wins over the model, as it does for the rolling window above. A date is a number written to say a day, so code reads it;
+# what code does not read ("last Tuesday", "the day before Thanksgiving", "Black Friday") is the MODEL's to read, and code checks the result (`window_problem`). A closed list of forms, nothing else:
+#   2026-11-03 (ISO) | 11/3, 11/3/2026, 11/3/26 (US order, month first) | Nov 3, November 3rd, Nov. 3, 2026, 3 November 2026 (a month's name or its first three letters, any case, an ordinal and a comma are allowed).
+# A RANGE is two dates joined by to, through, thru, until, a dash (- or the en dash), or "between X and Y"; the second date may be only a day number ("Nov 3 to 5": the first date's month).
+MONTHS = {"jan": 1, "feb": 2, "mar": 3, "apr": 4, "may": 5, "jun": 6, "jul": 7, "aug": 8, "sep": 9, "oct": 10, "nov": 11, "dec": 12}
+_MONTH = r"(?:jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:tember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)"
+_YEAR = r"(?:19|20)\d{2}"
+NEWS_DATE = re.compile(
+    r"(?<![\w/.])(?P<iy>\d{4})-(?P<im>\d{1,2})-(?P<id>\d{1,2})(?![\w/])"                                                                           # 2026-11-03
+    r"|(?<![\w/.])(?P<um>\d{1,2})/(?P<ud>\d{1,2})(?:/(?P<uy>\d{4}|\d{2}))?(?![\w/])"                                                               # 11/3, 11/3/2026, 11/3/26
+    rf"|\b(?P<mm>{_MONTH})\b\.?\s+(?P<md>\d{{1,2}})(?:st|nd|rd|th)?\b(?:,?\s+(?P<my>{_YEAR})\b)?"                                                    # Nov 3, November 3rd, Nov. 3, 2026
+    rf"|(?<![\w/.:$-])(?P<dd>\d{{1,2}})(?:st|nd|rd|th)?\s+(?:of\s+)?(?P<dm>{_MONTH})\b\.?(?:,?\s+(?P<dy>{_YEAR})\b)?", re.I)                        # 3 November 2026, 3rd of Nov
+_JOINERS = r"(?:to|through|thru|until|-|–)"
+NEWS_JOINED = re.compile(rf"\s*{_JOINERS}\s*", re.I)
+NEWS_BETWEEN_JOINED = re.compile(rf"\s*(?:{_JOINERS}|and)\s*", re.I)
+NEWS_DAY_ONLY = re.compile(r"(?P<day>\d{1,2})(?:st|nd|rd|th)?\b(?![/:.\-]?\d)")      # the second date of "Nov 3 to 5": a day number and nothing that makes it another kind of number
+
+
+def _read_day(match: re.Match) -> tuple[int | None, int, int]:
+    """(year or None, month, day) of one date the regex found, as the words wrote it. A two-digit year is 20xx."""
+    if match["iy"]:
+        return int(match["iy"]), int(match["im"]), int(match["id"])
+    if match["um"]:
+        year = match["uy"]
+        return (None if year is None else int(year) + 2000 if len(year) == 2 else int(year)), int(match["um"]), int(match["ud"])
+    if match["mm"]:
+        return (int(match["my"]) if match["my"] else None), MONTHS[match["mm"][:3].lower()], int(match["md"])
+    return (int(match["dy"]) if match["dy"] else None), MONTHS[match["dm"][:3].lower()], int(match["dd"])
+
+
+def _yearless(month: int, day: int, today: date) -> date:
+    """The most recent date with this month and day that is on or before today (November 30 on 2026-11-28 is 2025-11-30). ValueError when there is none (a date that does not exist: February 30, and February 29 in the two years tried)."""
+    for year in (today.year, today.year - 1):
+        try:
+            found = date(year, month, day)
+        except ValueError:
+            continue
+        if found <= today:
+            return found
+    raise ValueError("no such date")
+
+
+def news_dates(typed: str, today: date) -> tuple[date, date] | None:
+    """The first and the last day the user's words ask the news for, or None when they write none (entry 151, D2): ONE date is that day twice; a range is its two ends; more than one date or range ("Nov 3 and Nov 10") is the days from the earliest to the
+    latest, as `news_window` takes the longest of several spans. A date with no year is the most recent such date on or before `today` (a range's second date takes the first one's year, the next year when it would otherwise end before it starts:
+    "Dec 28 to Jan 3"). A date that does not exist (February 30, 13/1) makes the words unreadable for this check and the result is None (the model's value, or the user's clarification, stands): code never shows a day nobody asked for. A range
+    written backwards ("Nov 5 to Nov 3") is returned as written and `window_problem` refuses it. A program's check of the user's own words, no model; whether the days are in the past and not too many or too old is `window_problem`'s."""
+    found = [(m, _read_day(m)) for m in NEWS_DATE.finditer(typed)]
+    spans: list[tuple[date, date]] = []
+    try:
+        i = 0
+        while i < len(found):
+            first_at, first = found[i]
+            between = typed[:first_at.start()].rstrip().lower().endswith("between")
+            joiner = NEWS_BETWEEN_JOINED if between else NEWS_JOINED
+            last = None
+            if i + 1 < len(found) and joiner.fullmatch(typed[first_at.end():found[i + 1][0].start()]):
+                last, i = found[i + 1][1], i + 2
+            else:
+                gap = joiner.match(typed, first_at.end())
+                day = NEWS_DAY_ONLY.match(typed, gap.end()) if gap and gap.end() > first_at.end() else None
+                if day and not (i + 1 < len(found) and found[i + 1][0].start() < day.end()):      # "Nov 3 to 5": the day number alone is the first date's month and year
+                    last, i = (first[0], first[1], int(day["day"])), i + 1
+                else:
+                    i += 1
+            spans.append(_resolve(first, last, today))
+    except ValueError:
+        return None
+    return (min(a for a, _ in spans), max(b for _, b in spans)) if spans else None
+
+
+def _resolve(first: tuple, last: tuple | None, today: date) -> tuple[date, date]:
+    """One date or one range of `news_dates`, with the years filled in (ValueError for a date that does not exist). With only the first date: that day twice."""
+    if last is None:
+        day = _yearless(first[1], first[2], today) if first[0] is None else date(first[0], first[1], first[2])
+        return day, day
+    (y1, m1, d1), (y2, m2, d2) = first, last
+    if y1 is None and y2 is None:
+        start = _yearless(m1, d1, today)
+        end = date(start.year + (1 if m2 < m1 else 0), m2, d2)      # "Dec 28 to Jan 3": the second date is in the next year
+    elif y2 is None:
+        start = date(y1, m1, d1)
+        end = date(y1 + (1 if m2 < m1 else 0), m2, d2)
+    elif y1 is None:
+        end = date(y2, m2, d2)
+        start = date(y2 - (1 if m1 > m2 else 0), m1, d1)
+    else:
+        start, end = date(y1, m1, d1), date(y2, m2, d2)
+    return start, end
+
+
+def rolling_words(typed: str) -> str | None:
+    """The first span the words write that `news_window` reads ("last week", "past 3 days", "this month", "today", "yesterday"), as typed, or None. For the note that says a date was used instead of it."""
+    found = [m for pattern in (NEWS_LAST, NEWS_THIS, NEWS_TODAY, NEWS_YESTERDAY) for m in pattern.finditer(typed)]
+    return min(found, key=lambda m: m.start())[0] if found and news_window(typed) is not None else None
+
+
+WEEKDAYS = ("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+WEEKDAY_WORD = re.compile(rf"\b({'|'.join(WEEKDAYS)})\b", re.I)
+
+
+def weekday_problem(typed: str, news_from: str, news_to: str, today: date) -> str | None:
+    """Why the model's dated window is not the day the words name, or None (entry 151; found by the real capture of "what happened with Apple last Tuesday?", whose reply was 2026-11-21: a Saturday, not the Tuesday 2026-11-24 that was meant on the Saturday 2026-11-28). The model works a relative day out from the date in its message and its day-of-the-week arithmetic is not reliable, while a weekday NAMED in the words is something a program can check: every
+    weekday the words name must be the weekday of a day of the window (a span of a week or more has them all). Only the model's window is checked: a date a program read from the words (`news_dates`) is not the model's. A closed list of the seven
+    names, whole words, any case; no day is worked out here (a relative phrase is the model's to read, code only checks it), so the model is asked again with the reason."""
+    named = {WEEKDAYS.index(m[1].capitalize()) for m in WEEKDAY_WORD.finditer(typed)}
+    if not named:
+        return None
+    first, last = date.fromisoformat(news_from), date.fromisoformat(news_to)
+    present = {(first + timedelta(days=k)).weekday() for k in range(min((last - first).days + 1, 7))}
+    missing = [WEEKDAYS[i] for i in sorted(named - present)]
+    if not missing:
+        return None
+    is_a = f"a {first:%A}" if news_from == news_to else f"{first:%A} to {last:%A}"
+    return (f"the person wrote {' and '.join(missing)}, but {news_from if news_from == news_to else f'{news_from} to {news_to}'} is {is_a}: work the day out again from today's date ({today:%A} {today.isoformat()}), "
+            f"so that the day they named is one of its days")
+
+
+def window_problem(news_from: str | None, news_to: str | None, today: date) -> str | None:
+    """Why a dated window of the news (entry 151, D1) cannot be shown, in words for the person or the model, or None when it can: both days or neither, the first not after the last, the last not after `today` (the Eastern calendar date), a span of at most
+    `news.max_days` and a first day at most `news.max_age_days` before today. The ONE check, run on the model's days by the intent's validator and on a program's reading by `_news_intent`."""
+    if news_from is None and news_to is None:
+        return None
+    if news_from is None or news_to is None:
+        return "news_from and news_to go together: a dated window has a first day and a last day (the same day twice for one day)"
+    first, last, cap = date.fromisoformat(news_from), date.fromisoformat(news_to), load_config().news
+    if first > last:
+        return f"the first day ({news_from}) is after the last day ({news_to}): write the earlier day first"
+    if last > today:
+        return f"the last day ({news_to}) is after today ({today}): the news of a day that has not happened yet cannot be shown"
+    if (last - first).days + 1 > cap.max_days:
+        return f"the window from {news_from} to {news_to} is {(last - first).days + 1} days: the news is shown for at most {cap.max_days} days at a time"
+    if (today - first).days > cap.max_age_days:
+        return f"the first day ({news_from}) is more than {cap.max_age_days} days before today ({today}): the news is kept for at most {cap.max_age_days} days back"
+    return None
+
+
 def check_named(intent: TradeIntent, typed: str) -> None:
     """Raises ValueError, with the reason, unless the stocks and the theme of a request for companies (or for the news) are the user's own words: at least one of them, each ticker as typed, each company's name (case ignored) and the
     theme sharing a word with the text (`theme_is_in`)."""
@@ -784,25 +957,44 @@ def check_named(intent: TradeIntent, typed: str) -> None:
         raise ValueError(f"the theme {intent.topic!r} shares no word with what you typed")
 
 
-def _news_intent(raw: dict, typed: str) -> TradeIntent:
-    """The form of a request that only asks for the news (entry 149), accepted only when the user's words support it. The window is the one the words write (`news_window`), else the model's `news_days` (a whole number of days, 1 or more),
-    else `news.default_days`, cut to `news.max_days` with a sentence in `corrected` that tells the user. Nothing that moves money is read here (no price limit, no number of shares, no permission to raise funds: `_read_numbers` is not run), and
-    whatever the model put in such a field is refused by the intent's own validator with its reason."""
+def _news_intent(raw: dict, typed: str, today: date | None = None) -> TradeIntent:
+    """The form of a request that only asks for the news (entry 149), accepted only when the user's words support it. The window is, in this order (entry 151, D2): the DATE or dates the words write (`news_dates`, a program: it wins over the model),
+    the model's own `news_from` and `news_to` (a past day it worked out from the date in its message: "last Tuesday"), the rolling span the words write (`news_window`), the model's `news_days` (a whole number of days, 1 or more), and last
+    `news.default_days`, a rolling span cut to `news.max_days` with a sentence in `corrected` that tells the user. A dated window is never cut: one that is in the future, longer than `news.max_days` or older than `news.max_age_days` is refused with its reason
+    (`window_problem`), at once for the user when a program read it from the words (`NeedsClarification`: the model cannot fix them), and for the model to try again when the model wrote it. `today` is the day the model was told (the Eastern
+    calendar date when left out). Nothing that moves money is read here (no price limit, no number of shares, no permission to raise funds: `_read_numbers` is not run), and whatever the model put in such a field is refused by the intent's own
+    validator with its reason."""
     raw, notes, cap = dict(raw), [], load_config().news
-    written, model_days = news_window(typed), raw.pop("news_days", None)
-    if model_days is not None:      # a whole number of days from the model's JSON, through the door of the number (a bool and a text are refused)
-        try:
-            exact = digits(model_days)
-        except ValueError:
-            exact = None
-        if exact is None or exact != exact.to_integral_value() or exact < 1:
-            raise ValueError("news_days must be a whole number of days (1 or more), or null when the person gave no window")
-        model_days = int(exact)
-    days = written if written is not None else model_days if model_days is not None else cap.default_days
-    if days > cap.max_days:
-        notes.append(f"the news is kept for at most {cap.max_days} days: showing {cap.max_days}")
-        days = cap.max_days
-    raw["news_days"] = days
+    today = today or trading_clock.calendar_today()
+    model_days = raw.pop("news_days", None)
+    read, dated = news_dates(typed, today), raw.get("news_from") is not None or raw.get("news_to") is not None
+    if read is not None:      # a date the words write: the program's, over the model's days and over any span the words also write
+        problem = window_problem(read[0].isoformat(), read[1].isoformat(), today)
+        if problem:
+            raise NeedsClarification(f"{problem}. Ask for a day or a span of days that has passed (at most {cap.max_days} days at a time, and no more than {cap.max_age_days} days back).")
+        raw["news_from"], raw["news_to"] = read[0].isoformat(), read[1].isoformat()
+        if news_window(typed) is not None:
+            shown = read[0].isoformat() if read[0] == read[1] else f"{read[0].isoformat()} to {read[1].isoformat()}"
+            notes.append(f"showing the news of {shown}; the '{rolling_words(typed)}' in the same request is not used")
+    elif not dated:
+        raw.pop("news_from", None), raw.pop("news_to", None)      # a null of the model's is no window
+    if raw.get("news_from") is not None or raw.get("news_to") is not None:      # a dated window: `news_days` is not used anywhere (D1)
+        raw["news_days"] = None
+    else:
+        written = news_window(typed)
+        if model_days is not None:      # a whole number of days from the model's JSON, through the door of the number (a bool and a text are refused)
+            try:
+                exact = digits(model_days)
+            except ValueError:
+                exact = None
+            if exact is None or exact != exact.to_integral_value() or exact < 1:
+                raise ValueError("news_days must be a whole number of days (1 or more), or null when the person gave no window")
+            model_days = int(exact)
+        days = written if written is not None else model_days if model_days is not None else cap.default_days
+        if days > cap.max_days:
+            notes.append(f"the news is kept for at most {cap.max_days} days: showing {cap.max_days}")
+            days = cap.max_days
+        raw["news_days"] = days
     named = [*(raw.get("symbols") or []), *(raw.get("companies") or [])]
     if len(named) > cap.max_stocks:      # the user has to say fewer: the model is not asked again (it would drop one without telling them; found by the first real capture)
         raise NeedsClarification(f"a news request names at most {cap.max_stocks} stocks and {len(named)} were named: ask for the news of {cap.max_stocks} or fewer at a time")
@@ -810,12 +1002,16 @@ def _news_intent(raw: dict, typed: str) -> TradeIntent:
         raw["raise_funds"] = True      # the intent refuses it: nothing is sold for the news
     raw.pop("unclear_number", None)
     try:
-        intent = TradeIntent(request=typed, corrected=notes, **raw)
+        intent = TradeIntent.model_validate({"request": typed, "corrected": notes, **raw}, context={"today": today})      # the day the model was told is the day the dates are judged by
     except ValidationError as error:
         first = error.errors()[0]
         raise ValueError(f"{'.'.join(str(x) for x in first['loc']) or 'the form'}: {first['msg']}") from None
     except ValueError as error:   # check_symbol
         raise ValueError(str(error)) from None
+    if dated and read is None:      # the window is the model's own reading ("last Tuesday"): the weekday the words name must be in it (a program checks the model's day-of-the-week arithmetic)
+        problem = weekday_problem(typed, intent.news_from, intent.news_to, today)
+        if problem:
+            raise ValueError(problem)
     check_named(intent, typed)
     return intent
 
@@ -1042,8 +1238,9 @@ def _read_numbers(raw: dict, typed: str) -> tuple[dict, list[str], Decimal | Non
     return raw, notes, unclear
 
 
-def parse_intent(reply: str, typed: str) -> TradeIntent:
-    """The form in the model's reply, accepted only when `typed` (the user's own words) supports every field. Raises ValueError with a short reason for the model (and the user) otherwise."""
+def parse_intent(reply: str, typed: str, today: date | None = None) -> TradeIntent:
+    """The form in the model's reply, accepted only when `typed` (the user's own words) supports every field. Raises ValueError with a short reason for the model (and the user) otherwise. `today` is the day the model was told in its message
+    (`AccountManager.understand_request`), the one a news request's dates are read and judged by (entry 151); the Eastern calendar date when left out."""
     typed = check_typed(typed)
     body = re.sub(r"^```(?:json)?\s*|\s*```$", "", (reply or "").strip())
     start, end = body.find("{"), body.rfind("}")
@@ -1055,7 +1252,7 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
         raise ValueError("not valid JSON") from None
     if not isinstance(raw, dict):
         raise ValueError("not a JSON object")
-    known = {"action", "topic", "symbols", "companies", "count", "allocation", "budget", "each", "max_price", "min_price", "raise_funds", "orders", "news_days"}
+    known = {"action", "topic", "symbols", "companies", "count", "allocation", "budget", "each", "max_price", "min_price", "raise_funds", "orders", "news_days", "news_from", "news_to"}
     if set(raw) - known:
         raise ValueError(f"unknown fields: {', '.join(sorted(map(str, set(raw) - known)))}")
     orders = raw.get("orders", [])
@@ -1097,10 +1294,11 @@ def parse_intent(reply: str, typed: str) -> TradeIntent:
     elif not isinstance(raw["each"], bool):
         raise ValueError("each must be true or false")
     if raw.get("action") == "news":      # entry 149: the user only wants to see the news: no number of shares, no price and no permission to sell is read from the words
-        return _news_intent(raw, typed)
+        return _news_intent(raw, typed, today)
     if raw.get("action") == "quote":      # entry 150: the user only wants to see the current price: no number of the words is read, nothing is bought
         return _quote_intent(raw, typed)
     raw.pop("news_days", None)      # a window means nothing to a request that is not for the news
+    raw.pop("news_from", None), raw.pop("news_to", None)      # nor does a dated one (entry 151)
     said = raw.pop("raise_funds", None)      # the permission to sell holdings (entry 142, R2): the words decide, the model only has to agree
     if said is not None and not isinstance(said, bool):
         raise ValueError("raise_funds must be true or false")

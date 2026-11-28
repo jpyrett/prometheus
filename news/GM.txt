@@ -2200,3 +2200,789 @@ Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
 <<<INSIGHTS>>>
 
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174682
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T12:02:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=12d59b2c5c30f52d86e343f27e14be0e23f62124fc8b71cf8e63c74573f9bf37
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Detroit’s Old Boys network met its match in General Motor's Mary Barra
+<<<SUMMARY>>>
+From GM lifers to self-appointed pundits and garden variety misogynists, Barra’s appointment to CEO in 2014 brought out the worst in a lot of people.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174746
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T09:04:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=74d0313aba2037a80088d6520a78980ef6e0cc25e728012b58be75d1c80186cf
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1156940451/image_1156940451.jpg?io=getty-c-og
+category: company
+tickers: GM
+keywords: 
+headline: General Motors Company: More Cash In 2027, More Pickups In 2028
+<<<SUMMARY>>>
+General Motors Company is rated a Buy, with a $93 target, implying 11.3% upside from $84; richer pickup trims and buybacks support earnings.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144177083
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T05:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2ccf4300ebb3941286c712d1d0e331082d9b74fd69d1c2db369ac7e80652036e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Pentagon Urges Detroit to Spread Its Wings and Fly Into the Drone Biz
+<<<SUMMARY>>>
+Officials acknowledge the US drone industry doesn’t have enough manufacturing capacity to match this sudden demand.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174886
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T04:13:40Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=05cadd2dc3318326574f29693bac9bf6569a2dbd3c00f934dbd6633ae3ea5b53
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/27/United-States-of-America-and-China-flags.jpg?width=2048&height=1536
+category: company
+tickers: GM
+keywords: 
+headline: US Could Ban China-Linked Connected Cars as Bipartisan Push Gathers Steam: What It Means for Tesla, Ford and GM
+<<<SUMMARY>>>
+Bipartisan Senate bill targeting China-linked vehicle components may face a December vote after revisions ease industry concerns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144156973
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T17:58:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=52f470182c4a20acd1dac25f9418616f369a2571b32c4100b6369fb0a463d640
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: GM starts production of the Chevrolet Groove in Egypt
+<<<SUMMARY>>>
+The investment for additional manufacturing by GM in Egypt is a win for Cairo.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144156974
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T15:30:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3c131c026563413bfd6e88149fea5265733ab1da9213c0cc67a66cc3e7c6ba28
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Paccar (PCAR) Up 5.4% Since Last Earnings Report: Can It Continue?
+<<<SUMMARY>>>
+Paccar (PCAR) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144155899
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T14:50:28Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8acba3042743f76b584351eb41ecf930c7e674bcd39876a0afb425931c9d09ef
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: General Motors Is Up 11% in a Month as the Nasdaq-100 Fell 10%. Is Its Nasdaq Switch Really That Good?
+<<<SUMMARY>>>
+Key TakeawaysGeneral Motors stock is up 11% in the past month, mostly on its move to Nasdaq, while the Nasdaq-100 fell 10%. Ford’s higher profit floor and a shift out of Tesla helped too, but Ford expects flat 2027 profit.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144155848
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T14:44:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c3e6e3c9a1784dc85d5076556e97cbe2a4c73eb37cc7bc3e540920985f5654c7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Stocks’ Swoon and Higher Interest Rates Are a Bad Combo for the Economy
+<<<SUMMARY>>>
+Economic growth depends largely on wealthy consumers, who are now less so due to the equity market’s selloff.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154018
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T13:36:09Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=dc160478100dbb3dc6522508d969d49c6248c5add8f0e6a87d67b222dfab34d3
+image_url: https://www.chartmill.com/images/uploads/ev_stocks_b3412c42aa.webp
+category: company
+tickers: GM
+keywords: 
+headline: EV Stocks’ Big Split: Legacy Value Outperforms as Premium Pure Plays Face Earnings Test
+<<<SUMMARY>>>
+EV stocks split: legacy automakers trade cheap with better momentum, while pure-play EV names face premium valuations and weaker performance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144153319
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T10:14:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=bb79cfb7119a3ca47f6457e8778f0b3c01e1b27b9520d0057d7e618f1dfe2244
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: General Motors (GM) Bets On Egypt Assembly And Wider EV Charging Access
+<<<SUMMARY>>>
+General Motors (NasdaqGS:GM) is starting local production of the Chevrolet Groove in Egypt with a strong local sourcing commitment. The automaker is also broadening its collaboration with Tesla by adopting the NACS charging standard for GM electric vehicles in South Korea. Together, Egypt based Groove assembly and NACS charging access in South Korea only capture part of General Motors' current repositioning efforts. Ask Charlie whether the 3 warning signs (1 major) affect GM’s Egypt Groove...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154202
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T05:14:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f5c7b9b74d464f96c5a5df63b343a4e35fb9ea76f5198a20d8c01a928ae9b7d8
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/26/Shark-Tank-co-star-and-serial-entreprene.jpg?width=2048&height=1536
+category: company
+tickers: GM
+keywords: 
+headline: ‘I’ve Never Seen Anything Like This’: Kevin O’Leary Admits Being ‘Wrong’ About Trump, Says He Underestimated President’s Push to Beat China in AI
+<<<SUMMARY>>>
+Kevin O&#39;Leary says he underestimated Trump&#39;s resolve to use executive power to make the U.S. an AI leader and beat China.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144136860
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T01:32:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=722efe499e5f20525c756d6952de16c2d7423e2b3bac28fc8b6a0999230d4cf0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Pete Hegseth, Trump Officials Reportedly Floated Wartime Law to Force Jensen Huang’s Return as Nvidia CEO, But Pentagon Says It ‘Never Happened’
+<<<SUMMARY>>>
+The Donald Trump administration reportedly considered invoking emergency powers under a decades-old defense law to pressure Nvidia Corp. (NASDAQ:NVDA) to reinstate Jensen Huang as CEO. Pentagon Considered Using Defense Production Act Senior Pentagon officials, including Defense Secretary Pete Hegseth and Deputy Secretary Steve Feinberg, discussed using the Defense Production Act to influence Nvidia’s board over the weekend, the Washington Post reported on Wednesday, citing people familiar with t
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144129011
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T22:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e3bc2d9d0543210500fec61a2efd38f0d302a7ef637b16a8aa6ed962d050a916
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Looking for Bargains? These S&P 500 Companies Are Aggressively Buying Back Stock.
+<<<SUMMARY>>>
+Seven stocks from a diverse group of industries make our screen of companies increasing buyback programs.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144127287
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T19:52:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a66f59eddc2a02a08b63e3dc1e52fcc863a26bd9275c0cdb6d493d3c21f1980
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: What Will Decide GM Stock Over The Next Six Months?
+<<<SUMMARY>>>
+Today's big story: Anthropic Below Its IPO Price: Do Giants Come Back.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144127129
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T18:43:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4e7aab66e3e326c2687fee555e801ea7d00af53265c5c8fe5a53424011ac2979
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: BYD vs. General Motors: Which Carmaker Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+BYD and GM are both leaning on very different engines, and the valuation gap between them may matter more than either company's EV pitch.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144127091
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T18:09:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6e196544448896537ee341e77d8ffb112aa476eb1be063ac982745338eb5704a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Lockheed Martin (LMT) Joins Pentagon Push To Scale Military Drone Production
+<<<SUMMARY>>>
+Lockheed Martin (NYSE:LMT) is working with General Motors under the Pentagon's Project Agincourt to scale US military drone production. The Pentagon initiative is enlisting large automotive manufacturers to apply high volume assembly methods to unmanned aerial system manufacturing. Project Agincourt is intended to increase the output of drones for US forces by tapping existing automotive supply chains and plants. The Project Agincourt partnership with General Motors should not be the only...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124843
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=52096638e6ac1b5bb0eb067eef4e9144002f323a074d4b233ed37f75b55889e2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Here is What to Know Beyond Why General Motors Company (GM) is a Trending Stock
+<<<SUMMARY>>>
+Recently, Zacks.com users have been paying close attention to General Motors (GM). This makes it worthwhile to examine what the stock has in store.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122621
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae054f27fd7e9bcd8eb2bea1a85cf376afbb24a15555f98bc3bc5f69a60486ae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Welcome Back, State Capitalism.
+<<<SUMMARY>>>
+Washington loves to save its corporate treasures in their times of crisis. In Nvidia’s case, it might not pan out, Christopher Smart writes.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124341
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T10:18:46Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=f8c48f831331f34cdbdc59f1a84afbef85a2b2ec07c25699457193461a298e74
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2210232423/image_2210232423.jpg?io=getty-c-og
+category: company
+tickers: GM
+keywords: 
+headline: Lear Has Over 25% Upside If Its Cash Flow Holds
+<<<SUMMARY>>>
+Lear's seating wins and factory savings support the thesis, but weaker China schedules cut the sales forecast. I rate LEA stock as Buy. More on it inside.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144089325
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T20:03:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a06926ba64d87bdbf1a7251a30f2be0f5dac46dbdb700b68c0980697d1d9a5a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Unusual Machines Is Down 47% in a Month. Can UMAC Stock Hit Oppenheimer’s $30 Target by 2030?
+<<<SUMMARY>>>
+Wall Street just slapped a bullish target on this drone-parts maker, yet the shares kept sliding. With Detroit automakers eyeing its core product and fresh stock hitting the market, can strong sales and a big cash pile still win over skeptics?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144087101
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T16:01:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e4e9ef0b52eecbbb965ffcf0664115a8c7697a72242ac1080b62d6e3eb3eff18
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: GM, Ford in Pentagon Talks to Build Military Drones
+<<<SUMMARY>>>
+The U.S. military is exploring partnerships with automakers to expand domestic defense manufacturing capacity.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085804
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T15:58:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e0ee324d646342d44c7a61f73290309e0a781ad3fc70d1b1c01ddcff194fc15
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Red Cat Sinks 9%, Unusual Machines Slides 7%, Ondas Drops 4%: Is the Pentagon’s Reported Push to Bring In General Motors and Ford a Threat to Drone Stocks?
+<<<SUMMARY>>>
+Drone stocks are slipping as investors consider a report that the Pentagon wants big automakers helping build its drone fleet. Red Cat Holdings (NASDAQ:RCAT) stock is at $1.73, down 9% in early trading. On a year-to-date (YTD) basis, the small-cap drone maker is down 78%. Unusual Machines (NYSEAMERICAN:UMAC) stock is at $8.85, down 7%. Within […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085412
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T14:56:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f3fe85b7b76d682f0106ba3c7b46370c1133390f186cb00736c459522456cf60
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Tesla’s Europe Sales Soar 84%
+<<<SUMMARY>>>
+Europe is buying Tesla at a pace that outruns the entire EV market, while American drivers keep their distance. One tariff wall and a stalled US appetite for electric cars may decide whether Tesla's overseas momentum ever comes home.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139902997
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T14:48:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b96f0b8f61b37a8e2fb4af286e0966118ca804774df687c4f39c8f1b9d2ee2b5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Snap upgraded, Pinterest downgrade: Wall Street's top analyst calls
+<<<SUMMARY>>>
+Snap upgraded, Pinterest downgrade: Wall Street's top analyst calls
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085287
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:52:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=062e219a1d34a6923cf51ed6775da5a6acbf23935680213fcef010ca415b5d91
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: MP vs. USAR: Which Rare-Earth Stock Has an Edge Right Now?
+<<<SUMMARY>>>
+MP and USAR are expanding their rare-earth supply chains, but contrasting operating strengths, financial performance and growth prospects set them apart.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082894
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:12:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e1d1e69469d76ae62a0d9573dcf0fe50d3dcf7e3aa474e9ca50b1fad971f1874
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: What Made Tesla Stock Jump On Monday?
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082465
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T09:05:36Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b45b17b99c854be6390184c8f0bdd2c0a38f78708ae3db92da18b1cfb9d1a5e7
+image_url: 
+category: company
+tickers: GM
+keywords: 
+headline: Seaport Global Initiates Coverage On General Motors with Buy Rating, Announces Price Target of $106
+<<<SUMMARY>>>
+Seaport Global  analyst Ron Jewsikow   initiates coverage on General Motors (NASDAQ:GM) with a Buy rating and announces Price Target of $106.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082466
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T06:31:53Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ac074efc9e45d0aac063b978bfd45674e877486721e9a5c4c30cec166847a275
+image_url: 
+category: company
+tickers: GM
+keywords: 
+headline: 'Pentagon in Talks With General Motors and Ford to Make Military Drones; The Pentagon wants automakers to bolster drone production, but executives say the business case may be thin' - WSJ Exclusive
+<<<SUMMARY>>>
+https://www.wsj.com/politics/national-security/ford-general-motors-military-drones-c082d202
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144087103
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T05:01:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=62662d4c99880b8faae9c840e8915a9a79625d36fa4bcf8303230fc3c4f9139e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Tesla Wants Drivers to Keep Their Eyes on the AI-Rendered Road
+<<<SUMMARY>>>
+FSD V15 — which began rolling out to early-access drivers on Saturday — is the latest upgrade to Tesla’s self-driving subscription.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144153517
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T00:05:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=516b9909ef23c5ca7929524b5b94f4ee8933133645dc6fca6533e6cb06e2f27f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Charged: Wall Street warms to Tesla as merger review takes center stage
+<<<SUMMARY>>>
+Institutional investors and professional traders rely on The Fly to keep up-to-the-second on breaking news in the electric vehicle and clean energy space, as well as which stocks in these sectors that the best analysts on Wall Street are saying to buy and sell. From the hotly-debated high-flier Tesla (TSLA), Wall Street’s newest darling Rivian (RIVN), traditional-stalwarts turned EV-upstarts GM (GM) and Ford (F) to the numerous SPAC-deal makers that have come public in this red-hot space, The Fl
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140036658
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T15:13:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=267d488446046eb937127a2362c5409f7f13794a7a412ba3dcf99b7e7bb7583b
+image_url: 
+category: company
+tickers: GM
+keywords: 
+headline: Li Auto shares are trading higher after the company reported a year-over-year increase in March vehicle deliveries.
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144210844
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T16:31:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5a4b8717d1b999c88d1803a6e9cb95914e169c7ed3f51ec06c38d8d657cb2603
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Nasdaq 100 Shakeup Coming: Anthropic, GM In; CoreWeave Out. What About Strategy?
+<<<SUMMARY>>>
+More bad news for the embattled neoclouds.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144207885
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T10:37:26Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e96080afe87070c4d60033909a4a7a10905e41ad7f15fe674202577fa5696a26
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Ford Soars 10% in a Week on a Spacecraft Stake and Pentagon Talks. Is It Time to Buy?
+<<<SUMMARY>>>
+Key TakeawaysFord stock rose 10% in the week to Nov. 27 on a minority stake in spacecraft maker Revolution Space and reported Pentagon talks alongside General Motors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144208065
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T10:15:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=14f36fdc0e1c1092a058417ea5209290b1a2bd7d33f16051400cfd479740509a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Siemens’ automation chief on Silicon Valley’s ‘toxic and self-serving’ AI jobs story and the exciting ‘greenfield’ era of data centers and factories
+<<<SUMMARY>>>
+He counts about 30,000 new industrial projects across the Americas, from food plants to chip fabs, and says factories now compete with Starbucks for workers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144201956
+symbol: GM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T08:17:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dc9108aae8f666d8362d705c021008965af6af5ca23109de02468074b5a8c6d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: GM
+keywords: 
+headline: Is the U.S. tariff wall here to stay? ING weighs in
+<<<SUMMARY>>>
+Investing.com -- U.S. protectionism is becoming increasingly difficult to reverse, with the Trump administration preparing another round of tariffs and legal challenges unlikely to dismantle existing trade barriers, according to ING.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d2f8684aac98205a421aa389fcd2b389df6cd6b49ce91ac134a75855a65d5bb3
+symbol: GM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T13:00:03Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3035031/here-is-what-to-know-beyond-why-general-motors-company-gm-is-a-trending-stock?cid=CS-ZC-FT-fundamental_analysis|most_searched_stocks-3035031
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default67.jpg
+category: 
+tickers: GM
+keywords: General Motors, earnings estimates, stock valuation, revenue growth, Zacks Rank, automotive industry
+headline: Here is What to Know Beyond Why General Motors Company (GM) is a Trending Stock
+<<<SUMMARY>>>
+General Motors (GM) has been trending on Zacks.com with shares returning +2.2% over the past month, outperforming the S&P 500's -5% decline. The company posted strong recent earnings with a 3.75% revenue surprise and 4.23% EPS surprise, beating consensus estimates for four consecutive quarters. However, GM received a Zacks Rank #3 (Hold) rating, suggesting near-term performance in line with the broader market. The stock trades at a discount to peers with an A valuation grade, though earnings growth is expected to moderate with current fiscal year EPS up 26.5% but next year projected at only +9.6% growth.
+<<<INSIGHTS>>>
+GM | neutral | While GM shows strong recent operational performance (beating earnings and revenue estimates for multiple quarters) and attractive valuation (trading at discount to peers with A grade), the Zacks Rank #3 (Hold) rating and moderating earnings growth trajectory (+26.5% current year vs +9.6% next year) suggest the stock will perform in line with the market rather than outperform. The mixed signals between strong fundamentals and moderate forward guidance warrant a neutral stance.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:36c5e431f574d061cfd2b6d46abf5def79beaa1fffffd89c7f2f89f06bf30204
+symbol: GM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T13:40:03Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3035144/why-general-motors-gm-is-a-top-value-stock-for-the-long-term?cid=CS-ZC-FT-fundamental_analysis|zacks_education_value_score-3035144
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default25.jpg
+category: 
+tickers: GM
+keywords: General Motors, Zacks Rank, stock rating, valuation metrics, earnings estimates, automotive industry
+headline: Why General Motors (GM) is a Top Value Stock for the Long-Term
+<<<SUMMARY>>>
+General Motors (GM) receives a #3 (Hold) rating on the Zacks Rank with a VGM Score of A. The automaker, which holds 16.5% of the U.S. auto market share, features attractive valuation metrics including a forward P/E ratio of 6.14. Two analysts raised earnings estimates in the last 60 days, with the consensus estimate increasing to $13.41 per share and an average earnings surprise of +17.7%.
+<<<INSIGHTS>>>
+GM | positive | GM demonstrates positive fundamentals with a #3 Hold rating, top-tier Value and VGM Style Scores of A, attractive forward P/E ratio of 6.14, recent upward earnings estimate revisions (+$0.09), and strong average earnings surprise of +17.7%. The company also maintains market leadership with 16.5% U.S. auto market share and consistent profitability since 2010.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:084feda386fbc221d039a975e29e89e9174c826705679058a68ec1a9d3f0028d
+symbol: GM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T17:53:01Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/25/ford-motor-vs-tesla-which-automaker-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fc04f487d4ad8c1ecbd42b1807cf400ce29be876c-3840x2160.jpg&w=1200&op=resize
+category: 
+tickers: F, FpB, FpC, FpD, TSLA, GM
+keywords: Ford Motor, Tesla, electric vehicles, stock comparison, valuation, EV market, commercial vehicles, battery storage, 2027 outlook
+headline: Ford Motor vs. Tesla: Which Automaker Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Ford Motor and Tesla as investment options for 2027. Ford maintains strong commercial presence through Ford Pro and dealership networks but faces declining market share and profitability challenges. Tesla leads in EV production with strong margins and low debt but faces valuation concerns and potential SpaceX merger complications. The author suggests Ford as a better turnaround bet due to its bargain valuation, despite Tesla's growth prospects.
+<<<INSIGHTS>>>
+F | positive | Despite operational challenges and market share losses, Ford is positioned as a better buy for 2027 due to its bargain-basement valuation (P/E 5.9x), strong free cash flow ($12.5B), and potential game-changer with Ford Energy battery manufacturing. Expected net income improvement to $7.5B in 2027 supports turnaround thesis.
+FpB | positive | Despite operational challenges and market share losses, Ford is positioned as a better buy for 2027 due to its bargain-basement valuation (P/E 5.9x), strong free cash flow ($12.5B), and potential game-changer with Ford Energy battery manufacturing. Expected net income improvement to $7.5B in 2027 supports turnaround thesis.
+FpC | positive | Despite operational challenges and market share losses, Ford is positioned as a better buy for 2027 due to its bargain-basement valuation (P/E 5.9x), strong free cash flow ($12.5B), and potential game-changer with Ford Energy battery manufacturing. Expected net income improvement to $7.5B in 2027 supports turnaround thesis.
+FpD | positive | Despite operational challenges and market share losses, Ford is positioned as a better buy for 2027 due to its bargain-basement valuation (P/E 5.9x), strong free cash flow ($12.5B), and potential game-changer with Ford Energy battery manufacturing. Expected net income improvement to $7.5B in 2027 supports turnaround thesis.
+TSLA | neutral | Tesla demonstrates strong fundamentals with EV market leadership, excellent margins (19.29%), low debt (0.1x), and expected 132% sales growth to $122B in 2027. However, concerns include extremely high valuation (P/E 423.14), recent 9% YoY sales decline, and uncertainty around potential SpaceX merger that could impact share value.
+GM | neutral | Mentioned as currently ranking ahead of Ford in U.S. car sales (second place), indicating competitive positioning in the automotive market, though no detailed analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e501dd0bdab8257799fbf92b7a841c9cf02514b4b8ac62489471b83fc0b401a1
+symbol: GM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T15:30:16Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3035978/paccar-pcar-up-5-4-since-last-earnings-report-can-it-continue?cid=CS-ZC-FT-realtime_blog-3035978
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default308.jpg
+category: 
+tickers: PCAR, GM
+keywords: PACCAR, Q3 earnings, truck sales, revenue growth, pricing power, parts revenue, financial services, industry outlook
+headline: Paccar (PCAR) Up 5.4% Since Last Earnings Report: Can It Continue?
+<<<SUMMARY>>>
+PACCAR reported Q3 2026 earnings of $1.61 per share, meeting consensus estimates, with a 43.8% year-over-year increase in net income. Truck revenues surged 27.9% to $5.6 billion driven by higher deliveries and favorable pricing, while Parts achieved record quarterly revenues of $1.78 billion. The company projects 2026 U.S. and Canada Class 8 truck sales of 240,000-260,000 units. PACCAR received a Zacks Rank #3 (Hold) rating with a subpar Growth Score of D and a value grade of B.
+<<<INSIGHTS>>>
+PCAR | neutral | While PACCAR delivered strong operational results with 43.8% EPS growth and record parts revenues, earnings met rather than exceeded expectations. The stock received a Hold rating with weak growth prospects (D score), and recent estimates have flatlined. Strong pricing and truck deliveries are offset by supplier constraints and modest forward guidance, resulting in a neutral outlook.
+GM | neutral | GM reported modest revenue growth of 2.9% year-over-year and EPS improvement from $2.80 to $3.70. However, the company is expected to post declining earnings (-1.2%) in the current quarter. GM received a Hold rating with a strong VGM Score of A, indicating balanced but unexciting prospects.
+<<<END>>>

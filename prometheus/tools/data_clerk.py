@@ -24,8 +24,13 @@ AS OF A PAST DAY (the Proving Ground, entry 127: `trading_clock.as_of`). While a
 tools of the toolbox take `until`, the filing evidence stops at the day, the metrics are computed as of it, and `get_quote` answers with the stored close of that day (marked `simulated`). The fetch tools refuse (`trading_clock.NEVER_FETCHES`): a test
 of a past day calls no paid API and writes no stored text. `get_financials` is the one thing that is today's snapshot (Finnhub's metrics have no history, Jacob: keep and disclose); its payload says `point_in_time: False`.
 
+A DATED WINDOW (entry 151, design/news_dated_window_spec.md): a news request for a past day or span ("What was the news on TSLA on November 20?") runs on `tools.within(start, end)`, a COPY of these tools whose every search (`_retrieve`: the model's
+and the code sweep's) is held to that window by the code below the model, `since` the first instant of the first Eastern day, `until` the last instant of the last one: the model cannot be trusted to pass dates, so its own `since_days` can only narrow
+the window (it counts back from the window's end) and never widen it or move it. `fetch_news_window` is the fetch of such a window; it is not a tool of the model.
+
 See what the model sees:   python -m prometheus.tools.data_clerk
 """
+import copy
 import functools
 import sys
 from datetime import date, datetime, time, timedelta, timezone
@@ -155,7 +160,21 @@ class DataClerkTools:
         self.press_store = press_store
         self.filings_store = filings_store
         self.guard = guard
+        self._window: tuple[date, date] | None = None      # a DATED window of the news (entry 151): set only on the copy `within` makes; every search is held to it
         self.bars_root = bars_root  # where the day_aggs_v1 files are (a folder holding YYYY/MM/YYYY-MM-DD.csv.gz): the toolbox's own data/historical when left out; a test points it at a temporary folder
+
+    def within(self, start: date, end: date) -> "DataClerkTools":
+        """These tools with every search held to the calendar days `start` to `end` (US Eastern, `end` included), a COPY like `DataClerk.fetching` (the same toolbox, stores and guard; the tools it was called on are not changed). The window is applied
+        by `_retrieve` to EVERY search, the model's and the sweep's, with `since` the first instant of `start`, `until` and `now` the last instant of `end` (`trading_clock.start_of_day`, `end_of_day`), so a `since_days` the model passes counts back from the window's
+        end and the narrower bound wins: it can narrow the window, never widen it and never move it. A past day bound by the Proving Ground still caps `until` and `now`. ValueError for a `start` or `end` that is not a date or a `start` after the `end`."""
+        for name, day in (("start", start), ("end", end)):
+            if type(day) is not date:
+                raise ValueError(f"{name} must be a date (got {type(day).__name__})")
+        if start > end:
+            raise ValueError(f"the window starts {start} and ends {end}: the first day comes first")
+        other = copy.copy(self)
+        other._window = (start, end)
+        return other
 
     @property
     def today(self) -> date | None:
@@ -261,6 +280,9 @@ class DataClerkTools:
         the model can act on (no stored text for that ticker, so fetch; or stored text that scores under the bar, so say the sources do not cover it)."""
         symbols = _symbols(tickers)
         options = dict(tickers=symbols or None, since_days=since_days, k=k, store=store)
+        if self._window is not None:      # a dated window (entry 151): held to the Eastern days in code, whatever the model passed; `since_days` counts back from the window's end, so it can only narrow it
+            first, last = self._window
+            options.update(since=trading_clock.start_of_day(first), until=trading_clock.end_of_day(last), now=trading_clock.end_of_day(last))
         try:
             hits = search(query, **flags, **options)
             if hits:
@@ -273,8 +295,8 @@ class DataClerkTools:
             closest = search(query, k=1, min_score=None, **{key: v for key, v in options.items() if key != "k"})
         except ValueError as error:  # every ValueError from the search is a bad argument
             raise ToolInputError(str(error)) from None
-        where = ", ".join(filter(None, [f"tickers {', '.join(symbols)}" if symbols else "",
-                                         f"the last {since_days} days" if since_days else ""])) or "no filters"
+        when = f"from {self._window[0]} to {self._window[1]}" if self._window is not None else f"the last {since_days} days" if since_days else ""      # a dated window is named by its days (entry 151)
+        where = ", ".join(filter(None, [f"tickers {', '.join(symbols)}" if symbols else "", when])) or "no filters"
         if not closest:
             reason = "no_article_matches_filters"
             message = (f"No stored {words['item']} matches the filters ({where}). " +
@@ -326,6 +348,19 @@ class DataClerkTools:
         keywords = _words("keywords", keywords)
         from_date = _days("from_date", from_date, MAX_NEWS_DAYS)
         stats = self.toolbox.fetch_news(company=company, symbol=symbol, keywords=keywords, from_date=from_date)
+        return self._news_fetched(symbol, stats)
+
+    def fetch_news_window(self, symbol: str, start: date, end: date) -> dict:
+        """NOT a tool of the model (it is not on `DATA_CLERK_TOOLS`, so the model's tool list is what it was): fetch the news of one ticker for the days `start` to `end` (`DataToolbox.fetch_news(start=, end=)`, the providers' own days, which are UTC
+        days) and index what is new, as `fetch_news` does. It is the fetch of a DATED window (entry 151): `DataClerk.refresh_news` asks for the days of the window and the day after, because an evening article of an Eastern day is published the next UTC day;
+        the search, not the fetch, decides what is shown (`within`). Refused while a past day is bound, like every fetch. Same result as `fetch_news`."""
+        self._no_fetch("fetch_news")
+        symbol = _symbol(symbol)
+        stats = self.toolbox.fetch_news(symbol=symbol, start=start, end=end)
+        return self._news_fetched(symbol, stats)
+
+    def _news_fetched(self, symbol: str, stats: dict) -> dict:
+        """What a news fetch answers: the toolbox's counts, and the articles indexed so that `retrieve_news` can find them now."""
         indexed = ingest_symbol(symbol, store=self.store)  # the new articles become searchable now
         return {"symbol": symbol, **{key: stats.get(key) for key in ("fetched", "matched", "written", "duplicates")},
                 "indexed": {key: indexed[key] for key in ("articles", "chunks", "added", "updated", "unchanged", "deleted")}}

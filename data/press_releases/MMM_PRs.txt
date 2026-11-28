@@ -1,0 +1,252 @@
+<<<PRESS_RELEASE>>>
+id: e2885f18e38782f3
+symbol: MMM
+published_utc: 2025-12-02T09:00:00Z
+url: https://www.nasdaq.com/press-release/scotch-brand-partners-ego-nwodim-inspire-joyful-holiday-gifting-2025-12-02
+headline: Scotch Brand partners with Ego Nwodim to inspire joyful holiday gifting
+<<<TEXT>>>
+In a lighthearted new campaign, Scotch Brand partners with actress and comedian Ego Nwodim to transform awkward gifting moments into opportunities for connection and celebration— proving that "The best holidays start with Scotch Brand." Ego Nwodim brings humor and warmth as the face of the campaign, sharing relatable RGF moments and demonstrating how Scotch...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 37308a87239d8f68
+symbol: MMM
+published_utc: 2025-12-22T14:26:00Z
+url: https://www.nasdaq.com/press-release/3m-showcase-industry-advancing-solutions-new-ai-powered-innovation-tool-ces-2026-2025
+headline: 3M to showcase industry-advancing solutions, new AI-powered innovation tool at CES 2026
+<<<TEXT>>>
+--3 M innovates critical solutions for the world's leading companies and at CES 2026 it will showcase the latest technologies for the interconnected industries of consumer electronics, automotive, advanced manufacturing, and data center.  "3 M is reigniting our innovation engine and focusing research and development on high-impact markets as we increase...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e28176f542fb4319
+symbol: MMM
+published_utc: 2025-12-29T11:17:00Z
+url: https://www.nasdaq.com/press-release/3m-debut-ai-powered-assistant-ask-3m-and-expanded-3m-digital-materials-hub-ces-2026
+headline: 3M to debut AI-powered assistant 'Ask 3M' and expanded 3M Digital Materials Hub at CES 2026
+<<<TEXT>>>
+"At 3 M, we're combining decades of material science with AI so engineers can make better decisions, faster," said Holly Semerad, chief marketing officer for 3 M's Safety& Industrial Business Group. At launch, Ask 3 M will be piloted to engineers solving bonding design challenges utilizing tapes and adhesives— largely within 3 M's Safety& Industrial Business Group.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2473b3f88c3c6307
+symbol: MMM
+published_utc: 2026-01-06T10:15:00Z
+url: https://www.nasdaq.com/press-release/3m-announces-upcoming-investor-event-2026-01-06
+headline: 3M Announces Upcoming Investor Event
+<<<TEXT>>>
+--3 M today announced the following investor event:. Fourth-quarter 2025 earnings conference call on Tuesday, Jan. 20, 2026, at 8 a.m. CT.. Investor Contact: Diane Farrow 202-2449.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 47ac7316fee2fdd0
+symbol: MMM
+published_utc: 2026-01-20T06:30:00Z
+url: https://www.nasdaq.com/press-release/3m-reports-fourth-quarter-and-full-year-2025-results-initiates-full-year-2026
+headline: 3M Reports Fourth-Quarter and Full-Year 2025 Results; Initiates Full-Year 2026 Financial Guidance
+<<<TEXT>>>
+"2025 was an important year for 3 M as we build a strong foundation that is reshaping our operating model and driving sustainable value creation," said William Brown, 3 M Chairman and CEO. GAAP EPS of $1.07 and operating margin of 13.0%. Adjusted EPS of $1.83, up 9% year-on-year. Adjusted operating income margin of 21.1%, an increase of 140 basis points year-on-year....
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dc792c59cfc5f1e2
+symbol: MMM
+published_utc: 2026-01-21T09:05:00Z
+url: https://www.nasdaq.com/press-release/submissions-open-3ms-nationwide-middle-school-science-competition-2026-01-21
+headline: Submissions open for 3M's nationwide middle school science competition
+<<<TEXT>>>
+Finalists will receive one-to-one mentorship with a 3 M scientist, national recognition, and a chance to win top prize: $25,000 and title of "America's Top Young Scientist". ST. PAUL, Minn. and Charlotte, N.C., Jan. 21, 2026/ PRNewswire/-- 3 M and Discovery Education today announced that the 2026 3 M Young Scientist Challenge is now open to entries. Mentorship: In June 2026, 10...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 93a2b3b5b2d803ba
+symbol: MMM
+published_utc: 2026-02-03T16:10:00Z
+url: https://www.nasdaq.com/press-release/3m-board-declares-quarterly-dividend-2026-02-03
+headline: 3M Board Declares Quarterly Dividend
+<<<TEXT>>>
+--The 3 M Company Board of Directors today declared a dividend on the company's common stock of $0.78 per share for the first quarter of 2026. The dividend is payable March 12, 2026, to shareholders of record at the close of business on Feb. 13, 2026.. 3 M has paid dividends to its shareholders without interruption for more than 100 years.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5ea7d6c54470a28f
+symbol: MMM
+published_utc: 2026-02-05T08:30:00Z
+url: https://www.nasdaq.com/press-release/3m-announces-new-board-appointment-2026-02-05
+headline: 3M Announces New Board Appointment
+<<<TEXT>>>
+Mr. Mitchill also has been appointed as a member of the Audit Committee and the Nominating and Governance Committee of the Board. Mr. Mitchill is the Executive Vice President and Chief Financial Officer, RTX Corporation. Mr. Mitchill received a BS in Accountancy from Providence College.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 738d4f6a3a941a25
+symbol: MMM
+published_utc: 2026-02-16T10:00:00Z
+url: https://www.nasdaq.com/press-release/3m-appoints-meagan-linn-senior-vice-president-government-affairs-2026-02-16
+headline: 3M appoints Meagan Linn as Senior Vice President, Government Affairs
+<<<TEXT>>>
+--3 M today announced the appointment of Meagan Linn as Senior Vice President, Government Affairs. In this role, Linn will oversee the company's engagement with the executive branch, policymakers, regulatory agencies, and industry associations, globally to advance public policy dialogue. Linn brings 20 years of experience in public policy, with 12 years at...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1eb5f8077e95d307
+symbol: MMM
+published_utc: 2026-03-03T10:15:00Z
+url: https://www.nasdaq.com/press-release/3m-announces-upcoming-investor-event-2026-03-03
+headline: 3M Announces Upcoming Investor Event
+<<<TEXT>>>
+Morgan Industrials Conference on Tuesday, March 17, 2026. William Brown, Chairman and CEO will speak at 8:10 a.m. ET.. Investor Contact: Diane Farrow 202-2449.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 86d7218a57e7e238
+symbol: MMM
+published_utc: 2026-03-05T16:24:00Z
+url: https://www.nasdaq.com/press-release/scotch-brite-shaking-way-gen-z-and-millennial-consumers-think-about-everyday-cleaning
+headline: Scotch-Brite is shaking up the way Gen Z and Millennial consumers think about everyday cleaning essentials
+<<<TEXT>>>
+--Your cleaning routine is about to get a serious glow-up. Introducing Brite by Scotch-Brite™– the first collection of its kind shaking up the category with bold, beautiful, and thoughtfully-designed tools that prove everyday essentials don't have to be boring. Available starting March 1 at Target, Walmart, and Amazon. The new Brite collection was designed with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1d3ea86a60de8960
+symbol: MMM
+published_utc: 2026-03-16T10:13:00Z
+url: https://www.nasdaq.com/press-release/3m-announces-capacity-investment-expanded-beam-optical-ebo-production-2026-03-16
+headline: 3M announces capacity investment for Expanded Beam Optical (EBO) production
+<<<TEXT>>>
+--3 M today announced a major planned expansion of U.S. manufacturing capacity for its 3 M™ Expanded Beam Optical interconnect technology, a high-performance optical connectivity solution engineered to improve deployment speed, reliability, and operational efficiency within next-generation AI data centers. The expansion will include adding new advanced...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ce055a4e366a65f0
+symbol: MMM
+published_utc: 2026-03-19T06:45:00Z
+url: https://www.nasdaq.com/press-release/3m-create-leading-fire-and-safety-business-acquires-madison-fire-rescue-and-combines
+headline: 3M to create a leading fire and safety business; acquires Madison Fire & Rescue and combines with Scott Safety
+<<<TEXT>>>
+--3 M announced today that it has entered into a definitive agreement to acquire Madison Fire& Rescue, in partnership with Bain Capital. 3 M and Bain Capital will establish a new joint venture in which 3 M will contribute Scott Safety, receive $700 M of cash proceeds upon closing and own 50.1% of the new company with Bain Capital owning 49.9%. 3 M's deep expertise and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d435744e3e7fd681
+symbol: MMM
+published_utc: 2026-04-08T11:42:00Z
+url: https://www.nasdaq.com/press-release/3m-announces-upcoming-investor-event-2026-04-08
+headline: 3M Announces Upcoming Investor Event
+<<<TEXT>>>
+--3 M today announced the following investor event:. First-quarter 2026 earnings conference call on Tuesday, April 21, 2026, at 8 a.m. CT.. Investor Contact: Diane Farrow 202-2449.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 540bd3d32f399ac7
+symbol: MMM
+published_utc: 2026-04-21T06:30:00Z
+url: https://www.nasdaq.com/press-release/3m-reports-first-quarter-2026-results-2026-04-21
+headline: 3M Reports First-Quarter 2026 Results
+<<<TEXT>>>
+"We are executing on 3 M's value creation framework to build a stronger company," said William Brown, 3 M Chairman and CEO. GAAP EPS of $1.23 and operating margin of 23.2%. Adjusted EPS of $2.14, up 14% year-on-year. Adjusted operating income margin of 23.8%, an increase of 30 basis points year-on-year. Sales of $6.0 billion, up 1.3% year-on-year with organic sales down...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bac6c2510b9cbff1
+symbol: MMM
+published_utc: 2026-05-12T08:03:00Z
+url: https://www.nasdaq.com/press-release/new-coalition-launches-advance-and-scale-optical-connections-ai-data-centers-2026-05
+headline: New coalition launches to advance and scale optical connections for AI data centers
+<<<TEXT>>>
+--3 M today announced it has joined a group of leading technology companies to establish a new multi-source agreement focused on advancing open, interoperable specifications for expanded beam optical connectivity in AI infrastructure. The MSA brings together industry leaders including 3 M, Accelink, Aperion, AMD, Amphenol, Arista Networks, Cisco, Meta, Molex,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 11ee2a17cbf90673
+symbol: MMM
+published_utc: 2026-05-12T16:46:00Z
+url: https://www.nasdaq.com/press-release/3m-annual-meeting-results-2026-05-12
+headline: 3M Annual Meeting Results
+<<<TEXT>>>
+"Bill" Brown, Chairman of the Board and Chief Executive Officer, 3 M Company Audrey Choi, retired Chief Sustainability Officer and Management Committee Member, Morgan Stanley Anne H. Chow, retired Chief Executive Officer, AT&T Business James R. Fitterling, Chair and Chief Executive Officer, Dow Inc. Suzan Kereere, President, Global Markets, PayPal Neil G. Mitchill, Jr.,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 91db9a098fc566ca
+symbol: MMM
+published_utc: 2026-05-12T17:01:00Z
+url: https://www.nasdaq.com/press-release/3m-board-declares-quarterly-dividend-2026-05-12
+headline: 3M Board Declares Quarterly Dividend
+<<<TEXT>>>
+--The 3 M Company Board of Directors today declared a dividend on the company's common stock of $0.78 per share for the second quarter of 2026. The dividend is payable June 12, 2026, to shareholders of record at the close of business on May 22, 2026. 3 M has paid dividends to its shareholders without interruption for more than 100 years.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9625dd63f4eb85f0
+symbol: MMM
+published_utc: 2026-05-27T10:15:00Z
+url: https://www.nasdaq.com/press-release/3m-announces-upcoming-investor-event-2026-05-27
+headline: 3M Announces Upcoming Investor Event
+<<<TEXT>>>
+Wells Fargo Industrials& Materials Conference on Wednesday, June 10, 2026. William Brown, Chairman and CEO, will speak at 8:45 a.m. CT.. Investor Contact: Diane Farrow 202-2449.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b71793d470e25c78
+symbol: MMM
+published_utc: 2026-06-08T11:00:00Z
+url: https://www.nasdaq.com/press-release/3m-announces-new-board-appointment-2026-06-08
+headline: 3M Announces New Board Appointment
+<<<TEXT>>>
+Ms. Rumsey also has been appointed as a member of the Science, Technology and Sustainability Committee of the Board. Ms. Rumsey has served as Chief Executive Officer of Cummins, a global power solutions leader, since August 2022; and as Chair since August 2023. She holds a bachelor's degree in mechanical engineering from Purdue University and a master's degree in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 71ac19b27cb1d9f8
+symbol: MMM
+published_utc: 2026-06-22T08:10:00Z
+url: https://www.nasdaq.com/press-release/3m-launches-ask-3m-ai-powered-tool-faster-access-technical-expertise-2026-06-22
+headline: 3M launches Ask 3M, an AI-powered tool for faster access to technical expertise
+<<<TEXT>>>
+--3 M has launched Ask 3 M, a new AI-powered digital assistant that gives industrial customers direct, self-service access to 3 M technical expertise. Available now at ask.3m.com, the tool helps users evaluate 3 M materials, compare options, and address application challenges more efficiently. "Our customers rely on 3 M for deep application expertise and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5ecfd48ab9a969d3
+symbol: MMM
+published_utc: 2026-06-23T08:03:00Z
+url: https://www.nasdaq.com/press-release/3m-and-airbus-announce-agreement-advance-a220-passenger-comfort-and-aircraft
+headline: 3M and Airbus announce agreement to advance A220 passenger comfort and aircraft performance through advanced insulation technology
+<<<TEXT>>>
+--3 M and Airbus, a leading aircraft manufacturer, have signed a long-term supply agreement to help drive the continued advancement of passenger comfort and aircraft performance on the Airbus A220. The agreement underscores both companies' commitment to innovation in aircraft design and passenger experience.  "Our long-term agreement with Airbus reflects...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0721be1e54b2c8a0
+symbol: MMM
+published_utc: 2026-07-01T09:30:00Z
+url: https://www.nasdaq.com/press-release/3m-and-discovery-education-announce-37-state-merit-winners-and-four-honorable
+headline: 3M and Discovery Education announce 37 State Merit Winners and four Honorable Mentions in 2026 3M Young Scientist Challenge
+<<<TEXT>>>
+ST. PAUL, Minn. and CHARLOTTE, N.C., July 1, 2026/ PRNewswire/-- 3 M and Discovery Education today announced the 2026 3 M Young Scientist Challenge's 37 State Merit Winners and four Honorable Mention recipients.  "The 3 M Young Scientist Challenge highlights how students use science and creativity to solve real-world problems, said William Brown, 3 M Chairman and CEO."
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 81a9f91a889cfdbe
+symbol: MMM
+published_utc: 2026-07-06T09:30:00Z
+url: https://www.nasdaq.com/press-release/3m-young-scientist-challenge-names-10-finalists-2026-national-competition-2026-07-06
+headline: 3M Young Scientist Challenge Names 10 Finalists for 2026 National Competition
+<<<TEXT>>>
+ST. PAUL, Minn.& CHARLOTTE, N.C., July 6, 2026/ PRNewswire/-- 3 M and Discovery Education today announced the 10 finalists in the 2026 3 M Young Scientist Challenge, the nation's premier middle school science competition. Each of the 10 finalists receive an exclusive mentorship with a 3 M scientist and at the final event in October, they have the chance to win a $25,000...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2844daef86d75149
+symbol: MMM
+published_utc: 2026-07-07T10:15:00Z
+url: https://www.nasdaq.com/press-release/3m-announces-upcoming-investor-event-2026-07-07
+headline: 3M Announces Upcoming Investor Event
+<<<TEXT>>>
+--3 M today announced the following investor event:. Second-quarter 2026 earnings conference call on Tuesday, July 21, 2026, at 8 a.m. CT.. This event will be webcast live and a replay will be available on 3 M's Investor Relations website at http://investors.3M.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e0019b8337eb39d5
+symbol: MMM
+published_utc: 2026-07-14T07:46:00Z
+url: https://www.nasdaq.com/press-release/scotchtm-brand-launches-scotch-kidsr-tape-young-creators-2026-07-14
+headline: Scotch™ Brand launches Scotch Kids® Tape for young creators
+<<<TEXT>>>
+--Scotch™ Brand has launched Scotch ® Kids Tape to help children create, craft and share their creativity. Designed for kids ages four and up, Scotch ® Kids Tape supports crafting, decorating and building projects for young creators. The new line encourages children to confidently apply their imagination and bring their biggest ideas to life with simple...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b6a0c919afdb8734
+symbol: MMM
+published_utc: 2026-07-15T09:01:00Z
+url: https://www.nasdaq.com/press-release/3m-and-microsoft-announce-strategic-partnership-advance-ai-data-center-infrastructure
+headline: 3M and Microsoft announce strategic partnership to advance AI data center infrastructure and enterprise transformation
+<<<TEXT>>>
+Microsoft becomes first announced hyperscale cloud provider to deploy 3 M Expanded Beam Optical technology. ST. PAUL, Minn. and REDMOND, Wash., July 15, 2026/ PRNewswire/-- 3 M and Microsoft today announced a strategic partnership focused on AI data center infrastructure and enterprise transformation. Microsoft' s Azure Cloud and AI Infrastructure will become the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a4864e8a0ee7d37b
+symbol: MMM
+published_utc: 2026-07-21T06:30:00Z
+url: https://www.nasdaq.com/press-release/3m-reports-second-quarter-2026-results-increases-full-year-guidance-2026-07-21
+headline: 3M Reports Second-Quarter 2026 Results; Increases Full-Year Guidance
+<<<TEXT>>>
+"We delivered a strong second quarter, exceeding expectations with mid-single-digit sales growth, robust operating margins of about 25%, and double-digit EPS growth, reflecting the progress we're making on our strategic priorities and building a higher-performing company," said William Brown, 3 M Chairman and CEO. GAAP EPS of $1.78 and operating margin of...
+<<<END>>>

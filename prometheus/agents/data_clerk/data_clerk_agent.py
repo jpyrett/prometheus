@@ -41,6 +41,11 @@ the news in the window and the model is offered the news search and nothing else
 of each stock (the news only, never bars, press releases or filings): a news run always does (Jacob: "Always fetch the latest news"), by the same `fetch_news` tool and under the same guards as `refresh_data` (the Proving Ground's bound day and `allow_fetch`); a fetch that
 fails or is refused is a line in its report, never an exception, and the stored news is searched. `fetching(True)` is this Data Clerk with the right to fetch, for the news run only.
 
+A DATED WINDOW OF THE NEWS (design choices entry 151; design/news_dated_window_spec.md; Jacob, 2026-11-28: *"We cannot fetch a single day news in the past"*). A news order may hold `news_from` and `news_to` (US Eastern days, the last included) instead of
+`since_days`. `request_news` then asks on `tools.within(...)`: a copy of the tools whose every search, the model's and the sweep's, is held to those days by code below the model (`DataClerkTools._retrieve`: `since` and `until` are the first and last instant of the
+window, and a `since_days` the model passes can only narrow it); `_news_question` says the window in words and tells the model not to set `since_days`; `refresh_news(symbols, days, start, end)` fetches that window (the days and the day after, since an evening article
+of an Eastern day is published the next UTC day) with `DataClerkTools.fetch_news_window`, under the same guards, and the search, not the fetch, decides what is shown.
+
 The result carries what the next agent needs: the answer, the cited chunks (`references`), every source the model was
 shown, what went wrong, and what was used.
 """
@@ -52,7 +57,7 @@ import sys
 import threading
 import time
 from dataclasses import asdict, dataclass, field
-from datetime import date, datetime, timezone
+from datetime import date, datetime, timedelta, timezone
 from typing import Annotated, TypedDict
 
 from langchain_core.messages import AIMessage, HumanMessage, SystemMessage, ToolMessage
@@ -359,14 +364,24 @@ class DataClerk:
         """The Data Clerk's agent call for a request that ONLY asks for the news (design choices entry 149): check the work order, answer its news question with the news search alone, put the result on the order, check that, and
         return the SAME order. As `request_data` in everything else: an order that already has its data comes back unchanged, a request the Data Clerk should not take comes back `data_failed` with the reasons, the citation check is the same.
         The question asks for a SUMMARY of the news of the order's subject in its window, citing each item (`_news_question`); the model is offered `retrieve_news` and nothing else; the sweep searches the news only. The news was fetched before
-        (`refresh_news`) when the run may fetch: this call never fetches."""
+        (`refresh_news`) when the run may fetch: this call never fetches. An order with a DATED window (`news_from`, `news_to`: entry 151) is asked on `tools.within(...)`, a copy of this Data Clerk whose tools hold EVERY search, the model's and the sweep's, to those days: the
+        model cannot be trusted to pass dates, so code applies the window below it."""
         if order.status in HAS_DATA:
             return order
         reasons = verify_request(order)
         if reasons:
             order.status, order.errors = "data_failed", [*order.errors, *reasons]
             return order
-        return attach_result(order, self.ask(self._news_question(order), today, sweep=self._news_sweep_spec(order) if self.sweep else None, only=NEWS_ONLY))
+        clerk = self._within(order)
+        return attach_result(order, clerk.ask(self._news_question(order), today, sweep=self._news_sweep_spec(order) if self.sweep else None, only=NEWS_ONLY))
+
+    def _within(self, order: WorkOrder) -> "DataClerk":
+        """This Data Clerk, or for an order with a dated window (entry 151) a copy of it whose tools are held to that window (`DataClerkTools.within`); the Data Clerk it was called on is not changed. The order has passed `verify_request`: its dates are real."""
+        if order.news_from is None:
+            return self
+        other = copy.copy(self)
+        other.tools = self.tools.within(date.fromisoformat(order.news_from), date.fromisoformat(order.news_to))
+        return other
 
     def fetching(self, allowed: bool = True) -> "DataClerk":
         """This Data Clerk with the right to fetch set to `allowed`: the same toolbox, model and guard, a copy of the object. A news run always fetches the latest news (entry 149, N7), so the desk asks for `fetching(True)` for it whatever the run's own box says;
@@ -861,9 +876,10 @@ class DataClerk:
         return report
 
     @traced("data_clerk.refresh_news")
-    def refresh_news(self, symbols_: list[str], days: int = 7) -> list[dict]:
+    def refresh_news(self, symbols_: list[str], days: int = 7, start: date | None = None, end: date | None = None) -> list[dict]:
         """Fetch the latest NEWS of these symbols for the last `days` days (design choices entry 149, N7), with the paid news APIs, and say what happened to each: [{step: "news", symbol, outcome, detail}]. NOTHING ELSE is fetched: no bars, no
-        press releases, no filings. The guards are `refresh_data`'s: while the Proving Ground has a past day bound nothing is fetched, and a Data Clerk built without `allow_fetch` fetches nothing; either is ONE entry with `outcome: "refused"` and the
+        press releases, no filings. With `start` and `end` (the first and the last day of a DATED window, entry 151, D7: both or neither) it fetches that window instead, `days` is not used: the days from `start` to the day AFTER `end`
+        (`DataClerkTools.fetch_news_window`: the providers' days are UTC days and an evening article of an Eastern day is the next UTC day; `fetch_window` clips the end to now). The search, not the fetch, decides what is shown, so the extra hours are never shown. The guards are `refresh_data`'s: while the Proving Ground has a past day bound nothing is fetched, and a Data Clerk built without `allow_fetch` fetches nothing; either is ONE entry with `outcome: "refused"` and the
         reason. A fetch that fails is an entry with `outcome: "error"` and its kind, and the next symbol is still fetched. It never raises for a failed or refused fetch (the news run goes on with the stored news and says so); a symbol that is not a
         ticker, or more than `MAX_REFRESH_SYMBOLS` of them, is a ValueError."""
         if bound_day() is not None:
@@ -873,10 +889,13 @@ class DataClerk:
         wanted = list(dict.fromkeys(check_symbol(s.strip().lstrip("$")) for s in symbols_))
         if not wanted or len(wanted) > MAX_REFRESH_SYMBOLS:
             raise ValueError(f"refresh 1 to {MAX_REFRESH_SYMBOLS} symbols at a time")
+        if (start is None) != (end is None):
+            raise ValueError("a dated fetch needs both start and end (the first and the last day of the window)")
         report = []
         for symbol in wanted:
             try:
-                detail = {k: v for k, v in self.tools.fetch_news(symbol, from_date=days).items() if k in ("fetched", "written", "duplicates")}
+                fetched = self.tools.fetch_news(symbol, from_date=days) if start is None else self.tools.fetch_news_window(symbol, start, end + timedelta(days=1))      # a window: its days and the day after (UTC days, D7)
+                detail = {k: v for k, v in fetched.items() if k in ("fetched", "written", "duplicates")}
                 report.append({"step": "news", "symbol": symbol, "outcome": "ok", "detail": detail})
             except Exception as error:  # the kind and a short message, never request details or a key
                 report.append({"step": "news", "symbol": symbol, "outcome": "error", "detail": f"{type(error).__name__}: {' '.join(str(error).split())[:160]}"})
@@ -928,7 +947,10 @@ class DataClerk:
         a list of symbols (with the company's name when the order has one) or a term; at most `order.top_k` sources. It asks for no fetch: the code fetched the news before (`refresh_news`)."""
         symbols = isinstance(order.subject, list)
         hints = [f"subject: {', '.join(order.subject) if symbols else order.subject}" + (f" ({order.company})" if order.company else "")]
-        if order.since_days:
+        if order.news_from is not None:      # a DATED window (entry 151, D6): its days, in US Eastern time, and a model that is told the search is already held to them
+            hints.append(f"use news from {order.news_from} (that day only, US Eastern time)" if order.news_from == order.news_to else f"use news from {order.news_from} to {order.news_to} (US Eastern time, both days included)")
+            hints.append("the search is already limited to that window: do not set since_days")
+        elif order.since_days:
             hints.append(f"use news from the last {order.since_days} day{'s' if order.since_days != 1 else ''}")
         hints.append(f"use at most {order.top_k} sources")
         hints.append("this is a request for the NEWS only: call retrieve_news before you answer" + (" with the symbols in tickers" if symbols else ", searching for the term across every company")

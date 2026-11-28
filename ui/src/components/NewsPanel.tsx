@@ -87,11 +87,17 @@ function Marks({ text, items, onJump }: { text: string; items: NewsItem[]; onJum
   });
 }
 
-/** What the header says: "TSLA · Tesla Inc · last 7 days · stored news" (or "fetched now"). */
+/** The window of the news in words (entry 151, D8): "on 2026-11-03" for one day, "from 2026-11-03 to 2026-11-05" for a span, or "last 7 days" for a rolling window; null when there is none. */
+export function newsWindow(news: NewsView): string | null {
+  const dated = news.window;
+  if (dated) return dated.from === dated.to ? `on ${dated.from}` : `from ${dated.from} to ${dated.to}`;
+  return news.days ? `last ${news.days} day${news.days === 1 ? "" : "s"}` : null;
+}
+
+/** What the header says: "TSLA · Tesla Inc · last 7 days · stored news" (or "fetched now"); for a past day "TSLA · Tesla Inc · on 2026-11-03 · stored news". */
 export function newsHeader(news: NewsView): string {
   const what = news.topic ? [news.topic] : news.stocks.flatMap((s) => (s.company ? [s.symbol, s.company] : [s.symbol]));
-  const window = news.days ? `last ${news.days} day${news.days === 1 ? "" : "s"}` : null;
-  return [...what, window, news.topic ? "stored news" : news.fetched ? "fetched now" : "stored news"].filter(Boolean).join(" · ");
+  return [...what, newsWindow(news), news.topic ? "stored news" : news.fetched ? "fetched now" : "stored news"].filter(Boolean).join(" · ");
 }
 
 /** The News view of the right column (entry 149, N9): the summary the Data Clerk wrote, the articles it came from, and what went wrong. It shows the news of the last request that asked only for the news. */
@@ -138,7 +144,7 @@ export function NewsPanel({ news }: { news: NewsView | null }) {
             The Data Clerk gave no summary.
           </div>
         )}
-        {news.no_supporting_text && <div className="hint">The stored news has nothing about this in the window.</div>}
+        {news.no_supporting_text && <div className="hint">The stored news has nothing about this {news.window ? newsWindow(news) : "in the window"}.</div>}
         {news.items.length > 0 && (
           <>
             <h4 className="news-sec">Articles ({news.items.length}) · the ones the summary cites first</h4>

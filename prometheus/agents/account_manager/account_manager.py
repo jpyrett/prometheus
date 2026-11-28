@@ -77,6 +77,7 @@ from prometheus.common import shares as sh
 from prometheus.common.money import canonical, digits, money as money_door, price as price_door
 from prometheus.common.market_calendar import eastern_date
 from prometheus.common.portfolio import Portfolio, after_purchase, apply_fill, load_portfolio, trade_amount
+from prometheus.common import trading_clock
 from prometheus.common.trading_clock import trading_now
 from prometheus.common.user_account import UserDirectory
 from prometheus.common.user_profile import RiskView, UserProfile, load_profile
@@ -1383,14 +1384,18 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
     # ---- the user's own words
 
     @traced("account_manager.understand_request")
-    def understand_request(self, text: str) -> TradeIntent:
+    def understand_request(self, text: str, today: date | None = None) -> TradeIntent:
         """Read what the user typed ("I want to buy ___ stocks. Buy the 3 most recommended ..., split the money evenly") into a `TradeIntent` (design choices entry 78). The model only maps the words to the form
         (`prompts/account_manager_request.py`); CODE accepts the form only when the user's own text supports every field (`intent.parse_intent`: every ticker, name, number and cue word must be in what was typed),
         so a company, a count or a budget the user never said is refused and the model is asked once more. Nothing here names a sector or a company. Raises ValueError, with a message for the user, when the request is
-        empty or too long (no model call), when the model cannot be reached (the kind of the failure, never request details) or when two tries give no form that the words support. `intent_run` says what it cost."""
+        empty or too long (no model call), when the model cannot be reached (the kind of the failure, never request details) or when two tries give no form that the words support. `intent_run` says what it cost.
+
+        TODAY (entry 151): the user message begins with today's date ("Today is Saturday 2026-11-28."), so the model can turn "last Tuesday" into a day, and `parse_intent` judges a news request's dates by the same day. `today` is the Eastern calendar date
+        (`trading_clock.calendar_today`: the bound day while the Proving Ground has one) unless a caller gives another (a test, a capture); it is the person's "today", not the desk's simulated trading day."""
         typed = check_typed(text)
+        today = today or trading_clock.calendar_today()
         usage = self.intent_run = {"model": getattr(self.model, "model_name", None), "calls": 0, "retries": 0, "tokens_in": 0, "tokens_out": 0}
-        messages = [SystemMessage(content=request_prompt.SYSTEM), HumanMessage(content=request_prompt.user_message(typed))]
+        messages = [SystemMessage(content=request_prompt.SYSTEM), HumanMessage(content=request_prompt.user_message(typed, today))]
         problem = "no reply"
         for _ in range(2):
             try:
@@ -1403,7 +1408,7 @@ a loss. `never_liquidate`: at least one share of every holding is kept, so no po
             usage["tokens_out"] += meta.get("output_tokens", 0)
             content = reply.content if isinstance(reply.content, str) else ""
             try:
-                return parse_intent(content, typed)
+                return parse_intent(content, typed, today)
             except NeedsClarification:      # the user has to say more (entry 138): no second try of the model can fix it
                 raise
             except ValueError as error:

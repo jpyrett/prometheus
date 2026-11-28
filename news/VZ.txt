@@ -1,0 +1,3056 @@
+<<<ARTICLE>>>
+id: finnhub:143993261
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T23:16:12Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ea8b8015245c5b2d925ba86c9883d65edb0b4f53edb29b8197fa8b910cffa37b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: How AI Contracts Will Impact Verizon (VZ) Investors
+<<<SUMMARY>>>
+Verizon Communications has secured close to US$4b in long-term AI infrastructure contracts and deepened its IoT reach through deals such as Bosch Motorsport’s global race-day deployment on Verizon’s Global IoT Orchestration and ThingSpace platforms. The Bosch Motorsport rollout highlights how Verizon can apply its IoT stack to mission-critical, high-density environments. This showcases potential demand for managed connectivity and telemetry services beyond its core consumer wireless base. We...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143993117
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T22:00:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=86f208791ec5260330118592ce7b5f2fe19295c50369697cc057dacfd1c817de
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Shots Fired: Meta Will Reportedly Sell a $300 Muse Charm With Free Verizon 5G as Apple Builds Its Agent
+<<<SUMMARY>>>
+Key TakeawaysMeta reportedly plans to sell a $300 Muse Charm with up to 12 months of free Verizon 5G, and is targeting 10 million wearable sales in the second half of 2026. A connected device would let Meta reach users without Apple’s phones in between, just as Apple reportedly builds its own AI agent.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143991052
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T18:50:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ff4aa58451f3fb71fc7662e9b90ad371bc528bf667ee257c8e7f96b256456fea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: AST SpaceMobile vs. Redwire: Which Space Infrastructure Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Redwire's revenue grew nearly 46% while AST SpaceMobile's sales soared over 670%, but one balance sheet gap separates these two space stocks sharply.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988493
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T15:45:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6df530b6cd3ebe49ebaa17fbd0e484c64e77793c082d5a3634bcec467429a4ae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 5 High-Yield Dividend Stocks Retirees Can Buy for Under $50 a Share
+<<<SUMMARY>>>
+A cheap share price tells retirees almost nothing about whether a dividend is safe. Five stocks across five sectors passed a tougher test, and one of them carries a hidden cost that quietly competes with its own payout.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143989855
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T15:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dc1fe337f9ef7655b72ddb73fe3b17767aa51ac238ee97e521879caa1b88ef49
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Is Verizon Stock Worth Buying as Cash Flow Improves but Risks Persist?
+<<<SUMMARY>>>
+VZ's rising free cash flow, improving subscriber trends and modest valuation bolster its appeal, but high debt and pricing pressure keep risks in focus.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143989679
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T15:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=863e2708209e7d94866ec1d7298b91eefb0f16568fa80129ac1a1003c17b157c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Can Verizon's $4 Billion AI Contracts Add Meaningful Growth in 2027?
+<<<SUMMARY>>>
+VZ's $4 billion AI infrastructure contracts promise a new revenue stream in 2027, but modest sales growth and core business pressures temper the upside.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143989857
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:57:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8d73237d92ef2b73f4be1a587f1dc65ff44fd02c078d4776422be7bd41996395
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: A $4.8 Billion Fund Dumps These 2 Stocks
+<<<SUMMARY>>>
+Key TakeawaysCarronade Capital Management, which manages $4. 82 billion, sold all of its Comcast and Verizon shares in the third quarter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143988276
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:03:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=552fc0cf347e0418eb729bdce289e865fd75c4bad64247a7224adb1ccaab902e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Cisco Fell 89%. Is Nvidia Stock Next?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:139929653
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T14:00:50Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f1087eddf1b924114478e2cc5976a66658e4ab270bb34dd5f48332efab5c3ae7
+image_url: 
+category: company
+tickers: VZ
+keywords: 
+headline: Is Social Media A Bubble? (GS, AMZN, SPMD, YHOO, STVI, PLPE)
+<<<SUMMARY>>>
+
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143986199
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=20d616058ebf544216d7196e0645ab30916574c3834a94aaf163e1631dcd5838
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: LALIGA, Verizon Extend Long-Term Partnership in U.S. and Canada on Heels of Historic FIFA World Cup 2026™
+<<<SUMMARY>>>
+The FIFA World Cup 2026™ not only reinforced the existing interest in soccer throughout North America, it also highlighted that the game is still growing. Driven by young, diverse and multicultural audiences, this summer's FIFA World Cup 2026™ was a historic event in terms of attendance, viewership and engagement.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015241
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T13:03:22Z
+publisher: CNBC
+author: 
+url: https://finnhub.io/api/news?id=c24e5ff0ba7bdcc89043d7b923f78417e5c40478123cf3c0cad1398b7d4679ec
+image_url: https://image.cnbcfm.com/api/v1/image/108556680-17951976951795197693-49757148974-1080pnbcnews.jpg?v=1795197694&w=1920&h=1080
+category: company
+tickers: VZ
+keywords: 
+headline: Final Trades: Amazon, Verizon and Target
+<<<SUMMARY>>>
+The Investment Committee give you their top stocks to watch for the second half.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143986200
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:17:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=31defbeab7616185f94cb4ef321db3663655af55af18955653b38b43bd6fce84
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Medical Properties Trust Yields 22%, but Its Stock Has Crashed 65%
+<<<SUMMARY>>>
+A soaring yield can signal danger rather than a bargain. We tested five dividend payers against the same coverage and debt checks, and one household name in this group is already showing the warning signs that preceded a slashed payout.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143986063
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T12:09:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1bd924d0a81559143684e0f03f5e658b5a704309931d4371350ec647944e3e4d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Meta's AI Hardware Faces a Holiday Test, but the Real One Comes Later
+<<<SUMMARY>>>
+The real test starts after the holiday rush.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143986202
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T11:53:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef7d93b9d014136814ec4a003ed13be7c7f2ac94632a1c28b547dae47c90729d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: What Could Surprise AT&T Stock Investors On The Upside?
+<<<SUMMARY>>>
+Today's big story: Will 2027 Be A 2022 Repeat For Stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143976654
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T09:08:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f6828d3e04314a731042a548d84e3d743c89caf19f4f396ed6e212d2afd7b1c4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Is Verizon Communications (VZ) Undervalued As Bosch Motorsport Picks Its IoT Platform?
+<<<SUMMARY>>>
+Verizon Communications (VZ) is in focus after Bosch Motorsport selected its Global IoT Orchestration and ThingSpace platform to run race-day connectivity worldwide, tying the telecom group more closely to industrial machine data. Recent moves in Verizon Communications reflect this mix of IoT deals, satellite partnerships and debt management, with the share price at US$45.74 and a 1-year total shareholder return of 19.68% but a 90-day share price return that has fallen 7.50%, which suggests...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143948050
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T22:03:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9cae0dead9e75077897d789306b13e4986b7398f3b335b6ea6ffe979d5eb7212
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: META Plans To Reportedly Charge $300 For Muse Charm Gadget In Hope To Revive Hardware Business
+<<<SUMMARY>>>
+Meta targeted nearly 7 million monthly active users for all of its wearable offerings by the end of the year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947087
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T20:27:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e0d522980558f868604973f7f92b30be7c102a28307b06faf4b6a90b76258417
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Why SpaceX’s latest move has T-Mobile investors on edge
+<<<SUMMARY>>>
+Investing.com and Yahoo Finance LLC may earn commission or revenue on some items through the links below.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143945776
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T18:00:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7142db15103cecd87c81a4ff56ae96bb9bef1a8dc3233e0102eea20c3c2bdd54
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: How Retirees Can Turn $1 Million Into Passive Income With These 5 Dividend Stocks
+<<<SUMMARY>>>
+A million dollars sounds like plenty until you need it to pay you every month. Five blue chips across five sectors split the load, but one of them carries far more weight than the rest, and that lopsidedness raises a fair question.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143947086
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:46:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=505796c1ca88163529e6e870818b05c3dd1f64bbab96c0170d39e5aed38fbb2c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon’s CEO knows Elon Musk is coming for his business. He says it’ll cost SpaceX over $300 billion to compete
+<<<SUMMARY>>>
+“There's no secret sauce, there's no magic wand, there's no structural cost advantage that will come out,” Dan Schulman told Fortune.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944542
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T17:24:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0d3fb1bdb45e29c69343719a42824ad2c0fe85a3511a857e65fd6db2598b82dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Elon Musk Moves Step Closer to Creating Phone Service After Verizon and T-Mobile Shut Out
+<<<SUMMARY>>>
+Elon Musk is taking another major step toward building his own wireless network after federal regulators accepted applications to hand SpaceX control of valuable airwaves across the U.S. The Federal Communications Commission (FCC) announced, via a public notice on November 10, that Starlink Spectrum Holdings, a subsidiary of SpaceX, and investment company Grain Management have […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143944543
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T16:02:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=493dc03019e2839ccaa68387496f2480a0afeb36d20120901345e483094b81ed
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Invest $400,000 in These 4 Dividend Stocks Yielding Over 6% for Retirement Income
+<<<SUMMARY>>>
+Retirees want a paycheck that survives a market selloff, but a fat yield often hides a dividend cut waiting to happen. Three household names pass the coverage test, and one has a history that should give you pause.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943004
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:05:35Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb832736e9dc63b47493cb513a8f2961efdb80d3a1033f2418bde2b1188f09d7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: How Many Shares of AT&T, Verizon or Comcast Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, $1,000 a month in dividends takes about $195,600 of Verizon, about $229,500 of Comcast or about $237,300 of AT&T. Verizon’s 6.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943006
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:00:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5436dce3f32619c5a5665e94f4882bd69ea122f1fb8b3e6990bdce179511d595
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Forget JEPI: 4 High-Yield Dividend Stocks Retirees Should Own Instead
+<<<SUMMARY>>>
+JEPI's monthly check looks generous until you notice what it quietly cost retirees in a single year. Four dividend payers trade a smaller paycheck today for raises, tax perks, and rallies you actually keep, but each carries a risk worth knowing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143943005
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=59adf52dd17b3cdd925277d29345542d2bee66ed3c9796e9af8263c7d4f4762e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon Survey: Small Businesses Turn to Social Media & AI for Holidays
+<<<SUMMARY>>>
+What you need to know: Nearly half (44%) expect higher holiday sales than last yearNearly half (45%) plan to use AI tools to simplify holiday operationsOne in five (18%) have cried because of business demands during the holidaysLatino owners are more likely to plan seasonal hiring (31% vs. 19% for non-Latino owners) this holiday season compared with last year BASKING RIDGE, N.J., Nov. 19, 2026 (GLOBE NEWSWIRE) -- As small businesses gear up for the demanding holiday season, a new survey from Ver
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938872
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T13:16:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f9ae08af263db10099f7dc0d2b6b61b350a0936f594cf0302366f3da5d6014dc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: What If Google Slows Its $160 Billion AI Spend?
+<<<SUMMARY>>>
+Today's big story: Could Anthropic Stock Fall 25.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143938216
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:40:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=906d43e7e69c4a025a2fd8ab04414498023e7399c434f6847893efa26bc0cc5f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: How Retirees Can Turn $500,000 Into Passive Income With These 5 Dividend Stocks
+<<<SUMMARY>>>
+Retirees need their portfolios to send home cash without selling into a downturn. One mix of five dividend payers across utilities, energy, real estate, consumer staples and telecom aims to do it, and each carries a risk worth knowing before you buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143935095
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T02:37:29Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=bfa3b4b7b56e6f8a5ea36c444156caac084f83e3eabc9b63e7948e7ee91aa152
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2248962322/image_2248962322.jpg?io=getty-c-og
+category: company
+tickers: VZ
+keywords: 
+headline: Sector Defense And 15 Valuation Mid-November Winners Up To 7.4%
+<<<SUMMARY>>>
+Rose's Income Garden holds 68 investments, yields 5.95% forward, and derives 58.15% of income from defensive sectors.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143920138
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T18:20:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ae6fef000a1927b2eb2ba80f6dca17ba773291da7f0a83777982cc8372392eb6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: A $600,000 Portfolio in Healthpeak, Verizon and NNN REIT Pays $37,054 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA hypothetical $600,000 portfolio split evenly across Healthpeak Properties, Verizon and NNN REIT pays $37,054 a year in dividends at today’s prices, a 6. 2% yield.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918822
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:15:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d693196784663b49ed7d8c698c5c09df9d6496af81cf7f5bd765a4c8c64f0bf4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 4 Dividend Growth Stocks Yielding Over 3% for Decades of Tax-Free Roth Income
+<<<SUMMARY>>>
+One stock in this group gets taxed far more harshly than the other three, and the IRS collects every single year it sits in the wrong account. Find out which holding belongs in a Roth first, and why the gap compounds.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918642
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:10:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f88327a079f4c2287b1a3738f40331c36066c1900a257f8b210e899d966ca4ab
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: AT&T vs. Verizon: Total Revenue Volume and Recent Growth for Two Phone Network Giants
+<<<SUMMARY>>>
+Verizon has held the top revenue line in every tracked quarter, but AT&T's year-over-year growth has been picking up pace toward the latest periods.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918821
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T16:09:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=24dd69ad573403ad0632d811960177928c7edee4c4c2490701baef4f1f37dfae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon (VZ) Lands Global Race Day IoT Connectivity Deal With Major Motorsport Customer
+<<<SUMMARY>>>
+Verizon Communications (NYSE:VZ) has been selected by Bosch Motorsport to provide global IoT connectivity for race-day operations. Bosch Motorsport will use Verizon's Global IoT Orchestration and ThingSpace platform to manage data links across international race events. The agreement focuses on real-time telemetry and mission-critical data flows at tracks worldwide, supporting Bosch Motorsport customers and teams. The Bosch Motorsport move to Verizon's Global IoT Orchestration platform fits...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917461
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=da1a27b374d3c1e88c5a7f9876f7ce312032d376e201c841ac6e118dd29b6cc3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon and AT&T customers will soon get a major network upgrade
+<<<SUMMARY>>>
+As a growing competitor makes an ambitious push into the wireless market, Verizon and AT&T are preparing to make an important move of their own.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917358
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T15:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=22930beda90b9439e45e75af200eea4559f3b3e9c0b0d2068aa7c026c0b7575f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Global Asset Tracking Artificial Intelligence (AI) Market Report 2026 | Capture 18.9% CAGR as Verizon, Cisco, Oracle, and Zebra Scale IoT, Edge AI, and Digital Twins to 2030
+<<<SUMMARY>>>
+Boost ROI with IoT tracking, predictive maintenance, utilization analytics, edge AI and digital twins to cut downtime, automate decisions and improve asset visibility.Dublin, Nov. 18, 2026 (GLOBE NEWSWIRE) -- "Asset Tracking Artificial Intelligence (AI) Market Global Report 2026" has been added to ResearchAndMarkets.com's offering. The global asset tracking artificial intelligence (AI) market is experiencing rapid growth as businesses seek real-time asset visibility, greater inventory accuracy,
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917340
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:32:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c07cc067595cf737f580c2bb63fe9f141e5381819690c62880c72ee140060925
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Invest $100,000 in These 4 Dividend Stocks and Collect Passive Income for Life
+<<<SUMMARY>>>
+Selling shares in a down market to cover groceries is the retirement mistake planners fear most. Four blue-chip payers, including one that sends checks monthly, offer a way to keep the shares and still get paid.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917465
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:12:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5db1d664a5f8b5646118b1c5b8c3e7d1ccfec812cc032331a2c14a5ce53ef7cd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Is T-Mobile Stock A Real Bargain After Its Slide?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143917463
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T14:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=88f31b7f6792243eb94126b7183305099b51bb9860fd755a616bb56abcf52735
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon Business inks technology deal with Bosch Motorsport for global race-day intelligence and connectivity
+<<<SUMMARY>>>
+What you need to know: After a successful first deployment at the Detroit Grand Prix, Bosch Motorsport will use Verizon’s Global IoT Orchestration service and ThingSpace IoT platform to connect and manage its RaceConnect smart sensors for race marshalling at events worldwide.Race marshalling is an increasingly digitized communication protocol used to collect and assess data for rules compliance, performance standards, and safety hazards on tracks and in cars. With Global IoT Orchestration, Bosch
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143914685
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T13:30:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3e84ec2feb9c24c831f6b9393fb2d6c316170e5a9d0c79b0edc776bc02470982
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 4 Dividend Stocks Yielding Over 6% That Fit a Roth IRA
+<<<SUMMARY>>>
+Four stocks paying over 6% can quietly hand the IRS thousands every year, and one of them gets taxed far harder than the rest. Find out which holding belongs in a Roth first and why the gap keeps growing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143912668
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T12:45:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78d65c67bfb8d967ef3da5357a644542618e298a13dc99f2ed2868b6d54b63cf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: How Retirees Can Turn $300,000 Into Passive Income With These 4 High-Yield Stocks
+<<<SUMMARY>>>
+Selling shares in a downturn locks in losses a retiree can never earn back. Four dividend payers from four different sectors offer another route, and each one carries a payout test and a risk worth checking before you buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143910926
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:25:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9c8cf8b269b0230984cbc793d6407c30116825789b1f65cf7b8dd1c2e81015be
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: AST SpaceMobile Is 78% Below Its High and Pushed Its Launch Target to 2027. Here’s the Exact Price Where I’d Finally Buy.
+<<<SUMMARY>>>
+The space stock could sink to the low teens in the next market crash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143911105
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T11:02:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=87461c4ab8a1ea49d1aed72ddad4bb6cba68277ca3483cfdb518d31072599b4a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: ETFs Are Net Sellers of Verizon (VZ) on Monday
+<<<SUMMARY>>>
+Verizon (VZ) drew $178.0 million in net ETF selling on Monday, with 9 funds selling and 38 buying.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143913862
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T05:53:47Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=c151fdc9221533bab0e5dd381d415f57be75c05ba706a6af1e3a7da1ae693fa8
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/18/Rome--Italy---December-16--2023-Elon-Mus.jpg?width=2048&height=1536
+category: company
+tickers: VZ
+keywords: 
+headline: Elon Musk Doubles Down On FAA Criticism Following Sean Duffy’s Starlink Snub: ‘Wrote This 18 Months Ago’
+<<<SUMMARY>>>
+Elon Musk renewed criticism of the FAA ground stop, saying it rejected his 2025 Starlink offer despite declining L3Harris tech.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143885605
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T21:36:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9825a961deb564fa38da847a8c2e14b7688431b3bb7b7b304a70be6212cfcaaf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Big Three Customers Pay Triple for Cell Service Compared to Low-Cost Alternatives, Mobile Industry Report Finds
+<<<SUMMARY>>>
+At $25 a month, Tello’s top unlimited plan undercuts major carriers by 204% to 850% Household Cell Phone Plan Overspending by State An estimated 83.2 million U.S. households collectively overspend about $190 billion a year on mobile plans Cell Phone Plan Overspending Report: American Families Waste $2,200 a Year WhistleOut | Tello Salt Lake City, Nov. 17, 2026 (GLOBE NEWSWIRE) -- A report by WhistleOut, in partnership with Tello, found that customers of the Big Three carriers (AT&T, Verizon, and
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884375
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T19:20:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fa2147f5d7eb68a0e4ea144e7ca6e9e10e31e0123c5bef0a0a1244c55899779a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Wall Street Forgot These 3 Dividend Stocks — Now They Pay Over 5%
+<<<SUMMARY>>>
+A drugmaker, a telecom giant, and a consumer lender all pay more than most investors expect, yet the market keeps looking away. One of them carries a risk that could turn its payout into a trap.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143883025
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T17:45:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5d5672ae65ecafbd5d1594fccde72024371ae3d6818af5b5d970e8e7c0e964ce
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 5 “Forever Income” Dividend Stocks Yielding 5% and More for Boomers
+<<<SUMMARY>>>
+Two of these retirement income payers slashed their dividends in 2020, and one more cut years earlier. Before you trust any of them with your paycheck, see which safety test each stock passes and which risk could still bite.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882919
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T16:30:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba0f9f80f39b7d6c01e9032725995faeb41da7204986e0b1924958e1d10e7680
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Invest $200,000 in These 5 Dividend Stocks to Fund Your Retirement Income
+<<<SUMMARY>>>
+Selling shares in a down market can turn a retirement plan into a slow leak. Five dividend payers across five sectors aim to cover the bills instead, but one of them carries $166.2B of debt, and each one hides a risk worth knowing first.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143882753
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0c790be1106aa467bcb70284b4021b7e5428e1aa5c94db407b784a7333268636
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Can AT&T's New Apple Device Deals Strengthen Its Subscriber Growth?
+<<<SUMMARY>>>
+T is rolling out attractive holiday deals on Apple's latest iPhones, iPads and Apple Watches, aiming to attract new subscribers and boost device sales.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143884611
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T15:04:30Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=3e3413c5b54b3bcefa8c8b4b203ea1d9359aae1b19ddd661ee79978585208118
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1299294913/image_1299294913.jpg?io=getty-c-og
+category: company
+tickers: VZ
+keywords: 
+headline: 10 Graham Value Dividend All-Stars (GVAS) Extol November
+<<<SUMMARY>>>
+Analyst sees ten GVAS dividend stocks as ideally priced buys, with analyst targets and dividends implying a projected 42.6% average net gain.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881039
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:48:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a2c824181934f7dbdf92b10db0326f3dd322e344f019155927a9adea0b192f86
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Musk: FAA Said Free Starlinks Were “Not Needed.” Verizon Holds the Contract for the New System
+<<<SUMMARY>>>
+Key TakeawaysElon Musk says the FAA turned down free Starlink service before Friday’s nationwide ground stop, which canceled more than 17,000 flights, and he names Verizon as the company behind the agency’s new network. Musk has a point about the FAA’s network, but the dispute is too small to change the case for Verizon or SpaceX stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881041
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:40:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f5e759fb6cfa5a393568d2e256e6a22f4a0126de2464f891535bbfe75b36338f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Is Charter Stock Worth The Wait?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881040
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:40:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=338d9a52e81d2ac079a8a1393817060ccb7da0e388e5e7caf618e126282ceb6e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: What Gave AT&T Stock Its Edge Over Verizon?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881042
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=416757cac13694f5787d26260fbb6e080acf8c8431eb47b048815521cf6c15b7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: What Could Lift T-Mobile Stock?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881043
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T14:13:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=19eae836fd5b8da1af38282ac8a80973e3a1e49ac9135bd171a7d4b6796a8004
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Which Dates Could Move AT&T Stock Most?
+<<<SUMMARY>>>
+Today's big story: Could Nvidia Stock Fall 50%? Follow The Cash.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878139
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:30:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7579553a990d34740ce178a91029e376f1157ffbf83078ac364fef27cc4410bd
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 5 Dividend Stocks Yielding Over 5% to Hide in Your Roth IRA
+<<<SUMMARY>>>
+Five high-yield payers could be quietly handing the IRS thousands of dollars every year, and two of them are taxed far more harshly than the rest. Where you park them matters more than which ones you buy.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878047
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:54:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=95e0c024ccb9c0a5cd08e69b23b3d698a609e61e306565be3c53726e5032a18a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 5 Huge Dividend Payers the IRS Leaves Alone Inside a Roth
+<<<SUMMARY>>>
+Two investors can hold the exact same five blue chip dividend stocks and still walk away with very different paychecks. The difference comes down to one account choice, and over 20 years it snowballs into a six-figure surprise.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878140
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T12:12:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b9125ea88babd402cd193d06ba391dabad3cd1399756a8ab427c7d00de7e89ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Musk Says He Offered the FAA Free Starlinks and Was Told They Weren’t Needed
+<<<SUMMARY>>>
+Musk says the FAA turned down free Starlinks right before a ground stop cancelled thousands of flights. Officials blame a rogue router inside the agency's own network, which raises a harder question about whether satellites could have helped at all.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143881044
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:29:48Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a0db8532db35c0037c0486eeef45e3178f114a91f84300a19a397e3afc5c4424
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: What Could Derail Trade Desk Stock?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143876126
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:29:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f56f24ddc58cf90cb2369e8c043cd365e9b734e52e7d9f609263bb6d3c239c38
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Can Trade Desk Stock Double From Here?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143876065
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T11:29:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=258db59f7bdc4a6c53f07586f47ed5cda11d54b0884a84e14ea5a7a64c3bd463
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Comcast Stock Up 17%, Still Losing Internet Customers
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143878701
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T07:55:08Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=121826af9e90ab5b504c981a516f2218f7348acd439a8a44456bdc13a9bd626c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/17/Verizon.jpg?width=2048&height=1536
+category: company
+tickers: VZ
+keywords: 
+headline: Wall Street's Most Accurate Analysts Give Their Take On 3 Tech And Telecom Stocks Delivering High-Dividend Yields
+<<<SUMMARY>>>
+Analysts assess high-yield communication stocks Verizon (6.11%), Rogers (4.12%) and Sinclair (6.72%) amid mixed earnings and market uncertainty.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143849028
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T14:16:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f9b744a64a25bd65c0a139492360d190fc98f0e08b452a597750528f1760afa8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 4 High Yield Stocks That Have Never Missed a Dividend Payment
+<<<SUMMARY>>>
+Recessions, oil crashes, and a pandemic failed to interrupt the quarterly checks from four household-name payers. But an unbroken record is a lower bar than it sounds, so we stress-tested each one on cash flow and debt before trusting the next payment.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840360
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T17:41:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4c9e447d27352980cab1f42bf2291090e7685d10f4b9263b1c51448c46c5fae8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: FAA Chief Warns System ‘Will Continue to Break.’ AT&T, Verizon, and Lumen Could Be Big Winners
+<<<SUMMARY>>>
+When the nation's top aviation regulator admits the air traffic system is guaranteed to fail again, someone gets paid to fix it. One telecom giant already holds a foothold in the contract, and its stock may be pricing in far too little.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840126
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T13:47:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c291965015c77592880430d1a1635a04be4fd90dcb449e5b1bc4801100db6468
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: How Much Does a 65-Year-Old Need Invested in Dividend Stocks to Collect $2,000 a Month?
+<<<SUMMARY>>>
+Three popular high-yield stocks promise a steady retirement paycheck, but one has a thin cash cushion and another has slashed its payout before. Which one could quietly shrink your monthly income when you can least afford it?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840118
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T12:30:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c10a9317ac0ff630a1eb62364f8a46cf55f2de20e619aff0f1d9ea0b076c0b6e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: How Retirees Can Turn $175,000 Into Passive Income With These 4 Dividend Stocks
+<<<SUMMARY>>>
+Selling shares to cover bills means accepting whatever price the market offers that month. Four dividend payers from four sectors could replace that gamble, but one of them has already slashed its payout once, and each carries a risk worth knowing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144180326
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T21:29:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=062c6dc9674f05d9484818878dd1f4fe3421a09d91f9f95f021d086f85ff05c8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: S&P 500, Nasdaq End Best Week In Over A Year As AI Optimism Makes Comeback — VZ, ANT, ADBE, TSLA In Focus
+<<<SUMMARY>>>
+Meanwhile, the Dow Jones index recorded its best week since October 2022.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144176994
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T17:52:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=083b6874f1482b3f84e0ecb686567f71315bfb3910ed6e081d26f3381c281815
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: ATEX Stock Jumps After SpaceX Reportedly Eyes 900 MHz Spectrum For Direct-To-Device Expansion; Alternative Target NN Climbs Double Digits
+<<<SUMMARY>>>
+Chris Guttman-McCabe, Anterix’s head of corporate development, told Bloomberg that it is talking to “all the right parties.”
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144176995
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T17:42:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d0a767a7c090fbf4bed6352968ac72add6fb23cd49cd2f4aafb6c84c2eff3753
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Is T-Mobile Stock's Next Big Thing Already Here?
+<<<SUMMARY>>>
+Today's big story: Anthropic Broke Its $83 IPO Price. What Did Facebook Do Next.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144176996
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T17:15:15Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8b0a9da3c91ed07cde0a8931b4d670d020a9313650faff62417c828cb8c6da76
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Anterix (ATEX) Stock Is Up 9.7% Today Without Company News
+<<<SUMMARY>>>
+On Friday, Nov. 27, the stock rose 9.7% without company-specific news, as the broader market rallied
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175958
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T15:51:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a94292da95bbab3a76a9acb5895da8b76be5c01e9c104ea79f895ca3fe8abdd3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Why Boomers Are Quietly Hoarding These Super-High-Yield Dividend Stocks for Retirement
+<<<SUMMARY>>>
+Five income stocks all beat the 10-year Treasury, but retirees who check the payout coverage may spot one with a looming deal that could change everything. Which dividend payer is hiding the biggest question mark?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144176997
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T15:30:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c3fabb6cc64a6c98f237d8ae9d24a3a768a404cdb09ef55b07a26999935b3fdc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Why Is T-Mobile (TMUS) Up 12.9% Since Last Earnings Report?
+<<<SUMMARY>>>
+T-Mobile (TMUS) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175821
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:58:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=855558f8a9b7d8e893c04b405fb0e73efec956e5bd4d2ad24cffaefd5583699e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: SpaceX, Tesla have had a bumpy 2026 thus far: What to know
+<<<SUMMARY>>>
+Yahoo Finance Executive Editor Brian Sozzi focuses on Elon Musk's two public companies — SpaceX (SPCX) and Tesla (TSLA) — and their respective stock performances in 2026. While getting a slight boost at the time of this video's posting, SpaceX is still trading below its IPO price of $135 per share.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175957
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:47:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2664add0c2b67fb4fa34243ed79ef75f6057b9016a767a8c3af9d391eea5603a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: How to Collect Over $1,700 in Easy Passive Income From 3 High-Yield Leaders
+<<<SUMMARY>>>
+Retirees fear selling shares into a falling market just to pay the bills. Three high-yield stocks, one with a possible $34 billion deal looming, offer a way to keep every share and still get paid on schedule.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144208908
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T13:46:54Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=48ffd0dfc63f03fd8601b151c709a0baaa31867633572983e4f9727a7fc9037d
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/27/Elon-Musk-arrives-at-the-memorial-servic.jpg?width=2048&height=1536
+category: company
+tickers: VZ
+keywords: 
+headline: SpaceX Stock Rises: Baron Sees AI Opportunity, Moffett Challenges Wireless Narrative
+<<<SUMMARY>>>
+SpaceX stock gained more than 3% on Friday after the FCC conditionally approved up to one million satellites for its orbital data center plans. See what Wall Street’s forecasts and analyst debate mean for SPCX.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144209539
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T13:32:41Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ee3b4b88a418ef1a08805082a235af4a34110800303205c4a06ba341af50608a
+image_url: 
+category: company
+tickers: VZ
+keywords: 
+headline: 'Verizon in talks over $6bn deal for Fidium to boost broadband footprint' -Financial Times
+<<<SUMMARY>>>
+https://www.ft.com/content/19c8508b-0dc6-492c-9f68-497da516a398?syn-25a6b1a6=1
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144208875
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T12:49:39Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=cd37ca799a47fd8f2522603257edd35d42c46f7af3ba76b75f2a59b4d0154731
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/27/Congressional-Trades.jpg?width=2048&height=1536
+category: company
+tickers: VZ
+keywords: 
+headline: Congressman Discloses First Public Stock Trades, and It’s All Sales
+<<<SUMMARY>>>
+A congressman recently disclosed their first stock trades since taking office in January 2025. Here&#39;s the trades.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174486
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T12:24:27Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=362de4a2459bc8a448d86b6d9b0235b06edcbbe6676224fa7114f6b500ed86a5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Should You Buy Verizon Stock For Its Cash?
+<<<SUMMARY>>>
+Today's big story: Anthropic Broke Its $83 IPO Price. What Did Facebook Do Next.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144208909
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T11:25:07Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f1075724294c0a9b1d84c1e870329465a081bbdab20871bff1b43b5596e940df
+image_url: 
+category: company
+tickers: VZ
+keywords: 
+headline: FCC Chair Carr Says 'Direct To Device' Is Big Player In Connectivity, Could Compete With Traditional Providers; Says 'Very Competitive Time' For These Businesses
+<<<SUMMARY>>>
+-CNBC Interview
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144209154
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T11:17:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=96d95238f659014674854bf6e72f931b5b0b04c99307db53a680436e2fa0f85c
+image_url: 
+category: company
+tickers: VZ
+keywords: 
+headline: FCC Chair Carr Says FCC Has A Space Division For Licensing
+<<<SUMMARY>>>
+-CNBC Interview
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144172762
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T03:44:12Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=db599f2a00d61b4623e040b4b9c0acf6474a00768ad2c3535612f22532f42f1e
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2222307214/image_2222307214.jpg?io=getty-c-og
+category: company
+tickers: VZ
+keywords: 
+headline: DVY Vs. SPHD: Dividend Growth Beats A Higher Yield
+<<<SUMMARY>>>
+DVY ETF is rated buy over the SPHD through 2027, citing cheaper holdings, faster expected earnings growth, and historically stronger dividend growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144157782
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T18:20:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=30d51d85748c094859c3f4a4fba0c96158d04b7761c4e6440a7cc439c6e6c8ad
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: An $850,000 Portfolio in Park Hotels & Resorts, Healthpeak and Verizon Pays $51,477 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA $850,000 portfolio split evenly across Park Hotels & Resorts, Healthpeak Properties and Verizon pays about $4,290 a month in dividends at today’s prices. Each dividend is covered on its own measure: 51% of AFFO at Park, 72% of AFFO at Healthpeak, and 52% of free cash flow at Verizon.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144156780
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T15:26:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=59cfad9c0c780a8bf9be55f442088bd6535f9ab92a929129aab18428c3a9b0d9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Can VZ's New Apple Deals and Loyalty Benefits Drive Subscriber Growth?
+<<<SUMMARY>>>
+Verizon's 2026 holiday deals feature iPhone 18 Pro offers, free Apple devices, affordable wireless plans and loyalty rewards to attract and retain subscribers.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144126202
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T18:00:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=79d63f3abab3a4e22222dbb523e004108cee337264c08369598a8f336489563a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Charter Communications (CHTR) Stock Is Up 7.4% Today Without Company News
+<<<SUMMARY>>>
+On Wednesday, Nov. 25, the shares rose 7.4% without company-specific news as the S&P 500 fell 1.3%
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144125880
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T16:33:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9d6aa1b847a7978c3327a1aae3f29c620a3ff02d32040f78aeffad9d0f38ee93
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: T-Mobile customers are in line for a significant network boost
+<<<SUMMARY>>>
+As the competition for wireless customers heats up, T-Mobile is making a major move that could reshape its network.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144125881
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T15:30:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=42927ef66cfcd60bb8dcf1a77b98cc14fd59b4cbfe33bd59c5f38324d1897073
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Why Is Verizon (VZ) Up 7.4% Since Last Earnings Report?
+<<<SUMMARY>>>
+Verizon (VZ) reported earnings 30 days ago. What's next for the stock? We take a look at earnings estimates for some clues.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124688
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T15:15:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=de9845c857f896185d3e0e34b97ff06f525dfad785f544e585db1fab223ea0c7
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Liberty Global (LBTYB) Stock Is Up 6.4% Today Without Company News
+<<<SUMMARY>>>
+On Wednesday, Nov. 25, the shares rose 6.4% without company-specific news as the S&P 500 fell 2.6%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144125882
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T15:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7edf91d539b21221b9f0dd757d03db1fdf83e9acc69f69058cfeb43c7d61531e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: ‘Claude Was My First Employee’: Her Tasty Side Hustle Sold Out Fast and Makes $15,000 a Month
+<<<SUMMARY>>>
+Lauren Mahurin lost 100 pounds and was unimpressed by the "better for you" options on grocery store shelves.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124689
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T14:47:53Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=804b905c0377acf0062c907810b11099a8aaab2cf0f8c3a33ed1b38e8c812581
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: No One Will Ever Compete With SpaceX’s Space
+<<<SUMMARY>>>
+SpaceX's satellite and AI ambitions face rivals on every side, yet one division on its books faces none at all. Why is that unbeatable business posting the weakest numbers of the three?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124690
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:49:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b32a51a77951bbd2009a7d6a2d91dd82285c74a4dad9ef530df0b7ec5f45b3d4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Can Lumen's Improved Debt Profile Accelerate Its Digital Transition?
+<<<SUMMARY>>>
+LUMN's debt reduction, lower interest costs and strategic investments are enhancing financial flexibility as it pivots toward digital infrastructure.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122493
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:03:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f5e8753f2e5e2d16da84f7ac14faf725ee18c2492d0fc06695146f1fade16cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: These 5 Dividend Stocks Are Brands You Use Every Day
+<<<SUMMARY>>>
+Burgers, wireless plans, soda and snacks already drain your wallet every week. Five of those brands pay you back through dividends, but each one hides a risk that could shrink your next raise.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124687
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:00:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=445bed377bfda7d02d110248f7453b73f0f0b3dabe7cbe5958883f17d531a167
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon Communications Inc. (VZ) is Attracting Investor Attention: Here is What You Should Know
+<<<SUMMARY>>>
+Recently, Zacks.com users have been paying close attention to Verizon (VZ). This makes it worthwhile to examine what the stock has in store.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154144
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T12:52:50Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f27e1f17195d903c5f5f64f250e3157c3cce6adb099d1d97c08f3e0fed35dcc0
+image_url: 
+category: company
+tickers: VZ
+keywords: 
+headline: Watching Space-Telecom Companies; FCC Authorizes 1 Million Satellites For Data Centers In Space'
+<<<SUMMARY>>>
+https://www.fcc.gov/document/fcc-authorizes-1-million-satellites-data-centers-space-0
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122349
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T01:41:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7d13ad787e44833435d4cdcc33bd47b0b3a4331427c073964692f362b7ff72e7
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/25/Paris--France---February-3--2026-A-Horiz.jpg?width=2048&height=1536
+category: company
+tickers: VZ
+keywords: 
+headline: Elon Musk Confirms Free Starlink Hardware for Eligible Americans as SpaceX Gives Up $738 Million in Federal Grants
+<<<SUMMARY>>>
+Elon Musk confirms SpaceX will provide eligible Americans free Starlink hardware, low-cost internet and 10 years of service.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144089188
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T20:06:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f327ef6a3cecc5e941d13a6c8d7446b8bda2b0ae4e4c9f69f69ba2f8e888be4d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: What Could Send T-Mobile Stock Higher?
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088092
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T18:39:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0f6ca4694d4e32919551e1c3da414302c182e41a55a60494dcc97cf76d7b5f6a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: A 68-Year-Old Swapped JEPQ for DIVO in a $1.23 Million Portfolio. Here’s What Happened to His $7,718 Monthly Paycheck
+<<<SUMMARY>>>
+He wanted checks that stopped swinging, so a retiree traded a high-yield Nasdaq fund for a steadier dividend ETF. The price of that calm was bigger than he may have expected, and one smaller payout could still have the edge.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144087991
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T18:31:01Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7efa6dab644c28acf05b67bbe0c3ba69098c7f147a905a0490a208d988a6740c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 3 Absurdly Cheap Stocks You Can Buy for Less Than $100 Right Now
+<<<SUMMARY>>>
+Investors may be underestimating and overlooking these deeply discounted stocks, which could prove to be a mistake in the long run.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144086932
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:35:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6299dee340552ae7e673619fdcbbf90a33f593c59c95bf43905e5175dca09d9a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Is Cheap Verizon Stock A Real Bargain?
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144086933
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:31:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5067a46f72dd966a81610327b7b09351a7514ba14eee370c2d3851ae9adfcacb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Liberty Global (LBTYB) Stock Is Down 6.2% Today Without Company News
+<<<SUMMARY>>>
+On Tuesday, Nov. 24, the shares fell 6.2% without company-specific news
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085581
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T14:32:32Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e9ffeda86379e6cbfc43bc97f39ea4e3fef09b462184e0ed16d009ea279e9acf
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Retire on Dividends: 5 Ultra-High-Yield Stocks Boomers Are Buying and Holding Forever
+<<<SUMMARY>>>
+A fat yield means little if the payout can't survive the next downturn. Five income stocks across tobacco, telecom, pipelines, and private credit each carry a hidden risk, and one even trimmed its distribution in half before.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122288
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:38:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f9540a691f4b6fd69fe8925acadcae32c10817bfd9b7a73c6eb018ff3dbadf5c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/24/Jay-Woods-Freedom-Capital.jpg?width=2048&height=1536
+category: company
+tickers: VZ
+keywords: 
+headline: Dow Outperforms Nike Stock 100x Since Inclusion: Jay Woods Expects 'Underperformer' to Get the Boot
+<<<SUMMARY>>>
+Changes to the Dow Jones Industrial Average coming in 2027? Market expert Jay Woods says it has a history of &#34;kicking out underperformers.&#34;
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088091
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T12:55:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=711998e73a38d1a50ac03c4b0e0d10eecd3e531ce127f9492535a73519ee0916
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Meta’s $300 AI Muse Could Be a Breakthrough as Wall Street Sees 52% Upside
+<<<SUMMARY>>>
+Meta is betting that its pocket-sized Muse Charm can turn AI interactions into an everyday habit, creating a new way to engage users beyond its social media apps.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144064554
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T05:06:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=11cc09d773f0a10b7c66c8ebd9d7cdec66a5ce759a18dbec196623a23955a629
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: The Dates That Matter Most For Verizon Shareholders
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144060189
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T01:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b66036f7b152706ee3634bcb509bbee0b24aa311a211c2f9f5e236c2b90cf7bb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon has a sneaky price hike that hits rate-locked customers
+<<<SUMMARY>>>
+You’re paying 140% more for something the wireless carrier fully controls.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144058197
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T00:23:19Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4b0776bf0fdf3adb111ab10ac467024ced29f4b624beae579746388bc4308c12
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: AST SpaceMobile Stock Gets FCC Approval for Direct to Device Service
+<<<SUMMARY>>>
+AST SpaceMobile secured FCC approval for direct-to-device satellite service and outlined plans for intermittent nationwide coverage by late 2026 across key markets including the US, Canada, Japan, Saudi Arabia and the UK. The combination of regulatory clearance and rollout plans, backed by partnerships with AT&T and Verizon, puts greater attention on AST SpaceMobile’s execution, capital use and timeline risk in building a usable space-based cellular network. We will now see how AST...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144055001
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T23:35:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=541f0855ffa33786889f72d9defef373e86c9d4369876723395510f49e236e57
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Starlink’s 40x Upgrade Targets 150Mbps to Phones. AST SpaceMobile Has a Big Problem
+<<<SUMMARY>>>
+Key TakeawaysElon Musk said on Nov. 18 that SpaceX’s next direct-to-cell satellites start launching next year with 40x today’s bandwidth, and SpaceX aims for peak speeds of 150Mbps per user.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144054640
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T23:28:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=7f23cd8bd8e7b2e4ce10c8e9a44423c69cf39920d5591ca1745309d69d2b300a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Forget AT&T and Verizon: Crown Castle Has More to Lose From Starlink’s 40x Upgrade
+<<<SUMMARY>>>
+Key TakeawaysElon Musk said SpaceX’s next direct-to-cell satellites will have 40x the bandwidth of today’s, and that AT&T and Verizon may lose some revenue. Crown Castle has more at stake than either carrier, since AT&T and Verizon pay 51% of its tower rent.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144052602
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T18:36:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=85c82487a06b0391a63744f488971008c80b0df9e1a54c8d0192f1b9a34c3775
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Who's Buying And Who's Selling AI? The Full List, Next To 2000
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144053816
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T17:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7ad792d17dab88ab09fa4f3f3de9042a07658ccc4035759a8232e98c7e2c2da8
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/865972662/image_865972662.jpg?io=getty-c-og
+category: company
+tickers: VZ
+keywords: 
+headline: Strategically Building A $75,000 Dividend Portfolio With November's Top High-Yield Picks
+<<<SUMMARY>>>
+Investors are looking for stock selections for their dividend portfolios. Considerations include income, dividend growth, capital appreciation, and limited downside risk.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051450
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:47:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=26ee76e7a3d3619e474e13c4d87f38094d6843ef75667fdd6883ca7b81c6a687
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: $100,000 in These 5 Dividend Stocks Could Pay $4,800 a Year
+<<<SUMMARY>>>
+When the paycheck stops, price charts matter less than the cash landing in your account each quarter. Five high-yield names across pharma, utilities, tobacco, telecom, and midstream energy compete for that job, and one carries the thinnest safety cushion of all.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144053497
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:38:01Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=8fb6199d68b04118baa58568f92dc0d6bd3d582637b7271182b080c94e199dee
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1082044584/image_1082044584.jpg?io=getty-c-og
+category: company
+tickers: VZ
+keywords: 
+headline: 9 DGI Stocks To Help You SWAN, No Matter What The Future Brings
+<<<SUMMARY>>>
+The bull case for a nine-stock dividend growth portfolio: $10,000 grew to over $41,000 in back-testing, with potential to outperform over five years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051542
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:17:05Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8df14d0db94261373e80f4f064b7e0497a581ff9bb220fd819b92468442fc5d3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: T-Mobile Has Raised Its Dividend 80% Since 2023. Here’s What Comes Next
+<<<SUMMARY>>>
+T-Mobile's payout is growing faster than almost anything in telecom, yet buybacks still get the bigger check. Before you count on it for retirement income, weigh what the company is about to spend its cash on instead.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051544
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T16:04:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=91f702b46e1fefc365d245d2a2afaee3da10a8122946e35922e731a02e75f54a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Can T's Extended U.S. Soccer Deal Boost Sports Technology Innovation?
+<<<SUMMARY>>>
+AT&T renews its U.S. Soccer partnership through a multi-year sponsorship, expanding connectivity, athlete development and fan engagement through technology.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050217
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T15:50:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1e97c33df7d6e26a441077dd1be6b2bf7c1b8e54143c7a55b9773a432984e1c9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Vuzix stock jumps on reseller deal with Friends With Holograms
+<<<SUMMARY>>>
+Investing.com -- Vuzix Corp (NASDAQ:VUZI) shares rose over 8% in trading Monday following the announcement of a reseller agreement with Friends With Holograms, a New York-based company specializing in smart glasses and spatial computing solutions for enterprises.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050070
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T15:00:46Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3835484f7743efb365ba83f643606526ba4723ec11c8c875d4a3575f99e68c13
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Nvidia Stock: Where's The Floor Now?
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050071
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:34:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1654a8c7f976bc1d495ad00b23c7bdefb0f4e91c6b77f91c2a8ae394aab1a240
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon Cut Its Buying In 2002. Can Nvidia's Buyers Stop Now?
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050340
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:32:13Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a46fe5021207cb267312d8472c6bf26a72d6edc1c84c4ebe9fbb54b0ed40a41
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 4 Dividend Stocks Yielding 5% to 10% That Pay You Tax-Free in a Roth IRA
+<<<SUMMARY>>>
+Four high-yield stocks can hand the IRS a surprisingly large slice of your income every year, and the bill grows with your bracket. One account type changes that math, and the gap compounds for decades.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050341
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:05:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=03dc6bd0668d97646d0151a0a31af8f2a874657825258a2878429f7806b9aa34
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon CEO Pushes Back: “No Secret Sauce” in Musk’s Plan to Make SpaceX a US Carrier
+<<<SUMMARY>>>
+Key TakeawaysVerizon CEO Dan Schulman says SpaceX would need four to six years and about $300 billion to copy Verizon’s network, with “no secret sauce” at the end of it. SpaceX’s plan to become a U.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048547
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0a6e5cc83fd047160754cc86746ef8ce8a908aec76937b6c740af0b061b1dfdc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Vuzix Signs Reseller Agreement with Friends With Holograms to Support Enterprise Smart Glasses Adoption
+<<<SUMMARY>>>
+Vuzix® Corporation (NASDAQ: VUZI), ("Vuzix" or, the "Company"), a supplier of AI-powered smart glasses, waveguides for smart glasses and co-packaged optical data center interconnects, and related augmented reality technologies, today announced that it has entered into a reseller agreement with Friends With Holograms, a New York-based company that helps enterprises identify, develop and deploy smart glasses and spatial computing solutions.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048612
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:13:10Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d5e295c6c1cc5fffa5ca40af9c1b4a13bc781f4baffbfc62c3622b06c2614110
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon (VZ) Stock Looks Like A Bargain After A 51% Run
+<<<SUMMARY>>>
+Verizon Communications has delivered a strong share price run in recent years, and with fresh leadership moves and competitive threats in the background, the key issue is whether that current market value lines up with its earnings power. For anyone looking at Verizon today, the question is less about headlines and more about what the profit stream behind the ticker really supports. Over the past 3 years the stock has returned 51.3%, which puts extra weight on whether the profits behind...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048494
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:48:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=78fb69437c56705bc04100c646261b8a790a509253ebf644b06b29680a61eb26
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Trade Desk Stock Dips Paid Off, Until 2025
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144049099
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T08:21:36Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a914bde7f9ad1b76a27b951f0f8729c39fb8539ff9930386764c736302718ee8
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/Verizon.jpg?width=2048&height=1536
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon, Amazon And A Major Retailer On CNBC’s 'Final Trades'
+<<<SUMMARY>>>
+CNBC experts picked Amazon, Verizon and Target; Amazon got a $310 target, Verizon offers a 6% yield, and Target beat estimates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144047819
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T05:23:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dd9ff78349e5d11bfa1553f079c38f37bc0d29132147c09ae2fbf93b9e6c49fc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: EchoStar Is the Real Winner of Starlink’s 40x Phone Upgrade: About 262 Million SpaceX Shares
+<<<SUMMARY>>>
+Key TakeawaysElon Musk said on Nov. 18 that SpaceX’s next direct-to-cell satellites, launching in 2027, will have 40x today’s bandwidth, and that AT&T and Verizon may lose some revenue.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144029438
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T03:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3d9ad26f79749f4ebf5cd262883ff1030b77fc8aa6e84cdf92c2cdb7f7a0a25c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Comcast vs. Walt Disney: Which Media Stock Is a Better Buy?
+<<<SUMMARY>>>
+Comcast's cash machine and Disney's prized franchises pull in opposite directions, and the valuation gap between them is hard to ignore.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144027205
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T23:16:06Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3e9f7c8ecdad115255f3e2d961855490a8ac525a2722dddd8befb6765dd3ee0d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 4 High-Yield Dividend Stocks for Retirees Who Want Income They Can Count On
+<<<SUMMARY>>>
+Yields above 8% tempt retirees, but the real question is whether the cash behind each check is strong enough to cover it. Four companies tied to tolls, rent, and phone bills face that test, and one carries a tax wrinkle many IRA owners miss.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024473
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T15:00:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=720563cdbbd87faf137d35e444d4d0612a6baa62fa1865db563c944b9f559456
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 4 Dividend Stocks Yielding Over 4% That Retirees Can Grow Tax-Free in a Roth IRA
+<<<SUMMARY>>>
+A $500,000 income portfolio can quietly hand the IRS thousands of dollars every year, and one of these four high-yield payers is far more exposed than the rest. Find out which stock belongs in a Roth first and why the gap compounds.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024472
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T14:32:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c6aece8482f72c6d1b58e407addc10ff76c5e2fcc65718de3ccc0d40a77960e8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: The 10-Year Treasury Now Pays 5%. These 3 Dividend Stocks Still Pay More
+<<<SUMMARY>>>
+A Treasury coupon locked in for a decade sets a new bar for income investors, and dividends can be cut when cash runs short. Three NYSE payers clear it, but one holds only a razor-thin lead that rising yields could erase.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144017362
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T21:35:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=067d8295f6cdd3dce6a66bdf89c9dbe172171d2b5c938661a373974424deef04
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: An $850,000 Portfolio in Verizon, NNN REIT and Enterprise Products Pays $52,395 a Year in Dividends. Here’s What Happens if One Cuts
+<<<SUMMARY>>>
+Key TakeawaysA hypothetical $850,000 portfolio split evenly across Verizon, NNN REIT and Enterprise Products Partners pays about $4,370 a month in dividends at today’s prices. All three dividends look safe, and Enterprise’s is the best covered and the fastest growing.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144017319
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T21:23:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0c1bb056686ab121ea025b47fa74c7e4606815c40d2503d0c84fc48a92d92ac9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon Pays Out $11.7 Billion a Year in Dividends. Here’s the Free Cash Flow Math Behind Its 6.2%-Yielding Payout.
+<<<SUMMARY>>>
+Verizon is a cash flow machine.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015610
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T17:20:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f4534c37ca8311e00e8503beeefd7c269b0aff7fb5eb9f7a70915ded2c51d2ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Musk Says AT&T and Verizon May “Lose Some Revenue” as Starlink’s Phone Service Gets 40x the Bandwidth
+<<<SUMMARY>>>
+Key TakeawaysElon Musk said SpaceX’s next direct-to-cell satellites, launching in 2027, will have 40x the bandwidth, and AT&T and Verizon may lose some revenue. The hit looks small for now, since satellite signals struggle to reach phones indoors, but SpaceX’s planned rooftop micro cell towers aim at that gap.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015518
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:51:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=146e887366007f32c339fb9452a636edffcfea6b65e390099976054890921454
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: 3 High-Yield Dividend Stocks to Buy Now and 2 to Avoid Despite the Yield
+<<<SUMMARY>>>
+Among high-yield dividend stocks, there are some diamonds in the rough, but beware of the "yield traps" as well.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012060
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T12:30:52Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d96cc822f5db7dda2d25fb8416f73688e1f0f2e3a7f67c6aca93259bf6f4fb27
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: How Retirees Can Turn $450,000 Into Passive Income With These 5 Dividend Stocks
+<<<SUMMARY>>>
+Selling shares in a downturn can turn a temporary loss into a permanent one for retirees. Five dividend payers from five sectors might offer a way out, but each hides a risk worth knowing before you commit a dollar.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012115
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=048671efe1241ea58e7bed86f5528403cee8f27c23006340bdb0097cd9cb6857
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1336425043/image_1336425043.jpg?io=getty-c-og
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon: 6% Yield Surrounded By A CapEx Moat
+<<<SUMMARY>>>
+Verizon Communications offers an attractive value: shares trade at 9 times forward earnings, a 16% discount to our $52 fair value estimate.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144210235
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T15:28:07Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=716ce8ab617c3716c792fef543d66d9295f0aa63e21198746f8ff07a1f65d76f
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: Verizon Wants Fidium’s Fiber, Months After Its $20 Billion Frontier Deal
+<<<SUMMARY>>>
+Verizon is reportedly eyeing another fiber acquisition while it still digests the last one and carries a mountain of debt. Income investors have to ask whether the dividend can survive a second big swallow in a single year.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144209481
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T09:15:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=b926bc3afbcf86eff5b7e3eac408b1fddd4be974cb5c59a93a82d0ac9bd541b6
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1182513916/image_1182513916.jpg?io=getty-c-og
+category: company
+tickers: VZ
+keywords: 
+headline: The Next Decade Belongs To Boring Cash Flow
+<<<SUMMARY>>>
+Vanguard and Goldman see 5.5%-6.5% annual returns ahead, favoring blue chips as dividends likely drive most returns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144195076
+symbol: VZ
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T06:08:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ec6529bf6f954895bfa5ced3bd5c8c6c75928c4a0d626fb22802c54dc8f1d165
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: VZ
+keywords: 
+headline: What Does Verizon Communications (VZ) Gain From Its New Motorsport IoT Partnership?
+<<<SUMMARY>>>
+Verizon Communications (NYSE:VZ) has partnered with Bosch Motorsport to provide global IoT connectivity for race events via its ThingSpace platform. The collaboration centralizes management of race-day sensors worldwide so Bosch Motorsport can run devices under a single orchestration layer. ThingSpace connectivity is designed to support data handling for rules compliance and safety monitoring in high-pressure international motorsport settings. Verizon's Bosch Motorsport IoT partnership is...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:0d582533ce18b648203e09f4da14f80ba94fbf3d60e8ba9841c52848c0604125
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T15:33:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031285/can-at-t-s-new-apple-device-deals-strengthen-its-subscriber-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3031285
+image_url: https://staticx-tuner.zacks.com/images/articles/main/35/1193.jpg
+category: 
+tickers: T, TBB, TpA, TpC, AAPL, VZ, TMUS, TMUSI, TMUSL, TMUSZ
+keywords: holiday promotions, iPhone 18 Pro, wireless carriers, device discounts, subscriber growth, 5G competition, customer retention
+headline: Can AT&T's New Apple Device Deals Strengthen Its Subscriber Growth?
+<<<SUMMARY>>>
+AT&T is launching aggressive holiday promotions offering the iPhone 18 Pro for $0 with trade-ins, up to $1,200 off select devices, and $1,900 in bundle savings. The company is also incentivizing provider switches with up to $800 toward device payoffs. These initiatives aim to attract new subscribers and improve retention while competing with Verizon and T-Mobile's similar holiday offerings.
+<<<INSIGHTS>>>
+T | neutral | While AT&T's aggressive holiday promotions and bundle deals are positive for customer acquisition and retention, the stock has underperformed significantly (down 12.2% over the past year vs. industry growth of 103.7%). The company carries a Zacks Rank #3 (Hold) rating, indicating limited upside potential despite promotional efforts.
+TBB | neutral | While AT&T's aggressive holiday promotions and bundle deals are positive for customer acquisition and retention, the stock has underperformed significantly (down 12.2% over the past year vs. industry growth of 103.7%). The company carries a Zacks Rank #3 (Hold) rating, indicating limited upside potential despite promotional efforts.
+TpA | neutral | While AT&T's aggressive holiday promotions and bundle deals are positive for customer acquisition and retention, the stock has underperformed significantly (down 12.2% over the past year vs. industry growth of 103.7%). The company carries a Zacks Rank #3 (Hold) rating, indicating limited upside potential despite promotional efforts.
+TpC | neutral | While AT&T's aggressive holiday promotions and bundle deals are positive for customer acquisition and retention, the stock has underperformed significantly (down 12.2% over the past year vs. industry growth of 103.7%). The company carries a Zacks Rank #3 (Hold) rating, indicating limited upside potential despite promotional efforts.
+AAPL | positive | Apple benefits from increased promotional visibility and bundled sales through AT&T's holiday campaign, which features multiple iPhone, iPad, and Apple Watch models with attractive discounts, potentially driving higher device sales volume.
+VZ | neutral | Verizon is competing effectively with similar holiday promotions including device discounts and home Internet deals, but the article presents this as competitive parity rather than a competitive advantage.
+TMUS | neutral | T-Mobile is also offering competitive holiday promotions with similar iPhone discounts and 5G Home Internet offerings, positioning itself as a value-driven alternative without clear differentiation mentioned.
+TMUSI | neutral | T-Mobile is also offering competitive holiday promotions with similar iPhone discounts and 5G Home Internet offerings, positioning itself as a value-driven alternative without clear differentiation mentioned.
+TMUSL | neutral | T-Mobile is also offering competitive holiday promotions with similar iPhone discounts and 5G Home Internet offerings, positioning itself as a value-driven alternative without clear differentiation mentioned.
+TMUSZ | neutral | T-Mobile is also offering competitive holiday promotions with similar iPhone discounts and 5G Home Internet offerings, positioning itself as a value-driven alternative without clear differentiation mentioned.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5b29ab3fb38a9b8a745050f36d3a92d8000441e74545b520d87a51c9975be5a1
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T11:05:02Z
+publisher: The Motley Fool
+author: Leo Sun
+url: https://www.fool.com/investing/2026/11/18/ast-spacemobile-is-78-below-its-high-and-pushed-its-launch-target-to-2027-here-s-the-exact-price-where-i-d-finally-buy/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fadbe19b311406f5fb7911871e0f7d7aab1c8df64-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: ASTS, T, TBB, TpA, TpC, VZ, TMUS, TMUSI, TMUSL, TMUSZ
+keywords: satellite communications, LEO satellites, space stocks, launch delays, spectrum acquisition, cellular connectivity, market crash, long-term investment
+headline: AST SpaceMobile Is 78% Below Its High and Pushed Its Launch Target to 2027. Here’s the Exact Price Where I’d Finally Buy.
+<<<SUMMARY>>>
+AST SpaceMobile's stock has plummeted 78% from its May 2026 high of $133.09 to $29 per share due to delayed satellite launches pushed to 2027 and competition from SpaceX's $8 billion spectrum acquisition. The analyst suggests the stock could fall to the mid-teens during a market crash but would be a long-term buy at those levels, given projected revenue growth to $1.65 billion by 2028.
+<<<INSIGHTS>>>
+ASTS | negative | Stock has declined 78% from its high due to delayed launches to 2027 and increased competition from SpaceX's spectrum acquisition. However, the analyst sees potential for long-term recovery based on projected revenue growth.
+T | neutral | Mentioned as a wireless carrier partner benefiting from AST's satellite connectivity services, but no specific impact analysis provided.
+TBB | neutral | Mentioned as a wireless carrier partner benefiting from AST's satellite connectivity services, but no specific impact analysis provided.
+TpA | neutral | Mentioned as a wireless carrier partner benefiting from AST's satellite connectivity services, but no specific impact analysis provided.
+TpC | neutral | Mentioned as a wireless carrier partner benefiting from AST's satellite connectivity services, but no specific impact analysis provided.
+VZ | neutral | Mentioned as a wireless carrier partner benefiting from AST's satellite connectivity services, but no specific impact analysis provided.
+TMUS | neutral | Mentioned as the former owner of the 800 MHz spectrum now acquired by SpaceX, but no direct impact analysis provided.
+TMUSI | neutral | Mentioned as the former owner of the 800 MHz spectrum now acquired by SpaceX, but no direct impact analysis provided.
+TMUSL | neutral | Mentioned as the former owner of the 800 MHz spectrum now acquired by SpaceX, but no direct impact analysis provided.
+TMUSZ | neutral | Mentioned as the former owner of the 800 MHz spectrum now acquired by SpaceX, but no direct impact analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a882c538758d7f95d86c7ac4540f6d86721a5f5b6be1ab9df9ee9a5bbc313404
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-18T16:50:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/charts/2026/11/18/at-and-t-vs-verizon-total-revenue-volume-and-recent-growth-for-two-phone-network-giants/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Fcharts%2Fproduction%2Fprocessed%2Ft-vz%2Fquarter%2Frevenue%2Fbar%2Fprimary%2Fstandard%2Flimit-8%2Flatest%2Ft-vz_quarter_revenue_bar_primary_standard_limit8.png&w=1200&op=resize
+category: 
+tickers: T, TBB, TpA, TpC, VZ, AMZN
+keywords: telecom revenue comparison, AT&T growth, Verizon dominance, quarterly earnings, revenue trends, seasonality, wireless services
+headline: AT&T vs. Verizon: Total Revenue Volume and Recent Growth for Two Phone Network Giants
+<<<SUMMARY>>>
+Verizon maintains a consistent revenue lead over AT&T across all tracked quarters, but AT&T demonstrates faster year-over-year growth momentum in recent periods. Both companies show stable, largely flat revenue trajectories with predictable seasonal patterns, with Q4 peaks driven by holiday hardware promotions. Investors should monitor whether AT&T's growth trajectory continues to narrow the revenue gap with Verizon.
+<<<INSIGHTS>>>
+T | positive | AT&T demonstrates accelerating year-over-year growth momentum toward recent quarters and shows steady quarter-over-quarter revenue increases, suggesting improving business trajectory despite maintaining lower absolute revenue than Verizon.
+TBB | positive | AT&T demonstrates accelerating year-over-year growth momentum toward recent quarters and shows steady quarter-over-quarter revenue increases, suggesting improving business trajectory despite maintaining lower absolute revenue than Verizon.
+TpA | positive | AT&T demonstrates accelerating year-over-year growth momentum toward recent quarters and shows steady quarter-over-quarter revenue increases, suggesting improving business trajectory despite maintaining lower absolute revenue than Verizon.
+TpC | positive | AT&T demonstrates accelerating year-over-year growth momentum toward recent quarters and shows steady quarter-over-quarter revenue increases, suggesting improving business trajectory despite maintaining lower absolute revenue than Verizon.
+VZ | neutral | Verizon maintains market leadership with consistently higher revenue across all quarters, but shows more volatility and slight softness in recent quarters (Q2 2026 decline), indicating stable but not growing business with potential headwinds.
+AMZN | neutral | Mentioned only in context of Verizon's strategic partnership expansion for data network capabilities; no direct business impact or sentiment indicator provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:88fb9646467dc3ddc7b1160377ca44ef9301bbc8582abd0c9f4bd1fe59b7942d
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-19T21:44:01Z
+publisher: The Motley Fool
+author: Leo Sun
+url: https://www.fool.com/investing/2026/11/19/2-reasons-to-buy-spacex-spcx-stock-and-1-reason-to-wait/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F810176ffdcb486b070c75e9abacb13c67ea99488-2800x1600.jpg&w=1200&op=resize
+category: 
+tickers: SPCX, NVDA, ANT, TMUS, TMUSI, TMUSL, TMUSZ, T, TBB, TpA, TpC, VZ
+keywords: SpaceX IPO, Starlink expansion, Starship launches, AI investments, satellite internet, wireless carrier market, capex spending
+headline: 2 Reasons to Buy SpaceX (SPCX) Stock -- and 1 Reason to Wait
+<<<SUMMARY>>>
+SpaceX stock trades near its IPO price of $135, presenting a potential contrarian opportunity. The article highlights two bullish factors: Starlink's explosive subscriber growth (13.6M users) and expansion into new markets, plus Starship's planned 50-100 launches in 2027. However, the murky profitability of SpaceX's AI/SI segment, which generated $10.9B in revenue but posted a $3.8B operating loss, poses a significant concern as the company plans to double capex spending on data center GPUs.
+<<<INSIGHTS>>>
+SPCX | neutral | Mixed outlook with two positive catalysts (Starlink growth and Starship launches) offset by concerns about the unprofitable SI/AI segment and heavy capex spending. Stock trades near IPO price, suggesting limited near-term momentum despite long-term potential.
+NVDA | positive | Beneficiary of SpaceX's planned $35-40B capex spending in Q4 2026, with most funds earmarked for Nvidia's data center GPUs.
+ANT | neutral | Mentioned as competing for investor attention with its recent IPO, which is 'sucking the oxygen out of the market' and diverting focus from SpaceX.
+TMUS | negative | Starlink acquired T-Mobile's 800 MHz spectrum for $8B, positioning itself as a formidable challenger to T-Mobile and other telecom giants in the wireless carrier market.
+TMUSI | negative | Starlink acquired T-Mobile's 800 MHz spectrum for $8B, positioning itself as a formidable challenger to T-Mobile and other telecom giants in the wireless carrier market.
+TMUSL | negative | Starlink acquired T-Mobile's 800 MHz spectrum for $8B, positioning itself as a formidable challenger to T-Mobile and other telecom giants in the wireless carrier market.
+TMUSZ | negative | Starlink acquired T-Mobile's 800 MHz spectrum for $8B, positioning itself as a formidable challenger to T-Mobile and other telecom giants in the wireless carrier market.
+T | negative | Starlink's spectrum acquisition and terrestrial cellular tower expansion make it a competitive threat to AT&T and other traditional telecom providers.
+TBB | negative | Starlink's spectrum acquisition and terrestrial cellular tower expansion make it a competitive threat to AT&T and other traditional telecom providers.
+TpA | negative | Starlink's spectrum acquisition and terrestrial cellular tower expansion make it a competitive threat to AT&T and other traditional telecom providers.
+TpC | negative | Starlink's spectrum acquisition and terrestrial cellular tower expansion make it a competitive threat to AT&T and other traditional telecom providers.
+VZ | negative | Starlink's expansion into wireless carrier markets with its newly acquired spectrum positions it as a competitive threat to Verizon and other established telecom companies.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f6cba552a5a6c5a6377c7d512ef99cc89b1ceffa1bd94ca1f2ddc18aa0d5a824
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T15:37:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033357/can-verizon-s-4-billion-ai-contracts-add-meaningful-growth-in-2027?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3033357
+image_url: https://staticx-tuner.zacks.com/images/articles/main/88/118.jpg
+category: 
+tickers: VZ, AMZN, GOOG, GOOGL, GOOGM, GOOGN
+keywords: AI infrastructure, fiber monetization, revenue growth, capital expenditure, edge computing, long-term contracts
+headline: Can Verizon's $4 Billion AI Contracts Add Meaningful Growth in 2027?
+<<<SUMMARY>>>
+Verizon has signed approximately $4 billion in AI infrastructure contracts with major tech companies including Amazon Web Services ($2B+) and Google ($1B+), with revenues expected to begin in 2027. The deals represent a new monetization avenue for the company's fiber and network assets. Management expects attractive margins and modest capital requirements within existing capex plans, though the opportunity remains incremental to core connectivity businesses facing ongoing monetization pressure.
+<<<INSIGHTS>>>
+VZ | positive | Verizon secured $4B in AI infrastructure contracts with credible major tech partners, creating a new revenue stream starting 2027 with expected attractive margins and modest capital needs. This addresses the company's modest 1.8% projected revenue growth and diversifies beyond pressured core connectivity businesses.
+AMZN | positive | AWS is aggressively expanding AI infrastructure investments (39% YoY sales growth in Q3 2026) and securing partnerships like the $2B+ Verizon deal to support its infrastructure scaling needs.
+GOOG | positive | Google Cloud is experiencing strong growth driven by AI infrastructure and solutions, evidenced by its $1B+ dark fiber agreement with Verizon as part of broader AI infrastructure expansion strategy.
+GOOGL | positive | Google Cloud is experiencing strong growth driven by AI infrastructure and solutions, evidenced by its $1B+ dark fiber agreement with Verizon as part of broader AI infrastructure expansion strategy.
+GOOGM | positive | Google Cloud is experiencing strong growth driven by AI infrastructure and solutions, evidenced by its $1B+ dark fiber agreement with Verizon as part of broader AI infrastructure expansion strategy.
+GOOGN | positive | Google Cloud is experiencing strong growth driven by AI infrastructure and solutions, evidenced by its $1B+ dark fiber agreement with Verizon as part of broader AI infrastructure expansion strategy.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e015532b3a9cff9a64d8414e76f6b8356de44f62334c95d7110c2ca216a8a375
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T15:38:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3033356/is-verizon-stock-worth-buying-as-cash-flow-improves-but-risks-persist?cid=CS-ZC-FT-analyst_blog_plus|zer_report_insights-3033356
+image_url: https://staticx-tuner.zacks.com/images/articles/main/30/115.jpg
+category: 
+tickers: VZ, T, TBB, TpA, TpC, TMUS, TMUSI, TMUSL, TMUSZ
+keywords: free cash flow, postpaid phone additions, pricing pressure, debt levels, capital expenditures, dividend, valuation, wireless competition
+headline: Is Verizon Stock Worth Buying as Cash Flow Improves but Risks Persist?
+<<<SUMMARY>>>
+Verizon's improving free cash flow (up 14.3% YoY to $18.01B in 9M 2026) and raised full-year guidance to $22.44-$22.54B, along with better subscriber gains and modest valuation (8.65X forward earnings), support a balanced investment outlook. However, pricing pressure on revenue per account (-1.9% YoY), elevated debt ($166.23B), and substantial capital spending ($16-$16.5B expected for 2026) limit upside potential, warranting a Hold rating.
+<<<INSIGHTS>>>
+VZ | neutral | Mixed signals with improving cash flow generation and subscriber trends offset by persistent pricing pressure, high debt burden ($166.23B), and elevated capital requirements. Zacks Rank #3 (Hold) reflects balanced risk-reward profile with favorable valuation but weak momentum and growth constraints.
+T | neutral | Mentioned as a competitive threat with 379,000 postpaid phone additions in Q3, demonstrating continued competitive pressure in the wireless market alongside Verizon.
+TBB | neutral | Mentioned as a competitive threat with 379,000 postpaid phone additions in Q3, demonstrating continued competitive pressure in the wireless market alongside Verizon.
+TpA | neutral | Mentioned as a competitive threat with 379,000 postpaid phone additions in Q3, demonstrating continued competitive pressure in the wireless market alongside Verizon.
+TpC | neutral | Mentioned as a competitive threat with 379,000 postpaid phone additions in Q3, demonstrating continued competitive pressure in the wireless market alongside Verizon.
+TMUS | positive | Highlighted as outperforming competitors with 274,000 postpaid net account additions and 4% growth in postpaid average revenue per account, showing stronger monetization and subscriber growth relative to Verizon.
+TMUSI | positive | Highlighted as outperforming competitors with 274,000 postpaid net account additions and 4% growth in postpaid average revenue per account, showing stronger monetization and subscriber growth relative to Verizon.
+TMUSL | positive | Highlighted as outperforming competitors with 274,000 postpaid net account additions and 4% growth in postpaid average revenue per account, showing stronger monetization and subscriber growth relative to Verizon.
+TMUSZ | positive | Highlighted as outperforming competitors with 274,000 postpaid net account additions and 4% growth in postpaid average revenue per account, showing stronger monetization and subscriber growth relative to Verizon.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:08f9bc43f09c9421e0207a6d4d096768f3905f0f618300030a0d603a2593a6c5
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T18:30:02Z
+publisher: The Motley Fool
+author: Brendan Coffey
+url: https://www.fool.com/coverage/better-buy/2026/11/20/ast-spacemobile-vs-redwire-which-space-infrastructure-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fd03c7cb427e716e7464f66f2d61d88cb0e56e3fd-1280x848.png&w=1200&op=resize
+category: 
+tickers: ASTS, RDW, T, TBB, TpA, TpC, VZ, IRDM, RKLB, BA, BApA, LLY, GOOG, GOOGL, GOOGM, GOOGN, AMT
+keywords: space infrastructure, satellite broadband, aerospace defense, government contracts, space economy, valuation comparison, balance sheet analysis
+headline: AST SpaceMobile vs. Redwire: Which Space Infrastructure Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares two space infrastructure stocks: AST SpaceMobile, which is building a satellite-based cellular broadband network with 671% revenue growth but significant losses and liquidity concerns, versus Redwire, a diversified aerospace supplier with 46% revenue growth, stronger balance sheet metrics, and a major $1.8B government contract. The author recommends Redwire for 2027 based on its more reasonable valuation and established revenue streams, despite both companies facing profitability challenges.
+<<<INSIGHTS>>>
+ASTS | neutral | While the company shows exceptional revenue growth (671%) and strategic partnerships with major carriers, it faces significant challenges including massive net losses ($628.3M), negative free cash flow (-$1.1B), high customer concentration risk, and substantial capital requirements. The high valuation (P/S ratio of 73.2x) and liquidity risks offset growth potential.
+RDW | positive | Redwire demonstrates solid revenue growth (46%), a much stronger balance sheet with lower debt-to-equity ratio (0.2x), a major $1.8B government contract win with potential expansion to $6B, and a reasonable valuation (P/S ratio of 3.8x). The author explicitly recommends this stock for 2027 based on 'buy good companies at good prices' principle.
+T | neutral | Mentioned as a strategic partner and equity holder in AST SpaceMobile, indicating involvement in the space broadband sector, but no specific sentiment analysis provided in the article.
+TBB | neutral | Mentioned as a strategic partner and equity holder in AST SpaceMobile, indicating involvement in the space broadband sector, but no specific sentiment analysis provided in the article.
+TpA | neutral | Mentioned as a strategic partner and equity holder in AST SpaceMobile, indicating involvement in the space broadband sector, but no specific sentiment analysis provided in the article.
+TpC | neutral | Mentioned as a strategic partner and equity holder in AST SpaceMobile, indicating involvement in the space broadband sector, but no specific sentiment analysis provided in the article.
+VZ | neutral | Mentioned as a strategic partner and equity holder in AST SpaceMobile, indicating involvement in the space broadband sector, but no specific sentiment analysis provided in the article.
+IRDM | negative | Mentioned as a traditional terrestrial provider competitor to AST SpaceMobile, currently in merger discussions with Rocket Lab.
+RKLB | neutral | Mentioned as merging with Iridium Communications, relevant to the competitive landscape but no direct sentiment provided.
+BA | negative | Identified as a larger aerospace peer posing intense competition to Redwire in the defense and aerospace sectors.
+BApA | negative | Identified as a larger aerospace peer posing intense competition to Redwire in the defense and aerospace sectors.
+LLY | neutral | Mentioned as a commercial partner with Redwire for microgravity research, indicating business relationship but no sentiment analysis provided.
+GOOG | neutral | Mentioned as an equity holder in AST SpaceMobile, indicating involvement in the space broadband sector, but no specific sentiment analysis provided.
+GOOGL | neutral | Mentioned as an equity holder in AST SpaceMobile, indicating involvement in the space broadband sector, but no specific sentiment analysis provided.
+GOOGM | neutral | Mentioned as an equity holder in AST SpaceMobile, indicating involvement in the space broadband sector, but no specific sentiment analysis provided.
+GOOGN | neutral | Mentioned as an equity holder in AST SpaceMobile, indicating involvement in the space broadband sector, but no specific sentiment analysis provided.
+AMT | neutral | Mentioned as an equity holder in AST SpaceMobile, indicating involvement in the space broadband sector, but no specific sentiment analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:5a9eb472d210cac0bcc5f748485d0427849fd8c9ec9d45e6c79424578d94ae60
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T16:31:02Z
+publisher: The Motley Fool
+author: Thomas Niel
+url: https://www.fool.com/investing/2026/11/21/3-high-yield-dividend-stocks-to-buy-now-and-2-to-avoid-despite-the-yield/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F12b1980bc5220e15b1e620002c32bf01384bcdf3-2121x1414.jpg&w=1200&op=resize
+category: 
+tickers: EPD, VICI, VZ, FIS, IEP
+keywords: high-yield dividend stocks, yield traps, dividend growth, REITs, MLPs, dividend cuts, cash flow
+headline: 3 High-Yield Dividend Stocks to Buy Now and 2 to Avoid Despite the Yield
+<<<SUMMARY>>>
+The article identifies three high-yield dividend stocks worth buying: Enterprise Products Partners (6.2% yield with 30-year dividend growth streak), VICI Properties (7.5% yield casino REIT with solid growth), and Verizon Communications (6.1% yield with improving financial performance despite Starlink concerns). It warns against two yield traps: Fidelity National Information Services (down 60% this year with guidance downgrades) and Icahn Enterprises (71% yield that masks severe dilution and declining value).
+<<<INSIGHTS>>>
+EPD | positive | Nearly 30-year consecutive dividend growth streak, sustainable payout ratio of 54%, strong discretionary cash flow growth averaging 7.9% annualized, and management guidance for $2.9-3.4 billion in growth capital spending demonstrate financial strength and commitment to shareholders.
+VICI | positive | Strong 7.5% dividend yield with six consecutive years of distribution increases, solid AFFO per share growth, and expanding portfolio of casino real estate assets across major markets provide both income and growth potential despite recent interest rate pressures.
+VZ | positive | Despite Starlink disruption concerns, company reported record-breaking quarter with continued subscriber additions, positive revenue growth, and 6.8% year-over-year EPS increase. Improving financial performance supports the 6.1% dividend yield with reasonable 72% payout ratio.
+FIS | negative | Stock down 60% year-to-date with 24% drop after Q3 earnings, repeated guidance downgrades due to delayed bank software adoption, large debt load from acquisitions, and history of dividend cuts create significant downside risk despite low valuation and 6.7% yield.
+IEP | negative | Misleading 71% yield masks severe shareholder dilution through unit issuance, founder receives distributions in new units rather than cash, recurring investment losses, recent credit downgrade, and 95% value loss over five years indicate structural problems and further decline likely.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3bdd496742eaf7cc0a2caf51752d9a728060a2fb81e577cf93f84af98b6dde07
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T21:03:02Z
+publisher: The Motley Fool
+author: Matt Dilallo
+url: https://www.fool.com/investing/2026/11/21/verizon-pays-out-usd11-7-billion-a-year-in-dividends-here-s-the-free-cash-flow-math-behind-its-6-2-yielding-payout/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F453085c11e1158f9a01ae37960e21b732fb6a745-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: VZ
+keywords: dividend, free cash flow, telecom, dividend yield, share buyback, capital expenditures, balance sheet, passive income
+headline: Verizon Pays Out $11.7 Billion a Year in Dividends. Here’s the Free Cash Flow Math Behind Its 6.2%-Yielding Payout.
+<<<SUMMARY>>>
+Verizon generates substantial free cash flow of approximately $18 billion in the first nine months of 2026, comfortably covering its $11.7 billion annual dividend payout while maintaining room for share buybacks and balance sheet strengthening. With expected free cash flow of $22.5 billion for the full year, the company can cover its dividend nearly two times over and has delivered 20 consecutive years of dividend increases, positioning it as a reliable income stock with a 6.2% yield.
+<<<INSIGHTS>>>
+VZ | positive | Verizon demonstrates strong financial health with robust free cash flow generation nearly double its dividend obligations, 20 consecutive years of dividend increases, a solid 2.3x leverage ratio, and ample capacity for future dividend growth while maintaining share repurchases and balance sheet strength. The 6.2% dividend yield significantly exceeds the S&P 500 average, making it an attractive income investment.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:258990b73ec6d41e65d185c5d5a262fb1b0ee4dd3d12dbf77185dceb931369c2
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T23:14:02Z
+publisher: The Motley Fool
+author: Parkev Tatevosian, Cfa
+url: https://www.fool.com/investing/2026/11/21/best-stock-to-buy-tmobile-vs-at-and-t-vs-verizon/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F73b2160e45bb663927889f4e3ec6e7dd5de3d4a3-1280x720.jpg&w=1200&op=resize
+category: 
+tickers: TMUS, TMUSI, TMUSL, TMUSZ, VZ, T, TBB, TpA, TpC
+keywords: telecom stocks, T-Mobile, AT&T, Verizon, stock comparison, investment analysis, communications services
+headline: Best Stock to Buy: TMobile vs AT&T vs Verizon
+<<<SUMMARY>>>
+An analysis comparing three major telecom stocks—T-Mobile, AT&T, and Verizon—to determine which represents the best investment opportunity for investors. The article examines these telecommunications companies as potential buys in the sector.
+<<<INSIGHTS>>>
+TMUS | positive | The Motley Fool recommends T-Mobile US as a stock to buy. Recent earnings showed profit up 27%, indicating strong financial performance, though account churn is noted as rising.
+TMUSI | positive | The Motley Fool recommends T-Mobile US as a stock to buy. Recent earnings showed profit up 27%, indicating strong financial performance, though account churn is noted as rising.
+TMUSL | positive | The Motley Fool recommends T-Mobile US as a stock to buy. Recent earnings showed profit up 27%, indicating strong financial performance, though account churn is noted as rising.
+TMUSZ | positive | The Motley Fool recommends T-Mobile US as a stock to buy. Recent earnings showed profit up 27%, indicating strong financial performance, though account churn is noted as rising.
+VZ | positive | The Motley Fool recommends Verizon Communications as a stock to buy, indicating it is viewed favorably as an investment option among the three telecom competitors.
+T | neutral | AT&T is included in the comparison analysis but is not explicitly recommended by The Motley Fool, unlike T-Mobile and Verizon, suggesting a more neutral stance relative to its competitors.
+TBB | neutral | AT&T is included in the comparison analysis but is not explicitly recommended by The Motley Fool, unlike T-Mobile and Verizon, suggesting a more neutral stance relative to its competitors.
+TpA | neutral | AT&T is included in the comparison analysis but is not explicitly recommended by The Motley Fool, unlike T-Mobile and Verizon, suggesting a more neutral stance relative to its competitors.
+TpC | neutral | AT&T is included in the comparison analysis but is not explicitly recommended by The Motley Fool, unlike T-Mobile and Verizon, suggesting a more neutral stance relative to its competitors.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:04f5926077375a8edd6df7307174dab7cf8a5309d2111d21bd4aafffd20bbaa1
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T16:04:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3034016/can-t-s-extended-u-s-soccer-deal-boost-sports-technology-innovation?cid=CS-ZC-FT-analyst_blog|quick_take-3034016
+image_url: https://staticx-tuner.zacks.com/images/articles/main/70/1631.jpg
+category: 
+tickers: T, TBB, TpA, TpC, VZ, TMUS, TMUSI, TMUSL, TMUSZ
+keywords: sports technology, 5G connectivity, U.S. Soccer partnership, AT&T Connected Fields, fan engagement, AI innovation, athlete performance
+headline: Can T's Extended U.S. Soccer Deal Boost Sports Technology Innovation?
+<<<SUMMARY>>>
+AT&T has renewed its multi-year sponsorship partnership with U.S. Soccer, providing advanced connectivity and digital tools through AT&T Connected Fields at the Arthur M. Blank U.S. Soccer National Training Center. The deal aims to enhance player training, performance analysis, and fan engagement. However, AT&T faces intense competition from Verizon and T-Mobile, who are aggressively expanding their sports technology capabilities through 5G, AI, and immersive fan experiences.
+<<<INSIGHTS>>>
+T | neutral | While the extended U.S. Soccer partnership is positive for brand positioning and sports technology expansion, AT&T's stock has underperformed significantly (down 13% over the past year vs. industry growth of 95.6%), and the company carries a Zacks Rank #3 (Hold) rating. The partnership provides growth opportunities but doesn't offset competitive pressures.
+TBB | neutral | While the extended U.S. Soccer partnership is positive for brand positioning and sports technology expansion, AT&T's stock has underperformed significantly (down 13% over the past year vs. industry growth of 95.6%), and the company carries a Zacks Rank #3 (Hold) rating. The partnership provides growth opportunities but doesn't offset competitive pressures.
+TpA | neutral | While the extended U.S. Soccer partnership is positive for brand positioning and sports technology expansion, AT&T's stock has underperformed significantly (down 13% over the past year vs. industry growth of 95.6%), and the company carries a Zacks Rank #3 (Hold) rating. The partnership provides growth opportunities but doesn't offset competitive pressures.
+TpC | neutral | While the extended U.S. Soccer partnership is positive for brand positioning and sports technology expansion, AT&T's stock has underperformed significantly (down 13% over the past year vs. industry growth of 95.6%), and the company carries a Zacks Rank #3 (Hold) rating. The partnership provides growth opportunities but doesn't offset competitive pressures.
+VZ | positive | Verizon is actively expanding its sports technology presence with 5G infrastructure upgrades, connected watches for NFL officials, and AI-powered Sports Companion prototypes, demonstrating strong competitive positioning in the evolving sports technology market.
+TMUS | positive | T-Mobile is aggressively advancing its sports technology capabilities through 5G-powered camera innovations at Formula 1 events and AI-enabled Smart Operations Command Centers, showing strong momentum in capturing the sports technology market.
+TMUSI | positive | T-Mobile is aggressively advancing its sports technology capabilities through 5G-powered camera innovations at Formula 1 events and AI-enabled Smart Operations Command Centers, showing strong momentum in capturing the sports technology market.
+TMUSL | positive | T-Mobile is aggressively advancing its sports technology capabilities through 5G-powered camera innovations at Formula 1 events and AI-enabled Smart Operations Command Centers, showing strong momentum in capturing the sports technology market.
+TMUSZ | positive | T-Mobile is aggressively advancing its sports technology capabilities through 5G-powered camera innovations at Formula 1 events and AI-enabled Smart Operations Command Centers, showing strong momentum in capturing the sports technology market.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b203d49467fb9791756978bad71c1810325bd3d8ce7687ed9516416dc14bb297
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T13:00:04Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3035025/verizon-communications-inc-vz-is-attracting-investor-attention-here-is-what-you-should-know?cid=CS-ZC-FT-fundamental_analysis|most_searched_stocks-3035025
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default193.jpg
+category: 
+tickers: VZ
+keywords: Verizon Communications, earnings estimates, revenue growth, valuation, Zacks Rank, stock performance, telecommunications
+headline: Verizon Communications Inc. (VZ) is Attracting Investor Attention: Here is What You Should Know
+<<<SUMMARY>>>
+Verizon Communications has attracted investor attention with a +7.4% return over the past month, outperforming the S&P 500's -5% decline. The company is expected to post earnings growth of +5.5% for the current quarter and +7.6% for the fiscal year. However, with a Zacks Rank #3 (Hold) rating and modest revenue growth of +1.4-1.8%, the stock is expected to perform in line with the broader market in the near term. Verizon is trading at a discount to peers with an A valuation grade.
+<<<INSIGHTS>>>
+VZ | neutral | While Verizon shows positive earnings growth (+5.5-7.6%) and outperformed the market recently (+7.4%), the Zacks Rank #3 (Hold) rating and modest revenue growth (+1.4-1.8%) suggest the stock will perform in line with the broader market. The company's valuation is attractive (A grade), but earnings estimate revisions have been minimal over the past month, indicating limited near-term upside catalysts.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:ae1bf80f5e6614b8a34d2022961f5cfcb9454effe6b8e3a0734c311332f45f11
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T13:49:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3035187/can-lumen-s-improved-debt-profile-accelerate-its-digital-transition?cid=CS-ZC-FT-analyst_blog|quick_take-3035187
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default97.jpg
+category: 
+tickers: LUMN, T, TBB, TpA, TpC, VZ
+keywords: deleveraging, debt reduction, fiber-to-home divestiture, digital infrastructure, balance sheet restructuring, interest expense reduction, Network-as-a-Service, free cash flow
+headline: Can Lumen's Improved Debt Profile Accelerate Its Digital Transition?
+<<<SUMMARY>>>
+Lumen Technologies is restructuring its balance sheet by reducing debt through strategic initiatives including the $5.72 billion sale of its fiber-to-home business to AT&T, the $485 million Alkira acquisition, and copper decommissioning. These efforts have reduced annual interest expenses by nearly $500 million and improved financial flexibility. However, the company still carries significant debt of $13.2 billion and faces declining legacy revenues, with shares down 16% in the past month.
+<<<INSIGHTS>>>
+LUMN | neutral | While Lumen has made significant progress on deleveraging with $500 million in reduced annual interest expenses and improved financial flexibility, the company still carries substantial debt ($13.2 billion), faces declining legacy revenues, and stock performance has been weak (down 16% in past month). The positive debt reduction efforts are offset by structural challenges.
+T | neutral | AT&T acquired Lumen's fiber-to-home business for $5.72 billion, expanding its fiber footprint. However, the company's net debt-to-adjusted EBITDA ratio increased to 3.13X due to a $23 billion spectrum acquisition, though management expects improvement to 2.5X by 2029.
+TBB | neutral | AT&T acquired Lumen's fiber-to-home business for $5.72 billion, expanding its fiber footprint. However, the company's net debt-to-adjusted EBITDA ratio increased to 3.13X due to a $23 billion spectrum acquisition, though management expects improvement to 2.5X by 2029.
+TpA | neutral | AT&T acquired Lumen's fiber-to-home business for $5.72 billion, expanding its fiber footprint. However, the company's net debt-to-adjusted EBITDA ratio increased to 3.13X due to a $23 billion spectrum acquisition, though management expects improvement to 2.5X by 2029.
+TpC | neutral | AT&T acquired Lumen's fiber-to-home business for $5.72 billion, expanding its fiber footprint. However, the company's net debt-to-adjusted EBITDA ratio increased to 3.13X due to a $23 billion spectrum acquisition, though management expects improvement to 2.5X by 2029.
+VZ | positive | Verizon demonstrates strong financial health with robust cash generation (free cash flow up 14.3% YoY to $18 billion), improving net unsecured debt-to-adjusted EBITDA ratio at 2.3X, and a $9 billion cost reduction plan supporting deleveraging and network investments.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:050f86b2da7f1d2c40023a99ad2a61da05d1a18209c113cd15157829fe42b37f
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T15:30:05Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3035310/why-is-verizon-vz-up-7-4-since-last-earnings-report?cid=CS-ZC-FT-realtime_blog-3035310
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default223.jpg
+category: 
+tickers: VZ, T, TBB, TpA, TpC
+keywords: earnings report, Q3 2026, postpaid additions, margin expansion, revenue miss, guidance raise, wireless, broadband
+headline: Why Is Verizon (VZ) Up 7.4% Since Last Earnings Report?
+<<<SUMMARY>>>
+Verizon reported Q3 2026 adjusted EPS of $1.31, beating consensus estimates by 3.15%, with strong margin expansion and robust postpaid phone additions of 406,000. However, total revenues of $34.31 billion missed expectations by 1.43%, impacted by declining equipment sales. The company raised its 2026 earnings guidance to $5.04-$5.06 per share and increased postpaid phone net additions forecast to 1.1-1.2 million.
+<<<INSIGHTS>>>
+VZ | positive | Beat EPS estimates by 3.15%, achieved strongest Q3 postpaid phone additions in 5 years (406,000), expanded operating margins significantly, raised full-year earnings guidance to 7%-7.5% growth, and improved free cash flow by 12.1%. Despite revenue miss, strong profitability metrics and operational performance support positive outlook.
+T | neutral | Stock gained 9.3% over the past month, showing positive price momentum. However, assigned Zacks Rank #3 (Hold) with unchanged consensus estimates over 30 days, indicating no significant upward or downward estimate revisions. Performance is in line with industry peer dynamics.
+TBB | neutral | Stock gained 9.3% over the past month, showing positive price momentum. However, assigned Zacks Rank #3 (Hold) with unchanged consensus estimates over 30 days, indicating no significant upward or downward estimate revisions. Performance is in line with industry peer dynamics.
+TpA | neutral | Stock gained 9.3% over the past month, showing positive price momentum. However, assigned Zacks Rank #3 (Hold) with unchanged consensus estimates over 30 days, indicating no significant upward or downward estimate revisions. Performance is in line with industry peer dynamics.
+TpC | neutral | Stock gained 9.3% over the past month, showing positive price momentum. However, assigned Zacks Rank #3 (Hold) with unchanged consensus estimates over 30 days, indicating no significant upward or downward estimate revisions. Performance is in line with industry peer dynamics.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:80eb938a409b8920d99ff39d39811c7ced6f25ff05ec673264e13c7e401b485b
+symbol: VZ
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-27T15:30:24Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3036684/why-is-t-mobile-tmus-up-12-9-since-last-earnings-report?cid=CS-ZC-FT-realtime_blog-3036684
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default162.jpg
+category: 
+tickers: TMUS, TMUSI, TMUSL, TMUSZ, VZ
+keywords: earnings beat, service revenue growth, postpaid ARPA, guidance raised, account churn, free cash flow, shareholder returns
+headline: Why Is T-Mobile (TMUS) Up 12.9% Since Last Earnings Report?
+<<<SUMMARY>>>
+T-Mobile reported Q3 2026 earnings of $3.22 per share, beating estimates by 12.59%, with total revenues of $23.58 billion up 7.4% year-over-year. The company raised its 2026 core adjusted EBITDA guidance and free cash flow outlook, driven by strong service revenue growth and improved postpaid ARPA. However, postpaid net account additions slowed to 274,000 from 396,000 year-ago, and churn increased to 1.09%. T-Mobile received a Zacks Rank #3 (Hold) rating with an aggregate VGM Score of B.
+<<<INSIGHTS>>>
+TMUS | positive | T-Mobile beat Q3 earnings estimates by 12.59%, reported 33.6% YoY earnings growth, raised full-year 2026 guidance for EBITDA and free cash flow, and demonstrated strong service revenue growth of 6.2% YoY. The company also improved its net debt ratio and returned $3.5 billion to shareholders. Despite slower account additions and increased churn, the overall financial performance and raised guidance support a positive outlook.
+TMUSI | positive | T-Mobile beat Q3 earnings estimates by 12.59%, reported 33.6% YoY earnings growth, raised full-year 2026 guidance for EBITDA and free cash flow, and demonstrated strong service revenue growth of 6.2% YoY. The company also improved its net debt ratio and returned $3.5 billion to shareholders. Despite slower account additions and increased churn, the overall financial performance and raised guidance support a positive outlook.
+TMUSL | positive | T-Mobile beat Q3 earnings estimates by 12.59%, reported 33.6% YoY earnings growth, raised full-year 2026 guidance for EBITDA and free cash flow, and demonstrated strong service revenue growth of 6.2% YoY. The company also improved its net debt ratio and returned $3.5 billion to shareholders. Despite slower account additions and increased churn, the overall financial performance and raised guidance support a positive outlook.
+TMUSZ | positive | T-Mobile beat Q3 earnings estimates by 12.59%, reported 33.6% YoY earnings growth, raised full-year 2026 guidance for EBITDA and free cash flow, and demonstrated strong service revenue growth of 6.2% YoY. The company also improved its net debt ratio and returned $3.5 billion to shareholders. Despite slower account additions and increased churn, the overall financial performance and raised guidance support a positive outlook.
+VZ | neutral | Verizon reported modest revenue growth of 1.5% YoY and EPS growth of 8.3% YoY. The company received a Zacks Rank #3 (Hold) with a VGM Score of C, indicating in-line expected returns. While performance is solid, it lags T-Mobile's growth trajectory and shows more modest momentum in the wireless national industry.
+<<<END>>>

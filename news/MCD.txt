@@ -35922,3 +35922,1383 @@ ABT | positive | Company plans to spin off its troubled nutrition division, allo
 MCD | positive | Recently beat Q3 2026 earnings with upbeat management commentary on U.S. location performance and turnaround progress. Trading at 20x forward earnings versus historical 25-30x multiples, indicating room for appreciation. Consistent 50-year dividend growth history with 2.8% yield.
 TNC | positive | Dividend King with 55 consecutive years of increases, recently raised dividend 5%. Pivoting toward automated floor-cleaning equipment with strong catalysts: Q3 showed 6% revenue growth and 9.5% order growth. Stock down from $100+ in mid-2024 to mid-$70s, suggesting recovery potential despite near-term ERP and robotics investment costs.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143991020
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-20T19:21:31Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1e994f699a5929680de94e4e7e430e2e3292d98130b5056333e8d595ad26e6d0
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Peter Lynch Made Millions for Investors by Following One Simple Rule
+<<<SUMMARY>>>
+Peter Lynch told investors to buy what they know, but that was only half his rule. Home Depot and McDonald's pass the shopper test easily, so why do their latest quarters raise harder questions?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144185204
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T21:52:19Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=7f5a7e214d69d543468aa4db0db96e64820b5ebff89b1a65861a47c9e5b89edc
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1072593728/image_1072593728.jpg?io=getty-c-og
+category: company
+tickers: MCD
+keywords: 
+headline: Dividend Champion, Contender, And Challenger Highlights: Week November 29
+<<<SUMMARY>>>
+Dividend Champions, Contenders and Challengers: this week's roundup lists companies that changed payouts and upcoming ex-dividend dates and pay dates.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144176952
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T16:34:09Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb15634153f3d30ea5235e1ce3700472303fa1716abf8525ebc3ea38d3dda45c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Own SCHD? These 6 Dividend Aristocrats Are Protecting Your Income for 2027
+<<<SUMMARY>>>
+SCHD's dividend screens catch most trouble before it starts, yet one snack giant in the fund is stretching its payout thinner than the rest. Meanwhile, a famous 50-year streak holder sits outside the portfolio entirely.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144176990
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T16:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2b83b97de929b6975c6d96805ebda6e79132ace752a1b17cfce8b0dbdb64950c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's new deals take aim at Chili's and convenience stores
+<<<SUMMARY>>>
+You can get something for free and a popular sandwich for $2.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175948
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:09:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=03619b0b7980d399fd3d29a89ce1c8465511ed4aca71846a59f1bf2c5e0a1cea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Can McDonald's (MCD) Command A Premium Despite Its Costly Makeover Plan?
+<<<SUMMARY>>>
+McDonald's has delivered a 27.0% share price gain over the past five years, yet recent swings and fresh headlines now put a sharper spotlight on what investors are really paying for its cash flows. With the stock last closing at US$283.50 and the business investing heavily in its restaurants and technology, the question is how comfortably those ongoing cash streams sit behind today’s valuation. The 27.0% return over five years means anyone buying or holding McDonald's today is effectively...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175856
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:03:58Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6084e6adc33adf99b31d2150fae5929a0435ca36fd39f17e810a4547d4d1c742
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s Joined the Dividend Kings in September, but These 4 Have Been Kings for Decades
+<<<SUMMARY>>>
+A 50-year dividend streak proves a company has paid, not that it can keep paying. Five consumer giants now wear the Kings crown, yet each one faces a different threat to its next raise, and one carries a risk the market has already priced in.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175853
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T14:03:38Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f0247d5ae6d10def906e28f4a771ab1984d56ff2b5923aa0773afecb9afd2f30
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Forget Yield Chasing. These 5 Dividend Stocks Have Raised Payouts Through Every Recession Since the 1970s
+<<<SUMMARY>>>
+High yields tend to vanish when recessions hit, but a handful of blue chips kept raising payouts through six downturns. Each faces a real threat to its next raise, and one of them barely covers its dividend with free cash flow.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174484
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T12:43:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=403c74025f3447e260d05b6b1a63d4a7af58faed1989b771ff91048fc246a318
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: What Should McDonald's Stock Holders Watch Now?
+<<<SUMMARY>>>
+Today's big story: Anthropic Broke Its $83 IPO Price. What Did Facebook Do Next.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174485
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T11:09:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=e323c9b6788f753ce84a020aa9a9d4fe225d1f05acb28e37d8da22a47f4f8d2d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Can BROS' 100-Basis-Point SG&A Leverage Support 2026 Earnings Growth?
+<<<SUMMARY>>>
+BROS targets 100 basis points of SG&A leverage in 2026 as strong sales growth supports profitability. Yet rising shop-level costs are a concern.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175403
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T19:45:13Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=c623857e29ca92148325874764d3b697c811c306bb949f7a65d0767e6fbf7e13
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/valuestock_3.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Here's How Much $100 Invested In McDonald's 20 Years Ago Would Be Worth Today
+<<<SUMMARY>>>
+McDonald&#39;s (NYSE:MCD) has outperformed the market over the past 20 years by 1.49% on an annualized basis producing an average annual return of 9.92%. Currently, McDonald&#39;s has a market capitalization of $200.55
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144157744
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T18:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a6f949b332bf75ebebd296855946df1af3ce727d391e73401cefd8d42791b7ba
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Costco sells something consumers want even if they don't need it
+<<<SUMMARY>>>
+Seven in 10 Americans plan to spend less this holiday season, but one part of the warehouse just more than doubled its sales.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144159282
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T16:00:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=904b22906de97f0751237683c03e23e61eb3fb6d6f8587a3acc3d04643f308f6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: ‘I’d Be Having My Thanksgiving Dinner at McDonald’s’: Warren Buffett Credited ‘Uncle Sam’ for Saving His Holiday — And the U.S. Economy
+<<<SUMMARY>>>
+Buffett credited the U.S. government’s 2008 bailout response with preventing a financial collapse that could have changed everything.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144155985
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T14:38:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=56bba5954133e549573f0d6190e019ef4fdc52b7e08cff3cbbbffd549afac24b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: MCD's Entry-Level Value Push: A Key Catalyst for Its 2027 Outlook?
+<<<SUMMARY>>>
+McDonald's is testing affordable entry-level bundles at more than 5,000 U.S. restaurants, aiming to boost traffic and strengthen its 2027 growth outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144155915
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T14:07:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=00b509cfebeb2b53fae41775d3782f3e879043a44d7304aec7cf07ac49344cc4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s, Dunkin’ restaurants are open on Thanksgiving with a twist
+<<<SUMMARY>>>
+Many fast-food restaurants and coffee shops will open on Thanksgiving, but customers shouldn’t count on regular hours.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174592
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T13:30:06Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=ccb5df66e972d37b1ef55fd0bb8c8826eea84bad9b40c5c33328fc770d2dfb22
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/26/A-Person-Holding-A-Glp-1-Ozempic-Blue-An.jpg?width=2048&height=1536
+category: company
+tickers: MCD
+keywords: 
+headline: Walmart, McDonald's Are Rallying: GLP-1 Drugs Say the Food Trade Won't Last
+<<<SUMMARY>>>
+GLP-1 users could hit 60 million by 2030. Yet XLP just had its best two months vs. SPY since 1998 as money fled tech into food stocks.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154402
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T13:03:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=39a7b03b0b9d6a42685fe85bdd1cbb83889eb9b6f2c5063d239f96407a026312
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Big Yields Are Easy to Find. These 4 Dividend Stocks Cover Theirs With Cash to Spare
+<<<SUMMARY>>>
+A fat yield means little if the cash behind it runs thin. Four dividend payers, from a pipeline giant to a burger empire, pass a stricter test, though each carries one risk that could squeeze its next raise.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144128148
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T20:13:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d1ed4980418a67859788d282ba2548153112c64d8e5058f87ccdd8a473582799
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Here's How Much a $10,000 Investment in McDonald's Pays You Every Single Year
+<<<SUMMARY>>>
+For McDonald's stock, steady, consistently growing dividends are just one part of the recipe.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144128149
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T20:03:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a92f50f141d2c9f5508b8a009354b2b46bd0e42f65eda3c1de579e5674d75db3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Invest in Big Macs, Whoppers and Olive Garden Breadsticks for Passive Income: $90,000 Across These 3 Restaurant Stocks Pays More Than $2,600 a Year
+<<<SUMMARY>>>
+Every drive-thru run and family dinner at Olive Garden sends money out of your wallet. Three restaurant giants can send some of it back every quarter, but one of them cut its payout to pennies in 2020, and another faces a slump at home.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144127020
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T18:55:08Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ac0e8df2a8e7ad689d67a79d04677288065e810371ee3541afcda9ee23e74c3b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: How Nvidia's Jensen Huang Survived the Kind of Scandal That Ends CEO Careers
+<<<SUMMARY>>>
+Nvidia (NASDAQ:NVDA) CEO Jensen Huang got his job back on Monday after resigning amid reports of undisclosed relationships with employees. Other CEOs haven’t been so fortunate. Similar scandals have ended careers at McDonald’s, BP and Intel, costing some executives tens...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144125879
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T16:03:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ea17ce26c26f84f0d1ef1eedb0a0175b8779b3f12a3518533687d394d707293d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Is UBER's Expansion in Auto Parts Delivery Business a Growth Catalyst?
+<<<SUMMARY>>>
+UBER's partnership with AutoParts.com expands its delivery ecosystem, unlocking new revenue opportunities and strengthening its long-term growth prospects.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122493
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:03:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1f5e8753f2e5e2d16da84f7ac14faf725ee18c2492d0fc06695146f1fade16cb
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: These 5 Dividend Stocks Are Brands You Use Every Day
+<<<SUMMARY>>>
+Burgers, wireless plans, soda and snacks already drain your wallet every week. Five of those brands pay you back through dividends, but each one hides a risk that could shrink your next raise.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144127002
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T12:30:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d46408b301693ddbc720c0e4d055d89d432f0e88a3bb9255ccd20341a9cbdf23
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: 3 Top Dividend Stocks to Buy and Hold for Decades
+<<<SUMMARY>>>
+Looking beyond high yields, PG, KO, and MCD offer the potential for decades of dividend income and long-term returns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122974
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T09:02:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=94875ef1889ac6238f9b22495500c5bbf5842927527bfe923031c7559ab1f0d0
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2235939814/image_2235939814.jpg?io=getty-c-og
+category: company
+tickers: MCD
+keywords: 
+headline: Best Dividend Aristocrats For December 2026
+<<<SUMMARY>>>
+The bull case for Dividend Aristocrats: 27 potentially undervalued picks may return at least 10% annually, led by FactSet at an estimated 22.4%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144101749
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T05:10:44Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5d45c7d8e3c34f27f8a26a71f20e81492df0e85af12c0577c0808b196d988e80
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD), What Is Behind The Fresh Attention?
+<<<SUMMARY>>>
+McDonald's (MCD) is back in the spotlight as early signs of a U.S. sales recovery intersect with costly restaurant remodels, value bundle tests, and franchisee pushback, which is sharpening investor attention on execution risk. Recent trading reflects that mix of optimism and caution. McDonald's 1 month share price return of 12.98% and 90 day gain of 5.16% point to building momentum from the remodel and value-menu narrative, even though the year to date share price is still down 7.44% and the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144092449
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T22:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6b273603f033383dec135e608acaf72e1490742e4d44c5abaaa1f9ce29bdcde4
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Wendy’s has inflated prices for up to 10 years, lawsuit claims — weeks after McDonald's was accused of a similar scheme
+<<<SUMMARY>>>
+The suit says a point-of-sale system did more than ring up orders. It allegedly fed data into pricing decisions across the whole franchise network.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144098215
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T21:12:54Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=dca74df97a8326e1faf36c3b8f635c4fe210ddc22d70a6c363c6c3718d6fcc30
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2226751695/image_2226751695.jpg?io=getty-c-og
+category: company
+tickers: MCD
+keywords: 
+headline: Best Dividend Kings: November 2026
+<<<SUMMARY>>>
+The bull case for Dividend Kings: 26 appear undervalued and could deliver annualized returns above 10%; Gorman-Rupp leads at 19.6%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144089102
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T20:12:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4eda62dcd6f61ff93f5fcb3cea582feaf041081cfb0e4b888054899638339632
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: 3 Non-AI Stocks to Buy for Long-Term Dividends and Stability
+<<<SUMMARY>>>
+These stocks have limited exposure to artificial intelligence and pay between 2.7% and 5.6% in dividends.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088087
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T18:09:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fbf6a8c01661c10471b0902fa61ac1f1322c7bdf636276aee8631f80f95d225b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: What Could Lift Chipotle Stock Further?
+<<<SUMMARY>>>
+For questions about this article or underlying research, email help@trefis.com.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140915424
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:48:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ab8372ecfee687d7abf018b7dce66c686ad6cd08febf8c3946af69c275a4cd45
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Best Dividend Stocks to Buy for Dependable Dividend Growth
+<<<SUMMARY>>>
+How do you find the best dividend stocks to buy? Income investors know there's no substitute for regular dividend increases over the long haul.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088023
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:47:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=395566d38f0da7f0fd4cede44e83f3a9c702480151dc124c58d4b3ad23b250aa
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Everyone Predicted a Retail Apocalypse. Instead, Store Vacancies Are Near Lows.
+<<<SUMMARY>>>
+Some stores have gone dark. But other retail operators may have a new lease on life.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088086
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:44:18Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b449c82a9567f218fa73cb65367a7674fe448ccbc0701151532a4b4885e77c89
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Wendy’s conspired with software company to hike menu prices nationwide: lawsuit
+<<<SUMMARY>>>
+The complaint follows a lawsuit against McDonald’s over its alleged misuse of technology tools to illegally set prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088085
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:28:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=91f5a0c375bdb1b0aaee74c4a5ee7ce793325ae4b6d3cc64882ef3cfe1b05304
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Crispier Chicken and Remodels Pit McDonald's Against Franchisees
+<<<SUMMARY>>>
+Franchise owners are pushing back on the CEO's multibillion-dollar plan to tear down walls, add big video screens and make hand-breaded chicken. Bloomberg's Daniela Sirtori reports.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144086931
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T16:17:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fb7b299f98124933aa5ade2dda565e1d7dcb354a8d668d21a3c03cf9b6f866ec
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's Moves on Makeover; Dick's Sporting Goods Up on Earnings | Stock Movers
+<<<SUMMARY>>>
+On this episode of Stock Movers: - Anthropic (ANT) shares are lower and briefly traded below their $83 initial public offering price in premarket trading, wiping out gains for investors who piled into the artificial intelligence lab's record-setting debut. - McDonald's (MCD) shares are moving on news the company's betting big on a makeover to win back customers. The chain is tearing down kitchen walls, adding hand-breaded chicken and trendy drinks, plus testing AI to take drive-thru orders. However, the nearly $800-thousand price tag per restaurant has franchisees pushing back and convincing them of the overhaul is becoming a big challenge for the fast food giant. - Dick's Sporting Goods (DKS) shares are climbing after the retailer's third-quarter results easily topped Street expectations. Management also boosted its adjusted EPS forecast for the full year, as well as the low end of its Dick's stores comparable sales target.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085580
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=fe594ea4551bbf91c8d08ea4d00a6b11a57b999d79d6956b48dd26657686f259
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: MCD vs. QSR: Which Restaurant Stock Looks More Attractive?
+<<<SUMMARY>>>
+MCD edges QSR with improving U.S. sales, stronger customer traffic and value-focused offerings, while both restaurant stocks trade below historical valuation averages.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082936
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T11:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=dce85160d71182f9bc2baa1570f74242a31264c7a687ae52e55bdee209bb2a5e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: E-Commerce Is Unstoppable. But Bricks and Mortar May Still Have a Bright Future.
+<<<SUMMARY>>>
+Some stores have gone dark. But other retail operators may have a new lease on life.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144081585
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T11:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4645872fa9492525435535e72e45cf4b7df5658fd810a67cff4e864c6653c0d5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Monroe Capital Supports Waveborn’s Acquisition of Jake Rosen Entertainment
+<<<SUMMARY>>>
+CHICAGO, November 24, 2026--Monroe Capital LLC ("Monroe") announced it acted as sole lead arranger and administrative agent on the funding of a senior credit facility to support the acquisition of Jake Rosen Entertainment ("JRE") by Waveborn, a new investment platform formed by private equity sponsor H.I.G. Growth Partners.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144076111
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T09:26:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=04351de58efedd688241824bc720915a6fbcab26f5af869ab265052b4481d2f3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: President Donald Trump's Investment Team Dumped McDonald's in September and Bought Up to $25 Million of a Time-Tested Dividend ETF
+<<<SUMMARY>>>
+The president disclosed 751 trades in September, with one low-cost exchange-traded fund (ETF) topping the buy list.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144054639
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T22:31:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=def4b7e676d16e1619de604334869eff8eb446a8d767305ba248cc959d372104
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Colgate-Palmolive vs. McDonald's: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Two consumer goods company giants, one leaning on Walmart and the other on thousands of franchisees, offer very different routes to steady returns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144051541
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T17:29:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ecd44826c955ba34ddb453cfdaa68fcaa029ae091e6b7c0b7aa5697b7ce31c8a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s and Burger King Items Come in ‘Lighter’ in Price vs. Portion Tests
+<<<SUMMARY>>>
+Fast food diners paying nearly 40 percent more at the drive-thru than they did in 2019 may also be getting lighter portions for their money, according to a new investigation. Boston 25 News put three popular menu items to the scale across six Massachusetts communities – Boston, Dedham, Norwood, Walpole, Hudson and Milford – purchasing […]
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144050338
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T14:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ba6612ae9affcfb2bdcc8e4a06348e96d5b235b0c10abd2f6eb9429dbf3e614c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Can Starbucks' Development Reset Strengthen Future Store Returns?
+<<<SUMMARY>>>
+SBUX is resetting its North American expansion strategy with smaller stores and targeted upgrades to improve future store economics.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048441
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T13:38:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f7e32176dbcd42baa1b0c6083a4880ac6cddad2e548c689c48c5f36c1c4c100c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Is The Market Underpricing McDonald's Stock?
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144048611
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:45:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1b1f02f88053862e13123ac674f7cff6b5d327b8335d2060a947482b01ae7424
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD) Has Raised Its Dividend 50 Straight Years. I'd Buy It in November and Never Sell.
+<<<SUMMARY>>>
+It's no small feat to maintain such a streak -- it reflects very well on a company.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144030297
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T04:05:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=55afff3e17ea6a802305ffa1bada4f47c64abe9539c8855f4aadf6fd3f7dc547
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's, Burger King and Chick-fil-A food weighed in lighter than 2018 benchmarks — twice. Are you getting less?
+<<<SUMMARY>>>
+Two TV newsrooms put McNuggets, Whoppers, and Chick-fil-A sandwiches on a kitchen scale and compared their weights to what the USDA said they weighed years ago. Here's what the scale showed, what the chains had to say and why your drive-thru bag might feel lighter.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144025904
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T19:31:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=353d8c70c099f419921c3360af7d40ef78a5f31d955c7870d2afebe3d08eb97a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: lululemon athletica vs. McDonald's: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+Lululemon trades at a far lower forward P/E than McDonald's, but a sharp gap in debt and cash flow profiles changes how each stock fits a portfolio.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144024471
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T15:21:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6a108e1f71d43791cc54bbd598edb232f5d50ae4f39e7b6043d6eceae487bfb1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: DoorDash Just Dropped 11% in a Week. Is It Time to Sell, or Load Up?
+<<<SUMMARY>>>
+Key TakeawaysDoorDash shares fell 11% in a week, mostly in a sell-off that took the Nasdaq 100 down about as much. Its one piece of news was a report that the Justice Department will review its $17 billion Instacart deal.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144023616
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T13:20:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=959f4b2c54a3df285c1b334001d217ae7383881b68aa9a37ab7ebb11064cda67
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: If I Were Building a Portfolio From Scratch With $10,000, I’d Anchor It With This Unassuming Value Stock
+<<<SUMMARY>>>
+This stock has beaten the S&P 500 over the past 25 years and outperforms during downturns.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144021554
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-22T05:33:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2c9e0d32f17a934595ea1777c3677776b2037778566d08aeb7d148744d298b9c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: The $15M founder who went to work at McDonald’s
+<<<SUMMARY>>>
+The $15M founder who went to work at McDonald’s
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144016433
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T18:06:17Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=aa82fa939c0c2c60f3fa1cbbd89e8e8ffbcf57f7b03b3341d0ada354fb78953e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's (MCD) Value Lead Meets A Loyalty Gap In New Zappi Research
+<<<SUMMARY>>>
+McDonald's (NYSE:MCD) is the focus of new Zappi research on fast food value perceptions and loyalty in 2026. The study finds McDonald's leads on value deals but trails rivals on emotional loyalty among frequent fast food users. Zappi reports McDonald's is not viewed as a clear leader for family or dinner occasions despite its broad menu and footprint. The Zappi findings on value leadership and weak emotional loyalty only capture part of the McDonald's story for investors. Our analysis turns...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144015609
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T16:51:23Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=86ae0537745940ac094aa9983e153e8aa4ddcb9e68bf7d2312e61394433194a9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: How Many Shares of McDonald’s, Starbucks or Darden Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, $1,000 a month in dividends takes about $424,900 of McDonald’s stock, about $418,100 of Darden Restaurants or about $491,100 of Starbucks. McDonald’s paid out 70% of its free cash flow as dividends over the last 12 months, and analysts expect 69% for fiscal 2026.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144014754
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T15:37:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f12028a42abd1e38c8057b655c955b59782fbe592bc1c8291ff335a2b1473a61
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: 7-Eleven, Wawa, and Circle K are coming for McDonald’s customers
+<<<SUMMARY>>>
+Forget roller dogs and old pizza, the convenience chains are going fresher and cheaper.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144014651
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T15:01:49Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=6743941ab6b750b43dafef6f000151d29e4d559897ed23e23a68e4f58108bd0a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Trump Calls Huang’s Exit “Such a Tragedy” as His Filing Shows Up to $380,000 of Nvidia Buys
+<<<SUMMARY>>>
+Key TakeawaysTrump’s September trading report shows up to $380,000 of Nvidia buys, plus Tesla and SpaceX, and sales of $1 million to $5 million each of Home Depot and McDonald’s. The White House says outside firms run the portfolio, and most of the month’s money went into a dividend ETF and municipal bonds.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144012464
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T13:03:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b6d1fa59ef59ce02a68d5e60e425cf14c27dcc6722536e7caad506e46d0c0075
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: 5 Dividend Kings to Buy for Lifelong Income Before the End of November
+<<<SUMMARY>>>
+A fat yield means nothing if the cash behind it dries up. Five companies with 50-plus years of dividend raises put safety ahead of income, yet one of them leaves almost no room for error.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144013088
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T12:30:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=990a897095639b9a2030e84093f975dcd2c24c77b7193dca376cfc714a82a101
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald’s, Publix and Trader Joe’s inducted into ‘Toxic Hall of Shame’ — hit with F grades for chemicals and plastics
+<<<SUMMARY>>>
+The companies are among 16 retailers that earned failing grades for chemical safety as more Americans question the ingredients in their food and everyday products.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144208591
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T13:00:43Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=861f71a3f1fb2a02015fcb4a8ed87f05672a5c88b9b85de57fb0b29ed70ad153
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: Apple, Amgen Lead 5 Dow Jones Stocks Near Buy Points
+<<<SUMMARY>>>
+These Dow Jones components have show strong relative strength in a tricky market. Most are actionable now, including Apple stock.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144207869
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T11:21:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=92f2d9d187626d857824ad5de90fe3016fa5a23d58682d927a14550fc1900afc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MCD
+keywords: 
+headline: How Many Shares of Starbucks, Darden or McDonald’s Pay $1,000 a Month in Dividends?
+<<<SUMMARY>>>
+Key TakeawaysAt today’s prices, $1,000 a month in dividends takes about $439,500 of McDonald’s stock, about $450,500 of Darden Restaurants or about $518,100 of Starbucks. McDonald’s pairs the lowest cost with steady coverage, with its dividend taking 70% of free cash flow over the last 12 months.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144203766
+symbol: MCD
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T04:59:28Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=1d782f2972ed45c8085c96f9905a956d60e2fc7ec5888cfabb0d6070ddb28b84
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/1371448871/image_1371448871.jpg?io=getty-c-og
+category: company
+tickers: MCD
+keywords: 
+headline: McDonald's: Not As Affordable For Customers, Not Good Value For Investors
+<<<SUMMARY>>>
+McDonald's stock is considered to have upside toward its trading-range high after a support bounce; margins could reach 48% within 2 years.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:42459d651de07a733598036a0a0c489fa6298eb673b57c55e5a47e324b149f61
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-21T12:40:02Z
+publisher: The Motley Fool
+author: Thomas Niel
+url: https://www.fool.com/investing/2026/11/21/heres-how-many-shares-of-starbucks-youd-need-to-cover-744-in-coffee-using-dividends-alone/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F8ba38995dd23ca7b1b55a664e09bc3ac38554578-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: SBUX, MCD
+keywords: dividend yield, Starbucks valuation, consumer discretionary, dividend growth, stock valuation premium, earnings multiple
+headline: Here's How Many Shares of Starbucks You’d Need to Cover $744 in Coffee Using Dividends Alone
+<<<SUMMARY>>>
+To cover $744 in annual Starbucks coffee purchases through dividends alone, you would need to invest approximately $31,524 in Starbucks stock (296 shares at $106.50). While the company pays $2.52 per share annually, the analyst cautions against this investment due to Starbucks' high valuation at 33.5x forward earnings and slowing dividend growth of only 1.6%, suggesting the stock lacks compelling upside potential despite recent strong performance.
+<<<INSIGHTS>>>
+SBUX | negative | The article expresses skepticism about Starbucks as an investment despite recent strong performance. Key concerns include: (1) high valuation at 33.5x forward earnings compared to peers like McDonald's, (2) slowing dividend growth at only 1.6% recently versus historical 8% average, (3) vulnerability to earnings disappointments that could reverse the rally, and (4) questionable upside potential following the recent stock rally. The analyst explicitly recommends skipping Starbucks shares for now.
+MCD | neutral | McDonald's is mentioned only as a valuation comparison point, noting that Starbucks trades at a significant premium to McDonald's. No independent analysis or recommendation regarding McDonald's is provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:aa17f5b7234e0801612a3d45642ad997c2d4d190031389373dc080b75d03b88a
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-22T19:11:54Z
+publisher: The Motley Fool
+author: Sara Appino
+url: https://www.fool.com/coverage/better-buy/2026/11/22/lululemon-athletica-vs-mcdonalds-which-consumer-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F497213577468110e4ae04f3160ed91a99378c474-1280x853.jpg&w=1200&op=resize
+category: 
+tickers: LULU, MCD
+keywords: consumer stocks, valuation comparison, dividend growth, franchise model, cash flow, brand loyalty, investment recommendation
+headline: lululemon athletica vs. McDonald's: Which Consumer Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares lululemon athletica and McDonald's as investment options for 2027. While lululemon trades at a lower valuation (Forward P/E of 10.9x vs 21.1x) with strong brand loyalty and healthy financials, McDonald's is recommended as the better buy due to its superior cash flow generation ($7.2B vs $921.7M), 50-year dividend growth streak, and resilient franchise model. Lululemon faces headwinds with declining North American sales and a leadership transition, while McDonald's demonstrates consistent global growth and shareholder returns.
+<<<INSIGHTS>>>
+LULU | neutral | While lululemon has a premium brand, strong gross margins (56.04%), and attractive valuation metrics, the article highlights significant concerns including declining North American sales, reduced full-year outlook, and CEO transition. The company shows financial strength but faces near-term operational challenges.
+MCD | positive | McDonald's is recommended as the superior investment choice due to its proven franchise model generating $7.2B in free cash flow, 50-year dividend growth streak, global scale with 45,000+ locations, resilience through pricing power, and recent positive U.S. sales momentum. The company demonstrates consistent shareholder returns and brand strength.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:3103b1c90f796d317dd9f8c28bd79104b236e3183779bd8081acd21753e148ec
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T01:00:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/23/3407992/0/en/foodservice-market-in-malaysia-2026-2032-usd-34-24-billion-forecast-as-digital-ordering-and-urbanization-accelerate-growth-reports-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: MCD, SBUX, MXUBY
+keywords: foodservice market, Malaysia, digital ordering, cloud kitchens, urbanization, mobile applications, prepared-meal venues, franchise expansion
+headline: Foodservice Market in Malaysia 2026–2032: USD 34.24 Billion Forecast as Digital Ordering and Urbanization Accelerate Growth, Reports Mordor Intelligence
+<<<SUMMARY>>>
+Malaysia's foodservice market is projected to grow from $16.67 billion in 2026 to $34.24 billion by 2032, with a CAGR of 12.68% during 2027–2032. Growth is driven by digital ordering adoption, urban infrastructure development, and the expansion of cloud kitchens that enable smaller producers to access equipped facilities and online sales channels.
+<<<INSIGHTS>>>
+MCD | neutral | Mentioned as an established chain competitor in Malaysia's fragmented foodservice market, but no specific growth initiatives or challenges highlighted.
+SBUX | positive | Berjaya Starbucks Coffee Company is listed as a key player, and café openings in Klang Valley reflect strong demand for western pastries and specialty beverages.
+MXUBY | positive | Secured halal certification for over 100 outlets in 2025, demonstrating competitive differentiation and expansion in a key market requirement.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:250876bad26cce11012d8786b1d86bdb5c5c861a222e000f89254fd81660fbb0
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T12:25:00Z
+publisher: The Motley Fool
+author: Selena Maranjian
+url: https://www.fool.com/investing/2026/11/23/mcdonalds-mcd-raise-dividend-50-year-buy-sell/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fg.foolcdn.com%2Feditorial%2Fimages%2F893385%2Ffool-mcdonalds-mcd-mcdonalds.jpg&w=1200&op=resize
+category: 
+tickers: MCD, PG, KO, LOW
+keywords: dividend increase, Dividend Kings, McDonald's, valuation, real estate model, franchisee, long-term investment, shareholder returns
+headline: McDonald's (MCD) Has Raised Its Dividend 50 Straight Years. I'd Buy It in November and Never Sell.
+<<<SUMMARY>>>
+McDonald's achieved its 50th consecutive annual dividend increase, joining the elite 'Dividend Kings' club. The company announced a 4% dividend hike to $1.93 per share quarterly. With an attractive business model combining fast-food operations with real estate ownership, a reasonable valuation, and a 2.83% dividend yield (nearly 4% including buybacks), the article suggests McDonald's is worth considering for long-term investors.
+<<<INSIGHTS>>>
+MCD | positive | 50 consecutive years of dividend increases demonstrates financial stability and resilience through economic cycles. The company has an attractive dual business model (fast-food + real estate), reasonable valuation metrics below five-year averages, and strong quarterly earnings growth. The author recommends it as a long-term hold for dividend investors.
+PG | positive | Mentioned as an elite Dividend King with 70 consecutive years of dividend increases, demonstrating exceptional long-term financial performance and stability.
+KO | positive | Cited as a Dividend King with 64 consecutive years of dividend increases, indicating strong sustained financial performance and shareholder returns.
+LOW | positive | Listed as a Dividend King with 64 consecutive years of dividend increases, demonstrating long-term financial stability and commitment to shareholders.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e695fb31b7e1c89e030ca4e81c4fe53a23fd4fa36e16f0dcd6f9314cdca0f91d
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T14:42:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3033915/can-starbucks-development-reset-strengthen-future-store-returns?cid=CS-ZC-FT-analyst_blog|quick_take-3033915
+image_url: https://staticx-tuner.zacks.com/images/articles/main/42/519.jpg
+category: 
+tickers: SBUX, BROS, MCD
+keywords: store expansion, licensed locations, smaller-format coffeehouses, store closures, revenue pressure, capital expenditures, store upgrades, disciplined expansion
+headline: Can Starbucks' Development Reset Strengthen Future Store Returns?
+<<<SUMMARY>>>
+Starbucks is rebuilding its North American development pipeline with plans for 90-100 net new coffeehouses in fiscal 2027, approximately half from licensed locations. The company sees long-term potential for 5,000 additional stores and plans 2,000+ upgrades. However, recent closures of underperforming locations are expected to pressure regional revenue growth in early fiscal 2027, though smaller-format stores and capital investments could improve future store economics.
+<<<INSIGHTS>>>
+SBUX | positive | Starbucks demonstrates strategic growth initiatives with 90-100 planned net new stores, 5,000 long-term expansion opportunity, and 2,000+ store upgrades. Stock has outperformed industry by 23.8% in the past year. Consensus earnings estimates increased in past 30 days with projected 18% EPS growth in fiscal 2027. However, near-term revenue pressure from recent closures and Zacks Rank #3 (Hold) rating temper the outlook.
+BROS | neutral | Dutch Bros is mentioned as an industry peer for comparison purposes only. Stock has declined 38.6% in the past year with lower P/S multiple (2.22) and higher projected earnings growth (25.6% in 2027), but no specific news or analysis about the company is provided in the article.
+MCD | neutral | McDonald's is mentioned as an industry peer for valuation and earnings comparison. Stock declined 10.4% in the past year with higher P/S multiple (6.83) and lower projected earnings growth (5.8% in 2027), but no specific company news or analysis is provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:efd92277622e623f38043a852eb0c397cff442bc8397f6d1acc747176c8c64a0
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-23T22:11:02Z
+publisher: The Motley Fool
+author: Lawrence Rothman, Cfa
+url: https://www.fool.com/coverage/better-buy/2026/11/23/colgate-palmolive-vs-mcdonalds-which-consumer-goods-stock-is-a-better-buy-for-2027/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fe6290c224b5111dd1e3935076dac60cc7210df17-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: CL, MCD, WMT
+keywords: consumer staples, dividend stocks, franchise model, dividend aristocrats, mature companies, valuation comparison, business models
+headline: Colgate-Palmolive vs. McDonald's: Which Consumer Goods Stock Is a Better Buy for 2027?
+<<<SUMMARY>>>
+The article compares Colgate-Palmolive and McDonald's as investment options for 2027. Colgate-Palmolive offers stability through essential household products sold globally but faces customer concentration risk with Walmart accounting for 11% of sales. McDonald's leverages a highly profitable franchise model with 95% independently operated locations, generating recurring rent and royalties with a 32.4% net margin. Both are Dividend Kings with 50+ years of consecutive dividend increases. The author recommends McDonald's for 2027 due to its higher dividend yield (2.8% vs. 2.2%), asset-light business model, and superior free cash flow generation.
+<<<INSIGHTS>>>
+CL | neutral | Solid fundamentals with global brand portfolio and 63-year dividend history, but faces customer concentration risk (11% from Walmart), competition from private labels, and geopolitical risks. Higher forward P/E (25.2x) and lower dividend yield (2.2%) make it less attractive than McDonald's for 2027.
+MCD | positive | Recommended as the better choice for 2027 due to superior profitability (32.4% net margin), asset-light franchise model generating recurring revenue, higher dividend yield (2.8%), lower forward P/E (21.1x), and strong free cash flow generation. 50-year dividend increase history demonstrates financial strength.
+WMT | neutral | Mentioned as a significant customer concentration risk for Colgate-Palmolive, representing 11% of sales and giving the retailer substantial bargaining power over trade discounts.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:55185889a860d9fb642044fdfbe1e6001de4fc0bf16b1689819cebc24d21470f
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T09:06:02Z
+publisher: The Motley Fool
+author: Sean Williams
+url: https://www.fool.com/investing/2026/11/24/donald-trump-investment-team-dumped-mcdonalds-september-bought-25-million-time-tested-dividend-etf/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F956a300d0b9bf6ae32afc1bb02ed61b034787f1a-3000x2000.jpg&w=1200&op=resize
+category: 
+tickers: MCD, VIG
+keywords: Trump investment portfolio, McDonald's stock sale, Vanguard Dividend Appreciation ETF, dividend stocks, inflation pressures, ETF investment strategy
+headline: President Donald Trump's Investment Team Dumped McDonald's in September and Bought Up to $25 Million of a Time-Tested Dividend ETF
+<<<SUMMARY>>>
+President Trump's investment team executed 751 trades in September 2026, selling up to $5 million in McDonald's stock while purchasing up to $25 million in the Vanguard Dividend Appreciation ETF. The McDonald's sale reflects concerns about inflation pressures on the company's margins and long-term investment timelines, while the VIG purchase aligns with a preference for established dividend-paying companies with strong track records.
+<<<INSIGHTS>>>
+MCD | negative | Trump's team sold up to $5 million in McDonald's stock. The article cites multiple headwinds including inflation pressures on margins, risks to the value menu, potential customer pushback from price increases, and long-term investment timelines (up to 2036) before benefits materialize in a growth-dominated market.
+VIG | positive | Trump's team purchased up to $25 million in this ETF. The article highlights its appeal: ultra-low expense ratio (0.04%), focus on 333 large-cap companies with 10+ years of dividend increases, avoidance of yield traps, historical outperformance (10.22% annual return vs 4.21% for non-dividend payers), and suitability as a hedge in an expensive stock market.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:588be48af60b1c2ee4a2e61ff76c8df460176891a32b10725f3e7a1905bfbbce
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T19:52:02Z
+publisher: The Motley Fool
+author: David Jagielski, Cpa
+url: https://www.fool.com/investing/2026/11/24/3-non-ai-stocks-to-buy-for-long-term-dividends-and-stability/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2F4bd5a57b5444adc312558038905d0e067cc293cd-2000x1333.jpg&w=1200&op=resize
+category: 
+tickers: MCD, O
+keywords: dividend stocks, non-AI stocks, long-term investing, blue-chip stocks, dividend yield, stable investments, oil and gas, fast food, REIT
+headline: 3 Non-AI Stocks to Buy for Long-Term Dividends and Stability
+<<<SUMMARY>>>
+As AI stocks face valuation concerns, three dividend-paying blue-chip stocks offer stable long-term investments with limited AI exposure: ExxonMobil (2.7% yield, benefiting from elevated oil prices), McDonald's (2.8% yield, 50-year dividend growth streak), and Realty Income (5.6% yield, diversified REIT with minimal data center exposure).
+<<<INSIGHTS>>>
+MCD | positive | Pays 2.8% dividend yield, recently achieved Dividend King status with 50-year dividend growth streak; strong business model with low-cost meal options provides recession resilience; described as 'no-brainer stock' for long-term investors.
+O | positive | Highest dividend yield on list at 5.6%; pays monthly dividends; has increased dividend for decades; diversified portfolio with minimal AI exposure (only 4 data center properties out of 15,536 total); suitable for income-focused investors.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:f7bc0e4955032972f162c554e148791d4e7c713f244b77448d75fee50a3e1cb8
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T16:03:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3035369/is-uber-s-expansion-in-auto-parts-delivery-business-a-growth-catalyst?cid=CS-ZC-FT-analyst_blog|quick_take-3035369
+image_url: https://staticx-tuner.zacks.com/images/articles/main/44/1814.jpg
+category: 
+tickers: UBER, KSS, MCD
+keywords: on-demand delivery, automotive parts, marketplace diversification, customer engagement, retail expansion, delivery services
+headline: Is UBER's Expansion in Auto Parts Delivery Business a Growth Catalyst?
+<<<SUMMARY>>>
+Uber has partnered with AutoParts.com to expand its on-demand delivery platform into automotive parts and accessories through Uber Eats. The initiative diversifies Uber's delivery marketplace beyond restaurants into groceries, beauty, electronics, and now auto parts, aiming to increase customer engagement and order frequency. Recent partnerships with Kohl's and McDonald's further strengthen Uber's position as a multi-category delivery platform.
+<<<INSIGHTS>>>
+UBER | positive | Expansion into auto parts delivery diversifies revenue streams, reduces dependence on restaurant deliveries, strengthens customer engagement, and attracts new users. Multiple recent partnerships (AutoParts.com, Kohl's, McDonald's) demonstrate momentum in multi-category delivery strategy. However, stock has underperformed YTD and carries a Zacks Rank #3 (Hold), tempering enthusiasm.
+KSS | positive | Nationwide partnership with Uber Eats expands retail reach across 1,100+ stores, providing customers with convenient scheduled and on-demand delivery options for apparel, footwear, and home essentials.
+MCD | positive | Multi-year expansion of partnership across 14 international markets strengthens delivery services and integrates loyalty benefits, establishing Uber as preferred delivery fulfillment partner.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:371cdd5d2624e5f63b54d3664201b150a78b8e09665709aabd36486892827beb
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T19:53:02Z
+publisher: The Motley Fool
+author: Thomas Niel
+url: https://www.fool.com/investing/2026/11/25/heres-how-much-a-10000-investment-in-mcdonalds-pays-you-every-single-year/?source=iedfolrf0000001
+image_url: https://g.foolcdn.com/image/?url=https%3A%2F%2Fcdn.content.foolcdn.com%2Fimages%2F1umn9qeh%2Fproduction%2Fe6290c224b5111dd1e3935076dac60cc7210df17-1290x860.jpg&w=1200&op=resize
+category: 
+tickers: MCD, KO
+keywords: dividend growth, Dividend King, McDonald's, dividend yield, consumer staples, turnaround strategy
+headline: Here's How Much a $10,000 Investment in McDonald's Pays You Every Single Year
+<<<SUMMARY>>>
+McDonald's has achieved Dividend King status with its 50th consecutive annual dividend increase. A $10,000 investment generates approximately $277.92 in annual dividend income at a 2.8% yield. While the stock has underperformed in 2026, analysts view current valuations as favorable for dividend growth investors, with potential upside if the company's turnaround efforts succeed and the stock rebounds to historical highs.
+<<<INSIGHTS>>>
+MCD | positive | Achieved Dividend King status with 50 consecutive dividend increases. Current valuation offers attractive entry point with 2.8% dividend yield. Strong potential for total returns through dividend growth and stock price appreciation if turnaround efforts succeed. Company has historically overcome headwinds and could reach new all-time highs.
+KO | neutral | Mentioned as a comparison point for valuation multiples (trading at 25x forward earnings vs McDonald's at 20x), indicating it trades at a premium. No direct investment recommendation or analysis provided.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:40a4b059559d05ec09f0ee148d93a2292bcecfc3c5c6e0980c8b5e51d7eb3360
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T14:38:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3035922/mcd-s-entry-level-value-push-a-key-catalyst-for-its-2027-outlook?cid=CS-ZC-FT-analyst_blog|quick_take-3035922
+image_url: https://staticx-tuner.zacks.com/images/articles/main/6f/392.jpg
+category: 
+tickers: MCD, QSR, WEN
+keywords: value strategy, affordable bundles, quick-service restaurants, price-sensitive consumers, comparable sales, franchisee margins, menu innovation
+headline: MCD's Entry-Level Value Push: A Key Catalyst for Its 2027 Outlook?
+<<<SUMMARY>>>
+McDonald's is testing affordable menu bundles at 1,900 restaurants with franchisees adopting similar offerings at 4,000 more locations, covering over 40% of the U.S. system. The initiative aims to attract budget-conscious consumers and improve traffic after comparable sales declined 0.2% in Q3. Extra Value Meals showed 7% year-over-year unit sales growth. A nationwide rollout is expected in early 2027, with earnings estimates implying 5.9% and 5.2% growth for 2026 and 2027 respectively.
+<<<INSIGHTS>>>
+MCD | positive | McDonald's is proactively addressing traffic challenges with a comprehensive entry-level value strategy. Extra Value Meals showed strong 7% YoY growth, stock gained 9.9% in three months, and management expects the initiative to be a catalyst for 2027 growth. However, potential margin pressure from inflation tempers the outlook.
+QSR | neutral | Burger King is competing effectively with flexible value offerings (2 for $5, 3 for $7) and operational improvements, but the article presents this as competitive pressure on McDonald's rather than highlighting QSR's independent strengths.
+WEN | neutral | Wendy's Biggie Deals platform ($4-$8 price points) is mentioned as a competitive response to value trends, but the article does not provide performance metrics or indicate whether this strategy is outperforming competitors.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d669177e10d8e7650674766bccf52f32493073f45a56f931e251b1dfee20c700
+symbol: MCD
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-27T11:09:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3036309/can-bros-100-basis-point-sg-a-leverage-support-2026-earnings-growth?cid=CS-ZC-FT-analyst_blog|quick_take-3036309
+image_url: https://staticx-tuner.zacks.com/images/articles/main/a2/35092.jpg
+category: 
+tickers: BROS, SBUX, MCD
+keywords: SG&A leverage, earnings growth, EBITDA, shop-level costs, labor expense, profitability, revenue growth
+headline: Can BROS' 100-Basis-Point SG&A Leverage Support 2026 Earnings Growth?
+<<<SUMMARY>>>
+Dutch Bros (BROS) expects 100 basis points of SG&A leverage in 2026 and targets $2.1B in revenues with $380M adjusted EBITDA. While corporate efficiencies and labor leverage provide support, higher shop-level costs may limit overall margin benefits. BROS stock has declined 38.5% over the past year and carries a Zacks Rank #4 (Sell) rating.
+<<<INSIGHTS>>>
+BROS | negative | Despite positive operational metrics (30% revenue growth, 100 bps SG&A leverage, 21.1% EPS growth expected), the stock has underperformed significantly (-38.5% over one year), trades below industry valuation multiples, and carries a Zacks Rank #4 (Sell) rating. Rising shop-level costs and declining analyst estimates in the past 30 days present headwinds.
+SBUX | positive | Starbucks has gained 23.7% over the past year, outperforming the industry average of 0.1%, with expected 18% year-over-year earnings growth in the current year, indicating strong market performance and investor confidence.
+MCD | neutral | McDonald's has declined 9.1% over the past year but maintains a higher valuation multiple (P/S of 7.08) and is expected to see modest 5.9% earnings growth in 2026, suggesting stable but slower growth compared to peers.
+<<<END>>>

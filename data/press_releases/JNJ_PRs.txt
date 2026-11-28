@@ -1,0 +1,801 @@
+<<<PRESS_RELEASE>>>
+id: 3977a4f18e8f1270
+symbol: JNJ
+published_utc: 2025-12-03T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-teams-naomi-watts-reveal-why-eye-exam-ultimate-self-care-move-women
+headline: Johnson & Johnson Teams Up with Naomi Watts to Reveal Why an Eye Exam is the Ultimate Self-Care Move for Women Over 40
+<<<TEXT>>>
+--Johnson& Johnson– Johnson& Johnson, a global leader in eye health, has partnered with Academy Award– nominated actress, producer, and entrepreneur, Naomi Watts, to change the conversation about vision. Additionally, despite the booming $59.7 billion anti-aging industry's focus on skin and cosmetic treatments, 2 respondents ranked skin as the lowest priority in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 64e1e2642235ec69
+symbol: JNJ
+published_utc: 2025-12-05T16:20:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnsons-inlexzotm-gemcitabine-intravesical-system-delivers-74-percent
+headline: Johnson & Johnson's INLEXZO™ (gemcitabine intravesical system) delivers 74 percent disease-free survival at one year in BCG-unresponsive, high-risk, papillary-only NMIBC
+<<<TEXT>>>
+--Johnson& Johnson announced today that new data from the investigational Cohort 4 of the Phase 2 b SunRISe-1 study show treatment with gemcitabine intravesical system resulted in high one-year disease-free survival, progression-free survival, and overall survival rates in patients with Bacillus Calmette-Guérin- unresponsive, high-risk,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e04acb2cc21adcdd
+symbol: JNJ
+published_utc: 2025-12-06T09:30:00Z
+url: https://www.nasdaq.com/press-release/earlier-use-carvyktir-demonstrated-lasting-treatment-free-remissions-25-years
+headline: Earlier use of CARVYKTI® demonstrated lasting treatment-free remissions at 2.5 years in patients with relapsed or refractory multiple myeloma
+<<<TEXT>>>
+Additional translational analyses demonstrated that patients receiving CARVYKTI ® in earlier lines had improved immune fitness, which suggests a correlation with longer progression-free survival. 1 These data were featured in oral presentations at the 2025 American Society of Hematology Annual Meeting.  "These data suggest that a single infusion of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d5414a57f70ea921
+symbol: JNJ
+published_utc: 2025-12-08T16:25:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-participate-44th-annual-jp-morgan-healthcare-conference-2025-12-08
+headline: Johnson & Johnson to Participate in the 44th Annual J.P. Morgan Healthcare Conference
+<<<TEXT>>>
+Johnson& Johnson will present at the 44 th Annual J.P. Morgan Healthcare Conference on Monday, January 12 th, 2026. Management will participate in a Fireside Chat at 11:15 a.m. Eastern Time. A live audio webcast of the presentation will be accessible through Johnson& Johnson’ s Investor Relations website at www.investor.jnj.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a35113b9e070985f
+symbol: JNJ
+published_utc: 2025-12-09T07:44:00Z
+url: https://www.nasdaq.com/press-release/unprecedented-results-phase-3-majestec-3-study-support-tecvaylir-plus-darzalex
+headline: Unprecedented results from the Phase 3 MajesTEC-3 study support TECVAYLI® plus DARZALEX FASPRO® as a potential standard of care as early as second line for patients with relapsed/refractory multiple myeloma
+<<<TEXT>>>
+ORLANDO, Fla., Dec. 9, 2025/ PRNewswire/-- Johnson& Johnson, the worldwide leader in multiple myeloma, today announced new data from the investigational Phase 3 MajesTEC-3 study that demonstrate the potential of TECVAYLI ® plus DARZALEX FASPRO ® as early as second line for patients with relapsed/refractory multiple myeloma. The study evaluated the efficacy and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6449b8cd4354d43f
+symbol: JNJ
+published_utc: 2025-12-12T20:25:00Z
+url: https://www.nasdaq.com/press-release/us-fda-approves-akeegar-first-precision-therapy-brca2-mutated-metastatic-castration
+headline: U.S. FDA approves AKEEGA® as the first precision therapy for BRCA2-mutated metastatic castration-sensitive prostate cancer with 54% reduction in disease progression vs standard of care*
+<<<TEXT>>>
+--Johnson& Johnson announced today the U.S. Food and Drug Administration approved the supplemental New Drug Application for AKEEGA ® plus prednisone for the treatment of patients with BRCA2-mutated metastatic castration-sensitive prostate cancer. 1 Patients with BRCA mutations often have more aggressive forms of prostate cancer leading to poor...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 504477f2c2b4b5f5
+symbol: JNJ
+published_utc: 2025-12-15T16:27:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-host-investor-conference-call-fourth-quarter-results-2025-12-15
+headline: Johnson & Johnson to Host Investor Conference Call on Fourth-Quarter Results
+<<<TEXT>>>
+Johnson& Johnson will host a conference call for investors at 8:30 a.m. on Wednesday, January 21 st to review fourth-quarter results. A replay of the webcast will be available approximately three hours after the conference call concludes. By telephone: for both" listen-only" participants and those financial analysts who wish to take part in the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1e2b2571a7277f1b
+symbol: JNJ
+published_utc: 2025-12-17T18:49:00Z
+url: https://www.nasdaq.com/press-release/us-fda-approval-rybrevant-fasprotm-amivantamab-and-hyaluronidase-lpuj-enables
+headline: U.S. FDA Approval of RYBREVANT FASPRO™ (amivantamab and hyaluronidase-lpuj) Enables the Simplest, Shortest Administration Time for a First-Line Combination Regimen when Combined with LAZCLUZE® (lazertinib)
+<<<TEXT>>>
+--Johnson& Johnson announced today that the U.S. Food and Drug Administration approved RYBREVANT FASPRO™, the first and only subcutaneously administered therapy for patients with epidermal growth factor receptor- mutated non-small cell lung cancer. 1 RYBREVANT FASPRO™ is approved across all indications of RYBREVANT ®. Compared to intravenous delivery,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 118d67e31e267f49
+symbol: JNJ
+published_utc: 2025-12-18T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-receives-fda-approval-trufill-n-bca-liquid-embolic-system-treatment
+headline: Johnson & Johnson Receives FDA Approval for TRUFILL n‑BCA Liquid Embolic System for the Treatment of Symptomatic Chronic Subdural Hematoma
+<<<TEXT>>>
+--Johnson& Johnson– Today, Johnson& Johnson MedTech, a leader in neurovascular care, announced that the U.S. Food and Drug Administration has approved an expanded indication for the TRUFILL n‑ BCA Liquid Embolic System for embolization of the middle meningeal artery for the treatment of symptomatic subacute and chronic Subdural Hematoma as an adjunct to surgery.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7845148299261a94
+symbol: JNJ
+published_utc: 2025-12-29T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-completes-acquisition-halda-therapeutics-and-its-novel-platform
+headline: Johnson & Johnson completes acquisition of Halda Therapeutics and its novel platform to revolutionize cancer treatment and enable next-generation oral therapies
+<<<TEXT>>>
+Johnson& Johnson today announced the successful completion of its acquisition of Halda Therapeutics OpCo, Inc., a clinical-stage biotechnology company with a proprietary Regulated Induced Proximity TArgeting Chimera platform to develop oral, targeted therapies for multiple types of solid tumors, including prostate cancer, for $3.05 billion in cash.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 875bebfaef1d35d1
+symbol: JNJ
+published_utc: 2026-01-02T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-announces-quarterly-dividend-first-quarter-2026-2026-01-02
+headline: Johnson & Johnson Announces Quarterly Dividend for First Quarter 2026
+<<<TEXT>>>
+Johnson& Johnson today announced that its Board of Directors has declared a cash dividend for the first quarter of 2026 of $1.30 per share on the company’ s common stock. The dividend is payable on March 10, 2026 to shareholders of record at the close of business on February 24, 2026. At Johnson& Johnson, we believe health is everything.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 87a4bbc9d6774d49
+symbol: JNJ
+published_utc: 2026-01-06T08:03:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-unveils-new-data-showing-nipocalimab-first-and-only-investigational
+headline: Johnson & Johnson unveils new data showing nipocalimab is the first and only investigational FcRn blocker with potential to reduce systemic lupus erythematosus (SLE) activity in a Phase 2 study
+<<<TEXT>>>
+--Johnson& Johnson today announced positive topline results from the Phase 2 b JASMINE study of adults living with systemic lupus erythematosus and the initiation of a Phase 3 program. These data represent the first positive results of an investigational FcRn blocker treatment in this chronic, debilitating autoantibody-driven disease that impacts an...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 762b25df432101cf
+symbol: JNJ
+published_utc: 2026-01-07T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-submits-ottavatm-robotic-surgical-system-us-food-and-drug
+headline: Johnson & Johnson Submits OTTAVA™ Robotic Surgical System to the U.S. Food and Drug Administration
+<<<TEXT>>>
+Johnson& Johnson today announced that the company has submitted the OTTAVA™ Robotic Surgical System to the U.S. Food and Drug Administration in an application for De Novo classification. "We have taken learnings from Johnson& Johnson’ s 140 years in surgery, our decades of leadership in minimally invasive surgery, and the experiences robotic surgeons and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4fcc19c9504c5f79
+symbol: JNJ
+published_utc: 2026-01-08T20:24:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-reaches-agreement-us-government-improve-access-medicines-and-lower
+headline: Johnson & Johnson Reaches Agreement with U.S. Government to Improve Access to Medicines and Lower Costs for Millions of Americans; Delivers on U.S. Manufacturing and Innovation Investments
+<<<TEXT>>>
+"Today’ s agreement shows that when the public and private sectors work together towards shared goals, we can deliver real results for patients and the U.S. economy," said Joaquin Duato, Chairman and Chief Executive Officer, Johnson& Johnson." I’ m proud that Johnson& Johnson is answering President Trump’ s call to lower drug prices for everyday Americans while...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 972881f739251ebc
+symbol: JNJ
+published_utc: 2026-01-10T10:00:00Z
+url: https://www.nasdaq.com/press-release/rybrevantr-amivantamab-vmjw-longer-term-results-show-promising-and-durable-responses
+headline: RYBREVANT® (amivantamab-vmjw) longer-term results show promising and durable responses in difficult-to-treat colorectal cancer
+<<<TEXT>>>
+Results were presented during a poster session at the 2026 American Society of Clinical Oncology Gastrointestinal Cancers Symposium. 1. Filippo Pietrantonio,* M.D., Head of the Gastrointestinal Oncology Unit, IRCCS Foundation, National Cancer Institute, Milan, Italy. Cohorts D and E of the Phase 1 b/2 OrigAMI-1 study evaluated intravenous amivantamab as...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 34ff98b398dbe265
+symbol: JNJ
+published_utc: 2026-01-13T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-elevates-leadership-depression-new-data-2026-american-college-2026-01
+headline: Johnson & Johnson elevates leadership in depression with new data at 2026 American College of Neuropsychopharmacology Annual Meeting
+<<<TEXT>>>
+--Johnson& Johnson announced today that 11 abstracts featuring new data on its robust portfolio and pipeline in neuropsychiatry will be presented at the 64th Annual Meeting of the American College of Neuropsychopharmacology, held from January 12-15, in Nassau, Bahamas.  "At Johnson& Johnson, we are tackling the greatest unmet needs for patients living with...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0e8f0e8eb8f47f82
+symbol: JNJ
+published_utc: 2026-01-14T16:30:00Z
+url: https://www.nasdaq.com/press-release/tecvaylir-monotherapy-demonstrates-superior-progression-free-and-overall-survival
+headline: TECVAYLI® monotherapy demonstrates superior progression-free and overall survival versus standard of care as early as first relapse in patients with multiple myeloma predominantly refractory to anti-CD38 therapy and lenalidomide
+<<<TEXT>>>
+--Johnson& Johnson, a worldwide leader in multiple myeloma therapies, today announced positive topline results from the investigational Phase 3 MajesTEC-9 study of TECVAYLI ® monotherapy, showing a 71% reduction in the risk of disease progression or death and a 40% reduction in the risk of death in a patient population that was predominantly refractory to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f8665217f6caff64
+symbol: JNJ
+published_utc: 2026-01-21T06:20:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-reports-q4-and-full-year-2025-results-2026-01-21
+headline: Johnson & Johnson reports Q4 and Full-Year 2025 results
+<<<TEXT>>>
+Johnson& Johnson today announced results for fourth-quarter and full-year 2025." 2025 was a catapult year for Johnson& Johnson, fueled by the strongest portfolio and pipeline in our history," said Joaquin Duato, Chairman and Chief Executive Officer, Johnson& Johnson." Last year kicked off a new era of accelerated growth, driven by medical innovation that is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5261764073730747
+symbol: JNJ
+published_utc: 2026-01-27T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-marks-100-million-medtech-products-donated-2020-help-people-live-see
+headline: Johnson & Johnson Marks $100 Million of MedTech Products Donated Since 2020 to Help People Live, See and Smile
+<<<TEXT>>>
+Johnson& Johnson, with support from the Johnson& Johnson Foundation, announced that it has donated $100 million of MedTech products since 2020 to help more people around the world access the specialized care they need to live, see and smile. These new funds are part of J&J CareCommunity, a social impact platform that focuses the work of Johnson& Johnson and the J&J...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ead2752598e081a1
+symbol: JNJ
+published_utc: 2026-01-27T15:49:00Z
+url: https://www.nasdaq.com/press-release/darzalex-faspror-based-quadruplet-regimen-approved-us-newly-diagnosed-patients
+headline: DARZALEX FASPRO®-based quadruplet regimen approved in the U.S. for newly diagnosed patients with multiple myeloma who are transplant ineligible
+<<<TEXT>>>
+HORSHAM, Pa., Jan. 27, 2026/ PRNewswire/-- Johnson& Johnson announced today the U.S. Food and Drug Administration approved DARZALEX FASPRO ® in combination with bortezomib, lenalidomide and dexamethasone for the treatment of adult patients with newly diagnosed multiple myeloma who are ineligible for autologous stem cell transplant.  "This approval marks the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 838273d35e22aaab
+symbol: JNJ
+published_utc: 2026-02-02T16:34:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-participate-td-cowen-46th-annual-health-care-conference-2026-02-02
+headline: Johnson & Johnson to Participate in the TD Cowen 46th Annual Health Care Conference
+<<<TEXT>>>
+Johnson& Johnson will present at the TD Cowen 46 th Annual Health Care Conference on Tuesday, March 3 rd, 2026. Management will participate in a Fireside Chat at 11:10 a.m. Eastern Time. A live audio webcast of the presentation will be accessible through Johnson& Johnson’ s Investor Relations website at www.investor.jnj.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: bcfcc6954ab6f860
+symbol: JNJ
+published_utc: 2026-02-06T19:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-presents-early-outcomes-omny-af-pilot-study-2026-af-symposium-2026-02
+headline: Johnson & Johnson Presents Early Outcomes from the OMNY-AF Pilot Study at 2026 AF Symposium
+<<<TEXT>>>
+Johnson& Johnson today announced 12- month pilot-phase data from the OMNY-AF study, evaluating the investigational OMNYPULSE Platform for the treatment of symptomatic paroxysmal atrial fibrillation, during the 31st Annual AF Symposium in Boston. In my cases during the ongoing OMNY-AF trial, the seamless integration of advanced mapping, ultrasound, and PF...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 15eb847516d217c1
+symbol: JNJ
+published_utc: 2026-02-09T16:16:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-participate-barclays-28th-annual-global-healthcare-conference-2026-02
+headline: Johnson & Johnson to Participate in the Barclays 28th Annual Global Healthcare Conference
+<<<TEXT>>>
+Johnson& Johnson will present at the Barclays 28 th Annual Global Healthcare Conference on Tuesday, March 10 th, 2026. Management will participate in a Fireside Chat at 11:30 a.m. Eastern Time. A live audio webcast of the presentation will be accessible through Johnson& Johnson’ s Investor Relations.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5658d381f15f3180
+symbol: JNJ
+published_utc: 2026-02-13T16:18:00Z
+url: https://www.nasdaq.com/press-release/philadelphia-jury-returns-250000-verdict-against-jj-latest-baby-powder-ovarian-cancer
+headline: Philadelphia Jury Returns $250,000 Verdict Against J&J in Latest Baby Powder-Ovarian Cancer Trial
+<<<TEXT>>>
+A jury in the Philadelphia Court of Common Pleas has found Johnson& Johnson responsible for the company’ s baby powder products contributing to the death of a Pennsylvania woman. The jury deliberated for more than three days before returning a verdict totaling $250,000 on behalf of the estate of York, Pennsylvania, resident Gayle Emerson, who died as a result of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 09515ea60d9b91b1
+symbol: JNJ
+published_utc: 2026-02-17T08:00:00Z
+url: https://www.nasdaq.com/press-release/fda-approves-rybrevant-fasprotm-amivantamab-and-hyaluronidase-lpuj-only-egfr-targeted
+headline: FDA approves RYBREVANT FASPRO™ (amivantamab and hyaluronidase-lpuj) as the only EGFR-targeted therapy that can be administered once a month
+<<<TEXT>>>
+--Johnson& Johnson today announced the U.S. Food and Drug Administration has approved a new, simplified monthly dosing schedule* for RYBREVANT FASPRO™. This milestone builds upon the recent FDA approval of RYBREVANT FASPRO™, which transformed administration time from hours to minutes and offers a fivefold reduction in administration-related reactions, when...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0dbcba92b8ec9e38
+symbol: JNJ
+published_utc: 2026-02-18T07:30:00Z
+url: https://www.nasdaq.com/press-release/rybrevant-fasprotm-amivantamab-and-hyaluronidase-lpuj-receives-us-fda-breakthrough
+headline: RYBREVANT FASPRO™ (amivantamab and hyaluronidase-lpuj) receives U.S. FDA Breakthrough Therapy Designation for patients with advanced head and neck cancer
+<<<TEXT>>>
+--Johnson& Johnson today announced that the U.S. Food and Drug Administration has granted Breakthrough Therapy Designation for subcutaneous amivantamab and hyaluronidase-lpuj as a monotherapy for the treatment of adults with head and neck squamous cell carcinoma that is recurrent or metastatic and human papillomavirus- unrelated after disease...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6ab36c7c454e0db1
+symbol: JNJ
+published_utc: 2026-02-18T10:15:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-expands-us-footprint-more-1-billion-investment-next-generation-cell
+headline: Johnson & Johnson Expands U.S. Footprint with more than $1 Billion Investment in Next Generation Cell Therapy Manufacturing Facility in Pennsylvania
+<<<TEXT>>>
+Johnson& Johnson, healthcare’ s leading, most comprehensive innovation powerhouse, today announced a more than $1 billion investment in a next generation cell therapy manufacturing facility in Montgomery County, Pennsylvania. "For 140 years, Johnson& Johnson has been a leading innovator in American healthcare, and we are honored to continue advancing that...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4a29108dc3fbf2a3
+symbol: JNJ
+published_utc: 2026-02-19T17:00:00Z
+url: https://www.nasdaq.com/press-release/rybrevant-fasprotm-amivantamab-and-hyaluronidase-lpuj-plus-immunotherapy-shows-strong
+headline: RYBREVANT FASPRO™ (amivantamab and hyaluronidase-lpuj) plus immunotherapy shows strong clinical benefit with 56 percent overall response rate in first-line recurrent or metastatic head and neck cancer
+<<<TEXT>>>
+--Johnson& Johnson today announced new results from the Phase 1 b/2 OrigAMI-4 study showing that first-line treatment with investigational subcutaneous amivantamab and hyaluronidase-lpuj in combination with a PD-1 inhibitor delivered clinically meaningful and durable antitumor activity in patients with head and neck squamous cell carcinoma that is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 85aa01ffcb668e76
+symbol: JNJ
+published_utc: 2026-02-21T08:00:00Z
+url: https://www.nasdaq.com/press-release/tremfyar-guselkumab-long-term-data-show-sustained-clinical-and-endoscopic-remission
+headline: TREMFYA® (guselkumab) long-term data show sustained clinical and endoscopic remission in ulcerative colitis through 3 years
+<<<TEXT>>>
+These data are among the 30 company-sponsored abstracts being presented at the European Crohn's and Colitis Organisation 2026 conference.  "Ulcerative colitis is a lifelong condition that can significantly impact patients' overall health and they need treatment options that remain effective and well-tolerated over time," said Laurent Peyrin-Biroulet,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3f45bdc6fc71ad89
+symbol: JNJ
+published_utc: 2026-02-24T16:03:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-seeks-fda-approval-imaavyr-nipocalimab-aahu-first-ever-fda-approved
+headline: Johnson & Johnson seeks FDA approval of IMAAVY® (nipocalimab-aahu) as the first-ever FDA-approved treatment for warm autoimmune hemolytic anemia (wAIHA)
+<<<TEXT>>>
+--Johnson& Johnson today announced the submission of a supplemental Biologics License Application to the U.S. Food and Drug Administration, seeking approval of IMAAVY ® as the first-ever treatment for patients with warm autoimmune hemolytic anemia. b This rare and serious autoantibody disease affects approximately 1 in 8,000 in the United States and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2f983ba1b865a325
+symbol: JNJ
+published_utc: 2026-02-26T14:30:00Z
+url: https://www.nasdaq.com/press-release/early-study-results-johnson-johnson-show-promising-antitumor-activity-combination
+headline: Early study results from Johnson & Johnson show promising antitumor activity with combination of pasritamig and docetaxel in advanced prostate cancer
+<<<TEXT>>>
+--Johnson& Johnson today announced preliminary results from a Phase 1 b study evaluating pasritamig, a first-in-class bispecific T-cell engaging antibody, in combination with docetaxel in patients with metastatic castration-resistant prostate cancer. The results were presented for the first time at the 2026 American Society of Clinical Oncology...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 45c8f9100963b6c8
+symbol: JNJ
+published_utc: 2026-03-02T16:30:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-host-investor-conference-call-first-quarter-results-2026-03-02
+headline: Johnson & Johnson to Host Investor Conference Call on First-Quarter Results
+<<<TEXT>>>
+Johnson& Johnson will host a conference call for investors at 8:30 a.m. on Tuesday, April 14 th to review first-quarter results. A replay of the webcast will be available approximately three hours after the conference call concludes. By telephone: for both" listen-only" participants and those financial analysts who wish to take part in the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 519c8dc2b2079f99
+symbol: JNJ
+published_utc: 2026-03-03T08:03:00Z
+url: https://www.nasdaq.com/press-release/c-o-r-r-e-c-t-i-o-n-johnson-johnson-2026-03-03
+headline: /C O R R E C T I O N -- Johnson & Johnson/
+<<<TEXT>>>
+--Johnson& Johnson today announced that nipocalimab a was granted U.S. Food and Drug Administration Fast Track designation as a potential treatment for adults with systemic lupus erythematosus, a debilitating autoantibody-driven disease that impacts approximately 3 to 5 million people worldwide. 1 The U.S. FDA's Fast Track designation program is designed...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7d4a9938013fc35a
+symbol: JNJ
+published_utc: 2026-03-05T09:30:00Z
+url: https://www.nasdaq.com/press-release/anxiety-treatment-boom-gad-therapies-poised-multi-billion-dollar-expansion-2026-03-05
+headline: Anxiety Treatment Boom: GAD Therapies Poised for Multi-Billion Dollar Expansion
+<<<TEXT>>>
+Active Companies in the biotech space of interest include: Helus PharmaTM, Acadia Healthcare Company, Inc., Johnson& Johnson, BrainsWay Ltd., Firefly Neuroscience, Inc.. Industry estimates suggest the global market for GAD treatments was around $1.8 billion in 2023 and could grow to more than $4.26 billion by 2033, representing roughly 9% annual growth.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b7712e6e0ce5e12f
+symbol: JNJ
+published_utc: 2026-03-05T15:55:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-announces-us-fda-approval-tecvaylir-plus-darzalex-faspror-relapsed
+headline: Johnson & Johnson Announces U.S. FDA Approval of TECVAYLI® plus DARZALEX FASPRO® for Relapsed/Refractory Multiple Myeloma, Offering a Potential New Standard of Care as Early as Second Line
+<<<TEXT>>>
+--Johnson& Johnson, a worldwide leader in multiple myeloma therapies, today announced that the U.S. Food and Drug Administration approved TECVAYLI ® plus DARZALEX FASPRO ® for the treatment of adults with relapsed or refractory multiple myeloma who have received at least one prior line of therapy, including a proteasome inhibitor and an immunomodulatory...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: a146faad752c2edb
+symbol: JNJ
+published_utc: 2026-03-12T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-announces-fda-approval-tecnis-puresee-intraocular-lens-breakthrough
+headline: Johnson & Johnson Announces FDA Approval of TECNIS PureSee Intraocular Lens, a Breakthrough Solution for U.S. Cataract Patients
+<<<TEXT>>>
+Johnson& Johnson announced U.S. Food and Drug Administration approval of TECNIS PureSee IOL, an extended depth of focus intraocular lens intended for use in cataract surgery. 1 TECNIS PureSee IOL delivers clarity of vision for patients, with 97% of them reporting no very bothersome visual disturbances. 1 TECNIS PureSee IOL will be available for patients in the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b529bc3a8c3f983e
+symbol: JNJ
+published_utc: 2026-03-13T12:35:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-highlights-promising-first-human-erda-idrs-formerly-tar-210-results
+headline: Johnson & Johnson highlights promising first-in-human Erda-iDRS (formerly TAR-210) results in intermediate-risk non-muscle-invasive bladder cancer
+<<<TEXT>>>
+Data were presented during a late-breaking oral session at the European Association of Urology 2026 Annual Meeting. 1.  "Intermediate-risk non– muscle-invasive bladder cancer is defined by recurrences, and many patients undergo repeated procedures as their tumors return," said Antoni Vilaseca Cabo,* M.D., adjunct physician of the Urology Service at Hospital...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5368d8dcdb6de364
+symbol: JNJ
+published_utc: 2026-03-18T07:49:00Z
+url: https://www.nasdaq.com/press-release/fda-approval-icotydetm-icotrokinra-ushers-new-era-first-line-systemic-treatment
+headline: FDA approval of ICOTYDE™ (icotrokinra) ushers in new era for first-line systemic treatment of plaque psoriasis with a targeted oral peptide
+<<<TEXT>>>
+--Johnson& Johnson announced today that the U.S. Food and Drug Administration has approved ICOTYDE™, an interleukin-23 receptor antagonist for the treatment of moderate-to-severe plaque psoriasis in adults and pediatric patients 12 years of age and older who weigh at least 40 kg who are candidates for systemic therapy or phototherapy. 1 ICOTYDE is the first...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: e4b0657e3538e7d8
+symbol: JNJ
+published_utc: 2026-03-28T10:00:00Z
+url: https://www.nasdaq.com/press-release/icotydetm-icotrokinra-one-year-results-confirm-lasting-skin-clearance-and-favorable
+headline: ICOTYDE™ (icotrokinra) one-year results confirm lasting skin clearance and favorable safety profile in once‑daily pill for plaque psoriasis
+<<<TEXT>>>
+--Johnson& Johnson today announced new long-term 52- week data from the Phase 3 ICONIC-ADVANCE 1 and 2 and ICONIC-LEAD studies, which assessed the efficacy and safety of ICOTYDE™ in the treatment of patients with moderate-to-severe plaque psoriasis.  "Introducing a once‑ daily targeted oral peptide for treating moderate‑ to‑ severe plaque psoriasis offers...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8f5451cef9e54796
+symbol: JNJ
+published_utc: 2026-04-07T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-advances-pulsed-field-ablation-portfolio-launch-varipulse-pro-europe
+headline: Johnson & Johnson Advances Pulsed Field Ablation Portfolio with the Launch of VARIPULSE Pro in Europe
+<<<TEXT>>>
+Johnson& Johnson today announced the launch of VARIPULSE Pro in Europe following CE Mark approval, further advancing its pulsed field ablation portfolio. "In our early experience, VARIPULSE Pro has been exceptionally smooth and easy to use," said Tom De Potter 5, M.D., Head of Electrophysiology and Associate Director of the Heart Center, OLV Hospital, Aalst, Belgium."...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 43c9a945b104604a
+symbol: JNJ
+published_utc: 2026-04-10T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-showcases-new-clinical-data-tecnis-puresee-iol-ascrs-2026
+headline: Johnson & Johnson Showcases New Clinical Data for TECNIS PureSee IOL at ASCRS 2026 Demonstrating Excellent Contrast Sensitivity and Extended Range of Vision
+<<<TEXT>>>
+Johnson& Johnson will present data from two major studies supporting the performance of its recently FDA- approved TECNIS PureSee intraocular lens at the 2026 American Society of Cataract and Refractive Surgery Annual Meeting, April 10-13 in Washington, DC. "The data presented at ASCRS 2026 confirms that TECNIS PureSee IOL provides patients with high...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: da4108757baa8e75
+symbol: JNJ
+published_utc: 2026-04-14T06:20:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-reports-q1-2026-results-raises-2026-outlook-2026-04-14
+headline: Johnson & Johnson reports Q1 2026 results, raises 2026 outlook
+<<<TEXT>>>
+Johnson& Johnson today announced results for first-quarter 2026." Johnson& Johnson had a strong start to 2026 and is delivering on its promise for a year of accelerated growth and impact," said Joaquin Duato, Chairman and Chief Executive Officer, Johnson& Johnson." The depth and strength of our portfolio and pipeline is unrivaled and our relentless focus on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 6ff3fac15e06862c
+symbol: JNJ
+published_utc: 2026-04-14T06:21:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-announces-64th-consecutive-year-dividend-increase-raises-quarterly
+headline: Johnson & Johnson Announces 64th Consecutive Year of Dividend Increase; Raises Quarterly Dividend by 3.1%
+<<<TEXT>>>
+Johnson& Johnson today announced that its Board of Directors has declared a 3.1% increase in the quarterly dividend, from $1.30 per share to $1.34 per share, marking the 64 th year of consecutive increases. The next quarterly dividend is payable on June 9, 2026 to shareholders of record at the close of business on May 26, 2026. At Johnson& Johnson, we believe health...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 355e7964d8671e44
+symbol: JNJ
+published_utc: 2026-04-15T16:11:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-participate-bank-america-2026-healthcare-conference-2026-04-15
+headline: Johnson & Johnson to Participate in the Bank of America 2026 Healthcare Conference
+<<<TEXT>>>
+Johnson& Johnson will present at the Bank of America 2026 Healthcare Conference on Tuesday, May 12 th, 2026. Management will participate in a Fireside Chat at 2:20 p.m. Eastern Time. A live audio webcast of the presentation will be accessible through Johnson& Johnson’ s Investor Relations website at www.investor.jnj.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 62773ffd95ea9dae
+symbol: JNJ
+published_utc: 2026-04-21T07:45:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-showcases-carto-powered-innovation-including-debut-cartosound-sonata
+headline: Johnson & Johnson Showcases CARTO-Powered Innovation, Including Debut of CARTOSOUND SONATA, to Advance Arrhythmia Care at HRS 2026
+<<<TEXT>>>
+Johnson& Johnson today announced it will showcase the latest advances across its electrophysiology portfolio at the 2026 Heart Rhythm Society Annual Meeting, including new evidence in pulsed field ablation, and innovations in cardiac mapping and imaging. "In my experience, CARTOSOUND SONATA elevates imaging capabilities by streamlining the process of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7fa47f225327b9a7
+symbol: JNJ
+published_utc: 2026-04-21T16:22:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-participate-2026-rbc-capital-markets-global-healthcare-conference
+headline: Johnson & Johnson to Participate in the 2026 RBC Capital Markets Global Healthcare Conference
+<<<TEXT>>>
+Johnson& Johnson will participate in the 2026 RBC Capital Markets Global Healthcare Conference on Tuesday, May 19 th. Management will participate in a Fireside Chat at 11:30 a.m. Eastern Time. This live audio webcast will be available to investors and other interested parties by accessing the Johnson& Johnson website at www.investor.jnj.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 97937f322ae6a738
+symbol: JNJ
+published_utc: 2026-04-22T08:05:00Z
+url: https://www.nasdaq.com/press-release/imaavyr-nipocalimab-aahu-shows-over-two-years-sustained-disease-control-broad
+headline: IMAAVY® (nipocalimab-aahu) shows over two years of sustained disease control in a broad population with generalized myasthenia gravis (gMG)
+<<<TEXT>>>
+--Johnson& Johnson today announced new data from the Phase 3 Vivacity-MG3 study and ongoing open label extension in a broad population of antibody-positive adults with generalized myasthenia gravis reinforcing the efficacy, sustained disease control and proven safety profile of IMAAVY ®. These data are among the seven abstracts Johnson& Johnson is...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2b91b4d06c13c8cb
+symbol: JNJ
+published_utc: 2026-04-27T08:03:00Z
+url: https://www.nasdaq.com/press-release/fda-grants-priority-review-imaavyr-nipocalimab-aahu-potential-first-approved
+headline: FDA grants Priority Review for IMAAVY® (nipocalimab-aahu) as the potential first approved treatment for people living with warm autoimmune hemolytic anemia (wAIHA)
+<<<TEXT>>>
+--Johnson& Johnson announced today that the U.S. Food and Drug Administration has granted Priority Review to the supplemental Biologics License Application for IMAAVY ®, c confirming the urgent need for treatment options in warm autoimmune hemolytic anemia. Currently, patients depend on broad immunosuppressive therapies that fail to address the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: b4ba2175632e7f1e
+symbol: JNJ
+published_utc: 2026-04-27T16:33:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-participate-bernsteins-42nd-annual-strategic-decisions-conference
+headline: Johnson & Johnson to Participate in the Bernstein’s 42nd Annual Strategic Decisions Conference
+<<<TEXT>>>
+Johnson& Johnson will present at the Bernstein’ s 42 nd Annual Strategic Decisions Conference on Wednesday, May 27 th, 2026. Management will participate in a Fireside Chat at 11:00 a.m. Eastern Time. A live audio webcast of the presentation will be accessible through Johnson& Johnson’ s Investor Relations website at www.investor.jnj.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: dcfa371edf6bcc8d
+symbol: JNJ
+published_utc: 2026-04-30T08:02:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-appoints-ryan-koors-vice-president-investor-relations-2026-04-30
+headline: Johnson & Johnson Appoints Ryan Koors as Vice President, Investor Relations
+<<<TEXT>>>
+Johnson& Johnson today announced the appointment of Ryan Koors to Vice President, Investor Relations, effective May 7, 2026. Ryan Koors, Vice President, Investor Relations, Johnson& Johnson, effective May 7, 2026. Mr. Koors is an accomplished Johnson& Johnson finance leader with more than 20 years of experience providing strategic financial stewardship across...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9a811fa958908d7c
+symbol: JNJ
+published_utc: 2026-05-04T08:00:00Z
+url: https://www.nasdaq.com/press-release/caplytar-lumateperone-showed-greatest-improvement-across-key-efficacy-outcomes-among
+headline: CAPLYTA® (lumateperone) showed greatest improvement across key efficacy outcomes among adjunctive MDD treatments in new network meta-analysis
+<<<TEXT>>>
+--Johnson& Johnson today announced findings from the first network meta-analysis comparing CAPLYTA ® to FDA- approved atypical antipsychotics for add-on treatment of major depressive disorder in adults, drawing on data from 10 registrational randomized clinical trials. The analysis also evaluated safety outcomes, with CAPLYTA ® demonstrating no...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9ecfa5e4f8c7bb1b
+symbol: JNJ
+published_utc: 2026-05-05T07:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-announces-pivotal-clinical-study-results-new-soft-tissue-surgical
+headline: Johnson & Johnson Announces Pivotal Clinical Study Results for a New Soft-Tissue Surgical Robotic System
+<<<TEXT>>>
+Today, Johnson& Johnson announced results from the first clinical study of the investigational OTTAVA™ Robotic Surgical System– a prospective, multicenter clinical study evaluating the safety and performance of the system in Roux-en-Y gastric bypass procedures. These clinical data, together with preclinical testing, were used to support an application to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 4b5468d80cbf8bce
+symbol: JNJ
+published_utc: 2026-05-05T08:05:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-investigational-co-antibody-therapy-jnj-4804-shows-potential-raise
+headline: Johnson & Johnson investigational co-antibody therapy JNJ-4804 shows potential to raise the bar for clinical efficacy in treating refractory inflammatory bowel disease
+<<<TEXT>>>
+--Johnson& Johnson today announced Phase 2 b data from two studies evaluating JNJ-4804, an investigational co-antibody therapy targeting both interleukin-23 and tumor necrosis factor-alpha, in patients with moderately to severely active ulcerative colitis or Crohn's disease that is refractory to systemic therapies. 1, 2 The late-breaking presentations...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 71226784b95db50c
+symbol: JNJ
+published_utc: 2026-05-05T08:05:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-study-shows-tremfyar-guselkumab-first-and-only-il-23-inhibitor
+headline: Johnson & Johnson study shows TREMFYA® (guselkumab) is the first and only IL-23 inhibitor to demonstrate efficacy in perianal fistulizing Crohn's disease
+<<<TEXT>>>
+--Johnson& Johnson today announced results from the Phase 3 FUZION study evaluating TREMFYA ® in adults with active perianal fistulizing Crohn's disease. Key findings from the FUZION study TREMFYA met the primary endpoint of combined fistula remission at Week 24, defined as complete closure of all external fistula openings with no drainage, without...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 82779615aa654019
+symbol: JNJ
+published_utc: 2026-05-07T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-launches-generation-fine-new-movement-encouraging-patients-expect
+headline: Johnson & Johnson launches "Generation Fine," a New Movement Encouraging Patients to Expect More from Depression Treatment and Aim for Remission
+<<<TEXT>>>
+--Johnson& Johnson today announced the launch of Generation Fine, a global campaign designed to challenge what it means to feel "fine" in depression care and empower patients to take the first step in moving beyond "good enough" by talking with their healthcare provider. Developed in collaboration with leading mental health advocates and drawing on the expertise...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 84a4821549f08c01
+symbol: JNJ
+published_utc: 2026-05-11T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-reinforces-its-leadership-advancing-neuropsychiatry-new-portfolio-and
+headline: Johnson & Johnson reinforces its leadership in advancing neuropsychiatry with new portfolio and pipeline data at APA and ASCP
+<<<TEXT>>>
+"At Johnson& Johnson, we are focused on addressing the residual symptoms that standard treatments often miss for the millions of patients living with some of today's most prevalent and debilitating neuropsychiatric conditions," said Jane Tiller, FRC Psych, MBA, MPhil, Vice President Global Head of Development, Neuroscience, Innovative Medicine, Johnson&...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: af149bd3da6b7a4f
+symbol: JNJ
+published_utc: 2026-05-11T16:34:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-participate-goldman-sachs-47th-annual-global-healthcare-conference
+headline: Johnson & Johnson to Participate in the Goldman Sachs 47th Annual Global Healthcare Conference
+<<<TEXT>>>
+Johnson& Johnson will participate in the Goldman Sachs 47 th Annual Global Healthcare Conference on Tuesday, June 9 th, 2026. Management will participate in a Fireside Chat at 10:00 a.m. Eastern Time. This live audio webcast will be available to investors and other interested parties by accessing the Johnson& Johnson website at www.investor.jnj.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ada4a64b50173efe
+symbol: JNJ
+published_utc: 2026-05-12T07:45:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-advances-standard-calcium-modification-global-launch-shockwavetm-c2
+headline: Johnson & Johnson Advances the Standard of Calcium Modification with Global Launch of Shockwave™ C2 Aero Coronary IVL Catheter
+<<<TEXT>>>
+Johnson& Johnson announced today the global launch of its Shockwave C2 Aero Coronary IVL Catheter designed for improved deliverability, enhanced lesion crossing and new repositioning capabilities for the treatment of calcified coronary artery disease. 1,2,3 The next-generation coronary IVL catheter leverages Shockwave IVL’ s unique mechanism of...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 380517741ba5cdbe
+symbol: JNJ
+published_utc: 2026-05-26T08:00:00Z
+url: https://www.nasdaq.com/press-release/depuy-synthes-enters-exclusive-us-canada-and-australia-distribution-agreement-cgbios
+headline: DePuy Synthes Enters Exclusive U.S., Canada and Australia Distribution Agreement for CGBIO’s NOVOSIS
+<<<TEXT>>>
+DePuy Synthes, a global leader in orthopaedic technologies and solutions, today announced an exclusive distribution agreement 1 with CGBIO, a biotechnology company specializing in regenerative medicine, for the development and commercialization of NOVOSIS, an advanced bone graft substitute containing growth factors, across its orthopaedic portfolio...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0f7166fe6e10de94
+symbol: JNJ
+published_utc: 2026-05-26T08:01:00Z
+url: https://www.nasdaq.com/press-release/depuy-synthes-announces-agreement-acquire-miniature-radiofrequency-tracking
+headline: DePuy Synthes Announces Agreement to Acquire Miniature Radiofrequency Tracking Technology Across its Joint Reconstruction Portfolio
+<<<TEXT>>>
+DePuy Synthes, a global leader in orthopaedic technologies and solutions, today announced a definitive agreement to acquire selective rights to develop, manufacture and commercialize Gemtrack technology across its Joints portfolio, including shoulder, hip and knee, for both navigation and robotic applications. "Stéphane Lavallée and his companies...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 24e2a2bd5d2fbaf4
+symbol: JNJ
+published_utc: 2026-05-27T16:22:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-host-investor-conference-call-second-quarter-results-2026-05-27
+headline: Johnson & Johnson to Host Investor Conference Call on Second-Quarter Results
+<<<TEXT>>>
+Johnson& Johnson will host a conference call for investors at 8:30 a.m. on Wednesday, July 15 th to review second-quarter results. A replay of the webcast will be available approximately three hours after the conference call concludes. By telephone: for both" listen-only" participants and those financial analysts who wish to take part in the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5791a0fa4cd5f2f9
+symbol: JNJ
+published_utc: 2026-05-28T19:10:00Z
+url: https://www.nasdaq.com/press-release/fda-approves-label-expansion-cementing-tremfyar-only-il-23-inhibitor-proven-help-stop
+headline: FDA approves label expansion, cementing TREMFYA® as the only IL‑23 inhibitor proven to help stop further joint damage
+<<<TEXT>>>
+--Johnson& Johnson announced today that the U.S. Food and Drug Administration has approved a supplemental Biologics License Application to include evidence in the TREMFYA ® label for the inhibition of progression of structural joint damage in adults with active psoriatic arthritis.  "Joint damage associated with active psoriatic arthritis can happen as...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: c4b69bb46d4d39a0
+symbol: JNJ
+published_utc: 2026-05-29T08:18:00Z
+url: https://www.nasdaq.com/press-release/new-tecvaylir-teclistamab-cqyv-data-demonstrate-superior-progression-free-and-overall
+headline: New TECVAYLI® (teclistamab-cqyv) data demonstrate superior progression-free and overall survival as early as first relapse in multiple myeloma
+<<<TEXT>>>
+In a patient population whose myeloma was predominantly refractory to anti-CD38 therapy and lenalidomide, TECVAYLI ® reduced the risk of disease progression or death by 71% and the risk of death by 40%. 1 These data will be presented as an oral session today at the annual American Society of Clinical Oncology Annual Meeting, with simultaneous publication in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 536042f027cd1739
+symbol: JNJ
+published_utc: 2026-05-29T14:00:00Z
+url: https://www.nasdaq.com/press-release/rybrevantr-amivantamab-vmjw-plus-lazcluzer-lazertinib-demonstrates-prolonged-clinical
+headline: RYBREVANT® (amivantamab-vmjw) plus LAZCLUZE® (lazertinib) demonstrates prolonged clinical benefit as a first-line treatment for atypical EGFR-mutated non-small cell lung cancer
+<<<TEXT>>>
+--Johnson& Johnson today announced updated results from the Phase 1/ 1 b CHRYSALIS-2 study evaluating intravenous RYBREVANT ® in combination with LAZCLUZE ® in patients with advanced non-small cell lung cancer with atypical epidermal growth factor receptor mutations. Data were presented in an oral session at the 2026 American Society of Clinical...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 47334c576e4080d9
+symbol: JNJ
+published_utc: 2026-05-31T08:27:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnsons-phase-3-prostate-cancer-study-shows-erleadar-apalutamide-and-after
+headline: Johnson & Johnson's Phase 3 prostate cancer study shows ERLEADA® (apalutamide) before and after surgery significantly reduces risk of metastasis or death, breaking a decades-long treatment paradigm
+<<<TEXT>>>
+--Johnson& Johnson today announced results from the final analysis of the Phase 3 PROTEUS study showing the investigational use of apalutamide plus hormone therapy, given for six months before and after prostate cancer surgery, significantly improved key short- and long-term clinical outcomes for patients with high-risk localized or locally advanced...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: ec7d8beeb39ef10a
+symbol: JNJ
+published_utc: 2026-05-31T08:29:00Z
+url: https://www.nasdaq.com/press-release/rybrevant-fasprotm-amivantamab-and-hyaluronidase-lpuj-pivotal-data-show-strong-and
+headline: RYBREVANT FASPRO™ (amivantamab and hyaluronidase-lpuj) pivotal data show strong and durable responses in advanced head and neck cancer where options remain limited
+<<<TEXT>>>
+--Johnson& Johnson today announced pivotal results from the Phase 1 b/2 OrigAMI-4 study showing that subcutaneous amivantamab and hyaluronidase-lpuj delivered durable responses in patients with advanced head and neck squamous cell carcinoma previously treated with immunotherapy and chemotherapy. Median duration of response was not yet reached, with a...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7b5ec7dd54a70f10
+symbol: JNJ
+published_utc: 2026-06-03T00:03:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-presents-new-data-further-reinforcing-role-nipocalimab-lowering
+headline: Johnson & Johnson presents new data further reinforcing the role of nipocalimab in lowering the autoantibodies driving Sjögren's disease
+<<<TEXT>>>
+--Johnson& Johnson today announced new biomarker exploratory analyses from the Phase 2 DAHLIAS study evaluating nipocalimab in adults with moderate-to-severe Sjögren's disease a showing that participants with elevated autoantibody and immunoglobulin G levels b, who are often those who experience more substantial disease burden, showed greater...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 384439c353ea84f0
+symbol: JNJ
+published_utc: 2026-06-03T00:04:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-late-breaking-results-show-nipocalimab-significantly-reduced-systemic
+headline: Johnson & Johnson late-breaking results show nipocalimab significantly reduced systemic lupus erythematosus (SLE) disease activity in a Phase 2 study
+<<<TEXT>>>
+--Johnson& Johnson today announced nipocalimab met the primary endpoint of decreasing disease activity at 24 weeks as measured by SLE Responder Index 4 b and continued to demonstrate sustained reduction in disease activity in adults with moderate-to-severe systemic lupus erythematosus a through 52 weeks in the Phase 2 JASMINE study as measured by both...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f05761d5e05f74b2
+symbol: JNJ
+published_utc: 2026-06-08T08:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-acquire-firefly-bio-inc-expand-oncology-pipeline-novel-degrader
+headline: Johnson & Johnson to Acquire Firefly Bio, Inc. to Expand Oncology Pipeline with Novel Degrader Antibody Conjugate Platform
+<<<TEXT>>>
+Johnson& Johnson today announced it has entered into a definitive agreement to acquire Firefly Bio, Inc., a biotechnology company advancing its proprietary Firelink™ degrader antibody conjugate platform, for $1 billion in cash. Johnson& Johnson is at the forefront of oncology therapies For more than three decades, Johnson& Johnson has advanced innovative...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 45ae7d97fe15f517
+symbol: JNJ
+published_utc: 2026-06-10T11:22:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-hit-32-million-verdict-los-angeles-asbestos-trial-2026-06-10
+headline: Johnson & Johnson Hit with $32 Million Verdict in Los Angeles Asbestos Trial
+<<<TEXT>>>
+A Los Angeles jury has awarded $32 million to the family of a California woman who died from pleural mesothelioma after years of exposure to an asbestos-contaminated talc product, finding Johnson& Johnson and its subsidiaries liable for her illness. "Johnson& Johnson tried to blame everything from environmental conditions in Mexico City to cosmetics and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 0c94b26196d6a64a
+symbol: JNJ
+published_utc: 2026-06-11T02:03:00Z
+url: https://www.nasdaq.com/press-release/imaavyr-nipocalimab-aahu-demonstrates-durable-hemoglobin-response-and-rapid-onset
+headline: IMAAVY® (nipocalimab-aahu) demonstrates durable hemoglobin response and rapid onset of effect in pivotal Phase 2/3 study in warm autoimmune hemolytic anemia (wAIHA), an autoantibody-driven disease with no FDA-approved therapies
+<<<TEXT>>>
+--Johnson& Johnson today is presenting the first comprehensive results from the Phase 2/ 3 ENERGY study showing that IMAAVY ® produced a statistically significant durable hemoglobin response b with rapid onset of effect in patients with warm autoimmune hemolytic anemia e in the 30 mg/kg treatment group, a compared with those who received placebo.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2ade95bfa2510b79
+symbol: JNJ
+published_utc: 2026-06-11T07:45:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-expands-us-availability-tecnis-puresee-iol-advanced-lens-option
+headline: Johnson & Johnson Expands U.S. Availability of TECNIS PureSee IOL, an Advanced Lens Option for Cataract Surgeons and Patients
+<<<TEXT>>>
+Johnson& Johnson is expanding the U.S. roll-out of its latest advancement in presbyopia-correcting intraocular lenses. "With the full U.S. availability of TECNIS PureSee IOL, we are expanding access to an important extended depth of focus option that reflects our commitment to innovation, visual quality, and patient satisfaction," 3 said Erin Powers, President,...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 7b56358f32d7b727
+symbol: JNJ
+published_utc: 2026-06-13T06:33:00Z
+url: https://www.nasdaq.com/press-release/new-talveyr-talquetamab-tgvs-plus-darzalex-faspror-daratumumab-and-hyaluronidase-fihj
+headline: New TALVEY® (talquetamab-tgvs) plus DARZALEX FASPRO® (daratumumab and hyaluronidase-fihj) data demonstrate the strength of a bispecific combination in earlier-line relapsed or refractory multiple myeloma
+<<<TEXT>>>
+--Johnson& Johnson, a worldwide leader in multiple myeloma therapies, today announced results from the investigational Phase 3 MonumenTAL-3 study showing that TALVEY ®, a GPRC5D bispecific antibody, in combination with DARZALEX FASPRO ® with or without pomalidomide demonstrated significant reduction in the risk of disease progression or death of up to...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 5d19ca0e6cef00fd
+symbol: JNJ
+published_utc: 2026-06-15T06:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-invests-more-1-billion-strengthen-us-vision-manufacturing
+headline: Johnson & Johnson Invests more than $1 Billion to Strengthen U.S. Vision Manufacturing in Jacksonville, Florida
+<<<TEXT>>>
+Johnson& Johnson, healthcare’ s leading, most comprehensive innovation powerhouse, today announced an investment of more than $1 billion in Jacksonville, Florida to strengthen its Vision operations by scaling U.S.- based manufacturing, packaging and distribution capabilities. Johnson& Johnson's U.S. Vision manufacturing and supply chain operations in...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: d454d4d91253451a
+symbol: JNJ
+published_utc: 2026-06-26T12:35:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-presents-new-imaavyr-nipocalimab-aahu-data-european-academy-neurology
+headline: Johnson & Johnson presents new IMAAVY® (nipocalimab-aahu) data at European Academy of Neurology (EAN) 2026 Congress reinforcing sustained disease control in generalized myasthenia gravis
+<<<TEXT>>>
+--Johnson& Johnson today announced new data across 12 abstracts at the European Academy of Neurology 2026 Congress that offer additional insight into the use of IMAAVY ® throughout clinically relevant points in the generalized myasthenia gravis treatment journey. Patients early in their disease course show improved outcomes: IMAAVY plus standard of care...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 90827b035f2ee2c1
+symbol: JNJ
+published_utc: 2026-07-08T07:45:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-announces-fda-approval-dual-energy-thermocool-smarttouch-sf-platform
+headline: Johnson & Johnson Announces FDA Approval for the Dual Energy THERMOCOOL SMARTTOUCH SF Platform
+<<<TEXT>>>
+Johnson& Johnson today announced that the U.S. Food and Drug Administration approved the Dual Energy THERMOCOOL SMARTTOUCH SF Platform, an integrated catheter ablation solution that enables electrophysiologists to deliver both radiofrequency and pulsed field energy through a single catheter. i. "The FDA approval of the Dual Energy THERMOCOOL SMARTTOUCH...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 8e8ef10592a40fc1
+symbol: JNJ
+published_utc: 2026-07-15T06:20:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-reports-q2-2026-results-raises-2026-outlook-2026-07-15
+headline: Johnson & Johnson reports Q2 2026 results, raises 2026 outlook
+<<<TEXT>>>
+Johnson& Johnson today announced results for second-quarter 2026." Johnson& Johnson delivered strong second-quarter results, demonstrating the power of our innovation, the depth of our portfolio and the momentum in our pipeline as we advance transformative treatments that address the world’ s toughest health challenges," said Joaquin Duato, Chairman and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 77de10cc34ba5302
+symbol: JNJ
+published_utc: 2026-07-15T06:25:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-announces-quarterly-dividend-third-quarter-2026-2026-07-15
+headline: Johnson & Johnson Announces Quarterly Dividend for Third Quarter 2026
+<<<TEXT>>>
+Johnson& Johnson today announced that its Board of Directors has declared a cash dividend for the third quarter of 2026 of $1.34 per share on the company’ s common stock. The dividend is payable on September 8, 2026 to shareholders of record at the close of business on August 25, 2026. The ex-dividend date is August 25, 2026.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 07492b10636d7618
+symbol: JNJ
+published_utc: 2026-07-16T08:00:00Z
+url: https://www.nasdaq.com/press-release/depuy-synthes-acquires-expanding-innovationstm-2026-07-16
+headline: DePuy Synthes Acquires Expanding Innovations™
+<<<TEXT>>>
+DePuy Synthes, a global leader in orthopaedic technologies and solutions, today announced it has acquired Expanding Innovations, Inc., an emerging leader in expandable implant technology for spine surgery. "Expanding Innovations is an exciting addition to DePuy Synthes and furthers our commitment to bringing market-leading solutions across our Spine...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 1a0ec3d215917821
+symbol: JNJ
+published_utc: 2026-07-16T08:11:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-announces-collaboration-time-introduce-new-healthcare-champion-year
+headline: Johnson & Johnson Announces Collaboration with TIME to Introduce New Healthcare Champion of the Year Award
+<<<TEXT>>>
+Johnson& Johnson today announced with TIME the launch of the Healthcare Champion of the Year. The new branded recognition will honor healthcare professionals in the U.S., selected by Johnson& Johnson and a panel of industry experts, whose care, innovation and grit are driving health system change to advance better care for all. Nominations for the inaugural TIME...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3898f6d9b2c3c107
+symbol: JNJ
+published_utc: 2026-07-22T07:00:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-receives-fda-market-authorization-us-its-ottavatm-robotic-surgical
+headline: Johnson & Johnson Receives FDA Market Authorization in the U.S. for its OTTAVA™ Robotic Surgical System
+<<<TEXT>>>
+Johnson& Johnson today announced that the U.S. Food and Drug Administration has granted De Novo authorization for the OTTAVA™ Robotic Surgical System, the world’ s first table-integrated soft tissue robotic system. "We are pioneering a new category of surgical robotics with OTTAVA," said Tim Schmid, Executive Vice President, Worldwide Chairman, MedTech, Johnson&...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 3d82f2b56e9df297
+symbol: JNJ
+published_utc: 2026-07-23T08:30:00Z
+url: https://www.nasdaq.com/press-release/tecvaylir-talveyr-reduced-risk-disease-progression-or-death-89-and-risk-death-62
+headline: TECVAYLI® + TALVEY® reduced the risk of disease progression or death by 89% and the risk of death by 62% in earlier-line relapsed/refractory multiple myeloma
+<<<TEXT>>>
+--Johnson& Johnson, a worldwide leader in multiple myeloma therapies, today announced positive topline results from the three-arm investigational Phase 3 MonumenTAL-6 study evaluating TECVAYLI ®+ TALVEY ®, a BCMA and GPRC5D dual antigen targeting regimen, and TALVEY ®+ pomalidomide in adult patients with relapsed or refractory multiple myeloma who...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 2b660d420132156a
+symbol: JNJ
+published_utc: 2026-07-27T18:31:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-announces-proposed-resolution-ovarian-talc-litigation-2026-07-27
+headline: Johnson & Johnson Announces a Proposed Resolution of Ovarian Talc Litigation
+<<<TEXT>>>
+Johnson& Johnson today announced that it has reached an agreement for a comprehensive resolution of the remaining talc litigation with the plaintiff firms leading the federal Multi-District Litigation and related state court proceedings, conditioned on, among other things, the express participation of at least 95% of the remaining claims.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f9093041436ace93
+symbol: JNJ
+published_utc: 2026-07-29T17:28:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-announces-collaboration-sail-biomedicines-advance-vivo-car-t-programs
+headline: Johnson & Johnson Announces Collaboration with Sail Biomedicines to Advance in vivo CAR-T Programs and Transform Autoimmune Disease Through Immune Reset
+<<<TEXT>>>
+Johnson& Johnson 1 today announced strategic agreements and collaboration with Sail Biomedicines, a biotechnology company developing in vivo CAR-T therapies for immune-mediated diseases. Johnson& Johnson will collaborate with Sail to advance its lead immune-mediated disease program and broader platform technology, with incentives to expand the...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: f6ca2b7123604dbd
+symbol: JNJ
+published_utc: 2026-07-29T17:42:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-completes-acquisition-firefly-bio-inc-advance-next-generation
+headline: Johnson & Johnson Completes Acquisition of Firefly Bio, Inc. to Advance Next-Generation Oncology Innovation
+<<<TEXT>>>
+Johnson& Johnson today announced the successful completion of its acquisition of Firefly Bio, Inc., a biotechnology company advancing its proprietary Firelink™ degrader antibody conjugate platform, for $1 billion in cash. With the close of the transaction, Johnson& Johnson further deepens its capabilities in next-generation antibody engineering and...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 687b43c62be1486e
+symbol: JNJ
+published_utc: 2026-07-30T08:30:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnsons-rybrevant-fasprotm-amivantamab-and-hyaluronidase-lpuj-receives-us
+headline: Johnson & Johnson's RYBREVANT FASPRO™ (amivantamab and hyaluronidase-lpuj) receives U.S. FDA Priority Review as potential first-in-class EGFR- and MET-targeted subcutaneous treatment for advanced head and neck cancer
+<<<TEXT>>>
+--Johnson& Johnson today announced that the U.S. Food and Drug Administration has granted Priority Review to the supplemental Biologics License Application for subcutaneous amivantamab and hyaluronidase-lpuj for adults with recurrent or metastatic head and neck squamous cell carcinoma. Priority Review is granted to medicines that may offer...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 83c88b8c2b49be90
+symbol: JNJ
+published_utc: 2026-08-04T08:45:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnsons-executive-vice-president-jennifer-taubert-retire-tom-cavanaugh
+headline: Johnson & Johnson’s Executive Vice President Jennifer Taubert to Retire; Tom Cavanaugh Appointed EVP, Worldwide Chairman Innovative Medicine Effective September
+<<<TEXT>>>
+Johnson& Johnson today announced that Jennifer Taubert will retire from her position as Executive Vice President, Worldwide Chairman, Innovative Medicine following a distinguished career and over 21- year tenure at Johnson& Johnson. Tom Cavanaugh, EVP, Worldwide Chairman Innovative Medicine, Johnson& Johnson.  "Jennifer has made an extraordinary impact on...
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 75a8c6cddf1595fa
+symbol: JNJ
+published_utc: 2026-08-04T16:05:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-participate-2026-wells-fargo-healthcare-conference-2026-08-04
+headline: Johnson & Johnson to Participate in the 2026 Wells Fargo Healthcare Conference
+<<<TEXT>>>
+Johnson& Johnson will present at the 2026 Wells Fargo Healthcare Conference on Wednesday, September 9 th, 2026. Management will participate in a Fireside Chat at 11:00 a.m. Eastern Time. A live audio webcast of the presentation will be accessible through Johnson& Johnson’ s Investor Relations website at www.investor.jnj.com.
+<<<END>>>
+<<<PRESS_RELEASE>>>
+id: 9b7496af8adcd635
+symbol: JNJ
+published_utc: 2026-08-10T16:27:00Z
+url: https://www.nasdaq.com/press-release/johnson-johnson-participate-morgan-stanley-24th-annual-global-healthcare-conference
+headline: Johnson & Johnson to Participate in the Morgan Stanley 24th Annual Global Healthcare Conference
+<<<TEXT>>>
+Johnson& Johnson will present at the Morgan Stanley 24th Annual Global Healthcare Conference on Monday, September 14th, 2026. Management will participate in a Fireside Chat at 11:30 a.m. Eastern Time. A live audio webcast of the presentation will be accessible through Johnson& Johnson's Investor Relations website at www.investor.jnj.com.
+<<<END>>>

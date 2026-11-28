@@ -1,0 +1,369 @@
+<<<ARTICLE>>>
+id: finnhub:143944613
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T15:09:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=98f7e371ad8927407e20ca1020c1534ad9f8b7e645f9250261f92e69eef6622b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: 3M vs. Carlisle: Which Industrial Stock Offers Better Prospects?
+<<<SUMMARY>>>
+MMM expects 2026 adjusted organic sales growth above 3.5%, supported by strong Safety and Industrial demand.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143937917
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-19T12:17:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=8e26d260269586442a66f48913bcd8aaf2cb83a64d02673b5a378945c00c2f7d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: 4 S&P 500 Dividend Stocks Paying Shareholders More Than Their Free Cash Flow
+<<<SUMMARY>>>
+A fat yield looks like a gift until the cash behind it runs dry. Four household S&P 500 names are sending shareholders checks bigger than the money coming in, and one test shows which payouts may not survive.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143918900
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T17:09:57Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0e579fef8109a7ec466cbb1d06ff4ec37da4e6b643dd0d273f5bd90757cc8c77
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: What Are 3M Investors Betting On?
+<<<SUMMARY>>>
+Today's big story: Anthropic IPO: Priced For 2031, Or 2036.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143895239
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-18T03:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=440daf11f2ab9fe6439c1a7bf70136f0d11997d98b74ea11429e03c3ab2e4343
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: New 3M™ Cooling Film helps fleet and rail operators keep cabin interiors cooler and improve efficiency
+<<<SUMMARY>>>
+3M is launching 3M™ Cooling Film, a roof-applied heat-management solution designed to help keep vehicle cabins cooler, reduce cooling demand, and improve operational efficiency as heat challenges intensify across transportation environments.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143880903
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-17T13:58:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9561746354924a5eb95afbf597e75530ca8c1787a7862e9f5b5aff80a7f09188
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: 3M's Capital Distribution Strategy: Can It Sustain Higher Payouts?
+<<<SUMMARY>>>
+MMM's robust cash position, dividend hikes and aggressive share buybacks reinforce its shareholder rewards strategy. Can strong cash flow sustain higher payouts?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143850193
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T18:24:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4456a2a8e841343aa7ae1e61bd2ca5a1b7015bbcaee3aea772f2cbded9133db8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: 3M sees scope for earnings growth as productivity gains and innovation gather pace, says UBS
+<<<SUMMARY>>>
+3M Co (NYSE:MMM) has significant scope to expand profit margins and increase earnings through 2030, supported by manufacturing efficiencies, stronger pricing and a shift towards more customer-focused innovation, according to UBS, which maintained its 'buy' rating. Following a meeting with chief...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143879056
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-16T10:12:43Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=18d7f478d8f51eaf348659c8acaafb3efb5bde3119494cf4db373b5f180579b6
+image_url: 
+category: company
+tickers: MMM
+keywords: 
+headline: Wells Fargo Maintains Equal-Weight on 3M, Raises Price Target to $205
+<<<SUMMARY>>>
+Wells Fargo  analyst Stephen Tusa   maintains 3M (NYSE:MMM) with a Equal-Weight and raises the price target from $195 to $205.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840462
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T19:51:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=978cd1b6a9ccf71c5051798ba5607487ef2fea270cfd8803a15fb355241b1bae
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: As Plastics, Package Makers Mark America Recycles Day, Hopes Run High for Action in Congress
+<<<SUMMARY>>>
+Industry groups are hoping new recycling rules make it through Congress. Critics say they’re trying to undermine state rules.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:143840120
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-15T12:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4c8041df235134655254a205f529616a613247022407946faade1b0983d3f915
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: Plastics, Package Makers Press Congress on Recycling Bills as Clock Ticks
+<<<SUMMARY>>>
+Industry groups are hoping new recycling rules make it through Congress. Critics say they’re trying to undermine state rules.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154567
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:48:59Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=a62fb7376ff5e8cf74f033474ff650e70f4ca58d185c177be44eab1228769141
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/25/Merger-And-Acquisition-Business-Corporat.jpg?width=2048&height=1536
+category: company
+tickers: MMM
+keywords: 
+headline: Nelson Peltz's Trian Pushes Solventum To Spin Off Health IT Unit Unless Buyers Pay Up
+<<<SUMMARY>>>
+Activist investor Nelson Peltz urges Solventum to spin off its Health Information Systems unit to avoid taxes and unlock share price upside.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:140915424
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:48:39Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ab8372ecfee687d7abf018b7dce66c686ad6cd08febf8c3946af69c275a4cd45
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: Best Dividend Stocks to Buy for Dependable Dividend Growth
+<<<SUMMARY>>>
+How do you find the best dividend stocks to buy? Income investors know there's no substitute for regular dividend increases over the long haul.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144085704
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T14:42:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=054c62ed2779b005b1822c47bdeaa234271ff080e79e59fca52ab13d1f1bb799
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: 3M's Transportation and Electronics Unit Gains Momentum: What Lies Ahead?
+<<<SUMMARY>>>
+MMM's Transportation and Electronics segment benefits from strong semiconductor, aerospace and data center demand, while product innovation supports growth.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144054185
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T20:10:51Z
+publisher: ChartMill
+author: 
+url: https://finnhub.io/api/news?id=8bafd04d062dc134173abbf5dd1aeaa1fc02b00f990aa74f29a319f51606d0a5
+image_url: https://www.chartmill.com/images/uploads/CM_Top_Movers_Small_free_2b4ff2fc22.webp
+category: company
+tickers: MMM
+keywords: 
+headline: Dow Jones Top Gainers Today: NVDA, CAT, GOOGL Lead
+<<<SUMMARY>>>
+Dow Jones components NVDA, CAT, GOOGL, CSCO and GS were among today's top gainers, with NVIDIA up 31.37% and Caterpillar up 6.68%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144016420
+symbol: MMM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-21T19:07:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c2fca932d206771273073c5e4c82b295fcd4731d612aa965f9b4feec58471c68
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: MMM
+keywords: 
+headline: RTX, 3M and Illinois Tool Works Just Fell. Their Dividend Stories Are Still Growing
+<<<SUMMARY>>>
+Three industrial giants sank last week even as each raised guidance and boosted its payout. One carries a 63-year streak, another rebuilt after a painful cut, and a third sits on a record backlog. Which one deserves a retiree's cash?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:a234b16a9d0c6defacd23a77578818eea06ef4d68fe0f0e043edc344ca582edd
+symbol: MMM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-17T13:58:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3031141/3m-s-capital-distribution-strategy-can-it-sustain-higher-payouts?cid=CS-ZC-FT-analyst_blog|quick_take-3031141
+image_url: https://staticx-tuner.zacks.com/images/articles/main/84/473.jpg
+category: 
+tickers: MMM, GE, HWM
+keywords: shareholder returns, dividends, share buybacks, capital allocation, free cash flow, liquidity
+headline: 3M's Capital Distribution Strategy: Can It Sustain Higher Payouts?
+<<<SUMMARY>>>
+3M Company returned $4.4 billion to shareholders in the first nine months of 2026 through $1.2 billion in dividends and $3.2 billion in share buybacks. The company raised its quarterly dividend by 6.8% in February 2026 and has $1.5 billion remaining under its buyback authorization. With $4.8 billion in cash and projected $4.8 billion in adjusted free cash flow for 2026, 3M maintains strong liquidity to support shareholder returns.
+<<<INSIGHTS>>>
+MMM | positive | 3M demonstrates strong shareholder-friendly policies with significant capital returns ($4.4B in 9 months), dividend increase of 6.8%, solid cash position ($4.8B), and positive revenue growth expectations (>4.5%). Stock has outperformed industry peers with 19.1% gain in past six months.
+GE | positive | GE Aerospace shows aggressive capital returns with $6.51 billion in share repurchases and $1.36 billion in dividends in first nine months of 2026, plus a substantial 30.6% dividend increase. Raised free cash flow guidance for 2026.
+HWM | positive | Howmet Aerospace demonstrates commitment to shareholder returns with $153 million in dividends, 17% dividend increase, $1.1 billion in share repurchases year-to-date, and board authorization of an additional $5 billion in buybacks.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:e88c4e0eeb0abcf35f9367fbc011071879095e9f08874abb74f093695e85e4d3
+symbol: MMM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-20T02:00:00Z
+publisher: GlobeNewswire Inc.
+author: Mordor Intelligence
+url: https://www.globenewswire.com/news-release/2026/11/20/3407226/0/en/construction-chemicals-market-in-india-2032-usd-4-96-billion-valuation-amid-rising-demand-for-concrete-admixtures-and-waterproofing-applications-reports-mordor-intelligence.html
+image_url: https://ml.globenewswire.com/Resource/Download/416870ff-5134-4fb2-8605-50f7b688dd33
+category: 
+tickers: MMM, RPM, SXYAY, HENOY
+keywords: construction chemicals, India market, concrete admixtures, waterproofing, infrastructure, ready-mixed concrete, green-certified materials, raw material costs
+headline: Construction Chemicals Market in India 2032: USD 4.96 Billion Valuation Amid Rising Demand for Concrete Admixtures and Waterproofing Applications, Reports Mordor Intelligence
+<<<SUMMARY>>>
+India's construction chemicals market is projected to grow from USD 2.53 billion in 2026 to USD 4.96 billion by 2032, registering an 11.78% CAGR. Growth is driven by major infrastructure projects, the shift toward ready-mixed concrete, and increased adoption of eco-certified building products. However, raw material cost pressures from geopolitical tensions are tightening margins.
+<<<INSIGHTS>>>
+MMM | positive | Listed as a major player in India's growing construction chemicals market with expanding opportunities in infrastructure and specialty admixtures.
+RPM | neutral | Mentioned as a market participant, but limited specific information about its India operations or market position relative to growth opportunities.
+SXYAY | positive | Global construction chemicals leader with strong presence in India, well-positioned to capitalize on infrastructure growth and ready-mixed concrete adoption trends.
+HENOY | positive | Listed as key competitor in India's construction chemicals market with exposure to adhesives and sealants segments experiencing growth.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:91f4938d7f63f883301675e3491c1ebddd361e6702573f17ee3506dc3026585a
+symbol: MMM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-24T14:42:00Z
+publisher: Zacks Investment Research
+author: Zacks.Com
+url: https://www.zacks.com/stock/news/3034614/3m-s-transportation-and-electronics-unit-gains-momentum-what-lies-ahead?cid=CS-ZC-FT-analyst_blog|quick_take-3034614
+image_url: https://staticx-tuner.zacks.com/images/articles/main/84/473.jpg
+category: 
+tickers: MMM, EMR, ITT
+keywords: 3M Transportation and Electronics, Q3 2026 earnings, semiconductor demand, aerospace growth, data center, consumer electronics weakness, automotive market softness, operating margin decline, product innovation
+headline: 3M's Transportation and Electronics Unit Gains Momentum: What Lies Ahead?
+<<<SUMMARY>>>
+3M's Transportation and Electronics segment showed modest growth with Q3 2026 revenues rising 0.4% to $1.999 billion, driven by strong semiconductor, aerospace, and data center demand. The company launched 87 new products, but profitability faced pressure from consumer electronics weakness, automotive softness, and higher costs. Operating margins declined to 23.4% from 24.3% year-over-year.
+<<<INSIGHTS>>>
+MMM | neutral | Mixed results with modest revenue growth (0.4%) offset by margin compression (23.4% from 24.3%), weakness in consumer electronics and automotive markets, but supported by strong semiconductor, aerospace, and data center demand. Stock gained 7.5% in past year but trades above industry average valuation at 18.84X forward P/E. Zacks Rank #3 (Hold) reflects balanced outlook.
+EMR | positive | Witnessing solid momentum in power, LNG, and semiconductor markets with Software & Systems segment sales increasing 14% year-over-year to $1.71 billion in Q4 fiscal 2026, demonstrating stronger growth trajectory than 3M.
+ITT | positive | Connect and Control Technologies segment showing strong performance with organic revenues increasing 18.6% year-over-year in Q3 2026, benefiting from defense, industrial connectors, and aerospace demand, plus the kSARIA acquisition.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:754cc2a3bb94ca3145890b52150232d7c0d1dfad498fc857ecea0efd9ecf664e
+symbol: MMM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-26T15:57:00Z
+publisher: GlobeNewswire Inc.
+author: Researchandmarkets.Com
+url: https://www.globenewswire.com/news-release/2026/11/26/3410934/28124/en/global-stoma-or-ostomy-care-market-insights-report-2026-2034-size-share-segments-countries-and-competitive-analysis.html
+image_url: https://ml.globenewswire.com/Resource/Download/908fb457-7f8e-4a08-9081-5565e3dfb3d7
+category: 
+tickers: CNVVY, MMM, CLPBY
+keywords: ostomy care market, colorectal cancer, gastrointestinal disorders, medical devices, healthcare, product innovation, patient support, market growth
+headline: Global Stoma or Ostomy Care Market Insights Report 2026-2034: Size, Share, Segments, Countries, and Competitive Analysis
+<<<SUMMARY>>>
+The global stoma or ostomy care market is expected to grow at a CAGR of 5.01% through 2034, driven by rising colorectal cancer prevalence, gastrointestinal disorders, and technological innovations. Key growth factors include an aging global population, improved healthcare access, and expanding patient support programs. Major markets include the US, Germany, and China, with product innovations in smart sensors and advanced pouching systems supporting adoption.
+<<<INSIGHTS>>>
+CNVVY | positive | Company secured favorable regulatory outcome with US Local Coverage Determination delay in March 2025 and launched Esteem Body with Leak Defense in Italy in February 2024, showing active product innovation and market expansion.
+MMM | neutral | Company is listed among key competitors in the ostomy care market but no specific product developments or market activities are mentioned.
+CLPBY | positive | Company introduced smart sensor ostomy products in January 2025 providing real-time health alerts, demonstrating innovation leadership and alignment with market growth drivers in advanced product development.
+<<<END>>>

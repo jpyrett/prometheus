@@ -42,6 +42,8 @@ The graph:
     START -> account_manager -> data_clerk -> END                                 (the Advisor, the Critic, the decision, the funds node and the Trader are never run; nothing reads or writes the account and nothing is asked, in either mode)
     The Data Clerk node names the stocks as for any request (a theme is searched as a term and no company is looked for), always FETCHES the latest news of each stock first (`DataClerk.refresh_news`: the news only; refused while a past day is bound
     and when the test-only `request["refuse_news_fetch"]` is set; a fetch that fails does not stop the run: the stored news is searched and the order says so) and answers with `DataClerk.request_news`: a cited summary, the news search only.
+    The window is a rolling `news_days` ("the last week") or, since entry 151 (`design/news_dated_window_spec.md`: "What was the news on TSLA on November 20?"), a DATED one, `news_from` and `news_to`, two Eastern calendar days: the work order carries
+    them (and no `since_days`), the fetch is that window (`refresh_news(symbols, start=, end=)`) and `request_news` holds every search to it in code; `plan["news_from"]` and `plan["news_to"]` are the intent's, `plan["news_days"]` is None.
 
     A REQUEST THAT ONLY ASKS FOR THE CURRENT PRICE (entry 150, `design/quote_request_spec.md`: "What's the current price of TSLA?", "Price of Tesla", "Quote for AAPL and NVDA"; `intent.action == "quote"`) is the same shape, on every desk:
     START -> account_manager -> data_clerk -> END                                 (the Advisor, the Critic, the decision, the funds node and the Trader are never run; nothing reads or writes the account and nothing is asked, in either mode)
@@ -112,7 +114,7 @@ import json
 import re
 import sys
 import time
-from datetime import datetime
+from datetime import date, datetime
 from pathlib import Path
 from typing import Annotated, Callable, TypedDict
 
@@ -137,7 +139,7 @@ from prometheus.common import shares as sh
 from prometheus.common.market_calendar import eastern_date
 from prometheus.common.money import dumps
 from prometheus.common.trading_clock import clock_note, trading_now
-from prometheus.common.work_order import LOOKUP_SOURCES, REQUEST_LABEL, TRADING, WIRED_SOURCES, DataResult, WorkOrder, new_work_order, verify_request
+from prometheus.common.work_order import LOOKUP_SOURCES, REQUEST_LABEL, TRADING, WIRED_SOURCES, DataResult, WorkOrder, new_work_order, verify_request, window_words
 from prometheus.common.portfolio import Portfolio, load_portfolio
 from prometheus.rag.loaders import check_symbol
 from prometheus.tools import symbols
@@ -408,16 +410,24 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
                 "news_days": days, "result": Result(asked, case, eastern_date(clock()), find)}
         return {"order": order, "errors": reasons, "plan": plan}
 
+    def news_words(days: int | None, first: str | None, last: str | None) -> str:
+        """The window of a news run in words (entry 151): "on 2026-11-03", "from 2026-11-03 to 2026-11-05" or, for a rolling window, "for the last 7 days". The order's query and its `time_period` are made of it."""
+        return window_words(first, last) if first is not None else f"for the last {days} day{'s' if days != 1 else ''}"
+
     def news_plan(state: DeskState, intent, asked) -> dict:
         """The work order and the plan of a request that only asks for the news (entry 149). The order is a search of the stored NEWS in the window (`since_days`, at most `news.top_k` sources, `live`: the latest news is fetched); a theme is its subject as a
-        term, and named stocks are its subject once the Data Clerk has found them (`news_data`). No case, no price limit: nothing is recommended."""
-        cap, days = load_account_manager_config().news, intent.news_days or load_account_manager_config().news.default_days
-        order = new_work_order(f"Summarize the news {'about' if intent.topic else 'of'} {intent.what()} for the last {days} day{'s' if days != 1 else ''}", requester=state["request"].get("requester", REQUESTER), action_type="search_news", source=DEFAULT_SOURCE,
-                               subject=asked.symbols or asked.phrase or asked.text, company=asked.company if asked.kind == "company" else None, time_period=f"last {days} days", since_days=days, top_k=cap.top_k, live=True)
+        term, and named stocks are its subject once the Data Clerk has found them (`news_data`). No case, no price limit: nothing is recommended. A DATED window (entry 151: the intent's `news_from` and `news_to`) goes on the order as it is,
+        with no `since_days`: `time_period` is "2026-11-03" for one day and "2026-11-03 to 2026-11-05" for a span, and the query says "on 2026-11-03" or "from 2026-11-03 to 2026-11-05"."""
+        cap = load_account_manager_config().news
+        first, last = intent.news_from, intent.news_to
+        days = None if first is not None else intent.news_days or cap.default_days
+        order = new_work_order(f"Summarize the news {'about' if intent.topic else 'of'} {intent.what()} {news_words(days, first, last)}", requester=state["request"].get("requester", REQUESTER), action_type="search_news", source=DEFAULT_SOURCE,
+                               subject=asked.symbols or asked.phrase or asked.text, company=asked.company if asked.kind == "company" else None,
+                               time_period=(first if first == last else f"{first} to {last}") if first is not None else f"last {days} days", since_days=days, news_from=first, news_to=last, top_k=cap.top_k, live=True)
         reasons = verify_request(order)
         order.errors = [*order.errors, *reasons]
         named = [*intent.symbols, *intent.companies]
-        plan = {"intent": intent, "request": asked, "action": "news", "topic": intent.topic, "news_days": days, "find": max(1, len(named)), "request_text": intent.request, "refuse_fetch": bool(state["request"].get("refuse_news_fetch")),
+        plan = {"intent": intent, "request": asked, "action": "news", "topic": intent.topic, "news_days": days, "news_from": first, "news_to": last, "find": max(1, len(named)), "request_text": intent.request, "refuse_fetch": bool(state["request"].get("refuse_news_fetch")),
                 "result": Result(asked, "funds", eastern_date(clock()), max(1, len(named)))}
         return {"order": order, "errors": reasons, "plan": plan}
 
@@ -427,6 +437,7 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
         `order.data.refresh` says what happened. With no stock found and no theme the order is `data_failed` and the run's last message asks the user to clarify."""
         order, plan = state["order"], state["plan"]
         result, today, days, cap = plan["result"], eastern_date(clock()), plan["news_days"], load_account_manager_config().news
+        first, last = plan.get("news_from"), plan.get("news_to")      # a DATED window (entry 151), or None for the rolling `news_days`
         clerk = clerk.fetching(not plan.get("refuse_fetch")) if hasattr(clerk, "fetching") else clerk      # the news run's Data Clerk may fetch; the test-only switch takes that right away
         listed: list[str] = []
         if not plan.get("topic"):
@@ -443,11 +454,11 @@ def build_desk(clerk_factory: Callable[[WorkOrder], DataClerk] | None = None, ad
             order.subject = listed
             order.company = next((c.get("company") for c in result.companies if c.get("symbol") == listed[0]), None) if len(listed) == 1 else None
         what = plan["topic"] if plan.get("topic") else ", ".join(listed)
-        order.query = f"Summarize the news {'about' if plan.get('topic') else 'of'} {what} for the last {days} day{'s' if days != 1 else ''}"
+        order.query = f"Summarize the news {'about' if plan.get('topic') else 'of'} {what} {news_words(days, first, last)}"
         refreshed = []
         if listed:
             try:
-                refreshed = clerk.refresh_news(listed, days)      # never raises for a failed or refused fetch: the report says so
+                refreshed = clerk.refresh_news(listed, days) if first is None else clerk.refresh_news(listed, start=date.fromisoformat(first), end=date.fromisoformat(last))      # never raises for a failed or refused fetch: the report says so; a dated window fetches its own days (D7)
             except (RuntimeError, ValueError, OSError) as error:
                 refreshed = [{"step": "news", "symbol": None, "outcome": "error", "detail": f"{type(error).__name__}: {' '.join(str(error).split())[:160]}"}]
         answered = clerk.request_news(order, today)

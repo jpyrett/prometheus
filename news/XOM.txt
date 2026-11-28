@@ -41602,3 +41602,1066 @@ GOOGN | neutral | Mentioned as a top holding (4.19% of EQL portfolio) but no spe
 AMZN | neutral | Listed as a top holding in EQL but no specific sentiment is expressed; included for informational purposes only.
 XOM | neutral | Listed as a top holding in EQL but no specific sentiment is expressed; included for informational purposes only.
 <<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144184123
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T18:09:50Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b214b7435da705fecbd160297e0c340e62a2d18a29008a2550dee81d1a6acaf2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: How Is ExxonMobil’s Stock Performance Compared to Other Oil & Gas Stocks
+<<<SUMMARY>>>
+ExxonMobil has outperformed its oil & gas peers over the past three months.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144177907
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T17:16:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=c347c096376d5bb5d78fd73ae51a142171448bb6440af9dc3dae1f58533a2d2d
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: XOM Boosts Angola Prospects With Kizomba Redevelopment & New Discovery
+<<<SUMMARY>>>
+ExxonMobil strengthens its Angola prospects with a $4 billion investment in Block 15 and a new hydrocarbon discovery, unlocking long-term production opportunities.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144176932
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T16:08:24Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=64c848cb592e15dae1f6d3a6f44c151a8e0cd9f801de4400ebd30da58e23fe1a
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Plug Power Surges 8% Amid Turnaround Hope: Was $1 the Permanent Floor for PLUG Stock?
+<<<SUMMARY>>>
+Plug Power dipped below $1 for a few hours, then snapped back. With cash burn falling and a delisting threshold looming, one fourth-quarter target could decide whether buyers keep defending that line or lose it for good.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175859
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T13:43:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=735f41e8841aca1b4afc55d80b886afd1a2cac0a8e0eb1ca492531c847d3cd16
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Oil Prices Remain High: Boon for BP's Energy Operations?
+<<<SUMMARY>>>
+High oil prices and major exploration discoveries brighten BP's near- and long-term upstream outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175858
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T13:00:03Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4f9bf4e12b8485bb5efea6dfacbf7e642dd772c69cb32e9a4112b5b0358bb813
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: ExxonMobil Holdings Corporation (XOM) is Attracting Investor Attention: Here is What You Should Know
+<<<SUMMARY>>>
+Recently, Zacks.com users have been paying close attention to Exxon (XOM). This makes it worthwhile to examine what the stock has in store.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144173613
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T11:09:54Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=49f83afc4fc20a2b009339fa63227328468afb2db85afc6182905162ad87675e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: 3 Great Dividend Stocks To Own In November 2026
+<<<SUMMARY>>>
+Central banks are back in the spotlight as the Federal Reserve signals another interest rate hike, which keeps pressure on bond yields and short term income options. That puts steady dividend payers in focus for anyone who wants cash flow that is not reset at every policy meeting. This article looks at three large companies with long records of raising dividends and compares their yields, growth and payout ratios. The three stocks in this article are just a sample set, and the full screen...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144173631
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T11:09:47Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9caba29bd0094f57e0cba4f427307e25cd1866900ee88e4d9d5e20d08a8e5cc9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Chevron Stock Leads The Oil Price Shock Theme For Integrated Energy Investors
+<<<SUMMARY>>>
+Oil prices pushing toward triple digits, supply routes under threat and refineries disrupted have put global energy back in the spotlight. That mix creates both potential openings and risks for investors watching integrated oil and gas producers. This article walks through three stocks from our Global Integrated Oil & Gas Producers screener that appear positively exposed to the latest headlines and explains how the same shock can play out very differently across their businesses. The stocks...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175419
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T10:00:23Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=3bc1cc96134c37cc28f44d6f12180461ef7ec19149adab2cde74edca4cd3d061
+image_url: https://cdn.benzinga.com/files/images/story/2025/11/06/valuestock_1.jpg?width=2048&height=1536
+category: company
+tickers: XOM
+keywords: 
+headline: $100 Invested In ExxonMobil Holdings 5 Years Ago Would Be Worth This Much Today
+<<<SUMMARY>>>
+ExxonMobil Holdings (NYSE:XOM) has outperformed the market over the past 5 years by 11.96% on an annualized basis producing an average annual return of 21.44%. Currently, ExxonMobil Holdings has a market capitalization
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144174888
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T09:44:21Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e2e979d128e612dc7c093e620a4b02472e07c851e5acd4b7071ce8416da65b0f
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/27/California-usa-june-10th-2024-Chevron-Co.jpg?width=2048&height=1536
+category: company
+tickers: XOM
+keywords: 
+headline: What's Going On With Chevron Stock On Friday?
+<<<SUMMARY>>>
+Chevron and Turkish Petroleum Corporation partnered to explore two offshore blocks in Guinea-Bissau as Türkiye expands its international energy footprint.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144175262
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-27T04:19:24Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=e916801c842af7bf89647aae54cd7f7fc37d44d5b5d832b8bda29dca4216219b
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/27/Mobile--Alabama--October-2--2026-U-s--Pr.jpg?width=2048&height=1536
+category: company
+tickers: XOM
+keywords: 
+headline: Trump Pressured Venezuela and Iraq to Leave OPEC, but Faced Pushback From Saudi Crown Prince: Report
+<<<SUMMARY>>>
+Trump administration reportedly urged Venezuela and Iraq to leave OPEC, using financial leverage to challenge the oil producers&#39; alliance.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144157739
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T19:01:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=0ff71629a627658c5bb84ee2682f5f380ec345af946cecb773e8f47314732275
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Exxon Mobil Stocks Edge Lower as Brent Jumps 3.5% on Refinery Attack
+<<<SUMMARY>>>
+Houthis claimed a strike on Saudi Arabia's Ras Tanura refinery, yet Exxon shares barely moved ahead of the OPEC+ meeting.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144156779
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T17:07:34Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ef160b29ee3719ce754becc4a970781515ebfef3417364410fab4cffef8504c2
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Apple, Exxon and Lowe’s Are Rewarding Shareholders Beyond Their Regular Dividends
+<<<SUMMARY>>>
+One of these three dividend payers yields just 0.30%, another has stopped buying back shares entirely, and the third just promised never to cut its payout. Each handles the cash differently, and the differences matter if you live on portfolio income.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144156846
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T16:23:36Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a26aa3adb77534d3e2aa3202785efd2a24fa299c1f78240d420c1a5bb723a9e3
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Oil Markets Face Another Potential Threat to Household Fuel Costs
+<<<SUMMARY>>>
+A familiar global threat could complicate America's inflation outlook.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154404
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T13:07:40Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=ed926cf1b9d448666aac11a95669e47fc7f9ab4f82f4ee536d8c59c9e09483c1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Investors 50 and Older Can Put $8,600 Into a Roth IRA in 2026 to Build Tax-Free Dividend Income
+<<<SUMMARY>>>
+Four household-name dividend stocks can quietly hand the IRS a four-figure bill every year, and one of them does most of the damage. Investors over 50 hold a special tool to fight back, but income limits can shut some couples out.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144153238
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-26T11:04:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=eeb3ccd8215b79243a171a2034464bf2630c4434345f439b461673bd30f81c96
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: iShares S&P 500 Value ETF (IVE) Buys $31.4 Million More Apple on Nov. 24
+<<<SUMMARY>>>
+The $49.63 billion fund added to 429 positions and sold nothing, with Apple, Amazon and Exxon Mobil its largest purchases.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144128095
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T20:17:45Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=2c536c7c8d52da694271ad7debf712c1df4a11d7337fb1ad387217420f6a2f71
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: How Much You’d Need in Dividend Stocks to Generate $5,000 a Month in Passive Income
+<<<SUMMARY>>>
+The price tag on a $60,000 dividend paycheck swings by nearly $2 million depending on the yield you chase. Higher payouts shrink the bill, but one tier hides a trap that can gut your income when a cut arrives.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144128096
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T20:15:51Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3bb55f49a9b6941e432fc91c9ca5a1a61f2226063fe57ec461d7a459c5d28f6b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: ExxonMobil (XOM) Stock Looks Cheap Against Future Cash Flow Estimates
+<<<SUMMARY>>>
+ExxonMobil Holdings has posted a powerful 5 year share gain, which makes the recent pullback a natural moment to ask whether the current price can still be explained by the cash flows the business is expected to generate. With the stock now trading at US$158.23 after a weaker month, the key issue is how that market value lines up against what a Discounted Cash Flow (DCF) view of its future money generation suggests. ExxonMobil is up 212.9% over 5 years, which puts a lot of weight on the idea...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144126986
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T17:54:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=47c47e7d72f96d415a46dfea97626b7c085f4dbfdbac41d6b2ae0c4722601ee8
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Energy Stocks Benefit From Supply Disruptions: Can Momentum Last?
+<<<SUMMARY>>>
+Rising crude prices and diesel shortages drive gains for Valero, Cheniere, Chevron and ExxonMobil, but recovering oil supplies could test their momentum.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124587
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T15:41:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=794d143865b80e34650ce3e2e829f2b36ef5fd0e533f0a2ba9fd794904641d31
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Bad News for Exxon and Chevron: Goldman Sees Brent Falling “Roughly $10” Next Year on a Supply Glut
+<<<SUMMARY>>>
+Key TakeawaysGoldman Sachs expects Brent and WTI crude to fall about $10 over the next year on an oil surplus of about 2 million barrels a day. Consensus estimates for ExxonMobil, Chevron and ConocoPhillips still reflect this year’s wartime oil prices.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124588
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T15:02:41Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=31c3efad3e0c1c523c43644255ca7a630641dbd316ce592ae9ce24f820d6e0c5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Turn $100,000 Into Lifetime Paychecks With These “Forever” Passive Income Dividend Stocks
+<<<SUMMARY>>>
+Four blue-chip dividend payers, from a drugmaker to an oil giant, promise income that grows while you never add a dollar. One of them yields more than double the others, and the reason behind that gap might surprise you.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124589
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T14:31:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=097ab0e59e3774cc9f522f4c8a58c8006b9a2b6b5a176efc984f417dbed531ea
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Global Ethyl Derivatives Market Report 2026: Executive Strategy and Forecast to 2030 | Capitalize on Bio-Based and Pharma Demand with BASF, Dow, Arkema, Clariant, and Exxon Mobil
+<<<SUMMARY>>>
+Boost ROI with bio-based feedstocks, low-VOC products, high-purity pharma compounds, specialty coatings and adhesives, and export-led supply integration.Dublin, Nov. 25, 2026 (GLOBE NEWSWIRE) -- "Ethyl Derivatives or Ethyl Market Report 2026" has been added to ResearchAndMarkets.com's offering. The global ethyl derivatives market is set for strong growth as demand increases across pharmaceutical manufacturing, paints and coatings, adhesives, industrial solvents, specialty chemicals, and other en
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144124590
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T14:12:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=b0ebfcf1b7dd37f3b02a583a25432958e3c773ed40b907bef9da2c1e42447395
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Can Chevron Build a Lithium Business in the Smackover Formation?
+<<<SUMMARY>>>
+CVX is putting its oil and gas expertise to work in lithium, targeting opportunities in energy storage, from electric vehicle batteries to power grids.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122492
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T13:17:55Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=79c80c487d4566dee512f4588183c72edcb71bb91332996269c2e4f02f0920bc
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Chevron Pays a Bigger Dividend, but Exxon May Be the Better Retirement Stock
+<<<SUMMARY>>>
+One oil giant hands retirees a bigger check today, while the other has kept raising its payout through every crash. When crude collapses again, which dividend will you wish you owned?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144154147
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T11:50:16Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=4154ead9d56f830e7d7ee0bbf01073ea54aec411a98564d4547dbfa45e32e937
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/25/Nasdaq-100-Shake-Up-These-6-Stocks-Are-I.jpg?width=2048&height=1536
+category: company
+tickers: XOM
+keywords: 
+headline: 75% of Stocks Failed To Beat The Market Over 35 Years. New Vanguard Research Shows Why Picking Winners Is Harder Than Most Investors Think
+<<<SUMMARY>>>
+Quick Read
+
+
+
+
+Vanguard studied nearly 12,500 U.S. stocks from 1990 through 2025 and found that 75% underperformed the broader market.
+
+
+
+Just 10 companies generated more than 31% of total stock market wealth, while the
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122974
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T09:02:20Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=94875ef1889ac6238f9b22495500c5bbf5842927527bfe923031c7559ab1f0d0
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2235939814/image_2235939814.jpg?io=getty-c-og
+category: company
+tickers: XOM
+keywords: 
+headline: Best Dividend Aristocrats For December 2026
+<<<SUMMARY>>>
+The bull case for Dividend Aristocrats: 27 potentially undervalued picks may return at least 10% annually, led by FactSet at an estimated 22.4%.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122012
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T08:00:00Z
+publisher: SeekingAlpha
+author: 
+url: https://finnhub.io/api/news?id=207185fa35bf76731b0c50c2f9b86c82cab9cc32bc91ca6ff30779aa57aba0b7
+image_url: https://static.seekingalpha.com/cdn/s3/uploads/getty_images/2272962142/image_2272962142.jpg?io=getty-c-og
+category: company
+tickers: XOM
+keywords: 
+headline: VFLO Vs. MOAT: MOAT For 2027, VFLO For The Long Run
+<<<SUMMARY>>>
+Analyst rates VFLO a Strong Buy and MOAT a Buy; 4.29% overlap lets them complement each other, while VFLO's 24.2% energy stake may pressure near-term...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144102545
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-25T05:48:25Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=f8657b4b4d373b5f05e03f6bc3292a27cba40eae39f59c6cf005363077b8c879
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Oil Market Midweek Wrap: Brent Holds Near $90 Despite Iran Tensions – OPEC Meeting, ConocoPhillips Sale In Focus
+<<<SUMMARY>>>
+While oil prices have retreated from their recent highs, concerns remain about the ongoing conflict with Iran.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144092238
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T21:51:14Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a02c99ea335c1e5467211fda38a260876d2aea1c22352d62f487bca1c8e09707
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Why Venture Global Stock Stays Cheap Despite Big Profits
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144089103
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T21:18:56Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a3bce634d62f9c69c3603d83927422091925844e70acb983e65e4b75232f7d4b
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: What Would It Take For Lower Oil Prices To Break Occidental Stock?
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144089102
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T20:12:02Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=4eda62dcd6f61ff93f5fcb3cea582feaf041081cfb0e4b888054899638339632
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: 3 Non-AI Stocks to Buy for Long-Term Dividends and Stability
+<<<SUMMARY>>>
+These stocks have limited exposure to artificial intelligence and pay between 2.7% and 5.6% in dividends.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144088019
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T18:56:20Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1509d90ba7f9de491a7532e47cbcd99672a652f92fc00f4f6dfcf3f5299ce951
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Short-Term Bond Funds vs. Dividend Stocks: Which Income Holds Up Better for Retirees?
+<<<SUMMARY>>>
+Treasury bills out-yield Exxon and Coca-Cola today, but that paycheck resets with every Fed move while dividends answer to a board. Before choosing, retirees should weigh what each income stream can lose, and what the tax code lets them keep.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144086832
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:33:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=5e0a1b49e4df2febd9b9c3a320faf38a7819d3a8f0b4f77e8251b532a28aae47
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Your Exxon Dividend Needs Only About $59 Oil
+<<<SUMMARY>>>
+Today's big story: Nvidia Added $954 Billion In A Day. Is Jensen Huang Too Big To Fire.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144086833
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T17:28:30Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9a269ce9a46ed470205fc7e1b0c2954082a2c398e78df5ad22b2732313faf147
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: 'Exxon Got Walloped': $340 Million Legal Blow Paves The Way For More
+<<<SUMMARY>>>
+A district judge recently dealt ExxonMobil (XOM) a $339.56 million blow over oil sludge that's "continuously seeped" into soil, surface water, and an aquifer in northwest Louisiana for half a century. Legal experts say the first-of-its-kind judgment paves the way for future citizen lawsuits against oil giants in the state, which has long rated among the most polluted in the...
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144086834
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T15:21:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1a5210ed2b75f315a04368ebc0c30c3445c4bf4d237306bbfc64a9c0bd8bb9b1
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Libya and Iraq Could Be the Next Big Headache for Oil Markets
+<<<SUMMARY>>>
+Brent struggles below $90 as escalating tensions in Libya and Iraq threaten fresh oil supply disruptions across the Mediterranean.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082905
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:48:11Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=676734fe66510d14cd784c147f98fd1246febe0c633249ef48867e1fa6efca63
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: 3 High-Yield S&P 500 Dividend Stocks Marked Down for Black Friday
+<<<SUMMARY>>>
+Three S&P 500 giants are trading well off their highs, and each one dangles a dividend that earnings can cover. But one carries a painful cut in its past, and the deepest discount may not belong to the safest payout.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122288
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T13:38:22Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=f9540a691f4b6fd69fe8925acadcae32c10817bfd9b7a73c6eb018ff3dbadf5c
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/24/Jay-Woods-Freedom-Capital.jpg?width=2048&height=1536
+category: company
+tickers: XOM
+keywords: 
+headline: Dow Outperforms Nike Stock 100x Since Inclusion: Jay Woods Expects 'Underperformer' to Get the Boot
+<<<SUMMARY>>>
+Changes to the Dow Jones Industrial Average coming in 2027? Market expert Jay Woods says it has a history of &#34;kicking out underperformers.&#34;
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144081297
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T11:04:29Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=a6675af294f06b6a01bf0ffa495822b88499d3f756dde70235c39b7bc0b1aa5c
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Tesla Leads Goldman's Hedge Fund Short List With $26.4 Billion in Bearish Bets
+<<<SUMMARY>>>
+Palantir and Walmart follow as Goldman identifies the largest short positions among S&P 500 companies.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144122866
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T11:00:20Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=473173c7aaac2cfed4405e3d4f27737ac08d33039cd671b5d8377a4b9ee9a250
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/24/Stock-Market-Trading-Chart-And-Analyzing.jpg?width=2048&height=1536
+category: company
+tickers: XOM
+keywords: 
+headline: Chevron Short Interest Rises After Q3 Earnings
+<<<SUMMARY>>>
+Chevron Corp. (NYSE:CVX) short sellers added to their positions following the company’s Q3 2026 report.Short interest rose 2.07% to 26.19 million shares as of the Oct. 30 settlement date, from 25.66 million at the Oct.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144080081
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T10:45:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=cb83a40c35d270f2c591fb33daa81db775b89f6cb650b9c4fa7b76c388dd3bc9
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: ExxonMobil Sinks 14% and Chevron 12% in a Month as Trump Says Iran Wants “to Make a Deal”
+<<<SUMMARY>>>
+Key TakeawaysExxonMobil and Chevron stock fell 14% and 12% in the past month as Brent crude gave back much of its Iran war premium. The drop didn’t come from the companies’ own results: Chevron’s third-quarter earnings nearly tripled to $9.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144064167
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T05:06:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d723b4358993a0d1f7fbb205851c99471a3ac0436074243f0b66ed511959842e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: The Inflation Math, Updated: The Fed Is Fighting Oil
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144064166
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-24T05:06:42Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d2f5e0f1080f764261771fb55eaef1c5d30e36c03aa23e26c58804454e770519
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: 1966 Or 1995: Which Way Does America's $2.1 Trillion Deficit Go?
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144054534
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T22:02:04Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=9ab64ae50ce5acff6701779ad0fb7746ffc5780f28faa19970478a7a7ea6f11e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Should You Swap Tech For Johnson & Johnson Stock?
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144054568
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T22:00:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=28dd81f042570a14ea8f371be7819e63b073faf5c7420e8c2230d372fd2945e6
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: 5 Energy Stocks That Can Shrug Off a December Fed Rate Hike
+<<<SUMMARY>>>
+Five energy stocks with strong balance sheets, from Exxon to Kinder Morgan, that could hold up if the Fed hikes again in December and CPI runs hot.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144053613
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T20:17:16Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=d22a94f90992e388c915b7b1429220738bf57aaf700ca38578705d016642ca7e
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: 5 Blue-Chip Dividend Stocks Built to Keep Paying Through Tough Markets
+<<<SUMMARY>>>
+A fat yield means nothing if the cash isn't there to fund it. Five blue chips face the same coverage test, and two of them pay out with almost no room to spare. Which dividends hold up when markets turn?
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144052640
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T19:17:21Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=1018ef8429b4d035a2008c3678bb97727c05327f7714907d50aa35a629bc9ba5
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: How Much You Really Need Invested to Generate $50,000 a Year in Retirement
+<<<SUMMARY>>>
+Safe blue chips have rallied so hard that their yields now trail Treasuries, while the highest payers promise to slash the capital you need. Before you chase either, see what each shortcut quietly puts at risk in year ten.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144052661
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T19:13:00Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=3076862bc90abda8008d5e074c47e62016723e6f1da765f0a416ad38b321ee03
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Venture Global Owes More Than Its Stock Is Worth
+<<<SUMMARY>>>
+Today's big story: Reported SEC Probe: Could Nvidia Stock Fall To $92.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082422
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:00:25Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=7849cbb86e22717be37f15e7dd3458af446008b8ca28197d597cc3fd18cfe561
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: XOM
+keywords: 
+headline: 9 Of 11 Sectors Rise Monday As Growth Leads
+<<<SUMMARY>>>
+Nine of 11 sectors are higher in Monday&#39;s regular session, with growth sectors holding two of the top three positions alongside Industrials. Technology sits well clear of the rest, separated from the next sector by a margin several times wider than any other gap in the table.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144082536
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-23T12:00:19Z
+publisher: Benzinga
+author: 
+url: https://finnhub.io/api/news?id=b2b066ebe622c036fd38414887518bd9bc1f6e3696085686157f709385d73bec
+image_url: https://cdn.benzinga.com/files/images/story/2026/11/23/Charts-Of-Financial-Instruments-With-Var.jpg?width=2048&height=1536
+category: company
+tickers: XOM
+keywords: 
+headline: ExxonMobil Short Interest Climbs After Third-Quarter Results
+<<<SUMMARY>>>
+ExxonMobil Holdings Corp. (NYSE:XOM) short sellers added to their positions following the company’s Q3 2026 report.Short interest rose 7.55% to 45.49 million shares as of the Oct. 30 settlement date, from 42.29 million
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: finnhub:144210877
+symbol: XOM
+company: 
+api: finnhub
+type: news
+published_utc: 2026-11-28T16:07:33Z
+publisher: Yahoo
+author: 
+url: https://finnhub.io/api/news?id=567af00a8216014d06a5c43fbd89f37055f43a9a1382041858fa832bc292d389
+image_url: https://s.yimg.com/rz/stage/p/yahoo_finance_en-US_h_p_finance_2.png
+category: company
+tickers: XOM
+keywords: 
+headline: Exxon Stock Is on Pace for Its Worst Month Since March 2020
+<<<SUMMARY>>>
+Exxon doubled its quarterly earnings, generates heavy free cash flow and carries almost no debt, yet its shares keep sliding from a record high. One Monday close could decide how this month's drop gets remembered.
+<<<INSIGHTS>>>
+
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:c7c406241b1b0abb07190015241978a666879d346923d65456ccff6dcecd863c
+symbol: XOM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T10:20:02Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3034909/is-alps-equal-sector-weight-etf-eql-a-strong-etf-right-now?cid=CS-ZC-FT-smart_beta_etf-3034909
+image_url: https://staticx-tuner.zacks.com/images/default_article_images/default207.jpg
+category: 
+tickers: EQL, IVV, VOO, GOOG, GOOGL, GOOGM, GOOGN, AMZN, XOM
+keywords: smart beta ETF, equal-weight strategy, sector exposure, expense ratio, large-cap blend, market performance
+headline: Is ALPS Equal Sector Weight ETF (EQL) a Strong ETF Right Now?
+<<<SUMMARY>>>
+EQL, a smart beta ETF launched in 2009, provides equal-weight exposure across economic sectors with $769.76 million in assets. The fund has delivered 9.75% year-to-date and 12.15% one-year returns with a 0.19% expense ratio. However, traditional market cap-weighted alternatives like IVV and VOO offer lower costs (0.03%) and significantly larger asset bases, making them potentially more attractive for cost-conscious investors.
+<<<INSIGHTS>>>
+EQL | neutral | EQL offers a reasonable smart beta alternative with competitive returns (12.15% one-year) and moderate expense ratio (0.19%), but is outperformed by cheaper traditional alternatives with lower risk profiles.
+IVV | positive | IVV presents a superior alternative with significantly lower expense ratio (0.03%), massive asset base ($835.1 billion), and traditional market cap-weighted strategy offering lower-risk, cost-effective market exposure.
+VOO | positive | VOO is positioned as the most attractive option with the lowest expense ratio (0.03%), largest asset base ($991.37 billion), and proven track record as a low-cost, low-risk index fund alternative.
+GOOG | neutral | Mentioned as a top holding (4.19% of EQL portfolio) but no performance analysis or sentiment indicators provided in the article.
+GOOGL | neutral | Mentioned as a top holding (4.19% of EQL portfolio) but no performance analysis or sentiment indicators provided in the article.
+GOOGM | neutral | Mentioned as a top holding (4.19% of EQL portfolio) but no performance analysis or sentiment indicators provided in the article.
+GOOGN | neutral | Mentioned as a top holding (4.19% of EQL portfolio) but no performance analysis or sentiment indicators provided in the article.
+AMZN | neutral | Listed as a top holding in EQL but no specific performance data or sentiment indicators provided.
+XOM | neutral | Mentioned as a top holding but no performance analysis or sentiment indicators provided in the article.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:b55d6bbf86e12e9b7b46851f520c9ed99dd8172e19110fa3bd256ca4e92f5d75
+symbol: XOM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T14:12:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3035248/can-chevron-build-a-lithium-business-in-the-smackover-formation?cid=CS-ZC-FT-analyst_blog|quick_take-3035248
+image_url: https://staticx-tuner.zacks.com/images/articles/main/73/63.jpg
+category: 
+tickers: CVX, XOM, OXY, OXY.WS
+keywords: lithium extraction, direct lithium extraction, brine, Smackover Formation, battery-grade lithium, electric vehicles, energy storage, commercial viability
+headline: Can Chevron Build a Lithium Business in the Smackover Formation?
+<<<SUMMARY>>>
+Chevron entered the U.S. lithium sector in June 2025 with leasehold acquisitions in the Smackover Formation, expanding its position to approximately 135,000 net acres. The company is testing direct lithium extraction from underground brine to produce battery-grade lithium for electric vehicles and energy storage. Success depends on recovery rates and extraction costs. Competitors ExxonMobil and Occidental Petroleum are also advancing lithium projects using similar brine extraction technologies.
+<<<INSIGHTS>>>
+CVX | positive | Chevron's entry into lithium production with 135,000 net acres and active testing of direct lithium extraction demonstrates strategic diversification into energy storage. Stock gained 13% in six months outperforming the sector, though commercial viability remains dependent on extraction economics.
+XOM | positive | ExxonMobil holds substantial brine rights (300,000+ net acres) and has successfully produced battery-grade lithium carbonate at its pilot facility. Preliminary supply agreement with LG Chem and ambitious production targets for the 2030s demonstrate significant progress in commercialization.
+OXY | neutral | Occidental is actively testing direct lithium extraction through its TerraLithium subsidiary and has produced battery-grade lithium carbonate in separate tests. However, demonstration operations continue through 2027 with economic viability at commercial scale still being assessed.
+OXY.WS | neutral | Occidental is actively testing direct lithium extraction through its TerraLithium subsidiary and has produced battery-grade lithium carbonate in separate tests. However, demonstration operations continue through 2027 with economic viability at commercial scale still being assessed.
+<<<END>>>
+<<<ARTICLE>>>
+id: polygon:d8e264c92b0f088d68d27aaf2cafee18d27cb2e9e2f254fc6bd89c9835888742
+symbol: XOM
+company: 
+api: polygon
+type: news
+published_utc: 2026-11-25T17:54:00Z
+publisher: Zacks Investment Research
+author: Na
+url: https://www.zacks.com/stock/news/3035447/energy-stocks-benefit-from-supply-disruptions-can-momentum-last?cid=CS-ZC-FT-analyst_blog|industry_focus-3035447
+image_url: https://staticx-tuner.zacks.com/images/articles/main/48/2218.jpg
+category: 
+tickers: VLO, LNG, CVX, XOM
+keywords: geopolitical tensions, LNG exports, refining margins, diesel shortage, Middle East, energy security, crude prices, supply disruptions
+headline: Energy Stocks Benefit From Supply Disruptions: Can Momentum Last?
+<<<SUMMARY>>>
+U.S. energy companies posted strong gains in Q3 2026 as geopolitical tensions in the Middle East, shipping disruptions, and constrained diesel supplies created favorable conditions for refiners and LNG exporters. Valero led with a 99.5% year-to-date gain driven by robust refining margins, while Cheniere Energy gained 52.3% on growing demand for U.S. LNG exports. Chevron and ExxonMobil also benefited from higher crude prices and strong refining operations, though future gains depend on whether supply recovery outpaces demand normalization.
+<<<INSIGHTS>>>
+VLO | positive | Strongest performer with 99.5% YTD gain; benefited from tight diesel supplies and strong refining margins; Q3 net income of $6.8B vs $1.1B prior year; completed optimization project; Zacks Rank #2 (Buy)
+LNG | positive | 52.3% YTD gain driven by energy security concerns boosting U.S. LNG export demand; Q3 revenues of $6.17B and adjusted EBITDA of $1.90B; raised full-year guidance to $8.75-$9.25B; Zacks Rank #1 (Strong Buy)
+CVX | positive | 37.1% YTD gain; Q3 earnings of $9.9B with adjusted earnings of $10.4B; benefited from higher crude realizations and strong refining margins; U.S. refineries achieved record throughput; Zacks Rank #3 (Hold)
+XOM | positive | 31.4% YTD gain; Q3 earnings of $15.4B with adjusted earnings of $17.5B; strong operating cash flow of $25.7B; diversified operations provided resilience; Zacks Rank #3 (Hold)
+<<<END>>>

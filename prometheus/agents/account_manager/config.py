@@ -5,7 +5,7 @@
     config.clarify.max_questions            # 3: the Ask-mode questions about how much to buy (entry 85)
     config.direct.valid_minutes             # 30: how long the price of a trade the user named stays good (entry 87)
     config.ignore_critic.valid_minutes      # 30: the same for an Advisor recommendation the Critic did not review because the user ticked "Ignore Critic" (entry 148)
-    config.news.default_days                # 7: the window of a request that only asks for a stock's news when neither the words nor the model give one; max_days 90, max_stocks 5, top_k 12 (entry 149)
+    config.news.default_days                # 7: the window of a request that only asks for a stock's news when neither the words nor the model give one; max_days 90, max_age_days 365 (how far back a dated window may start, entry 151), max_stocks 5, top_k 12 (entry 149)
     config.quote.max_stocks                 # 10: the most stocks one request that only asks for the current price may name (entry 150)
     config.missing.max_prompts              # 5: the most Ask-mode questions about stocks the Data Clerk did not find (entry 102)
     config.orders.watch_seconds             # 60: how often the web server's watcher checks the waiting limit orders while the market is open (entry 140)
@@ -64,6 +64,7 @@ class IgnoreCritic(_Section):
 class News(_Section):
     default_days: int = Field(ge=1, le=90)           # a request that only asks for the news of a stock (entry 149, "Show the news for Tesla") looks back this many days when neither the user's words nor the model say how many: a week
     max_days: int = Field(ge=1, le=90)               # the longest window: the news fetch's own limit (`work_order.MAX_DAYS["news"]`); a longer one is cut to it and the user is told
+    max_age_days: int = Field(ge=1, le=3650)         # how far back a PAST DAY or span of the news may be asked for (entry 151, "What was the news on TSLA on November 20?"): a first day older than this many days before today is refused with the reason; the stored news goes back about 6 months and the fetch providers about a year
     max_stocks: int = Field(ge=1, le=15)             # the most stocks (symbols and companies) one news request may name
     top_k: int = Field(ge=1, le=20)                  # the most articles the Data Clerk's summary may use (the work order's `top_k`, at most `work_order.MAX_TOP_K`)
 
